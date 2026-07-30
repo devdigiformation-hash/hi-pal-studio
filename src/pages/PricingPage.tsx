@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "@tanstack/react-router";
 import * as Switch from "@radix-ui/react-switch";
 import * as Accordion from "@radix-ui/react-accordion";
 import { Plus, Check } from "lucide-react";
@@ -198,12 +199,18 @@ export default function PricingPage() {
               </p>
               <FeatureList items={PRO} color="var(--cyan)" />
               <div className="mt-8">
-                <CyanButton size="lg" className="w-full">
-                  Start 14-Day Free Trial
-                </CyanButton>
+                <Link
+                  to="/checkout"
+                  search={{ plan: annual ? "pro_annual" : "pro_monthly" }}
+                  className="block"
+                >
+                  <CyanButton size="lg" className="w-full">
+                    Get Pro — Checkout
+                  </CyanButton>
+                </Link>
               </div>
               <div className="mt-4 text-center font-body text-[13px] text-[var(--text-muted)]">
-                No credit card required
+                JazzCash · Bank · USDT · Binance Pay · Redot Pay
               </div>
             </GlassCard>
 
