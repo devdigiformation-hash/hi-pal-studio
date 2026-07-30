@@ -19,15 +19,15 @@ export interface Plan {
 export const PLANS: Record<PlanId, Plan> = {
   lifetime: {
     id: "lifetime",
-    name: "Digi Biz OS — Lifetime Access",
+    name: "DIGI BIZ OS — Lifetime Access",
     badge: "Desktop App · Gen 2",
-    blurb: "Pay once. Own Digi Biz OS for life. No monthly software subscription.",
+    blurb: "Pay once. Own DIGI BIZ OS for life. No monthly software subscription.",
     pricePkr: 28000,
     priceUsd: 100,
     billingNote: "One-time payment · Lifetime access",
     includes: [
       "One-time payment — no monthly subscription",
-      "Lifetime access to Digi Biz OS Gen 2",
+      "Lifetime access to DIGI BIZ OS Gen 2",
       "All Gen 2 updates included",
       "Activate on up to 3 PCs",
       "Connect your own AI API key or ChatGPT account",
@@ -41,7 +41,7 @@ export const PLANS: Record<PlanId, Plan> = {
     name: "Customised Software + Your Branding",
     badge: "White Label · Automation",
     blurb:
-      "Your logo, your name, your workflows. A fully branded build of Digi Biz OS with 400+ automation workflows configured for your business.",
+      "Your logo, your name, your workflows. A fully branded build of DIGI BIZ OS with 400+ automation workflows configured for your business.",
     pricePkr: 112000,
     priceUsd: 400,
     billingNote: "One-time payment · Custom build",
@@ -62,14 +62,14 @@ export const PLANS: Record<PlanId, Plan> = {
     name: "Full Source Code Licence",
     badge: "Developer · Full Ownership",
     blurb:
-      "The complete Digi Biz OS codebase, yours to modify, rebrand and ship. Total ownership, no lock-in.",
+      "Complete ownership of DIGI BIZ OS — modify it, rebrand it and ship it as your own product. No lock-in.",
     pricePkr: 196000,
     priceUsd: 700,
     billingNote: "One-time payment · Source code licence",
     includes: [
       "Everything in the Customised package",
       "Complete source code (desktop app + agent engine)",
-      "Private repository access",
+      "Private developer access",
       "Build, sign and distribute your own installers",
       "Architecture and developer documentation",
       "Resale / commercial usage rights",
@@ -139,7 +139,7 @@ export const PAYMENT_METHODS: PaymentMethod[] = [
     region: "International",
     fields: [
       { label: "Network", value: "TRC-20 (Tron)" },
-      { label: "Wallet Address", value: "TSc7Xk9QDigiBizOSWalletExample1234", copy: true },
+      { label: "Wallet Address", value: "TSc7Xk9QDigiBizWalletExample1234", copy: true },
     ],
     steps: [
       "Open your crypto wallet or exchange",

@@ -25,7 +25,7 @@ const COPY: Record<Tab, { title: string; body: string; badges: string[]; bullets
   Automation: {
     title: "Workflows + Agent Town",
     body: "Drag-and-drop workflow automation with scheduled cron triggers and concurrent 27-agent task delegation.",
-    badges: ["46 Playwright Tools", "52 Hermes Skills"],
+    badges: ["115+ Built-in Tools", "500+ AI Skills"],
     bullets: [
       "Visual workflow builder",
       "Cron & event triggers",
@@ -47,12 +47,12 @@ const COPY: Record<Tab, { title: string; body: string; badges: string[]; bullets
   Developer: {
     title: "CLI + MCP",
     body: "Built-in terminal emulator and Model Context Protocol server connector for extensibility.",
-    badges: ["MCP Compatible", "104+ IPC Handlers"],
+    badges: ["MCP Compatible", "115+ Built-in Tools"],
     bullets: [
       "Native terminal emulator",
       "Custom MCP server registry",
-      "Hermes skill authoring",
-      "Scriptable IPC surface",
+      "Custom skill authoring",
+      "Expandable skill library",
     ],
   },
 };
@@ -141,9 +141,9 @@ function Visual({ tab }: { tab: Tab }) {
       className="rounded-[var(--r-sm)] border border-[var(--border-glass)] p-4 font-code text-[12px] leading-[1.9]"
       style={{ background: "#05080F" }}
     >
-      <div className="text-[var(--text-muted)]">$ digibiz agents --status</div>
+      <div className="text-[var(--text-muted)]">&gt; Agent status</div>
       <div className="text-[var(--green)]">Agent Town: Active [27/27]</div>
-      <div className="text-[var(--text-muted)]">$ digibiz mcp list</div>
+      <div className="text-[var(--text-muted)]">&gt; Connected MCP servers</div>
       <div className="text-[var(--cyan)]">
         mcp/filesystem · mcp/github · mcp/companies-house
         <span className="animate-caret">▋</span>

@@ -38,9 +38,9 @@ export default function Footer() {
       <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-6 py-16 sm:grid-cols-2 md:px-10 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2">
-            <img src={logoAsset.url} alt="Digi Biz OS" className="h-9 w-9 rounded-full" />
+            <img src={logoAsset.url} alt="DIGI BIZ OS" className="h-9 w-9 rounded-full" />
             <span className="font-display text-[16px] font-bold text-[var(--text-primary)]">
-              Digi Biz OS
+              DIGI BIZ OS
             </span>
           </div>
           <p className="mt-4 font-display text-[14px] italic text-[var(--text-muted)]">

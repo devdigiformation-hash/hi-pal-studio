@@ -53,7 +53,7 @@ const ORBIT_COLORS = [
 ];
 
 
-const BADGES = ["104+ IPC Handlers", "27 Autonomous Agents", "<200ms Voice Latency", "94 Built-in Tools"];
+const BADGES = ["500+ AI Skills", "115+ Built-in Tools", "Multi-Agent Execution", "Multi-MCP Ready"];
 
 function Typewriter() {
   const [index, setIndex] = useState(0);
@@ -202,8 +202,9 @@ export default function HeroSection() {
             transition={{ delay: 0.6 }}
             className="mt-5 max-w-[580px] font-body text-[16px] leading-[1.75] text-[var(--text-secondary)] md:text-[18px]"
           >
-            DIGI BIZ OS unifies zero-latency 2-way speech, real-time screen vision, PyAutoGUI
-            desktop automation, and 27 autonomous agents into one luxury glassmorphic workspace.
+            DIGI BIZ OS turns your voice into execution — 500+ AI skills, 115+ built-in tools and
+            collaborative AI agents that research, automate, engineer and deliver work for your
+            business.
           </motion.p>
 
           <motion.div

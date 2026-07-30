@@ -1,13 +1,13 @@
 const ITEMS = [
-  "104+ Native IPC Handlers",
-  "94 Desktop & Browser Tools",
+  "115+ Built-in Tools",
+  "500+ AI Skills",
   "27 Autonomous Sub-Agents",
   "<200ms Voice Stream Latency",
-  "6 AI Model Providers",
-  "46 Playwright Browser Tools",
-  "52 Hermes CLI Skills",
-  "Real-Time Screen Vision",
-  "Companies House API",
+  "Multi-MCP Ready",
+  "Browser Automation Built In",
+  "Professional CLI Workspace",
+  "Screen Sharing & Camera",
+  "Folder & Document Intelligence",
   "WhatsApp · Email · Discord",
 ];
 

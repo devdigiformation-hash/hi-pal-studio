@@ -80,14 +80,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Digi Biz OS — The Autonomous Desktop AI OS" },
+      { title: "DIGI BIZ OS — The Autonomous Desktop AI OS" },
       {
         name: "description",
         content:
           "DIGI BIZ OS turns your desktop into a voice-first, multi-agent AI operating system.",
       },
       { name: "author", content: "DIGI BIZ OS" },
-      { property: "og:title", content: "Digi Biz OS — The Autonomous Desktop AI OS" },
+      { property: "og:title", content: "DIGI BIZ OS — The Autonomous Desktop AI OS" },
       {
         property: "og:description",
         content: "Operate your desktop at the speed of voice.",

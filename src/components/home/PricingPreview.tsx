@@ -10,7 +10,7 @@ const TIERS = [
   {
     id: "lifetime" as const,
     badge: "Lifetime Access",
-    name: "Digi Biz OS Lifetime",
+    name: "DIGI BIZ OS Lifetime",
     price: "$100",
     note: "Pay once. Own it for life.",
     features: [
@@ -47,11 +47,11 @@ const TIERS = [
     badge: "Full Ownership",
     name: "Source Code Licence",
     price: "$700",
-    note: "The whole codebase, yours to ship.",
+    note: "Full ownership, yours to ship.",
     features: [
       "Everything in Customised",
       "Complete source code access",
-      "Private repository",
+      "Private developer access",
       "Build your own installers",
       "Developer documentation",
       "Resale & commercial rights",

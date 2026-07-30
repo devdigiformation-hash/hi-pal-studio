@@ -12,7 +12,7 @@ const ROWS: [string, boolean, boolean, boolean][] = [
   ["Local File System Full Access", true, false, true],
   ["Multi-Provider AI Model Routing", true, true, false],
   ["Companies House API Integration", true, false, false],
-  ["Hermes CLI Skill Engine", true, false, false],
+  ["500+ AI Skills Library", true, false, false],
   ["MCP Server Compatibility", true, true, false],
   ["WhatsApp + Email + Discord Unified", true, false, false],
 ];
@@ -30,7 +30,7 @@ export default function ComparisonMatrix() {
     <SectionWrapper id="comparison" className="bg-[var(--bg-surface)]">
       <div className="mx-auto max-w-[1100px]">
         <div className="text-center">
-          <EyebrowLabel text="Why Digi Biz OS" />
+          <EyebrowLabel text="Why DIGI BIZ OS" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
             Beyond Browser AI. Desktop-Native Intelligence.
           </h2>

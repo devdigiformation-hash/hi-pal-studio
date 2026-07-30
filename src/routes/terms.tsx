@@ -4,14 +4,14 @@ import LegalPage from "@/pages/LegalPage";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "Terms & Conditions — Digi Biz OS" },
+      { title: "Terms & Conditions — DIGI BIZ OS" },
       {
         name: "description",
         content:
-          "Licence terms, permitted use, payment and activation rules for the Digi Biz OS desktop AI operating system.",
+          "Licence terms, permitted use, payment and activation rules for the DIGI BIZ OS desktop AI operating system.",
       },
-      { property: "og:title", content: "Terms & Conditions — Digi Biz OS" },
-      { property: "og:description", content: "Licence and purchase terms for Digi Biz OS." },
+      { property: "og:title", content: "Terms & Conditions — DIGI BIZ OS" },
+      { property: "og:description", content: "Licence and purchase terms for DIGI BIZ OS." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -20,12 +20,12 @@ export const Route = createFileRoute("/terms")({
     <LegalPage
       eyebrow="Legal"
       title="Terms & Conditions"
-      intro="These terms govern every purchase of a Digi Biz OS licence made through this website or through the payment methods shown at checkout. Digi Biz OS is operated by Digiformation Ltd."
+      intro="These terms govern every purchase of a DIGI BIZ OS licence made through this website or through the payment methods shown at checkout. DIGI BIZ OS is operated by Digiformation Ltd."
       sections={[
         {
           heading: "What you are buying",
           body: [
-            "A licence to install and use the ready-made Digi Biz OS desktop application. The purchase does not include source code, resale rights, custom development, or any guaranteed third-party AI service.",
+            "A licence to install and use the ready-made DIGI BIZ OS desktop application. The purchase does not include source code, resale rights, custom development, or any guaranteed third-party AI service.",
           ],
         },
         {
@@ -44,7 +44,7 @@ export const Route = createFileRoute("/terms")({
         {
           heading: "AI usage costs",
           body: [
-            "You connect your own AI provider account or API key. Any usage charged by that provider is your responsibility and is separate from your Digi Biz OS licence.",
+            "You connect your own AI provider account or API key. Any usage charged by that provider is your responsibility and is separate from your DIGI BIZ OS licence.",
           ],
         },
         {

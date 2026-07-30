@@ -4,13 +4,13 @@ import VoiceAIPage from "@/pages/VoiceAIPage";
 export const Route = createFileRoute("/voice-ai")({
   head: () => ({
     meta: [
-      { title: "Voice AI — Digi Biz OS" },
+      { title: "Voice AI — DIGI BIZ OS" },
       {
         name: "description",
         content:
           "Real-time live voice control for your desktop: sub-second intent, native command execution.",
       },
-      { property: "og:title", content: "Voice AI — Digi Biz OS" },
+      { property: "og:title", content: "Voice AI — DIGI BIZ OS" },
       {
         property: "og:description",
         content: "Real-time voice control for your entire desktop workspace.",

@@ -11,7 +11,7 @@ const PILLARS: { icon: LucideIcon; color: string; title: string; body: string }[
     icon: Lock,
     color: "var(--cyan)",
     title: "Local Execution Architecture",
-    body: "PyAutoGUI and automation run 100% on your hardware. No cloud processing of your desktop actions.",
+    body: "Desktop Control and automation run 100% on your hardware. No cloud processing of your desktop actions.",
   },
   {
     icon: KeyRound,
@@ -157,7 +157,7 @@ export default function SecuritySection() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="rounded-[var(--r-md)] border border-[var(--border-glass)] px-4 py-3 text-center font-code text-[11px] text-[var(--text-secondary)]"
                     style={{ background: "var(--bg-glass-light)" }}>
-                    Local Python Agent
+                    Local Desktop Agent
                   </div>
                   <div className="rounded-[var(--r-md)] border border-[var(--border-glass)] px-4 py-3 text-center font-code text-[11px] text-[var(--text-secondary)]"
                     style={{ background: "var(--bg-glass-light)" }}>

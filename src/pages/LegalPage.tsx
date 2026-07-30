@@ -61,7 +61,7 @@ export default function LegalPage({
           <a href={`mailto:${SUPPORT_EMAIL}`} className="text-[var(--cyan)] hover:underline">
             {SUPPORT_EMAIL}
           </a>{" "}
-          or message +92 316 446 7464. Digi Biz OS is operated by Digiformation Ltd.
+          or message +92 316 446 7464. DIGI BIZ OS is operated by Digiformation Ltd.
         </p>
       </div>
     </motion.main>
