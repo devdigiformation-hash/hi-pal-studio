@@ -7,16 +7,16 @@ export const Route = createFileRoute("/checkout")({
   }),
   head: () => ({
     meta: [
-      { title: "Secure Checkout — Digi Biz OS" },
+      { title: "Secure Checkout — DIGI BIZ OS" },
       {
         name: "description",
         content:
-          "Pay for your Digi Biz OS licence via JazzCash, bank transfer, USDT, Binance Pay or Redot Pay. Manually verified by Digiformation Ltd.",
+          "Pay for your DIGI BIZ OS licence via JazzCash, bank transfer, USDT, Binance Pay or Redot Pay. Manually verified by Digiformation Ltd.",
       },
-      { property: "og:title", content: "Secure Checkout — Digi Biz OS" },
+      { property: "og:title", content: "Secure Checkout — DIGI BIZ OS" },
       {
         property: "og:description",
-        content: "Choose a payment rail and activate your Digi Biz OS licence.",
+        content: "Choose a payment rail and activate your DIGI BIZ OS licence.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

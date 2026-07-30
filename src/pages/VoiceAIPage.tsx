@@ -91,7 +91,7 @@ export default function VoiceAIPage() {
               Continuous 2-Way Speech. No Typing Required.
             </h2>
             <p className="reveal-item delay-2 mt-5 max-w-[540px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
-              Powered by our real-time voice engine with WebSocket bidirectional streaming, DIGI BIZ OS
+              Powered by our real-time voice engine with real-time two-way streaming, DIGI BIZ OS
               maintains a persistent voice session. PCM 16kHz input, PCM 24kHz output — sub-200ms
               round-trip latency.
             </p>
@@ -101,7 +101,7 @@ export default function VoiceAIPage() {
             <TickList
               className="reveal-item delay-4 mt-8"
               items={[
-                'Wake word: "Hey DigiBiz" hands-free activation',
+                'Wake word: "Hey Digi" hands-free activation',
                 "Custom AI persona via Soul Engine system prompts",
                 "Real-time audio waveform visualization",
               ]}

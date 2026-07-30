@@ -58,11 +58,11 @@ export default function Navbar() {
           <Link to="/" className="group flex items-center gap-2">
             <img
               src={logoAsset.url}
-              alt="Digi Biz OS"
+              alt="DIGI BIZ OS"
               className="h-8 w-8 rounded-full transition-all duration-300 group-hover:animate-logo-blink md:h-9 md:w-9"
             />
             <span className="font-display text-[15px] font-bold tracking-tight text-[var(--text-primary)]">
-              Digi Biz OS
+              DIGI BIZ OS
             </span>
             <ActivePulse />
           </Link>
@@ -118,7 +118,7 @@ export default function Navbar() {
         >
           <div className="flex h-[60px] items-center justify-between px-5">
             <span className="font-display text-[15px] font-bold text-[var(--text-primary)]">
-              Digi Biz OS
+              DIGI BIZ OS
             </span>
             <button
               type="button"

@@ -17,13 +17,13 @@ import FinalCTA from "@/components/home/FinalCTA";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Digi Biz OS — Operate Your Desktop at the Speed of Voice" },
+      { title: "DIGI BIZ OS — Operate Your Desktop at the Speed of Voice" },
       {
         name: "description",
         content:
           "DIGI BIZ OS is the autonomous desktop AI OS: voice-first control, 27 autonomous agents, real-time screen vision and native desktop automation.",
       },
-      { property: "og:title", content: "Digi Biz OS — Operate Your Desktop at the Speed of Voice" },
+      { property: "og:title", content: "DIGI BIZ OS — Operate Your Desktop at the Speed of Voice" },
       {
         property: "og:description",
         content: "The autonomous desktop AI OS, driven entirely by voice.",

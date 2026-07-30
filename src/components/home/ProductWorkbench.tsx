@@ -47,12 +47,12 @@ const COPY: Record<Tab, { title: string; body: string; badges: string[]; bullets
   Developer: {
     title: "CLI + MCP",
     body: "Built-in terminal emulator and Model Context Protocol server connector for extensibility.",
-    badges: ["MCP Compatible", "104+ IPC Handlers"],
+    badges: ["MCP Compatible", "115+ Built-in Tools"],
     bullets: [
       "Native terminal emulator",
       "Custom MCP server registry",
       "Hermes skill authoring",
-      "Scriptable IPC surface",
+      "Expandable skill library",
     ],
   },
 };

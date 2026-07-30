@@ -59,13 +59,13 @@ export default function DesktopOSPage() {
         eyebrow="Native Desktop Control"
         title="Your Desktop."
         gradientTitle="Fully Automated."
-        subtitle="104+ IPC handlers. PyAutoGUI precision. Complete OS-level execution via voice command."
+        subtitle="115+ built-in tools. Pixel-perfect desktop control. Complete OS-level execution via voice command."
       />
 
       <SectionWrapper id="control-center">
         <div className="mx-auto grid max-w-[1200px] items-center gap-14 lg:grid-cols-2">
           <div>
-            <EyebrowLabel text="PyAutoGUI Control Center" />
+            <EyebrowLabel text="Desktop Control Center" />
             <h2 className="reveal-item delay-1 mt-4 font-display text-[30px] font-bold leading-[1.15] tracking-[-0.03em] text-[var(--text-primary)] md:text-[42px]">
               Click. Type. Control. Any App. By Voice.
             </h2>
@@ -93,9 +93,9 @@ export default function DesktopOSPage() {
             <TerminalBlock
               lines={[
                 { text: '> voice_command: "Open Chrome and search AI news"', color: "var(--text-primary)" },
-                { text: '[IPC] desktop.launchProcess("chrome.exe")', color: "var(--cyan)" },
-                { text: '[IPC] keyboard.typeText("AI news today")', color: "var(--cyan)" },
-                { text: '[IPC] keyboard.pressKey("Enter")', color: "var(--purple)" },
+                { text: '→ desktop.launchProcess("chrome.exe")', color: "var(--cyan)" },
+                { text: '→ keyboard.typeText("AI news today")', color: "var(--cyan)" },
+                { text: '→ keyboard.pressKey("Enter")', color: "var(--purple)" },
                 { text: "✓ Executed in 1.2s", color: "var(--success)" },
               ]}
             />
@@ -106,7 +106,7 @@ export default function DesktopOSPage() {
       <SectionWrapper className="bg-[var(--bg-surface)]">
         <div className="mx-auto max-w-[1100px]">
           <div className="text-center">
-            <EyebrowLabel text="IPC Handler Registry" color="var(--purple)" />
+            <EyebrowLabel text="Command Library" color="var(--purple)" />
             <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
               104+ Native System Bridges.
             </h2>
@@ -137,7 +137,7 @@ export default function DesktopOSPage() {
 
       <PageCTA
         title="One Voice. Total Desktop Mastery."
-        badges={["Port 8765 Agent", "104+ IPC Handlers", "Windows · macOS soon"]}
+        badges={["Instant Desktop Control", "115+ Built-in Tools", "Windows · macOS soon"]}
         cta="Download for Windows"
         icon={<WindowsIcon size={17} />}
       />

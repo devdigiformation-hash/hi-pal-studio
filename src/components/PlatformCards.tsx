@@ -29,7 +29,7 @@ export default function PlatformCards() {
           </div>
         </div>
         <p className="mt-4 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-          The full DIGI BIZ OS desktop build — voice control, 104+ IPC handlers and Agent Town,
+          The full DIGI BIZ OS desktop build — voice control, 115+ built-in tools and Agent Town,
           available today.
         </p>
         <div className="mt-6">

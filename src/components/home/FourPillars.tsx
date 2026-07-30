@@ -32,8 +32,8 @@ const PILLARS: Pillar[] = [
     icon: Monitor,
     color: "var(--purple)",
     title: "Native Desktop Execution",
-    body: "PyAutoGUI engine with 104+ IPC handlers controls real mouse clicks, keyboard input, window focus, file operations, and system processes natively.",
-    badge: "104+ IPC · Port 8765 Python Agent",
+    body: "Desktop Control engine with 115+ built-in tools controls real mouse clicks, keyboard input, window focus, file operations, and system processes natively.",
+    badge: "115+ Built-in Tools · 500+ AI Skills",
     bullets: ["Real mouse & keyboard control", "Window focus management", "Full file system operations"],
   },
   {

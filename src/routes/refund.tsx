@@ -4,13 +4,13 @@ import LegalPage from "@/pages/LegalPage";
 export const Route = createFileRoute("/refund")({
   head: () => ({
     meta: [
-      { title: "Refund Policy — Digi Biz OS" },
+      { title: "Refund Policy — DIGI BIZ OS" },
       {
         name: "description",
         content:
-          "When a payment for a Digi Biz OS licence can and cannot be returned, including delivery, duplicate payments and chargebacks.",
+          "When a payment for a DIGI BIZ OS licence can and cannot be returned, including delivery, duplicate payments and chargebacks.",
       },
-      { property: "og:title", content: "Refund Policy — Digi Biz OS" },
+      { property: "og:title", content: "Refund Policy — DIGI BIZ OS" },
       { property: "og:description", content: "Digital delivery, final sale and exceptions." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/refund")({
     <LegalPage
       eyebrow="Legal"
       title="Refund Policy"
-      intro="This policy explains when a payment made to Digi Biz OS can and cannot be returned. It forms part of our Terms & Conditions and applies to every purchase made through this site."
+      intro="This policy explains when a payment made to DIGI BIZ OS can and cannot be returned. It forms part of our Terms & Conditions and applies to every purchase made through this site."
       sections={[
         {
           heading: "Digital delivery and final sale",

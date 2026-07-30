@@ -22,7 +22,7 @@ const FAQS = [
   },
   {
     q: "Can it control any application on my desktop?",
-    a: "Yes. PyAutoGUI provides native OS-level control of any visible UI element across all desktop applications.",
+    a: "Yes. Desktop Control provides native OS-level control of any visible UI element across all desktop applications.",
   },
   {
     q: "What is Agent Town?",
@@ -30,7 +30,7 @@ const FAQS = [
   },
   {
     q: "Is DIGI BIZ OS an online web app?",
-    a: "No. It is a native desktop Electron application that runs fully on your local machine.",
+    a: "No. It is a native desktop application that runs fully on your local machine.",
   },
   {
     q: "Can developers extend it with custom skills?",

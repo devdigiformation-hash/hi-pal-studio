@@ -4,13 +4,13 @@ import DocsPage from "@/pages/DocsPage";
 export const Route = createFileRoute("/docs")({
   head: () => ({
     meta: [
-      { title: "Docs — Digi Biz OS" },
+      { title: "Docs — DIGI BIZ OS" },
       {
         name: "description",
         content:
           "Install guides, voice command reference, agent APIs and system requirements for DIGI BIZ OS.",
       },
-      { property: "og:title", content: "Docs — Digi Biz OS" },
+      { property: "og:title", content: "Docs — DIGI BIZ OS" },
       {
         property: "og:description",
         content: "Guides, command reference and agent APIs for DIGI BIZ OS.",

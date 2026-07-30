@@ -20,8 +20,8 @@ const CARDS = [
   {
     icon: Code,
     color: "var(--purple)",
-    title: "IPC Handler Reference",
-    body: "Complete reference for all 104+ IPC handlers with TypeScript type signatures and usage examples.",
+    title: "Command Library Reference",
+    body: "Complete reference for all 115+ built-in tools with plain-language descriptions and usage examples.",
     cta: "View Reference →",
     primary: false,
   },
@@ -36,8 +36,8 @@ const CARDS = [
   {
     icon: Zap,
     color: "var(--pink)",
-    title: "REST API & WebSocket Spec",
-    body: "41+ REST endpoints, WebSocket /live spec, authentication, request/response schemas.",
+    title: "Automation & Integration Guide",
+    body: "Connect DIGI BIZ OS to your existing business tools, MCP servers and automations.",
     cta: "API Docs →",
     primary: false,
   },
@@ -102,7 +102,7 @@ export default function DocsPage() {
                 { text: "$ digibiz config set desktop.port 8765", color: "var(--cyan)" },
                 { text: "# 3 — Launch and speak", color: "var(--text-muted)" },
                 { text: "$ digibiz start --voice", color: "var(--purple)" },
-                { text: '> "Hey DigiBiz, what can you do?"', color: "var(--text-primary)" },
+                { text: '> "Hey Digi, what can you do?"', color: "var(--text-primary)" },
                 { text: "✓ Voice session live — 27 agents standing by", color: "var(--success)" },
               ]}
             />

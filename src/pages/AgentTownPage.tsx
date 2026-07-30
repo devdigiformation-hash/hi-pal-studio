@@ -75,7 +75,7 @@ export default function AgentTownPage() {
 
             <div className="reveal-item delay-3 mt-7 flex flex-wrap gap-2">
               <MonoBadge>27 Concurrent Agents</MonoBadge>
-              <MonoBadge color="var(--purple)">94 Built-in Tools</MonoBadge>
+              <MonoBadge color="var(--purple)">115+ Built-in Tools</MonoBadge>
               <MonoBadge color="var(--amber)">Port 18790 Orchestrator</MonoBadge>
               <MonoBadge color="var(--pink)">Hermes CLI Bridge</MonoBadge>
             </div>
@@ -143,7 +143,7 @@ export default function AgentTownPage() {
       <SectionWrapper className="bg-[var(--bg-surface)]">
         <div className="mx-auto max-w-[1100px]">
           <div className="text-center">
-            <EyebrowLabel text="94 Built-in Tools" color="var(--amber)" />
+            <EyebrowLabel text="115+ Built-in Tools" color="var(--amber)" />
             <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
               Playwright Browser + Hermes CLI. Combined.
             </h2>

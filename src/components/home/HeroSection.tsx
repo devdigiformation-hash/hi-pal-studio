@@ -53,7 +53,7 @@ const ORBIT_COLORS = [
 ];
 
 
-const BADGES = ["104+ IPC Handlers", "27 Autonomous Agents", "<200ms Voice Latency", "94 Built-in Tools"];
+const BADGES = ["115+ Built-in Tools", "27 Autonomous Agents", "<200ms Voice Latency", "115+ Built-in Tools"];
 
 function Typewriter() {
   const [index, setIndex] = useState(0);
@@ -202,7 +202,7 @@ export default function HeroSection() {
             transition={{ delay: 0.6 }}
             className="mt-5 max-w-[580px] font-body text-[16px] leading-[1.75] text-[var(--text-secondary)] md:text-[18px]"
           >
-            DIGI BIZ OS unifies zero-latency 2-way speech, real-time screen vision, PyAutoGUI
+            DIGI BIZ OS unifies zero-latency 2-way speech, real-time screen vision, Desktop Control
             desktop automation, and 27 autonomous agents into one luxury glassmorphic workspace.
           </motion.p>
 

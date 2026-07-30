@@ -1,5 +1,5 @@
 const ITEMS = [
-  "104+ Native IPC Handlers",
+  "115+ Built-in Tools",
   "94 Desktop & Browser Tools",
   "27 Autonomous Sub-Agents",
   "<200ms Voice Stream Latency",
