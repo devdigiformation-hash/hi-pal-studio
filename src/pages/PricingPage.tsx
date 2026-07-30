@@ -263,7 +263,7 @@ export default function PricingPage() {
                     {item.a}
                   </p>
                 </Accordion.Content>
-              </Accordion.Content>
+              </Accordion.Item>
             ))}
           </Accordion.Root>
         </div>
