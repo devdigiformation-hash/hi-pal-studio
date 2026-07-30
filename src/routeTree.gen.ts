@@ -16,6 +16,7 @@ import { Route as DesktopOsRouteImport } from './routes/desktop-os'
 import { Route as DocsRouteImport } from './routes/docs'
 import { Route as IntegrationsRouteImport } from './routes/integrations'
 import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as VoiceAiRouteImport } from './routes/voice-ai'
 import { Route as OrderRefRouteImport } from './routes/order.$ref'
 
@@ -54,6 +55,11 @@ const PricingRoute = PricingRouteImport.update({
   path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VoiceAiRoute = VoiceAiRouteImport.update({
   id: '/voice-ai',
   path: '/voice-ai',
@@ -73,6 +79,7 @@ export interface FileRoutesByFullPath {
   '/docs': typeof DocsRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
+  '/terms': typeof TermsRoute
   '/voice-ai': typeof VoiceAiRoute
   '/order/$ref': typeof OrderRefRoute
 }
@@ -84,6 +91,7 @@ export interface FileRoutesByTo {
   '/docs': typeof DocsRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
+  '/terms': typeof TermsRoute
   '/voice-ai': typeof VoiceAiRoute
   '/order/$ref': typeof OrderRefRoute
 }
@@ -96,6 +104,7 @@ export interface FileRoutesById {
   '/docs': typeof DocsRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
+  '/terms': typeof TermsRoute
   '/voice-ai': typeof VoiceAiRoute
   '/order/$ref': typeof OrderRefRoute
 }
@@ -109,6 +118,7 @@ export interface FileRouteTypes {
     | '/docs'
     | '/integrations'
     | '/pricing'
+    | '/terms'
     | '/voice-ai'
     | '/order/$ref'
   fileRoutesByTo: FileRoutesByTo
@@ -120,6 +130,7 @@ export interface FileRouteTypes {
     | '/docs'
     | '/integrations'
     | '/pricing'
+    | '/terms'
     | '/voice-ai'
     | '/order/$ref'
   id:
@@ -131,6 +142,7 @@ export interface FileRouteTypes {
     | '/docs'
     | '/integrations'
     | '/pricing'
+    | '/terms'
     | '/voice-ai'
     | '/order/$ref'
   fileRoutesById: FileRoutesById
@@ -143,6 +155,7 @@ export interface RootRouteChildren {
   DocsRoute: typeof DocsRoute
   IntegrationsRoute: typeof IntegrationsRoute
   PricingRoute: typeof PricingRoute
+  TermsRoute: typeof TermsRoute
   VoiceAiRoute: typeof VoiceAiRoute
   OrderRefRoute: typeof OrderRefRoute
 }
@@ -198,6 +211,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/voice-ai': {
       id: '/voice-ai'
       path: '/voice-ai'
@@ -223,6 +243,7 @@ const rootRouteChildren: RootRouteChildren = {
   DocsRoute: DocsRoute,
   IntegrationsRoute: IntegrationsRoute,
   PricingRoute: PricingRoute,
+  TermsRoute: TermsRoute,
   VoiceAiRoute: VoiceAiRoute,
   OrderRefRoute: OrderRefRoute,
 }
