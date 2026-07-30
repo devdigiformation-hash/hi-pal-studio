@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import DesktopOSPage from "@/pages/DesktopOSPage";
 
 export const Route = createFileRoute("/desktop-os")({
   head: () => ({
@@ -21,10 +22,3 @@ export const Route = createFileRoute("/desktop-os")({
   component: DesktopOSPage,
 });
 
-function DesktopOSPage() {
-  return (
-    <main className="min-h-screen pt-[60px] md:pt-[72px]">
-      {/* SEGMENT 3 builds this */}
-    </main>
-  );
-}

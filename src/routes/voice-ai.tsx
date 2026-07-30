@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import VoiceAIPage from "@/pages/VoiceAIPage";
 
 export const Route = createFileRoute("/voice-ai")({
   head: () => ({
@@ -21,10 +22,3 @@ export const Route = createFileRoute("/voice-ai")({
   component: VoiceAIPage,
 });
 
-function VoiceAIPage() {
-  return (
-    <main className="min-h-screen pt-[60px] md:pt-[72px]">
-      {/* SEGMENT 3 builds this */}
-    </main>
-  );
-}

@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import IntegrationsPage from "@/pages/IntegrationsPage";
 
 export const Route = createFileRoute("/integrations")({
   head: () => ({
@@ -21,10 +22,3 @@ export const Route = createFileRoute("/integrations")({
   component: IntegrationsPage,
 });
 
-function IntegrationsPage() {
-  return (
-    <main className="min-h-screen pt-[60px] md:pt-[72px]">
-      {/* SEGMENT 3 builds this */}
-    </main>
-  );
-}
