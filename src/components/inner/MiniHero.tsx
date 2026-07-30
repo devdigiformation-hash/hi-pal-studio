@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
-import EyebrowLabel from "@/components/EyebrowLabel";
 import GradientText from "@/components/GradientText";
 import { cn } from "@/lib/utils";
 
@@ -92,6 +91,3 @@ export default function MiniHero({
     </section>
   );
 }
-
-// Unused import guard removed intentionally.
-export { EyebrowLabel };
