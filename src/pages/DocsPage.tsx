@@ -96,12 +96,12 @@ export default function DocsPage() {
               speed={16}
               lines={[
                 { text: "# 1 — Download the DIGI BIZ OS installer", color: "var(--text-muted)" },
-                { text: "$ curl -fsSL https://get.digibizos.app | sh", color: "var(--cyan)" },
-                { text: "# 2 — Configure your AI provider API keys", color: "var(--text-muted)" },
-                { text: "$ digibiz config set ai.key <YOUR_KEY>", color: "var(--cyan)" },
-                { text: "$ digibiz config set desktop.port 8765", color: "var(--cyan)" },
+                { text: "> Installing DIGI BIZ OS for Windows…", color: "var(--cyan)" },
+                { text: "# 2 — Activate your licence", color: "var(--text-muted)" },
+                { text: "> Licence key accepted — workspace ready", color: "var(--cyan)" },
+                { text: "> 500+ AI skills · 115+ tools loaded", color: "var(--cyan)" },
                 { text: "# 3 — Launch and speak", color: "var(--text-muted)" },
-                { text: "$ digibiz start --voice", color: "var(--purple)" },
+                { text: "> Voice mode enabled", color: "var(--purple)" },
                 { text: '> "Hey Digi, what can you do?"', color: "var(--text-primary)" },
                 { text: "✓ Voice session live — 27 agents standing by", color: "var(--success)" },
               ]}

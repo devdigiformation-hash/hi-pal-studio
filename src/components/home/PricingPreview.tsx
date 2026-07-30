@@ -47,7 +47,7 @@ const TIERS = [
     badge: "Full Ownership",
     name: "Source Code Licence",
     price: "$700",
-    note: "The whole codebase, yours to ship.",
+    note: "Full ownership, yours to ship.",
     features: [
       "Everything in Customised",
       "Complete source code access",

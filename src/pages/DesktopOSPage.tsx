@@ -70,8 +70,8 @@ export default function DesktopOSPage() {
               Click. Type. Control. Any App. By Voice.
             </h2>
             <p className="reveal-item delay-2 mt-5 max-w-[560px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
-              The Python desktop agent runs on Port 8765, accepting voice-triggered commands to
-              control any visible desktop element — click buttons, type text, manage windows,
+              DIGI BIZ OS takes voice-triggered commands and
+              controls any visible desktop element — click buttons, type text, manage windows,
               execute hotkeys, capture screenshots.
             </p>
 
@@ -93,9 +93,9 @@ export default function DesktopOSPage() {
             <TerminalBlock
               lines={[
                 { text: '> voice_command: "Open Chrome and search AI news"', color: "var(--text-primary)" },
-                { text: '→ desktop.launchProcess("chrome.exe")', color: "var(--cyan)" },
-                { text: '→ keyboard.typeText("AI news today")', color: "var(--cyan)" },
-                { text: '→ keyboard.pressKey("Enter")', color: "var(--purple)" },
+                { text: "→ Opening your browser", color: "var(--cyan)" },
+                { text: '→ Typing "AI news today"', color: "var(--cyan)" },
+                { text: "→ Running the search", color: "var(--purple)" },
                 { text: "✓ Executed in 1.2s", color: "var(--success)" },
               ]}
             />

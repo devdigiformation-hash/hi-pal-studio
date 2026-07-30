@@ -62,7 +62,7 @@ export const PLANS: Record<PlanId, Plan> = {
     name: "Full Source Code Licence",
     badge: "Developer · Full Ownership",
     blurb:
-      "The complete DIGI BIZ OS codebase, yours to modify, rebrand and ship. Total ownership, no lock-in.",
+      "Complete ownership of DIGI BIZ OS — modify it, rebrand it and ship it as your own product. No lock-in.",
     pricePkr: 196000,
     priceUsd: 700,
     billingNote: "One-time payment · Source code licence",
@@ -139,7 +139,7 @@ export const PAYMENT_METHODS: PaymentMethod[] = [
     region: "International",
     fields: [
       { label: "Network", value: "TRC-20 (Tron)" },
-      { label: "Wallet Address", value: "TSc7Xk9QDigiBizOSWalletExample1234", copy: true },
+      { label: "Wallet Address", value: "TSc7Xk9QDigiBizWalletExample1234", copy: true },
     ],
     steps: [
       "Open your crypto wallet or exchange",

@@ -26,7 +26,7 @@ const FAQS = [
   },
   {
     q: "What do I get with the source code licence?",
-    a: "The complete codebase in a private repository, developer documentation, the right to build and distribute your own installers, resale rights and 12 months of update pulls.",
+    a: "Full product ownership with private developer access, complete documentation, the right to build and distribute your own installers, resale rights and 12 months of update pulls.",
   },
   {
     q: "Am I charged for AI API usage?",
