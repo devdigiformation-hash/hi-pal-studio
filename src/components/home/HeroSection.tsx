@@ -343,7 +343,7 @@ export default function HeroSection() {
 
           {/* Floating mini stat */}
           <div
-            className="animate-float-updown absolute bottom-2 right-0 rounded-[var(--r-md)] border border-[var(--border-glass)] px-4 py-3 backdrop-blur-xl"
+            className="animate-float-updown absolute bottom-4 right-4 rounded-[var(--r-md)] border border-[var(--border-glass)] px-4 py-3 backdrop-blur-xl"
             style={{ background: "var(--bg-glass)", boxShadow: "var(--shadow-glass)" }}
           >
             <div className="font-display text-[12px] font-semibold text-[var(--text-primary)]">
