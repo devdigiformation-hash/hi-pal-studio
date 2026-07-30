@@ -14,6 +14,21 @@ import MiniHero from "@/components/inner/MiniHero";
 
 const COMMUNITY = [
   "Local Ollama models — fully offline",
+];
+
+const LIFETIME = [
+  "One-time payment — no monthly subscription",
+  "Lifetime access to Digi Biz OS Gen 2",
+  "All Gen 2 updates included free",
+  "Activate on up to 3 PCs",
+  "Connect your own AI API key or ChatGPT account",
+  "Voice intelligence + Agent Town included",
+  "Windows 10 & 11 support",
+  "Licence tied to your account — reinstall any time",
+];
+
+const COMMUNITY_FEATURES = [
+  "Local Ollama models — fully offline",
   "Voice command basics with push-to-talk",
   "20 desktop IPC handlers",
   "Single-agent execution",
