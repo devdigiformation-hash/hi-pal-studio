@@ -277,21 +277,9 @@ export default function HeroSection() {
               boxShadow: "0 0 0 1px rgba(47,224,200,0.1), 0 0 60px rgba(47,224,200,0.12)",
             }}
           >
-            {GLOBE_PARTICLES.map((p, i) => (
-              <span
-                key={i}
-                className="absolute rounded-full"
-                style={{
-                  left: `${p.left}%`,
-                  top: `${p.top}%`,
-                  width: p.size,
-                  height: p.size,
-                  background: p.color,
-                  opacity: 0.5,
-                  animation: `particleDrift ${p.duration}s ease-in-out ${p.delay}s infinite`,
-                }}
-              />
-            ))}
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+              <JupiterGlobe size={320} />
+            </div>
             <div className="relative z-10 text-center">
               <div className="font-code text-[13px] tracking-[0.18em] text-[var(--text-primary)]">
                 DIGI BIZ OS
