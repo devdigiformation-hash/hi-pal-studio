@@ -6,58 +6,57 @@ import MonoBadge from "@/components/MonoBadge";
 import CyanButton from "@/components/CyanButton";
 import GhostButton from "@/components/GhostButton";
 
-const PLANS = [
+const TIERS = [
   {
-    badge: "Free Forever",
-    name: "Community Edition",
-    price: "£0",
-    note: "Open source desktop edition",
+    id: "lifetime" as const,
+    badge: "Lifetime Access",
+    name: "Digi Biz OS Lifetime",
+    price: "$100",
+    note: "Pay once. Own it for life.",
     features: [
-      "Core Voice Interface",
-      "Basic Desktop Automation",
-      "Single AI Provider",
-      "Local File Access",
-      "CLI Terminal",
-      "Community Support",
+      "One-time payment — no subscription",
+      "Lifetime access to Gen 2",
+      "All updates included",
+      "Activate on up to 3 PCs",
+      "Voice intelligence + Agent Town",
+      "Bring your own AI key",
     ],
-    cta: "Download Free",
+    cta: "Get Lifetime Access",
     highlight: false,
   },
   {
+    id: "custom_build" as const,
     badge: "Most Popular",
-    name: "Pro Edition",
-    price: "£29",
-    unit: "/mo",
-    note: "Full power. Unlimited agents.",
+    name: "Customised + Your Branding",
+    price: "$400",
+    note: "White-label build with 400+ workflows.",
     features: [
-      "Everything in Community",
-      "Gemini Live 2-Way Voice",
-      "All 27 Agents Active",
-      "94 Desktop & Browser Tools",
-      "Screen + Webcam Vision",
-      "WhatsApp / Email / Discord",
-      "Companies House API",
-      "Multi-Provider Routing",
-      "Priority Updates",
-      "Pro Community Discord",
+      "Everything in Lifetime",
+      "Full white-label branding",
+      "400+ automation workflows configured",
+      "Custom agent personas",
+      "WhatsApp / Email / Discord setup",
+      "Onboarding + handover session",
+      "6 months priority support",
     ],
-    cta: "Start Pro Free Trial",
+    cta: "Order Custom Build",
     highlight: true,
   },
   {
-    badge: "Enterprise",
-    name: "Enterprise Edition",
-    price: "Custom",
-    note: "On-premise. SLA guaranteed.",
+    id: "source_code" as const,
+    badge: "Full Ownership",
+    name: "Source Code Licence",
+    price: "$700",
+    note: "The whole codebase, yours to ship.",
     features: [
-      "On-Premise Agent Town",
-      "Custom MCP Server Integration",
-      "Dedicated SLA & Support",
-      "Air-Gapped Deployment",
-      "Custom Persona Engineering",
-      "Volume Agent Licensing",
+      "Everything in Customised",
+      "Complete source code access",
+      "Private repository",
+      "Build your own installers",
+      "Developer documentation",
+      "Resale & commercial rights",
     ],
-    cta: "Contact Sales →",
+    cta: "Buy Source Code",
     highlight: false,
   },
 ];
@@ -69,12 +68,12 @@ export default function PricingPreview() {
         <div className="text-center">
           <EyebrowLabel text="Pricing" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            Start Free. Scale Infinitely.
+            Pay Once. Own It Forever.
           </h2>
         </div>
 
         <div className="mt-14 grid grid-cols-1 items-start gap-6 lg:grid-cols-3">
-          {PLANS.map((plan, i) => (
+          {TIERS.map((plan, i) => (
             <div key={plan.name} className={`reveal-item delay-${i + 1}`}>
               <GlassCard
                 className={
@@ -93,11 +92,9 @@ export default function PricingPreview() {
                   <span className="font-display text-[44px] font-bold leading-none text-[var(--text-primary)]">
                     {plan.price}
                   </span>
-                  {plan.unit ? (
-                    <span className="font-body text-[14px] text-[var(--text-muted)]">
-                      {plan.unit}
-                    </span>
-                  ) : null}
+                  <span className="font-body text-[13px] text-[var(--text-muted)]">
+                    one-time
+                  </span>
                 </div>
                 <p className="mt-3 font-body text-[14px] text-[var(--text-secondary)]">
                   {plan.note}
@@ -111,15 +108,13 @@ export default function PricingPreview() {
                   ))}
                 </ul>
                 <div className="mt-8">
-                  {plan.highlight ? (
-                    <Link to="/checkout" search={{ plan: "pro_monthly" }} className="block">
+                  <Link to="/checkout" search={{ plan: plan.id }} className="block">
+                    {plan.highlight ? (
                       <CyanButton className="w-full">{plan.cta}</CyanButton>
-                    </Link>
-                  ) : (
-                    <Link to="/pricing" className="block">
-                      <GhostButton className="w-full">{plan.cta}</GhostButton>
-                    </Link>
-                  )}
+                    ) : (
+                      <GhostButton className="w-full">{plan.cta} →</GhostButton>
+                    )}
+                  </Link>
                 </div>
               </GlassCard>
             </div>

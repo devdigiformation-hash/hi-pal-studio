@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
-import * as Switch from "@radix-ui/react-switch";
 import * as Accordion from "@radix-ui/react-accordion";
 import { Plus, Check } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -11,91 +9,28 @@ import CyanButton from "@/components/CyanButton";
 import GhostButton from "@/components/GhostButton";
 import MonoBadge from "@/components/MonoBadge";
 import MiniHero from "@/components/inner/MiniHero";
-
-const LIFETIME = [
-  "One-time payment — no monthly subscription",
-  "Lifetime access to Digi Biz OS Gen 2",
-  "All Gen 2 updates included free",
-  "Activate on up to 3 PCs",
-  "Connect your own AI API key or ChatGPT account",
-  "Voice intelligence + Agent Town included",
-  "Windows 10 & 11 support",
-  "Licence tied to your account — reinstall any time",
-];
-
-const COMMUNITY = [
-  "Local Ollama models — fully offline",
-  "Voice command basics with push-to-talk",
-  "20 desktop IPC handlers",
-  "Single-agent execution",
-  "File system read/write automation",
-  "Clipboard and notification control",
-  "Basic screenshot capture",
-  "Email (IMAP) inbox reading",
-  "Community Discord support",
-  "Local encrypted key storage",
-  "Manual skill authoring",
-  "MIT-licensed source access",
-];
-
-const PRO = [
-  "Everything in Community",
-  "Gemini Live 2-way voice streaming",
-  "\"Hey DigiBiz\" wake word detection",
-  "Soul Engine custom AI persona",
-  "All 104+ IPC handlers unlocked",
-  "Agent Town — 27 concurrent agents",
-  "94 built-in tools (Playwright + Hermes)",
-  "WhatsApp automation via Baileys",
-  "Full IMAP/SMTP email intelligence",
-  "Discord bot control",
-  "UK Companies House API access",
-  "MCP server connections",
-  "Workflow scheduling and cron triggers",
-  "Memory indexing across sessions",
-  "Priority model routing (Groq/OpenRouter)",
-  "Automatic updates and rollbacks",
-  "Usage analytics dashboard",
-  "Email support within 24 hours",
-];
-
-const ENTERPRISE = [
-  "Everything in Pro",
-  "Unlimited seats and device activations",
-  "Private on-premise deployment",
-  "SSO / SAML authentication",
-  "Role-based agent permissions",
-  "Audit logging and compliance export",
-  "Custom Hermes skill development",
-  "Dedicated MCP integration engineering",
-  "Air-gapped offline installation",
-  "99.9% uptime SLA",
-  "Named customer success manager",
-  "Security review and pen-test reports",
-  "Team training and onboarding",
-  "Volume licensing agreements",
-];
+import { PLANS, type PlanId } from "@/lib/payment-config";
 
 const FAQS = [
   {
     q: "What payment methods do you accept?",
-    a: "All major credit and debit cards, Apple Pay, Google Pay, and bank transfer for annual enterprise invoices in GBP, USD, and EUR.",
+    a: "JazzCash, bank transfer, USDT (TRC-20), Binance Pay and Redot Pay. Pick a rail at checkout, send the exact amount and submit your transaction reference.",
   },
   {
-    q: "Do you offer refunds?",
-    a: "Yes. Pro subscriptions carry a 30-day money-back guarantee, no questions asked. Cancel any time from your account dashboard.",
+    q: "Is this really a one-time payment?",
+    a: "Yes. Every package is a single one-time payment — $100 lifetime access, $400 for the branded custom build, $700 for the full source code licence. No monthly software fees.",
   },
   {
-    q: "How does team licensing work?",
-    a: "Pro is licensed per user with up to 3 device activations each. Enterprise includes unlimited seats under a single organisation agreement.",
+    q: "What does the customised package include?",
+    a: "A fully white-labelled build with your logo, name and colours, plus 400+ automation workflows configured around your business, onboarding and 6 months of priority support.",
+  },
+  {
+    q: "What do I get with the source code licence?",
+    a: "The complete codebase in a private repository, developer documentation, the right to build and distribute your own installers, resale rights and 12 months of update pulls.",
   },
   {
     q: "Am I charged for AI API usage?",
-    a: "No. You connect your own Gemini, Groq, or OpenRouter keys and pay those providers directly. Community users can run Ollama locally at zero cost.",
-  },
-  {
-    q: "Can I switch between monthly and annual?",
-    a: "Yes. Switch at any time — annual billing saves 20% and any remaining monthly balance is credited to your first annual invoice.",
+    a: "No. You connect your own Gemini, Groq, OpenRouter or ChatGPT keys and pay those providers directly, or run local models at zero cost.",
   },
 ];
 
@@ -114,10 +49,33 @@ function FeatureList({ items, color }: { items: string[]; color: string }) {
   );
 }
 
-export default function PricingPage() {
-  const [annual, setAnnual] = useState(false);
-  const proPrice = annual ? 23 : 29;
+const TIERS: {
+  id: PlanId;
+  eyebrow: string;
+  accent: string;
+  badge?: string;
+  highlight?: boolean;
+  cta: string;
+}[] = [
+  { id: "lifetime", eyebrow: "Lifetime Access", accent: "var(--cyan)", cta: "Get Lifetime Access" },
+  {
+    id: "custom_build",
+    eyebrow: "Customised Build",
+    accent: "var(--cyan)",
+    badge: "Most Popular",
+    highlight: true,
+    cta: "Order Custom Build",
+  },
+  {
+    id: "source_code",
+    eyebrow: "Source Code",
+    accent: "var(--purple)",
+    badge: "Full Ownership",
+    cta: "Buy Source Code",
+  },
+];
 
+export default function PricingPage() {
   return (
     <motion.main
       initial={{ opacity: 0, y: 20 }}
@@ -127,187 +85,67 @@ export default function PricingPage() {
     >
       <MiniHero
         eyebrow="Pricing"
-        title="Start Free."
-        gradientTitle="Scale to Enterprise."
-        subtitle="One platform. Three tiers. All voice-powered."
+        title="Pay Once."
+        gradientTitle="Own It Forever."
+        subtitle="Three one-time packages — lifetime access, your own branded build, or the full source code."
         height="min-h-[50vh]"
       />
 
       <SectionWrapper id="plans">
         <div className="mx-auto max-w-[1200px]">
-          <div className="reveal-item flex items-center justify-center gap-4">
-            <span
-              className="font-display text-[14px] font-semibold"
-              style={{ color: annual ? "var(--text-muted)" : "var(--text-primary)" }}
-            >
-              Monthly
-            </span>
-            <Switch.Root
-              checked={annual}
-              onCheckedChange={setAnnual}
-              aria-label="Toggle annual billing"
-              className="relative h-[26px] w-[48px] rounded-full border border-[var(--border-glass)] transition-colors duration-300 data-[state=checked]:border-[var(--cyan-border)]"
-              style={{ background: "var(--bg-glass)" }}
-            >
-              <Switch.Thumb
-                className="block h-[18px] w-[18px] translate-x-[4px] rounded-full transition-transform duration-300 data-[state=checked]:translate-x-[26px]"
-                style={{ background: annual ? "var(--cyan)" : "var(--text-muted)" }}
-              />
-            </Switch.Root>
-            <span
-              className="font-display text-[14px] font-semibold"
-              style={{ color: annual ? "var(--text-primary)" : "var(--text-muted)" }}
-            >
-              Annual
-            </span>
-            <MonoBadge color="var(--success)">Save 20%</MonoBadge>
+          <div className="reveal-item flex flex-wrap items-center justify-center gap-3">
+            <MonoBadge color="var(--success)">One-Time Payment</MonoBadge>
+            <MonoBadge color="var(--text-secondary)">No Monthly Software Fees</MonoBadge>
           </div>
 
-          {/* Lifetime — one-time licence */}
-          <GlassCard
-            className="reveal-item mt-12 border-[var(--cyan-border)] p-8 md:p-10"
-            glowColor="var(--cyan)"
-          >
-            <div className="grid gap-8 md:grid-cols-[1fr_320px] md:items-center">
-              <div>
-                <div className="flex flex-wrap items-center gap-3">
-                  <EyebrowLabel text="Lifetime Licence" />
-                  <MonoBadge color="var(--success)">Save 29%</MonoBadge>
-                </div>
-                <h3 className="mt-4 font-display text-[30px] font-extrabold leading-tight text-[var(--text-primary)] md:text-[38px]">
-                  Pay once. Own it for life.
-                </h3>
-                <p className="mt-3 max-w-[520px] font-body text-[14.5px] leading-[1.7] text-[var(--text-secondary)]">
-                  One-time payment. No monthly software subscription. Connect your own AI API and
-                  stay in control of your usage costs.
-                </p>
-                <div className="mt-6 grid gap-2 sm:grid-cols-2">
-                  {LIFETIME.map((f) => (
-                    <div key={f} className="flex items-start gap-2.5">
-                      <Check
-                        size={15}
-                        color="var(--cyan)"
-                        strokeWidth={2.4}
-                        className="mt-[4px] shrink-0"
-                      />
-                      <span className="font-body text-[13.5px] leading-[1.6] text-[var(--text-secondary)]">
-                        {f}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div
-                className="rounded-[18px] border border-[var(--border-glass)] p-7 text-center"
-                style={{ background: "var(--bg-glass-light)" }}
-              >
-                <div className="flex items-end justify-center gap-3">
-                  <span className="font-display text-[48px] font-extrabold leading-none text-[var(--text-primary)]">
-                    $56
-                  </span>
-                  <span className="pb-2 font-body text-[16px] text-[var(--text-muted)] line-through">
-                    $79
-                  </span>
-                </div>
-                <div className="mt-3 font-body text-[13px] text-[var(--text-muted)]">
-                  One-time payment · Lifetime access
-                </div>
-                <div className="mt-6">
-                  <Link to="/checkout" search={{ plan: "lifetime" }} className="block">
-                    <CyanButton size="lg" className="w-full">
-                      Get Lifetime Access
-                    </CyanButton>
-                  </Link>
-                </div>
-                <div className="mt-4 font-body text-[12px] leading-[1.6] text-[var(--text-muted)]">
-                  JazzCash · Bank Transfer · USDT · Binance Pay · Redot Pay
-                </div>
-              </div>
-            </div>
-          </GlassCard>
-
           <div className="mt-12 grid items-start gap-6 lg:grid-cols-3">
-            {/* Community */}
-            <GlassCard className="reveal-item p-8">
-              <EyebrowLabel text="Community" color="var(--text-secondary)" />
-              <div className="mt-4 font-display text-[44px] font-extrabold leading-none text-[var(--text-primary)]">
-                Free
-              </div>
-              <p className="mt-3 font-body text-[14px] text-[var(--text-secondary)]">
-                Local-first automation for solo builders.
-              </p>
-              <FeatureList items={COMMUNITY} color="var(--text-secondary)" />
-              <div className="mt-8">
-                <GhostButton size="lg" className="w-full">
-                  Download Free →
-                </GhostButton>
-              </div>
-              <div className="mt-4 flex justify-center">
-                <MonoBadge color="var(--text-secondary)">Open Source · MIT License</MonoBadge>
-              </div>
-            </GlassCard>
-
-            {/* Pro */}
-            <GlassCard
-              className="reveal-item delay-1 border-[var(--cyan-border)] p-8 lg:-mt-4 lg:scale-[1.02]"
-              glowColor="var(--cyan)"
-            >
-              <div className="flex items-center justify-between">
-                <EyebrowLabel text="Pro" />
-                <MonoBadge>Most Popular</MonoBadge>
-              </div>
-              <div className="mt-4 flex items-end gap-2">
-                <motion.span
-                  key={proPrice}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.35, ease: "easeOut" }}
-                  className="font-display text-[44px] font-extrabold leading-none text-[var(--text-primary)]"
+            {TIERS.map((tier, i) => {
+              const plan = PLANS[tier.id];
+              return (
+                <GlassCard
+                  key={tier.id}
+                  className={
+                    tier.highlight
+                      ? `reveal-item delay-${i} border-[var(--cyan-border)] p-8 lg:-mt-4 lg:scale-[1.02]`
+                      : `reveal-item delay-${i} p-8`
+                  }
+                  glowColor={tier.accent}
                 >
-                  £{proPrice}
-                </motion.span>
-                <span className="pb-1 font-body text-[14px] text-[var(--text-muted)]">/mo</span>
-              </div>
-              <p className="mt-3 font-body text-[14px] text-[var(--text-secondary)]">
-                {annual ? "Billed annually — £276/year." : "Billed monthly. Switch any time."}
-              </p>
-              <FeatureList items={PRO} color="var(--cyan)" />
-              <div className="mt-8">
-                <Link
-                  to="/checkout"
-                  search={{ plan: annual ? "pro_annual" : "pro_monthly" }}
-                  className="block"
-                >
-                  <CyanButton size="lg" className="w-full">
-                    Get Pro — Checkout
-                  </CyanButton>
-                </Link>
-              </div>
-              <div className="mt-4 text-center font-body text-[13px] text-[var(--text-muted)]">
-                JazzCash · Bank · USDT · Binance Pay · Redot Pay
-              </div>
-            </GlassCard>
-
-            {/* Enterprise */}
-            <GlassCard className="reveal-item delay-2 p-8" glowColor="var(--purple)">
-              <EyebrowLabel text="Enterprise" color="var(--purple)" />
-              <div className="mt-4 font-display text-[44px] font-extrabold leading-none text-[var(--text-primary)]">
-                Custom
-              </div>
-              <p className="mt-3 font-body text-[14px] text-[var(--text-secondary)]">
-                Governed deployment for regulated teams.
-              </p>
-              <FeatureList items={ENTERPRISE} color="var(--purple)" />
-              <div className="mt-8">
-                <GhostButton size="lg" className="w-full">
-                  Book Enterprise Demo →
-                </GhostButton>
-              </div>
-              <div className="mt-4 text-center font-body text-[13px] text-[var(--text-muted)]">
-                Custom deployment &amp; SLA
-              </div>
-            </GlassCard>
+                  <div className="flex items-center justify-between gap-3">
+                    <EyebrowLabel text={tier.eyebrow} color={tier.accent} reveal={false} />
+                    {tier.badge ? <MonoBadge color={tier.accent}>{tier.badge}</MonoBadge> : null}
+                  </div>
+                  <div className="mt-4 flex items-end gap-2">
+                    <span className="font-display text-[44px] font-extrabold leading-none text-[var(--text-primary)]">
+                      ${plan.priceUsd}
+                    </span>
+                    <span className="pb-1 font-mono text-[13px] text-[var(--text-muted)]">
+                      / Rs {plan.pricePkr.toLocaleString("en-US")}
+                    </span>
+                  </div>
+                  <p className="mt-3 font-body text-[14px] leading-[1.7] text-[var(--text-secondary)]">
+                    {plan.blurb}
+                  </p>
+                  <FeatureList items={plan.includes} color={tier.accent} />
+                  <div className="mt-8">
+                    <Link to="/checkout" search={{ plan: tier.id }} className="block">
+                      {tier.highlight ? (
+                        <CyanButton size="lg" className="w-full">
+                          {tier.cta}
+                        </CyanButton>
+                      ) : (
+                        <GhostButton size="lg" className="w-full">
+                          {tier.cta} →
+                        </GhostButton>
+                      )}
+                    </Link>
+                  </div>
+                  <div className="mt-4 text-center font-body text-[12.5px] text-[var(--text-muted)]">
+                    JazzCash · Bank · USDT · Binance Pay · Redot Pay
+                  </div>
+                </GlassCard>
+              );
+            })}
           </div>
         </div>
       </SectionWrapper>

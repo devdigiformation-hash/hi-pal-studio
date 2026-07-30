@@ -1,6 +1,6 @@
 // Client-safe checkout catalogue: plans + manual payment rails.
 
-export type PlanId = "lifetime" | "pro_monthly" | "pro_annual";
+export type PlanId = "lifetime" | "custom_build" | "source_code";
 
 export interface Plan {
   id: PlanId;
@@ -19,13 +19,11 @@ export interface Plan {
 export const PLANS: Record<PlanId, Plan> = {
   lifetime: {
     id: "lifetime",
-    name: "Digi Biz OS — Lifetime Licence",
+    name: "Digi Biz OS — Lifetime Access",
     badge: "Desktop App · Gen 2",
     blurb: "Pay once. Own Digi Biz OS for life. No monthly software subscription.",
-    pricePkr: 15700,
-    priceUsd: 56,
-    comparePkr: 22000,
-    compareUsd: 79,
+    pricePkr: 28000,
+    priceUsd: 100,
     billingNote: "One-time payment · Lifetime access",
     includes: [
       "One-time payment — no monthly subscription",
@@ -38,41 +36,47 @@ export const PLANS: Record<PlanId, Plan> = {
     ],
     bestFor: ["Individual Users", "Solo Operators", "Tech Enthusiasts"],
   },
-  pro_monthly: {
-    id: "pro_monthly",
-    name: "Digi Biz OS Pro — Monthly",
-    badge: "Subscription · Pro",
-    blurb: "Full Pro workspace, billed monthly. Cancel any time.",
-    pricePkr: 8200,
-    priceUsd: 29,
-    billingNote: "Billed monthly",
+  custom_build: {
+    id: "custom_build",
+    name: "Customised Software + Your Branding",
+    badge: "White Label · Automation",
+    blurb:
+      "Your logo, your name, your workflows. A fully branded build of Digi Biz OS with 400+ automation workflows configured for your business.",
+    pricePkr: 112000,
+    priceUsd: 400,
+    billingNote: "One-time payment · Custom build",
     includes: [
-      "All 104+ IPC handlers unlocked",
-      "Agent Town — 27 concurrent agents",
-      "Gemini Live 2-way voice streaming",
-      "WhatsApp, Email and Discord automation",
-      "Priority model routing",
-      "Email support within 24 hours",
+      "Everything in Lifetime Access",
+      "Full white-label branding — logo, name, colours, installer",
+      "400+ automation workflows configured for you",
+      "Custom agent personas for your business",
+      "WhatsApp, Email and Discord automation setup",
+      "Your own AI provider keys wired in",
+      "Onboarding and handover session",
+      "Priority support for 6 months",
     ],
-    bestFor: ["Freelancers", "Small Teams"],
+    bestFor: ["Agencies", "SMEs", "Consultants"],
   },
-  pro_annual: {
-    id: "pro_annual",
-    name: "Digi Biz OS Pro — Annual",
-    badge: "Subscription · Pro",
-    blurb: "Full Pro workspace, billed annually. Save 20%.",
-    pricePkr: 78000,
-    priceUsd: 276,
-    comparePkr: 98400,
-    compareUsd: 348,
-    billingNote: "Billed annually · Save 20%",
+  source_code: {
+    id: "source_code",
+    name: "Full Source Code Licence",
+    badge: "Developer · Full Ownership",
+    blurb:
+      "The complete Digi Biz OS codebase, yours to modify, rebrand and ship. Total ownership, no lock-in.",
+    pricePkr: 196000,
+    priceUsd: 700,
+    billingNote: "One-time payment · Source code licence",
     includes: [
-      "Everything in Pro Monthly",
-      "Two months free vs monthly billing",
-      "Priority onboarding session",
-      "Locked-in renewal pricing",
+      "Everything in the Customised package",
+      "Complete source code (desktop app + agent engine)",
+      "Private repository access",
+      "Build, sign and distribute your own installers",
+      "Architecture and developer documentation",
+      "Resale / commercial usage rights",
+      "Technical walkthrough with our engineers",
+      "12 months of update pulls",
     ],
-    bestFor: ["Agencies", "Growing Teams"],
+    bestFor: ["Software Houses", "Dev Teams", "Resellers"],
   },
 };
 

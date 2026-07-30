@@ -49,7 +49,7 @@ const inputClass =
 export default function CheckoutPage() {
   const navigate = useNavigate();
   const search = useSearch({ strict: false }) as { plan?: string };
-  const planId: PlanId = (["lifetime", "pro_monthly", "pro_annual"] as PlanId[]).includes(
+  const planId: PlanId = (["lifetime", "custom_build", "source_code"] as PlanId[]).includes(
     search.plan as PlanId,
   )
     ? (search.plan as PlanId)
