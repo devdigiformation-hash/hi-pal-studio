@@ -92,7 +92,7 @@ export default function VoiceAIPage() {
             </h2>
             <p className="reveal-item delay-2 mt-5 max-w-[540px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
               Powered by our real-time voice engine with real-time two-way streaming, DIGI BIZ OS
-              maintains a persistent voice session. PCM 16kHz input, PCM 24kHz output — sub-200ms
+              keeps a live voice session open — natural, uninterrupted conversation with sub-200ms
               round-trip latency.
             </p>
 
@@ -180,7 +180,7 @@ export default function VoiceAIPage() {
 
       <PageCTA
         title="Stop Typing. Start Commanding."
-        badges={["<200ms Latency", "Live Voice", "PCM Audio"]}
+        badges={["<200ms Latency", "Live Voice", "Hands-Free"]}
         cta="Download for Windows"
         icon={<WindowsIcon size={17} />}
       />

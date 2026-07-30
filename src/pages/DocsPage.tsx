@@ -28,8 +28,8 @@ const CARDS = [
   {
     icon: Wrench,
     color: "var(--amber)",
-    title: "Hermes Skill Authoring",
-    body: "Build custom skills for the Hermes engine. CLI integration guide and skill registry format.",
+    title: "AI Skill Authoring",
+    body: "Create your own AI skills and extend DIGI BIZ OS as your business grows.",
     cta: "Build Skills →",
     primary: false,
   },

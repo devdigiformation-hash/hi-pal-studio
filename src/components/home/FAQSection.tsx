@@ -34,7 +34,7 @@ const FAQS = [
   },
   {
     q: "Can developers extend it with custom skills?",
-    a: "Yes — via the Hermes skill engine and MCP servers.",
+    a: "Yes — through 500+ AI skills, custom skills and multi-MCP connections.",
   },
 ];
 

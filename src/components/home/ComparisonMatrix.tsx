@@ -12,7 +12,7 @@ const ROWS: [string, boolean, boolean, boolean][] = [
   ["Local File System Full Access", true, false, true],
   ["Multi-Provider AI Model Routing", true, true, false],
   ["Companies House API Integration", true, false, false],
-  ["Hermes CLI Skill Engine", true, false, false],
+  ["500+ AI Skills Library", true, false, false],
   ["MCP Server Compatibility", true, true, false],
   ["WhatsApp + Email + Discord Unified", true, false, false],
 ];

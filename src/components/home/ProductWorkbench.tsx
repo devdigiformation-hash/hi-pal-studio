@@ -25,7 +25,7 @@ const COPY: Record<Tab, { title: string; body: string; badges: string[]; bullets
   Automation: {
     title: "Workflows + Agent Town",
     body: "Drag-and-drop workflow automation with scheduled cron triggers and concurrent 27-agent task delegation.",
-    badges: ["46 Playwright Tools", "52 Hermes Skills"],
+    badges: ["115+ Built-in Tools", "500+ AI Skills"],
     bullets: [
       "Visual workflow builder",
       "Cron & event triggers",
@@ -51,7 +51,7 @@ const COPY: Record<Tab, { title: string; body: string; badges: string[]; bullets
     bullets: [
       "Native terminal emulator",
       "Custom MCP server registry",
-      "Hermes skill authoring",
+      "Custom skill authoring",
       "Expandable skill library",
     ],
   },
