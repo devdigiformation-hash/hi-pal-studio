@@ -1,4 +1,5 @@
 import SectionWrapper from "@/components/SectionWrapper";
+import { Link } from "@tanstack/react-router";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import MonoBadge from "@/components/MonoBadge";
@@ -111,9 +112,13 @@ export default function PricingPreview() {
                 </ul>
                 <div className="mt-8">
                   {plan.highlight ? (
-                    <CyanButton className="w-full">{plan.cta}</CyanButton>
+                    <Link to="/checkout" search={{ plan: "pro_monthly" }} className="block">
+                      <CyanButton className="w-full">{plan.cta}</CyanButton>
+                    </Link>
                   ) : (
-                    <GhostButton className="w-full">{plan.cta}</GhostButton>
+                    <Link to="/pricing" className="block">
+                      <GhostButton className="w-full">{plan.cta}</GhostButton>
+                    </Link>
                   )}
                 </div>
               </GlassCard>

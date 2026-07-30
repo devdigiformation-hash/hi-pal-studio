@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "@tanstack/react-router";
 import * as Switch from "@radix-ui/react-switch";
 import * as Accordion from "@radix-ui/react-accordion";
 import { Plus, Check } from "lucide-react";
@@ -10,6 +11,17 @@ import CyanButton from "@/components/CyanButton";
 import GhostButton from "@/components/GhostButton";
 import MonoBadge from "@/components/MonoBadge";
 import MiniHero from "@/components/inner/MiniHero";
+
+const LIFETIME = [
+  "One-time payment — no monthly subscription",
+  "Lifetime access to Digi Biz OS Gen 2",
+  "All Gen 2 updates included free",
+  "Activate on up to 3 PCs",
+  "Connect your own AI API key or ChatGPT account",
+  "Voice intelligence + Agent Town included",
+  "Windows 10 & 11 support",
+  "Licence tied to your account — reinstall any time",
+];
 
 const COMMUNITY = [
   "Local Ollama models — fully offline",
@@ -151,6 +163,70 @@ export default function PricingPage() {
             <MonoBadge color="var(--success)">Save 20%</MonoBadge>
           </div>
 
+          {/* Lifetime — one-time licence */}
+          <GlassCard
+            className="reveal-item mt-12 border-[var(--cyan-border)] p-8 md:p-10"
+            glowColor="var(--cyan)"
+          >
+            <div className="grid gap-8 md:grid-cols-[1fr_320px] md:items-center">
+              <div>
+                <div className="flex flex-wrap items-center gap-3">
+                  <EyebrowLabel text="Lifetime Licence" />
+                  <MonoBadge color="var(--success)">Save 29%</MonoBadge>
+                </div>
+                <h3 className="mt-4 font-display text-[30px] font-extrabold leading-tight text-[var(--text-primary)] md:text-[38px]">
+                  Pay once. Own it for life.
+                </h3>
+                <p className="mt-3 max-w-[520px] font-body text-[14.5px] leading-[1.7] text-[var(--text-secondary)]">
+                  One-time payment. No monthly software subscription. Connect your own AI API and
+                  stay in control of your usage costs.
+                </p>
+                <div className="mt-6 grid gap-2 sm:grid-cols-2">
+                  {LIFETIME.map((f) => (
+                    <div key={f} className="flex items-start gap-2.5">
+                      <Check
+                        size={15}
+                        color="var(--cyan)"
+                        strokeWidth={2.4}
+                        className="mt-[4px] shrink-0"
+                      />
+                      <span className="font-body text-[13.5px] leading-[1.6] text-[var(--text-secondary)]">
+                        {f}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div
+                className="rounded-[18px] border border-[var(--border-glass)] p-7 text-center"
+                style={{ background: "var(--bg-glass-light)" }}
+              >
+                <div className="flex items-end justify-center gap-3">
+                  <span className="font-display text-[48px] font-extrabold leading-none text-[var(--text-primary)]">
+                    $56
+                  </span>
+                  <span className="pb-2 font-body text-[16px] text-[var(--text-muted)] line-through">
+                    $79
+                  </span>
+                </div>
+                <div className="mt-3 font-body text-[13px] text-[var(--text-muted)]">
+                  One-time payment · Lifetime access
+                </div>
+                <div className="mt-6">
+                  <Link to="/checkout" search={{ plan: "lifetime" }} className="block">
+                    <CyanButton size="lg" className="w-full">
+                      Get Lifetime Access
+                    </CyanButton>
+                  </Link>
+                </div>
+                <div className="mt-4 font-body text-[12px] leading-[1.6] text-[var(--text-muted)]">
+                  JazzCash · Bank Transfer · USDT · Binance Pay · Redot Pay
+                </div>
+              </div>
+            </div>
+          </GlassCard>
+
           <div className="mt-12 grid items-start gap-6 lg:grid-cols-3">
             {/* Community */}
             <GlassCard className="reveal-item p-8">
@@ -198,12 +274,18 @@ export default function PricingPage() {
               </p>
               <FeatureList items={PRO} color="var(--cyan)" />
               <div className="mt-8">
-                <CyanButton size="lg" className="w-full">
-                  Start 14-Day Free Trial
-                </CyanButton>
+                <Link
+                  to="/checkout"
+                  search={{ plan: annual ? "pro_annual" : "pro_monthly" }}
+                  className="block"
+                >
+                  <CyanButton size="lg" className="w-full">
+                    Get Pro — Checkout
+                  </CyanButton>
+                </Link>
               </div>
               <div className="mt-4 text-center font-body text-[13px] text-[var(--text-muted)]">
-                No credit card required
+                JazzCash · Bank · USDT · Binance Pay · Redot Pay
               </div>
             </GlassCard>
 

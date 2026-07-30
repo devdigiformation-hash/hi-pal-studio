@@ -11,11 +11,15 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AgentTownRouteImport } from './routes/agent-town'
+import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as DesktopOsRouteImport } from './routes/desktop-os'
 import { Route as DocsRouteImport } from './routes/docs'
 import { Route as IntegrationsRouteImport } from './routes/integrations'
 import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as RefundRouteImport } from './routes/refund'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as VoiceAiRouteImport } from './routes/voice-ai'
+import { Route as OrderRefRouteImport } from './routes/order.$ref'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -25,6 +29,11 @@ const IndexRoute = IndexRouteImport.update({
 const AgentTownRoute = AgentTownRouteImport.update({
   id: '/agent-town',
   path: '/agent-town',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CheckoutRoute = CheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DesktopOsRoute = DesktopOsRouteImport.update({
@@ -47,78 +56,121 @@ const PricingRoute = PricingRouteImport.update({
   path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RefundRoute = RefundRouteImport.update({
+  id: '/refund',
+  path: '/refund',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VoiceAiRoute = VoiceAiRouteImport.update({
   id: '/voice-ai',
   path: '/voice-ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrderRefRoute = OrderRefRouteImport.update({
+  id: '/order/$ref',
+  path: '/order/$ref',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/agent-town': typeof AgentTownRoute
+  '/checkout': typeof CheckoutRoute
   '/desktop-os': typeof DesktopOsRoute
   '/docs': typeof DocsRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
+  '/refund': typeof RefundRoute
+  '/terms': typeof TermsRoute
   '/voice-ai': typeof VoiceAiRoute
+  '/order/$ref': typeof OrderRefRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/agent-town': typeof AgentTownRoute
+  '/checkout': typeof CheckoutRoute
   '/desktop-os': typeof DesktopOsRoute
   '/docs': typeof DocsRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
+  '/refund': typeof RefundRoute
+  '/terms': typeof TermsRoute
   '/voice-ai': typeof VoiceAiRoute
+  '/order/$ref': typeof OrderRefRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/agent-town': typeof AgentTownRoute
+  '/checkout': typeof CheckoutRoute
   '/desktop-os': typeof DesktopOsRoute
   '/docs': typeof DocsRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
+  '/refund': typeof RefundRoute
+  '/terms': typeof TermsRoute
   '/voice-ai': typeof VoiceAiRoute
+  '/order/$ref': typeof OrderRefRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/agent-town'
+    | '/checkout'
     | '/desktop-os'
     | '/docs'
     | '/integrations'
     | '/pricing'
+    | '/refund'
+    | '/terms'
     | '/voice-ai'
+    | '/order/$ref'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/agent-town'
+    | '/checkout'
     | '/desktop-os'
     | '/docs'
     | '/integrations'
     | '/pricing'
+    | '/refund'
+    | '/terms'
     | '/voice-ai'
+    | '/order/$ref'
   id:
     | '__root__'
     | '/'
     | '/agent-town'
+    | '/checkout'
     | '/desktop-os'
     | '/docs'
     | '/integrations'
     | '/pricing'
+    | '/refund'
+    | '/terms'
     | '/voice-ai'
+    | '/order/$ref'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AgentTownRoute: typeof AgentTownRoute
+  CheckoutRoute: typeof CheckoutRoute
   DesktopOsRoute: typeof DesktopOsRoute
   DocsRoute: typeof DocsRoute
   IntegrationsRoute: typeof IntegrationsRoute
   PricingRoute: typeof PricingRoute
+  RefundRoute: typeof RefundRoute
+  TermsRoute: typeof TermsRoute
   VoiceAiRoute: typeof VoiceAiRoute
+  OrderRefRoute: typeof OrderRefRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -135,6 +187,13 @@ declare module '@tanstack/react-router' {
       path: '/agent-town'
       fullPath: '/agent-town'
       preLoaderRoute: typeof AgentTownRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/desktop-os': {
@@ -165,11 +224,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/refund': {
+      id: '/refund'
+      path: '/refund'
+      fullPath: '/refund'
+      preLoaderRoute: typeof RefundRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/voice-ai': {
       id: '/voice-ai'
       path: '/voice-ai'
       fullPath: '/voice-ai'
       preLoaderRoute: typeof VoiceAiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/order/$ref': {
+      id: '/order/$ref'
+      path: '/order/$ref'
+      fullPath: '/order/$ref'
+      preLoaderRoute: typeof OrderRefRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -178,11 +258,15 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AgentTownRoute: AgentTownRoute,
+  CheckoutRoute: CheckoutRoute,
   DesktopOsRoute: DesktopOsRoute,
   DocsRoute: DocsRoute,
   IntegrationsRoute: IntegrationsRoute,
   PricingRoute: PricingRoute,
+  RefundRoute: RefundRoute,
+  TermsRoute: TermsRoute,
   VoiceAiRoute: VoiceAiRoute,
+  OrderRefRoute: OrderRefRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
