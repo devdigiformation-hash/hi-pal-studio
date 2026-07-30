@@ -141,9 +141,9 @@ function Visual({ tab }: { tab: Tab }) {
       className="rounded-[var(--r-sm)] border border-[var(--border-glass)] p-4 font-code text-[12px] leading-[1.9]"
       style={{ background: "#05080F" }}
     >
-      <div className="text-[var(--text-muted)]">> Agent status</div>
+      <div className="text-[var(--text-muted)]">&gt; Agent status</div>
       <div className="text-[var(--green)]">Agent Town: Active [27/27]</div>
-      <div className="text-[var(--text-muted)]">> Connected MCP servers</div>
+      <div className="text-[var(--text-muted)]">&gt; Connected MCP servers</div>
       <div className="text-[var(--cyan)]">
         mcp/filesystem · mcp/github · mcp/companies-house
         <span className="animate-caret">▋</span>
