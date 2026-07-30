@@ -17,6 +17,7 @@ import { Route as DocsRouteImport } from './routes/docs'
 import { Route as IntegrationsRouteImport } from './routes/integrations'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as VoiceAiRouteImport } from './routes/voice-ai'
+import { Route as OrderRefRouteImport } from './routes/order.$ref'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -58,6 +59,11 @@ const VoiceAiRoute = VoiceAiRouteImport.update({
   path: '/voice-ai',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OrderRefRoute = OrderRefRouteImport.update({
+  id: '/order/$ref',
+  path: '/order/$ref',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -68,6 +74,7 @@ export interface FileRoutesByFullPath {
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
   '/voice-ai': typeof VoiceAiRoute
+  '/order/$ref': typeof OrderRefRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -78,6 +85,7 @@ export interface FileRoutesByTo {
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
   '/voice-ai': typeof VoiceAiRoute
+  '/order/$ref': typeof OrderRefRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -89,6 +97,7 @@ export interface FileRoutesById {
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
   '/voice-ai': typeof VoiceAiRoute
+  '/order/$ref': typeof OrderRefRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +110,7 @@ export interface FileRouteTypes {
     | '/integrations'
     | '/pricing'
     | '/voice-ai'
+    | '/order/$ref'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/integrations'
     | '/pricing'
     | '/voice-ai'
+    | '/order/$ref'
   id:
     | '__root__'
     | '/'
@@ -121,6 +132,7 @@ export interface FileRouteTypes {
     | '/integrations'
     | '/pricing'
     | '/voice-ai'
+    | '/order/$ref'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -132,6 +144,7 @@ export interface RootRouteChildren {
   IntegrationsRoute: typeof IntegrationsRoute
   PricingRoute: typeof PricingRoute
   VoiceAiRoute: typeof VoiceAiRoute
+  OrderRefRoute: typeof OrderRefRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -192,6 +205,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VoiceAiRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/order/$ref': {
+      id: '/order/$ref'
+      path: '/order/$ref'
+      fullPath: '/order/$ref'
+      preLoaderRoute: typeof OrderRefRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -204,6 +224,7 @@ const rootRouteChildren: RootRouteChildren = {
   IntegrationsRoute: IntegrationsRoute,
   PricingRoute: PricingRoute,
   VoiceAiRoute: VoiceAiRoute,
+  OrderRefRoute: OrderRefRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
