@@ -5,7 +5,6 @@ import {
   Brain,
   Camera,
   Cpu,
-  Download,
   Monitor,
   Play,
   Smartphone,
