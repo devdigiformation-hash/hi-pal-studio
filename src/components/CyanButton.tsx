@@ -24,7 +24,7 @@ export default function CyanButton({
     <button
       {...props}
       className={cn(
-        "group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full font-display font-bold",
+        "group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap rounded-full font-display font-bold",
         "text-[#090D16] transition-all duration-300 ease-out",
         "hover:scale-[1.03] active:scale-[0.97]",
         "shadow-[0_0_32px_rgba(47,224,200,0.4)] hover:shadow-[0_0_56px_rgba(47,224,200,0.6)]",
