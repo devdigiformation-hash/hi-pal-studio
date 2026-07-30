@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Github, Linkedin, MessageCircle, Twitter } from "lucide-react";
+import { Github, Globe, Linkedin, Mail, MessageCircle, Phone, Twitter } from "lucide-react";
 import logoAsset from "@/assets/logo.png.asset.json";
 import ActivePulse from "./ActivePulse";
 import EyebrowLabel from "./EyebrowLabel";
@@ -14,12 +14,12 @@ const PRODUCT = [
   { label: "Pricing", to: "/pricing" },
 ] as const;
 
-const RESOURCES = [
-  "Documentation",
-  "API Reference",
-  "Changelog",
-  "System Requirements",
-  "Blog",
+const BUSINESS = [
+  "UK Services",
+  "USA Services",
+  "Banks & Payment Solutions",
+  "UK Compliance",
+  "Web Development",
 ] as const;
 
 const SOCIALS = [
@@ -47,8 +47,7 @@ export default function Footer() {
             The Autonomous Desktop AI OS
           </p>
           <p className="mt-3 max-w-[280px] font-body text-[13px] leading-[1.7] text-[var(--text-muted)]">
-            DigiBiz Voice transforms your desktop into a voice-first, multi-agent AI operating
-            system.
+            DIGI BIZ OS transforms your desktop into a voice-first, multi-agent AI operating system.
           </p>
           <div className="mt-5">
             <MonoBadge>
@@ -75,28 +74,60 @@ export default function Footer() {
         </div>
 
         <div>
-          <EyebrowLabel text="Resources" color="var(--purple)" />
+          <EyebrowLabel text="Our Main Business" color="var(--purple)" />
           <ul className="mt-5 space-y-3">
-            {RESOURCES.map((item) => (
+            {BUSINESS.map((item) => (
               <li key={item}>
-                <Link
-                  to="/docs"
+                <a
+                  href="https://www.digiformation.co.uk/"
+                  target="_blank"
+                  rel="noreferrer"
                   className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
                 >
                   {item}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
         </div>
 
         <div>
-          <EyebrowLabel text="Connect" color="var(--amber)" />
+          <EyebrowLabel text="Contact Digiformation" color="var(--amber)" />
+          <ul className="mt-5 space-y-3">
+            <li>
+              <a
+                href="mailto:info@digiformation.co.uk"
+                className="inline-flex items-center gap-2 font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
+              >
+                <Mail size={15} /> info@digiformation.co.uk
+              </a>
+            </li>
+            <li>
+              <a
+                href="tel:+923164467464"
+                className="inline-flex items-center gap-2 font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
+              >
+                <Phone size={15} /> +92 316 446 7464
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.digiformation.co.uk/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
+              >
+                <Globe size={15} /> www.digiformation.co.uk
+              </a>
+            </li>
+          </ul>
           <div className="mt-5 flex flex-wrap gap-3">
             {SOCIALS.map(({ label, icon: Icon }) => (
               <a
                 key={label}
-                href="#"
+                href="https://www.digiformation.co.uk/"
+                target="_blank"
+                rel="noreferrer"
                 aria-label={label}
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border-glass)] backdrop-blur-xl transition-all duration-300 hover:scale-[1.08] hover:border-[var(--cyan)] hover:shadow-[0_0_28px_var(--cyan-glow)]"
                 style={{ background: "var(--bg-glass-light)" }}
@@ -105,22 +136,25 @@ export default function Footer() {
               </a>
             ))}
           </div>
-          <a
-            href="mailto:support@digibizvoice.com"
-            className="mt-6 inline-block font-body text-[14px] text-[var(--cyan)] transition-opacity hover:opacity-80"
-          >
-            support@digibizvoice.com
-          </a>
         </div>
       </div>
 
       <div className="border-t border-[var(--border-subtle)]">
         <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-2 px-6 py-6 text-center">
           <p className="font-body text-[12px] text-[var(--text-muted)]">
-            © 2025 DigiBiz Voice · All Rights Reserved
+            © 2025 DIGI BIZ OS · All Rights Reserved
           </p>
           <p className="font-body text-[12px] text-[var(--text-muted)]">
-            Built with Gemini Live · Powered by Agent Town
+            Made by{" "}
+            <a
+              href="https://www.digiformation.co.uk/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[var(--cyan)] transition-opacity hover:opacity-80"
+            >
+              Digiformation Ltd
+            </a>{" "}
+            · UK Company Formation & Compliance Solutions
           </p>
         </div>
       </div>

@@ -1,0 +1,75 @@
+import SectionWrapper from "@/components/SectionWrapper";
+import EyebrowLabel from "@/components/EyebrowLabel";
+import GlassCard from "@/components/GlassCard";
+import MetricBadge from "@/components/MetricBadge";
+
+const QUOTES = [
+  {
+    quote:
+      "The Agent Town feature alone saved me 4 hours daily. I voice-command research tasks and 27 agents execute them while I focus on high-value work.",
+    name: "James Whitfield",
+    role: "Founder, Whitfield Ventures",
+  },
+  {
+    quote:
+      "As a developer, the MCP server integration and 104+ IPC handlers give me control I've never had with any other AI tool. DIGI BIZ OS is genuinely different.",
+    name: "Tariq Ahmed",
+    role: "Senior DevOps Engineer",
+  },
+  {
+    quote:
+      "I use it daily for Companies House research. The voice query feature lets me gather UK corporate intelligence hands-free. Extraordinary productivity boost.",
+    name: "Daniel Hughes",
+    role: "UK Corporate Consultant",
+  },
+];
+
+export default function SocialProof() {
+  return (
+    <SectionWrapper id="testimonials">
+      <div className="mx-auto max-w-[1280px]">
+        <div className="text-center">
+          <EyebrowLabel text="From the Community" color="var(--purple)" />
+          <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
+            Power Users. Real Results.
+          </h2>
+        </div>
+
+        <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3">
+          {QUOTES.map((q, i) => (
+            <div key={q.name} className={`reveal-item delay-${i + 1}`}>
+              <GlassCard className="h-full p-8">
+                <div
+                  className="font-display text-[72px] leading-none"
+                  style={{ color: "rgba(47,224,200,0.15)" }}
+                >
+                  &ldquo;
+                </div>
+                <p className="-mt-4 font-body text-[15px] italic leading-[1.85] text-[var(--text-secondary)]">
+                  {q.quote}
+                </p>
+                <div className="mt-6 flex gap-1 text-[14px] text-[var(--amber)]">
+                  {"★★★★★".split("").map((s, k) => (
+                    <span key={k}>{s}</span>
+                  ))}
+                </div>
+                <div className="mt-4">
+                  <div className="font-display text-[14px] font-bold text-[var(--text-primary)]">
+                    {q.name}
+                  </div>
+                  <div className="font-body text-[12px] text-[var(--text-muted)]">{q.role}</div>
+                </div>
+              </GlassCard>
+            </div>
+          ))}
+        </div>
+
+        <div className="reveal-item delay-4 mt-12 flex flex-wrap justify-center gap-4">
+          <MetricBadge value="500+" label="Beta Users" />
+          <MetricBadge value="4.8/5" label="Average Rating" color="var(--amber)" />
+          <MetricBadge value="2,500+" label="Daily Commands" color="var(--purple)" />
+        </div>
+      </div>
+    </SectionWrapper>
+  );
+}
