@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Download, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { WindowsIcon } from "@/components/PlatformIcons";
 import logoAsset from "@/assets/logo.png.asset.json";
 import ActivePulse from "./ActivePulse";
 import CyanButton from "./CyanButton";
@@ -94,7 +95,7 @@ export default function Navbar() {
 
           <div className="hidden items-center gap-3 lg:flex">
             <GhostButton size="sm">Live Demo</GhostButton>
-            <CyanButton size="sm" icon={<Download size={16} />}>
+            <CyanButton size="sm" icon={<WindowsIcon size={15} />}>
               Download App
             </CyanButton>
           </div>
@@ -142,7 +143,7 @@ export default function Navbar() {
             ))}
             <div className="mt-6 flex flex-col gap-3">
               <GhostButton>Live Demo</GhostButton>
-              <CyanButton icon={<Download size={18} />}>Download App</CyanButton>
+              <CyanButton icon={<WindowsIcon size={17} />}>Download App</CyanButton>
             </div>
           </div>
         </div>

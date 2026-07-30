@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Mouse, FolderOpen, Cpu, Clipboard, Download } from "lucide-react";
+import { Mouse, FolderOpen, Cpu, Clipboard } from "lucide-react";
+import { WindowsIcon } from "@/components/PlatformIcons";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
@@ -136,9 +137,9 @@ export default function DesktopOSPage() {
 
       <PageCTA
         title="One Voice. Total Desktop Mastery."
-        badges={["Port 8765 Agent", "104+ IPC Handlers", "Windows · macOS"]}
-        cta="Download Desktop OS"
-        icon={<Download size={18} />}
+        badges={["Port 8765 Agent", "104+ IPC Handlers", "Windows · macOS soon"]}
+        cta="Download for Windows"
+        icon={<WindowsIcon size={17} />}
       />
     </motion.main>
   );

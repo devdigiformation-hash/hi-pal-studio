@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Mic, Brain, Download, ArrowRight } from "lucide-react";
+import { Mic, Brain, ArrowRight } from "lucide-react";
+import { WindowsIcon } from "@/components/PlatformIcons";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
@@ -180,8 +181,8 @@ export default function VoiceAIPage() {
       <PageCTA
         title="Stop Typing. Start Commanding."
         badges={["<200ms Latency", "Gemini Live", "PCM Audio"]}
-        cta="Download & Enable Voice"
-        icon={<Download size={18} />}
+        cta="Download for Windows"
+        icon={<WindowsIcon size={17} />}
       />
     </motion.main>
   );
