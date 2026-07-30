@@ -12,10 +12,6 @@ import GhostButton from "@/components/GhostButton";
 import MonoBadge from "@/components/MonoBadge";
 import MiniHero from "@/components/inner/MiniHero";
 
-const COMMUNITY = [
-  "Local Ollama models — fully offline",
-];
-
 const LIFETIME = [
   "One-time payment — no monthly subscription",
   "Lifetime access to Digi Biz OS Gen 2",
@@ -27,7 +23,7 @@ const LIFETIME = [
   "Licence tied to your account — reinstall any time",
 ];
 
-const COMMUNITY_FEATURES = [
+const COMMUNITY = [
   "Local Ollama models — fully offline",
   "Voice command basics with push-to-talk",
   "20 desktop IPC handlers",
