@@ -84,9 +84,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "DigiBiz Voice turns your desktop into a voice-first, multi-agent AI operating system.",
+          "DIGI BIZ OS turns your desktop into a voice-first, multi-agent AI operating system.",
       },
-      { name: "author", content: "DigiBiz Voice" },
+      { name: "author", content: "DIGI BIZ OS" },
       { property: "og:title", content: "Digi Biz OS — The Autonomous Desktop AI OS" },
       {
         property: "og:description",

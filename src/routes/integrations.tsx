@@ -7,12 +7,12 @@ export const Route = createFileRoute("/integrations")({
       {
         name: "description",
         content:
-          "Connect DigiBiz Voice to the tools you already run: mail, calendars, browsers, IDEs and native apps.",
+          "Connect DIGI BIZ OS to the tools you already run: mail, calendars, browsers, IDEs and native apps.",
       },
       { property: "og:title", content: "Integrations — Digi Biz OS" },
       {
         property: "og:description",
-        content: "Connect DigiBiz Voice to the tools your desktop already runs.",
+        content: "Connect DIGI BIZ OS to the tools your desktop already runs.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
