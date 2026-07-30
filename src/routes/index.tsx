@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import HeroSection from "@/components/home/HeroSection";
 import TelemetryTicker from "@/components/home/TelemetryTicker";
+import SoftwareShowcase from "@/components/home/SoftwareShowcase";
 import FourPillars from "@/components/home/FourPillars";
 import ProductWorkbench from "@/components/home/ProductWorkbench";
 import VisionShowcase from "@/components/home/VisionShowcase";
@@ -39,6 +40,7 @@ function HomePage() {
     <main className="min-h-screen pt-[60px] md:pt-[72px]">
       <HeroSection />
       <TelemetryTicker />
+      <SoftwareShowcase />
       <FourPillars />
       <ProductWorkbench />
       <VisionShowcase />
