@@ -237,32 +237,6 @@ export default function HeroSection() {
 
         {/* RIGHT — operations center */}
         <div className="relative hidden h-[520px] items-center justify-center lg:flex">
-          <svg
-            aria-hidden
-            className="pointer-events-none absolute inset-0 h-full w-full"
-            viewBox="0 0 520 520"
-          >
-            {NODES.map((n, i) => {
-              const rad = (n.angle * Math.PI) / 180;
-              const x = 260 + Math.cos(rad) * radius;
-              const y = 260 + Math.sin(rad) * radius;
-              return (
-                <line
-                  key={n.label}
-                  x1="260"
-                  y1="260"
-                  x2={x}
-                  y2={y}
-                  stroke="rgba(47,224,200,0.25)"
-                  strokeWidth="1"
-                  strokeDasharray="4 6"
-                  className="animate-draw-wire"
-                  style={{ animationDelay: `${i * 0.3}s` }}
-                />
-              );
-            })}
-          </svg>
-
           {/* Globe */}
           <div
             className="relative flex h-[200px] w-[200px] items-center justify-center rounded-full"
