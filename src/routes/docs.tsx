@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import DocsPage from "@/pages/DocsPage";
 
 export const Route = createFileRoute("/docs")({
   head: () => ({
@@ -21,10 +22,3 @@ export const Route = createFileRoute("/docs")({
   component: DocsPage,
 });
 
-function DocsPage() {
-  return (
-    <main className="min-h-screen pt-[60px] md:pt-[72px]">
-      {/* SEGMENT 3 builds this */}
-    </main>
-  );
-}
