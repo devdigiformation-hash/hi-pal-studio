@@ -2,7 +2,7 @@ import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 
 const createOrderSchema = z.object({
-  planId: z.enum(["lifetime", "pro_monthly", "pro_annual"]),
+  planId: z.enum(["lifetime", "custom_build", "source_code"]),
   method: z.enum(["jazzcash", "bank", "usdt", "binance", "redotpay"]),
   customerName: z.string().trim().min(2).max(80),
   email: z.string().trim().email().max(160),
