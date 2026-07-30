@@ -52,14 +52,6 @@ const ORBIT_COLORS = [
   "#7DD3FC",
 ];
 
-const GLOBE_PARTICLES = Array.from({ length: 40 }, (_, i) => ({
-  left: 12 + ((i * 29) % 76),
-  top: 12 + ((i * 47) % 76),
-  size: 1 + (i % 3),
-  color: i % 2 === 0 ? "#2FE0C8" : "#8B7CF6",
-  duration: 9 + ((i * 3) % 10),
-  delay: (i * 0.31) % 6,
-}));
 
 const BADGES = ["104+ IPC Handlers", "27 Autonomous Agents", "<200ms Voice Latency", "94 Built-in Tools"];
 
