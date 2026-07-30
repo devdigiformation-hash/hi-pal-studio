@@ -13,7 +13,7 @@ function ComingSoonBadge({ color }: { color?: string }) {
 
 export default function PlatformCards() {
   return (
-    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-5 sm:grid-cols-2">
       <GlassCard className="border-[var(--cyan-border)] p-7 text-left" glowColor="var(--cyan)">
         <div className="flex items-center gap-3">
           <span className="text-[var(--cyan)]">
