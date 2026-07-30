@@ -1,3 +1,4 @@
+import JupiterGlobe from "@/components/JupiterGlobe";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -51,14 +52,6 @@ const ORBIT_COLORS = [
   "#7DD3FC",
 ];
 
-const GLOBE_PARTICLES = Array.from({ length: 40 }, (_, i) => ({
-  left: 12 + ((i * 29) % 76),
-  top: 12 + ((i * 47) % 76),
-  size: 1 + (i % 3),
-  color: i % 2 === 0 ? "#2FE0C8" : "#8B7CF6",
-  duration: 9 + ((i * 3) % 10),
-  delay: (i * 0.31) % 6,
-}));
 
 const BADGES = ["104+ IPC Handlers", "27 Autonomous Agents", "<200ms Voice Latency", "94 Built-in Tools"];
 
@@ -277,22 +270,19 @@ export default function HeroSection() {
               boxShadow: "0 0 0 1px rgba(47,224,200,0.1), 0 0 60px rgba(47,224,200,0.12)",
             }}
           >
-            {GLOBE_PARTICLES.map((p, i) => (
-              <span
-                key={i}
-                className="absolute rounded-full"
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+              <JupiterGlobe size={320} />
+            </div>
+            <div className="relative z-10 text-center">
+              <div
+                aria-hidden
+                className="pointer-events-none absolute left-1/2 top-1/2 h-[150px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-full"
                 style={{
-                  left: `${p.left}%`,
-                  top: `${p.top}%`,
-                  width: p.size,
-                  height: p.size,
-                  background: p.color,
-                  opacity: 0.5,
-                  animation: `particleDrift ${p.duration}s ease-in-out ${p.delay}s infinite`,
+                  background:
+                    "radial-gradient(ellipse at center, rgba(6,10,16,0.88), rgba(6,10,16,0.55) 55%, transparent 78%)",
                 }}
               />
-            ))}
-            <div className="relative z-10 text-center">
+              <div className="relative">
               <div className="font-code text-[13px] tracking-[0.18em] text-[var(--text-primary)]">
                 DIGI BIZ OS
               </div>
@@ -301,6 +291,7 @@ export default function HeroSection() {
                 <span className="font-code text-[11px] tracking-[0.16em] text-[var(--text-muted)]">
                   OPERATIONAL
                 </span>
+              </div>
               </div>
             </div>
           </div>
