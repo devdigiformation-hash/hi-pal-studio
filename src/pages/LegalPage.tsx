@@ -27,7 +27,7 @@ export default function LegalPage({
       className="min-h-screen px-6 pb-24 pt-[120px] md:px-12 lg:px-20"
     >
       <div className="mx-auto max-w-[820px]">
-        <EyebrowLabel text={eyebrow} />
+        <EyebrowLabel reveal={false} text={eyebrow} />
         <h1 className="mt-3 font-display text-[36px] font-extrabold leading-[1.08] text-[var(--text-primary)] md:text-[46px]">
           {title}
         </h1>

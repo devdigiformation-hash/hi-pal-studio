@@ -62,7 +62,7 @@ export default function OrderStatusPage({ orderRef }: { orderRef: string }) {
     >
       <div className="mx-auto max-w-[720px]">
         <GlassCard className="p-8 md:p-10">
-          <EyebrowLabel text="Order Received" />
+          <EyebrowLabel reveal={false} text="Order Received" />
           {loading ? (
             <p className="mt-6 font-body text-[15px] text-[var(--text-secondary)]">
               Loading your order…

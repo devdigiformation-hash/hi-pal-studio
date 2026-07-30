@@ -129,7 +129,7 @@ export default function CheckoutPage() {
         </Link>
 
         <div className="mt-6">
-          <EyebrowLabel text="Secure Checkout" />
+          <EyebrowLabel reveal={false} text="Secure Checkout" />
           <h1 className="mt-3 font-display text-[38px] font-extrabold leading-[1.05] text-[var(--text-primary)] md:text-[52px]">
             Payment Method
           </h1>
@@ -142,7 +142,7 @@ export default function CheckoutPage() {
         <div className="mt-10 grid gap-6 lg:grid-cols-[380px_1fr]">
           {/* Order summary */}
           <GlassCard className="h-fit p-7">
-            <EyebrowLabel text="Selected Plan" color="var(--text-secondary)" />
+            <EyebrowLabel reveal={false} text="Selected Plan" color="var(--text-secondary)" />
             <div className="mt-4 font-display text-[20px] font-bold text-[var(--text-primary)]">
               {plan.name}
             </div>
@@ -170,7 +170,7 @@ export default function CheckoutPage() {
             </p>
 
             <div className="mt-6 border-t border-[var(--border-glass)] pt-5">
-              <EyebrowLabel text="What you get" color="var(--text-secondary)" />
+              <EyebrowLabel reveal={false} text="What you get" color="var(--text-secondary)" />
               <ul className="mt-4 space-y-2.5">
                 {plan.includes.map((f) => (
                   <li key={f} className="flex items-start gap-2.5">
@@ -263,7 +263,7 @@ export default function CheckoutPage() {
                 </div>
 
                 <div className="mt-6">
-                  <EyebrowLabel text="Instructions" color="var(--text-secondary)" />
+                  <EyebrowLabel reveal={false} text="Instructions" color="var(--text-secondary)" />
                   <ol className="mt-4 space-y-2.5">
                     {method.steps.map((s, i) => (
                       <li key={s} className="flex items-start gap-3">
@@ -281,7 +281,7 @@ export default function CheckoutPage() {
             </AnimatePresence>
 
             <form onSubmit={onSubmit} className="mt-8 border-t border-[var(--border-glass)] pt-7">
-              <EyebrowLabel text="Your details" color="var(--text-secondary)" />
+              <EyebrowLabel reveal={false} text="Your details" color="var(--text-secondary)" />
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 <input
                   required
