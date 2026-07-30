@@ -159,7 +159,7 @@ export default function HeroSection() {
               className="font-display text-[12px] font-semibold uppercase text-[var(--cyan)]"
               style={{ letterSpacing: "0.16em" }}
             >
-              Live — Gemini 2.5 Powered
+              Live — Neural Engine Active
             </span>
           </motion.div>
 

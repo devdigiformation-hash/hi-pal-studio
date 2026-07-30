@@ -37,7 +37,7 @@ export default function VisionShowcase() {
             Your AI Sees What You See.
           </h2>
           <p className="reveal-item delay-2 mx-auto mt-5 max-w-[620px] font-body text-[15px] leading-[1.75] text-[var(--text-secondary)]">
-            Stream your screen live to Gemini and receive instant analysis, code review, bug
+            Stream your screen live to the vision engine and receive instant analysis, code review, bug
             detection, and document extraction in real time.
           </p>
         </div>
@@ -106,7 +106,7 @@ export default function VisionShowcase() {
 
         <div className="reveal-item delay-4 mt-8 flex flex-wrap justify-center gap-3">
           <MonoBadge>960px Resolution Frame Streaming</MonoBadge>
-          <MonoBadge color="var(--purple)">Gemini 2.0 Live Vision Engine</MonoBadge>
+          <MonoBadge color="var(--purple)">Live Vision Engine</MonoBadge>
           <MonoBadge color="var(--amber)">Real-Time Screen + Webcam Feed</MonoBadge>
         </div>
       </div>

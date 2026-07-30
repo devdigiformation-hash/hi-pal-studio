@@ -79,19 +79,19 @@ export default function VoiceAIPage() {
         eyebrow="Voice Intelligence"
         title="Your Voice Becomes"
         gradientTitle="Execution."
-        subtitle="Zero-latency 2-way Gemini Live speech streaming. Talk naturally. Your desktop responds in milliseconds."
+        subtitle="Zero-latency 2-way live speech streaming. Talk naturally. Your desktop responds in milliseconds."
       />
 
       {/* SECTION A — Voice architecture */}
       <SectionWrapper id="voice-architecture">
         <div className="mx-auto grid max-w-[1200px] items-center gap-14 lg:grid-cols-2">
           <div>
-            <EyebrowLabel text="Gemini Live Engine" />
+            <EyebrowLabel text="Live Voice Engine" />
             <h2 className="reveal-item delay-1 mt-4 font-display text-[30px] font-bold leading-[1.15] tracking-[-0.03em] text-[var(--text-primary)] md:text-[42px]">
               Continuous 2-Way Speech. No Typing Required.
             </h2>
             <p className="reveal-item delay-2 mt-5 max-w-[540px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
-              Powered by Google Gemini Live with WebSocket bidirectional streaming, DIGI BIZ OS
+              Powered by our real-time voice engine with WebSocket bidirectional streaming, DIGI BIZ OS
               maintains a persistent voice session. PCM 16kHz input, PCM 24kHz output — sub-200ms
               round-trip latency.
             </p>
@@ -180,7 +180,7 @@ export default function VoiceAIPage() {
 
       <PageCTA
         title="Stop Typing. Start Commanding."
-        badges={["<200ms Latency", "Gemini Live", "PCM Audio"]}
+        badges={["<200ms Latency", "Live Voice", "PCM Audio"]}
         cta="Download for Windows"
         icon={<WindowsIcon size={17} />}
       />
