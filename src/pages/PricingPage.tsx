@@ -30,7 +30,7 @@ const FAQS = [
   },
   {
     q: "Am I charged for AI API usage?",
-    a: "No. You connect your own Gemini, Groq, OpenRouter or ChatGPT keys and pay those providers directly, or run local models at zero cost.",
+    a: "No. You connect your own AI provider key and pay that provider directly, or run local models at zero cost.",
   },
 ];
 

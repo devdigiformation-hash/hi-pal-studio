@@ -13,8 +13,8 @@ type Tab = (typeof TABS)[number];
 const COPY: Record<Tab, { title: string; body: string; badges: string[]; bullets: string[] }> = {
   Intelligence: {
     title: "AI Model Gateway",
-    body: "Route intelligence across Gemini 2.5 Flash, Groq Llama 3.3 70B, OpenRouter 100+ models, and local Ollama — with live latency metrics.",
-    badges: ["Gemini", "Groq", "OpenRouter", "Ollama"],
+    body: "Route intelligence across fast cloud models, ultra-low-latency inference, 100+ routed models, and fully local engines — with live latency metrics.",
+    badges: ["Flash Engine", "Turbo Engine", "Model Router", "Local Engine"],
     bullets: [
       "Automatic provider failover",
       "Live latency + cost metrics",
@@ -69,10 +69,10 @@ function Visual({ tab }: { tab: Tab }) {
     return (
       <div className="space-y-3">
         {[
-          { name: "Gemini 2.5 Flash", ms: "~180ms", color: "var(--cyan)", active: true },
-          { name: "Groq Llama 3.3 70B", ms: "~95ms", color: "var(--green)", active: true },
-          { name: "OpenRouter (100+)", ms: "~320ms", color: "var(--purple)", active: false },
-          { name: "Ollama · Local", ms: "~410ms", color: "var(--amber)", active: false },
+          { name: "Flash Engine", ms: "~180ms", color: "var(--cyan)", active: true },
+          { name: "Turbo Engine", ms: "~95ms", color: "var(--green)", active: true },
+          { name: "Model Router (100+)", ms: "~320ms", color: "var(--purple)", active: false },
+          { name: "Local Engine", ms: "~410ms", color: "var(--amber)", active: false },
         ].map((m) => (
           <div
             key={m.name}

@@ -10,7 +10,7 @@ const FAQS = [
   },
   {
     q: "Do I need my own AI API keys?",
-    a: "Yes — your own Gemini, Groq, or OpenRouter keys. Community Ollama works fully offline with no API key.",
+    a: "Yes — connect your own AI provider key. Local models work fully offline with no API key.",
   },
   {
     q: "Is my desktop data private?",
@@ -18,7 +18,7 @@ const FAQS = [
   },
   {
     q: "What is the voice latency?",
-    a: "Gemini Live achieves <200ms round-trip streaming.",
+    a: "Our live voice engine achieves <200ms round-trip streaming.",
   },
   {
     q: "Can it control any application on my desktop?",

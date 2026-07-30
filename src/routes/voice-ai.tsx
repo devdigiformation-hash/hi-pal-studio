@@ -8,7 +8,7 @@ export const Route = createFileRoute("/voice-ai")({
       {
         name: "description",
         content:
-          "Real-time Gemini Live voice control for your desktop: sub-second intent, native command execution.",
+          "Real-time live voice control for your desktop: sub-second intent, native command execution.",
       },
       { property: "og:title", content: "Voice AI — Digi Biz OS" },
       {

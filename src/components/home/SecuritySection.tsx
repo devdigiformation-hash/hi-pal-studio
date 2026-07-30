@@ -21,7 +21,7 @@ const PILLARS: { icon: LucideIcon; color: string; title: string; body: string }[
     icon: RefreshCw,
     color: "var(--amber)",
     title: "Provider-Agnostic Routing",
-    body: "Switch between Gemini, Groq, OpenRouter, and local Ollama models — zero vendor lock-in.",
+    body: "Switch between cloud and local models from any provider — zero vendor lock-in.",
   },
 ];
 
