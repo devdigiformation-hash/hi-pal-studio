@@ -10,33 +10,115 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AgentTownRouteImport } from './routes/agent-town'
+import { Route as DesktopOsRouteImport } from './routes/desktop-os'
+import { Route as DocsRouteImport } from './routes/docs'
+import { Route as IntegrationsRouteImport } from './routes/integrations'
+import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as VoiceAiRouteImport } from './routes/voice-ai'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AgentTownRoute = AgentTownRouteImport.update({
+  id: '/agent-town',
+  path: '/agent-town',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DesktopOsRoute = DesktopOsRouteImport.update({
+  id: '/desktop-os',
+  path: '/desktop-os',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DocsRoute = DocsRouteImport.update({
+  id: '/docs',
+  path: '/docs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IntegrationsRoute = IntegrationsRouteImport.update({
+  id: '/integrations',
+  path: '/integrations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VoiceAiRoute = VoiceAiRouteImport.update({
+  id: '/voice-ai',
+  path: '/voice-ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/agent-town': typeof AgentTownRoute
+  '/desktop-os': typeof DesktopOsRoute
+  '/docs': typeof DocsRoute
+  '/integrations': typeof IntegrationsRoute
+  '/pricing': typeof PricingRoute
+  '/voice-ai': typeof VoiceAiRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/agent-town': typeof AgentTownRoute
+  '/desktop-os': typeof DesktopOsRoute
+  '/docs': typeof DocsRoute
+  '/integrations': typeof IntegrationsRoute
+  '/pricing': typeof PricingRoute
+  '/voice-ai': typeof VoiceAiRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/agent-town': typeof AgentTownRoute
+  '/desktop-os': typeof DesktopOsRoute
+  '/docs': typeof DocsRoute
+  '/integrations': typeof IntegrationsRoute
+  '/pricing': typeof PricingRoute
+  '/voice-ai': typeof VoiceAiRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/agent-town'
+    | '/desktop-os'
+    | '/docs'
+    | '/integrations'
+    | '/pricing'
+    | '/voice-ai'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/agent-town'
+    | '/desktop-os'
+    | '/docs'
+    | '/integrations'
+    | '/pricing'
+    | '/voice-ai'
+  id:
+    | '__root__'
+    | '/'
+    | '/agent-town'
+    | '/desktop-os'
+    | '/docs'
+    | '/integrations'
+    | '/pricing'
+    | '/voice-ai'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AgentTownRoute: typeof AgentTownRoute
+  DesktopOsRoute: typeof DesktopOsRoute
+  DocsRoute: typeof DocsRoute
+  IntegrationsRoute: typeof IntegrationsRoute
+  PricingRoute: typeof PricingRoute
+  VoiceAiRoute: typeof VoiceAiRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +130,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/agent-town': {
+      id: '/agent-town'
+      path: '/agent-town'
+      fullPath: '/agent-town'
+      preLoaderRoute: typeof AgentTownRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/desktop-os': {
+      id: '/desktop-os'
+      path: '/desktop-os'
+      fullPath: '/desktop-os'
+      preLoaderRoute: typeof DesktopOsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/docs': {
+      id: '/docs'
+      path: '/docs'
+      fullPath: '/docs'
+      preLoaderRoute: typeof DocsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/integrations': {
+      id: '/integrations'
+      path: '/integrations'
+      fullPath: '/integrations'
+      preLoaderRoute: typeof IntegrationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/voice-ai': {
+      id: '/voice-ai'
+      path: '/voice-ai'
+      fullPath: '/voice-ai'
+      preLoaderRoute: typeof VoiceAiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AgentTownRoute: AgentTownRoute,
+  DesktopOsRoute: DesktopOsRoute,
+  DocsRoute: DocsRoute,
+  IntegrationsRoute: IntegrationsRoute,
+  PricingRoute: PricingRoute,
+  VoiceAiRoute: VoiceAiRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
