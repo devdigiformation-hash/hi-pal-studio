@@ -98,7 +98,7 @@ export default function DocsPage() {
                 { text: "# 1 — Download the DIGI BIZ OS installer", color: "var(--text-muted)" },
                 { text: "$ curl -fsSL https://get.digibizos.app | sh", color: "var(--cyan)" },
                 { text: "# 2 — Configure your AI provider API keys", color: "var(--text-muted)" },
-                { text: "$ digibiz config set gemini.key <YOUR_KEY>", color: "var(--cyan)" },
+                { text: "$ digibiz config set ai.key <YOUR_KEY>", color: "var(--cyan)" },
                 { text: "$ digibiz config set desktop.port 8765", color: "var(--cyan)" },
                 { text: "# 3 — Launch and speak", color: "var(--text-muted)" },
                 { text: "$ digibiz start --voice", color: "var(--purple)" },
