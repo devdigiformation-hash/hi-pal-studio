@@ -69,7 +69,7 @@ export default function JupiterGlobe({ size = 300, className }: JupiterGlobeProp
         const sx = cx + x1 * radius * persp;
         const sy = cy + y2 * radius * persp;
 
-        const alpha = 0.06 + depth * depth * 0.62;
+        const alpha = 0.04 + depth * depth * 0.42;
         const dotSize = 0.5 + depth * 1.05;
         const band = 0.72 + 0.28 * Math.abs(Math.cos(p.y * Math.PI * 3));
 
