@@ -1,4 +1,6 @@
-import { Download, Play } from "lucide-react";
+import { Play } from "lucide-react";
+import { WindowsIcon } from "@/components/PlatformIcons";
+import PlatformCards from "@/components/PlatformCards";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GradientText from "@/components/GradientText";
 import CyanButton from "@/components/CyanButton";
@@ -60,14 +62,18 @@ export default function FinalCTA() {
             Download DIGI BIZ OS and experience autonomous desktop AI today.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <CyanButton size="lg" icon={<Download size={18} />}>
-              Download for Windows / Mac
+            <CyanButton size="lg" icon={<WindowsIcon size={17} />}>
+              Download for Windows
             </CyanButton>
             <GhostButton size="lg" icon={<Play size={17} />}>
               Watch Product Demo
             </GhostButton>
           </div>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <div className="mx-auto mt-12 max-w-[760px]">
+            <PlatformCards />
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <MonoBadge>Free to Start</MonoBadge>
             <MonoBadge>No Credit Card</MonoBadge>
             <MonoBadge>Local &amp; Private</MonoBadge>

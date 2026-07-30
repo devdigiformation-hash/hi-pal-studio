@@ -14,6 +14,7 @@ import {
   Wrench,
 } from "lucide-react";
 import CyanButton from "@/components/CyanButton";
+import { WindowsIcon } from "@/components/PlatformIcons";
 import GhostButton from "@/components/GhostButton";
 import MonoBadge from "@/components/MonoBadge";
 import ActivePulse from "@/components/ActivePulse";
@@ -212,8 +213,8 @@ export default function HeroSection() {
             transition={{ delay: 0.8 }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
-            <CyanButton size="lg" icon={<Download size={18} />}>
-              Download for Windows / Mac
+            <CyanButton size="lg" icon={<WindowsIcon size={17} />}>
+              Download for Windows
             </CyanButton>
             <GhostButton size="lg" icon={<Play size={17} />}>
               Watch 60s Product Tour
