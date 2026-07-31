@@ -24,7 +24,7 @@ export default function GlobalBackground() {
 
       {/* Layer 3 — holographic grid */}
       <div
-        className="absolute inset-0 opacity-[0.16]"
+        className="absolute inset-0 opacity-[0.22]"
         style={{
           backgroundImage:
             "linear-gradient(rgba(120,200,235,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(120,200,235,0.10) 1px, transparent 1px)",
@@ -58,7 +58,7 @@ export default function GlobalBackground() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 90% 80% at 50% 50%, transparent 45%, rgba(2,4,8,0.75))",
+            "radial-gradient(ellipse 90% 80% at 50% 50%, transparent 55%, rgba(2,4,8,0.55))",
         }}
       />
     </div>
