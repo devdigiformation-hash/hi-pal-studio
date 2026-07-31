@@ -157,7 +157,7 @@ export default function HeroSection() {
     <section
       id="hero"
       className="relative flex min-h-[92vh] items-center overflow-hidden px-6 py-24 md:px-10"
-      style={{ background: "var(--bg-base)" }}
+      style={{ background: "transparent" }}
     >
       {/* Layer A — radial glow mesh */}
       <div

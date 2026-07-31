@@ -1,27 +1,51 @@
-const PARTICLE_COLORS = ["#2FE0C8", "#8B7CF6", "#F5A623"];
-
-const particles = Array.from({ length: 24 }, (_, i) => ({
-  left: `${(i * 37) % 97}%`,
-  top: `${(i * 61) % 93}%`,
-  size: 2 + (i % 3),
-  color: PARTICLE_COLORS[i % 3],
-  duration: 15 + ((i * 7) % 16),
-  delay: (i * 0.42) % 10,
-}));
+import HoloNetwork from "./HoloNetwork";
 
 export default function GlobalBackground() {
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-      {/* Layer 1 — base gradient mesh */}
+      {/* Layer 1 — deep holographic atmosphere */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 80% 60% at 50% -10%, rgba(47,224,200,0.08), transparent), radial-gradient(ellipse 60% 50% at 80% 100%, rgba(139,124,246,0.06), transparent), #090D16",
+            "radial-gradient(ellipse 90% 70% at 15% 0%, rgba(30,110,170,0.30), transparent 62%), radial-gradient(ellipse 70% 60% at 85% 15%, rgba(47,224,200,0.10), transparent 60%), radial-gradient(ellipse 80% 60% at 60% 110%, rgba(139,124,246,0.10), transparent 65%), #04070E",
         }}
       />
 
-      {/* Layer 2 — animated noise texture */}
+      {/* Layer 2 — drifting nebula haze */}
+      <div
+        className="animate-holo-drift absolute -inset-[20%]"
+        style={{
+          background:
+            "radial-gradient(circle at 30% 40%, rgba(60,150,220,0.14), transparent 45%), radial-gradient(circle at 70% 65%, rgba(47,224,200,0.09), transparent 45%)",
+          filter: "blur(40px)",
+        }}
+      />
+
+      {/* Layer 3 — holographic grid */}
+      <div
+        className="absolute inset-0 opacity-[0.22]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(120,200,235,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(120,200,235,0.10) 1px, transparent 1px)",
+          backgroundSize: "72px 72px",
+          maskImage: "radial-gradient(ellipse 75% 65% at 50% 40%, black, transparent 80%)",
+        }}
+      />
+
+      {/* Layer 4 — animated constellation network */}
+      <HoloNetwork />
+
+      {/* Layer 5 — descending holographic scan sweep */}
+      <div
+        className="animate-holo-scan absolute inset-x-0 top-0 h-[220px]"
+        style={{
+          background:
+            "linear-gradient(to bottom, transparent, rgba(120,215,255,0.05) 45%, rgba(160,235,255,0.16) 72%, rgba(180,245,255,0.30) 78%, rgba(120,215,255,0.05) 82%, transparent)",
+        }}
+      />
+
+      {/* Layer 6 — grain */}
       <svg className="animate-noise-flicker absolute inset-0 h-full w-full opacity-[0.03]">
         <filter id="digibiz-noise">
           <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
@@ -29,27 +53,14 @@ export default function GlobalBackground() {
         <rect width="100%" height="100%" filter="url(#digibiz-noise)" />
       </svg>
 
-      {/* Layer 3 — floating particle field (desktop only) */}
-      <div className="hidden md:block">
-        {particles.map((p, i) => (
-          <span
-            key={i}
-            className="absolute rounded-full"
-            style={{
-              left: p.left,
-              top: p.top,
-              width: p.size,
-              height: p.size,
-              background: p.color,
-              opacity: 0.2,
-              animation: `particleDrift ${p.duration}s ease-in-out ${p.delay}s infinite`,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Layer 4 — scan line */}
-      <div className="animate-scan-line absolute inset-x-0 top-0 hidden h-px bg-white opacity-[0.02] md:block" />
+      {/* Layer 7 — vignette */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 90% 80% at 50% 50%, transparent 55%, rgba(2,4,8,0.55))",
+        }}
+      />
     </div>
   );
 }
