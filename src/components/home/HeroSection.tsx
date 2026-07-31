@@ -1,6 +1,6 @@
 import JupiterGlobe from "@/components/JupiterGlobe";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   Brain,
   Camera,
@@ -29,6 +29,19 @@ const CYCLE = [
   "Everything Changes.",
   "Work Transforms.",
   "The Future Runs.",
+  "Empires Get Built.",
+  "Your Company Runs Itself.",
+  "Deadlines Disappear.",
+  "Output Multiplies 10x.",
+];
+
+const PHRASES = [
+  "Speed of Voice.",
+  "Speed of Thought.",
+  "Speed of Command.",
+  "Speed of Intelligence.",
+  "Speed of Execution.",
+  "Speed of Ambition.",
 ];
 
 const NODES = [
@@ -45,6 +58,63 @@ const NODES = [
 
 
 const BADGES = ["500+ AI Skills", "115+ Built-in Tools", "Multi-Agent Execution", "Multi-MCP Ready"];
+
+function RotatingPhrase() {
+  const [i, setI] = useState(0);
+
+  useEffect(() => {
+    const t = setInterval(() => setI((v) => (v + 1) % PHRASES.length), 3200);
+    return () => clearInterval(t);
+  }, []);
+
+  const phrase = PHRASES[i];
+
+  return (
+    <span
+      className="relative inline-block align-top"
+      style={{
+        backgroundImage: "linear-gradient(100deg, #2FE0C8, #8B7CF6)",
+        WebkitBackgroundClip: "text",
+        backgroundClip: "text",
+        color: "transparent",
+      }}
+    >
+      <AnimatePresence mode="wait">
+        <motion.span key={phrase} className="inline-block">
+          {phrase.split("").map((ch, idx) => (
+            <motion.span
+              key={`${phrase}-${idx}`}
+              className="inline-block"
+              initial={{ opacity: 0, y: "0.5em", rotateX: -70, filter: "blur(10px)" }}
+              animate={{ opacity: 1, y: 0, rotateX: 0, filter: "blur(0px)" }}
+              exit={{ opacity: 0, y: "-0.45em", rotateX: 60, filter: "blur(10px)" }}
+              transition={{
+                delay: idx * 0.028,
+                duration: 0.5,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              style={{ transformOrigin: "50% 100%" }}
+            >
+              {ch === " " ? "\u00A0" : ch}
+            </motion.span>
+          ))}
+        </motion.span>
+      </AnimatePresence>
+      <motion.span
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        initial={{ x: "-120%" }}
+        animate={{ x: "130%" }}
+        transition={{ duration: 2.6, repeat: Infinity, repeatDelay: 1.2, ease: "easeInOut" }}
+        style={{
+          background:
+            "linear-gradient(100deg, transparent 20%, rgba(255,255,255,0.35) 50%, transparent 80%)",
+          mixBlendMode: "overlay",
+        }}
+      />
+    </span>
+  );
+}
 
 function Typewriter() {
   const [index, setIndex] = useState(0);
@@ -130,10 +200,9 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25 + HEADLINE.length * 0.06, duration: 0.5 }}
               className="inline-block"
+              style={{ perspective: 800 }}
             >
-              <GradientText from="#2FE0C8" to="#8B7CF6">
-                Speed of Voice.
-              </GradientText>
+              <RotatingPhrase />
             </motion.span>
           </h1>
 
