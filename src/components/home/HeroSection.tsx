@@ -1,6 +1,6 @@
 import JupiterGlobe from "@/components/JupiterGlobe";
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Brain,
   Camera,
@@ -61,11 +61,19 @@ const BADGES = ["500+ AI Skills", "115+ Built-in Tools", "Multi-Agent Execution"
 
 function RotatingPhrase() {
   const [i, setI] = useState(0);
+  const [out, setOut] = useState(false);
 
   useEffect(() => {
-    const t = setInterval(() => setI((v) => (v + 1) % PHRASES.length), 3200);
-    return () => clearInterval(t);
-  }, []);
+    const hide = setTimeout(() => setOut(true), 3200);
+    const swap = setTimeout(() => {
+      setI((v) => (v + 1) % PHRASES.length);
+      setOut(false);
+    }, 3700);
+    return () => {
+      clearTimeout(hide);
+      clearTimeout(swap);
+    };
+  }, [i]);
 
   const phrase = PHRASES[i];
 
@@ -79,27 +87,28 @@ function RotatingPhrase() {
         color: "transparent",
       }}
     >
-      <AnimatePresence mode="wait">
-        <motion.span key={phrase} className="inline-block">
-          {phrase.split("").map((ch, idx) => (
-            <motion.span
-              key={`${phrase}-${idx}`}
-              className="inline-block"
-              initial={{ opacity: 0, y: "0.5em", rotateX: -70, filter: "blur(10px)" }}
-              animate={{ opacity: 1, y: 0, rotateX: 0, filter: "blur(0px)" }}
-              exit={{ opacity: 0, y: "-0.45em", rotateX: 60, filter: "blur(10px)" }}
-              transition={{
-                delay: idx * 0.028,
-                duration: 0.5,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              style={{ transformOrigin: "50% 100%" }}
-            >
-              {ch === " " ? "\u00A0" : ch}
-            </motion.span>
-          ))}
-        </motion.span>
-      </AnimatePresence>
+      <span className="inline-block">
+        {phrase.split("").map((ch, idx) => (
+          <motion.span
+            key={`${i}-${idx}`}
+            className="inline-block"
+            initial={{ opacity: 0, y: "0.5em", rotateX: -70, filter: "blur(10px)" }}
+            animate={
+              out
+                ? { opacity: 0, y: "-0.45em", rotateX: 60, filter: "blur(10px)" }
+                : { opacity: 1, y: 0, rotateX: 0, filter: "blur(0px)" }
+            }
+            transition={{
+              delay: out ? idx * 0.012 : idx * 0.028,
+              duration: out ? 0.32 : 0.5,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            style={{ transformOrigin: "50% 100%" }}
+          >
+            {ch === " " ? "\u00A0" : ch}
+          </motion.span>
+        ))}
+      </span>
       <motion.span
         aria-hidden
         className="pointer-events-none absolute inset-0"
@@ -264,7 +273,7 @@ export default function HeroSection() {
         </motion.div>
 
         {/* RIGHT — operations center */}
-        <div className="relative hidden h-[520px] items-center justify-center lg:flex">
+        <div className="relative hidden h-[440px] items-center justify-center self-start lg:flex">
           {/* Globe */}
           <div
             className="relative flex h-[200px] w-[200px] items-center justify-center rounded-full"
