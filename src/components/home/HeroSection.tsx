@@ -77,48 +77,34 @@ function RotatingPhrase() {
 
   const phrase = PHRASES[i];
 
+  const longest = PHRASES.reduce((a, b) => (b.length > a.length ? b : a), PHRASES[0]);
+
   return (
-    <span
-      className="relative inline-block align-top"
-      style={{
-        backgroundImage: "linear-gradient(100deg, #2FE0C8, #8B7CF6)",
-        WebkitBackgroundClip: "text",
-        backgroundClip: "text",
-        color: "transparent",
-      }}
-    >
-      <span className="inline-block">
-        {phrase.split("").map((ch, idx) => (
-          <motion.span
-            key={`${i}-${idx}`}
-            className="inline-block"
-            initial={{ opacity: 0, y: "0.5em", rotateX: -70, filter: "blur(10px)" }}
-            animate={
-              out
-                ? { opacity: 0, y: "-0.45em", rotateX: 60, filter: "blur(10px)" }
-                : { opacity: 1, y: 0, rotateX: 0, filter: "blur(0px)" }
-            }
-            transition={{
-              delay: out ? idx * 0.012 : idx * 0.028,
-              duration: out ? 0.32 : 0.5,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            style={{ transformOrigin: "50% 100%" }}
-          >
-            {ch === " " ? "\u00A0" : ch}
-          </motion.span>
-        ))}
+    <span className="relative inline-grid align-bottom">
+      {/* invisible sizer keeps layout stable — no reflow, no overlap */}
+      <span aria-hidden className="invisible col-start-1 row-start-1">
+        {longest}
       </span>
+      <motion.span
+        key={i}
+        aria-live="polite"
+        className="col-start-1 row-start-1 bg-gradient-to-r from-[#2FE0C8] to-[#8B7CF6] bg-clip-text text-transparent"
+        initial={{ opacity: 0, y: "0.35em" }}
+        animate={out ? { opacity: 0, y: "-0.3em" } : { opacity: 1, y: 0 }}
+        transition={{ duration: out ? 0.3 : 0.45, ease: [0.22, 1, 0.36, 1] }}
+      >
+        {phrase}
+      </motion.span>
       <motion.span
         aria-hidden
         className="pointer-events-none absolute inset-0"
         initial={{ x: "-120%" }}
         animate={{ x: "130%" }}
-        transition={{ duration: 2.6, repeat: Infinity, repeatDelay: 1.2, ease: "easeInOut" }}
+        transition={{ duration: 3, repeat: Infinity, repeatDelay: 1.4, ease: "easeInOut" }}
         style={{
           background:
-            "linear-gradient(100deg, transparent 20%, rgba(255,255,255,0.35) 50%, transparent 80%)",
-          mixBlendMode: "overlay",
+            "linear-gradient(100deg, transparent 25%, rgba(255,255,255,0.18) 50%, transparent 75%)",
+          mixBlendMode: "plus-lighter",
         }}
       />
     </span>
