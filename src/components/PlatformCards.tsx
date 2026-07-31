@@ -5,8 +5,34 @@ import { WindowsIcon, AppleIcon, LinuxIcon, MobileIcon } from "@/components/Plat
 
 function ComingSoonBadge({ color }: { color?: string }) {
   return (
-    <div className="mt-6 flex items-center justify-center rounded-[var(--r-md)] border border-dashed border-[var(--border-glass)] py-3">
+    <div className="mt-auto flex items-center justify-center rounded-[var(--r-md)] border border-dashed border-[var(--border-glass)] py-3">
       <MonoBadge color={color}>Coming Soon</MonoBadge>
+    </div>
+  );
+}
+
+function CardHead({
+  icon,
+  color,
+  title,
+  sub,
+}: {
+  icon: React.ReactNode;
+  color: string;
+  title: string;
+  sub: string;
+}) {
+  return (
+    <div className="flex items-start gap-3">
+      <span className="shrink-0" style={{ color }}>
+        {icon}
+      </span>
+      <div className="min-w-0">
+        <h3 className="truncate font-display text-[17px] font-bold text-[var(--text-primary)]">
+          {title}
+        </h3>
+        <p className="font-mono text-[11px] leading-[1.5] text-[var(--text-muted)]">{sub}</p>
+      </div>
     </div>
   );
 }
