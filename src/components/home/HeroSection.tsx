@@ -282,7 +282,8 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Nodes */}
+          {/* Nodes — orbiting like a solar system */}
+          <div className="animate-orbit-spin pointer-events-none absolute inset-0">
           {NODES.map((n, i) => {
             const rad = (n.angle * Math.PI) / 180;
             const Icon = n.icon;
@@ -293,13 +294,14 @@ export default function HeroSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 + i * 0.12 }}
-                className="absolute flex flex-col items-center gap-1"
+                className="absolute"
                 style={{
                   left: `calc(50% + ${Math.cos(rad) * radius}px)`,
                   top: `calc(50% + ${Math.sin(rad) * radius}px)`,
                   transform: "translate(-50%,-50%)",
                 }}
               >
+                <div className="animate-orbit-spin-rev flex flex-col items-center gap-1">
                 <div
                   className="animate-float flex h-14 w-14 items-center justify-center rounded-full border backdrop-blur-xl"
                   style={{
@@ -314,9 +316,11 @@ export default function HeroSection() {
                 <span className="font-display text-[11px] font-medium text-[var(--text-secondary)]">
                   {n.label}
                 </span>
+                </div>
               </motion.div>
             );
           })}
+          </div>
 
           {/* Floating mini stat */}
           <div
