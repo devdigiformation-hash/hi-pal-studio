@@ -80,15 +80,7 @@ function RotatingPhrase() {
   const longest = PHRASES.reduce((a, b) => (b.length > a.length ? b : a), PHRASES[0]);
 
   return (
-    <span
-      className="relative inline-grid align-bottom"
-      style={{
-        backgroundImage: "linear-gradient(100deg, #2FE0C8, #8B7CF6)",
-        WebkitBackgroundClip: "text",
-        backgroundClip: "text",
-        color: "transparent",
-      }}
-    >
+    <span className="relative inline-grid align-bottom">
       {/* invisible sizer keeps layout stable — no reflow, no overlap */}
       <span aria-hidden className="invisible col-start-1 row-start-1">
         {longest}
@@ -97,6 +89,12 @@ function RotatingPhrase() {
         key={i}
         aria-live="polite"
         className="col-start-1 row-start-1"
+        style={{
+          backgroundImage: "linear-gradient(100deg, #2FE0C8, #8B7CF6)",
+          WebkitBackgroundClip: "text",
+          backgroundClip: "text",
+          color: "transparent",
+        }}
         initial={{ opacity: 0, y: "0.35em", filter: "blur(8px)" }}
         animate={
           out
