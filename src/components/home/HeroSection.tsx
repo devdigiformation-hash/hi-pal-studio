@@ -77,9 +77,11 @@ function RotatingPhrase() {
 
   const phrase = PHRASES[i];
 
+  const longest = PHRASES.reduce((a, b) => (b.length > a.length ? b : a), PHRASES[0]);
+
   return (
     <span
-      className="relative inline-block align-top"
+      className="relative inline-grid align-bottom"
       style={{
         backgroundImage: "linear-gradient(100deg, #2FE0C8, #8B7CF6)",
         WebkitBackgroundClip: "text",
@@ -87,28 +89,24 @@ function RotatingPhrase() {
         color: "transparent",
       }}
     >
-      <span className="inline-block">
-        {phrase.split("").map((ch, idx) => (
-          <motion.span
-            key={`${i}-${idx}`}
-            className="inline-block"
-            initial={{ opacity: 0, y: "0.5em", rotateX: -70, filter: "blur(10px)" }}
-            animate={
-              out
-                ? { opacity: 0, y: "-0.45em", rotateX: 60, filter: "blur(10px)" }
-                : { opacity: 1, y: 0, rotateX: 0, filter: "blur(0px)" }
-            }
-            transition={{
-              delay: out ? idx * 0.012 : idx * 0.028,
-              duration: out ? 0.32 : 0.5,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            style={{ transformOrigin: "50% 100%" }}
-          >
-            {ch === " " ? "\u00A0" : ch}
-          </motion.span>
-        ))}
+      {/* invisible sizer keeps layout stable — no reflow, no overlap */}
+      <span aria-hidden className="invisible col-start-1 row-start-1 whitespace-nowrap">
+        {longest}
       </span>
+      <motion.span
+        key={i}
+        aria-live="polite"
+        className="col-start-1 row-start-1 whitespace-nowrap"
+        initial={{ opacity: 0, y: "0.35em", filter: "blur(8px)" }}
+        animate={
+          out
+            ? { opacity: 0, y: "-0.3em", filter: "blur(8px)" }
+            : { opacity: 1, y: 0, filter: "blur(0px)" }
+        }
+        transition={{ duration: out ? 0.3 : 0.45, ease: [0.22, 1, 0.36, 1] }}
+      >
+        {phrase}
+      </motion.span>
       <motion.span
         aria-hidden
         className="pointer-events-none absolute inset-0"
