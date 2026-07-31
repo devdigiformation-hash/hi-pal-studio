@@ -92,7 +92,7 @@ export default function PlatformCards() {
         <CardHead
           icon={<MobileIcon size={24} />}
           color="var(--orange)"
-          title="Mobile App"
+          title="Mobile"
           sub="iOS & Android"
         />
         <p className="mt-4 mb-6 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
