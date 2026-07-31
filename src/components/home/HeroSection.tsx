@@ -24,7 +24,7 @@ const HEADLINE = "Operate Your Desktop at the".split(" ");
 
 const CYCLE = [
   "Your Desktop Moves.",
-  "27 Agents Execute.",
+  "10+ Agents Execute.",
   "Automation Begins.",
   "Everything Changes.",
   "Work Transforms.",
@@ -344,7 +344,7 @@ export default function HeroSection() {
               Agent Town Active
             </div>
             <div className="mt-1 flex items-center gap-2">
-              <span className="font-code text-[12px] text-[var(--cyan)]">27 agents</span>
+              <span className="font-code text-[12px] text-[var(--cyan)]">10+ agents</span>
               <span className="flex gap-1">
                 {[0, 1, 2].map((d) => (
                   <ActivePulse key={d} size={6} />

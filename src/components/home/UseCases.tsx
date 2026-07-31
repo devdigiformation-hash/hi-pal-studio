@@ -8,7 +8,7 @@ const CASES: { icon: LucideIcon; color: string; title: string; body: string; cha
     icon: Briefcase,
     color: "var(--cyan)",
     title: "Founders & Business Leaders",
-    body: "Voice-command your workstation while multitasking. Automate WhatsApp customer replies, draft emails, research UK Companies House data hands-free.",
+    body: "Voice-command your workstation while multitasking. Automate WhatsApp customer replies, draft emails, and run business research hands-free.",
     chain: ["Voice", "Agent", "WhatsApp/Email"],
   },
   {
@@ -21,9 +21,9 @@ const CASES: { icon: LucideIcon; color: string; title: string; body: string; cha
   {
     icon: Building2,
     color: "var(--amber)",
-    title: "UK Corporate Researchers",
-    body: "Query Companies House, extract SIC codes, verify directors, and compile company data reports via the integrated UK corporate data suite.",
-    chain: ["Voice", "Companies House", "Report"],
+    title: "Research & Operations Teams",
+    body: "Collect market data, verify business records and compile ready-to-send reports — all from a single spoken brief.",
+    chain: ["Voice", "Business Data", "Report"],
   },
 ];
 

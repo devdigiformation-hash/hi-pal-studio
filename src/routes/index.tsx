@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "DIGI BIZ OS is the autonomous desktop AI OS: voice-first control, 27 autonomous agents, real-time screen vision and native desktop automation.",
+          "DIGI BIZ OS is the autonomous desktop AI OS: voice-first control, 10+ autonomous agents, real-time screen vision and native desktop automation.",
       },
       { property: "og:title", content: "DIGI BIZ OS — Operate Your Desktop at the Speed of Voice" },
       {

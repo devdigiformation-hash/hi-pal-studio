@@ -29,18 +29,18 @@ const COPY: Record<Tab, { title: string; body: string; badges: string[]; bullets
     bullets: [
       "Visual workflow builder",
       "Cron & event triggers",
-      "27 concurrent sub-agents",
+      "10+ concurrent sub-agents",
       "Retry + audit trail per step",
     ],
   },
   Connectivity: {
     title: "Channels Hub",
-    body: "Unified WhatsApp, Email IMAP/SMTP, Discord, and UK Companies House API in one control panel.",
-    badges: ["WhatsApp", "IMAP/SMTP", "Discord", "Companies House"],
+    body: "Unified WhatsApp, Email IMAP/SMTP, Discord, and Business Data Research in one control panel.",
+    badges: ["WhatsApp", "IMAP/SMTP", "Discord", "Business Data"],
     bullets: [
       "One inbox across channels",
       "Auto-reply agent routing",
-      "UK corporate data lookups",
+      "Business data lookups",
       "Per-channel status monitoring",
     ],
   },
@@ -117,7 +117,7 @@ function Visual({ tab }: { tab: Tab }) {
           { name: "WhatsApp", color: "#34D399" },
           { name: "Email", color: "#2FE0C8" },
           { name: "Discord", color: "#8B7CF6" },
-          { name: "Companies House", color: "#F5A623" },
+          { name: "Business Data", color: "#F5A623" },
         ].map((c) => (
           <div
             key={c.name}

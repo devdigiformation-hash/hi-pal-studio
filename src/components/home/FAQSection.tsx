@@ -26,7 +26,7 @@ const FAQS = [
   },
   {
     q: "What is Agent Town?",
-    a: "27 specialized sub-agents running concurrently, each with defined capabilities and tool access.",
+    a: "10+ specialized sub-agents running concurrently, each with defined capabilities and tool access.",
   },
   {
     q: "Is DIGI BIZ OS an online web app?",
