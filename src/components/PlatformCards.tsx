@@ -40,83 +40,62 @@ function CardHead({
 export default function PlatformCards() {
   return (
     <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-      <GlassCard className="border-[var(--cyan-border)] p-7 text-left" glowColor="var(--cyan)">
-        <div className="flex items-center gap-3">
-          <span className="text-[var(--cyan)]">
-            <WindowsIcon size={26} />
-          </span>
-          <div>
-            <h3 className="font-display text-[18px] font-bold text-[var(--text-primary)]">
-              Windows
-            </h3>
-            <p className="font-mono text-[12px] text-[var(--text-muted)]">
-              Windows 10 &amp; 11 · 64-bit
-            </p>
-          </div>
-        </div>
-        <p className="mt-4 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
+      <GlassCard
+        className="flex h-full flex-col border-[var(--cyan-border)] p-6 text-left"
+        glowColor="var(--cyan)"
+      >
+        <CardHead
+          icon={<WindowsIcon size={24} />}
+          color="var(--cyan)"
+          title="Windows"
+          sub="Windows 10 & 11"
+        />
+        <p className="mt-4 mb-6 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
           The full DIGI BIZ OS desktop build — voice control, 115+ built-in tools and Agent Town,
           available today.
         </p>
-        <div className="mt-6">
-          <CyanButton className="w-full" icon={<WindowsIcon size={16} />}>
-            Download for Windows
+        <div className="mt-auto">
+          <CyanButton className="w-full !px-4 text-[13px]" icon={<WindowsIcon size={15} />}>
+            Download
           </CyanButton>
         </div>
       </GlassCard>
 
-      <GlassCard className="p-7 text-left opacity-90" glowColor="var(--purple)">
-        <div className="flex items-center gap-3">
-          <span className="text-[var(--purple)]">
-            <AppleIcon size={26} />
-          </span>
-          <div>
-            <h3 className="font-display text-[18px] font-bold text-[var(--text-primary)]">macOS</h3>
-            <p className="font-mono text-[12px] text-[var(--text-muted)]">
-              Apple Silicon &amp; Intel
-            </p>
-          </div>
-        </div>
-        <p className="mt-4 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
+      <GlassCard className="flex h-full flex-col p-6 text-left opacity-90" glowColor="var(--purple)">
+        <CardHead
+          icon={<AppleIcon size={24} />}
+          color="var(--purple)"
+          title="macOS"
+          sub="Apple Silicon & Intel"
+        />
+        <p className="mt-4 mb-6 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
           The macOS edition is on the way with the same voice-first execution. Join the waitlist to
           get it first.
         </p>
         <ComingSoonBadge color="var(--purple)" />
       </GlassCard>
 
-      <GlassCard className="p-7 text-left opacity-90" glowColor="var(--green)">
-        <div className="flex items-center gap-3">
-          <span className="text-[var(--green)]">
-            <LinuxIcon size={26} />
-          </span>
-          <div>
-            <h3 className="font-display text-[18px] font-bold text-[var(--text-primary)]">Linux</h3>
-            <p className="font-mono text-[12px] text-[var(--text-muted)]">
-              Ubuntu · Debian · Fedora
-            </p>
-          </div>
-        </div>
-        <p className="mt-4 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
+      <GlassCard className="flex h-full flex-col p-6 text-left opacity-90" glowColor="var(--green)">
+        <CardHead
+          icon={<LinuxIcon size={24} />}
+          color="var(--green)"
+          title="Linux"
+          sub="Ubuntu · Debian · Fedora"
+        />
+        <p className="mt-4 mb-6 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
           A Linux edition is on the roadmap for power users and always-on business machines.
         </p>
         <ComingSoonBadge color="var(--green)" />
       </GlassCard>
 
-      <GlassCard className="p-7 text-left opacity-90" glowColor="var(--orange)">
-        <div className="flex items-center gap-3">
-          <span className="text-[var(--orange)]">
-            <MobileIcon size={26} />
-          </span>
-          <div>
-            <h3 className="font-display text-[18px] font-bold text-[var(--text-primary)]">
-              Mobile App
-            </h3>
-            <p className="font-mono text-[12px] text-[var(--text-muted)]">
-              iOS &amp; Android
-            </p>
-          </div>
-        </div>
-        <p className="mt-4 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
+      <GlassCard className="flex h-full flex-col p-6 text-left opacity-90" glowColor="var(--orange)">
+        <CardHead
+          icon={<MobileIcon size={24} />}
+          color="var(--orange)"
+          title="Mobile App"
+          sub="iOS & Android"
+        />
+        <p className="mt-4 mb-6 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
           A companion mobile app for remote voice commands, notifications and agent status is coming
           later this year.
         </p>
