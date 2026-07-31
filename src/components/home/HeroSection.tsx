@@ -192,7 +192,7 @@ export default function HeroSection() {
             </span>
           </motion.div>
 
-          <h1 className="mt-5 font-display text-[42px] font-bold leading-[1.05] tracking-[-0.04em] text-[var(--text-primary)] sm:text-[52px] md:text-[72px] lg:text-[86px]">
+          <h1 className="mt-5 font-display text-[36px] font-bold leading-[1.08] tracking-[-0.035em] text-[var(--text-primary)] sm:text-[44px] md:text-[54px] lg:text-[60px] xl:text-[66px]">
             {HEADLINE.map((word, i) => (
               <motion.span
                 key={`${word}-${i}`}
