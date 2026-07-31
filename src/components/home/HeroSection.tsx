@@ -90,13 +90,13 @@ function RotatingPhrase() {
       }}
     >
       {/* invisible sizer keeps layout stable — no reflow, no overlap */}
-      <span aria-hidden className="invisible col-start-1 row-start-1 whitespace-nowrap">
+      <span aria-hidden className="invisible col-start-1 row-start-1">
         {longest}
       </span>
       <motion.span
         key={i}
         aria-live="polite"
-        className="col-start-1 row-start-1 whitespace-nowrap"
+        className="col-start-1 row-start-1"
         initial={{ opacity: 0, y: "0.35em", filter: "blur(8px)" }}
         animate={
           out
