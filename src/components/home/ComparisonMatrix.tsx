@@ -7,11 +7,11 @@ import GlassCard from "@/components/GlassCard";
 const ROWS: [string, boolean, boolean, boolean][] = [
   ["Native Desktop Mouse & Keyboard Control", true, false, false],
   ["Real-Time Screen Vision Stream", true, false, false],
-  ["27-Agent Concurrent Execution", true, false, false],
+  ["10+ Agent Concurrent Execution", true, false, false],
   ["Voice-First Zero-Latency Operation", true, false, false],
   ["Local File System Full Access", true, false, true],
   ["Multi-Provider AI Model Routing", true, true, false],
-  ["Companies House API Integration", true, false, false],
+  ["Business Data Research Suite", true, false, false],
   ["500+ AI Skills Library", true, false, false],
   ["MCP Server Compatibility", true, true, false],
   ["WhatsApp + Email + Discord Unified", true, false, false],

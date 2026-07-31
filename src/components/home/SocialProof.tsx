@@ -6,7 +6,7 @@ import MetricBadge from "@/components/MetricBadge";
 const QUOTES = [
   {
     quote:
-      "The Agent Town feature alone saved me 4 hours daily. I voice-command research tasks and 27 agents execute them while I focus on high-value work.",
+      "The Agent Town feature alone saved me 4 hours daily. I voice-command research tasks and 10+ agents execute them while I focus on high-value work.",
     name: "James Whitfield",
     role: "Founder, Whitfield Ventures",
   },
@@ -18,9 +18,9 @@ const QUOTES = [
   },
   {
     quote:
-      "I use it daily for Companies House research. The voice query feature lets me gather UK corporate intelligence hands-free. Extraordinary productivity boost.",
+      "I use it daily for market research. The voice query feature lets me gather business intelligence hands-free. Extraordinary productivity boost.",
     name: "Daniel Hughes",
-    role: "UK Corporate Consultant",
+    role: "Business Consultant",
   },
 ];
 

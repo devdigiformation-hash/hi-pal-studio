@@ -48,7 +48,7 @@ export default function IntegrationsPage() {
         eyebrow="Connected Intelligence"
         title="Connect Everything."
         gradientTitle="Control Anything."
-        subtitle="WhatsApp, Email, Discord, Companies House, and MCP servers — all voice-controlled."
+        subtitle="WhatsApp, Email, Discord, CRM tools and MCP servers — all voice-controlled."
       />
 
       <SectionWrapper id="channels">
@@ -87,15 +87,15 @@ export default function IntegrationsPage() {
       <SectionWrapper className="bg-[var(--bg-surface)]">
         <div className="mx-auto grid max-w-[1200px] items-center gap-14 lg:grid-cols-2">
           <div>
-            <EyebrowLabel text="UK Corporate Intelligence" color="var(--amber)" />
+            <EyebrowLabel text="Business Data Intelligence" color="var(--amber)" />
             <h2 className="reveal-item delay-1 mt-4 font-display text-[30px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[42px]">
-              Companies House. By Voice.
+              Business Research. By Voice.
             </h2>
             <h3 className="reveal-item delay-2 mt-6 font-display text-[18px] font-semibold text-[var(--text-primary)]">
-              UK Companies House API
+              Business Data Research
             </h3>
             <p className="reveal-item delay-2 mt-3 max-w-[540px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
-              Query UK company registration data, director information, filing history, and SIC
+              Pull company profiles, contact records, market research and report-ready summaries
               classification codes directly from DIGI BIZ OS. No browser needed — just speak the
               company name or number.
             </p>
@@ -152,7 +152,7 @@ export default function IntegrationsPage() {
 
       <PageCTA
         title="Every Channel. One Voice."
-        badges={["WhatsApp", "IMAP/SMTP", "Discord", "Companies House"]}
+        badges={["WhatsApp", "IMAP/SMTP", "Discord", "Business Data"]}
         cta="Connect Your Stack"
       />
     </motion.main>

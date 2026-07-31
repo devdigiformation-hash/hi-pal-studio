@@ -4,6 +4,10 @@ import TelemetryTicker from "@/components/home/TelemetryTicker";
 import SoftwareShowcase from "@/components/home/SoftwareShowcase";
 import FourPillars from "@/components/home/FourPillars";
 import ProductWorkbench from "@/components/home/ProductWorkbench";
+import ModelsSection from "@/components/home/ModelsSection";
+import WorkflowsSection from "@/components/home/WorkflowsSection";
+import LiveTrackingSection from "@/components/home/LiveTrackingSection";
+import BuildYourOwn from "@/components/home/BuildYourOwn";
 import VisionShowcase from "@/components/home/VisionShowcase";
 import ComparisonMatrix from "@/components/home/ComparisonMatrix";
 import UseCases from "@/components/home/UseCases";
@@ -21,7 +25,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "DIGI BIZ OS is the autonomous desktop AI OS: voice-first control, 27 autonomous agents, real-time screen vision and native desktop automation.",
+          "DIGI BIZ OS is the autonomous desktop AI OS: voice-first control, 10+ autonomous agents, real-time screen vision and native desktop automation.",
       },
       { property: "og:title", content: "DIGI BIZ OS — Operate Your Desktop at the Speed of Voice" },
       {
@@ -43,6 +47,10 @@ function HomePage() {
       <SoftwareShowcase />
       <FourPillars />
       <ProductWorkbench />
+      <ModelsSection />
+      <WorkflowsSection />
+      <LiveTrackingSection />
+      <BuildYourOwn />
       <VisionShowcase />
       <ComparisonMatrix />
       <UseCases />
