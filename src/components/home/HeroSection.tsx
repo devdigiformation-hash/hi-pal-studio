@@ -41,16 +41,6 @@ const NODES = [
   { icon: Wrench, label: "Tools", color: "#7DD3FC", angle: 200 },
 ];
 
-const ORBIT_COLORS = [
-  "#2FE0C8",
-  "#8B7CF6",
-  "#3B82F6",
-  "#A855F7",
-  "#C4B5FD",
-  "#F5A623",
-  "#F472B6",
-  "#7DD3FC",
-];
 
 
 const BADGES = ["500+ AI Skills", "115+ Built-in Tools", "Multi-Agent Execution", "Multi-MCP Ready"];
