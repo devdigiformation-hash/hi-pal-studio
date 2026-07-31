@@ -100,11 +100,11 @@ function RotatingPhrase() {
         className="pointer-events-none absolute inset-0"
         initial={{ x: "-120%" }}
         animate={{ x: "130%" }}
-        transition={{ duration: 2.6, repeat: Infinity, repeatDelay: 1.2, ease: "easeInOut" }}
+        transition={{ duration: 3, repeat: Infinity, repeatDelay: 1.4, ease: "easeInOut" }}
         style={{
           background:
-            "linear-gradient(100deg, transparent 20%, rgba(255,255,255,0.35) 50%, transparent 80%)",
-          mixBlendMode: "overlay",
+            "linear-gradient(100deg, transparent 25%, rgba(255,255,255,0.18) 50%, transparent 75%)",
+          mixBlendMode: "plus-lighter",
         }}
       />
     </span>
