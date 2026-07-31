@@ -63,12 +63,12 @@ export default function AgentTownPage() {
       <SectionWrapper id="architecture">
         <div className="mx-auto grid max-w-[1200px] items-start gap-14 lg:grid-cols-2">
           <div>
-            <EyebrowLabel text="Agent Town Architecture" />
+            <EyebrowLabel text="Multi-Agent Architecture" />
             <h2 className="reveal-item delay-1 mt-4 font-display text-[30px] font-bold leading-[1.15] tracking-[-0.03em] text-[var(--text-primary)] md:text-[42px]">
               Concurrent Multi-Agent Execution.
             </h2>
             <p className="reveal-item delay-2 mt-5 max-w-[560px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
-              Agent Town delegates complex work to 10+ specialised
+              DIGI BIZ OS delegates complex work to 10+ specialised
               sub-agents running simultaneously. Research, code audit, data extraction, email
               drafting, and browser automation — all at once.
             </p>
@@ -108,7 +108,7 @@ export default function AgentTownPage() {
           <GlassCard className="reveal-item delay-2" glowColor="var(--purple)">
             <div className="flex items-center justify-between">
               <span className="inline-flex items-center gap-2 font-display text-[15px] font-semibold text-[var(--text-primary)]">
-                <Users size={17} color="var(--purple)" /> Agent Town
+                <Users size={17} color="var(--purple)" /> Agents
               </span>
               <span className="inline-flex items-center gap-2 font-code text-[11px] text-[var(--success)]">
                 <ActivePulse />
@@ -191,7 +191,7 @@ export default function AgentTownPage() {
       <PageCTA
         title="Mobilize Your Entire AI Workforce."
         badges={["Multi-Agent", "115+ Tools", "500+ Skills"]}
-        cta="Deploy Agent Town"
+        cta="Deploy Your Agents"
       />
     </motion.main>
   );

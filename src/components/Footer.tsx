@@ -9,7 +9,7 @@ const PRODUCT = [
   { label: "Product", to: "/" },
   { label: "Voice AI", to: "/voice-ai" },
   { label: "Desktop OS", to: "/desktop-os" },
-  { label: "Agent Town", to: "/agent-town" },
+  { label: "AI Agents", to: "/agents" },
   { label: "Integrations", to: "/integrations" },
   { label: "Pricing", to: "/pricing" },
 ] as const;

@@ -18,7 +18,7 @@ const TIERS = [
       "Lifetime access to Gen 2",
       "All updates included",
       "Activate on up to 3 PCs",
-      "Voice intelligence + Agent Town",
+      "Voice intelligence + AI agents",
       "Bring your own AI key",
     ],
     cta: "Get Lifetime Access",

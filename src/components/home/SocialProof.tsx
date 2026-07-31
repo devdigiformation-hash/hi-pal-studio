@@ -6,7 +6,7 @@ import MetricBadge from "@/components/MetricBadge";
 const QUOTES = [
   {
     quote:
-      "The Agent Town feature alone saved me 4 hours daily. I voice-command research tasks and 10+ agents execute them while I focus on high-value work.",
+      "The multi-agent feature alone saved me 4 hours daily. I voice-command research tasks and 10+ agents execute them while I focus on high-value work.",
     name: "James Whitfield",
     role: "Founder, Whitfield Ventures",
   },

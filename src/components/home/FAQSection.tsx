@@ -25,7 +25,7 @@ const FAQS = [
     a: "Yes. Desktop Control provides native OS-level control of any visible UI element across all desktop applications.",
   },
   {
-    q: "What is Agent Town?",
+    q: "What are DIGI BIZ OS Agents?",
     a: "10+ specialized sub-agents running concurrently, each with defined capabilities and tool access.",
   },
   {

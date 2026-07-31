@@ -49,7 +49,7 @@ const PILLARS: Pillar[] = [
     color: "var(--pink)",
     title: "10+ Agent Parallel Execution",
     body: "One command puts a team of specialised AI agents to work at once — research, engineering, data, outreach and automation, all running in parallel.",
-    badge: "Agent Town · Multi-Agent Platform",
+    badge: "Agents · Multi-Agent Platform",
     bullets: ["Concurrent agent execution", "Professional CLI workspace", "Built-in browser automation"],
   },
 ];

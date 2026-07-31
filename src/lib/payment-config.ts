@@ -31,7 +31,7 @@ export const PLANS: Record<PlanId, Plan> = {
       "All Gen 2 updates included",
       "Activate on up to 3 PCs",
       "Connect your own AI API key or ChatGPT account",
-      "Voice intelligence + Agent Town",
+      "Voice intelligence + AI agents",
       "Windows 10 & 11 support",
     ],
     bestFor: ["Individual Users", "Solo Operators", "Tech Enthusiasts"],

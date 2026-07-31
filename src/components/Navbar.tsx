@@ -12,7 +12,7 @@ const NAV_LINKS = [
   { label: "Product", to: "/" },
   { label: "Voice AI", to: "/voice-ai" },
   { label: "Desktop OS", to: "/desktop-os" },
-  { label: "Agents", to: "/agent-town" },
+  { label: "Agents", to: "/agents" },
   { label: "Integrations", to: "/integrations" },
   { label: "Pricing", to: "/pricing" },
   { label: "Docs", to: "/docs" },

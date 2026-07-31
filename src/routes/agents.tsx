@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
-import AgentTownPage from "@/pages/AgentTownPage";
+import AgentsPage from "@/pages/AgentsPage";
 
-export const Route = createFileRoute("/agent-town")({
+export const Route = createFileRoute("/agents")({
   head: () => ({
     meta: [
-      { title: "Agent Town — DIGI BIZ OS" },
+      { title: "AI Agents — DIGI BIZ OS" },
       {
         name: "description",
         content:
           "A live multi-agent workspace where specialised AI agents collaborate on your desktop tasks.",
       },
-      { property: "og:title", content: "Agent Town — DIGI BIZ OS" },
+      { property: "og:title", content: "AI Agents — DIGI BIZ OS" },
       {
         property: "og:description",
         content: "A live multi-agent workspace for autonomous desktop work.",
@@ -19,6 +19,5 @@ export const Route = createFileRoute("/agent-town")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: AgentTownPage,
+  component: AgentsPage,
 });
-

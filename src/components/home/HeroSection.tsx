@@ -350,7 +350,7 @@ export default function HeroSection() {
             style={{ background: "var(--bg-glass)", boxShadow: "var(--shadow-glass)" }}
           >
             <div className="font-display text-[12px] font-semibold text-[var(--text-primary)]">
-              Agent Town Active
+              Agents Active
             </div>
             <div className="mt-1 flex items-center gap-2">
               <span className="font-code text-[12px] text-[var(--cyan)]">10+ agents</span>
