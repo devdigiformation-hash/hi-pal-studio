@@ -73,6 +73,7 @@ function Typewriter() {
 
 export default function HeroSection() {
   const radius = 168;
+  const [platformsRevealed, setPlatformsRevealed] = useState(false);
 
   return (
     <section
