@@ -73,7 +73,6 @@ function Typewriter() {
 
 export default function HeroSection() {
   const radius = 168;
-  const [platformsRevealed, setPlatformsRevealed] = useState(false);
 
   return (
     <section
@@ -164,26 +163,21 @@ export default function HeroSection() {
             transition={{ delay: 0.8 }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
-            <CyanButton
-              size="lg"
-              icon={<WindowsIcon size={17} />}
-              onMouseEnter={() => setPlatformsRevealed(true)}
-              onFocus={() => setPlatformsRevealed(true)}
-            >
+            <CyanButton size="lg" icon={<WindowsIcon size={17} />}>
               Download for Windows
             </CyanButton>
-            <GhostButton size="lg" icon={<Play size={17} />}>
-              Watch 60s Product Tour
-            </GhostButton>
+            <PlatformStrip />
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9 }}
-            className="mt-7 max-w-[620px]"
+            transition={{ delay: 1.3 }}
+            className="mt-6"
           >
-            <PlatformStrip revealed={platformsRevealed} />
+            <GhostButton size="lg" icon={<Play size={17} />}>
+              Watch 60s Product Tour
+            </GhostButton>
           </motion.div>
 
           <div className="mt-6 flex flex-wrap gap-3">
