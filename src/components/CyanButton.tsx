@@ -5,6 +5,8 @@ interface CyanButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   size?: "sm" | "md" | "lg";
   icon?: ReactNode;
+  /** Brand tone as "r,g,b" — defaults to the DIGI BIZ OS cyan. */
+  tone?: string;
 }
 
 const sizes = {
@@ -18,6 +20,7 @@ export default function CyanButton({
   size = "md",
   icon,
   className,
+  tone = "47,224,200",
   ...props
 }: CyanButtonProps) {
   return (
@@ -25,16 +28,17 @@ export default function CyanButton({
       {...props}
       className={cn(
         "group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap rounded-full font-display font-bold",
-        "border border-[var(--cyan)]/45 text-[var(--cyan)] backdrop-blur-xl transition-all duration-300 ease-out",
-        "hover:border-[var(--cyan)]/80 hover:text-[var(--text-primary)]",
+        "border backdrop-blur-xl transition-all duration-300 ease-out hover:text-[var(--text-primary)]",
         "hover:scale-[1.03] active:scale-[0.97]",
-        "shadow-[0_8px_32px_rgba(47,224,200,0.18),inset_0_1px_0_rgba(255,255,255,0.16)] hover:shadow-[0_10px_44px_rgba(47,224,200,0.32),inset_0_1px_0_rgba(255,255,255,0.24)]",
         sizes[size],
         className,
       )}
       style={{
+        color: `rgb(${tone})`,
+        borderColor: `rgba(${tone},0.45)`,
+        boxShadow: `0 8px 32px rgba(${tone},0.18), inset 0 1px 0 rgba(255,255,255,0.16)`,
         background:
-          "linear-gradient(135deg, rgba(47,224,200,0.22), rgba(34,211,238,0.10) 55%, rgba(255,255,255,0.05))",
+          `linear-gradient(135deg, rgba(${tone},0.22), rgba(${tone},0.10) 55%, rgba(255,255,255,0.05))`,
       }}
     >
       <span
