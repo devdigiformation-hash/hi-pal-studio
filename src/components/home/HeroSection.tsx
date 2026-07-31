@@ -166,7 +166,9 @@ export default function HeroSection() {
             <CyanButton size="lg" icon={<WindowsIcon size={17} />}>
               Download for Windows
             </CyanButton>
-            <PlatformStrip />
+            <GhostButton size="lg" icon={<Play size={17} />}>
+              Watch 60s Product Tour
+            </GhostButton>
           </motion.div>
 
           <motion.div
@@ -175,9 +177,7 @@ export default function HeroSection() {
             transition={{ delay: 1.3 }}
             className="mt-6"
           >
-            <GhostButton size="lg" icon={<Play size={17} />}>
-              Watch 60s Product Tour
-            </GhostButton>
+            <PlatformStrip />
           </motion.div>
 
           <div className="mt-6 flex flex-wrap gap-3">
