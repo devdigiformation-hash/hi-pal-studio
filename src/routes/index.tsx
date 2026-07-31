@@ -5,6 +5,7 @@ import SoftwareShowcase from "@/components/home/SoftwareShowcase";
 import FourPillars from "@/components/home/FourPillars";
 import ProductWorkbench from "@/components/home/ProductWorkbench";
 import ModelsSection from "@/components/home/ModelsSection";
+import CodebaseIntelligence from "@/components/home/CodebaseIntelligence";
 import WorkflowsSection from "@/components/home/WorkflowsSection";
 import LiveTrackingSection from "@/components/home/LiveTrackingSection";
 import BuildYourOwn from "@/components/home/BuildYourOwn";
@@ -48,6 +49,7 @@ function HomePage() {
       <FourPillars />
       <ProductWorkbench />
       <ModelsSection />
+      <CodebaseIntelligence />
       <WorkflowsSection />
       <LiveTrackingSection />
       <BuildYourOwn />
