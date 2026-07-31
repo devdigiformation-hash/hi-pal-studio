@@ -10,7 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as AgentTownRouteImport } from './routes/agent-town'
+import { Route as AgentsRouteImport } from './routes/agents'
 import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as DesktopOsRouteImport } from './routes/desktop-os'
 import { Route as DocsRouteImport } from './routes/docs'
@@ -26,9 +26,9 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AgentTownRoute = AgentTownRouteImport.update({
-  id: '/agent-town',
-  path: '/agent-town',
+const AgentsRoute = AgentsRouteImport.update({
+  id: '/agents',
+  path: '/agents',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CheckoutRoute = CheckoutRouteImport.update({
@@ -79,7 +79,7 @@ const OrderRefRoute = OrderRefRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/agent-town': typeof AgentTownRoute
+  '/agents': typeof AgentsRoute
   '/checkout': typeof CheckoutRoute
   '/desktop-os': typeof DesktopOsRoute
   '/docs': typeof DocsRoute
@@ -92,7 +92,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/agent-town': typeof AgentTownRoute
+  '/agents': typeof AgentsRoute
   '/checkout': typeof CheckoutRoute
   '/desktop-os': typeof DesktopOsRoute
   '/docs': typeof DocsRoute
@@ -106,7 +106,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/agent-town': typeof AgentTownRoute
+  '/agents': typeof AgentsRoute
   '/checkout': typeof CheckoutRoute
   '/desktop-os': typeof DesktopOsRoute
   '/docs': typeof DocsRoute
@@ -121,7 +121,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/agent-town'
+    | '/agents'
     | '/checkout'
     | '/desktop-os'
     | '/docs'
@@ -134,7 +134,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/agent-town'
+    | '/agents'
     | '/checkout'
     | '/desktop-os'
     | '/docs'
@@ -147,7 +147,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/agent-town'
+    | '/agents'
     | '/checkout'
     | '/desktop-os'
     | '/docs'
@@ -161,7 +161,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AgentTownRoute: typeof AgentTownRoute
+  AgentsRoute: typeof AgentsRoute
   CheckoutRoute: typeof CheckoutRoute
   DesktopOsRoute: typeof DesktopOsRoute
   DocsRoute: typeof DocsRoute
@@ -182,11 +182,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/agent-town': {
-      id: '/agent-town'
-      path: '/agent-town'
-      fullPath: '/agent-town'
-      preLoaderRoute: typeof AgentTownRouteImport
+    '/agents': {
+      id: '/agents'
+      path: '/agents'
+      fullPath: '/agents'
+      preLoaderRoute: typeof AgentsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/checkout': {
@@ -257,7 +257,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AgentTownRoute: AgentTownRoute,
+  AgentsRoute: AgentsRoute,
   CheckoutRoute: CheckoutRoute,
   DesktopOsRoute: DesktopOsRoute,
   DocsRoute: DocsRoute,
@@ -271,3 +271,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

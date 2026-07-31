@@ -23,8 +23,8 @@ const COPY: Record<Tab, { title: string; body: string; badges: string[]; bullets
     ],
   },
   Automation: {
-    title: "Workflows + Agent Town",
-    body: "Drag-and-drop workflow automation with scheduled cron triggers and concurrent 27-agent task delegation.",
+    title: "Workflows + Agents",
+    body: "Drag-and-drop workflow automation with scheduled cron triggers and concurrent 10+ agent task delegation.",
     badges: ["115+ Built-in Tools", "500+ AI Skills"],
     bullets: [
       "Visual workflow builder",
@@ -142,7 +142,7 @@ function Visual({ tab }: { tab: Tab }) {
       style={{ background: "#05080F" }}
     >
       <div className="text-[var(--text-muted)]">&gt; Agent status</div>
-      <div className="text-[var(--green)]">Agent Town: Active [27/27]</div>
+      <div className="text-[var(--green)]">Agents: Active [10/10]</div>
       <div className="text-[var(--text-muted)]">&gt; Connected MCP servers</div>
       <div className="text-[var(--cyan)]">
         mcp/filesystem · mcp/github · mcp/companies-house
