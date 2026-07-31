@@ -273,7 +273,7 @@ export default function HeroSection() {
         </motion.div>
 
         {/* RIGHT — operations center */}
-        <div className="relative hidden h-[520px] items-center justify-center lg:flex">
+        <div className="relative hidden h-[440px] items-center justify-center self-start lg:flex">
           {/* Globe */}
           <div
             className="relative flex h-[200px] w-[200px] items-center justify-center rounded-full"
