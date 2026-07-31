@@ -69,7 +69,13 @@ export default function FinalCTA() {
               Watch Product Demo
             </GhostButton>
           </div>
-          <div className="mx-auto mt-12 max-w-[760px] xl:max-w-none">
+          <p
+            className="mt-14 font-display text-[12px] font-semibold uppercase text-[var(--text-muted)]"
+            style={{ letterSpacing: "0.18em" }}
+          >
+            Available Platforms
+          </p>
+          <div className="mx-auto mt-6 max-w-[760px] xl:max-w-none">
             <PlatformCards />
           </div>
 
