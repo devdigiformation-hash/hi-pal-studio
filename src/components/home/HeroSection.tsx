@@ -15,6 +15,7 @@ import {
 import CyanButton from "@/components/CyanButton";
 import { WindowsIcon } from "@/components/PlatformIcons";
 import GhostButton from "@/components/GhostButton";
+import PlatformStrip from "@/components/PlatformStrip";
 import MonoBadge from "@/components/MonoBadge";
 import ActivePulse from "@/components/ActivePulse";
 import GradientText from "@/components/GradientText";
@@ -168,6 +169,15 @@ export default function HeroSection() {
             <GhostButton size="lg" icon={<Play size={17} />}>
               Watch 60s Product Tour
             </GhostButton>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9 }}
+            className="mt-7 max-w-[620px]"
+          >
+            <PlatformStrip />
           </motion.div>
 
           <div className="mt-6 flex flex-wrap gap-3">
