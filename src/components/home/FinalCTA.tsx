@@ -69,7 +69,7 @@ export default function FinalCTA() {
               Watch Product Demo
             </GhostButton>
           </div>
-          <div className="mx-auto mt-12 max-w-[760px]">
+          <div className="mx-auto mt-12 max-w-[760px] xl:max-w-none">
             <PlatformCards />
           </div>
 

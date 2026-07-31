@@ -13,7 +13,7 @@ function ComingSoonBadge({ color }: { color?: string }) {
 
 export default function PlatformCards() {
   return (
-    <div className="grid gap-5 sm:grid-cols-2">
+    <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
       <GlassCard className="border-[var(--cyan-border)] p-7 text-left" glowColor="var(--cyan)">
         <div className="flex items-center gap-3">
           <span className="text-[var(--cyan)]">
@@ -52,8 +52,8 @@ export default function PlatformCards() {
           </div>
         </div>
         <p className="mt-4 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-          The macOS build is in active development with native accessibility automation. Join the
-          waitlist to get it first.
+          The macOS edition is on the way with the same voice-first execution. Join the waitlist to
+          get it first.
         </p>
         <ComingSoonBadge color="var(--purple)" />
       </GlassCard>
@@ -71,8 +71,7 @@ export default function PlatformCards() {
           </div>
         </div>
         <p className="mt-4 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-          A native Linux build is on the roadmap with Wayland and X11 support for power users and
-          servers.
+          A Linux edition is on the roadmap for power users and always-on business machines.
         </p>
         <ComingSoonBadge color="var(--green)" />
       </GlassCard>
