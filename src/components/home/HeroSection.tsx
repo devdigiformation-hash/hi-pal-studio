@@ -41,16 +41,6 @@ const NODES = [
   { icon: Wrench, label: "Tools", color: "#7DD3FC", angle: 200 },
 ];
 
-const ORBIT_COLORS = [
-  "#2FE0C8",
-  "#8B7CF6",
-  "#3B82F6",
-  "#A855F7",
-  "#C4B5FD",
-  "#F5A623",
-  "#F472B6",
-  "#7DD3FC",
-];
 
 
 const BADGES = ["500+ AI Skills", "115+ Built-in Tools", "Multi-Agent Execution", "Multi-MCP Ready"];
@@ -99,47 +89,6 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Layer B — rotating rings (desktop) */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-[72%] top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:block"
-      >
-        {[
-          { size: 600, stroke: "rgba(47,224,200,0.06)", dur: "80s", dir: "normal" },
-          { size: 420, stroke: "rgba(139,124,246,0.05)", dur: "60s", dir: "reverse" },
-          { size: 280, stroke: "rgba(245,166,35,0.04)", dur: "40s", dir: "normal" },
-        ].map((r) => (
-          <svg
-            key={r.size}
-            width={r.size}
-            height={r.size}
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-            style={{ animation: `rotateSlow ${r.dur} linear infinite ${r.dir}` }}
-          >
-            <circle
-              cx={r.size / 2}
-              cy={r.size / 2}
-              r={r.size / 2 - 2}
-              fill="none"
-              stroke={r.stroke}
-              strokeWidth="1"
-            />
-          </svg>
-        ))}
-
-        {/* Layer C — orbit dots */}
-        {ORBIT_COLORS.map((color, i) => (
-          <span
-            key={color}
-            className="absolute left-1/2 top-1/2 h-2 w-2 rounded-full"
-            style={{
-              background: color,
-              boxShadow: `0 0 12px ${color}`,
-              animation: `orbit ${26 + i}s linear ${i * 0.8}s infinite`,
-            }}
-          />
-        ))}
-      </div>
 
       <div className="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-16 lg:grid-cols-[55%_45%]">
         {/* LEFT */}
