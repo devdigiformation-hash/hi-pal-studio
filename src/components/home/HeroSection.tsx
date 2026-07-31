@@ -170,6 +170,15 @@ export default function HeroSection() {
             </GhostButton>
           </motion.div>
 
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9 }}
+            className="mt-7 max-w-[620px]"
+          >
+            <PlatformStrip />
+          </motion.div>
+
           <div className="mt-6 flex flex-wrap gap-3">
             {BADGES.map((badge, i) => (
               <motion.div
