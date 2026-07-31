@@ -49,7 +49,6 @@ const BADGES = ["500+ AI Skills", "115+ Built-in Tools", "Multi-Agent Execution"
 function Typewriter() {
   const [index, setIndex] = useState(0);
   const [chars, setChars] = useState(0);
-  const [platformsRevealed, setPlatformsRevealed] = useState(false);
 
   useEffect(() => {
     const word = CYCLE[index];
