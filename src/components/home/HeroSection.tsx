@@ -216,7 +216,7 @@ export default function HeroSection() {
             className="mt-10 flex flex-wrap items-center gap-4"
           >
             <CyanButton size="lg" icon={<WindowsIcon size={17} />}>
-              Download for Windows
+              Download for Windows 10/11
             </CyanButton>
             <GhostButton size="lg" icon={<Play size={17} />}>
               Watch 60s Product Tour

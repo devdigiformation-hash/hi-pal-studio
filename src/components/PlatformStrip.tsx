@@ -13,7 +13,7 @@ const SOON = [
 
 export default function PlatformStrip() {
   return (
-    <div className="flex flex-wrap items-center gap-3">
+    <div className="flex flex-nowrap items-center gap-2">
       {SOON.map((item, i) => (
         <motion.div
           key={item.label}
@@ -23,7 +23,7 @@ export default function PlatformStrip() {
         >
           <div className="relative">
             <CyanButton
-              size="md"
+              size="sm"
               tone={item.tone}
               icon={item.icon}
               disabled
@@ -32,7 +32,7 @@ export default function PlatformStrip() {
               Download for {item.label}
             </CyanButton>
             <span
-              className="pointer-events-none absolute -top-2 -right-2 rounded-full border px-2 py-[2px] font-mono text-[9px] uppercase tracking-[0.14em] backdrop-blur-md"
+              className="pointer-events-none absolute -top-1.5 -right-1.5 rounded-full border px-1.5 py-[1px] font-mono text-[8px] uppercase tracking-[0.14em] backdrop-blur-md"
               style={{
                 color: `rgb(${item.tone})`,
                 borderColor: `rgba(${item.tone},0.4)`,
