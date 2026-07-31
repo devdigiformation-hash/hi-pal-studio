@@ -36,15 +36,6 @@ export default function GlobalBackground() {
       {/* Layer 4 — animated constellation network */}
       <HoloNetwork />
 
-      {/* Layer 5 — descending holographic scan sweep */}
-      <div
-        className="animate-holo-scan absolute inset-x-0 top-0 h-[220px]"
-        style={{
-          background:
-            "linear-gradient(to bottom, transparent, rgba(120,215,255,0.05) 45%, rgba(160,235,255,0.16) 72%, rgba(180,245,255,0.30) 78%, rgba(120,215,255,0.05) 82%, transparent)",
-        }}
-      />
-
       {/* Layer 6 — grain */}
       <svg className="animate-noise-flicker absolute inset-0 h-full w-full opacity-[0.03]">
         <filter id="digibiz-noise">
