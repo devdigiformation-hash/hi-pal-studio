@@ -88,14 +88,7 @@ function RotatingPhrase() {
       <motion.span
         key={i}
         aria-live="polite"
-        className="col-start-1 row-start-1"
-        style={{
-          backgroundImage: "linear-gradient(100deg, #2FE0C8, #8B7CF6)",
-          WebkitBackgroundClip: "text",
-          backgroundClip: "text",
-          color: "transparent",
-          WebkitTextFillColor: "transparent",
-        }}
+        className="col-start-1 row-start-1 bg-gradient-to-r from-[#2FE0C8] to-[#8B7CF6] bg-clip-text text-transparent"
         initial={{ opacity: 0, y: "0.35em" }}
         animate={out ? { opacity: 0, y: "-0.3em" } : { opacity: 1, y: 0 }}
         transition={{ duration: out ? 0.3 : 0.45, ease: [0.22, 1, 0.36, 1] }}
