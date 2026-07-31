@@ -70,7 +70,15 @@ function RotatingPhrase() {
   const phrase = PHRASES[i];
 
   return (
-    <span className="relative inline-block align-top">
+    <span
+      className="relative inline-block align-top"
+      style={{
+        backgroundImage: "linear-gradient(100deg, #2FE0C8, #8B7CF6)",
+        WebkitBackgroundClip: "text",
+        backgroundClip: "text",
+        color: "transparent",
+      }}
+    >
       <AnimatePresence mode="wait">
         <motion.span key={phrase} className="inline-block">
           {phrase.split("").map((ch, idx) => (
@@ -87,9 +95,7 @@ function RotatingPhrase() {
               }}
               style={{ transformOrigin: "50% 100%" }}
             >
-              <GradientText from="#2FE0C8" to="#8B7CF6">
-                {ch === " " ? "\u00A0" : ch}
-              </GradientText>
+              {ch === " " ? "\u00A0" : ch}
             </motion.span>
           ))}
         </motion.span>
