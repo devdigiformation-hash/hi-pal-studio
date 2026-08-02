@@ -254,6 +254,15 @@ export default function HeroSection() {
               <JupiterGlobe size={260} />
             </div>
             <div className="relative z-10 text-center">
+              <div
+                aria-hidden
+                className="pointer-events-none absolute left-1/2 top-1/2 h-[110px] w-[190px] -translate-x-1/2 -translate-y-1/2 rounded-full"
+                style={{
+                  background:
+                    "radial-gradient(ellipse at center, rgba(6,10,16,0.9), rgba(6,10,16,0.55) 55%, transparent 78%)",
+                }}
+              />
+              <div className="relative">
               <div className="font-code text-[12px] tracking-[0.18em] text-[var(--text-primary)]">
                 DIGI BIZ OS
               </div>
@@ -262,6 +271,7 @@ export default function HeroSection() {
                 <span className="font-code text-[10px] tracking-[0.16em] text-[var(--text-muted)]">
                   OPERATIONAL
                 </span>
+              </div>
               </div>
             </div>
           </div>
