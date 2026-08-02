@@ -249,10 +249,9 @@ export default function HeroSection() {
         {/* RIGHT — operations center */}
         {/* Compact globe for mobile + tablet */}
         <div className="flex items-center justify-center lg:hidden">
-          <div className="relative flex h-[240px] w-[240px] items-center justify-center sm:h-[300px] sm:w-[300px]">
+          <div className="relative flex h-[260px] w-[260px] items-center justify-center">
             <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-              <JupiterGlobe size={240} className="sm:hidden" />
-              <JupiterGlobe size={300} className="hidden sm:block" />
+              <JupiterGlobe size={260} />
             </div>
             <div className="relative z-10 text-center">
               <div className="font-code text-[12px] tracking-[0.18em] text-[var(--text-primary)]">
