@@ -8,7 +8,7 @@ export default function GlobalBackground() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 90% 70% at 15% 0%, rgba(30,110,170,0.30), transparent 62%), radial-gradient(ellipse 70% 60% at 85% 15%, rgba(47,224,200,0.10), transparent 60%), radial-gradient(ellipse 80% 60% at 60% 110%, rgba(139,124,246,0.10), transparent 65%), #04070E",
+            "radial-gradient(ellipse 90% 70% at 15% 0%, rgba(30,110,170,0.18), transparent 62%), radial-gradient(ellipse 70% 60% at 85% 15%, rgba(47,224,200,0.06), transparent 60%), radial-gradient(ellipse 80% 60% at 60% 110%, rgba(139,124,246,0.06), transparent 65%), #04070E",
         }}
       />
 
@@ -17,17 +17,17 @@ export default function GlobalBackground() {
         className="animate-holo-drift absolute -inset-[20%]"
         style={{
           background:
-            "radial-gradient(circle at 30% 40%, rgba(60,150,220,0.14), transparent 45%), radial-gradient(circle at 70% 65%, rgba(47,224,200,0.09), transparent 45%)",
+            "radial-gradient(circle at 30% 40%, rgba(60,150,220,0.08), transparent 45%), radial-gradient(circle at 70% 65%, rgba(47,224,200,0.05), transparent 45%)",
           filter: "blur(40px)",
         }}
       />
 
       {/* Layer 3 — holographic grid */}
       <div
-        className="absolute inset-0 opacity-[0.22]"
+        className="absolute inset-0 opacity-[0.14]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(120,200,235,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(120,200,235,0.10) 1px, transparent 1px)",
+            "linear-gradient(rgba(120,200,235,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(120,200,235,0.08) 1px, transparent 1px)",
           backgroundSize: "72px 72px",
           maskImage: "radial-gradient(ellipse 75% 65% at 50% 40%, black, transparent 80%)",
         }}
