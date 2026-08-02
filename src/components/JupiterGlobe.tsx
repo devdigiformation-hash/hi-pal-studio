@@ -315,7 +315,6 @@ export default function JupiterGlobe({
         style={{
           width: size,
           height: size,
-          borderRadius: "9999px",
           transition: "filter 0.5s ease",
         }}
       >
@@ -327,7 +326,6 @@ export default function JupiterGlobe({
             width: size,
             height: size,
             display: "block",
-            borderRadius: "9999px",
           }}
         />
       </div>
