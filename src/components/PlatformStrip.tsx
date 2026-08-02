@@ -13,7 +13,7 @@ const SOON = [
 
 export default function PlatformStrip() {
   return (
-    <div className="grid w-full max-w-[560px] grid-cols-3 items-stretch gap-2 sm:flex sm:flex-wrap sm:items-center sm:gap-3">
+    <div className="grid w-full max-w-[560px] grid-cols-3 items-stretch gap-2 sm:flex sm:max-w-none sm:flex-wrap sm:items-center sm:gap-3">
       {SOON.map((item, i) => (
         <motion.div
           key={item.label}
