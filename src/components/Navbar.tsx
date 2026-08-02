@@ -61,13 +61,13 @@ export default function Navbar() {
               alt="DIGI BIZ OS"
               className="h-8 w-8 rounded-full transition-all duration-300 group-hover:animate-logo-blink md:h-9 md:w-9"
             />
-            <span className="font-display text-[15px] font-bold tracking-tight text-[var(--text-primary)]">
+            <span className="font-display text-[13.5px] font-bold tracking-tight text-[var(--text-primary)] md:text-[14px]">
               DIGI BIZ OS
             </span>
             <ActivePulse />
           </Link>
 
-          <div className="hidden items-center gap-7 lg:flex">
+          <div className="hidden items-center gap-5 lg:flex xl:gap-6">
             {NAV_LINKS.map((link) => {
               const active = pathname === link.to;
               return (
@@ -75,7 +75,7 @@ export default function Navbar() {
                   key={link.label}
                   to={link.to}
                   className={cn(
-                    "group relative font-display text-[14px] font-medium transition-colors duration-300",
+                    "group relative font-display text-[12.5px] font-medium tracking-tight transition-colors duration-300 xl:text-[13px]",
                     active
                       ? "text-[var(--cyan)]"
                       : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]",
@@ -136,7 +136,7 @@ export default function Navbar() {
                 key={link.label}
                 to={link.to}
                 onClick={() => setOpen(false)}
-                className="font-display text-[32px] font-bold text-[var(--text-primary)] transition-all duration-300 hover:translate-x-2 hover:text-[var(--cyan)]"
+                className="font-display text-[22px] font-bold text-[var(--text-primary)] transition-all duration-300 hover:translate-x-2 hover:text-[var(--cyan)]"
               >
                 {link.label}
               </Link>
