@@ -125,7 +125,7 @@ function Typewriter() {
 }
 
 export default function HeroSection() {
-  const radius = 232;
+  const radius = 200;
 
   return (
     <section
@@ -258,7 +258,7 @@ export default function HeroSection() {
               {NODES.map((n, i) => {
                 const rad = (n.angle * Math.PI) / 180;
                 const Icon = n.icon;
-                const r = 132;
+                const r = 115;
                 return (
                   <div
                     key={`m-${n.label}`}
