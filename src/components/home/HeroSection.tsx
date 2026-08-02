@@ -1,17 +1,7 @@
 import JupiterGlobe from "@/components/JupiterGlobe";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import {
-  Brain,
-  Camera,
-  Cpu,
-  Monitor,
-  Play,
-  Smartphone,
-  Sparkles,
-  Users,
-  Wrench,
-} from "lucide-react";
+import { Play } from "lucide-react";
 import CyanButton from "@/components/CyanButton";
 import { WindowsIcon } from "@/components/PlatformIcons";
 import GhostButton from "@/components/GhostButton";
