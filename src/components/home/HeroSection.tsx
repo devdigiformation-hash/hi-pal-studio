@@ -34,19 +34,6 @@ const PHRASES = [
   "Speed of Ambition.",
 ];
 
-const NODES = [
-  { icon: Brain, label: "Memory", color: "#8B7CF6", angle: -115 },
-  { icon: Sparkles, label: "Soul", color: "#2FE0C8", angle: -65 },
-  { icon: Cpu, label: "Skills", color: "#3B82F6", angle: -20 },
-  { icon: Smartphone, label: "Mobile", color: "#A855F7", angle: 20 },
-  { icon: Camera, label: "Camera", color: "#C4B5FD", angle: 65 },
-  { icon: Monitor, label: "Screen", color: "#F5A623", angle: 115 },
-  { icon: Users, label: "Agent", color: "#F472B6", angle: 160 },
-  { icon: Wrench, label: "Tools", color: "#7DD3FC", angle: 200 },
-];
-
-
-
 const BADGES = ["500+ AI Skills", "115+ Built-in Tools", "Multi-Agent Execution", "Multi-MCP Ready"];
 
 function RotatingPhrase() {
