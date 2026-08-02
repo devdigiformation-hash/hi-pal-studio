@@ -48,12 +48,34 @@ export default function Footer() {
           <p className="mt-4 max-w-[280px] font-body text-[13px] leading-[1.7] text-[var(--text-muted)]">
             Digiformation Ltd — UK company formation, compliance, and digital business solutions.
           </p>
-          <div className="mt-5">
-            <MonoBadge>
-              <ActivePulse />
-              Parent Company
-            </MonoBadge>
-          </div>
+          <ul className="mt-5 space-y-3">
+            <li>
+              <a
+                href="mailto:info@digiformation.co.uk"
+                className="inline-flex items-center gap-2 font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
+              >
+                <Mail size={15} /> info@digiformation.co.uk
+              </a>
+            </li>
+            <li>
+              <a
+                href="tel:+923164467464"
+                className="inline-flex items-center gap-2 font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
+              >
+                <Phone size={15} /> +92 316 446 7464
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.digiformation.co.uk/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
+              >
+                <Globe size={15} /> www.digiformation.co.uk
+              </a>
+            </li>
+          </ul>
         </div>
 
         <div>
