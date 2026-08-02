@@ -22,8 +22,8 @@ export default function TelemetryTicker() {
         borderBottom: "1px solid var(--border-subtle)",
       }}
     >
-      <div className="marquee-mask flex h-full w-full items-center overflow-hidden">
-        <div className="animate-marquee flex w-max shrink-0 items-center group-hover:[animation-play-state:paused]">
+      <div className="marquee-mask relative h-full w-full overflow-hidden">
+        <div className="animate-marquee absolute left-0 top-0 flex h-full w-max shrink-0 items-center group-hover:[animation-play-state:paused]">
           {loop.map((item, i) => (
             <span key={i} className="flex items-center whitespace-nowrap">
               <span className="font-display text-[13px] font-semibold text-[var(--text-secondary)]">
