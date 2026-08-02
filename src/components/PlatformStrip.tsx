@@ -21,13 +21,13 @@ export default function PlatformStrip() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.95 + i * 0.12, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="relative w-full sm:w-auto">
+          <div className="relative w-full min-w-0 sm:w-auto">
             <CyanButton
               size="sm"
               tone={item.tone}
               icon={item.icon}
               disabled
-              className="w-full cursor-not-allowed sm:w-auto"
+              className="w-full min-w-0 cursor-not-allowed px-2 text-[11px] sm:w-auto sm:px-5 sm:text-[13px]"
             >
               <span className="hidden sm:inline">Download for </span>
               {item.label}
