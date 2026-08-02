@@ -125,7 +125,7 @@ function Typewriter() {
 }
 
 export default function HeroSection() {
-  const radius = 150;
+  const radius = 232;
 
   return (
     <section
@@ -292,7 +292,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="relative hidden h-[520px] w-full min-w-0 items-center justify-center self-start overflow-hidden lg:flex">
+        <div className="relative hidden h-[560px] items-center justify-center self-start lg:flex">
           {/* Globe */}
           <div
             className="relative flex h-[200px] w-[200px] items-center justify-center rounded-full"
@@ -302,12 +302,12 @@ export default function HeroSection() {
             }}
           >
             <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-              <JupiterGlobe size={240} />
+              <JupiterGlobe size={320} />
             </div>
           </div>
 
           {/* Nodes — orbiting like a solar system */}
-          <div className="animate-orbit-spin pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="animate-orbit-spin pointer-events-none absolute inset-0">
           {NODES.map((n, i) => {
             const rad = (n.angle * Math.PI) / 180;
             const Icon = n.icon;
