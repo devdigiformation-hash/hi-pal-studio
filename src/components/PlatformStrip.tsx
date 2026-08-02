@@ -26,7 +26,8 @@ export default function PlatformStrip() {
               size="sm"
               tone={item.tone}
               icon={item.icon}
-              disabled
+              aria-disabled
+              onClick={(e) => e.preventDefault()}
               className="w-full min-w-0 cursor-not-allowed px-2 text-[11px] sm:w-auto sm:px-5 sm:text-[13px]"
             >
               <span className="hidden sm:inline">Download for </span>
