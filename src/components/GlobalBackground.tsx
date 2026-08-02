@@ -38,8 +38,8 @@ export default function GlobalBackground() {
 
       {/* Layer 5 — soft blur veil over the animated layers */}
       <div
-        className="absolute inset-0 backdrop-blur-[2.5px]"
-        style={{ background: "rgba(4,7,14,0.10)" }}
+        className="absolute inset-0 backdrop-blur-[1px]"
+        style={{ background: "rgba(4,7,14,0.05)" }}
       />
 
       {/* Layer 6 — grain */}
