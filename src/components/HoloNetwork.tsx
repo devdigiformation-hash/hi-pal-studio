@@ -57,8 +57,8 @@ export default function HoloNetwork() {
           const d = Math.hypot(dx, dy);
           if (d > max) continue;
           const t = 1 - d / max;
-          ctx.strokeStyle = `rgba(120, 205, 235, ${t * 0.38})`;
-          ctx.lineWidth = 0.6;
+          ctx.strokeStyle = `rgba(120, 205, 235, ${t * 0.22})`;
+          ctx.lineWidth = 0.55;
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
@@ -68,7 +68,7 @@ export default function HoloNetwork() {
 
       // nodes
       for (const n of nodes) {
-        ctx.fillStyle = "rgba(170, 235, 250, 0.85)";
+        ctx.fillStyle = "rgba(170, 235, 250, 0.55)";
         ctx.beginPath();
         ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
         ctx.fill();
