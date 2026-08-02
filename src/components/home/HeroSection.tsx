@@ -130,7 +130,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[92vh] items-center overflow-hidden px-6 py-24 md:px-10"
+      className="relative flex items-center overflow-hidden px-5 py-16 sm:px-6 md:px-10 md:py-20 lg:min-h-[92vh] lg:py-24"
       style={{ background: "transparent" }}
     >
       {/* Layer A — radial glow mesh */}
@@ -144,7 +144,7 @@ export default function HeroSection() {
       />
 
 
-      <div className="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-16 lg:grid-cols-[55%_45%]">
+      <div className="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-10 md:gap-12 lg:grid-cols-[55%_45%] lg:gap-16">
         {/* LEFT */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -232,7 +232,7 @@ export default function HeroSection() {
             <PlatformStrip />
           </motion.div>
 
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap gap-2 sm:gap-3">
             {BADGES.map((badge, i) => (
               <motion.div
                 key={badge}
@@ -247,6 +247,27 @@ export default function HeroSection() {
         </motion.div>
 
         {/* RIGHT — operations center */}
+        {/* Compact globe for mobile + tablet */}
+        <div className="flex items-center justify-center lg:hidden">
+          <div className="relative flex h-[240px] w-[240px] items-center justify-center sm:h-[300px] sm:w-[300px]">
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+              <JupiterGlobe size={240} className="sm:hidden" />
+              <JupiterGlobe size={300} className="hidden sm:block" />
+            </div>
+            <div className="relative z-10 text-center">
+              <div className="font-code text-[12px] tracking-[0.18em] text-[var(--text-primary)]">
+                DIGI BIZ OS
+              </div>
+              <div className="mt-2 flex items-center justify-center gap-2">
+                <ActivePulse />
+                <span className="font-code text-[10px] tracking-[0.16em] text-[var(--text-muted)]">
+                  OPERATIONAL
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="relative hidden h-[440px] items-center justify-center self-start lg:flex">
           {/* Globe */}
           <div
