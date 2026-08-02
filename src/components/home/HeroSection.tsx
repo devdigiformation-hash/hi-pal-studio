@@ -125,7 +125,7 @@ function Typewriter() {
 }
 
 export default function HeroSection() {
-  const radius = 175;
+  const radius = 150;
 
   return (
     <section
