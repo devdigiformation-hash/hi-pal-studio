@@ -292,7 +292,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="relative hidden h-[560px] items-center justify-center self-start lg:flex">
+        <div className="relative hidden h-[560px] items-center justify-center self-start lg:flex lg:-ml-8">
           {/* Globe */}
           <div className="pointer-events-none relative flex items-center justify-center">
             <JupiterGlobe size={320} />
