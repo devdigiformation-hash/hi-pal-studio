@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Github, Globe, Linkedin, Mail, MessageCircle, Phone, Twitter } from "lucide-react";
 import logoAsset from "@/assets/logo.png.asset.json";
+import digiformationLogo from "@/assets/digiformation-logo.png.asset.json";
 import ActivePulse from "./ActivePulse";
 import EyebrowLabel from "./EyebrowLabel";
 import MonoBadge from "./MonoBadge";
@@ -38,21 +39,19 @@ export default function Footer() {
       <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-6 py-16 sm:grid-cols-2 md:px-10 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2">
-            <img src={logoAsset.url} alt="DIGI BIZ OS" className="h-9 w-9 rounded-full" />
-            <span className="font-display text-[16px] font-bold text-[var(--text-primary)]">
-              DIGI BIZ OS
-            </span>
+            <img
+              src={digiformationLogo.url}
+              alt="Digiformation Ltd"
+              className="h-10 w-auto object-contain"
+            />
           </div>
-          <p className="mt-4 font-display text-[14px] italic text-[var(--text-muted)]">
-            The Autonomous Desktop AI OS
-          </p>
-          <p className="mt-3 max-w-[280px] font-body text-[13px] leading-[1.7] text-[var(--text-muted)]">
-            DIGI BIZ OS transforms your desktop into a voice-first, multi-agent AI operating system.
+          <p className="mt-4 max-w-[280px] font-body text-[13px] leading-[1.7] text-[var(--text-muted)]">
+            Digiformation Ltd — UK company formation, compliance, and digital business solutions.
           </p>
           <div className="mt-5">
             <MonoBadge>
               <ActivePulse />
-              v2.5 — Now Available
+              Parent Company
             </MonoBadge>
           </div>
         </div>
@@ -92,35 +91,18 @@ export default function Footer() {
         </div>
 
         <div>
-          <EyebrowLabel text="Contact Digiformation" color="var(--amber)" />
-          <ul className="mt-5 space-y-3">
-            <li>
-              <a
-                href="mailto:info@digiformation.co.uk"
-                className="inline-flex items-center gap-2 font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
-              >
-                <Mail size={15} /> info@digiformation.co.uk
-              </a>
-            </li>
-            <li>
-              <a
-                href="tel:+923164467464"
-                className="inline-flex items-center gap-2 font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
-              >
-                <Phone size={15} /> +92 316 446 7464
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.digiformation.co.uk/"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
-              >
-                <Globe size={15} /> www.digiformation.co.uk
-              </a>
-            </li>
-          </ul>
+          <div className="flex items-center gap-2">
+            <img src={logoAsset.url} alt="DIGI BIZ OS" className="h-9 w-9 rounded-full" />
+            <span className="font-display text-[16px] font-bold text-[var(--text-primary)]">
+              DIGI BIZ OS
+            </span>
+          </div>
+          <p className="mt-4 font-display text-[14px] italic text-[var(--text-muted)]">
+            The Autonomous Desktop AI OS
+          </p>
+          <p className="mt-3 max-w-[280px] font-body text-[13px] leading-[1.7] text-[var(--text-muted)]">
+            DIGI BIZ OS transforms your desktop into a voice-first, multi-agent AI operating system.
+          </p>
           <div className="mt-5 flex flex-wrap gap-3">
             {SOCIALS.map(({ label, icon: Icon }) => (
               <a
