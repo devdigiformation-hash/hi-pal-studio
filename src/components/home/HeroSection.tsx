@@ -249,21 +249,57 @@ export default function HeroSection() {
         {/* RIGHT — operations center */}
         {/* Compact globe for mobile + tablet */}
         <div className="flex items-center justify-center lg:hidden">
-          <div className="relative flex h-[260px] w-[260px] items-center justify-center">
+          <div className="relative flex h-[340px] w-[340px] items-center justify-center sm:h-[400px] sm:w-[400px]">
             <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-              <JupiterGlobe size={260} />
+              <JupiterGlobe size={170} />
+            </div>
+            {/* Orbiting nodes — same solar-system design as desktop */}
+            <div className="animate-orbit-spin pointer-events-none absolute inset-0">
+              {NODES.map((n, i) => {
+                const rad = (n.angle * Math.PI) / 180;
+                const Icon = n.icon;
+                const r = 132;
+                return (
+                  <div
+                    key={`m-${n.label}`}
+                    className="absolute"
+                    style={{
+                      left: `calc(50% + ${Math.cos(rad) * r}px)`,
+                      top: `calc(50% + ${Math.sin(rad) * r}px)`,
+                      transform: "translate(-50%,-50%)",
+                    }}
+                  >
+                    <div className="animate-orbit-spin-rev flex flex-col items-center gap-1">
+                      <div
+                        className="animate-float flex h-9 w-9 items-center justify-center rounded-full border backdrop-blur-xl"
+                        style={{
+                          background: "var(--bg-glass)",
+                          borderColor: "var(--border-glass)",
+                          boxShadow: `0 0 18px ${n.color}33`,
+                          animationDelay: `${i * 0.4}s`,
+                        }}
+                      >
+                        <Icon size={15} color={n.color} strokeWidth={1.6} />
+                      </div>
+                      <span className="font-display text-[9px] font-medium text-[var(--text-secondary)]">
+                        {n.label}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
             <div className="relative z-10 text-center">
               <div
                 aria-hidden
-                className="pointer-events-none absolute left-1/2 top-1/2 h-[110px] w-[190px] -translate-x-1/2 -translate-y-1/2 rounded-full"
+                className="pointer-events-none absolute left-1/2 top-1/2 h-[90px] w-[150px] -translate-x-1/2 -translate-y-1/2 rounded-full"
                 style={{
                   background:
                     "radial-gradient(ellipse at center, rgba(6,10,16,0.9), rgba(6,10,16,0.55) 55%, transparent 78%)",
                 }}
               />
               <div className="relative">
-              <div className="font-code text-[12px] tracking-[0.18em] text-[var(--text-primary)]">
+              <div className="font-code text-[11px] tracking-[0.18em] text-[var(--text-primary)]">
                 DIGI BIZ OS
               </div>
               <div className="mt-2 flex items-center justify-center gap-2">
