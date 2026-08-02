@@ -36,12 +36,6 @@ export default function GlobalBackground() {
       {/* Layer 4 — animated constellation network */}
       <HoloNetwork />
 
-      {/* Layer 5 — soft blur veil over the animated layers */}
-      <div
-        className="absolute inset-0 backdrop-blur-[1px]"
-        style={{ background: "rgba(4,7,14,0.05)" }}
-      />
-
       {/* Layer 6 — grain */}
       <svg className="animate-noise-flicker absolute inset-0 h-full w-full opacity-[0.03]">
         <filter id="digibiz-noise">
