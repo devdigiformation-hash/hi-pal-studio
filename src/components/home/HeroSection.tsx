@@ -102,8 +102,6 @@ function Typewriter() {
 }
 
 export default function HeroSection() {
-  const radius = 232;
-
   return (
     <section
       id="hero"
