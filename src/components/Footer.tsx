@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Github, Globe, Linkedin, Mail, MessageCircle, Phone, Twitter } from "lucide-react";
 import logoAsset from "@/assets/logo.png.asset.json";
 import digiformationLogo from "@/assets/digiformation-logo.png.asset.json";
+import EyebrowLabel from "./EyebrowLabel";
 
 const PRODUCT = [
   { label: "Product", to: "/" },
