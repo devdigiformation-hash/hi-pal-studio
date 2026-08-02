@@ -1,7 +1,17 @@
 import JupiterGlobe from "@/components/JupiterGlobe";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Play } from "lucide-react";
+import {
+  Brain,
+  Camera,
+  Cpu,
+  Monitor,
+  Play,
+  Smartphone,
+  Sparkles,
+  Users,
+  Wrench,
+} from "lucide-react";
 import CyanButton from "@/components/CyanButton";
 import { WindowsIcon } from "@/components/PlatformIcons";
 import GhostButton from "@/components/GhostButton";
@@ -33,6 +43,19 @@ const PHRASES = [
   "Speed of Execution.",
   "Speed of Ambition.",
 ];
+
+const NODES = [
+  { icon: Brain, label: "Memory", color: "#8B7CF6", angle: -115 },
+  { icon: Sparkles, label: "Soul", color: "#2FE0C8", angle: -65 },
+  { icon: Cpu, label: "Skills", color: "#3B82F6", angle: -20 },
+  { icon: Smartphone, label: "Mobile", color: "#A855F7", angle: 20 },
+  { icon: Camera, label: "Camera", color: "#C4B5FD", angle: 65 },
+  { icon: Monitor, label: "Screen", color: "#F5A623", angle: 115 },
+  { icon: Users, label: "Agent", color: "#F472B6", angle: 160 },
+  { icon: Wrench, label: "Tools", color: "#7DD3FC", angle: 200 },
+];
+
+
 
 const BADGES = ["500+ AI Skills", "115+ Built-in Tools", "Multi-Agent Execution", "Multi-MCP Ready"];
 
@@ -102,6 +125,8 @@ function Typewriter() {
 }
 
 export default function HeroSection() {
+  const radius = 232;
+
   return (
     <section
       id="hero"
@@ -221,24 +246,116 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
-        {/* RIGHT — Jupiter globe */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.92 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-          className="flex items-center justify-center lg:hidden"
-        >
-          <JupiterGlobe size={260} hideControls />
-        </motion.div>
+        {/* RIGHT — operations center */}
+        {/* Compact globe for mobile + tablet */}
+        <div className="flex items-center justify-center lg:hidden">
+          <div className="relative flex h-[340px] w-[340px] items-center justify-center sm:h-[400px] sm:w-[400px]">
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+              <JupiterGlobe size={170} />
+            </div>
+            {/* Orbiting nodes — same solar-system design as desktop */}
+            <div className="animate-orbit-spin pointer-events-none absolute inset-0">
+              {NODES.map((n, i) => {
+                const rad = (n.angle * Math.PI) / 180;
+                const Icon = n.icon;
+                const r = 132;
+                return (
+                  <div
+                    key={`m-${n.label}`}
+                    className="absolute"
+                    style={{
+                      left: `calc(50% + ${Math.cos(rad) * r}px)`,
+                      top: `calc(50% + ${Math.sin(rad) * r}px)`,
+                      transform: "translate(-50%,-50%)",
+                    }}
+                  >
+                    <div className="animate-orbit-spin-rev flex flex-col items-center gap-1">
+                      <div
+                        className="animate-float flex h-9 w-9 items-center justify-center rounded-full border backdrop-blur-xl"
+                        style={{
+                          background: "var(--bg-glass)",
+                          borderColor: "var(--border-glass)",
+                          boxShadow: `0 0 18px ${n.color}33`,
+                          animationDelay: `${i * 0.4}s`,
+                        }}
+                      >
+                        <Icon size={15} color={n.color} strokeWidth={1.6} />
+                      </div>
+                      <span className="font-display text-[9px] font-medium text-[var(--text-secondary)]">
+                        {n.label}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.92 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-          className="relative hidden items-center justify-center lg:-ml-8 lg:flex"
-        >
-          <JupiterGlobe size={340} hideControls />
-        </motion.div>
+        <div className="relative hidden h-[520px] items-center justify-center self-start lg:flex lg:-ml-8">
+          {/* Globe */}
+          <div className="pointer-events-none relative flex items-center justify-center">
+            <JupiterGlobe size={280} />
+          </div>
+
+          {/* Nodes — orbiting like a solar system */}
+          <div className="animate-orbit-spin pointer-events-none absolute inset-0">
+          {NODES.map((n, i) => {
+            const rad = (n.angle * Math.PI) / 180;
+            const Icon = n.icon;
+            return (
+              <motion.div
+                key={n.label}
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 + i * 0.12 }}
+                className="absolute"
+                style={{
+                  left: `calc(50% + ${Math.cos(rad) * radius}px)`,
+                  top: `calc(50% + ${Math.sin(rad) * radius}px)`,
+                  transform: "translate(-50%,-50%)",
+                }}
+              >
+                <div className="animate-orbit-spin-rev flex flex-col items-center gap-1">
+                <div
+                  className="animate-float flex h-14 w-14 items-center justify-center rounded-full border backdrop-blur-xl"
+                  style={{
+                    background: "var(--bg-glass)",
+                    borderColor: "var(--border-glass)",
+                    boxShadow: `0 0 26px ${n.color}33`,
+                    animationDelay: `${i * 0.4}s`,
+                  }}
+                >
+                  <Icon size={22} color={n.color} strokeWidth={1.6} />
+                </div>
+                <span className="font-display text-[11px] font-medium text-[var(--text-secondary)]">
+                  {n.label}
+                </span>
+                </div>
+              </motion.div>
+            );
+          })}
+          </div>
+
+          {/* Floating mini stat */}
+          <div
+            className="animate-float-updown absolute bottom-4 right-4 rounded-[var(--r-md)] border border-[var(--border-glass)] px-4 py-3 backdrop-blur-xl"
+            style={{ background: "var(--bg-glass)", boxShadow: "var(--shadow-glass)" }}
+          >
+            <div className="font-display text-[12px] font-semibold text-[var(--text-primary)]">
+              Agents Active
+            </div>
+            <div className="mt-1 flex items-center gap-2">
+              <span className="font-code text-[12px] text-[var(--cyan)]">10+ agents</span>
+              <span className="flex gap-1">
+                {[0, 1, 2].map((d) => (
+                  <ActivePulse key={d} size={6} />
+                ))}
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
