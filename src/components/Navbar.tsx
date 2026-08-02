@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { WindowsIcon } from "@/components/PlatformIcons";
-import logoClean from "@/assets/logo-clean.png";
+import logoAsset from "@/assets/logo.png.asset.json";
 import ActivePulse from "./ActivePulse";
 import CyanButton from "./CyanButton";
 import GhostButton from "./GhostButton";
@@ -57,7 +57,7 @@ export default function Navbar() {
         <nav className="mx-auto flex h-full max-w-[1440px] items-center justify-between gap-6 px-5 md:px-10">
           <Link to="/" className="group flex items-center gap-2">
             <img
-              src={logoClean}
+              src={logoAsset.url}
               alt="DIGI BIZ OS"
               className="h-8 w-8 rounded-full transition-all duration-300 group-hover:animate-logo-blink md:h-9 md:w-9"
             />
