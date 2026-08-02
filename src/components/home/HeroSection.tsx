@@ -125,7 +125,7 @@ function Typewriter() {
 }
 
 export default function HeroSection() {
-  const radius = 210;
+  const radius = 175;
 
   return (
     <section
@@ -292,7 +292,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="relative hidden h-[560px] w-full items-center justify-center self-start overflow-hidden lg:flex">
+        <div className="relative hidden h-[520px] w-full min-w-0 items-center justify-center self-start overflow-hidden lg:flex">
           {/* Globe */}
           <div
             className="relative flex h-[200px] w-[200px] items-center justify-center rounded-full"
@@ -302,7 +302,7 @@ export default function HeroSection() {
             }}
           >
             <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-              <JupiterGlobe size={320} />
+              <JupiterGlobe size={280} />
             </div>
           </div>
 
