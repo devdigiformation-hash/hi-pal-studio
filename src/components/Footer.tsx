@@ -2,9 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { Github, Globe, Linkedin, Mail, MessageCircle, Phone, Twitter } from "lucide-react";
 import logoAsset from "@/assets/logo.png.asset.json";
 import digiformationLogo from "@/assets/digiformation-logo.png.asset.json";
-import ActivePulse from "./ActivePulse";
-import EyebrowLabel from "./EyebrowLabel";
-import MonoBadge from "./MonoBadge";
 
 const PRODUCT = [
   { label: "Product", to: "/" },
