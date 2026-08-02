@@ -43,7 +43,7 @@ export default function CyanButton({
     >
       <span
         aria-hidden
-        className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 bg-white/20 blur-md group-hover:[animation:shimmerSweep_0.9s_ease-out]"
+        className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 bg-white/20 blur-md group-hover:[animation:shimmerSweep_1.2s_ease-out]"
       />
       {icon ? <span className="relative z-10 inline-flex">{icon}</span> : null}
       <span className="relative z-10">{children}</span>
