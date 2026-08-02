@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Github, Globe, Linkedin, Mail, MessageCircle, Phone, Twitter } from "lucide-react";
-import logoClean from "@/assets/logo-clean.png";
+import logoAsset from "@/assets/logo.png.asset.json";
 import ActivePulse from "./ActivePulse";
 import EyebrowLabel from "./EyebrowLabel";
 import MonoBadge from "./MonoBadge";

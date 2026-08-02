@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { WindowsIcon } from "@/components/PlatformIcons";
-import logoClean from "@/assets/logo-clean.png";
+import logoAsset from "@/assets/logo.png.asset.json";
 import ActivePulse from "./ActivePulse";
 import CyanButton from "./CyanButton";
 import GhostButton from "./GhostButton";
