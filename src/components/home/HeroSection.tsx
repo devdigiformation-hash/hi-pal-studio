@@ -294,16 +294,8 @@ export default function HeroSection() {
 
         <div className="relative hidden h-[560px] items-center justify-center self-start lg:flex">
           {/* Globe */}
-          <div
-            className="relative flex h-[200px] w-[200px] items-center justify-center rounded-full"
-            style={{
-              background: "radial-gradient(circle, rgba(47,224,200,0.08), transparent 70%)",
-              boxShadow: "0 0 0 1px rgba(47,224,200,0.1), 0 0 60px rgba(47,224,200,0.12)",
-            }}
-          >
-            <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-              <JupiterGlobe size={320} />
-            </div>
+          <div className="pointer-events-none relative flex items-center justify-center">
+            <JupiterGlobe size={320} />
           </div>
 
           {/* Nodes — orbiting like a solar system */}
