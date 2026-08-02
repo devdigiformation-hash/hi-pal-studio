@@ -307,12 +307,12 @@ body {
 /* ── SEGMENT 2 ADDITIONS ───────────────────────────────── */
 @keyframes marqueeLeft { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes liquidBorder { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-@keyframes floatUpDown { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+@keyframes floatUpDown { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
-@utility animate-marquee { animation: marqueeLeft 30s linear infinite; }
-@utility animate-float-updown { animation: floatUpDown 5s ease-in-out infinite; }
-@utility animate-draw-wire { stroke-dasharray: 300; animation: drawWire 2.4s ease-out forwards; }
-@utility animate-liquid-border { background-size: 300% 300%; animation: liquidBorder 4s ease infinite; }
+@utility animate-marquee { animation: marqueeLeft 45s linear infinite; }
+@utility animate-float-updown { animation: floatUpDown 7s ease-in-out infinite; }
+@utility animate-draw-wire { stroke-dasharray: 300; animation: drawWire 3.2s ease-out forwards; }
+@utility animate-liquid-border { background-size: 300% 300%; animation: liquidBorder 6s ease infinite; }
 
 .marquee-mask {
   mask-image: linear-gradient(to right, transparent, black 80px, black calc(100% - 80px), transparent);
