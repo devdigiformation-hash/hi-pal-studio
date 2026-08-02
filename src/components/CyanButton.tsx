@@ -10,9 +10,9 @@ interface CyanButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const sizes = {
-  sm: "px-5 py-2 text-[13px]",
-  md: "px-8 py-[14px] text-[15px]",
-  lg: "px-10 py-4 text-[17px]",
+  sm: "px-3.5 py-2 text-[12px] sm:px-5 sm:text-[13px]",
+  md: "px-6 py-3 text-[14px] sm:px-8 sm:py-[14px] sm:text-[15px]",
+  lg: "px-6 py-3.5 text-[15px] sm:px-10 sm:py-4 sm:text-[17px]",
 };
 
 export default function CyanButton({
@@ -27,7 +27,7 @@ export default function CyanButton({
     <button
       {...props}
       className={cn(
-        "group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap rounded-full font-display font-bold",
+        "group relative inline-flex max-w-full items-center justify-center gap-2 overflow-hidden whitespace-nowrap rounded-full font-display font-bold",
         "border backdrop-blur-xl transition-all duration-300 ease-out hover:text-[var(--text-primary)]",
         "hover:scale-[1.03] active:scale-[0.97]",
         sizes[size],
