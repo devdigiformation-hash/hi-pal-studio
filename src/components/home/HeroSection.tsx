@@ -125,7 +125,7 @@ function Typewriter() {
 }
 
 export default function HeroSection() {
-  const radius = 175;
+  const radius = 150;
 
   return (
     <section
@@ -302,7 +302,7 @@ export default function HeroSection() {
             }}
           >
             <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-              <JupiterGlobe size={280} />
+              <JupiterGlobe size={240} />
             </div>
           </div>
 
