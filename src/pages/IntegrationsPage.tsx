@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageSquare, Mail, MessageCircle, Globe2 } from "lucide-react";
+import { MessageSquare, Mail, MessageCircle, Globe2, Cpu } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
