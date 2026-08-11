@@ -8,6 +8,7 @@ import ActivePulse from "@/components/ActivePulse";
 import MiniHero from "@/components/inner/MiniHero";
 import TerminalBlock from "@/components/inner/TerminalBlock";
 import PageCTA from "@/components/inner/PageCTA";
+import GradientText from "@/components/GradientText";
 
 const WORKFLOWS = [
   { id: "Workflow A", steps: ["Voice", "Orchestrator", "5 agents", "Report"] },
@@ -55,8 +56,8 @@ export default function AgentTownPage() {
     >
       <MiniHero
         eyebrow="Multi-Agent Orchestration"
-        title="Multi Agents."
-        gradientTitle="One Command."
+        title="Your Voice."
+        gradientTitle="Their Mission."
         subtitle="Parallel autonomous execution at enterprise scale. Speak once. Your entire AI workforce mobilizes."
       />
 
@@ -65,7 +66,7 @@ export default function AgentTownPage() {
           <div>
             <EyebrowLabel text="Multi-Agent Architecture" />
             <h2 className="reveal-item delay-1 mt-4 font-display text-[30px] font-bold leading-[1.15] tracking-[-0.03em] text-[var(--text-primary)] md:text-[42px]">
-              Concurrent Multi-Agent Execution.
+              One Task. <GradientText>Ten Agents. Zero Chaos.</GradientText>
             </h2>
             <p className="reveal-item delay-2 mt-5 max-w-[560px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
               DIGI BIZ OS delegates complex work to multi specialised
