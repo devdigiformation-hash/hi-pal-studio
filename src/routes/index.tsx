@@ -55,6 +55,7 @@ function HomePage() {
       <LiveTrackingSection />
       <BuildYourOwn />
       <VisionShowcase />
+      <SourceCodeSection />
       <ComparisonMatrix />
       <UseCases />
       <SecuritySection />
