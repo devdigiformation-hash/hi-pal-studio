@@ -9,6 +9,8 @@ import MiniHero from "@/components/inner/MiniHero";
 import TerminalBlock from "@/components/inner/TerminalBlock";
 import PageCTA from "@/components/inner/PageCTA";
 import GradientText from "@/components/GradientText";
+import SoftwareShowcase from "@/components/home/SoftwareShowcase";
+import ModulesGrid from "@/components/home/ModulesGrid";
 
 const CONTROL_GROUPS = [
   { label: "Mouse", items: ["Click", "Double-Click", "Right-Click", "Drag", "Scroll"] },
@@ -166,6 +168,9 @@ export default function DesktopOSPage() {
           </div>
         </div>
       </SectionWrapper>
+
+      <SoftwareShowcase />
+      <ModulesGrid />
 
       <PageCTA
         title="One Voice. Total Desktop Domination."

@@ -12,6 +12,8 @@ import MiniHero from "@/components/inner/MiniHero";
 import CurrencySelector from "@/components/CurrencySelector";
 import { formatPrice, useCurrency } from "@/lib/currency";
 import { PLANS, type PlanId } from "@/lib/payment-config";
+import SourceCodeSection from "@/components/home/SourceCodeSection";
+import ComparisonMatrix from "@/components/home/ComparisonMatrix";
 
 const FAQS = [
   {
@@ -166,6 +168,9 @@ export default function PricingPage() {
           </div>
         </div>
       </SectionWrapper>
+
+      <SourceCodeSection />
+      <ComparisonMatrix />
 
       <SectionWrapper className="bg-[var(--bg-surface)]">
         <div className="mx-auto max-w-[860px]">
