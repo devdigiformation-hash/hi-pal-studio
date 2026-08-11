@@ -20,22 +20,22 @@ import MonoBadge from "@/components/MonoBadge";
 import ActivePulse from "@/components/ActivePulse";
 import GradientText from "@/components/GradientText";
 
-const HEADLINE = "Your Voice Is the".split(" ");
+const HEADLINE = "Control Your Business".split(" ");
 
 const CYCLE = [
-  "Just speak. It executes.",
+  "Control your PC with voice.",
+  "Automate your business with voice.",
+  "Run operations hands-free.",
+  "Deploy AI agents instantly.",
   "One command. Infinite output.",
-  "Your desktop obeys.",
-  "The future runs locally.",
-  "Work becomes effortless.",
 ];
 
 const PHRASES = [
-  "Operating System.",
-  "Competitive Edge.",
-  "New Workforce.",
-  "Empire Builder.",
-  "Revenue Engine.",
+  "With Voice.",
+  "With AI.",
+  "Hands-Free.",
+  "At Light Speed.",
+  "Around the Clock.",
 ];
 
 const NODES = [
@@ -156,7 +156,7 @@ export default function HeroSection() {
               className="font-display text-[12px] font-semibold uppercase text-[var(--cyan)]"
               style={{ letterSpacing: "0.16em" }}
             >
-              Live — Neural Engine Active
+              Live — Voice-Powered Business OS
             </span>
           </motion.div>
 
