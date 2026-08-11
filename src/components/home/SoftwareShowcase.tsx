@@ -5,9 +5,6 @@ import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GradientText from "@/components/GradientText";
 import shell from "@/assets/os-shell.png.asset.json";
-import sidebar from "@/assets/os-sidebar.png.asset.json";
-import graph from "@/assets/os-graph.png.asset.json";
-import transcript from "@/assets/os-transcript.png.asset.json";
 import runtime from "@/assets/os-runtime.png.asset.json";
 import liveTracking from "@/assets/os-live-tracking.png.asset.json";
 import digiAi from "@/assets/os-digi-ai.png.asset.json";
@@ -25,24 +22,6 @@ const SLIDES = [
     tag: "The Workspace",
     title: "One console. Voice, vision and agents.",
     body: "Core apps, intelligence, automation and connectivity — all inside a single dark-glass workspace you control by speaking.",
-  },
-  {
-    src: sidebar.url,
-    tag: "Core Apps",
-    title: "Digi AI · Code · Docs · Tools · Flow · Jobs",
-    body: "Live Tracking, intelligence apps, automation and connectivity grouped in one command rail — every module a spoken command away.",
-  },
-  {
-    src: graph.url,
-    tag: "Neural Graph",
-    title: "Memory, Soul, Skills and Mobile — wired live.",
-    body: "Watch context flow between memory, skills, camera, screen share, agents and tools while the assistant works.",
-  },
-  {
-    src: transcript.url,
-    tag: "Live Transcript",
-    title: "Bilingual conversation, captured in real time.",
-    body: "Every spoken instruction and reply streams into a searchable transcript — English and Urdu, side by side.",
   },
   {
     src: runtime.url,
