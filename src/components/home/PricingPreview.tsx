@@ -6,13 +6,16 @@ import MonoBadge from "@/components/MonoBadge";
 import CyanButton from "@/components/CyanButton";
 import GhostButton from "@/components/GhostButton";
 import GradientText from "@/components/GradientText";
+import CurrencySelector from "@/components/CurrencySelector";
+import { formatPrice, useCurrency } from "@/lib/currency";
 
 const TIERS = [
   {
     id: "lifetime" as const,
     badge: "Lifetime Access",
     name: "DIGI BIZ OS Lifetime",
-    price: "£50",
+    gbp: 50,
+    compareGbp: 99,
     note: "Pay once. Own it for life.",
     features: [
       "One-time payment — no subscription",
@@ -29,7 +32,8 @@ const TIERS = [
     id: "source_code" as const,
     badge: "Full Ownership",
     name: "Source Code Licence",
-    price: "£99",
+    gbp: 99,
+    compareGbp: 199,
     note: "Own the code. Automate your business A to Z.",
     features: [
       "Everything in Lifetime",
@@ -48,7 +52,8 @@ const TIERS = [
     id: "custom_build" as const,
     badge: "Most Popular",
     name: "Customised + Your Branding",
-    price: "£199",
+    gbp: 199,
+    compareGbp: 299,
     note: "White-label build with 400+ workflows.",
     features: [
       "Everything in Lifetime",
@@ -65,6 +70,8 @@ const TIERS = [
 ];
 
 export default function PricingPreview() {
+  const { code } = useCurrency();
+
   return (
     <SectionWrapper id="pricing">
       <div className="mx-auto max-w-[1280px]">
@@ -73,6 +80,9 @@ export default function PricingPreview() {
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
             Pay Once. <GradientText>Own the Future.</GradientText>
           </h2>
+          <div className="reveal-item delay-2 mt-6 flex justify-center">
+            <CurrencySelector />
+          </div>
         </div>
 
         <div className="mt-14 grid grid-cols-1 items-start gap-6 lg:grid-cols-3">
@@ -93,12 +103,25 @@ export default function PricingPreview() {
                 </h3>
                 <div className="mt-3 flex items-end gap-1">
                   <span className="font-display text-[44px] font-bold leading-none text-[var(--text-primary)]">
-                    {plan.price}
+                    {formatPrice(plan.gbp, code)}
                   </span>
                   <span className="font-body text-[13px] text-[var(--text-muted)]">
                     one-time
                   </span>
                 </div>
+                <div className="mt-2 flex items-center gap-2">
+                  <span className="font-body text-[14px] text-[var(--text-muted)] line-through">
+                    {formatPrice(plan.compareGbp, code)}
+                  </span>
+                  <span className="rounded-full border border-[var(--cyan-border)] px-2 py-0.5 font-mono text-[10.5px] uppercase tracking-[0.12em] text-[var(--cyan)]">
+                    Save {Math.round(((plan.compareGbp - plan.gbp) / plan.compareGbp) * 100)}%
+                  </span>
+                </div>
+                {code !== "PKR" ? (
+                  <div className="mt-1.5 font-mono text-[12px] text-[var(--text-muted)]">
+                    ≈ {formatPrice(plan.gbp, "PKR")} · ${formatPrice(plan.gbp, "USD").slice(1)}
+                  </div>
+                ) : null}
                 <p className="mt-3 font-body text-[14px] text-[var(--text-secondary)]">
                   {plan.note}
                 </p>
