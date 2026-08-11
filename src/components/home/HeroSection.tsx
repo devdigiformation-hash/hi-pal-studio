@@ -51,7 +51,7 @@ const NODES = [
 
 
 
-const BADGES = ["500+ AI Skills", "150+ Desktop Tools", "Multi-Agent Execution", "Multi-MCP Ready"];
+const BADGES = ["500+ AI Skills", "150+ Mixed Tools", "Multi-Agent Execution", "Multi-MCP Ready"];
 
 function RotatingPhrase() {
   const [i, setI] = useState(0);

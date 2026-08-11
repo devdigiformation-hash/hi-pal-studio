@@ -74,8 +74,8 @@ const MODULES: Module[] = [
   {
     icon: MousePointerClick,
     color: "var(--amber)",
-    title: "Desktop Tools",
-    badge: "150+ Desktop Tools",
+    title: "Mixed Tools",
+    badge: "150+ Mixed Tools",
     body: "Real machine control: folder analysis, screenshot understanding, bulk file operations and renames, clipboard, brightness, power and app control.",
     bullets: ["Mouse, keyboard & windows", "Bulk file ops and renames", "Local folder access"],
   },

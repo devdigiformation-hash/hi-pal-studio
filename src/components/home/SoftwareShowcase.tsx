@@ -51,7 +51,7 @@ const SLIDES = [
   },
   {
     src: digiDesktopTools.url,
-    tag: "Desktop Tools",
+    tag: "Mixed Tools",
     title: "150+ built-in tools that actually drive your machine.",
     body: "Folder analysis, screenshot understanding, bulk file operations and renames, clipboard, brightness, power and application control — real desktop automation, one switch each.",
   },

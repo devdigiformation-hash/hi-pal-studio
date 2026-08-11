@@ -6,7 +6,7 @@ const ITEMS = [
   "Memory · Soul · Skills",
   "Screen Sharing & Camera",
   "Multi Agents & Tools",
-  "150+ Desktop Tools",
+  "150+ Mixed Tools",
   "500+ AI Skills",
   "100+ Offline Utilities",
   "40+ MCP Servers",

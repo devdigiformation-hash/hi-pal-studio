@@ -34,7 +34,7 @@ const PILLARS: Pillar[] = [
     color: "var(--purple)",
     title: "Native Desktop Execution",
     body: "DIGI BIZ OS works your desktop the way you do — opening apps, clicking, typing, managing windows, bulk-renaming files and reading folders, all by voice.",
-    badge: "150+ Desktop Tools · 500+ AI Skills",
+    badge: "150+ Mixed Tools · 500+ AI Skills",
     bullets: [
       "Real mouse, keyboard & window control",
       "Bulk file operations, renames & folder analysis",
