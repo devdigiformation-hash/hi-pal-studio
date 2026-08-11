@@ -34,7 +34,7 @@ export default function PlatformStrip() {
               {item.label}
             </CyanButton>
             <span
-              className="pointer-events-none absolute -top-1.5 -right-1.5 rounded-full border px-1.5 py-[1px] font-mono text-[8px] uppercase tracking-[0.14em] backdrop-blur-md"
+              className="pointer-events-none absolute -top-1.5 right-0 rounded-full border px-1.5 py-[1px] font-mono text-[8px] uppercase tracking-[0.14em] backdrop-blur-md sm:-right-1.5"
               style={{
                 color: `rgb(${item.tone})`,
                 borderColor: `rgba(${item.tone},0.4)`,

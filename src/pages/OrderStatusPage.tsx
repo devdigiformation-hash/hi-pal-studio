@@ -7,7 +7,12 @@ import EyebrowLabel from "@/components/EyebrowLabel";
 import MonoBadge from "@/components/MonoBadge";
 import CyanButton from "@/components/CyanButton";
 import { getOrderStatus } from "@/lib/orders.functions";
-import { WHATSAPP_NUMBER, SUPPORT_EMAIL, formatAmount } from "@/lib/payment-config";
+import {
+  WHATSAPP_NUMBER,
+  SUPPORT_EMAIL,
+  formatAmount,
+  PAYMENT_METHODS,
+} from "@/lib/payment-config";
 
 type OrderRow = {
   order_ref: string;
@@ -105,7 +110,11 @@ export default function OrderStatusPage({ orderRef }: { orderRef: string }) {
                     "Amount",
                     formatAmount(Number(order.amount), order.currency as "PKR" | "GBP" | "USD"),
                   ],
-                  ["Method", order.payment_method],
+                  [
+                    "Method",
+                    PAYMENT_METHODS.find((m) => m.id === order.payment_method)?.label ??
+                      order.payment_method,
+                  ],
                   ["Placed", new Date(order.created_at).toLocaleString()],
                 ].map(([k, v]) => (
                   <div
