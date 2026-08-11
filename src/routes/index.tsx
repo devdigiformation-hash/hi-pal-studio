@@ -21,6 +21,7 @@ import ROICalculator from "@/components/home/ROICalculator";
 import PricingPreview from "@/components/home/PricingPreview";
 import FAQSection from "@/components/home/FAQSection";
 import FinalCTA from "@/components/home/FinalCTA";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -68,6 +69,7 @@ function HomePage() {
       <PricingPreview />
       <FAQSection />
       <FinalCTA />
+      <WhatsAppFloat />
     </main>
   );
 }
