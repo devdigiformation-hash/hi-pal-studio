@@ -14,8 +14,8 @@ const CHANNELS = [
     icon: MessageSquare,
     color: "#25D366",
     title: "WhatsApp Automation",
-    body: "QR-code login, send/receive messages, automated customer notifications, bulk messaging, media support.",
-    badge: "Baileys WhatsApp API",
+    body: "Secure login, send and receive messages, automated customer notifications, bulk messaging and media support — driven by voice or workflow.",
+    badge: "WhatsApp Channel",
     status: "QR Scan → Connected",
   },
   {
@@ -30,8 +30,8 @@ const CHANNELS = [
     icon: MessageCircle,
     color: "var(--purple)",
     title: "Discord Bot Control",
-    body: "Send alerts, manage channels, automate community notifications, and monitor Discord servers via voice commands.",
-    badge: "discord.js Integration",
+    body: "Send alerts, manage channels, automate community notifications and monitor servers via voice commands.",
+    badge: "Discord Channel",
     status: "Bot Online",
   },
 ];
@@ -48,7 +48,7 @@ export default function IntegrationsPage() {
         eyebrow="Connected Intelligence"
         title="Connect Everything."
         gradientTitle="Control Anything."
-        subtitle="WhatsApp, Email, Discord, CRM tools and MCP servers — all voice-controlled."
+        subtitle="WhatsApp, Email, Discord, local CLI runners and 40+ MCP servers — all voice-controlled."
       />
 
       <SectionWrapper id="channels">
