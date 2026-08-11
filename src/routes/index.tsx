@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import HeroSection from "@/components/home/HeroSection";
 import TelemetryTicker from "@/components/home/TelemetryTicker";
 import SoftwareShowcase from "@/components/home/SoftwareShowcase";
+import ModulesGrid from "@/components/home/ModulesGrid";
 import FourPillars from "@/components/home/FourPillars";
 import ProductWorkbench from "@/components/home/ProductWorkbench";
 import ModelsSection from "@/components/home/ModelsSection";
@@ -47,6 +48,7 @@ function HomePage() {
       <HeroSection />
       <TelemetryTicker />
       <SoftwareShowcase />
+      <ModulesGrid />
       <FourPillars />
       <ProductWorkbench />
       <ModelsSection />
