@@ -6,6 +6,7 @@ import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import MonoBadge from "@/components/MonoBadge";
 import ActivePulse from "@/components/ActivePulse";
+import GradientText from "@/components/GradientText";
 
 const TABS = ["Intelligence", "Automation", "Connectivity", "Developer"] as const;
 type Tab = (typeof TABS)[number];
