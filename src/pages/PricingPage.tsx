@@ -78,6 +78,8 @@ const TIERS: {
 ];
 
 export default function PricingPage() {
+  const { code } = useCurrency();
+
   return (
     <motion.main
       initial={{ opacity: 0, y: 20 }}
@@ -98,6 +100,7 @@ export default function PricingPage() {
           <div className="reveal-item flex flex-wrap items-center justify-center gap-3">
             <MonoBadge color="var(--success)">One-Time Payment</MonoBadge>
             <MonoBadge color="var(--text-secondary)">No Monthly Software Fees</MonoBadge>
+            <CurrencySelector />
           </div>
 
           <div className="mt-12 grid items-start gap-6 lg:grid-cols-3">
