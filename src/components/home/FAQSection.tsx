@@ -26,7 +26,7 @@ const FAQS = [
   },
   {
     q: "What are DIGI BIZ OS Agents?",
-    a: "10+ specialized sub-agents running concurrently, each with defined capabilities and tool access.",
+    a: "Multi specialized sub-agents running concurrently, each with defined capabilities and tool access.",
   },
   {
     q: "Is DIGI BIZ OS an online web app?",

@@ -24,7 +24,7 @@ const COPY: Record<Tab, { title: string; body: string; badges: string[]; bullets
   },
   Automation: {
     title: "Workflows + Agents",
-    body: "Drag-and-drop workflow automation with scheduled cron triggers and concurrent 10+ agent task delegation.",
+    body: "Drag-and-drop workflow automation with scheduled cron triggers and concurrent multi agent task delegation.",
     badges: ["115+ Built-in Tools", "500+ AI Skills"],
     bullets: [
       "Visual workflow builder",
