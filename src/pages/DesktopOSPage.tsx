@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mouse, FolderOpen, Cpu, Clipboard } from "lucide-react";
+import { Mouse, FolderOpen, Cpu, Clipboard, FileSpreadsheet, ScanEye, Globe2, Download } from "lucide-react";
 import { WindowsIcon } from "@/components/PlatformIcons";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
@@ -13,7 +13,10 @@ const CONTROL_GROUPS = [
   { label: "Mouse", items: ["Click", "Double-Click", "Right-Click", "Drag", "Scroll"] },
   { label: "Keys", items: ["Type Text", "Hotkeys", "Key Down/Up", "Ctrl+Alt+Del"] },
   { label: "Window", items: ["Focus", "Minimize", "Maximize", "Close", "Move"] },
-  { label: "Files", items: ["Read File", "Write File", "List Dir", "Open App"] },
+  { label: "Files", items: ["Read File", "Write File", "Bulk Rename", "Open App"] },
+  { label: "Office", items: ["Excel Write", "CSV Export", "Word Append", "Slides Read"] },
+  { label: "Vision", items: ["Screenshot", "Image-to-Text", "Scan PDF", "Read Screen"] },
+  { label: "Web", items: ["Open Site", "Find Tab", "Web Search", "Download Media"] },
 ];
 
 const HANDLERS = [
@@ -44,6 +47,34 @@ const HANDLERS = [
     title: "Clipboard & System",
     count: "7+ handlers",
     body: "Read/write clipboard, OS toast notifications, screen resolution, system info retrieval.",
+  },
+  {
+    icon: FileSpreadsheet,
+    color: "var(--green)",
+    title: "Office & Reporting",
+    count: "20+ actions",
+    body: "Create and update spreadsheets, append rows and cells, export CSV, build Word documents, read slides and generate finished reports.",
+  },
+  {
+    icon: ScanEye,
+    color: "var(--cyan)",
+    title: "Screen Vision & OCR",
+    count: "12+ actions",
+    body: "Capture the screen, pull text out of images and scans, read documents you point at and act on what it sees.",
+  },
+  {
+    icon: Globe2,
+    color: "var(--purple)",
+    title: "Research & Browsing",
+    count: "10+ actions",
+    body: "Open websites, find and switch tabs, run live web research and summarise sources into a usable brief.",
+  },
+  {
+    icon: Download,
+    color: "var(--amber)",
+    title: "Folders & Media",
+    count: "15+ actions",
+    body: "Analyse whole folders, process document batches, rename in bulk and download or convert media straight to the right place.",
   },
 ];
 
