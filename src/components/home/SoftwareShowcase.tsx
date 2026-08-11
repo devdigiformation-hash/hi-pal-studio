@@ -156,7 +156,7 @@ export default function SoftwareShowcase() {
             }}
           />
 
-          <div className="relative mx-auto aspect-[16/8.5] w-full max-w-[280px] sm:max-w-md md:max-w-lg lg:max-w-xl [transform-style:preserve-3d]">
+          <div className="relative mx-auto aspect-[16/9] w-full max-w-[280px] sm:max-w-md md:max-w-lg lg:max-w-xl [transform-style:preserve-3d]">
             {SLIDES.map((s, i) => {
               let off = i - index;
               if (off > count / 2) off -= count;
@@ -167,7 +167,7 @@ export default function SoftwareShowcase() {
                 <motion.div
                   key={s.src}
                   aria-hidden={off !== 0}
-                  className="absolute left-1/2 top-0 aspect-[16/8.5] w-[88%] origin-center overflow-hidden rounded-[16px] border border-white/10 bg-[#05070B] p-1 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] md:w-[80%] md:rounded-[26px] md:p-2"
+                  className="absolute left-1/2 top-0 aspect-[16/9] w-[88%] origin-center overflow-hidden rounded-[16px] border border-white/10 bg-[#05070B] p-1 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] md:w-[80%] md:rounded-[26px] md:p-2"
                   style={{ transformStyle: "preserve-3d", marginLeft: isMobile ? "-44%" : "-40%" }}
                   animate={{
                     x: isMobile ? `${off * 100}%` : `${off * 56}%`,
@@ -187,6 +187,14 @@ export default function SoftwareShowcase() {
                       loading="lazy"
                       draggable={false}
                       className="h-full w-full object-contain object-top"
+                    />
+                    {/* curved bottom mask hides OS taskbar while keeping screenshot un-zoomed */}
+                    <div
+                      className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[10%]"
+                      style={{
+                        background: "linear-gradient(to top, rgba(5,7,11,1) 0%, rgba(5,7,11,0.85) 45%, transparent 100%)",
+                        borderRadius: "0 0 14px 14px",
+                      }}
                     />
                   </div>
                 </motion.div>
