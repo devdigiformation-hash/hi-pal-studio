@@ -156,7 +156,7 @@ export default function HeroSection() {
               className="font-display text-[12px] font-semibold uppercase text-[var(--cyan)]"
               style={{ letterSpacing: "0.16em" }}
             >
-              Live — Neural Engine Active
+              Live — Voice-Powered Business OS
             </span>
           </motion.div>
 
