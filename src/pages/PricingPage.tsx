@@ -85,8 +85,8 @@ export default function PricingPage() {
     >
       <MiniHero
         eyebrow="Pricing"
-        title="Pay Once."
-        gradientTitle="Own It Forever."
+        title="One Price."
+        gradientTitle="Infinite Power."
         subtitle="Three one-time packages — lifetime access, your own branded build, or the full source code."
         height="min-h-[50vh]"
       />

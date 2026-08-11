@@ -53,8 +53,8 @@ export default function DocsPage() {
     >
       <MiniHero
         eyebrow="Documentation"
-        title="Build. Extend."
-        gradientTitle="Automate."
+        title="Learn Faster."
+        gradientTitle="Deploy Smarter."
         subtitle="Everything you need to get started and go deep with DIGI BIZ OS."
         height="min-h-[40vh]"
       />

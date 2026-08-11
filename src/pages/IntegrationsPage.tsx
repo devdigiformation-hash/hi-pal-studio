@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageSquare, Mail, MessageCircle, Cpu, Globe2 } from "lucide-react";
+import { MessageSquare, Mail, MessageCircle, Globe2, Cpu } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
@@ -8,6 +8,7 @@ import MiniHero from "@/components/inner/MiniHero";
 import TerminalBlock from "@/components/inner/TerminalBlock";
 import TickList from "@/components/inner/TickList";
 import PageCTA from "@/components/inner/PageCTA";
+import GradientText from "@/components/GradientText";
 
 const CHANNELS = [
   {
@@ -54,9 +55,9 @@ export default function IntegrationsPage() {
     >
       <MiniHero
         eyebrow="Connected Intelligence"
-        title="Connect Everything."
-        gradientTitle="Control Anything."
-        subtitle="WhatsApp, Email, Discord, local CLI runners and 40+ MCP servers — all voice-controlled."
+        title="Your Channels."
+        gradientTitle="One Voice."
+        subtitle="WhatsApp, Email, Discord, local runners and MCP servers — all voice-controlled."
       />
 
       <SectionWrapper id="channels">
@@ -64,7 +65,7 @@ export default function IntegrationsPage() {
           <div className="text-center">
             <EyebrowLabel text="Messaging Hub" />
             <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-              One Platform. All Your Channels.
+              One Platform. <GradientText>All Your Channels.</GradientText>
             </h2>
           </div>
 
@@ -97,7 +98,7 @@ export default function IntegrationsPage() {
           <div>
             <EyebrowLabel text="Research & Documents" color="var(--amber)" />
             <h2 className="reveal-item delay-1 mt-4 font-display text-[30px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[42px]">
-              Research & Documents. By Voice.
+              Research, Extract & <GradientText>Document by Voice.</GradientText>
             </h2>
             <h3 className="reveal-item delay-2 mt-6 font-display text-[18px] font-semibold text-[var(--text-primary)]">
               Web research, retrieval and the offline document suite
