@@ -12,6 +12,7 @@ import MiniHero from "@/components/inner/MiniHero";
 import TerminalBlock from "@/components/inner/TerminalBlock";
 import TickList from "@/components/inner/TickList";
 import PageCTA from "@/components/inner/PageCTA";
+import GradientText from "@/components/GradientText";
 
 const STATES = ["disconnected", "connecting", "listening", "thinking", "speaking"];
 
