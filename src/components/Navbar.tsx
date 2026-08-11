@@ -103,7 +103,10 @@ export default function Navbar() {
             </button>
             <Link
               to="/pricing"
-              className="group inline-flex h-9 items-center gap-1.5 rounded-full bg-[var(--text-primary)] px-4 font-display text-[12.5px] font-semibold text-[var(--background)] transition-all duration-300 hover:opacity-90"
+              className="group inline-flex h-9 items-center gap-1.5 rounded-full px-4 font-display text-[12.5px] font-bold text-[#04120F] shadow-[0_6px_22px_rgba(47,224,200,0.35)] transition-all duration-300 hover:brightness-110 hover:shadow-[0_8px_28px_rgba(47,224,200,0.5)]"
+              style={{
+                background: "linear-gradient(135deg, #6BF3DE 0%, #2FE0C8 55%, #16C2AC 100%)",
+              }}
             >
               Get Started
               <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5" />
