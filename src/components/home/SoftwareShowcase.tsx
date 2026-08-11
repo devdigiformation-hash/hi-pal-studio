@@ -15,6 +15,7 @@ import digiCode from "@/assets/os-digi-code.png.asset.json";
 import digiDocs from "@/assets/os-digi-docs.png.asset.json";
 import digiTools from "@/assets/os-digi-tools.png.asset.json";
 import digiCli from "@/assets/os-digi-cli.png.asset.json";
+import digiMcp from "@/assets/os-digi-mcp.png.asset.json";
 
 const SLIDES = [
   {
@@ -82,6 +83,12 @@ const SLIDES = [
     tag: "Digi CLI",
     title: "Connect local runners and toggle them live.",
     body: "Script runners, version control, document parsing, retrieval and web research — each connection on, off or added in a click, with capabilities listed up front.",
+  },
+  {
+    src: digiMcp.url,
+    tag: "Digi MCP",
+    title: "Multi-MCP ready — 40+ servers, one switchboard.",
+    body: "Desktop automation, research, browsing, documentation and private routing servers imported and toggled live, so your agents gain new powers instantly.",
   },
 ];
 
