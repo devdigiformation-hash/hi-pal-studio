@@ -15,15 +15,15 @@ const CASES: { icon: LucideIcon; color: string; title: string; body: string; cha
     icon: Terminal,
     color: "var(--purple)",
     title: "Developers & Engineers",
-    body: "Multi-model routing, MCP servers, CLI terminal, 115+ built-in tools, and 46 browser automation tools at your disposal via spoken command.",
-    chain: ["Voice", "CLI", "Desktop Control", "Deploy"],
+    body: "A coding workspace with repo and branch context, 40+ MCP servers, local CLI runners, 500+ skills and 150+ desktop tools — all reachable by voice.",
+    chain: ["Voice", "Digi Code", "CLI Runners", "Ship"],
   },
   {
     icon: Building2,
     color: "var(--amber)",
     title: "Research & Operations Teams",
-    body: "Collect market data, verify business records and compile ready-to-send reports — all from a single spoken brief.",
-    chain: ["Voice", "Business Data", "Report"],
+    body: "Research the web, parse PDFs, run OCR, compare documents and compile ready-to-send reports — all from a single spoken brief, fully on your machine.",
+    chain: ["Voice", "Research", "Digi Docs", "Report"],
   },
 ];
 

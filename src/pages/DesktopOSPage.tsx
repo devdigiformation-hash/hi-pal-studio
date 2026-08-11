@@ -59,7 +59,7 @@ export default function DesktopOSPage() {
         eyebrow="Native Desktop Control"
         title="Your Desktop."
         gradientTitle="Fully Automated."
-        subtitle="115+ built-in tools. Pixel-perfect desktop control. Complete OS-level execution via voice command."
+        subtitle="150+ built-in desktop tools. Pixel-perfect desktop control. Complete OS-level execution via voice command."
       />
 
       <SectionWrapper id="control-center">
@@ -137,7 +137,7 @@ export default function DesktopOSPage() {
 
       <PageCTA
         title="One Voice. Total Desktop Mastery."
-        badges={["Instant Desktop Control", "115+ Built-in Tools", "Windows · macOS soon"]}
+        badges={["Instant Desktop Control", "150+ Desktop Tools", "Windows · macOS soon"]}
         cta="Download for Windows"
         icon={<WindowsIcon size={17} />}
       />

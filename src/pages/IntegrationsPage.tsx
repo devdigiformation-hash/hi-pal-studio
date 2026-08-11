@@ -14,8 +14,8 @@ const CHANNELS = [
     icon: MessageSquare,
     color: "#25D366",
     title: "WhatsApp Automation",
-    body: "QR-code login, send/receive messages, automated customer notifications, bulk messaging, media support.",
-    badge: "Baileys WhatsApp API",
+    body: "Secure login, send and receive messages, automated customer notifications, bulk messaging and media support — driven by voice or workflow.",
+    badge: "WhatsApp Channel",
     status: "QR Scan → Connected",
   },
   {
@@ -30,8 +30,8 @@ const CHANNELS = [
     icon: MessageCircle,
     color: "var(--purple)",
     title: "Discord Bot Control",
-    body: "Send alerts, manage channels, automate community notifications, and monitor Discord servers via voice commands.",
-    badge: "discord.js Integration",
+    body: "Send alerts, manage channels, automate community notifications and monitor servers via voice commands.",
+    badge: "Discord Channel",
     status: "Bot Online",
   },
 ];
@@ -48,7 +48,7 @@ export default function IntegrationsPage() {
         eyebrow="Connected Intelligence"
         title="Connect Everything."
         gradientTitle="Control Anything."
-        subtitle="WhatsApp, Email, Discord, CRM tools and MCP servers — all voice-controlled."
+        subtitle="WhatsApp, Email, Discord, local CLI runners and 40+ MCP servers — all voice-controlled."
       />
 
       <SectionWrapper id="channels">
@@ -87,26 +87,26 @@ export default function IntegrationsPage() {
       <SectionWrapper className="bg-[var(--bg-surface)]">
         <div className="mx-auto grid max-w-[1200px] items-center gap-14 lg:grid-cols-2">
           <div>
-            <EyebrowLabel text="Business Data Intelligence" color="var(--amber)" />
+            <EyebrowLabel text="Research & Documents" color="var(--amber)" />
             <h2 className="reveal-item delay-1 mt-4 font-display text-[30px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[42px]">
-              Business Research. By Voice.
+              Research & Documents. By Voice.
             </h2>
             <h3 className="reveal-item delay-2 mt-6 font-display text-[18px] font-semibold text-[var(--text-primary)]">
-              Business Data Research
+              Web research, retrieval and the offline document suite
             </h3>
             <p className="reveal-item delay-2 mt-3 max-w-[540px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
-              Pull company profiles, contact records, market research and report-ready summaries
-              classification codes directly from DIGI BIZ OS. No browser needed — just speak the
-              company name or number.
+              Research the web, pull sources, parse PDFs, run OCR and turn the findings into a
+              report-ready document — without leaving DIGI BIZ OS and without your files leaving
+              your machine.
             </p>
             <TickList
               className="reveal-item delay-3 mt-7"
               items={[
-                "Company number lookup",
-                "Director verification",
-                "SIC code classification",
-                "Filing history review",
-                "UK standard industrial classification index",
+                "Live web research and retrieval",
+                "PDF parsing, OCR and text extraction",
+                "Merge, split, compare and convert documents",
+                "Redact, sign, timestamp and watermark",
+                "Everything processed offline on your machine",
               ]}
             />
           </div>
@@ -115,13 +115,12 @@ export default function IntegrationsPage() {
             <TerminalBlock
               speed={14}
               lines={[
-                { text: 'Voice: "Look up Acme Holdings Ltd"', color: "var(--text-primary)" },
-                { text: '[API] companies-house.search("Acme Holdings Ltd")', color: "var(--cyan)" },
-                { text: "Result: Company No: 12345678", color: "var(--text-secondary)" },
-                { text: "        Status: Active", color: "var(--success)" },
-                { text: "        Director: James Wilson", color: "var(--text-secondary)" },
-                { text: "        SIC: 62020 - IT Consultancy", color: "var(--text-secondary)" },
-                { text: "        Registered: 14 Museum Place, Cardiff", color: "var(--text-secondary)" },
+                { text: 'Voice: "Research this market and build me a brief"', color: "var(--text-primary)" },
+                { text: "[Research] 12 sources retrieved", color: "var(--cyan)" },
+                { text: "[Docs] 4 PDFs parsed · OCR complete", color: "var(--text-secondary)" },
+                { text: "[Skills] summarise → compare → format", color: "var(--text-secondary)" },
+                { text: "Output: market-brief.pdf · signed & watermarked", color: "var(--success)" },
+                { text: "Processed locally — nothing left the machine", color: "var(--text-secondary)" },
               ]}
             />
           </GlassCard>

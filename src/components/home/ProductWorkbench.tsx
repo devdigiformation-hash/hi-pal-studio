@@ -13,7 +13,7 @@ type Tab = (typeof TABS)[number];
 const COPY: Record<Tab, { title: string; body: string; badges: string[]; bullets: string[] }> = {
   Intelligence: {
     title: "AI Model Gateway",
-    body: "Route intelligence across fast cloud models, ultra-low-latency inference, 100+ routed models, and fully local engines — with live latency metrics.",
+    body: "Route intelligence across fast cloud models, ultra-low-latency inference, 200+ routed models, and fully local engines — with live latency metrics.",
     badges: ["Flash Engine", "Turbo Engine", "Model Router", "Local Engine"],
     bullets: [
       "Automatic provider failover",
@@ -24,8 +24,8 @@ const COPY: Record<Tab, { title: string; body: string; badges: string[]; bullets
   },
   Automation: {
     title: "Workflows + Agents",
-    body: "Drag-and-drop workflow automation with scheduled cron triggers and concurrent multi agent task delegation.",
-    badges: ["115+ Built-in Tools", "500+ AI Skills"],
+    body: "Drag-and-drop workflow automation with scheduled cron triggers, 500+ switchable skills and concurrent multi agent task delegation.",
+    badges: ["150+ Desktop Tools", "500+ AI Skills", "Cron Jobs"],
     bullets: [
       "Visual workflow builder",
       "Cron & event triggers",
@@ -35,8 +35,8 @@ const COPY: Record<Tab, { title: string; body: string; badges: string[]; bullets
   },
   Connectivity: {
     title: "Channels Hub",
-    body: "Unified WhatsApp, Email IMAP/SMTP, Discord, and Business Data Research in one control panel.",
-    badges: ["WhatsApp", "IMAP/SMTP", "Discord", "Business Data"],
+    body: "Unified WhatsApp, Email, Discord and 40+ MCP servers for automation, research, browsing and documentation — imported and toggled live.",
+    badges: ["WhatsApp", "Email", "Discord", "40+ MCP Servers"],
     bullets: [
       "One inbox across channels",
       "Auto-reply agent routing",
@@ -46,8 +46,8 @@ const COPY: Record<Tab, { title: string; body: string; badges: string[]; bullets
   },
   Developer: {
     title: "CLI + MCP",
-    body: "Built-in terminal emulator and Model Context Protocol server connector for extensibility.",
-    badges: ["MCP Compatible", "115+ Built-in Tools"],
+    body: "Digi CLI local runners for scripting, version control, document parsing, retrieval and web research — plus a full MCP switchboard and 100+ offline utilities.",
+    badges: ["Multi-MCP Ready", "100+ Offline Utilities", "150+ Desktop Tools"],
     bullets: [
       "Native terminal emulator",
       "Custom MCP server registry",
@@ -71,7 +71,7 @@ function Visual({ tab }: { tab: Tab }) {
         {[
           { name: "Flash Engine", ms: "~180ms", color: "var(--cyan)", active: true },
           { name: "Turbo Engine", ms: "~95ms", color: "var(--green)", active: true },
-          { name: "Model Router (100+)", ms: "~320ms", color: "var(--purple)", active: false },
+          { name: "Model Router (200+)", ms: "~320ms", color: "var(--purple)", active: false },
           { name: "Local Engine", ms: "~410ms", color: "var(--amber)", active: false },
         ].map((m) => (
           <div

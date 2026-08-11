@@ -11,9 +11,10 @@ const ROWS: [string, boolean, boolean, boolean][] = [
   ["Voice-First Zero-Latency Operation", true, false, false],
   ["Local File System Full Access", true, false, true],
   ["Multi-Provider AI Model Routing", true, true, false],
-  ["Business Data Research Suite", true, false, false],
+  ["Offline Document Suite (OCR, redact, sign)", true, false, false],
+  ["100+ Offline Utilities Built In", true, false, false],
   ["500+ AI Skills Library", true, false, false],
-  ["MCP Server Compatibility", true, true, false],
+  ["40+ MCP Servers, Toggled Live", true, true, false],
   ["WhatsApp + Email + Discord Unified", true, false, false],
 ];
 
