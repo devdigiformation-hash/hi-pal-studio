@@ -283,6 +283,9 @@ export default function CheckoutPage() {
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 <input
                   required
+                  name="customerName"
+                  autoComplete="name"
+                  aria-label="Full name"
                   className={inputClass}
                   placeholder="Full name"
                   value={form.customerName}
@@ -291,18 +294,26 @@ export default function CheckoutPage() {
                 <input
                   required
                   type="email"
+                  name="email"
+                  autoComplete="email"
+                  aria-label="Email for licence activation"
                   className={inputClass}
                   placeholder="Email for licence activation"
                   value={form.email}
                   onChange={set("email")}
                 />
                 <input
+                  name="whatsapp"
+                  autoComplete="tel"
+                  aria-label="WhatsApp number"
                   className={inputClass}
                   placeholder="WhatsApp number (optional)"
                   value={form.whatsapp}
                   onChange={set("whatsapp")}
                 />
                 <input
+                  name="txnReference"
+                  aria-label="Transaction ID or reference"
                   className={inputClass}
                   placeholder="Transaction ID / reference (optional)"
                   value={form.txnReference}
@@ -311,6 +322,8 @@ export default function CheckoutPage() {
               </div>
               <textarea
                 rows={3}
+                name="notes"
+                aria-label="Additional notes"
                 className={`${inputClass} mt-3 resize-none`}
                 placeholder="Anything we should know? (optional)"
                 value={form.notes}
