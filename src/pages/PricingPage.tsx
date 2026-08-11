@@ -9,6 +9,8 @@ import CyanButton from "@/components/CyanButton";
 import GhostButton from "@/components/GhostButton";
 import MonoBadge from "@/components/MonoBadge";
 import MiniHero from "@/components/inner/MiniHero";
+import CurrencySelector from "@/components/CurrencySelector";
+import { formatPrice, useCurrency } from "@/lib/currency";
 import { PLANS, type PlanId } from "@/lib/payment-config";
 
 const FAQS = [

@@ -12,6 +12,7 @@ export interface Plan {
   priceGbp: number;
   comparePkr?: number;
   compareUsd?: number;
+  compareGbp?: number;
   billingNote: string;
   includes: string[];
   bestFor: string[];
@@ -26,6 +27,9 @@ export const PLANS: Record<PlanId, Plan> = {
     pricePkr: 18000,
     priceUsd: 64,
     priceGbp: 50,
+    compareGbp: 99,
+    compareUsd: 127,
+    comparePkr: 36000,
     billingNote: "One-time payment · Lifetime access",
     includes: [
       "One-time payment — no monthly subscription",
@@ -47,6 +51,9 @@ export const PLANS: Record<PlanId, Plan> = {
     pricePkr: 36000,
     priceUsd: 127,
     priceGbp: 99,
+    compareGbp: 199,
+    compareUsd: 255,
+    comparePkr: 72000,
     billingNote: "One-time payment · Source code licence",
     includes: [
       "Everything in Lifetime Access",
@@ -71,6 +78,9 @@ export const PLANS: Record<PlanId, Plan> = {
     pricePkr: 72000,
     priceUsd: 255,
     priceGbp: 199,
+    compareGbp: 299,
+    compareUsd: 383,
+    comparePkr: 108000,
     billingNote: "One-time payment · Custom build",
     includes: [
       "Everything in Lifetime Access",
@@ -211,8 +221,8 @@ export function amountForMethod(plan: Plan, method: PaymentMethod) {
 
 export function comparePriceFor(plan: Plan, currency: Currency) {
   if (currency === "PKR") return plan.comparePkr;
-  if (!plan.compareUsd) return undefined;
-  return currency === "GBP" ? Math.round(plan.compareUsd * GBP_PER_USD) : plan.compareUsd;
+  if (currency === "GBP") return plan.compareGbp;
+  return plan.compareUsd;
 }
 
 export function formatAmount(amount: number, currency: Currency) {
