@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageSquare, Mail, MessageCircle, Cpu, Building2, Globe2 } from "lucide-react";
+import { MessageSquare, Mail, MessageCircle, Cpu, Globe2 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
@@ -33,14 +33,6 @@ const CHANNELS = [
     body: "Send alerts, manage channels, automate community notifications and monitor servers via voice commands.",
     badge: "Discord Channel",
     status: "Bot Online",
-  },
-  {
-    icon: Building2,
-    color: "var(--amber)",
-    title: "UK Business Lookups",
-    body: "Check UK company records, run single or bulk verifications and clean up messy address lists — ideal for agencies, accountants and sales teams.",
-    badge: "Companies House",
-    status: "Lookup Ready",
   },
   {
     icon: Globe2,

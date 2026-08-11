@@ -3,7 +3,6 @@ import {
   Globe2,
   ScanEye,
   FolderSearch,
-  Building2,
   Download,
   BellRing,
   NotebookPen,
@@ -56,14 +55,6 @@ const CAPABILITIES: Capability[] = [
     badge: "Bulk Operations",
     body: "Analyse an entire folder, process document batches, rename and reorganise files, and turn raw material into structured output.",
     tags: ["Folder analysis", "Batch processing", "Bulk rename & sort"],
-  },
-  {
-    icon: Building2,
-    color: "var(--purple)",
-    title: "UK Business Lookups",
-    badge: "Companies House",
-    body: "Check company records, run single or bulk lookups and clean up messy address data — built for UK operators and agencies.",
-    tags: ["Company checks", "Bulk verification", "Address clean-up"],
   },
   {
     icon: NotebookPen,
