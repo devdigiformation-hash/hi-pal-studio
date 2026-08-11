@@ -109,7 +109,16 @@ const SLIDES = [
 export default function SoftwareShowcase() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const count = SLIDES.length;
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    const apply = () => setIsMobile(mq.matches);
+    apply();
+    mq.addEventListener("change", apply);
+    return () => mq.removeEventListener("change", apply);
+  }, []);
 
   const go = useCallback((d: number) => setIndex((i) => (i + d + count) % count), [count]);
 
@@ -147,23 +156,23 @@ export default function SoftwareShowcase() {
             }}
           />
 
-          <div className="relative mx-auto aspect-[16/10] w-full max-w-6xl [transform-style:preserve-3d]">
+          <div className="relative mx-auto aspect-[16/10] w-full max-w-[420px] sm:max-w-2xl md:max-w-3xl lg:max-w-4xl [transform-style:preserve-3d]">
             {SLIDES.map((s, i) => {
               let off = i - index;
               if (off > count / 2) off -= count;
               if (off < -count / 2) off += count;
               const abs = Math.abs(off);
-              const hidden = abs > 1;
+              const hidden = isMobile ? abs > 0 : abs > 1;
               return (
                 <motion.div
                   key={s.src}
                   aria-hidden={off !== 0}
-                  className="absolute left-1/2 top-0 h-full w-[80%] origin-center overflow-hidden rounded-[18px] border border-white/10 bg-[#05070B] p-1 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] md:rounded-[26px] md:p-2"
-                  style={{ transformStyle: "preserve-3d", marginLeft: "-40%" }}
+                  className="absolute left-1/2 top-0 h-full w-[94%] origin-center overflow-hidden rounded-[14px] border border-white/10 bg-[#05070B] p-1 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] md:w-[80%] md:rounded-[26px] md:p-2"
+                  style={{ transformStyle: "preserve-3d", marginLeft: isMobile ? "-47%" : "-40%" }}
                   animate={{
-                    x: `${off * 62}%`,
-                    scale: off === 0 ? 1 : 0.76,
-                    rotateY: off * -20,
+                    x: isMobile ? `${off * 100}%` : `${off * 62}%`,
+                    scale: off === 0 ? 1 : isMobile ? 0.9 : 0.76,
+                    rotateY: isMobile ? 0 : off * -20,
                     opacity: hidden ? 0 : off === 0 ? 1 : 0.32,
                     filter: off === 0 ? "blur(0px)" : "blur(3px)",
                     zIndex: 10 - abs,
@@ -183,7 +192,7 @@ export default function SoftwareShowcase() {
             })}
           </div>
 
-          <div className="mx-auto mt-8 min-h-[110px] max-w-2xl">
+          <div className="mx-auto mt-6 min-h-[140px] max-w-2xl px-1 sm:min-h-[120px] md:mt-8">
             <AnimatePresence mode="wait">
               <motion.div
                 key={active.tag}
@@ -195,26 +204,26 @@ export default function SoftwareShowcase() {
                 <span className="font-code text-[11px] uppercase tracking-[0.24em] text-[var(--cyan)]">
                   {active.tag}
                 </span>
-                <h3 className="mt-2 font-display text-[19px] font-bold text-[var(--text-primary)] md:text-[24px]">
+                <h3 className="mt-2 font-display text-[17px] font-bold leading-snug text-[var(--text-primary)] md:text-[24px]">
                   {active.title}
                 </h3>
-                <p className="mt-2 font-body text-[14px] leading-[1.75] text-[var(--text-secondary)]">
+                <p className="mt-2 font-body text-[13px] leading-[1.7] text-[var(--text-secondary)] md:text-[14px]">
                   {active.body}
                 </p>
               </motion.div>
             </AnimatePresence>
           </div>
 
-          <div className="mt-6 flex items-center justify-center gap-4">
+          <div className="mt-6 flex items-center justify-center gap-3 md:gap-4">
             <button
               type="button"
               aria-label="Previous slide"
               onClick={() => go(-1)}
-              className="grid h-10 w-10 place-items-center rounded-full border border-[var(--border-glass)] bg-[var(--bg-glass-light)] text-[var(--text-secondary)] backdrop-blur-xl transition hover:border-[var(--cyan-border)] hover:text-[var(--cyan)]"
+              className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[var(--border-glass)] bg-[var(--bg-glass-light)] text-[var(--text-secondary)] backdrop-blur-xl transition hover:border-[var(--cyan-border)] hover:text-[var(--cyan)] md:h-10 md:w-10"
             >
               <ChevronLeft size={18} />
             </button>
-            <div className="flex items-center gap-2">
+            <div className="flex max-w-[60vw] flex-wrap items-center justify-center gap-1.5 md:max-w-none md:gap-2">
               {SLIDES.map((s, i) => (
                 <button
                   key={s.tag}
@@ -223,7 +232,7 @@ export default function SoftwareShowcase() {
                   onClick={() => setIndex(i)}
                   className="h-1.5 rounded-full transition-all"
                   style={{
-                    width: i === index ? 28 : 10,
+                    width: i === index ? 22 : 8,
                     background: i === index ? "var(--cyan)" : "rgba(148,163,184,0.3)",
                   }}
                 />
@@ -233,7 +242,7 @@ export default function SoftwareShowcase() {
               type="button"
               aria-label="Next slide"
               onClick={() => go(1)}
-              className="grid h-10 w-10 place-items-center rounded-full border border-[var(--border-glass)] bg-[var(--bg-glass-light)] text-[var(--text-secondary)] backdrop-blur-xl transition hover:border-[var(--cyan-border)] hover:text-[var(--cyan)]"
+              className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[var(--border-glass)] bg-[var(--bg-glass-light)] text-[var(--text-secondary)] backdrop-blur-xl transition hover:border-[var(--cyan-border)] hover:text-[var(--cyan)] md:h-10 md:w-10"
             >
               <ChevronRight size={18} />
             </button>
