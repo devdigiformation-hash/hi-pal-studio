@@ -147,7 +147,7 @@ export default function SoftwareShowcase() {
             }}
           />
 
-          <div className="relative mx-auto aspect-[16/9] w-full max-w-6xl [transform-style:preserve-3d]">
+          <div className="relative mx-auto aspect-[16/10] w-full max-w-6xl [transform-style:preserve-3d]">
             {SLIDES.map((s, i) => {
               let off = i - index;
               if (off > count / 2) off -= count;
