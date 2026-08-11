@@ -25,7 +25,7 @@ const COPY: Record<Tab, { title: string; body: string; badges: string[]; bullets
   Automation: {
     title: "Workflows + Agents",
     body: "Drag-and-drop workflow automation with scheduled cron triggers and concurrent multi agent task delegation.",
-    badges: ["115+ Built-in Tools", "500+ AI Skills"],
+    badges: ["150+ Desktop Tools", "500+ AI Skills"],
     bullets: [
       "Visual workflow builder",
       "Cron & event triggers",
@@ -47,7 +47,7 @@ const COPY: Record<Tab, { title: string; body: string; badges: string[]; bullets
   Developer: {
     title: "CLI + MCP",
     body: "Built-in terminal emulator and Model Context Protocol server connector for extensibility.",
-    badges: ["MCP Compatible", "115+ Built-in Tools"],
+    badges: ["MCP Compatible", "150+ Desktop Tools"],
     bullets: [
       "Native terminal emulator",
       "Custom MCP server registry",

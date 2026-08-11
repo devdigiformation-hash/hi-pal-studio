@@ -57,7 +57,7 @@ const NODES = [
 
 
 
-const BADGES = ["500+ AI Skills", "115+ Built-in Tools", "Multi-Agent Execution", "Multi-MCP Ready"];
+const BADGES = ["500+ AI Skills", "150+ Desktop Tools", "Multi-Agent Execution", "Multi-MCP Ready"];
 
 function RotatingPhrase() {
   const [i, setI] = useState(0);
@@ -204,7 +204,7 @@ export default function HeroSection() {
             transition={{ delay: 0.6 }}
             className="mt-5 max-w-[580px] font-body text-[16px] leading-[1.75] text-[var(--text-secondary)] md:text-[18px]"
           >
-            DIGI BIZ OS turns your voice into execution — 500+ AI skills, 115+ built-in tools and
+            DIGI BIZ OS turns your voice into execution — 500+ AI skills, 150+ built-in desktop tools and
             collaborative AI agents that research, automate, engineer and deliver work for your
             business.
           </motion.p>

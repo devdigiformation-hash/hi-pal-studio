@@ -15,7 +15,7 @@ const CASES: { icon: LucideIcon; color: string; title: string; body: string; cha
     icon: Terminal,
     color: "var(--purple)",
     title: "Developers & Engineers",
-    body: "Multi-model routing, MCP servers, CLI terminal, 115+ built-in tools, and 46 browser automation tools at your disposal via spoken command.",
+    body: "Multi-model routing, MCP servers, CLI terminal, 150+ built-in desktop tools, and 46 browser automation tools at your disposal via spoken command.",
     chain: ["Voice", "CLI", "Desktop Control", "Deploy"],
   },
   {

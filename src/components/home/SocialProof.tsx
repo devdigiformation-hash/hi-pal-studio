@@ -12,7 +12,7 @@ const QUOTES = [
   },
   {
     quote:
-      "As a developer, the MCP server integration and 115+ built-in tools give me control I've never had with any other AI tool. DIGI BIZ OS is genuinely different.",
+      "As a developer, the MCP server integration and 150+ built-in desktop tools give me control I've never had with any other AI tool. DIGI BIZ OS is genuinely different.",
     name: "Tariq Ahmed",
     role: "Senior DevOps Engineer",
   },

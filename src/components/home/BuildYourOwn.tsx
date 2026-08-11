@@ -18,7 +18,7 @@ import GradientText from "@/components/GradientText";
 const ITEMS: { icon: LucideIcon; color: string; title: string; body: string }[] = [
   { icon: Sparkles, color: "var(--cyan)", title: "Custom Skills", body: "Teach DIGI BIZ OS a new skill and reuse it forever across your business." },
   { icon: Brain, color: "var(--purple)", title: "Custom Memories", body: "Store the facts, rules and preferences your AI should never forget." },
-  { icon: Wrench, color: "var(--amber)", title: "Custom Tools", body: "Add your own tools on top of the 115+ built-in ones already included." },
+  { icon: Wrench, color: "var(--amber)", title: "Custom Tools", body: "Add your own tools on top of the 150+ built-in ones already included." },
   { icon: Users, color: "#F472B6", title: "Custom Agents", body: "Start with multi agents and create as many specialists as your work needs." },
   { icon: Workflow, color: "#7DD3FC", title: "Custom Workflows", body: "Chain steps into an automation and launch it by voice or on schedule." },
   { icon: Clock, color: "#3DDC84", title: "Cron Jobs", body: "Schedule anything to run hourly, daily or weekly — fully hands-off." },

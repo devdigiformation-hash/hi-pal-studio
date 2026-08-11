@@ -51,7 +51,7 @@ export default function PlatformCards() {
           sub="Windows 10 & 11"
         />
         <p className="mt-4 mb-6 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-          The full DIGI BIZ OS desktop build — voice control, 115+ built-in tools and AI agents,
+          The full DIGI BIZ OS desktop build — voice control, 150+ built-in desktop tools and AI agents,
           available today.
         </p>
         <div className="mt-auto">
