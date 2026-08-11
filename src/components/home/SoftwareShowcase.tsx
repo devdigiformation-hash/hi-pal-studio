@@ -5,9 +5,6 @@ import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GradientText from "@/components/GradientText";
 import shell from "@/assets/os-shell.png.asset.json";
-import runtime from "@/assets/os-runtime.png.asset.json";
-import liveTracking from "@/assets/os-live-tracking.png.asset.json";
-import digiAi from "@/assets/os-digi-ai.png.asset.json";
 import digiCode from "@/assets/os-digi-code.png.asset.json";
 import digiDocs from "@/assets/os-digi-docs.png.asset.json";
 import digiTools from "@/assets/os-digi-tools.png.asset.json";
@@ -22,24 +19,6 @@ const SLIDES = [
     tag: "The Workspace",
     title: "One console. Voice, vision and agents.",
     body: "Core apps, intelligence, automation and connectivity — all inside a single dark-glass workspace you control by speaking.",
-  },
-  {
-    src: runtime.url,
-    tag: "Runtime",
-    title: "See exactly what it is doing.",
-    body: "Listening state, running tasks, screen checks and active tools reported live while sessions execute.",
-  },
-  {
-    src: liveTracking.url,
-    tag: "Live Tracking",
-    title: "Every action of the session, on one timeline.",
-    body: "Live events and tasks with reasoning, routing, execution, I/O and lifecycle filters — real events only, nothing simulated.",
-  },
-  {
-    src: digiAi.url,
-    tag: "Digi AI",
-    title: "Chat, personas, agents and coding in one playground.",
-    body: "Multi-turn chat with any model, an agent that plans tasks and writes code, custom personas, provider control and a 40+ mini app store — all in one workspace.",
   },
   {
     src: digiCode.url,
