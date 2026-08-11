@@ -167,7 +167,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.25 + i * 0.06, duration: 0.5 }}
-                className="mr-[0.25em] inline-block whitespace-pre"
+                className="inline-block whitespace-pre"
               >
                 {word}{" "}
               </motion.span>
