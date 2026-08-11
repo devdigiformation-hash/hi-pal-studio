@@ -156,7 +156,7 @@ export default function SoftwareShowcase() {
             }}
           />
 
-          <div className="relative mx-auto aspect-[16/10] w-full max-w-[420px] sm:max-w-2xl md:max-w-3xl lg:max-w-4xl [transform-style:preserve-3d]">
+          <div className="relative mx-auto aspect-[16/10] w-full max-w-[340px] sm:max-w-xl md:max-w-2xl lg:max-w-3xl [transform-style:preserve-3d]">
             {SLIDES.map((s, i) => {
               let off = i - index;
               if (off > count / 2) off -= count;
@@ -167,8 +167,8 @@ export default function SoftwareShowcase() {
                 <motion.div
                   key={s.src}
                   aria-hidden={off !== 0}
-                  className="absolute left-1/2 top-0 h-full w-[94%] origin-center overflow-hidden rounded-[14px] border border-white/10 bg-[#05070B] p-1 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] md:w-[80%] md:rounded-[26px] md:p-2"
-                  style={{ transformStyle: "preserve-3d", marginLeft: isMobile ? "-47%" : "-40%" }}
+                  className="absolute left-1/2 top-0 h-full w-[88%] origin-center overflow-hidden rounded-[14px] border border-white/10 bg-[#05070B] p-1 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] md:w-[72%] md:rounded-[26px] md:p-2"
+                  style={{ transformStyle: "preserve-3d", marginLeft: isMobile ? "-44%" : "-36%" }}
                   animate={{
                     x: isMobile ? `${off * 100}%` : `${off * 62}%`,
                     scale: off === 0 ? 1 : isMobile ? 0.9 : 0.76,
