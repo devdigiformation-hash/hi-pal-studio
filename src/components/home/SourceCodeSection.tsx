@@ -75,7 +75,7 @@ export default function SourceCodeSection() {
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
               <Link to="/checkout" search={{ plan: "source_code" }}>
-                <CyanButton size="lg">Buy Source Code — £199</CyanButton>
+                <CyanButton size="lg">Buy Source Code — £99</CyanButton>
               </Link>
               <span className="font-body text-[13px] text-[var(--text-muted)]">
                 One-time payment · Full commercial rights
