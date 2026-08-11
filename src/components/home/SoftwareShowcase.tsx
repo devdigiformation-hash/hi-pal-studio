@@ -75,7 +75,7 @@ export default function SoftwareShowcase() {
 
   useEffect(() => {
     if (paused) return;
-    const t = setInterval(() => setIndex((i) => (i + 1) % count), 2600);
+    const t = setInterval(() => setIndex((i) => (i + 1) % count), 3000);
     return () => clearInterval(t);
   }, [paused, count]);
 
