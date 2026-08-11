@@ -8,6 +8,7 @@ import MonoBadge from "@/components/MonoBadge";
 import MiniHero from "@/components/inner/MiniHero";
 import TerminalBlock from "@/components/inner/TerminalBlock";
 import PageCTA from "@/components/inner/PageCTA";
+import GradientText from "@/components/GradientText";
 
 const CONTROL_GROUPS = [
   { label: "Mouse", items: ["Click", "Double-Click", "Right-Click", "Drag", "Scroll"] },
