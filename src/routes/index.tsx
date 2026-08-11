@@ -10,6 +10,7 @@ import WorkflowsSection from "@/components/home/WorkflowsSection";
 import LiveTrackingSection from "@/components/home/LiveTrackingSection";
 import BuildYourOwn from "@/components/home/BuildYourOwn";
 import VisionShowcase from "@/components/home/VisionShowcase";
+import SourceCodeSection from "@/components/home/SourceCodeSection";
 import ComparisonMatrix from "@/components/home/ComparisonMatrix";
 import UseCases from "@/components/home/UseCases";
 import SecuritySection from "@/components/home/SecuritySection";
