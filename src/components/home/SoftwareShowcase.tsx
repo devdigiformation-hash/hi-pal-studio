@@ -147,25 +147,25 @@ export default function SoftwareShowcase() {
             }}
           />
 
-          <div className="relative mx-auto aspect-[16/9] w-full max-w-5xl [transform-style:preserve-3d]">
+          <div className="relative mx-auto aspect-[16/10] w-full max-w-6xl [transform-style:preserve-3d]">
             {SLIDES.map((s, i) => {
               let off = i - index;
               if (off > count / 2) off -= count;
               if (off < -count / 2) off += count;
               const abs = Math.abs(off);
-              const hidden = abs > 2;
+              const hidden = abs > 1;
               return (
                 <motion.div
                   key={s.src}
                   aria-hidden={off !== 0}
-                  className="absolute inset-0 origin-center overflow-hidden rounded-[22px] border border-white/10 bg-[var(--bg-glass)] p-1.5 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] backdrop-blur-xl md:rounded-[30px] md:p-2.5"
-                  style={{ transformStyle: "preserve-3d" }}
+                  className="absolute left-1/2 top-0 h-full w-[80%] origin-center overflow-hidden rounded-[18px] border border-white/10 bg-[#05070B] p-1 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] md:rounded-[26px] md:p-2"
+                  style={{ transformStyle: "preserve-3d", marginLeft: "-40%" }}
                   animate={{
-                    x: `${off * 26}%`,
-                    scale: off === 0 ? 1 : 1 - abs * 0.12,
-                    rotateY: off * -22,
-                    opacity: hidden ? 0 : off === 0 ? 1 : 0.45,
-                    filter: off === 0 ? "blur(0px)" : "blur(2px)",
+                    x: `${off * 62}%`,
+                    scale: off === 0 ? 1 : 0.76,
+                    rotateY: off * -20,
+                    opacity: hidden ? 0 : off === 0 ? 1 : 0.32,
+                    filter: off === 0 ? "blur(0px)" : "blur(3px)",
                     zIndex: 10 - abs,
                   }}
                   transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
@@ -176,14 +176,7 @@ export default function SoftwareShowcase() {
                     alt={`DIGI BIZ OS — ${s.title}`}
                     loading="lazy"
                     draggable={false}
-                    className="block h-full w-full rounded-[16px] object-cover md:rounded-[22px]"
-                  />
-                  <div
-                    className="pointer-events-none absolute inset-0 rounded-[22px] md:rounded-[30px]"
-                    style={{
-                      background:
-                        "linear-gradient(160deg, rgba(255,255,255,0.10), transparent 38%)",
-                    }}
+                    className="block h-full w-full rounded-[14px] bg-[#05070B] object-contain md:rounded-[20px]"
                   />
                 </motion.div>
               );
