@@ -13,7 +13,6 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AgentsRouteImport } from './routes/agents'
 import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as DesktopOsRouteImport } from './routes/desktop-os'
-import { Route as DocsRouteImport } from './routes/docs'
 import { Route as IntegrationsRouteImport } from './routes/integrations'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as RefundRouteImport } from './routes/refund'
@@ -39,11 +38,6 @@ const CheckoutRoute = CheckoutRouteImport.update({
 const DesktopOsRoute = DesktopOsRouteImport.update({
   id: '/desktop-os',
   path: '/desktop-os',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DocsRoute = DocsRouteImport.update({
-  id: '/docs',
-  path: '/docs',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IntegrationsRoute = IntegrationsRouteImport.update({
@@ -82,7 +76,6 @@ export interface FileRoutesByFullPath {
   '/agents': typeof AgentsRoute
   '/checkout': typeof CheckoutRoute
   '/desktop-os': typeof DesktopOsRoute
-  '/docs': typeof DocsRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
   '/refund': typeof RefundRoute
@@ -95,7 +88,6 @@ export interface FileRoutesByTo {
   '/agents': typeof AgentsRoute
   '/checkout': typeof CheckoutRoute
   '/desktop-os': typeof DesktopOsRoute
-  '/docs': typeof DocsRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
   '/refund': typeof RefundRoute
@@ -109,7 +101,6 @@ export interface FileRoutesById {
   '/agents': typeof AgentsRoute
   '/checkout': typeof CheckoutRoute
   '/desktop-os': typeof DesktopOsRoute
-  '/docs': typeof DocsRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
   '/refund': typeof RefundRoute
@@ -124,7 +115,6 @@ export interface FileRouteTypes {
     | '/agents'
     | '/checkout'
     | '/desktop-os'
-    | '/docs'
     | '/integrations'
     | '/pricing'
     | '/refund'
@@ -137,7 +127,6 @@ export interface FileRouteTypes {
     | '/agents'
     | '/checkout'
     | '/desktop-os'
-    | '/docs'
     | '/integrations'
     | '/pricing'
     | '/refund'
@@ -150,7 +139,6 @@ export interface FileRouteTypes {
     | '/agents'
     | '/checkout'
     | '/desktop-os'
-    | '/docs'
     | '/integrations'
     | '/pricing'
     | '/refund'
@@ -164,7 +152,6 @@ export interface RootRouteChildren {
   AgentsRoute: typeof AgentsRoute
   CheckoutRoute: typeof CheckoutRoute
   DesktopOsRoute: typeof DesktopOsRoute
-  DocsRoute: typeof DocsRoute
   IntegrationsRoute: typeof IntegrationsRoute
   PricingRoute: typeof PricingRoute
   RefundRoute: typeof RefundRoute
@@ -201,13 +188,6 @@ declare module '@tanstack/react-router' {
       path: '/desktop-os'
       fullPath: '/desktop-os'
       preLoaderRoute: typeof DesktopOsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/docs': {
-      id: '/docs'
-      path: '/docs'
-      fullPath: '/docs'
-      preLoaderRoute: typeof DocsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/integrations': {
@@ -260,7 +240,6 @@ const rootRouteChildren: RootRouteChildren = {
   AgentsRoute: AgentsRoute,
   CheckoutRoute: CheckoutRoute,
   DesktopOsRoute: DesktopOsRoute,
-  DocsRoute: DocsRoute,
   IntegrationsRoute: IntegrationsRoute,
   PricingRoute: PricingRoute,
   RefundRoute: RefundRoute,
@@ -271,3 +250,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
