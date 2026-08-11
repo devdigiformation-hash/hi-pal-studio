@@ -18,7 +18,7 @@ const FAQS = [
   },
   {
     q: "Is this really a one-time payment?",
-    a: "Yes. Every package is a single one-time payment — $100 lifetime access, $400 for the branded custom build, $700 for the full source code licence. No monthly software fees.",
+    a: "Yes. Every package is a single one-time payment — £50 lifetime access, £499 for the branded custom build, £299 for the full source code licence. No monthly software fees.",
   },
   {
     q: "What does the customised package include?",
