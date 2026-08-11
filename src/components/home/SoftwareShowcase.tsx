@@ -94,7 +94,7 @@ export default function SoftwareShowcase() {
         </p>
 
         <div
-          className="relative mt-12 select-none"
+          className="relative mt-12 select-none overflow-x-clip"
           style={{ perspective: "1800px" }}
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
