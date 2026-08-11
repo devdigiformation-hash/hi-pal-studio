@@ -18,7 +18,7 @@ const FAQS = [
   },
   {
     q: "Is this really a one-time payment?",
-    a: "Yes. Every package is a single one-time payment — £50 lifetime access, £399 for the branded custom build, £299 for the full source code licence. No monthly software fees.",
+    a: "Yes. Every package is a single one-time payment — £50 lifetime access, £299 for the full source code licence, £399 for the branded custom build. No monthly software fees.",
   },
   {
     q: "What does the customised package include?",
@@ -59,19 +59,19 @@ const TIERS: {
 }[] = [
   { id: "lifetime", eyebrow: "Lifetime Access", accent: "var(--cyan)", cta: "Get Lifetime Access" },
   {
+    id: "source_code",
+    eyebrow: "Source Code",
+    accent: "var(--purple)",
+    badge: "Full Ownership",
+    cta: "Buy Source Code",
+  },
+  {
     id: "custom_build",
     eyebrow: "Customised Build",
     accent: "var(--cyan)",
     badge: "Most Popular",
     highlight: true,
     cta: "Order Custom Build",
-  },
-  {
-    id: "source_code",
-    eyebrow: "Source Code",
-    accent: "var(--purple)",
-    badge: "Full Ownership",
-    cta: "Buy Source Code",
   },
 ];
 
