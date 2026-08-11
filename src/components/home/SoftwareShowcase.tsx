@@ -156,7 +156,7 @@ export default function SoftwareShowcase() {
             }}
           />
 
-          <div className="relative mx-auto aspect-[16/8.4] w-full max-w-[340px] sm:max-w-xl md:max-w-2xl lg:max-w-3xl [transform-style:preserve-3d]">
+          <div className="relative mx-auto aspect-[16/9] w-full max-w-[280px] sm:max-w-md md:max-w-lg lg:max-w-xl [transform-style:preserve-3d]">
             {SLIDES.map((s, i) => {
               let off = i - index;
               if (off > count / 2) off -= count;
@@ -167,11 +167,11 @@ export default function SoftwareShowcase() {
                 <motion.div
                   key={s.src}
                   aria-hidden={off !== 0}
-                  className="absolute left-1/2 top-0 aspect-[16/8.4] w-[92%] origin-center overflow-hidden rounded-[16px] border border-white/10 bg-[#05070B] p-1 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] md:w-[84%] md:rounded-[26px] md:p-2"
-                  style={{ transformStyle: "preserve-3d", marginLeft: isMobile ? "-46%" : "-42%" }}
+                  className="absolute left-1/2 top-0 aspect-[16/9] w-[88%] origin-center overflow-hidden rounded-[16px] border border-white/10 bg-[#05070B] p-1 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] md:w-[80%] md:rounded-[26px] md:p-2"
+                  style={{ transformStyle: "preserve-3d", marginLeft: isMobile ? "-44%" : "-40%" }}
                   animate={{
-                    x: isMobile ? `${off * 100}%` : `${off * 62}%`,
-                    scale: off === 0 ? 1 : isMobile ? 0.9 : 0.76,
+                    x: isMobile ? `${off * 100}%` : `${off * 56}%`,
+                    scale: off === 0 ? 1 : isMobile ? 0.9 : 0.74,
                     rotateY: isMobile ? 0 : off * -20,
                     opacity: hidden ? 0 : off === 0 ? 1 : 0.32,
                     filter: off === 0 ? "blur(0px)" : "blur(3px)",
@@ -180,14 +180,22 @@ export default function SoftwareShowcase() {
                   transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
                   onClick={() => off !== 0 && go(off)}
                 >
-                  <div className="relative h-full w-full overflow-hidden rounded-[14px] bg-[#05070B] md:rounded-[20px]">
-                  <img
-                    src={s.src}
-                    alt={`DIGI BIZ OS — ${s.title}`}
-                    loading="lazy"
-                    draggable={false}
-                    className="absolute left-0 top-0 block h-auto w-full object-top"
-                  />
+                  <div className="relative flex h-full w-full items-start justify-center overflow-hidden rounded-[14px] bg-[#05070B] md:rounded-[20px]">
+                    <img
+                      src={s.src}
+                      alt={`DIGI BIZ OS — ${s.title}`}
+                      loading="lazy"
+                      draggable={false}
+                      className="h-full w-full object-contain object-top"
+                    />
+                    {/* curved bottom mask hides OS taskbar while keeping screenshot un-zoomed */}
+                    <div
+                      className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[10%]"
+                      style={{
+                        background: "linear-gradient(to top, rgba(5,7,11,1) 0%, rgba(5,7,11,0.85) 45%, transparent 100%)",
+                        borderRadius: "0 0 14px 14px",
+                      }}
+                    />
                   </div>
                 </motion.div>
               );
