@@ -54,7 +54,7 @@ export default function FinalCTA() {
           <EyebrowLabel text="Get Started Today" />
           <h2 className="mt-4 font-display text-[32px] font-bold leading-[1.1] tracking-[-0.03em] md:text-[48px]">
             <GradientText from="#2FE0C8" to="#8B7CF6">
-              Ready to Transform How You Work on Desktop?
+              Ready to Command Your Desktop?
             </GradientText>
           </h2>
           <p className="mx-auto mt-6 max-w-[560px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)] md:text-[16px]">

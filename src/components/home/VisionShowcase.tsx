@@ -34,7 +34,7 @@ export default function VisionShowcase() {
         <div className="text-center">
           <EyebrowLabel text="Multimodal Intelligence" color="var(--amber)" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[34px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[48px]">
-            Your AI Sees What You See.
+            It Sees. <GradientText from="#F5A623" to="#8B7CF6">It Understands. It Acts.</GradientText>
           </h2>
           <p className="reveal-item delay-2 mx-auto mt-5 max-w-[620px] font-body text-[15px] leading-[1.75] text-[var(--text-secondary)]">
             Stream your screen live to the vision engine and receive instant analysis, code review, bug
