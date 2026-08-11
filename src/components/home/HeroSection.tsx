@@ -199,7 +199,7 @@ export default function HeroSection() {
             className="mt-5 max-w-[580px] font-body text-[16px] leading-[1.75] text-[var(--text-secondary)] md:text-[18px]"
           >
             DIGI BIZ OS turns your voice into a full business operating system — 500+ AI skills,
-            150+ built-in desktop tools and collaborative AI agents that research, automate and
+            150+ built-in mixed tools and collaborative AI agents that research, automate and
             deliver work for your business.
           </motion.p>
 

@@ -9,7 +9,7 @@ import MonoBadge from "@/components/MonoBadge";
 const FLOW = [
   { label: "Trigger", detail: "Voice, schedule or event", color: "var(--cyan)" },
   { label: "Agents", detail: "Work split across multi agents", color: "var(--purple)" },
-  { label: "Tools", detail: "150+ built-in desktop tools fire", color: "var(--amber)" },
+  { label: "Tools", detail: "150+ built-in mixed tools fire", color: "var(--amber)" },
   { label: "Delivered", detail: "Report, message or file", color: "#3DDC84" },
 ];
 
