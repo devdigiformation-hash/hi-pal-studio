@@ -117,11 +117,23 @@ export default function PricingPage() {
                   </div>
                   <div className="mt-4 flex items-end gap-2">
                     <span className="font-display text-[44px] font-extrabold leading-none text-[var(--text-primary)]">
-                      £{plan.priceGbp}
+                      {formatPrice(plan.priceGbp, code)}
                     </span>
-                    <span className="pb-1 font-mono text-[13px] text-[var(--text-muted)]">
-                      / ${plan.priceUsd}
+                    {plan.compareGbp ? (
+                      <span className="pb-1 font-mono text-[14px] text-[var(--text-muted)] line-through">
+                        {formatPrice(plan.compareGbp, code)}
+                      </span>
+                    ) : null}
+                  </div>
+                  <div className="mt-2 flex flex-wrap items-center gap-2 font-mono text-[12px] text-[var(--text-muted)]">
+                    <span>
+                      {formatPrice(plan.priceGbp, "PKR")} · {formatPrice(plan.priceGbp, "USD")}
                     </span>
+                    {plan.compareGbp ? (
+                      <span className="rounded-full border border-[var(--cyan-border)] px-2 py-0.5 text-[10.5px] uppercase tracking-[0.12em] text-[var(--cyan)]">
+                        Save {Math.round(((plan.compareGbp - plan.priceGbp) / plan.compareGbp) * 100)}%
+                      </span>
+                    ) : null}
                   </div>
                   <p className="mt-3 font-body text-[14px] leading-[1.7] text-[var(--text-secondary)]">
                     {plan.blurb}
