@@ -156,7 +156,7 @@ export default function SoftwareShowcase() {
             }}
           />
 
-          <div className="relative mx-auto aspect-[16/9] w-full max-w-[300px] sm:max-w-lg md:max-w-xl lg:max-w-2xl [transform-style:preserve-3d]">
+          <div className="relative mx-auto aspect-[16/8.5] w-full max-w-[280px] sm:max-w-md md:max-w-lg lg:max-w-xl [transform-style:preserve-3d]">
             {SLIDES.map((s, i) => {
               let off = i - index;
               if (off > count / 2) off -= count;
@@ -167,10 +167,10 @@ export default function SoftwareShowcase() {
                 <motion.div
                   key={s.src}
                   aria-hidden={off !== 0}
-                  className="absolute left-1/2 top-0 aspect-[16/9] w-[88%] origin-center overflow-hidden rounded-[16px] border border-white/10 bg-[#05070B] p-1 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] md:w-[80%] md:rounded-[26px] md:p-2"
+                  className="absolute left-1/2 top-0 aspect-[16/8.5] w-[88%] origin-center overflow-hidden rounded-[16px] border border-white/10 bg-[#05070B] p-1 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] md:w-[80%] md:rounded-[26px] md:p-2"
                   style={{ transformStyle: "preserve-3d", marginLeft: isMobile ? "-44%" : "-40%" }}
                   animate={{
-                    x: isMobile ? `${off * 100}%` : `${off * 58}%`,
+                    x: isMobile ? `${off * 100}%` : `${off * 56}%`,
                     scale: off === 0 ? 1 : isMobile ? 0.9 : 0.74,
                     rotateY: isMobile ? 0 : off * -20,
                     opacity: hidden ? 0 : off === 0 ? 1 : 0.32,
@@ -180,13 +180,13 @@ export default function SoftwareShowcase() {
                   transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
                   onClick={() => off !== 0 && go(off)}
                 >
-                  <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-[14px] bg-[#05070B] md:rounded-[20px]">
+                  <div className="relative flex h-full w-full items-start justify-center overflow-hidden rounded-[14px] bg-[#05070B] md:rounded-[20px]">
                     <img
                       src={s.src}
                       alt={`DIGI BIZ OS — ${s.title}`}
                       loading="lazy"
                       draggable={false}
-                      className="h-full w-full object-contain"
+                      className="h-full w-full object-contain object-top"
                     />
                   </div>
                 </motion.div>
