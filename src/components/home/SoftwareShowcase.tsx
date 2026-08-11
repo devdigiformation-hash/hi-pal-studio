@@ -124,7 +124,7 @@ export default function SoftwareShowcase() {
 
   useEffect(() => {
     if (paused) return;
-    const t = setInterval(() => setIndex((i) => (i + 1) % count), 5200);
+    const t = setInterval(() => setIndex((i) => (i + 1) % count), 2600);
     return () => clearInterval(t);
   }, [paused, count]);
 
@@ -156,7 +156,7 @@ export default function SoftwareShowcase() {
             }}
           />
 
-          <div className="relative mx-auto aspect-video w-full max-w-[340px] sm:max-w-xl md:max-w-2xl lg:max-w-3xl [transform-style:preserve-3d]">
+          <div className="relative mx-auto aspect-[16/8.4] w-full max-w-[340px] sm:max-w-xl md:max-w-2xl lg:max-w-3xl [transform-style:preserve-3d]">
             {SLIDES.map((s, i) => {
               let off = i - index;
               if (off > count / 2) off -= count;
@@ -167,7 +167,7 @@ export default function SoftwareShowcase() {
                 <motion.div
                   key={s.src}
                   aria-hidden={off !== 0}
-                  className="absolute left-1/2 top-0 aspect-video w-[92%] origin-center overflow-hidden rounded-[14px] border border-white/10 bg-[#05070B] p-1 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] md:w-[84%] md:rounded-[26px] md:p-2"
+                  className="absolute left-1/2 top-0 aspect-[16/8.4] w-[92%] origin-center overflow-hidden rounded-[16px] border border-white/10 bg-[#05070B] p-1 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] md:w-[84%] md:rounded-[26px] md:p-2"
                   style={{ transformStyle: "preserve-3d", marginLeft: isMobile ? "-46%" : "-42%" }}
                   animate={{
                     x: isMobile ? `${off * 100}%` : `${off * 62}%`,
@@ -180,13 +180,15 @@ export default function SoftwareShowcase() {
                   transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
                   onClick={() => off !== 0 && go(off)}
                 >
+                  <div className="relative h-full w-full overflow-hidden rounded-[14px] bg-[#05070B] md:rounded-[20px]">
                   <img
                     src={s.src}
                     alt={`DIGI BIZ OS — ${s.title}`}
                     loading="lazy"
                     draggable={false}
-                    className="block h-full w-full rounded-[14px] bg-[#05070B] object-contain md:rounded-[20px]"
+                    className="absolute left-0 top-0 block h-auto w-full object-top"
                   />
+                  </div>
                 </motion.div>
               );
             })}
