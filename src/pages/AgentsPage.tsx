@@ -55,7 +55,7 @@ export default function AgentTownPage() {
     >
       <MiniHero
         eyebrow="Multi-Agent Orchestration"
-        title="10+ Agents."
+        title="Multi Agents."
         gradientTitle="One Command."
         subtitle="Parallel autonomous execution at enterprise scale. Speak once. Your entire AI workforce mobilizes."
       />
@@ -68,13 +68,13 @@ export default function AgentTownPage() {
               Concurrent Multi-Agent Execution.
             </h2>
             <p className="reveal-item delay-2 mt-5 max-w-[560px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
-              DIGI BIZ OS delegates complex work to 10+ specialised
+              DIGI BIZ OS delegates complex work to multi specialised
               sub-agents running simultaneously. Research, code audit, data extraction, email
               drafting, and browser automation — all at once.
             </p>
 
             <div className="reveal-item delay-3 mt-7 flex flex-wrap gap-2">
-              <MonoBadge>10+ Concurrent Agents</MonoBadge>
+              <MonoBadge>Multi Concurrent Agents</MonoBadge>
               <MonoBadge color="var(--purple)">115+ Built-in Tools</MonoBadge>
               <MonoBadge color="var(--amber)">Multi-Agent Platform</MonoBadge>
               <MonoBadge color="var(--pink)">500+ AI Skills</MonoBadge>
@@ -112,7 +112,7 @@ export default function AgentTownPage() {
               </span>
               <span className="inline-flex items-center gap-2 font-code text-[11px] text-[var(--success)]">
                 <ActivePulse />
-                10+ ACTIVE
+                MULTI ACTIVE
               </span>
             </div>
 

@@ -29,7 +29,7 @@ const COPY: Record<Tab, { title: string; body: string; badges: string[]; bullets
     bullets: [
       "Visual workflow builder",
       "Cron & event triggers",
-      "10+ concurrent sub-agents",
+      "multi concurrent sub-agents",
       "Retry + audit trail per step",
     ],
   },
