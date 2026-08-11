@@ -13,6 +13,7 @@ import liveTracking from "@/assets/os-live-tracking.png.asset.json";
 import digiAi from "@/assets/os-digi-ai.png.asset.json";
 import digiCode from "@/assets/os-digi-code.png.asset.json";
 import digiDocs from "@/assets/os-digi-docs.png.asset.json";
+import digiTools from "@/assets/os-digi-tools.png.asset.json";
 
 const SLIDES = [
   {
@@ -68,6 +69,12 @@ const SLIDES = [
     tag: "Digi Docs",
     title: "A full document suite, offline and on your machine.",
     body: "Merge, compare, compress, convert, OCR, redact, sign, timestamp, password-protect and watermark — every document tool one search away.",
+  },
+  {
+    src: digiTools.url,
+    tag: "Digi Tools",
+    title: "100+ offline utilities, always at hand.",
+    body: "Crypto, encoding, converters, generators and analysers — searchable, favouritable and fully offline, so nothing you paste ever leaves the machine.",
   },
 ];
 
