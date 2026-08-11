@@ -1,14 +1,16 @@
 const ITEMS = [
+  "Digi AI · Digi Code · Digi Docs",
+  "Digi Tools · Digi Flow · Digi Jobs",
+  "Digi Tasks · Digi Office",
+  "Live Tracking",
+  "Memory · Soul · Skills",
+  "Screen Sharing & Camera",
+  "Multi Agents & Tools",
   "115+ Built-in Tools",
   "500+ AI Skills",
-  "Multi Autonomous Sub-Agents",
-  "<200ms Voice Stream Latency",
+  "Live Bilingual Transcript",
   "Multi-MCP Ready",
-  "Browser Automation Built In",
-  "Professional CLI Workspace",
-  "Screen Sharing & Camera",
-  "Folder & Document Intelligence",
-  "WhatsApp · Email · Discord",
+  "Mobile Companion",
 ];
 
 export default function TelemetryTicker() {
