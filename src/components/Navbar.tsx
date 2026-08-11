@@ -9,13 +9,12 @@ import GhostButton from "./GhostButton";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
-  { label: "Product", to: "/" },
+  { label: "Home", to: "/" },
   { label: "Voice AI", to: "/voice-ai" },
   { label: "Desktop OS", to: "/desktop-os" },
   { label: "Agents", to: "/agents" },
   { label: "Integrations", to: "/integrations" },
   { label: "Pricing", to: "/pricing" },
-  { label: "Docs", to: "/docs" },
 ] as const;
 
 export default function Navbar() {

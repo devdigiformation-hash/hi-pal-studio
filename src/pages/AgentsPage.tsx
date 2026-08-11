@@ -9,6 +9,8 @@ import MiniHero from "@/components/inner/MiniHero";
 import TerminalBlock from "@/components/inner/TerminalBlock";
 import PageCTA from "@/components/inner/PageCTA";
 import GradientText from "@/components/GradientText";
+import WorkflowsSection from "@/components/home/WorkflowsSection";
+import CapabilityVault from "@/components/home/CapabilityVault";
 
 const WORKFLOWS = [
   { id: "Workflow A", steps: ["Voice", "Orchestrator", "5 agents", "Report"] },
@@ -188,6 +190,9 @@ export default function AgentTownPage() {
           </div>
         </div>
       </SectionWrapper>
+
+      <WorkflowsSection />
+      <CapabilityVault />
 
       <PageCTA
         title="Mobilize Your Entire AI Workforce."

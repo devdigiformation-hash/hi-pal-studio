@@ -13,6 +13,8 @@ import TerminalBlock from "@/components/inner/TerminalBlock";
 import TickList from "@/components/inner/TickList";
 import PageCTA from "@/components/inner/PageCTA";
 import GradientText from "@/components/GradientText";
+import ModelsSection from "@/components/home/ModelsSection";
+import LiveTrackingSection from "@/components/home/LiveTrackingSection";
 
 const STATES = ["disconnected", "connecting", "listening", "thinking", "speaking"];
 
@@ -178,6 +180,9 @@ export default function VoiceAIPage() {
           </GlassCard>
         </div>
       </SectionWrapper>
+
+      <ModelsSection />
+      <LiveTrackingSection />
 
       <PageCTA
         title="Stop Typing. Start Winning."

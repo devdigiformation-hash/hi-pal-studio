@@ -9,6 +9,8 @@ import TerminalBlock from "@/components/inner/TerminalBlock";
 import TickList from "@/components/inner/TickList";
 import PageCTA from "@/components/inner/PageCTA";
 import GradientText from "@/components/GradientText";
+import BuildYourOwn from "@/components/home/BuildYourOwn";
+import CodebaseIntelligence from "@/components/home/CodebaseIntelligence";
 
 const CHANNELS = [
   {
@@ -157,6 +159,9 @@ export default function IntegrationsPage() {
           </GlassCard>
         </div>
       </SectionWrapper>
+
+      <CodebaseIntelligence />
+      <BuildYourOwn />
 
       <PageCTA
         title="Every Channel. One Voice."
