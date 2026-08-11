@@ -26,7 +26,7 @@ const FAQS = [
   },
   {
     q: "What do I get with the source code licence?",
-    a: "Full product ownership with private developer access, complete documentation, the right to build and distribute your own installers, resale rights and 12 months of update pulls.",
+    a: "Full product ownership with private developer access, complete documentation and the right to build and distribute your own installers. You can customise every screen, workflow and agent to automate your business A to Z, plus resale rights and 12 months of update pulls.",
   },
   {
     q: "Am I charged for AI API usage?",
