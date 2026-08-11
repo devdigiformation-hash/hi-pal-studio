@@ -17,6 +17,7 @@ import digiTools from "@/assets/os-digi-tools.png.asset.json";
 import digiCli from "@/assets/os-digi-cli.png.asset.json";
 import digiMcp from "@/assets/os-digi-mcp.png.asset.json";
 import digiSkills from "@/assets/os-skills.png.asset.json";
+import digiDesktopTools from "@/assets/os-desktop-tools.png.asset.json";
 
 const SLIDES = [
   {
@@ -96,6 +97,12 @@ const SLIDES = [
     tag: "Skills",
     title: "500+ skills, every one switchable.",
     body: "API calls, calculation, data analysis, document parsing, file transforms, web research and more — each skill shows its runner, its live status and a one-tap on/off.",
+  },
+  {
+    src: digiDesktopTools.url,
+    tag: "Desktop Tools",
+    title: "150+ built-in tools that actually drive your machine.",
+    body: "Folder analysis, screenshot understanding, bulk file operations and renames, clipboard, brightness, power and application control — real desktop automation, one switch each.",
   },
 ];
 
