@@ -111,7 +111,7 @@ export interface PaymentMethod {
 export const WHATSAPP_NUMBER = "923164467464";
 export const SUPPORT_EMAIL = "info@digiformation.co.uk";
 
-const MOBILE_ACCOUNT = "0303 4226759";
+const MOBILE_ACCOUNT = "0316 4467464";
 const ACCOUNT_TITLE = "Muhammad Haroon";
 
 function mobileWallet(id: MethodId, label: string): PaymentMethod {
