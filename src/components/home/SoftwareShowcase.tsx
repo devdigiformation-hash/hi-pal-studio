@@ -10,6 +10,7 @@ import graph from "@/assets/os-graph.png.asset.json";
 import transcript from "@/assets/os-transcript.png.asset.json";
 import runtime from "@/assets/os-runtime.png.asset.json";
 import liveTracking from "@/assets/os-live-tracking.png.asset.json";
+import digiAi from "@/assets/os-digi-ai.png.asset.json";
 
 const SLIDES = [
   {
@@ -47,6 +48,12 @@ const SLIDES = [
     tag: "Live Tracking",
     title: "Every action of the session, on one timeline.",
     body: "Live events and tasks with reasoning, routing, execution, I/O and lifecycle filters — real events only, nothing simulated.",
+  },
+  {
+    src: digiAi.url,
+    tag: "Digi AI",
+    title: "Chat, personas, agents and coding in one playground.",
+    body: "Multi-turn chat with any model, an agent that plans tasks and writes code, custom personas, provider control and a 40+ mini app store — all in one workspace.",
   },
 ];
 
