@@ -28,7 +28,7 @@ const TIERS = [
     id: "custom_build" as const,
     badge: "Most Popular",
     name: "Customised + Your Branding",
-    price: "£499",
+    price: "£399",
     note: "White-label build with 400+ workflows.",
     features: [
       "Everything in Lifetime",

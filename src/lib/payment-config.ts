@@ -44,9 +44,9 @@ export const PLANS: Record<PlanId, Plan> = {
     badge: "White Label · Automation",
     blurb:
       "Your logo, your name, your workflows. A fully branded build of DIGI BIZ OS with 400+ automation workflows configured for your business.",
-    pricePkr: 180000,
-    priceUsd: 640,
-    priceGbp: 499,
+    pricePkr: 144000,
+    priceUsd: 510,
+    priceGbp: 399,
     billingNote: "One-time payment · Custom build",
     includes: [
       "Everything in Lifetime Access",
