@@ -89,7 +89,7 @@ export default function DesktopOSPage() {
       <MiniHero
         eyebrow="Native Desktop Control"
         title="Your Desktop."
-        gradientTitle="Fully Automated."
+        gradientTitle="Your Command Center."
         subtitle="150+ built-in desktop tools. Pixel-perfect desktop control. Complete OS-level execution via voice command."
       />
 
@@ -98,7 +98,7 @@ export default function DesktopOSPage() {
           <div>
             <EyebrowLabel text="Desktop Control Center" />
             <h2 className="reveal-item delay-1 mt-4 font-display text-[30px] font-bold leading-[1.15] tracking-[-0.03em] text-[var(--text-primary)] md:text-[42px]">
-              Click. Type. Control. Any App. By Voice.
+              Click, Type, Control — <GradientText>All by Voice.</GradientText>
             </h2>
             <p className="reveal-item delay-2 mt-5 max-w-[560px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
               DIGI BIZ OS takes voice-triggered commands and
@@ -139,7 +139,7 @@ export default function DesktopOSPage() {
           <div className="text-center">
             <EyebrowLabel text="Command Library" color="var(--purple)" />
             <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-              104+ Native System Bridges.
+              104+ Bridges to <GradientText>Total Control.</GradientText>
             </h2>
           </div>
 
@@ -167,7 +167,7 @@ export default function DesktopOSPage() {
       </SectionWrapper>
 
       <PageCTA
-        title="One Voice. Total Desktop Mastery."
+        title="One Voice. Total Desktop Domination."
         badges={["Instant Desktop Control", "150+ Desktop Tools", "Windows · macOS soon"]}
         cta="Download for Windows"
         icon={<WindowsIcon size={17} />}
