@@ -16,7 +16,7 @@ const CASES: { icon: LucideIcon; color: string; title: string; body: string; cha
     icon: Terminal,
     color: "var(--purple)",
     title: "Developers & Engineers",
-    body: "A coding workspace with repo and branch context, 40+ MCP servers, local CLI runners, 500+ skills and 150+ desktop tools — all reachable by voice.",
+    body: "A coding workspace with repo and branch context, 40+ MCP servers, local CLI runners, 500+ skills and 150+ mixed tools — all reachable by voice.",
     chain: ["Voice", "Digi Code", "CLI Runners", "Ship"],
   },
   {

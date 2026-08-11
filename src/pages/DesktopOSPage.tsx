@@ -91,7 +91,7 @@ export default function DesktopOSPage() {
         eyebrow="Native Desktop Control"
         title="Your Desktop."
         gradientTitle="Your Command Center."
-        subtitle="150+ built-in desktop tools. Pixel-perfect desktop control. Complete OS-level execution via voice command."
+        subtitle="150+ built-in mixed tools. Pixel-perfect desktop control. Complete OS-level execution via voice command."
       />
 
       <SectionWrapper id="control-center">

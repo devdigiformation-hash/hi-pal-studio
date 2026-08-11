@@ -12,7 +12,7 @@ import GradientText from "@/components/GradientText";
 
 const WORKFLOWS = [
   { id: "Workflow A", steps: ["Voice", "Orchestrator", "5 agents", "Report"] },
-  { id: "Workflow B", steps: ["Voice", "Browser agent", "150+ desktop tools", "Data"] },
+  { id: "Workflow B", steps: ["Voice", "Browser agent", "150+ mixed tools", "Data"] },
   { id: "Workflow C", steps: ["Voice", "AI Skills", "500+ skills", "Execute"] },
 ];
 
