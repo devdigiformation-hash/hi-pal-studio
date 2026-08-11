@@ -44,9 +44,9 @@ export const PLANS: Record<PlanId, Plan> = {
     badge: "Developer · Full Ownership",
     blurb:
       "Buy the complete source code and rebuild DIGI BIZ OS around your business. Customise every screen, workflow and agent, then automate your operations A to Z — with full commercial rights.",
-    pricePkr: 108000,
-    priceUsd: 385,
-    priceGbp: 299,
+    pricePkr: 72000,
+    priceUsd: 255,
+    priceGbp: 199,
     billingNote: "One-time payment · Source code licence",
     includes: [
       "Everything in Lifetime Access",
@@ -68,9 +68,9 @@ export const PLANS: Record<PlanId, Plan> = {
     badge: "White Label · Automation",
     blurb:
       "Your logo, your name, your workflows. A fully branded build of DIGI BIZ OS with 400+ automation workflows configured for your business.",
-    pricePkr: 144000,
-    priceUsd: 510,
-    priceGbp: 399,
+    pricePkr: 108000,
+    priceUsd: 383,
+    priceGbp: 299,
     billingNote: "One-time payment · Custom build",
     includes: [
       "Everything in Lifetime Access",
