@@ -16,6 +16,7 @@ import digiDocs from "@/assets/os-digi-docs.png.asset.json";
 import digiTools from "@/assets/os-digi-tools.png.asset.json";
 import digiCli from "@/assets/os-digi-cli.png.asset.json";
 import digiMcp from "@/assets/os-digi-mcp.png.asset.json";
+import digiSkills from "@/assets/os-skills.png.asset.json";
 
 const SLIDES = [
   {
@@ -89,6 +90,12 @@ const SLIDES = [
     tag: "Digi MCP",
     title: "Multi-MCP ready — 40+ servers, one switchboard.",
     body: "Desktop automation, research, browsing, documentation and private routing servers imported and toggled live, so your agents gain new powers instantly.",
+  },
+  {
+    src: digiSkills.url,
+    tag: "Skills",
+    title: "500+ skills, every one switchable.",
+    body: "API calls, calculation, data analysis, document parsing, file transforms, web research and more — each skill shows its runner, its live status and a one-tap on/off.",
   },
 ];
 
