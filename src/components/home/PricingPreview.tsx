@@ -28,7 +28,7 @@ const TIERS = [
     id: "source_code" as const,
     badge: "Full Ownership",
     name: "Source Code Licence",
-    price: "£199",
+    price: "£99",
     note: "Own the code. Automate your business A to Z.",
     features: [
       "Everything in Lifetime",
@@ -47,7 +47,7 @@ const TIERS = [
     id: "custom_build" as const,
     badge: "Most Popular",
     name: "Customised + Your Branding",
-    price: "£299",
+    price: "£199",
     note: "White-label build with 400+ workflows.",
     features: [
       "Everything in Lifetime",
