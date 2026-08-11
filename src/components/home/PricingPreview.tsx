@@ -47,10 +47,12 @@ const TIERS = [
     badge: "Full Ownership",
     name: "Source Code Licence",
     price: "$700",
-    note: "Full ownership, yours to ship.",
+    note: "Own the code. Automate your business A to Z.",
     features: [
       "Everything in Customised",
       "Complete source code access",
+      "Customise every feature for your brand",
+      "Build end-to-end business automation",
       "Private developer access",
       "Build your own installers",
       "Developer documentation",

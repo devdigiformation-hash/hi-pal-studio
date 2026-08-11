@@ -62,21 +62,23 @@ export const PLANS: Record<PlanId, Plan> = {
     name: "Full Source Code Licence",
     badge: "Developer · Full Ownership",
     blurb:
-      "Complete ownership of DIGI BIZ OS — modify it, rebrand it and ship it as your own product. No lock-in.",
+      "Buy the complete source code and rebuild DIGI BIZ OS around your business. Customise every screen, workflow and agent, then automate your operations A to Z — with full commercial rights.",
     pricePkr: 196000,
     priceUsd: 700,
     billingNote: "One-time payment · Source code licence",
     includes: [
       "Everything in the Customised package",
       "Complete source code (desktop app + agent engine)",
-      "Private developer access",
+      "Customise every feature for your business",
+      "Build end-to-end business automation A to Z",
+      "Private developer access and repository handover",
       "Build, sign and distribute your own installers",
       "Architecture and developer documentation",
       "Resale / commercial usage rights",
       "Technical walkthrough with our engineers",
       "12 months of update pulls",
     ],
-    bestFor: ["Software Houses", "Dev Teams", "Resellers"],
+    bestFor: ["Software Houses", "Dev Teams", "Resellers", "Enterprise Builders"],
   },
 };
 
