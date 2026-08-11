@@ -2,6 +2,7 @@ import { Briefcase, Building2, Terminal, type LucideIcon } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
+import GradientText from "@/components/GradientText";
 
 const CASES: { icon: LucideIcon; color: string; title: string; body: string; chain: string[] }[] = [
   {

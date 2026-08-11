@@ -3,6 +3,7 @@ import { Check, X } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
+import GradientText from "@/components/GradientText";
 
 const ROWS: [string, boolean, boolean, boolean][] = [
   ["Native Desktop Mouse & Keyboard Control", true, false, false],

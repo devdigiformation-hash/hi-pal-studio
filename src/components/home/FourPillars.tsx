@@ -3,6 +3,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import MonoBadge from "@/components/MonoBadge";
+import GradientText from "@/components/GradientText";
 
 interface Pillar {
   icon: LucideIcon;
