@@ -18,7 +18,7 @@ const FAQS = [
   },
   {
     q: "Is this really a one-time payment?",
-    a: "Yes. Every package is a single one-time payment — $100 lifetime access, $400 for the branded custom build, $700 for the full source code licence. No monthly software fees.",
+    a: "Yes. Every package is a single one-time payment — £50 lifetime access, £499 for the branded custom build, £299 for the full source code licence. No monthly software fees.",
   },
   {
     q: "What does the customised package include?",
@@ -117,10 +117,10 @@ export default function PricingPage() {
                   </div>
                   <div className="mt-4 flex items-end gap-2">
                     <span className="font-display text-[44px] font-extrabold leading-none text-[var(--text-primary)]">
-                      ${plan.priceUsd}
+                      £{plan.priceGbp}
                     </span>
                     <span className="pb-1 font-mono text-[13px] text-[var(--text-muted)]">
-                      / Rs {plan.pricePkr.toLocaleString("en-US")}
+                      / ${plan.priceUsd}
                     </span>
                   </div>
                   <p className="mt-3 font-body text-[14px] leading-[1.7] text-[var(--text-secondary)]">
