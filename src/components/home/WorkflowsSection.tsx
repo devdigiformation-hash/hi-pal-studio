@@ -27,7 +27,7 @@ export default function WorkflowsSection() {
         <div className="text-center">
           <EyebrowLabel text="Workflows & Scheduling" color="var(--purple)" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            Build Unlimited Workflows. <GradientText from="#8B7CF6" to="#2FE0C8">Then Let Them Run.</GradientText>
+            Automate the Boring. <GradientText from="#8B7CF6" to="#2FE0C8">Scale the Big.</GradientText>
           </h2>
           <p className="reveal-item delay-2 mx-auto mt-5 max-w-[740px] font-body text-[16px] leading-[1.8] text-[var(--text-secondary)] md:text-[17px]">
             Turn any repeatable part of your business into an automated workflow — created in

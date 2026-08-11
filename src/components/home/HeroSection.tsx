@@ -20,28 +20,22 @@ import MonoBadge from "@/components/MonoBadge";
 import ActivePulse from "@/components/ActivePulse";
 import GradientText from "@/components/GradientText";
 
-const HEADLINE = "Operate Your Desktop at the".split(" ");
+const HEADLINE = "Your Voice Is the".split(" ");
 
 const CYCLE = [
-  "Your Desktop Moves.",
-  "Multi Agents Execute.",
-  "Automation Begins.",
-  "Everything Changes.",
-  "Work Transforms.",
-  "The Future Runs.",
-  "Empires Get Built.",
-  "Your Company Runs Itself.",
-  "Deadlines Disappear.",
-  "Output Multiplies 10x.",
+  "Just speak. It executes.",
+  "One command. Infinite output.",
+  "Your desktop obeys.",
+  "The future runs locally.",
+  "Work becomes effortless.",
 ];
 
 const PHRASES = [
-  "Speed of Voice.",
-  "Speed of Thought.",
-  "Speed of Command.",
-  "Speed of Intelligence.",
-  "Speed of Execution.",
-  "Speed of Ambition.",
+  "Operating System.",
+  "Competitive Edge.",
+  "New Workforce.",
+  "Empire Builder.",
+  "Revenue Engine.",
 ];
 
 const NODES = [
@@ -204,9 +198,9 @@ export default function HeroSection() {
             transition={{ delay: 0.6 }}
             className="mt-5 max-w-[580px] font-body text-[16px] leading-[1.75] text-[var(--text-secondary)] md:text-[18px]"
           >
-            DIGI BIZ OS turns your voice into execution — 500+ AI skills, 150+ built-in desktop tools and
-            collaborative AI agents that research, automate, engineer and deliver work for your
-            business.
+            DIGI BIZ OS turns your voice into a full business operating system — 500+ AI skills,
+            150+ built-in desktop tools and collaborative AI agents that research, automate and
+            deliver work for your business.
           </motion.p>
 
           <motion.div

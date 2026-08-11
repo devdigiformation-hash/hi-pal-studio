@@ -38,7 +38,7 @@ export default function LiveTrackingSection() {
         <div className="text-center">
           <EyebrowLabel text="End-to-End Transparency" color="#3DDC84" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            See Every Step. <GradientText from="#3DDC84" to="#2FE0C8">As It Happens.</GradientText>
+            Watch It Work. <GradientText from="#3DDC84" to="#2FE0C8">Control Every Move.</GradientText>
           </h2>
           <p className="reveal-item delay-2 mx-auto mt-5 max-w-[720px] font-body text-[16px] leading-[1.8] text-[var(--text-secondary)] md:text-[17px]">
             No black box. A live inline tracker shows each tool, each command and each agent action

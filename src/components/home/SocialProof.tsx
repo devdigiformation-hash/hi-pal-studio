@@ -2,6 +2,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import MetricBadge from "@/components/MetricBadge";
+import GradientText from "@/components/GradientText";
 
 const QUOTES = [
   {
@@ -31,7 +32,7 @@ export default function SocialProof() {
         <div className="text-center">
           <EyebrowLabel text="From the Community" color="var(--purple)" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            Power Users. Real Results.
+            They Spoke. <GradientText>We Delivered.</GradientText>
           </h2>
         </div>
 

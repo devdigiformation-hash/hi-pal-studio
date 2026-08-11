@@ -72,7 +72,7 @@ export default function ROICalculator() {
         <div className="text-center">
           <EyebrowLabel text="Calculate Your ROI" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            How Much Time Will You Get Back?
+            Calculate Your <GradientText>Time Empire.</GradientText>
           </h2>
         </div>
 

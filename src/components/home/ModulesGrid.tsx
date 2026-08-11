@@ -88,7 +88,7 @@ export default function ModulesGrid() {
         <div className="text-center">
           <EyebrowLabel text="Inside DIGI BIZ OS" color="var(--cyan)" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            Eight modules. <GradientText>One operating system.</GradientText>
+            Eight Weapons. <GradientText>One Battle Station.</GradientText>
           </h2>
           <p className="reveal-item delay-2 mx-auto mt-5 max-w-[680px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)] md:text-[16px]">
             Everything you see in the workspace above, broken down — models, coding, documents,

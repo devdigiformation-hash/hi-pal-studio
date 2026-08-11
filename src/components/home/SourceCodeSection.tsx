@@ -64,7 +64,7 @@ export default function SourceCodeSection() {
             <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold leading-[1.1] tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
               Own the Code.{" "}
               <GradientText from="#8B7CF6" to="#2FE0C8">
-                Automate Your Business A to Z.
+                Build Your Empire.
               </GradientText>
             </h2>
             <p className="reveal-item delay-2 mt-5 font-body text-[16px] leading-[1.8] text-[var(--text-secondary)] md:text-[17px]">

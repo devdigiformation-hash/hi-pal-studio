@@ -33,7 +33,7 @@ export default function BuildYourOwn() {
         <div className="text-center">
           <EyebrowLabel text="Fully Extensible" color="var(--amber)" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            Add Your Own Everything — <GradientText from="#F5A623" to="#8B7CF6">Right From the App.</GradientText>
+            Your Rules. <GradientText from="#F5A623" to="#8B7CF6">Your AI. Your Way.</GradientText>
           </h2>
           <p className="reveal-item delay-2 mx-auto mt-5 max-w-[760px] font-body text-[16px] leading-[1.8] text-[var(--text-secondary)] md:text-[17px]">
             DIGI BIZ OS ships ready to work — and grows with you. Skills, memories, tools, agents,
