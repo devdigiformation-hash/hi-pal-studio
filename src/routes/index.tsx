@@ -3,6 +3,7 @@ import HeroSection from "@/components/home/HeroSection";
 import TelemetryTicker from "@/components/home/TelemetryTicker";
 import SoftwareShowcase from "@/components/home/SoftwareShowcase";
 import ModulesGrid from "@/components/home/ModulesGrid";
+import CapabilityVault from "@/components/home/CapabilityVault";
 import FourPillars from "@/components/home/FourPillars";
 import ProductWorkbench from "@/components/home/ProductWorkbench";
 import ModelsSection from "@/components/home/ModelsSection";
@@ -49,6 +50,7 @@ function HomePage() {
       <TelemetryTicker />
       <SoftwareShowcase />
       <ModulesGrid />
+      <CapabilityVault />
       <FourPillars />
       <ProductWorkbench />
       <ModelsSection />
