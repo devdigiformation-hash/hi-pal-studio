@@ -9,6 +9,7 @@ import sidebar from "@/assets/os-sidebar.png.asset.json";
 import graph from "@/assets/os-graph.png.asset.json";
 import transcript from "@/assets/os-transcript.png.asset.json";
 import runtime from "@/assets/os-runtime.png.asset.json";
+import liveTracking from "@/assets/os-live-tracking.png.asset.json";
 
 const SLIDES = [
   {
@@ -40,6 +41,12 @@ const SLIDES = [
     tag: "Runtime",
     title: "See exactly what it is doing.",
     body: "Listening state, running tasks, screen checks and active tools reported live while sessions execute.",
+  },
+  {
+    src: liveTracking.url,
+    tag: "Live Tracking",
+    title: "Every action of the session, on one timeline.",
+    body: "Live events and tasks with reasoning, routing, execution, I/O and lifecycle filters — real events only, nothing simulated.",
   },
 ];
 
