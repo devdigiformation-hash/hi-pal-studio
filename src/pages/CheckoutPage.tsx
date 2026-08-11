@@ -19,6 +19,7 @@ import {
   PAYMENT_METHODS,
   amountForMethod,
   formatAmount,
+  comparePriceFor,
   WHATSAPP_NUMBER,
   type MethodId,
   type PlanId,
@@ -152,12 +153,9 @@ export default function CheckoutPage() {
               <span className="font-display text-[42px] font-extrabold leading-none text-[var(--text-primary)]">
                 {formatAmount(amount, method.currency)}
               </span>
-              {plan.comparePkr && plan.compareUsd ? (
+              {comparePriceFor(plan, method.currency) ? (
                 <span className="pb-1.5 font-body text-[15px] text-[var(--text-muted)] line-through">
-                  {formatAmount(
-                    method.currency === "PKR" ? plan.comparePkr : plan.compareUsd,
-                    method.currency,
-                  )}
+                  {formatAmount(comparePriceFor(plan, method.currency)!, method.currency)}
                 </span>
               ) : null}
             </div>

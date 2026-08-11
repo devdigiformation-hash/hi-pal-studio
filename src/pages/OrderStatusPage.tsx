@@ -103,7 +103,7 @@ export default function OrderStatusPage({ orderRef }: { orderRef: string }) {
                   ["Plan", order.plan_name],
                   [
                     "Amount",
-                    formatAmount(Number(order.amount), order.currency as "PKR" | "USD"),
+                    formatAmount(Number(order.amount), order.currency as "PKR" | "GBP" | "USD"),
                   ],
                   ["Method", order.payment_method],
                   ["Placed", new Date(order.created_at).toLocaleString()],

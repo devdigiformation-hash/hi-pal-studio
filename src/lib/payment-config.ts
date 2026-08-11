@@ -84,12 +84,21 @@ export const PLANS: Record<PlanId, Plan> = {
 
 export const PLAN_IDS = Object.keys(PLANS) as PlanId[];
 
-export type MethodId = "jazzcash" | "bank" | "usdt" | "binance" | "redotpay";
+export type MethodId =
+  | "jazzcash"
+  | "easypaisa"
+  | "sadapay"
+  | "nayapay"
+  | "ubl"
+  | "gbp"
+  | "usd";
+
+export type Currency = "PKR" | "GBP" | "USD";
 
 export interface PaymentMethod {
   id: MethodId;
   label: string;
-  currency: "PKR" | "USD";
+  currency: Currency;
   region: string;
   fields: { label: string; value: string; copy?: boolean }[];
   steps: string[];
@@ -98,101 +107,113 @@ export interface PaymentMethod {
 export const WHATSAPP_NUMBER = "923164467464";
 export const SUPPORT_EMAIL = "info@digiformation.co.uk";
 
-export const PAYMENT_METHODS: PaymentMethod[] = [
-  {
-    id: "jazzcash",
-    label: "JazzCash",
+const MOBILE_ACCOUNT = "0303 4226759";
+const ACCOUNT_TITLE = "Muhammad Haroon";
+
+function mobileWallet(id: MethodId, label: string): PaymentMethod {
+  return {
+    id,
+    label,
     currency: "PKR",
     region: "Pakistan",
     fields: [
-      { label: "Account Title", value: "Digiformation Ltd" },
-      { label: "Mobile Number", value: "0316 4467464", copy: true },
+      { label: "Account Title", value: ACCOUNT_TITLE },
+      { label: "Mobile Account", value: MOBILE_ACCOUNT, copy: true },
     ],
     steps: [
-      "Open your JazzCash app",
-      "Send to Mobile Account 0316 4467464",
-      "Transfer the exact amount shown",
+      `Open your ${label} app`,
+      `Send to Mobile Account ${MOBILE_ACCOUNT}`,
+      "Transfer the exact amount shown above",
       "Take a screenshot of the receipt",
       "Submit this form, then confirm on WhatsApp",
     ],
-  },
+  };
+}
+
+export const PAYMENT_METHODS: PaymentMethod[] = [
+  mobileWallet("jazzcash", "JazzCash"),
+  mobileWallet("easypaisa", "EasyPaisa"),
+  mobileWallet("sadapay", "SadaPay"),
+  mobileWallet("nayapay", "NayaPay"),
   {
-    id: "bank",
-    label: "Bank Transfer",
+    id: "ubl",
+    label: "UBL Bank",
     currency: "PKR",
     region: "Pakistan",
     fields: [
-      { label: "Account Title", value: "Digiformation Ltd" },
-      { label: "Bank", value: "Meezan Bank" },
-      { label: "IBAN", value: "PK36MEZN0000123456789012", copy: true },
+      { label: "Account Title", value: ACCOUNT_TITLE },
+      { label: "Bank", value: "United Bank Limited (UBL)" },
+      { label: "Account Number", value: "1482314848734", copy: true },
+      { label: "IBAN", value: "PK21UNIL0109000314848734", copy: true },
     ],
     steps: [
-      "Open your banking app or visit a branch",
-      "Transfer to the IBAN above",
+      "Open your banking app or visit a UBL branch",
+      "Transfer to the UBL account / IBAN above",
       "Use your order reference as the payment note",
       "Keep the transfer receipt",
       "Submit this form, then confirm on WhatsApp",
     ],
   },
   {
-    id: "usdt",
-    label: "Crypto (USDT)",
-    currency: "USD",
-    region: "International",
+    id: "gbp",
+    label: "UK Bank (GBP)",
+    currency: "GBP",
+    region: "United Kingdom",
     fields: [
-      { label: "Network", value: "TRC-20 (Tron)" },
-      { label: "Wallet Address", value: "TSc7Xk9QDigiBizWalletExample1234", copy: true },
+      { label: "Account Title", value: ACCOUNT_TITLE },
+      { label: "Bank", value: "Clear Bank" },
+      { label: "Account Number", value: "12863656", copy: true },
+      { label: "Sort Code", value: "04-28-12", copy: true },
+      { label: "IBAN", value: "GB20CLRB04281286365680", copy: true },
+      { label: "SWIFT / BIC", value: "CLRBGB22XXX", copy: true },
     ],
     steps: [
-      "Open your crypto wallet or exchange",
-      "Select USDT on the TRC-20 network",
-      "Send the exact USD amount shown",
-      "Copy the transaction hash (TXID)",
-      "Paste the TXID below and submit",
+      "Open your UK banking app",
+      "Add the Clear Bank details above as a payee",
+      "Send the exact GBP amount shown",
+      "Use your order reference as the payment reference",
+      "Submit this form, then confirm on WhatsApp",
     ],
   },
   {
-    id: "binance",
-    label: "Binance Pay",
+    id: "usd",
+    label: "US Bank (USD)",
     currency: "USD",
-    region: "International",
+    region: "United States / International",
     fields: [
-      { label: "Binance Pay ID", value: "418772930", copy: true },
-      { label: "Account Name", value: "Digiformation Ltd" },
+      { label: "Account Title", value: ACCOUNT_TITLE },
+      { label: "Bank", value: "JP Morgan Chase" },
+      { label: "Account Number", value: "30000002945251", copy: true },
+      { label: "Routing (ACH)", value: "028000024", copy: true },
+      { label: "Account Type", value: "Checking" },
     ],
     steps: [
-      "Open Binance → Pay → Send",
-      "Enter Pay ID 418772930",
+      "Open your bank or transfer app (ACH / wire)",
+      "Add the JP Morgan Chase details above",
       "Send the exact USD amount shown",
-      "Copy the Binance order ID",
-      "Paste the order ID below and submit",
-    ],
-  },
-  {
-    id: "redotpay",
-    label: "Redot Pay",
-    currency: "USD",
-    region: "International",
-    fields: [
-      { label: "Redot Pay ID", value: "1099254771", copy: true },
-      { label: "Account Name", value: "Digiformation Ltd" },
-    ],
-    steps: [
-      "Open Redot Pay → Transfer",
-      "Enter Redot ID 1099254771",
-      "Send the exact USD amount shown",
-      "Copy the transfer reference",
-      "Paste the reference below and submit",
+      "Use your order reference as the memo",
+      "Submit this form, then confirm on WhatsApp",
     ],
   },
 ];
 
+export const GBP_PER_USD = 0.8;
+
 export function amountForMethod(plan: Plan, method: PaymentMethod) {
-  return method.currency === "PKR" ? plan.pricePkr : plan.priceUsd;
+  if (method.currency === "PKR") return plan.pricePkr;
+  if (method.currency === "GBP") return Math.round(plan.priceUsd * GBP_PER_USD);
+  return plan.priceUsd;
 }
 
-export function formatAmount(amount: number, currency: "PKR" | "USD") {
-  return currency === "PKR"
-    ? `Rs ${amount.toLocaleString("en-US")}`
-    : `$${amount.toLocaleString("en-US")}`;
+export function comparePriceFor(plan: Plan, currency: Currency) {
+  if (currency === "PKR") return plan.comparePkr;
+  if (!plan.compareUsd) return undefined;
+  return currency === "GBP" ? Math.round(plan.compareUsd * GBP_PER_USD) : plan.compareUsd;
+}
+
+export function formatAmount(amount: number, currency: Currency) {
+  const n = amount.toLocaleString("en-US");
+  if (currency === "PKR") return `Rs ${n}`;
+  if (currency === "GBP") return `£${n}`;
+  return `$${n}`;
 }

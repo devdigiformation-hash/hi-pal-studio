@@ -3,7 +3,7 @@ import { z } from "zod";
 
 const createOrderSchema = z.object({
   planId: z.enum(["lifetime", "custom_build", "source_code"]),
-  method: z.enum(["jazzcash", "bank", "usdt", "binance", "redotpay"]),
+  method: z.enum(["jazzcash", "easypaisa", "sadapay", "nayapay", "ubl", "gbp", "usd"]),
   customerName: z.string().trim().min(2).max(80),
   email: z.string().trim().email().max(160),
   whatsapp: z.string().trim().max(32).optional().or(z.literal("")),
