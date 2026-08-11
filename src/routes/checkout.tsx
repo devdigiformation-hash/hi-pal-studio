@@ -11,7 +11,7 @@ export const Route = createFileRoute("/checkout")({
       {
         name: "description",
         content:
-          "Pay for your DIGI BIZ OS licence via JazzCash, bank transfer, USDT, Binance Pay or Redot Pay. Manually verified by Digiformation Ltd.",
+          "Pay for your DIGI BIZ OS licence via JazzCash, EasyPaisa, SadaPay, NayaPay, UBL, or our UK GBP and USD bank accounts. Manually verified by Digiformation Ltd.",
       },
       { property: "og:title", content: "Secure Checkout — DIGI BIZ OS" },
       {

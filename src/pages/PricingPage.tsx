@@ -14,7 +14,7 @@ import { PLANS, type PlanId } from "@/lib/payment-config";
 const FAQS = [
   {
     q: "What payment methods do you accept?",
-    a: "JazzCash, bank transfer, USDT (TRC-20), Binance Pay and Redot Pay. Pick a rail at checkout, send the exact amount and submit your transaction reference.",
+    a: "JazzCash, EasyPaisa, SadaPay, NayaPay, UBL bank transfer, plus GBP (UK) and USD bank accounts for international buyers. Pick a method at checkout, send the exact amount and submit your transaction reference.",
   },
   {
     q: "Is this really a one-time payment?",
@@ -141,7 +141,7 @@ export default function PricingPage() {
                     </Link>
                   </div>
                   <div className="mt-4 text-center font-body text-[12.5px] text-[var(--text-muted)]">
-                    JazzCash · Bank · USDT · Binance Pay · Redot Pay
+                    JazzCash · EasyPaisa · SadaPay · NayaPay · UBL · GBP · USD
                   </div>
                 </GlassCard>
               );

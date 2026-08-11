@@ -37,7 +37,7 @@ export const Route = createFileRoute("/terms")({
         {
           heading: "Payment and verification",
           body: [
-            "Payments made through JazzCash, bank transfer, USDT, Binance Pay or Redot Pay are verified manually. Your order is recorded with a reference; activation follows once the transfer is confirmed.",
+            "Payments made through JazzCash, EasyPaisa, SadaPay, NayaPay, UBL bank transfer, or our UK (GBP) and USD bank accounts are verified manually. Your order is recorded with a reference; activation follows once the transfer is confirmed.",
             "Send exactly the amount shown at checkout. Underpaid or unmatched transfers delay verification.",
           ],
         },
