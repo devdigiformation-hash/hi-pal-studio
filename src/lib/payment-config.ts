@@ -9,6 +9,7 @@ export interface Plan {
   blurb: string;
   pricePkr: number;
   priceUsd: number;
+  priceGbp: number;
   comparePkr?: number;
   compareUsd?: number;
   billingNote: string;
@@ -22,8 +23,9 @@ export const PLANS: Record<PlanId, Plan> = {
     name: "DIGI BIZ OS — Lifetime Access",
     badge: "Desktop App · Gen 2",
     blurb: "Pay once. Own DIGI BIZ OS for life. No monthly software subscription.",
-    pricePkr: 28000,
-    priceUsd: 100,
+    pricePkr: 18000,
+    priceUsd: 64,
+    priceGbp: 50,
     billingNote: "One-time payment · Lifetime access",
     includes: [
       "One-time payment — no monthly subscription",
@@ -42,8 +44,9 @@ export const PLANS: Record<PlanId, Plan> = {
     badge: "White Label · Automation",
     blurb:
       "Your logo, your name, your workflows. A fully branded build of DIGI BIZ OS with 400+ automation workflows configured for your business.",
-    pricePkr: 112000,
-    priceUsd: 400,
+    pricePkr: 180000,
+    priceUsd: 640,
+    priceGbp: 499,
     billingNote: "One-time payment · Custom build",
     includes: [
       "Everything in Lifetime Access",
@@ -63,8 +66,9 @@ export const PLANS: Record<PlanId, Plan> = {
     badge: "Developer · Full Ownership",
     blurb:
       "Buy the complete source code and rebuild DIGI BIZ OS around your business. Customise every screen, workflow and agent, then automate your operations A to Z — with full commercial rights.",
-    pricePkr: 196000,
-    priceUsd: 700,
+    pricePkr: 108000,
+    priceUsd: 385,
+    priceGbp: 299,
     billingNote: "One-time payment · Source code licence",
     includes: [
       "Everything in the Customised package",
@@ -201,7 +205,7 @@ export const GBP_PER_USD = 0.8;
 
 export function amountForMethod(plan: Plan, method: PaymentMethod) {
   if (method.currency === "PKR") return plan.pricePkr;
-  if (method.currency === "GBP") return Math.round(plan.priceUsd * GBP_PER_USD);
+  if (method.currency === "GBP") return plan.priceGbp;
   return plan.priceUsd;
 }
 
