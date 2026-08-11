@@ -12,6 +12,7 @@ import MiniHero from "@/components/inner/MiniHero";
 import TerminalBlock from "@/components/inner/TerminalBlock";
 import TickList from "@/components/inner/TickList";
 import PageCTA from "@/components/inner/PageCTA";
+import GradientText from "@/components/GradientText";
 
 const STATES = ["disconnected", "connecting", "listening", "thinking", "speaking"];
 
@@ -77,8 +78,8 @@ export default function VoiceAIPage() {
     >
       <MiniHero
         eyebrow="Voice Intelligence"
-        title="Your Voice Becomes"
-        gradientTitle="Execution."
+        title="Your Voice."
+        gradientTitle="Total Command."
         subtitle="Zero-latency 2-way live speech streaming. Talk naturally. Your desktop responds in milliseconds."
       />
 
@@ -88,7 +89,7 @@ export default function VoiceAIPage() {
           <div>
             <EyebrowLabel text="Live Voice Engine" />
             <h2 className="reveal-item delay-1 mt-4 font-display text-[30px] font-bold leading-[1.15] tracking-[-0.03em] text-[var(--text-primary)] md:text-[42px]">
-              Continuous 2-Way Speech. No Typing Required.
+              Talk Like a Human. <GradientText>Execute Like a Machine.</GradientText>
             </h2>
             <p className="reveal-item delay-2 mt-5 max-w-[540px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
               Powered by our real-time voice engine with real-time two-way streaming, DIGI BIZ OS
@@ -151,7 +152,7 @@ export default function VoiceAIPage() {
           <GlassCard className="reveal-item" glowColor="var(--cyan)">
             <Mic size={30} color="var(--cyan)" strokeWidth={1.6} />
             <h3 className="mt-5 font-display text-[22px] font-bold tracking-[-0.02em] text-[var(--text-primary)]">
-              Wake Word Detection
+              Hands-Free Activation
             </h3>
             <p className="mt-3 font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
               MyraaWakeWordDetector continuously monitors background audio with minimal CPU load.
@@ -165,7 +166,7 @@ export default function VoiceAIPage() {
           <GlassCard className="reveal-item delay-2" glowColor="var(--purple)">
             <Brain size={30} color="var(--purple)" strokeWidth={1.6} />
             <h3 className="mt-5 font-display text-[22px] font-bold tracking-[-0.02em] text-[var(--text-primary)]">
-              Soul Engine — Custom Persona
+              Your AI, Your Personality
             </h3>
             <p className="mt-3 font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
               Define your AI&apos;s personality, communication style, safety constraints, and
@@ -179,7 +180,7 @@ export default function VoiceAIPage() {
       </SectionWrapper>
 
       <PageCTA
-        title="Stop Typing. Start Commanding."
+        title="Stop Typing. Start Winning."
         badges={["<200ms Latency", "Live Voice", "Hands-Free"]}
         cta="Download for Windows"
         icon={<WindowsIcon size={17} />}

@@ -6,6 +6,7 @@ import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import MonoBadge from "@/components/MonoBadge";
 import ActivePulse from "@/components/ActivePulse";
+import GradientText from "@/components/GradientText";
 
 const TABS = ["Intelligence", "Automation", "Connectivity", "Developer"] as const;
 type Tab = (typeof TABS)[number];
@@ -163,7 +164,7 @@ export default function ProductWorkbench() {
         <div className="text-center">
           <EyebrowLabel text="Intelligent Workspace" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[34px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[48px]">
-            Every Module. One Desktop Command.
+            One Command. <GradientText>Every Module.</GradientText>
           </h2>
         </div>
 

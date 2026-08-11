@@ -51,7 +51,7 @@ export default function ModelsSection() {
         <div className="text-center">
           <EyebrowLabel text="DIGI AI · Model Universe" color="var(--cyan)" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            One Licence. <GradientText>200+ AI Models.</GradientText>
+            Every Model. <GradientText>One Licence. Zero Limits.</GradientText>
           </h2>
           <p className="reveal-item delay-2 mx-auto mt-5 max-w-[720px] font-body text-[16px] leading-[1.8] text-[var(--text-secondary)] md:text-[17px]">
             Free open models and premium frontier models live side by side inside DIGI BIZ OS.

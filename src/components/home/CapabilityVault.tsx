@@ -89,7 +89,7 @@ export default function CapabilityVault() {
         <div className="text-center">
           <EyebrowLabel text="What It Actually Does For You" color="var(--amber)" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            Real work, <GradientText>finished by voice.</GradientText>
+            Say It. <GradientText>Done. Delivered.</GradientText>
           </h2>
           <p className="reveal-item delay-2 mx-auto mt-5 max-w-[700px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)] md:text-[16px]">
             Not demos — the day-to-day tasks businesses actually pay people to do, handled on your

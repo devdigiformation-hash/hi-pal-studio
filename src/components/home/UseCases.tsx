@@ -2,6 +2,7 @@ import { Briefcase, Building2, Terminal, type LucideIcon } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
+import GradientText from "@/components/GradientText";
 
 const CASES: { icon: LucideIcon; color: string; title: string; body: string; chain: string[] }[] = [
   {
@@ -34,7 +35,7 @@ export default function UseCases() {
         <div className="text-center">
           <EyebrowLabel text="Real World Impact" color="var(--pink)" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            Built for the Way You Actually Work.
+            Built for Winners. <GradientText>Not Browsers.</GradientText>
           </h2>
         </div>
 

@@ -3,6 +3,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import MonoBadge from "@/components/MonoBadge";
+import GradientText from "@/components/GradientText";
 
 interface Pillar {
   icon: LucideIcon;
@@ -69,7 +70,7 @@ export default function FourPillars() {
         <div className="text-center">
           <EyebrowLabel text="Core Intelligence Pillars" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[34px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[48px]">
-            Four Systems. One Unified OS.
+            Four Engines. <GradientText>One Unstoppable OS.</GradientText>
           </h2>
           <p className="reveal-item delay-2 mx-auto mt-5 max-w-[600px] font-body text-[15px] leading-[1.75] text-[var(--text-secondary)] md:text-[16px]">
             Every pillar works in concert — voice triggers vision, vision directs agents, agents

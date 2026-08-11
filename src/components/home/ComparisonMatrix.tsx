@@ -3,6 +3,7 @@ import { Check, X } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
+import GradientText from "@/components/GradientText";
 
 const ROWS: [string, boolean, boolean, boolean][] = [
   ["Native Desktop Mouse & Keyboard Control", true, false, false],
@@ -33,7 +34,7 @@ export default function ComparisonMatrix() {
         <div className="text-center">
           <EyebrowLabel text="Why DIGI BIZ OS" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            Beyond Browser AI. Desktop-Native Intelligence.
+            Leave Browser AI <GradientText>in the Dust.</GradientText>
           </h2>
         </div>
 

@@ -2,6 +2,7 @@ import * as Accordion from "@radix-ui/react-accordion";
 import { Plus } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
+import GradientText from "@/components/GradientText";
 
 const FAQS = [
   {
@@ -45,7 +46,7 @@ export default function FAQSection() {
         <div className="text-center">
           <EyebrowLabel text="Frequently Asked" color="var(--purple)" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            Everything You Need to Know.
+            The Answers <GradientText>You Need.</GradientText>
           </h2>
         </div>
 
