@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
+import { ArrowRight, Menu, User, X } from "lucide-react";
 import { WindowsIcon } from "@/components/PlatformIcons";
 import logoClean from "@/assets/logo-clean.png";
 import ActivePulse from "./ActivePulse";
@@ -43,19 +43,20 @@ export default function Navbar() {
 
   return (
     <>
-      <header
-        className={cn(
-          "fixed inset-x-0 top-0 z-[1000] h-[60px] transition-all duration-[400ms] ease-out md:h-[72px]",
-          scrolled && "border-b border-[var(--border-glass)] shadow-[0_4px_32px_rgba(0,0,0,0.4)]",
-        )}
-        style={
-          scrolled
-            ? { background: "var(--bg-glass-heavy)", backdropFilter: "blur(28px) saturate(200%)" }
-            : { background: "transparent" }
-        }
-      >
-        <nav className="mx-auto flex h-full max-w-[1440px] items-center justify-between gap-6 px-5 md:px-10">
-          <Link to="/" className="group flex items-center gap-2">
+      <header className="fixed inset-x-0 top-0 z-[1000] px-3 pt-3 md:px-6 md:pt-5">
+        <nav
+          className={cn(
+            "mx-auto flex h-[56px] max-w-[1180px] items-center justify-between gap-6 rounded-full border px-4 transition-all duration-[400ms] ease-out md:h-[64px] md:px-5",
+            scrolled
+              ? "border-[var(--border-glass)] shadow-[0_10px_40px_rgba(0,0,0,0.55)]"
+              : "border-white/[0.06] shadow-[0_8px_32px_rgba(0,0,0,0.35)]",
+          )}
+          style={{
+            background: scrolled ? "rgba(8,10,14,0.82)" : "rgba(8,10,14,0.55)",
+            backdropFilter: "blur(28px) saturate(180%)",
+          }}
+        >
+          <Link to="/" className="group flex shrink-0 items-center gap-2">
             <img
               src={logoClean}
               alt="DIGI BIZ OS"
@@ -67,7 +68,7 @@ export default function Navbar() {
             <ActivePulse />
           </Link>
 
-          <div className="hidden items-center gap-5 lg:flex xl:gap-6">
+          <div className="hidden items-center gap-5 lg:flex xl:gap-7">
             {NAV_LINKS.map((link) => {
               const active = pathname === link.to;
               return (
@@ -93,20 +94,30 @@ export default function Navbar() {
             })}
           </div>
 
-          <div className="hidden items-center gap-3 lg:flex">
-            <GhostButton size="sm">Live Demo</GhostButton>
-            <CyanButton size="sm" icon={<WindowsIcon size={15} />}>
-              Download App
-            </CyanButton>
+          <div className="hidden shrink-0 items-center gap-2.5 lg:flex">
+            <button
+              type="button"
+              aria-label="Account"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-[var(--text-secondary)] transition-colors duration-300 hover:text-[var(--text-primary)]"
+            >
+              <User size={16} />
+            </button>
+            <Link
+              to="/pricing"
+              className="group inline-flex h-9 items-center gap-1.5 rounded-full bg-[var(--text-primary)] px-4 font-display text-[12.5px] font-semibold text-[var(--background)] transition-all duration-300 hover:opacity-90"
+            >
+              Get Started
+              <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5" />
+            </Link>
           </div>
 
           <button
             type="button"
             aria-label="Open menu"
             onClick={() => setOpen(true)}
-            className="flex h-11 w-11 items-center justify-center rounded-[var(--r-sm)] border border-[var(--border-glass)] lg:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] lg:hidden"
           >
-            <Menu size={22} color="var(--cyan)" />
+            <Menu size={20} color="var(--cyan)" />
           </button>
         </nav>
       </header>
