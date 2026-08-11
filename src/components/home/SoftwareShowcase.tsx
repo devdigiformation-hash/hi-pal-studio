@@ -12,6 +12,7 @@ import runtime from "@/assets/os-runtime.png.asset.json";
 import liveTracking from "@/assets/os-live-tracking.png.asset.json";
 import digiAi from "@/assets/os-digi-ai.png.asset.json";
 import digiCode from "@/assets/os-digi-code.png.asset.json";
+import digiDocs from "@/assets/os-digi-docs.png.asset.json";
 
 const SLIDES = [
   {
@@ -61,6 +62,12 @@ const SLIDES = [
     tag: "Digi Code",
     title: "A coding agent that works inside your projects.",
     body: "Sessions, project and branch context, slash commands and @ references — point it at a repo or folder and it reasons, refactors and ships from one prompt bar.",
+  },
+  {
+    src: digiDocs.url,
+    tag: "Digi Docs",
+    title: "A full document suite, offline and on your machine.",
+    body: "Merge, compare, compress, convert, OCR, redact, sign, timestamp, password-protect and watermark — every document tool one search away.",
   },
 ];
 
