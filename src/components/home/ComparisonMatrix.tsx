@@ -7,7 +7,7 @@ import GlassCard from "@/components/GlassCard";
 const ROWS: [string, boolean, boolean, boolean][] = [
   ["Native Desktop Mouse & Keyboard Control", true, false, false],
   ["Real-Time Screen Vision Stream", true, false, false],
-  ["10+ Agent Concurrent Execution", true, false, false],
+  ["Multi Agent Concurrent Execution", true, false, false],
   ["Voice-First Zero-Latency Operation", true, false, false],
   ["Local File System Full Access", true, false, true],
   ["Multi-Provider AI Model Routing", true, true, false],

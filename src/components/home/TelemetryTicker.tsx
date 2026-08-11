@@ -1,7 +1,7 @@
 const ITEMS = [
   "115+ Built-in Tools",
   "500+ AI Skills",
-  "10+ Autonomous Sub-Agents",
+  "Multi Autonomous Sub-Agents",
   "<200ms Voice Stream Latency",
   "Multi-MCP Ready",
   "Browser Automation Built In",

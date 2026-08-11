@@ -103,7 +103,7 @@ export default function DocsPage() {
                 { text: "# 3 — Launch and speak", color: "var(--text-muted)" },
                 { text: "> Voice mode enabled", color: "var(--purple)" },
                 { text: '> "Hey Digi, what can you do?"', color: "var(--text-primary)" },
-                { text: "✓ Voice session live — 10+ agents standing by", color: "var(--success)" },
+                { text: "✓ Voice session live — multi agents standing by", color: "var(--success)" },
               ]}
             />
           </GlassCard>
