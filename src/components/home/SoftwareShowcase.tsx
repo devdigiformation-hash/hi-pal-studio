@@ -11,6 +11,7 @@ import transcript from "@/assets/os-transcript.png.asset.json";
 import runtime from "@/assets/os-runtime.png.asset.json";
 import liveTracking from "@/assets/os-live-tracking.png.asset.json";
 import digiAi from "@/assets/os-digi-ai.png.asset.json";
+import digiCode from "@/assets/os-digi-code.png.asset.json";
 
 const SLIDES = [
   {
@@ -54,6 +55,12 @@ const SLIDES = [
     tag: "Digi AI",
     title: "Chat, personas, agents and coding in one playground.",
     body: "Multi-turn chat with any model, an agent that plans tasks and writes code, custom personas, provider control and a 40+ mini app store — all in one workspace.",
+  },
+  {
+    src: digiCode.url,
+    tag: "Digi Code",
+    title: "A coding agent that works inside your projects.",
+    body: "Sessions, project and branch context, slash commands and @ references — point it at a repo or folder and it reasons, refactors and ships from one prompt bar.",
   },
 ];
 
