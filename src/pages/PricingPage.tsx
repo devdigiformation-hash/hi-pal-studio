@@ -8,9 +8,8 @@ import GlassCard from "@/components/GlassCard";
 import CyanButton from "@/components/CyanButton";
 import MonoBadge from "@/components/MonoBadge";
 import MiniHero from "@/components/inner/MiniHero";
-
-import MiniHero from "@/components/inner/MiniHero";
 import CurrencySelector from "@/components/CurrencySelector";
+
 import { formatPrice, useCurrency } from "@/lib/currency";
 import { PLANS, type PlanId } from "@/lib/payment-config";
 import SourceCodeSection from "@/components/home/SourceCodeSection";
