@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import SmartLink from "./SmartLink";
 import { Github, Globe, Linkedin, Mail, MessageCircle, Phone, Twitter } from "lucide-react";
 import logoClean from "@/assets/logo-clean.png";
 import ActivePulse from "./ActivePulse";
@@ -7,28 +8,33 @@ import MonoBadge from "./MonoBadge";
 
 const OVERVIEW = [
   { label: "Overview", to: "/" },
+  { label: "All Features", to: "/features" },
   { label: "AI Business OS for PC", to: "/desktop-os" },
+  { label: "AI Business Operating System", to: "/ai-business-operating-system" },
+  { label: "JARVIS AI", to: "/jarvis-ai" },
   { label: "Pricing", to: "/pricing" },
-  { label: "Download", to: "/", hash: "hero" },
-  { label: "Software Showcase", to: "/", hash: "software" },
-  { label: "Reviews", to: "/", hash: "testimonials" },
+  { label: "Blog", to: "/blog" },
 ] as const;
 
 const FEATURES = [
-  { label: "Voice Control", to: "/voice-ai" },
-  { label: "Desktop Automation", to: "/desktop-os" },
-  { label: "Local & Private", to: "/desktop-os" },
-  { label: "Multi-Agent Platform", to: "/agents" },
-  { label: "Mixed Tools & Skills", to: "/integrations" },
-  { label: "Workflows & Cron Jobs", to: "/", hash: "workflows" },
+  { label: "Digi AI", to: "/features/digi-ai" },
+  { label: "DigiCode", to: "/features/digicode" },
+  { label: "DigiDocs", to: "/features/digidocs" },
+  { label: "DigiTools", to: "/features/digitools" },
+  { label: "DigiCLI", to: "/features/digicli" },
+  { label: "DigiMCP", to: "/features/digimcp" },
+  { label: "DigiFlow", to: "/features/digiflow" },
+  { label: "DigiJobs", to: "/features/digijobs" },
+  { label: "DigiTasks", to: "/features/digitasks" },
 ] as const;
 
 const RESOURCES = [
-  { label: "Use Cases", to: "/", hash: "use-cases" },
-  { label: "Compare", to: "/", hash: "comparison" },
-  { label: "Source Code Licence", to: "/", hash: "source-code" },
-  { label: "Capabilities", to: "/", hash: "capabilities" },
-  { label: "FAQ", to: "/", hash: "faq" },
+  { label: "AI Desktop Assistant", to: "/ai-desktop-assistant" },
+  { label: "AI Business Assistant", to: "/ai-business-assistant" },
+  { label: "AI Workflow Automation", to: "/ai-workflow-automation" },
+  { label: "Multi-Agent AI", to: "/multi-agent-ai" },
+  { label: "AI Coding Agent", to: "/ai-coding-agent" },
+  { label: "Computer-Use AI", to: "/computer-use-ai" },
 ] as const;
 
 const LEGAL = [
@@ -86,13 +92,12 @@ export default function Footer() {
           <ul className="mt-5 space-y-3">
             {OVERVIEW.map((item) => (
               <li key={item.label}>
-                <Link
+                <SmartLink
                   to={item.to}
-                  hash={"hash" in item ? item.hash : undefined}
                   className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
                 >
                   {item.label}
-                </Link>
+                </SmartLink>
               </li>
             ))}
           </ul>
@@ -103,13 +108,12 @@ export default function Footer() {
           <ul className="mt-5 space-y-3">
             {FEATURES.map((item) => (
               <li key={item.label}>
-                <Link
+                <SmartLink
                   to={item.to}
-                  hash={"hash" in item ? item.hash : undefined}
                   className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
                 >
                   {item.label}
-                </Link>
+                </SmartLink>
               </li>
             ))}
           </ul>
@@ -120,13 +124,12 @@ export default function Footer() {
           <ul className="mt-5 space-y-3">
             {RESOURCES.map((item) => (
               <li key={item.label}>
-                <Link
+                <SmartLink
                   to={item.to}
-                  hash={"hash" in item ? item.hash : undefined}
                   className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
                 >
                   {item.label}
-                </Link>
+                </SmartLink>
               </li>
             ))}
           </ul>
@@ -135,12 +138,12 @@ export default function Footer() {
             <ul className="mt-5 space-y-3">
               {LEGAL.map((item) => (
                 <li key={item.label}>
-                  <Link
+                  <SmartLink
                     to={item.to}
                     className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
                   >
                     {item.label}
-                  </Link>
+                  </SmartLink>
                 </li>
               ))}
             </ul>

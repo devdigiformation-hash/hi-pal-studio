@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
+import SmartLink from "./SmartLink";
 import { ArrowRight, Menu, User, X } from "lucide-react";
 import { WindowsIcon } from "@/components/PlatformIcons";
 import logoClean from "@/assets/logo-clean.png";
@@ -10,10 +11,11 @@ import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
   { label: "Home", to: "/" },
+  { label: "Features", to: "/features" },
+  { label: "JARVIS AI", to: "/jarvis-ai" },
   { label: "Voice AI", to: "/voice-ai" },
-  { label: "Desktop OS", to: "/desktop-os" },
   { label: "Agents", to: "/agents" },
-  { label: "Integrations", to: "/integrations" },
+  { label: "Blog", to: "/blog" },
   { label: "Pricing", to: "/pricing" },
 ] as const;
 
@@ -71,7 +73,7 @@ export default function Navbar() {
             {NAV_LINKS.map((link) => {
               const active = pathname === link.to;
               return (
-                <Link
+                <SmartLink
                   key={link.label}
                   to={link.to}
                   className={cn(
@@ -88,7 +90,7 @@ export default function Navbar() {
                       active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100",
                     )}
                   />
-                </Link>
+                </SmartLink>
               );
             })}
           </div>
@@ -145,14 +147,14 @@ export default function Navbar() {
 
           <div className="flex flex-col gap-6 px-7 pt-8">
             {NAV_LINKS.map((link) => (
-              <Link
+              <SmartLink
                 key={link.label}
                 to={link.to}
                 onClick={() => setOpen(false)}
                 className="font-display text-[22px] font-bold text-[var(--text-primary)] transition-all duration-300 hover:translate-x-2 hover:text-[var(--cyan)]"
               >
                 {link.label}
-              </Link>
+              </SmartLink>
             ))}
             <div className="mt-6 flex flex-col gap-3">
               <GhostButton>Live Demo</GhostButton>

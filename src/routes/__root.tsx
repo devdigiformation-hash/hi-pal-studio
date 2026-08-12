@@ -80,21 +80,52 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "DIGI BIZ OS — The Autonomous Desktop AI OS" },
+      { title: "DIGI BIZ OS — JARVIS-Style AI Business Operating System" },
       {
         name: "description",
         content:
-          "DIGI BIZ OS turns your desktop into a voice-first, multi-agent AI operating system.",
+          "DIGI BIZ OS turns your Windows desktop into a voice-first, multi-agent AI business operating system.",
       },
       { name: "author", content: "DIGI BIZ OS" },
-      { property: "og:title", content: "DIGI BIZ OS — The Autonomous Desktop AI OS" },
-      {
-        property: "og:description",
-        content: "Operate your desktop at the speed of voice.",
-      },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "DIGI BIZ OS" },
+      { property: "og:locale", content: "en_GB" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "DIGI BIZ OS",
+          url: "https://hi-pal-studio.lovable.app",
+          description:
+            "DIGI BIZ OS is a JARVIS-style AI business operating system for Windows, combining voice control, AI agents, skills, tools, workflows and desktop automation.",
+          parentOrganization: {
+            "@type": "Organization",
+            name: "Digiformation Ltd",
+            url: "https://www.digiformation.co.uk/",
+          },
+          contactPoint: [
+            {
+              "@type": "ContactPoint",
+              contactType: "sales",
+              email: "info@digiformation.co.uk",
+              telephone: "+92-316-446-7464",
+            },
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "DIGI BIZ OS",
+          url: "https://hi-pal-studio.lovable.app",
+        }),
+      },
     ],
     links: [
       {

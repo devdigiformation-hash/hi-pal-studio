@@ -1,24 +1,33 @@
 import { createFileRoute } from "@tanstack/react-router";
 import IntegrationsPage from "@/pages/IntegrationsPage";
+import { buildMeta, breadcrumbLd, softwareLd } from "@/lib/seo";
+
+const PATH = "/integrations";
+const TITLE = "Integrations & DigiMCP — Connect Your Business Tools | DIGI BIZ OS";
+const DESC = "Connect DIGI BIZ OS to the platforms your business already runs on with multi-MCP connectivity, local runners and 150+ agent-accessible tools.";
 
 export const Route = createFileRoute("/integrations")({
-  head: () => ({
-    meta: [
-      { title: "Integrations — DIGI BIZ OS" },
-      {
-        name: "description",
-        content:
-          "Connect DIGI BIZ OS to the tools you already run: mail, calendars, browsers, IDEs and native apps.",
-      },
-      { property: "og:title", content: "Integrations — DIGI BIZ OS" },
-      {
-        property: "og:description",
-        content: "Connect DIGI BIZ OS to the tools your desktop already runs.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => {
+    const { meta, links } = buildMeta({ path: PATH, title: TITLE, description: DESC });
+    return {
+      meta,
+      links,
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(
+            breadcrumbLd([
+              { name: "Home", path: "/" },
+              { name: "Integrations", path: PATH },
+            ]),
+          ),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(softwareLd("DIGI BIZ OS", DESC, PATH)),
+        },
+      ],
+    };
+  },
   component: IntegrationsPage,
 });
-
