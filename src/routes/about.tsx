@@ -6,9 +6,9 @@ import GradientText from "@/components/GradientText";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd } from "@/lib/seo";
 
-const TITLE = "About DIGI BIZ OS — The AI Business Operating System by Digiformation";
+const TITLE = "About DIGI BIZ OS — Built by Digiformation";
 const DESC =
-  "DIGI BIZ OS is an AI agentic business operating system built by Digiformation Ltd. Learn what we build, who it is for and how the product ecosystem fits together.";
+  "DIGI BIZ OS is an AI agentic business operating system by Digiformation Ltd. See what we build, who it is for and how the modules fit together.";
 
 const MODULES = [
   { name: "Digi AI", to: "/features/digi-ai", body: "The assistant core: voice, chat, planning and model routing." },
