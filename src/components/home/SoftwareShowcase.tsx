@@ -86,7 +86,7 @@ export default function SoftwareShowcase() {
       <div className="mx-auto max-w-6xl text-center">
         <EyebrowLabel text="Inside the OS" />
         <h2 className="mt-4 font-display text-[30px] font-bold leading-[1.1] md:text-[50px]">
-          The Workspace That <GradientText>Works While You Talk.</GradientText>
+          The Workspace That <GradientText from="#F5A623" to="#2FE0C8">Works While You Talk.</GradientText>
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-[var(--text-secondary)] md:text-[17px]">
           Screen sharing, camera, memory, skills, multi agents and tools — exactly what runs on

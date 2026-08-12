@@ -164,7 +164,7 @@ export default function ProductWorkbench() {
         <div className="text-center">
           <EyebrowLabel text="Intelligent Workspace" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[34px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[48px]">
-            One Command. <GradientText>Every Module.</GradientText>
+            One Command. <GradientText from="#2FE0C8" to="#F5A623">Every Module.</GradientText>
           </h2>
         </div>
 

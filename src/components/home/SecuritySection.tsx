@@ -48,7 +48,7 @@ export default function SecuritySection() {
         <div>
           <EyebrowLabel text="Enterprise Privacy" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[44px]">
-            Your Data. <GradientText>Your Machine. Your Rules.</GradientText>
+            Your Data. <GradientText from="#4DA3FF" to="#2FE0C8">Your Machine. Your Rules.</GradientText>
           </h2>
           <p className="reveal-item delay-2 mt-5 max-w-[480px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
             Every keystroke, click and capture is processed on your own machine — privacy is the

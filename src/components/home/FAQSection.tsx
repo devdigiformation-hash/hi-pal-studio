@@ -46,7 +46,7 @@ export default function FAQSection() {
         <div className="text-center">
           <EyebrowLabel text="Frequently Asked" color="var(--purple)" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            The Answers <GradientText>You Need.</GradientText>
+            The Answers <GradientText from="#4DA3FF" to="#F5A623">You Need.</GradientText>
           </h2>
         </div>
 
