@@ -19,25 +19,26 @@ import SocialProof from "@/components/home/SocialProof";
 import PricingPreview from "@/components/home/PricingPreview";
 import FAQSection from "@/components/home/FAQSection";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import { buildMeta, softwareLd } from "@/lib/seo";
+
+const TITLE = "DIGI BIZ OS — Your Own JARVIS-Style AI Business Operating System";
+const DESC =
+  "DIGI BIZ OS is a JARVIS-style AI business operating system for Windows: voice control, multi-agent execution, 500+ AI skills, 150+ mixed tools, coding, documents, workflows and scheduled automation.";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "DIGI BIZ OS — Operate Your Desktop at the Speed of Voice" },
-      {
-        name: "description",
-        content:
-          "DIGI BIZ OS is the autonomous desktop AI OS: voice-first control, multi autonomous agents, real-time screen vision and native desktop automation.",
-      },
-      { property: "og:title", content: "DIGI BIZ OS — Operate Your Desktop at the Speed of Voice" },
-      {
-        property: "og:description",
-        content: "The autonomous desktop AI OS, driven entirely by voice.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => {
+    const { meta, links } = buildMeta({ path: "/", title: TITLE, description: DESC });
+    return {
+      meta,
+      links,
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(softwareLd("DIGI BIZ OS", DESC, "/")),
+        },
+      ],
+    };
+  },
   component: HomePage,
 });
 
