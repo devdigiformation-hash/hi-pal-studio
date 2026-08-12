@@ -21,9 +21,9 @@ import FAQSection from "@/components/home/FAQSection";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { buildMeta, softwareLd } from "@/lib/seo";
 
-const TITLE = "DIGI BIZ OS — Your Own JARVIS-Style AI Business Operating System";
+const TITLE = "DIGI BIZ OS — AI Business Operating System";
 const DESC =
-  "DIGI BIZ OS is a JARVIS-style AI business operating system for Windows: voice control, multi-agent execution, 500+ AI skills, 150+ mixed tools, coding, documents, workflows and scheduled automation.";
+  "Voice-first AI business operating system for Windows: multi-agent execution, 500+ AI skills, 150+ tools, workflows and scheduled automation.";
 
 export const Route = createFileRoute("/")({
   head: () => {
