@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import GlobalBackground from "../components/GlobalBackground";
+import { Toaster } from "../components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -87,6 +88,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { name: "theme-color", content: "#020408" },
+      {
+        name: "google-site-verification",
+        content: "jJZo2ub7m53-lwas-6UJVubjuDIw13STxZr-Gmltxqk",
+      },
     ],
     scripts: [
       {
@@ -189,6 +194,7 @@ function RootComponent() {
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
       <Footer />
+      <Toaster />
     </QueryClientProvider>
   );
 }
