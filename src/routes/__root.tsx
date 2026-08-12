@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import GlobalBackground from "../components/GlobalBackground";
+import { Toaster } from "../components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -193,6 +194,7 @@ function RootComponent() {
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
       <Footer />
+      <Toaster />
     </QueryClientProvider>
   );
 }
