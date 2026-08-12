@@ -27,6 +27,7 @@ import { Route as RssDotxmlRouteImport } from './routes/rss[.]xml'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as VoiceAiRouteImport } from './routes/voice-ai'
+import { Route as AdminSeoRouteImport } from './routes/admin.seo'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as CompareIndexRouteImport } from './routes/compare.index'
@@ -125,6 +126,11 @@ const VoiceAiRoute = VoiceAiRouteImport.update({
   path: '/voice-ai',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminSeoRoute = AdminSeoRouteImport.update({
+  id: '/admin/seo',
+  path: '/admin/seo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
@@ -180,6 +186,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/voice-ai': typeof VoiceAiRoute
+  '/admin/seo': typeof AdminSeoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
@@ -207,6 +214,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/voice-ai': typeof VoiceAiRoute
+  '/admin/seo': typeof AdminSeoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
@@ -235,6 +243,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/voice-ai': typeof VoiceAiRoute
+  '/admin/seo': typeof AdminSeoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
@@ -264,6 +273,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/voice-ai'
+    | '/admin/seo'
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
@@ -291,6 +301,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/voice-ai'
+    | '/admin/seo'
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
@@ -318,6 +329,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/voice-ai'
+    | '/admin/seo'
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
@@ -346,6 +358,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   VoiceAiRoute: typeof VoiceAiRoute
+  AdminSeoRoute: typeof AdminSeoRoute
   BlogSlugRoute: typeof BlogSlugRoute
   CompareSlugRoute: typeof CompareSlugRoute
   FeaturesSlugRoute: typeof FeaturesSlugRoute
@@ -483,6 +496,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VoiceAiRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/seo': {
+      id: '/admin/seo'
+      path: '/admin/seo'
+      fullPath: '/admin/seo'
+      preLoaderRoute: typeof AdminSeoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/': {
       id: '/blog/'
       path: '/blog'
@@ -554,6 +574,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   VoiceAiRoute: VoiceAiRoute,
+  AdminSeoRoute: AdminSeoRoute,
   BlogSlugRoute: BlogSlugRoute,
   CompareSlugRoute: CompareSlugRoute,
   FeaturesSlugRoute: FeaturesSlugRoute,

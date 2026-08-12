@@ -66,7 +66,7 @@ function SeoMonitorPage() {
 function Shell({ children }: { children: React.ReactNode }) {
   return (
     <main className="mx-auto w-full max-w-6xl px-5 pb-24 pt-28">
-      <EyebrowLabel>Private · Admin only</EyebrowLabel>
+      <EyebrowLabel text="Private · Admin only" />
       <h1 className="mt-4 font-[var(--font-display)] text-3xl font-bold sm:text-4xl">
         <GradientText from="var(--cyan)" to="var(--violet)">SEO Monitor</GradientText>
       </h1>
