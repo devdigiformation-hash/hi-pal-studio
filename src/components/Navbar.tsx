@@ -10,10 +10,11 @@ import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
   { label: "Home", to: "/" },
+  { label: "Features", to: "/features" },
+  { label: "JARVIS AI", to: "/jarvis-ai" },
   { label: "Voice AI", to: "/voice-ai" },
-  { label: "Desktop OS", to: "/desktop-os" },
   { label: "Agents", to: "/agents" },
-  { label: "Integrations", to: "/integrations" },
+  { label: "Blog", to: "/blog" },
   { label: "Pricing", to: "/pricing" },
 ] as const;
 
