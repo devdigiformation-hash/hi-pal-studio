@@ -108,7 +108,7 @@ export default function Navbar() {
                 background: "linear-gradient(135deg, #6BF3DE 0%, #2FE0C8 55%, #16C2AC 100%)",
               }}
             >
-              Start Now
+              Get Started
               <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5" />
             </Link>
           </div>
