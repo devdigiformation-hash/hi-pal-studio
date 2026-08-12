@@ -142,6 +142,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           publisher: { "@id": "https://digibizos.co.uk/#organization" },
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          [
+            ["Pricing", "/pricing"],
+            ["Download for Windows", "/download"],
+            ["Voice AI Control", "/voice-ai"],
+            ["Desktop Automation", "/desktop-os"],
+            ["Multi-Agent Platform", "/agents"],
+            ["Integrations & Tools", "/integrations"],
+            ["All Features", "/features"],
+            ["Comparisons", "/compare"],
+            ["Blog & Guides", "/blog"],
+            ["FAQ", "/faq"],
+            ["About", "/about"],
+            ["Contact", "/contact"],
+          ].map(([name, path]) => ({
+            "@context": "https://schema.org",
+            "@type": "SiteNavigationElement",
+            name,
+            url: `https://digibizos.co.uk${path}`,
+            isPartOf: { "@id": "https://digibizos.co.uk/#website" },
+          })),
+        ),
+      },
     ],
     links: [
       {
