@@ -56,6 +56,10 @@ export function softwareLd(name: string, description: string, url: string) {
     operatingSystem: "Windows 10, Windows 11",
     url: abs(url),
     description,
+    image: abs("/logo-512.png"),
+    softwareVersion: "1.0",
+    author: { "@id": `${SITE_URL}/#organization` },
+    publisher: { "@id": `${SITE_URL}/#organization` },
     brand: { "@type": "Brand", name: BRAND },
     offers: {
       "@type": "Offer",
@@ -80,15 +84,24 @@ export function faqLd(items: { q: string; a: string }[]) {
 }
 
 export function articleLd(opts: { title: string; description: string; path: string; date: string }) {
+  const iso = /T/.test(opts.date) ? opts.date : `${opts.date}T09:00:00+00:00`;
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: opts.title,
     description: opts.description,
-    datePublished: opts.date,
-    dateModified: opts.date,
+    datePublished: iso,
+    dateModified: iso,
+    image: abs("/logo-512.png"),
+    url: abs(opts.path),
+    inLanguage: "en-GB",
     mainEntityOfPage: abs(opts.path),
     author: { "@type": "Organization", name: BRAND, url: SITE_URL },
-    publisher: { "@type": "Organization", name: BRAND, url: SITE_URL },
+    publisher: {
+      "@type": "Organization",
+      name: BRAND,
+      url: SITE_URL,
+      logo: { "@type": "ImageObject", url: abs("/logo-512.png"), width: 512, height: 512 },
+    },
   };
 }
