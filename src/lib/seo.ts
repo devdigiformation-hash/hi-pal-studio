@@ -56,6 +56,10 @@ export function softwareLd(name: string, description: string, url: string) {
     operatingSystem: "Windows 10, Windows 11",
     url: abs(url),
     description,
+    image: abs("/logo-512.png"),
+    softwareVersion: "1.0",
+    author: { "@id": `${SITE_URL}/#organization` },
+    publisher: { "@id": `${SITE_URL}/#organization` },
     brand: { "@type": "Brand", name: BRAND },
     offers: {
       "@type": "Offer",
