@@ -18,7 +18,7 @@ export const Route = createFileRoute("/privacy")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://hi-pal-studio.lovable.app/privacy" }],
+    links: [{ rel: "canonical", href: "https://digibizos.co.uk/privacy" }],
   }),
   component: () => (
     <LegalPage
