@@ -73,7 +73,6 @@ const SLIDES = [
 
 export default function SoftwareShowcase() {
   const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const count = SLIDES.length;
 
@@ -88,10 +87,9 @@ export default function SoftwareShowcase() {
   const go = useCallback((d: number) => setIndex((i) => (i + d + count) % count), [count]);
 
   useEffect(() => {
-    if (paused) return;
     const t = setInterval(() => setIndex((i) => (i + 1) % count), 2000);
     return () => clearInterval(t);
-  }, [paused, count]);
+  }, [count]);
 
   const active = SLIDES[index];
 
@@ -118,8 +116,6 @@ export default function SoftwareShowcase() {
 
           <div
             className="relative mx-auto aspect-[16/9] w-full max-w-[340px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl [transform-style:preserve-3d]"
-            onMouseEnter={() => setPaused(true)}
-            onMouseLeave={() => setPaused(false)}
           >
             {SLIDES.map((s, i) => {
               let off = i - index;
