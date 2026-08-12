@@ -1,0 +1,33 @@
+# DIGI BIZ OS
+
+> DIGI BIZ OS is a voice-first AI agentic business operating system for Windows 10 and 11, built by Digiformation Ltd. You speak; it plans and executes real work on your machine — documents, files, research, coding, reporting and scheduled automation.
+
+Key facts:
+- Category: AI desktop assistant / AI business operating system (a practical "JARVIS-style" assistant).
+- Platform: Windows 10 and 11 today. macOS, Linux and a mobile companion are in development.
+- Capabilities: 500+ AI skills, 150+ mixed tools, multi-agent delegation, workflows, scheduled jobs, document suite, coding workspace, model routing, custom memories.
+- Licensing: one-time payment, no subscription. Lifetime Access £50, Source Code Licence £99, Custom Build £199.
+- Contact: info@digiformation.co.uk, WhatsApp +92 316 446 7464.
+
+## Core pages
+- [Home](https://digibizos.co.uk/): product overview and live screenshots.
+- [Features](https://digibizos.co.uk/features): every module in the ecosystem.
+- [Voice AI](https://digibizos.co.uk/voice-ai): voice control and hands-free operation.
+- [Desktop OS](https://digibizos.co.uk/desktop-os): desktop automation and computer use.
+- [Agents](https://digibizos.co.uk/agents): multi-agent delegation and run tracking.
+- [Integrations](https://digibizos.co.uk/integrations): connectivity and local runners.
+- [Pricing](https://digibizos.co.uk/pricing): one-time licences and what each includes.
+- [Download](https://digibizos.co.uk/download): Windows installation steps.
+- [FAQ](https://digibizos.co.uk/faq): common buyer and setup questions.
+- [About](https://digibizos.co.uk/about): who builds the product.
+- [Contact](https://digibizos.co.uk/contact): sales and support routes.
+
+## Comparisons
+- [All comparisons](https://digibizos.co.uk/compare)
+
+## Blog
+- [All articles](https://digibizos.co.uk/blog)
+- [RSS feed](https://digibizos.co.uk/rss.xml)
+
+## Machine-readable
+- [Sitemap](https://digibizos.co.uk/sitemap.xml)
