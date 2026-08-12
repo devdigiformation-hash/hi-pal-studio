@@ -57,27 +57,43 @@ const TIERS: {
   id: PlanId;
   eyebrow: string;
   accent: string;
+  accentRgb: string;
+  border: string;
+  glow: string;
   badge?: string;
-  highlight?: boolean;
   cta: string;
 }[] = [
-  { id: "lifetime", eyebrow: "Lifetime Access", accent: "var(--cyan)", cta: "Get Lifetime Access" },
+  {
+    id: "lifetime",
+    eyebrow: "Lifetime Access",
+    accent: "var(--cyan)",
+    accentRgb: "47,224,200",
+    border: "var(--cyan-border)",
+    glow: "var(--glow-cyan)",
+    cta: "Get Lifetime Access",
+  },
   {
     id: "source_code",
     eyebrow: "Source Code",
     accent: "var(--purple)",
+    accentRgb: "139,124,246",
+    border: "var(--purple-border)",
+    glow: "var(--glow-purple)",
     badge: "Full Ownership",
     cta: "Buy Source Code",
   },
   {
     id: "custom_build",
     eyebrow: "Customised Build",
-    accent: "var(--cyan)",
+    accent: "var(--amber)",
+    accentRgb: "245,166,35",
+    border: "var(--amber-border)",
+    glow: "var(--glow-amber)",
     badge: "Most Popular",
-    highlight: true,
     cta: "Order Custom Build",
   },
 ];
+
 
 export default function PricingPage() {
   const { code } = useCurrency();
