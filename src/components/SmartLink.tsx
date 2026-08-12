@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import type { ReactNode } from "react";
+import type { ReactElement, ReactNode } from "react";
 
 const STATIC_TOP = new Set([
   "/",
@@ -49,6 +49,6 @@ export default function SmartLink({
     }
   }
 
-  const LinkAny = Link as unknown as (p: Record<string, unknown>) => JSX.Element;
+  const LinkAny = Link as unknown as (p: Record<string, unknown>) => ReactElement;
   return LinkAny({ ...props, className, onClick, "aria-label": ariaLabel, children });
 }
