@@ -22,6 +22,11 @@ const SLIDES = [
     body: "Screen sharing, live transcript, memory, skills, agents, tools and camera — all orbiting a single voice-first workspace that works while you talk.",
   },
   {
+    src: digiAiHub.url,
+    tag: "Digi AI Hub",
+    title: "Chat, code, personas and agents in one playground.",
+    body: "Agent project assistant, multi-model chat, coding assistant, persona manager, providers and app store — everything unified behind one clean interface.",
+  {
     src: digiCode.url,
     tag: "Digi Code",
     title: "A coding agent that works inside your projects.",
