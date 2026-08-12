@@ -280,6 +280,175 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "AI business assistant", to: "/ai-business-assistant" },
     ],
   },
+  {
+    slug: "best-jarvis-alternatives-for-windows",
+    title: "Best JARVIS Alternatives for Windows in 2026",
+    metaTitle: "Best JARVIS Alternatives for Windows (2026 Guide) | DIGI BIZ OS",
+    description:
+      "A practical guide to choosing a JARVIS-style assistant for Windows: the four categories available, what each one is good at, and how to judge them before you install.",
+    cluster: "JARVIS",
+    date: "2026-08-12",
+    readingTime: "7 min read",
+    body: [
+      {
+        heading: "Four categories, not one market",
+        paragraphs: [
+          "Searching for a JARVIS alternative returns very different kinds of software under one label. Sorting them into categories makes the choice much easier.",
+        ],
+        bullets: [
+          "Voice launchers — map a spoken phrase to a shortcut. Tiny, often free, no reasoning.",
+          "Chat assistants — excellent language ability, no direct access to your machine.",
+          "Developer toolkits — let a model run code locally, but you assemble the setup yourself.",
+          "AI operating systems — packaged desktop products that plan and execute multi-step work.",
+        ],
+      },
+      {
+        heading: "How to judge each option",
+        paragraphs: [
+          "Ignore the demo video and test one real request from your own week — something with several steps and a file at the end of it. Then check three things: did it finish, can you see what it did, and can it repeat that on a schedule.",
+          "Most tools fail on the second and third points, which is where the ongoing time saving actually comes from.",
+        ],
+      },
+      {
+        heading: "Where DIGI BIZ OS fits",
+        paragraphs: [
+          "DIGI BIZ OS sits in the fourth category: an installed Windows application with voice control, agents, 500+ skills, 150+ mixed tools, document and coding workspaces, and scheduled jobs. It is a one-time licence rather than a subscription.",
+          "If you only need hands-free shortcuts, a voice launcher is the lighter and cheaper answer — and that is a perfectly reasonable outcome of this comparison.",
+        ],
+      },
+    ],
+    links: [
+      { label: "JARVIS alternative", to: "/jarvis-alternative" },
+      { label: "Compare with typical JARVIS apps", to: "/compare/digi-biz-os-vs-jarvis-apps" },
+      { label: "JARVIS for Windows", to: "/jarvis-for-windows" },
+    ],
+  },
+  {
+    slug: "ai-desktop-assistant-for-windows-guide",
+    title: "AI Desktop Assistants for Windows: What They Can and Cannot Do",
+    metaTitle: "AI Desktop Assistant for Windows — Capabilities Explained | DIGI BIZ OS",
+    description:
+      "What an AI desktop assistant on Windows can genuinely do today — file work, documents, terminal, browser, scheduling — and the limits worth knowing before you rely on one.",
+    cluster: "Computer Use",
+    date: "2026-08-12",
+    readingTime: "6 min read",
+    body: [
+      {
+        heading: "The capability line",
+        paragraphs: [
+          "A web assistant is sandboxed away from your machine. A desktop assistant is not — and that single difference decides which tasks it can finish for you.",
+          "Anything that ends with a file, a folder, a command or an application is only possible from the desktop side of that line.",
+        ],
+      },
+      {
+        heading: "What works reliably today",
+        paragraphs: ["These are the tasks where desktop assistants are already dependable."],
+        bullets: [
+          "Bulk file classification, renaming and conversion.",
+          "Document intake, extraction and summarisation.",
+          "Running project commands, scripts and builds.",
+          "Web research collected into a structured brief.",
+          "Recurring jobs that produce the same report every week.",
+        ],
+      },
+      {
+        heading: "What still needs a human",
+        paragraphs: [
+          "Judgement calls, negotiation, anything with legal or financial consequence, and any task where the rules are not written down anywhere. Assistants are strongest where the rule exists but the execution is tedious.",
+          "The practical approach is to automate the tedious 80% and review the output, rather than expecting unsupervised ownership of a whole process on day one.",
+        ],
+      },
+    ],
+    links: [
+      { label: "AI desktop assistant", to: "/ai-desktop-assistant" },
+      { label: "AI computer control", to: "/ai-computer-control" },
+      { label: "AI file management", to: "/features/ai-file-management" },
+    ],
+  },
+  {
+    slug: "ai-coding-assistant-for-python-and-nodejs",
+    title: "Using an AI Coding Agent for Python and Node.js Projects",
+    metaTitle: "AI Coding Agent for Python & Node.js Projects | DIGI BIZ OS",
+    description:
+      "How an AI coding agent works inside real Python and Node.js repositories: reading the codebase, running the terminal, making changes and verifying them before you review.",
+    cluster: "Coding",
+    date: "2026-08-12",
+    readingTime: "7 min read",
+    body: [
+      {
+        heading: "Autocomplete is not an agent",
+        paragraphs: [
+          "Inline completion helps you type the line you were already writing. An agent takes a goal — fix this failing test, add this endpoint, upgrade this dependency — and works through the repository until the goal is met.",
+          "The difference in practice is the terminal: an agent can run the code, read the error and try again.",
+        ],
+      },
+      {
+        heading: "A realistic Python workflow",
+        paragraphs: [
+          "Point the agent at the project, describe the change, and let it locate the relevant modules, edit them, run the test suite and report what passed. You review the diff rather than writing the boilerplate.",
+          "The same loop applies to Node.js work: install, build, run, read the output, correct, repeat.",
+        ],
+        bullets: [
+          "Repository awareness so changes fit the existing structure.",
+          "Terminal execution so results are verified, not assumed.",
+          "Iteration on failures instead of one-shot output.",
+          "A readable summary of every file touched.",
+        ],
+      },
+      {
+        heading: "Guardrails worth keeping",
+        paragraphs: [
+          "Work on a branch, keep the test suite meaningful, and read the diff. An agent that can run commands is powerful precisely because it changes real state — the same reason it deserves the same review any contributor would get.",
+        ],
+      },
+    ],
+    links: [
+      { label: "AI coding agent", to: "/ai-coding-agent" },
+      { label: "DigiCode", to: "/features/digicode" },
+      { label: "AI terminal assistant", to: "/ai-terminal-assistant" },
+    ],
+  },
+  {
+    slug: "ai-workflow-automation-for-small-teams",
+    title: "AI Workflow Automation for Small Teams: Where to Start",
+    metaTitle: "AI Workflow Automation for Small Teams — Practical Guide | DIGI BIZ OS",
+    description:
+      "A step-by-step approach to automating business workflows with AI: pick the right first process, define the rules, schedule it, and measure whether it actually saved time.",
+    cluster: "AI Business",
+    date: "2026-08-12",
+    readingTime: "6 min read",
+    body: [
+      {
+        heading: "Pick the boring process first",
+        paragraphs: [
+          "The best first automation is high frequency, rule-based and low risk. Document intake, weekly reporting and file admin all qualify. Sales judgement and client negotiation do not.",
+          "Frequency matters more than complexity: a five-minute task done daily is worth more automated than a two-hour task done once a quarter.",
+        ],
+      },
+      {
+        heading: "Write the rules down before you automate",
+        paragraphs: ["Most automation projects fail because the process only existed in someone's head."],
+        bullets: [
+          "What triggers the work?",
+          "What inputs are required, and where do they live?",
+          "What does a correct output look like?",
+          "Who reviews it, and what happens when something is wrong?",
+        ],
+      },
+      {
+        heading: "Schedule, then measure",
+        paragraphs: [
+          "Once a workflow runs correctly by hand, put it on a schedule so it happens without anyone remembering. Then check the honest number after a month: hours saved, errors avoided, and whether the review step is still needed every time.",
+          "In DIGI BIZ OS this maps to workflows for the steps and jobs for the timetable, with run history as the evidence.",
+        ],
+      },
+    ],
+    links: [
+      { label: "AI workflow automation", to: "/ai-workflow-automation" },
+      { label: "Business automation", to: "/features/business-automation" },
+      { label: "DigiJobs", to: "/features/digijobs" },
+    ],
+  },
 ];
 
 export const BLOG_BY_SLUG: Record<string, BlogPost> = Object.fromEntries(
