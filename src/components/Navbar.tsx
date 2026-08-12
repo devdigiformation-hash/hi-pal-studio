@@ -73,7 +73,7 @@ export default function Navbar() {
             {NAV_LINKS.map((link) => {
               const active = pathname === link.to;
               return (
-                <Link
+                <SmartLink
                   key={link.label}
                   to={link.to}
                   className={cn(
@@ -90,7 +90,7 @@ export default function Navbar() {
                       active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100",
                     )}
                   />
-                </Link>
+                </SmartLink>
               );
             })}
           </div>
@@ -147,14 +147,14 @@ export default function Navbar() {
 
           <div className="flex flex-col gap-6 px-7 pt-8">
             {NAV_LINKS.map((link) => (
-              <Link
+              <SmartLink
                 key={link.label}
                 to={link.to}
                 onClick={() => setOpen(false)}
                 className="font-display text-[22px] font-bold text-[var(--text-primary)] transition-all duration-300 hover:translate-x-2 hover:text-[var(--cyan)]"
               >
                 {link.label}
-              </Link>
+              </SmartLink>
             ))}
             <div className="mt-6 flex flex-col gap-3">
               <GhostButton>Live Demo</GhostButton>

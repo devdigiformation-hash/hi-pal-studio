@@ -26,11 +26,15 @@ export default function SmartLink({
   className,
   children,
   ariaLabel,
+  onClick,
+  key: _key,
 }: {
   to: string;
   className?: string;
   children: ReactNode;
   ariaLabel?: string;
+  onClick?: () => void;
+  key?: string;
 }) {
   const segments = to.split("/").filter(Boolean);
   let props: Record<string, unknown> = { to };
@@ -46,5 +50,5 @@ export default function SmartLink({
   }
 
   const LinkAny = Link as unknown as (p: Record<string, unknown>) => JSX.Element;
-  return LinkAny({ ...props, className, "aria-label": ariaLabel, children });
+  return LinkAny({ ...props, className, onClick, "aria-label": ariaLabel, children });
 }

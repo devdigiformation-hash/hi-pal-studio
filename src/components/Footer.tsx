@@ -97,7 +97,7 @@ export default function Footer() {
                   className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
                 >
                   {item.label}
-                </Link>
+                </SmartLink>
               </li>
             ))}
           </ul>
@@ -113,7 +113,7 @@ export default function Footer() {
                   className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
                 >
                   {item.label}
-                </Link>
+                </SmartLink>
               </li>
             ))}
           </ul>
@@ -129,7 +129,7 @@ export default function Footer() {
                   className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
                 >
                   {item.label}
-                </Link>
+                </SmartLink>
               </li>
             ))}
           </ul>
@@ -143,7 +143,7 @@ export default function Footer() {
                     className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
                   >
                     {item.label}
-                  </Link>
+                  </SmartLink>
                 </li>
               ))}
             </ul>
