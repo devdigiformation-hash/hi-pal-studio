@@ -116,8 +116,6 @@ export default function SoftwareShowcase() {
 
           <div
             className="relative mx-auto aspect-[16/9] w-full max-w-[340px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl [transform-style:preserve-3d]"
-            onMouseEnter={() => setPaused(true)}
-            onMouseLeave={() => setPaused(false)}
           >
             {SLIDES.map((s, i) => {
               let off = i - index;
