@@ -234,9 +234,25 @@ export default function HeroSection() {
             transition={{ delay: 0.8 }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
-            <CyanButton size="lg" icon={<WindowsIcon size={17} />}>
-              Download for Windows 10/11
-            </CyanButton>
+            <div className="relative w-full sm:w-auto">
+              <CyanButton
+                size="lg"
+                icon={<WindowsIcon size={17} />}
+                className="w-full sm:w-auto"
+              >
+                Download for Windows
+              </CyanButton>
+              <span
+                className="pointer-events-none absolute -top-1.5 right-0 rounded-full border px-1.5 py-[1px] font-mono text-[8px] uppercase tracking-[0.14em] backdrop-blur-md sm:-right-1.5"
+                style={{
+                  color: "var(--cyan)",
+                  borderColor: "rgba(47,224,200,0.4)",
+                  background: "rgba(47,224,200,0.12)",
+                }}
+              >
+                Windows 10, 11
+              </span>
+            </div>
             <GhostButton size="lg" icon={<Play size={17} />}>
               Watch 60s Product Tour
             </GhostButton>
