@@ -248,6 +248,92 @@ export default function SoftwareShowcase() {
           </div>
         </div>
       </div>
+
+      <AnimatePresence>
+        {lightboxOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-[#020408]/95 backdrop-blur-xl p-4"
+            onClick={closeLightbox}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Screenshot gallery"
+          >
+            <button
+              type="button"
+              onClick={closeLightbox}
+              aria-label="Close gallery"
+              className="absolute right-4 top-4 z-10 grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/5 text-[var(--text-primary)] transition hover:bg-white/10"
+            >
+              <X size={20} />
+            </button>
+
+            <button
+              type="button"
+              onClick={(e) => { e.stopPropagation(); goLightbox(-1); }}
+              aria-label="Previous screenshot"
+              className="absolute left-2 top-1/2 z-10 -translate-y-1/2 grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/5 text-[var(--text-primary)] transition hover:bg-white/10 md:left-6 md:h-12 md:w-12"
+            >
+              <ChevronLeft size={22} />
+            </button>
+
+            <button
+              type="button"
+              onClick={(e) => { e.stopPropagation(); goLightbox(1); }}
+              aria-label="Next screenshot"
+              className="absolute right-2 top-1/2 z-10 -translate-y-1/2 grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/5 text-[var(--text-primary)] transition hover:bg-white/10 md:right-6 md:h-12 md:w-12"
+            >
+              <ChevronRight size={22} />
+            </button>
+
+            <motion.div
+              key={lightboxIndex}
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -40 }}
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              onDragEnd={onLightboxSwipe}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-h-[85vh] w-full max-w-6xl cursor-grab active:cursor-grabbing"
+            >
+              <img
+                src={SLIDES[lightboxIndex].src}
+                alt={`DIGI BIZ OS — ${SLIDES[lightboxIndex].title}`}
+                className="mx-auto max-h-[85vh] w-auto rounded-[18px] border border-white/10 bg-[#05070B] shadow-[0_0_80px_rgba(47,224,200,0.15)] object-contain"
+              />
+              <div className="mt-4 text-center">
+                <span className="font-code text-[11px] uppercase tracking-[0.24em] text-[var(--cyan)]">
+                  {SLIDES[lightboxIndex].tag}
+                </span>
+                <h3 className="mt-1 font-display text-[18px] font-bold text-[var(--text-primary)] md:text-[22px]">
+                  {SLIDES[lightboxIndex].title}
+                </h3>
+              </div>
+            </motion.div>
+
+            <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2">
+              {SLIDES.map((s, i) => (
+                <button
+                  key={s.tag}
+                  type="button"
+                  aria-label={`Go to ${s.tag}`}
+                  onClick={(e) => { e.stopPropagation(); setLightboxIndex(i); }}
+                  className="h-1.5 rounded-full transition-all"
+                  style={{
+                    width: i === lightboxIndex ? 22 : 8,
+                    background: i === lightboxIndex ? "var(--cyan)" : "rgba(148,163,184,0.4)",
+                  }}
+                />
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </SectionWrapper>
   );
 }
