@@ -15,7 +15,7 @@ const TIERS = [
     badge: "Lifetime Access",
     name: "DIGI BIZ OS Lifetime",
     gbp: 50,
-    compareGbp: 99,
+    compareGbp: 69,
     note: "Pay once. Own it for life.",
     features: [
       "One-time payment — no subscription",
@@ -33,7 +33,7 @@ const TIERS = [
     badge: "Full Ownership",
     name: "Source Code Licence",
     gbp: 99,
-    compareGbp: 199,
+    compareGbp: 139,
     note: "Own the code. Automate your business A to Z.",
     features: [
       "Everything in Lifetime",
@@ -53,7 +53,7 @@ const TIERS = [
     badge: "Most Popular",
     name: "Customised + Your Branding",
     gbp: 199,
-    compareGbp: 299,
+    compareGbp: 279,
     note: "White-label build with 400+ workflows.",
     features: [
       "Everything in Lifetime",

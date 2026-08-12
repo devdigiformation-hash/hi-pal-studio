@@ -28,8 +28,8 @@ export const PLANS: Record<PlanId, Plan> = {
     priceUsd: 64,
     priceGbp: 50,
     compareGbp: 69,
-    compareUsd: 127,
-    comparePkr: 36000,
+    compareUsd: 88,
+    comparePkr: 25000,
     billingNote: "One-time payment · Lifetime access",
     includes: [
       "One-time payment — no monthly subscription",
@@ -52,8 +52,8 @@ export const PLANS: Record<PlanId, Plan> = {
     priceUsd: 127,
     priceGbp: 99,
     compareGbp: 139,
-    compareUsd: 255,
-    comparePkr: 72000,
+    compareUsd: 178,
+    comparePkr: 50000,
     billingNote: "One-time payment · Source code licence",
     includes: [
       "Everything in Lifetime Access",
@@ -79,8 +79,8 @@ export const PLANS: Record<PlanId, Plan> = {
     priceUsd: 255,
     priceGbp: 199,
     compareGbp: 279,
-    compareUsd: 383,
-    comparePkr: 108000,
+    compareUsd: 357,
+    comparePkr: 100000,
     billingNote: "One-time payment · Custom build",
     includes: [
       "Everything in Lifetime Access",
