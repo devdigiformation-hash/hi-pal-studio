@@ -74,6 +74,8 @@ const SLIDES = [
 export default function SoftwareShowcase() {
   const [index, setIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
   const count = SLIDES.length;
 
   useEffect(() => {
@@ -90,6 +92,33 @@ export default function SoftwareShowcase() {
     const t = setInterval(() => setIndex((i) => (i + 1) % count), 2000);
     return () => clearInterval(t);
   }, [count]);
+
+  const openLightbox = useCallback((i: number) => {
+    setLightboxIndex(i);
+    setLightboxOpen(true);
+  }, []);
+
+  const closeLightbox = useCallback(() => setLightboxOpen(false), []);
+
+  const goLightbox = useCallback((d: number) => {
+    setLightboxIndex((i) => (i + d + count) % count);
+  }, [count]);
+
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") goLightbox(-1);
+      if (e.key === "ArrowRight") goLightbox(1);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightboxOpen, closeLightbox, goLightbox]);
+
+  const onLightboxSwipe = (_: unknown, info: PanInfo) => {
+    if (info.offset.x < -60) goLightbox(1);
+    else if (info.offset.x > 60) goLightbox(-1);
+  };
 
   const active = SLIDES[index];
 
