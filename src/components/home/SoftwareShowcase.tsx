@@ -172,7 +172,7 @@ export default function SoftwareShowcase() {
                   <div className="relative flex h-full w-full items-start justify-center overflow-hidden rounded-[14px] bg-[#05070B] md:rounded-[20px]">
                     <img
                       src={s.src}
-                      alt={`DIGI BIZ OS — ${s.title}`}
+                      alt={`DIGI BIZ OS ${s.tag} screenshot — ${s.title}`}
                       loading="lazy"
                       draggable={false}
                       className="h-full w-full object-contain object-top"
@@ -303,7 +303,7 @@ export default function SoftwareShowcase() {
             >
               <img
                 src={SLIDES[lightboxIndex].src}
-                alt={`DIGI BIZ OS — ${SLIDES[lightboxIndex].title}`}
+                alt={`DIGI BIZ OS ${SLIDES[lightboxIndex].tag} screenshot — ${SLIDES[lightboxIndex].title}`}
                 className="mx-auto max-h-[85vh] w-auto rounded-[18px] border border-white/10 bg-[#05070B] shadow-[0_0_80px_rgba(47,224,200,0.15)] object-contain"
               />
               <div className="mt-4 text-center">

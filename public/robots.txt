@@ -28,3 +28,4 @@ User-agent: facebookexternalhit
 Allow: /
 
 Sitemap: https://digibizos.co.uk/sitemap.xml
+Sitemap: https://digibizos.co.uk/rss.xml

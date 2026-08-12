@@ -60,7 +60,7 @@ export default function Navbar() {
           <Link to="/" className="group flex shrink-0 items-center gap-2">
             <img
               src={logoClean}
-              alt="DIGI BIZ OS"
+              alt="DIGI BIZ OS logo"
               className="h-8 w-8 rounded-full transition-all duration-300 group-hover:animate-logo-blink md:h-9 md:w-9"
             />
             <span className="font-display text-[13.5px] font-bold tracking-tight text-[var(--text-primary)] md:text-[14px]">
