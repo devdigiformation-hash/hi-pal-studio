@@ -26,7 +26,10 @@ const TIERS = [
       "Bring your own AI key",
     ],
     cta: "Get Lifetime Access",
-    highlight: false,
+    accent: "var(--cyan)",
+    accentRgb: "47,224,200",
+    glow: "var(--glow-cyan)",
+    border: "var(--cyan-border)",
   },
   {
     id: "source_code" as const,
@@ -46,7 +49,10 @@ const TIERS = [
       "Resale & commercial rights",
     ],
     cta: "Buy Source Code",
-    highlight: false,
+    accent: "var(--purple)",
+    accentRgb: "139,124,246",
+    glow: "var(--glow-purple)",
+    border: "rgba(139,124,246,0.35)",
   },
   {
     id: "custom_build" as const,
@@ -65,9 +71,13 @@ const TIERS = [
       "6 months priority support",
     ],
     cta: "Order Custom Build",
-    highlight: true,
+    accent: "var(--amber)",
+    accentRgb: "245,166,35",
+    glow: "var(--glow-amber)",
+    border: "rgba(245,166,35,0.35)",
   },
 ];
+
 
 export default function PricingPreview() {
   const { code } = useCurrency();
