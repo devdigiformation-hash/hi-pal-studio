@@ -24,6 +24,7 @@ import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as RefundRouteImport } from './routes/refund'
 import { Route as RssDotxmlRouteImport } from './routes/rss[.]xml'
+import { Route as SitemapRouteImport } from './routes/sitemap'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as VoiceAiRouteImport } from './routes/voice-ai'
@@ -111,6 +112,11 @@ const RssDotxmlRoute = RssDotxmlRouteImport.update({
   path: '/rss.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapRoute = SitemapRouteImport.update({
+  id: '/sitemap',
+  path: '/sitemap',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -183,6 +189,7 @@ export interface FileRoutesByFullPath {
   '/privacy': typeof PrivacyRoute
   '/refund': typeof RefundRoute
   '/rss.xml': typeof RssDotxmlRoute
+  '/sitemap': typeof SitemapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/voice-ai': typeof VoiceAiRoute
@@ -211,6 +218,7 @@ export interface FileRoutesByTo {
   '/privacy': typeof PrivacyRoute
   '/refund': typeof RefundRoute
   '/rss.xml': typeof RssDotxmlRoute
+  '/sitemap': typeof SitemapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/voice-ai': typeof VoiceAiRoute
@@ -240,6 +248,7 @@ export interface FileRoutesById {
   '/privacy': typeof PrivacyRoute
   '/refund': typeof RefundRoute
   '/rss.xml': typeof RssDotxmlRoute
+  '/sitemap': typeof SitemapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/voice-ai': typeof VoiceAiRoute
@@ -270,6 +279,7 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/refund'
     | '/rss.xml'
+    | '/sitemap'
     | '/sitemap.xml'
     | '/terms'
     | '/voice-ai'
@@ -298,6 +308,7 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/refund'
     | '/rss.xml'
+    | '/sitemap'
     | '/sitemap.xml'
     | '/terms'
     | '/voice-ai'
@@ -326,6 +337,7 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/refund'
     | '/rss.xml'
+    | '/sitemap'
     | '/sitemap.xml'
     | '/terms'
     | '/voice-ai'
@@ -355,6 +367,7 @@ export interface RootRouteChildren {
   PrivacyRoute: typeof PrivacyRoute
   RefundRoute: typeof RefundRoute
   RssDotxmlRoute: typeof RssDotxmlRoute
+  SitemapRoute: typeof SitemapRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   VoiceAiRoute: typeof VoiceAiRoute
@@ -475,6 +488,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RssDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap': {
+      id: '/sitemap'
+      path: '/sitemap'
+      fullPath: '/sitemap'
+      preLoaderRoute: typeof SitemapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -571,6 +591,7 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyRoute: PrivacyRoute,
   RefundRoute: RefundRoute,
   RssDotxmlRoute: RssDotxmlRoute,
+  SitemapRoute: SitemapRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   VoiceAiRoute: VoiceAiRoute,
