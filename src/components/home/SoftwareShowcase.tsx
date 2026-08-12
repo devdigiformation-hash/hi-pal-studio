@@ -103,7 +103,7 @@ export default function SoftwareShowcase() {
           />
 
           <div
-            className="relative mx-auto aspect-[16/9] w-full max-w-[280px] sm:max-w-md md:max-w-lg lg:max-w-xl [transform-style:preserve-3d]"
+            className="relative mx-auto aspect-[16/9] w-full max-w-[340px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl [transform-style:preserve-3d]"
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
           >
@@ -112,18 +112,18 @@ export default function SoftwareShowcase() {
               if (off > count / 2) off -= count;
               if (off < -count / 2) off += count;
               const abs = Math.abs(off);
-              const hidden = isMobile ? abs > 0 : abs > 1;
+              const hidden = abs > 1;
               return (
                 <motion.div
                   key={s.src}
                   aria-hidden={off !== 0}
-                  className="absolute left-1/2 top-0 aspect-[16/9] w-[88%] origin-center overflow-hidden rounded-[16px] border border-white/10 bg-[#05070B] p-1 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] md:w-[80%] md:rounded-[26px] md:p-2"
-                  style={{ transformStyle: "preserve-3d", marginLeft: isMobile ? "-44%" : "-40%" }}
+                  className="absolute left-1/2 top-0 aspect-[16/9] w-[80%] origin-center overflow-hidden rounded-[16px] border border-white/10 bg-[#05070B] p-1 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] md:w-[78%] md:rounded-[26px] md:p-2"
+                  style={{ transformStyle: "preserve-3d", marginLeft: "-40%" }}
                   animate={{
-                    x: isMobile ? `${off * 100}%` : `${off * 56}%`,
-                    scale: off === 0 ? 1 : isMobile ? 0.9 : 0.74,
-                    rotateY: isMobile ? 0 : off * -20,
-                    opacity: hidden ? 0 : off === 0 ? 1 : 0.32,
+                    x: isMobile ? `${off * 80}%` : `${off * 58}%`,
+                    scale: off === 0 ? 1 : isMobile ? 0.82 : 0.76,
+                    rotateY: isMobile ? off * -12 : off * -20,
+                    opacity: hidden ? 0 : off === 0 ? 1 : 0.4,
                     filter: off === 0 ? "blur(0px)" : "blur(3px)",
                     zIndex: 10 - abs,
                   }}
