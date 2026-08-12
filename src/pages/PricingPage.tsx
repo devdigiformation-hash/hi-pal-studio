@@ -107,8 +107,8 @@ export default function PricingPage() {
     >
       <MiniHero
         eyebrow="Pricing"
-        title="One Price."
-        gradientTitle="Infinite Power."
+        title="DIGI BIZ OS Pricing —"
+        gradientTitle="Lifetime Licences"
         subtitle="Three one-time packages — lifetime access, your own branded build, or the full source code."
         height="min-h-[50vh]"
       />
