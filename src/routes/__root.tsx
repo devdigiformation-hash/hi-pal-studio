@@ -142,6 +142,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "sitemap", type: "application/xml", href: "/sitemap.xml" },
+      {
+        rel: "alternate",
+        type: "application/rss+xml",
+        title: "DIGI BIZ OS Blog",
+        href: "/rss.xml",
+      },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
