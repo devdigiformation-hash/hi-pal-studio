@@ -5,13 +5,37 @@ import ActivePulse from "./ActivePulse";
 import EyebrowLabel from "./EyebrowLabel";
 import MonoBadge from "./MonoBadge";
 
-const PRODUCT = [
-  { label: "Product", to: "/" },
-  { label: "Voice AI", to: "/voice-ai" },
-  { label: "Desktop OS", to: "/desktop-os" },
-  { label: "AI Agents", to: "/agents" },
-  { label: "Integrations", to: "/integrations" },
+const OVERVIEW = [
+  { label: "Overview", to: "/" },
+  { label: "AI Business OS for PC", to: "/desktop-os" },
   { label: "Pricing", to: "/pricing" },
+  { label: "Download", to: "/", hash: "hero" },
+  { label: "Software Showcase", to: "/", hash: "software" },
+  { label: "Reviews", to: "/", hash: "testimonials" },
+] as const;
+
+const FEATURES = [
+  { label: "Voice Control", to: "/voice-ai" },
+  { label: "Desktop Automation", to: "/desktop-os" },
+  { label: "Local & Private", to: "/desktop-os" },
+  { label: "Multi-Agent Platform", to: "/agents" },
+  { label: "Mixed Tools & Skills", to: "/integrations" },
+  { label: "Workflows & Cron Jobs", to: "/", hash: "workflows" },
+] as const;
+
+const RESOURCES = [
+  { label: "Use Cases", to: "/", hash: "use-cases" },
+  { label: "Compare", to: "/", hash: "comparison" },
+  { label: "Source Code Licence", to: "/", hash: "source-code" },
+  { label: "Capabilities", to: "/", hash: "capabilities" },
+  { label: "FAQ", to: "/", hash: "faq" },
+] as const;
+
+const LEGAL = [
+  { label: "Terms & Conditions", to: "/terms" },
+  { label: "Privacy Policy", to: "/privacy" },
+  { label: "Refund Policy", to: "/refund" },
+  { label: "Delivery Policy", to: "/delivery" },
 ] as const;
 
 const BUSINESS = [
@@ -35,7 +59,7 @@ export default function Footer() {
       className="relative border-t border-[var(--border-subtle)]"
       style={{ background: "var(--bg-base)" }}
     >
-      <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-6 py-16 sm:grid-cols-2 md:px-10 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-6 py-16 sm:grid-cols-2 md:px-10 lg:grid-cols-3 xl:grid-cols-6">
         <div>
           <div className="flex items-center gap-2">
             <img src={logoClean} alt="DIGI BIZ OS" className="h-9 w-9 rounded-full" />
@@ -58,12 +82,13 @@ export default function Footer() {
         </div>
 
         <div>
-          <EyebrowLabel text="Product" />
+          <EyebrowLabel text="Overview" />
           <ul className="mt-5 space-y-3">
-            {PRODUCT.map((item) => (
+            {OVERVIEW.map((item) => (
               <li key={item.label}>
                 <Link
                   to={item.to}
+                  hash={"hash" in item ? item.hash : undefined}
                   className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
                 >
                   {item.label}
@@ -74,7 +99,56 @@ export default function Footer() {
         </div>
 
         <div>
-          <EyebrowLabel text="Our Main Business" color="var(--purple)" />
+          <EyebrowLabel text="Features" color="var(--cyan)" />
+          <ul className="mt-5 space-y-3">
+            {FEATURES.map((item) => (
+              <li key={item.label}>
+                <Link
+                  to={item.to}
+                  hash={"hash" in item ? item.hash : undefined}
+                  className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <EyebrowLabel text="Resources" color="var(--purple)" />
+          <ul className="mt-5 space-y-3">
+            {RESOURCES.map((item) => (
+              <li key={item.label}>
+                <Link
+                  to={item.to}
+                  hash={"hash" in item ? item.hash : undefined}
+                  className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-6">
+            <EyebrowLabel text="Legal" color="var(--amber)" />
+            <ul className="mt-5 space-y-3">
+              {LEGAL.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    to={item.to}
+                    className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <EyebrowLabel text="Company" color="var(--purple)" />
           <ul className="mt-5 space-y-3">
             {BUSINESS.map((item) => (
               <li key={item}>
