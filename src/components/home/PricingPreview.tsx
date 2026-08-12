@@ -88,7 +88,7 @@ export default function PricingPreview() {
         <div className="text-center">
           <EyebrowLabel text="Pricing" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            Pay Once. <GradientText>Own the Future.</GradientText>
+            Pay Once. <GradientText from="#F5A623" to="#3DDC84">Own the Future.</GradientText>
           </h2>
           <div className="reveal-item delay-2 mt-6 flex justify-center">
             <CurrencySelector />

@@ -35,7 +35,7 @@ export default function UseCases() {
         <div className="text-center">
           <EyebrowLabel text="Real World Impact" color="var(--pink)" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            Built for Winners. <GradientText>Not Browsers.</GradientText>
+            Built for Winners. <GradientText from="#4DA3FF" to="#8B7CF6">Not Browsers.</GradientText>
           </h2>
         </div>
 
