@@ -235,13 +235,15 @@ export default function HeroSection() {
             className="mt-10 flex flex-wrap items-center gap-3 sm:gap-4"
           >
             <div className="relative w-auto">
-              <CyanButton
-                size="sm"
-                icon={<WindowsIcon size={15} />}
-                className="px-3.5 text-[12px] sm:px-6 sm:py-[11px] sm:text-[14px]"
-              >
-                Download for Windows
-              </CyanButton>
+              <Link to="/download">
+                <CyanButton
+                  size="sm"
+                  icon={<WindowsIcon size={15} />}
+                  className="px-3.5 text-[12px] sm:px-6 sm:py-[11px] sm:text-[14px]"
+                >
+                  Download for Windows
+                </CyanButton>
+              </Link>
               <span
                 className="pointer-events-none absolute -top-1.5 right-0 rounded-full border px-1.5 py-[1px] font-mono text-[8px] uppercase tracking-[0.14em] backdrop-blur-md sm:-right-1.5"
                 style={{
