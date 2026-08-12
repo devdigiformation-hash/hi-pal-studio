@@ -232,13 +232,13 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.8 }}
-            className="mt-10 flex flex-wrap items-center gap-4"
+            className="mt-10 flex flex-wrap items-center gap-3 sm:gap-4"
           >
-            <div className="relative w-full sm:w-auto">
+            <div className="relative w-auto">
               <CyanButton
-                size="lg"
-                icon={<WindowsIcon size={17} />}
-                className="w-full sm:w-auto"
+                size="sm"
+                icon={<WindowsIcon size={15} />}
+                className="px-3.5 text-[12px] sm:px-6 sm:py-[11px] sm:text-[14px]"
               >
                 Download for Windows
               </CyanButton>
@@ -253,7 +253,12 @@ export default function HeroSection() {
                 Windows 10, 11
               </span>
             </div>
-            <GhostButton size="lg" icon={<Play size={17} />}>
+            <GhostButton
+              size="sm"
+              tone="139,124,246"
+              icon={<Play size={15} />}
+              className="px-3.5 text-[12px] sm:px-6 sm:py-[11px] sm:text-[14px]"
+            >
               Watch 60s Product Tour
             </GhostButton>
           </motion.div>
