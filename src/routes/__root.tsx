@@ -80,12 +80,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "DIGI BIZ OS — JARVIS-Style AI Business Operating System" },
-      {
-        name: "description",
-        content:
-          "DIGI BIZ OS turns your Windows desktop into a voice-first, multi-agent AI business operating system.",
-      },
       { name: "author", content: "DIGI BIZ OS" },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "DIGI BIZ OS" },
