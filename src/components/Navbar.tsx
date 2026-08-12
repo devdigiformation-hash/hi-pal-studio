@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
+import SmartLink from "./SmartLink";
 import { ArrowRight, Menu, User, X } from "lucide-react";
 import { WindowsIcon } from "@/components/PlatformIcons";
 import logoClean from "@/assets/logo-clean.png";

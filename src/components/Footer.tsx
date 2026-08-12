@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import SmartLink from "./SmartLink";
 import { Github, Globe, Linkedin, Mail, MessageCircle, Phone, Twitter } from "lucide-react";
 import logoClean from "@/assets/logo-clean.png";
 import ActivePulse from "./ActivePulse";
@@ -91,7 +92,7 @@ export default function Footer() {
           <ul className="mt-5 space-y-3">
             {OVERVIEW.map((item) => (
               <li key={item.label}>
-                <Link
+                <SmartLink
                   to={item.to}
                   className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
                 >
@@ -107,7 +108,7 @@ export default function Footer() {
           <ul className="mt-5 space-y-3">
             {FEATURES.map((item) => (
               <li key={item.label}>
-                <Link
+                <SmartLink
                   to={item.to}
                   className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
                 >
@@ -123,7 +124,7 @@ export default function Footer() {
           <ul className="mt-5 space-y-3">
             {RESOURCES.map((item) => (
               <li key={item.label}>
-                <Link
+                <SmartLink
                   to={item.to}
                   className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
                 >
@@ -137,7 +138,7 @@ export default function Footer() {
             <ul className="mt-5 space-y-3">
               {LEGAL.map((item) => (
                 <li key={item.label}>
-                  <Link
+                  <SmartLink
                     to={item.to}
                     className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
                   >
