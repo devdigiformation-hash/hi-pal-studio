@@ -5,6 +5,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GradientText from "@/components/GradientText";
 import digiMain from "@/assets/os-main-dashboard.png.asset.json";
+import digiAiHub from "@/assets/os-digi-ai-hub.png.asset.json";
 import digiCode from "@/assets/os-digi-code.png.asset.json";
 import digiDocs from "@/assets/os-digi-docs.png.asset.json";
 import digiTools from "@/assets/os-digi-tools.png.asset.json";
@@ -19,6 +20,12 @@ const SLIDES = [
     tag: "Live OS",
     title: "Your entire command surface in one place.",
     body: "Screen sharing, live transcript, memory, skills, agents, tools and camera — all orbiting a single voice-first workspace that works while you talk.",
+  },
+  {
+    src: digiAiHub.url,
+    tag: "Digi AI Hub",
+    title: "Chat, code, personas and agents in one playground.",
+    body: "Agent project assistant, multi-model chat, coding assistant, persona manager, providers and app store — everything unified behind one clean interface.",
   },
   {
     src: digiCode.url,
