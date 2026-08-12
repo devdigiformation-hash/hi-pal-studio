@@ -4,7 +4,7 @@ import { SEO_PAGES } from "@/content/seo-pages";
 import { BLOG_POSTS } from "@/content/blog-posts";
 import { COMPARE_PAGES } from "@/content/compare-pages";
 
-const BASE_URL = "https://digibizos.co.uk";
+const BASE_URL = "https://hi-pal-studio.lovable.app";
 
 interface SitemapEntry {
   path: string;

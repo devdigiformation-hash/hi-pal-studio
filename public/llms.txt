@@ -10,24 +10,24 @@ Key facts:
 - Contact: info@digiformation.co.uk, WhatsApp +92 316 446 7464.
 
 ## Core pages
-- [Home](https://digibizos.co.uk/): product overview and live screenshots.
-- [Features](https://digibizos.co.uk/features): every module in the ecosystem.
-- [Voice AI](https://digibizos.co.uk/voice-ai): voice control and hands-free operation.
-- [Desktop OS](https://digibizos.co.uk/desktop-os): desktop automation and computer use.
-- [Agents](https://digibizos.co.uk/agents): multi-agent delegation and run tracking.
-- [Integrations](https://digibizos.co.uk/integrations): connectivity and local runners.
-- [Pricing](https://digibizos.co.uk/pricing): one-time licences and what each includes.
-- [Download](https://digibizos.co.uk/download): Windows installation steps.
-- [FAQ](https://digibizos.co.uk/faq): common buyer and setup questions.
-- [About](https://digibizos.co.uk/about): who builds the product.
-- [Contact](https://digibizos.co.uk/contact): sales and support routes.
+- [Home](https://hi-pal-studio.lovable.app/): product overview and live screenshots.
+- [Features](https://hi-pal-studio.lovable.app/features): every module in the ecosystem.
+- [Voice AI](https://hi-pal-studio.lovable.app/voice-ai): voice control and hands-free operation.
+- [Desktop OS](https://hi-pal-studio.lovable.app/desktop-os): desktop automation and computer use.
+- [Agents](https://hi-pal-studio.lovable.app/agents): multi-agent delegation and run tracking.
+- [Integrations](https://hi-pal-studio.lovable.app/integrations): connectivity and local runners.
+- [Pricing](https://hi-pal-studio.lovable.app/pricing): one-time licences and what each includes.
+- [Download](https://hi-pal-studio.lovable.app/download): Windows installation steps.
+- [FAQ](https://hi-pal-studio.lovable.app/faq): common buyer and setup questions.
+- [About](https://hi-pal-studio.lovable.app/about): who builds the product.
+- [Contact](https://hi-pal-studio.lovable.app/contact): sales and support routes.
 
 ## Comparisons
-- [All comparisons](https://digibizos.co.uk/compare)
+- [All comparisons](https://hi-pal-studio.lovable.app/compare)
 
 ## Blog
-- [All articles](https://digibizos.co.uk/blog)
-- [RSS feed](https://digibizos.co.uk/rss.xml)
+- [All articles](https://hi-pal-studio.lovable.app/blog)
+- [RSS feed](https://hi-pal-studio.lovable.app/rss.xml)
 
 ## Machine-readable
-- [Sitemap](https://digibizos.co.uk/sitemap.xml)
+- [Sitemap](https://hi-pal-studio.lovable.app/sitemap.xml)

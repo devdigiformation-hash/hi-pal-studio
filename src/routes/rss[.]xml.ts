@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { BLOG_POSTS } from "@/content/blog-posts";
 
-const BASE_URL = "https://digibizos.co.uk";
+const BASE_URL = "https://hi-pal-studio.lovable.app";
 
 function esc(s: string) {
   return s
