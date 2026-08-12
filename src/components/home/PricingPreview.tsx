@@ -4,9 +4,9 @@ import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import MonoBadge from "@/components/MonoBadge";
 import CyanButton from "@/components/CyanButton";
-import GhostButton from "@/components/GhostButton";
 import GradientText from "@/components/GradientText";
 import CurrencySelector from "@/components/CurrencySelector";
+
 import { formatPrice, useCurrency } from "@/lib/currency";
 
 const TIERS = [
