@@ -27,14 +27,12 @@ export default function SmartLink({
   children,
   ariaLabel,
   onClick,
-  key: _key,
 }: {
   to: string;
   className?: string;
   children: ReactNode;
   ariaLabel?: string;
   onClick?: () => void;
-  key?: string;
 }) {
   const segments = to.split("/").filter(Boolean);
   let props: Record<string, unknown> = { to };
