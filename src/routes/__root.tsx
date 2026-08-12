@@ -94,9 +94,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
+          "@id": "https://digibizos.co.uk/#organization",
           name: "DIGI BIZ OS",
           url: "https://digibizos.co.uk",
-          logo: "https://digibizos.co.uk/favicon.png",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://digibizos.co.uk/logo-512.png",
+            width: 512,
+            height: 512,
+          },
+          image: "https://digibizos.co.uk/logo-512.png",
           sameAs: ["https://www.digiformation.co.uk/"],
           areaServed: ["GB", "PK", "US"],
           description:
@@ -122,11 +129,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
+          "@id": "https://digibizos.co.uk/#website",
           name: "DIGI BIZ OS",
           alternateName: "DigiBiz OS",
           inLanguage: "en-GB",
           url: "https://digibizos.co.uk",
-          publisher: { "@type": "Organization", name: "Digiformation Ltd" },
+          publisher: { "@id": "https://digibizos.co.uk/#organization" },
         }),
       },
     ],
