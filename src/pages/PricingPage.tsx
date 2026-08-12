@@ -6,8 +6,9 @@ import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import CyanButton from "@/components/CyanButton";
-import GhostButton from "@/components/GhostButton";
 import MonoBadge from "@/components/MonoBadge";
+import MiniHero from "@/components/inner/MiniHero";
+
 import MiniHero from "@/components/inner/MiniHero";
 import CurrencySelector from "@/components/CurrencySelector";
 import { formatPrice, useCurrency } from "@/lib/currency";
