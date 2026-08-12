@@ -19,8 +19,11 @@ import { Route as IntegrationsRouteImport } from './routes/integrations'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as RefundRouteImport } from './routes/refund'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as VoiceAiRouteImport } from './routes/voice-ai'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as FeaturesIndexRouteImport } from './routes/features.index'
 import { Route as FeaturesSlugRouteImport } from './routes/features.$slug'
 import { Route as OrderRefRouteImport } from './routes/order.$ref'
@@ -75,6 +78,11 @@ const RefundRoute = RefundRouteImport.update({
   path: '/refund',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
@@ -83,6 +91,16 @@ const TermsRoute = TermsRouteImport.update({
 const VoiceAiRoute = VoiceAiRouteImport.update({
   id: '/voice-ai',
   path: '/voice-ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FeaturesIndexRoute = FeaturesIndexRouteImport.update({
@@ -112,10 +130,13 @@ export interface FileRoutesByFullPath {
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/refund': typeof RefundRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/voice-ai': typeof VoiceAiRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
   '/order/$ref': typeof OrderRefRoute
+  '/blog/': typeof BlogIndexRoute
   '/features/': typeof FeaturesIndexRoute
 }
 export interface FileRoutesByTo {
@@ -129,10 +150,13 @@ export interface FileRoutesByTo {
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/refund': typeof RefundRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/voice-ai': typeof VoiceAiRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
   '/order/$ref': typeof OrderRefRoute
+  '/blog': typeof BlogIndexRoute
   '/features': typeof FeaturesIndexRoute
 }
 export interface FileRoutesById {
@@ -147,10 +171,13 @@ export interface FileRoutesById {
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/refund': typeof RefundRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/voice-ai': typeof VoiceAiRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
   '/order/$ref': typeof OrderRefRoute
+  '/blog/': typeof BlogIndexRoute
   '/features/': typeof FeaturesIndexRoute
 }
 export interface FileRouteTypes {
@@ -166,10 +193,13 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy'
     | '/refund'
+    | '/sitemap.xml'
     | '/terms'
     | '/voice-ai'
+    | '/blog/$slug'
     | '/features/$slug'
     | '/order/$ref'
+    | '/blog/'
     | '/features/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -183,10 +213,13 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy'
     | '/refund'
+    | '/sitemap.xml'
     | '/terms'
     | '/voice-ai'
+    | '/blog/$slug'
     | '/features/$slug'
     | '/order/$ref'
+    | '/blog'
     | '/features'
   id:
     | '__root__'
@@ -200,10 +233,13 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy'
     | '/refund'
+    | '/sitemap.xml'
     | '/terms'
     | '/voice-ai'
+    | '/blog/$slug'
     | '/features/$slug'
     | '/order/$ref'
+    | '/blog/'
     | '/features/'
   fileRoutesById: FileRoutesById
 }
@@ -218,10 +254,13 @@ export interface RootRouteChildren {
   PricingRoute: typeof PricingRoute
   PrivacyRoute: typeof PrivacyRoute
   RefundRoute: typeof RefundRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   VoiceAiRoute: typeof VoiceAiRoute
+  BlogSlugRoute: typeof BlogSlugRoute
   FeaturesSlugRoute: typeof FeaturesSlugRoute
   OrderRefRoute: typeof OrderRefRoute
+  BlogIndexRoute: typeof BlogIndexRoute
   FeaturesIndexRoute: typeof FeaturesIndexRoute
 }
 
@@ -297,6 +336,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RefundRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms': {
       id: '/terms'
       path: '/terms'
@@ -309,6 +355,20 @@ declare module '@tanstack/react-router' {
       path: '/voice-ai'
       fullPath: '/voice-ai'
       preLoaderRoute: typeof VoiceAiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/features/': {
@@ -346,10 +406,13 @@ const rootRouteChildren: RootRouteChildren = {
   PricingRoute: PricingRoute,
   PrivacyRoute: PrivacyRoute,
   RefundRoute: RefundRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   VoiceAiRoute: VoiceAiRoute,
+  BlogSlugRoute: BlogSlugRoute,
   FeaturesSlugRoute: FeaturesSlugRoute,
   OrderRefRoute: OrderRefRoute,
+  BlogIndexRoute: BlogIndexRoute,
   FeaturesIndexRoute: FeaturesIndexRoute,
 }
 export const routeTree = rootRouteImport
