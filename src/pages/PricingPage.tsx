@@ -6,10 +6,10 @@ import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import CyanButton from "@/components/CyanButton";
-import GhostButton from "@/components/GhostButton";
 import MonoBadge from "@/components/MonoBadge";
 import MiniHero from "@/components/inner/MiniHero";
 import CurrencySelector from "@/components/CurrencySelector";
+
 import { formatPrice, useCurrency } from "@/lib/currency";
 import { PLANS, type PlanId } from "@/lib/payment-config";
 import SourceCodeSection from "@/components/home/SourceCodeSection";
@@ -57,27 +57,43 @@ const TIERS: {
   id: PlanId;
   eyebrow: string;
   accent: string;
+  accentRgb: string;
+  border: string;
+  glow: string;
   badge?: string;
-  highlight?: boolean;
   cta: string;
 }[] = [
-  { id: "lifetime", eyebrow: "Lifetime Access", accent: "var(--cyan)", cta: "Get Lifetime Access" },
+  {
+    id: "lifetime",
+    eyebrow: "Lifetime Access",
+    accent: "var(--cyan)",
+    accentRgb: "47,224,200",
+    border: "var(--cyan-border)",
+    glow: "var(--glow-cyan)",
+    cta: "Get Lifetime Access",
+  },
   {
     id: "source_code",
     eyebrow: "Source Code",
     accent: "var(--purple)",
+    accentRgb: "139,124,246",
+    border: "var(--purple-border)",
+    glow: "var(--glow-purple)",
     badge: "Full Ownership",
     cta: "Buy Source Code",
   },
   {
     id: "custom_build",
     eyebrow: "Customised Build",
-    accent: "var(--cyan)",
+    accent: "var(--amber)",
+    accentRgb: "245,166,35",
+    border: "var(--amber-border)",
+    glow: "var(--glow-amber)",
     badge: "Most Popular",
-    highlight: true,
     cta: "Order Custom Build",
   },
 ];
+
 
 export default function PricingPage() {
   const { code } = useCurrency();
@@ -108,14 +124,16 @@ export default function PricingPage() {
           <div className="mt-12 grid items-start gap-6 lg:grid-cols-3">
             {TIERS.map((tier, i) => {
               const plan = PLANS[tier.id];
+              const isPopular = tier.id === "custom_build";
               return (
                 <GlassCard
                   key={tier.id}
                   className={
-                    tier.highlight
-                      ? `reveal-item delay-${i} border-[var(--cyan-border)] p-8 lg:-mt-4 lg:scale-[1.02]`
+                    isPopular
+                      ? `reveal-item delay-${i} p-8 lg:-mt-4 lg:scale-[1.02]`
                       : `reveal-item delay-${i} p-8`
                   }
+                  style={{ borderColor: tier.border, boxShadow: isPopular ? tier.glow : undefined }}
                   glowColor={tier.accent}
                 >
                   <div className="flex items-center justify-between gap-3">
@@ -123,7 +141,7 @@ export default function PricingPage() {
                     {tier.badge ? <MonoBadge color={tier.accent}>{tier.badge}</MonoBadge> : null}
                   </div>
                   <div className="mt-4 flex items-end gap-2">
-                    <span className="font-display text-[44px] font-extrabold leading-none text-[var(--text-primary)]">
+                    <span className="font-display text-[44px] font-extrabold leading-none" style={{ color: tier.accent }}>
                       {formatPrice(plan.priceGbp, code)}
                     </span>
                     {plan.compareGbp ? (
@@ -137,7 +155,10 @@ export default function PricingPage() {
                       {formatPrice(plan.priceGbp, "PKR")} · {formatPrice(plan.priceGbp, "USD")}
                     </span>
                     {plan.compareGbp ? (
-                      <span className="rounded-full border border-[var(--cyan-border)] px-2 py-0.5 text-[10.5px] uppercase tracking-[0.12em] text-[var(--cyan)]">
+                      <span
+                        className="rounded-full border px-2 py-0.5 text-[10.5px] uppercase tracking-[0.12em]"
+                        style={{ color: tier.accent, borderColor: tier.border }}
+                      >
                         Save {Math.round(((plan.compareGbp - plan.priceGbp) / plan.compareGbp) * 100)}%
                       </span>
                     ) : null}
@@ -148,15 +169,9 @@ export default function PricingPage() {
                   <FeatureList items={plan.includes} color={tier.accent} />
                   <div className="mt-8">
                     <Link to="/checkout" search={{ plan: tier.id }} className="block">
-                      {tier.highlight ? (
-                        <CyanButton size="lg" className="w-full">
-                          {tier.cta}
-                        </CyanButton>
-                      ) : (
-                        <GhostButton size="lg" className="w-full">
-                          {tier.cta} →
-                        </GhostButton>
-                      )}
+                      <CyanButton size="lg" tone={tier.accentRgb} className="w-full">
+                        {tier.cta} →
+                      </CyanButton>
                     </Link>
                   </div>
                   <div className="mt-4 text-center font-body text-[12.5px] text-[var(--text-muted)]">
@@ -166,6 +181,7 @@ export default function PricingPage() {
               );
             })}
           </div>
+
         </div>
       </SectionWrapper>
 

@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { useMouseGlow } from "@/hooks/use-mouse-glow";
 
@@ -6,9 +6,10 @@ interface GlassCardProps {
   children: ReactNode;
   glowColor?: string;
   className?: string;
+  style?: CSSProperties;
 }
 
-export default function GlassCard({ children, glowColor = "var(--cyan)", className }: GlassCardProps) {
+export default function GlassCard({ children, glowColor = "var(--cyan)", className, style }: GlassCardProps) {
   const { ref, onMouseMove, onMouseLeave } = useMouseGlow<HTMLDivElement>();
 
   return (
@@ -25,7 +26,8 @@ export default function GlassCard({ children, glowColor = "var(--cyan)", classNa
           "--glass-glow": glowColor,
           "--mouse-x": "50%",
           "--mouse-y": "-20%",
-        } as React.CSSProperties
+          ...style,
+        } as CSSProperties
       }
       className={cn(
         "group relative overflow-hidden border border-[var(--border-glass)] p-6",

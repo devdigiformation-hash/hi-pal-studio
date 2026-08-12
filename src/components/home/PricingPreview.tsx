@@ -4,9 +4,9 @@ import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import MonoBadge from "@/components/MonoBadge";
 import CyanButton from "@/components/CyanButton";
-import GhostButton from "@/components/GhostButton";
 import GradientText from "@/components/GradientText";
 import CurrencySelector from "@/components/CurrencySelector";
+
 import { formatPrice, useCurrency } from "@/lib/currency";
 
 const TIERS = [
@@ -26,7 +26,10 @@ const TIERS = [
       "Bring your own AI key",
     ],
     cta: "Get Lifetime Access",
-    highlight: false,
+    accent: "var(--cyan)",
+    accentRgb: "47,224,200",
+    glow: "var(--glow-cyan)",
+    border: "var(--cyan-border)",
   },
   {
     id: "source_code" as const,
@@ -46,7 +49,10 @@ const TIERS = [
       "Resale & commercial rights",
     ],
     cta: "Buy Source Code",
-    highlight: false,
+    accent: "var(--purple)",
+    accentRgb: "139,124,246",
+    glow: "var(--glow-purple)",
+    border: "rgba(139,124,246,0.35)",
   },
   {
     id: "custom_build" as const,
@@ -65,9 +71,13 @@ const TIERS = [
       "6 months priority support",
     ],
     cta: "Order Custom Build",
-    highlight: true,
+    accent: "var(--amber)",
+    accentRgb: "245,166,35",
+    glow: "var(--glow-amber)",
+    border: "rgba(245,166,35,0.35)",
   },
 ];
+
 
 export default function PricingPreview() {
   const { code } = useCurrency();
@@ -89,20 +99,20 @@ export default function PricingPreview() {
           {TIERS.map((plan, i) => (
             <div key={plan.name} className={`reveal-item delay-${i + 1}`}>
               <GlassCard
+                glowColor={plan.accent}
                 className={
-                  plan.highlight
-                    ? "h-full border-[var(--cyan-border)] p-8 shadow-[var(--glow-cyan)] lg:-mt-6 lg:pb-12"
-                    : "h-full p-8"
+                  plan.id === "custom_build"
+                    ? "h-full border-[var(--amber-border)] p-8 shadow-[var(--glow-amber)] lg:-mt-6 lg:pb-12"
+                    : `h-full border-[${plan.border}] p-8`
                 }
+                style={{ borderColor: plan.border }}
               >
-                <MonoBadge color={plan.highlight ? "var(--cyan)" : "var(--text-secondary)"}>
-                  {plan.badge}
-                </MonoBadge>
+                <MonoBadge color={plan.accent}>{plan.badge}</MonoBadge>
                 <h3 className="mt-5 font-display text-[20px] font-bold text-[var(--text-primary)]">
                   {plan.name}
                 </h3>
                 <div className="mt-3 flex items-end gap-1">
-                  <span className="font-display text-[44px] font-bold leading-none text-[var(--text-primary)]">
+                  <span className="font-display text-[44px] font-bold leading-none" style={{ color: plan.accent }}>
                     {formatPrice(plan.gbp, code)}
                   </span>
                   <span className="font-body text-[13px] text-[var(--text-muted)]">
@@ -113,7 +123,10 @@ export default function PricingPreview() {
                   <span className="font-body text-[14px] text-[var(--text-muted)] line-through">
                     {formatPrice(plan.compareGbp, code)}
                   </span>
-                  <span className="rounded-full border border-[var(--cyan-border)] px-2 py-0.5 font-mono text-[10.5px] uppercase tracking-[0.12em] text-[var(--cyan)]">
+                  <span
+                    className="rounded-full border px-2 py-0.5 font-mono text-[10.5px] uppercase tracking-[0.12em]"
+                    style={{ color: plan.accent, borderColor: plan.border }}
+                  >
                     Save {Math.round(((plan.compareGbp - plan.gbp) / plan.compareGbp) * 100)}%
                   </span>
                 </div>
@@ -128,24 +141,23 @@ export default function PricingPreview() {
                 <ul className="mt-6 space-y-3">
                   {plan.features.map((f) => (
                     <li key={f} className="flex gap-2 font-body text-[13px] text-[var(--text-secondary)]">
-                      <span className="text-[var(--cyan)]">✓</span>
+                      <span style={{ color: plan.accent }}>✓</span>
                       {f}
                     </li>
                   ))}
                 </ul>
                 <div className="mt-8">
                   <Link to="/checkout" search={{ plan: plan.id }} className="block">
-                    {plan.highlight ? (
-                      <CyanButton className="w-full">{plan.cta}</CyanButton>
-                    ) : (
-                      <GhostButton className="w-full">{plan.cta} →</GhostButton>
-                    )}
+                    <CyanButton tone={plan.accentRgb} className="w-full">
+                      {plan.cta} →
+                    </CyanButton>
                   </Link>
                 </div>
               </GlassCard>
             </div>
           ))}
         </div>
+
       </div>
     </SectionWrapper>
   );
