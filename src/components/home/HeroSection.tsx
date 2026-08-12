@@ -20,7 +20,12 @@ import MonoBadge from "@/components/MonoBadge";
 import ActivePulse from "@/components/ActivePulse";
 import GradientText from "@/components/GradientText";
 
-const HEADLINE = "Control Your Business".split(" ");
+const PREFIXES = [
+  "Control Your Business",
+  "Control Your PC",
+  "Operate Your Business",
+  "Command Your Workspace",
+];
 
 const CYCLE = [
   "Control your PC with voice.",
@@ -93,6 +98,36 @@ function RotatingPhrase() {
   );
 }
 
+function RotatingPrefix() {
+  const [i, setI] = useState(0);
+  const [out, setOut] = useState(false);
+
+  useEffect(() => {
+    const hide = setTimeout(() => setOut(true), 4500);
+    const swap = setTimeout(() => {
+      setI((v) => (v + 1) % PREFIXES.length);
+      setOut(false);
+    }, 5000);
+    return () => {
+      clearTimeout(hide);
+      clearTimeout(swap);
+    };
+  }, [i]);
+
+  return (
+    <motion.span
+      key={i}
+      aria-live="polite"
+      className="inline-block whitespace-pre"
+      initial={{ opacity: 0, y: "0.3em" }}
+      animate={out ? { opacity: 0, y: "-0.25em" } : { opacity: 1, y: 0 }}
+      transition={{ duration: out ? 0.3 : 0.45, ease: [0.22, 1, 0.36, 1] }}
+    >
+      {PREFIXES[i]}{" "}
+    </motion.span>
+  );
+}
+
 function Typewriter() {
   const [index, setIndex] = useState(0);
   const [chars, setChars] = useState(0);
@@ -161,21 +196,11 @@ export default function HeroSection() {
           </motion.div>
 
           <h1 className="mt-5 font-display text-[36px] font-bold leading-[1.08] tracking-[-0.035em] text-[var(--text-primary)] sm:text-[44px] md:text-[54px] lg:text-[60px] xl:text-[66px]">
-            {HEADLINE.map((word, i) => (
-              <motion.span
-                key={`${word}-${i}`}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.25 + i * 0.06, duration: 0.5 }}
-                className="inline-block whitespace-pre"
-              >
-                {word}{" "}
-              </motion.span>
-            ))}
+            <RotatingPrefix />
             <motion.span
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.25 + HEADLINE.length * 0.06, duration: 0.5 }}
+              transition={{ delay: 0.45, duration: 0.5 }}
               className="inline-block"
               style={{ perspective: 800 }}
             >

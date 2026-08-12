@@ -75,7 +75,7 @@ export default function SoftwareShowcase() {
 
   useEffect(() => {
     if (paused) return;
-    const t = setInterval(() => setIndex((i) => (i + 1) % count), 3000);
+    const t = setInterval(() => setIndex((i) => (i + 1) % count), 2000);
     return () => clearInterval(t);
   }, [paused, count]);
 
@@ -93,12 +93,7 @@ export default function SoftwareShowcase() {
           your desktop.
         </p>
 
-        <div
-          className="relative mt-12 select-none overflow-x-clip"
-          style={{ perspective: "1800px" }}
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
-        >
+        <div className="relative mt-12 select-none overflow-x-clip" style={{ perspective: "1800px" }}>
           <div
             className="pointer-events-none absolute -inset-10 -z-10 rounded-[48px] opacity-60 blur-3xl"
             style={{
@@ -107,7 +102,11 @@ export default function SoftwareShowcase() {
             }}
           />
 
-          <div className="relative mx-auto aspect-[16/9] w-full max-w-[280px] sm:max-w-md md:max-w-lg lg:max-w-xl [transform-style:preserve-3d]">
+          <div
+            className="relative mx-auto aspect-[16/9] w-full max-w-[280px] sm:max-w-md md:max-w-lg lg:max-w-xl [transform-style:preserve-3d]"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+          >
             {SLIDES.map((s, i) => {
               let off = i - index;
               if (off > count / 2) off -= count;
