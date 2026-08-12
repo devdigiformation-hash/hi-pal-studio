@@ -18,7 +18,7 @@ export const Route = createFileRoute("/delivery")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://digibizos.co.uk/delivery" }],
+    links: [{ rel: "canonical", href: "https://hi-pal-studio.lovable.app/delivery" }],
   }),
   component: () => (
     <LegalPage

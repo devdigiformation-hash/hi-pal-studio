@@ -1,4 +1,4 @@
-export const SITE_URL = "https://digibizos.co.uk";
+export const SITE_URL = "https://hi-pal-studio.lovable.app";
 export const BRAND = "DIGI BIZ OS";
 
 export function abs(path: string) {
