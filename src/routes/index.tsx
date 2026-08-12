@@ -18,6 +18,7 @@ import UseCases from "@/components/home/UseCases";
 import SocialProof from "@/components/home/SocialProof";
 import PricingPreview from "@/components/home/PricingPreview";
 import FAQSection from "@/components/home/FAQSection";
+import ExploreHub from "@/components/home/ExploreHub";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { buildMeta, softwareLd } from "@/lib/seo";
 
@@ -63,6 +64,7 @@ function HomePage() {
       <UseCases />
       <SocialProof />
       <PricingPreview />
+      <ExploreHub />
       <FAQSection />
       <WhatsAppFloat />
     </main>

@@ -95,15 +95,15 @@ function SiteMapPage() {
             <Group title="Main pages" links={main} />
             <Group
               title="Product modules"
-              links={FEATURE_PAGES.map((p) => ({ label: p.h1 ?? p.title, to: p.path }))}
+              links={FEATURE_PAGES.map((p) => ({ label: p.h1, to: p.path }))}
             />
             <Group
               title="Solutions & guides"
-              links={INTENT_PAGES.map((p) => ({ label: p.h1 ?? p.title, to: p.path }))}
+              links={INTENT_PAGES.map((p) => ({ label: p.h1, to: p.path }))}
             />
             <Group
               title="Comparisons"
-              links={COMPARE_PAGES.map((p) => ({ label: p.title, to: `/compare/${p.slug}` }))}
+              links={COMPARE_PAGES.map((p) => ({ label: `DIGI BIZ OS vs ${p.competitor}`, to: `/compare/${p.slug}` }))}
             />
             <Group
               title="Blog articles"

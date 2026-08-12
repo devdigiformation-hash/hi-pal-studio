@@ -49,6 +49,7 @@ const LEGAL = [
   { label: "Privacy Policy", to: "/privacy" },
   { label: "Refund Policy", to: "/refund" },
   { label: "Delivery Policy", to: "/delivery" },
+  { label: "Site Map", to: "/sitemap" },
 ] as const;
 
 const BUSINESS = [
