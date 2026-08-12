@@ -124,14 +124,16 @@ export default function PricingPage() {
           <div className="mt-12 grid items-start gap-6 lg:grid-cols-3">
             {TIERS.map((tier, i) => {
               const plan = PLANS[tier.id];
+              const isPopular = tier.id === "custom_build";
               return (
                 <GlassCard
                   key={tier.id}
                   className={
-                    tier.highlight
-                      ? `reveal-item delay-${i} border-[var(--cyan-border)] p-8 lg:-mt-4 lg:scale-[1.02]`
+                    isPopular
+                      ? `reveal-item delay-${i} p-8 lg:-mt-4 lg:scale-[1.02]`
                       : `reveal-item delay-${i} p-8`
                   }
+                  style={{ borderColor: tier.border, boxShadow: isPopular ? tier.glow : undefined }}
                   glowColor={tier.accent}
                 >
                   <div className="flex items-center justify-between gap-3">
@@ -139,7 +141,7 @@ export default function PricingPage() {
                     {tier.badge ? <MonoBadge color={tier.accent}>{tier.badge}</MonoBadge> : null}
                   </div>
                   <div className="mt-4 flex items-end gap-2">
-                    <span className="font-display text-[44px] font-extrabold leading-none text-[var(--text-primary)]">
+                    <span className="font-display text-[44px] font-extrabold leading-none" style={{ color: tier.accent }}>
                       {formatPrice(plan.priceGbp, code)}
                     </span>
                     {plan.compareGbp ? (
@@ -153,7 +155,10 @@ export default function PricingPage() {
                       {formatPrice(plan.priceGbp, "PKR")} · {formatPrice(plan.priceGbp, "USD")}
                     </span>
                     {plan.compareGbp ? (
-                      <span className="rounded-full border border-[var(--cyan-border)] px-2 py-0.5 text-[10.5px] uppercase tracking-[0.12em] text-[var(--cyan)]">
+                      <span
+                        className="rounded-full border px-2 py-0.5 text-[10.5px] uppercase tracking-[0.12em]"
+                        style={{ color: tier.accent, borderColor: tier.border }}
+                      >
                         Save {Math.round(((plan.compareGbp - plan.priceGbp) / plan.compareGbp) * 100)}%
                       </span>
                     ) : null}
@@ -164,15 +169,9 @@ export default function PricingPage() {
                   <FeatureList items={plan.includes} color={tier.accent} />
                   <div className="mt-8">
                     <Link to="/checkout" search={{ plan: tier.id }} className="block">
-                      {tier.highlight ? (
-                        <CyanButton size="lg" className="w-full">
-                          {tier.cta}
-                        </CyanButton>
-                      ) : (
-                        <GhostButton size="lg" className="w-full">
-                          {tier.cta} →
-                        </GhostButton>
-                      )}
+                      <CyanButton size="lg" tone={tier.accentRgb} className="w-full">
+                        {tier.cta} →
+                      </CyanButton>
                     </Link>
                   </div>
                   <div className="mt-4 text-center font-body text-[12.5px] text-[var(--text-muted)]">
@@ -182,6 +181,7 @@ export default function PricingPage() {
               );
             })}
           </div>
+
         </div>
       </SectionWrapper>
 
