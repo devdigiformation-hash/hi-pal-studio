@@ -15,6 +15,7 @@ import { Route as AgentsRouteImport } from './routes/agents'
 import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as DeliveryRouteImport } from './routes/delivery'
 import { Route as DesktopOsRouteImport } from './routes/desktop-os'
+import { Route as FaqRouteImport } from './routes/faq'
 import { Route as IntegrationsRouteImport } from './routes/integrations'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PrivacyRouteImport } from './routes/privacy'
@@ -58,6 +59,11 @@ const DeliveryRoute = DeliveryRouteImport.update({
 const DesktopOsRoute = DesktopOsRouteImport.update({
   id: '/desktop-os',
   path: '/desktop-os',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IntegrationsRoute = IntegrationsRouteImport.update({
@@ -138,6 +144,7 @@ export interface FileRoutesByFullPath {
   '/checkout': typeof CheckoutRoute
   '/delivery': typeof DeliveryRoute
   '/desktop-os': typeof DesktopOsRoute
+  '/faq': typeof FaqRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
@@ -160,6 +167,7 @@ export interface FileRoutesByTo {
   '/checkout': typeof CheckoutRoute
   '/delivery': typeof DeliveryRoute
   '/desktop-os': typeof DesktopOsRoute
+  '/faq': typeof FaqRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
@@ -183,6 +191,7 @@ export interface FileRoutesById {
   '/checkout': typeof CheckoutRoute
   '/delivery': typeof DeliveryRoute
   '/desktop-os': typeof DesktopOsRoute
+  '/faq': typeof FaqRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
@@ -207,6 +216,7 @@ export interface FileRouteTypes {
     | '/checkout'
     | '/delivery'
     | '/desktop-os'
+    | '/faq'
     | '/integrations'
     | '/pricing'
     | '/privacy'
@@ -229,6 +239,7 @@ export interface FileRouteTypes {
     | '/checkout'
     | '/delivery'
     | '/desktop-os'
+    | '/faq'
     | '/integrations'
     | '/pricing'
     | '/privacy'
@@ -251,6 +262,7 @@ export interface FileRouteTypes {
     | '/checkout'
     | '/delivery'
     | '/desktop-os'
+    | '/faq'
     | '/integrations'
     | '/pricing'
     | '/privacy'
@@ -274,6 +286,7 @@ export interface RootRouteChildren {
   CheckoutRoute: typeof CheckoutRoute
   DeliveryRoute: typeof DeliveryRoute
   DesktopOsRoute: typeof DesktopOsRoute
+  FaqRoute: typeof FaqRoute
   IntegrationsRoute: typeof IntegrationsRoute
   PricingRoute: typeof PricingRoute
   PrivacyRoute: typeof PrivacyRoute
@@ -332,6 +345,13 @@ declare module '@tanstack/react-router' {
       path: '/desktop-os'
       fullPath: '/desktop-os'
       preLoaderRoute: typeof DesktopOsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/integrations': {
@@ -442,6 +462,7 @@ const rootRouteChildren: RootRouteChildren = {
   CheckoutRoute: CheckoutRoute,
   DeliveryRoute: DeliveryRoute,
   DesktopOsRoute: DesktopOsRoute,
+  FaqRoute: FaqRoute,
   IntegrationsRoute: IntegrationsRoute,
   PricingRoute: PricingRoute,
   PrivacyRoute: PrivacyRoute,
