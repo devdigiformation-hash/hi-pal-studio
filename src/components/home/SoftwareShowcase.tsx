@@ -156,7 +156,7 @@ export default function SoftwareShowcase() {
                 <motion.div
                   key={s.src}
                   aria-hidden={off !== 0}
-                  className="absolute left-1/2 top-0 aspect-[16/9] w-[80%] origin-center overflow-hidden rounded-[16px] border border-white/10 bg-[#05070B] p-1 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] md:w-[78%] md:rounded-[26px] md:p-2"
+                  className="absolute left-1/2 top-0 aspect-[16/9] w-[80%] origin-center cursor-pointer overflow-hidden rounded-[16px] border border-white/10 bg-[#05070B] p-1 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] md:w-[78%] md:rounded-[26px] md:p-2"
                   style={{ transformStyle: "preserve-3d", marginLeft: "-40%" }}
                   animate={{
                     x: isMobile ? `${off * 80}%` : `${off * 58}%`,
@@ -167,7 +167,7 @@ export default function SoftwareShowcase() {
                     zIndex: 10 - abs,
                   }}
                   transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-                  onClick={() => off !== 0 && go(off)}
+                  onClick={() => openLightbox(i)}
                 >
                   <div className="relative flex h-full w-full items-start justify-center overflow-hidden rounded-[14px] bg-[#05070B] md:rounded-[20px]">
                     <img
