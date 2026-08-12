@@ -160,6 +160,22 @@ export default function Footer() {
         <div>
           <EyebrowLabel text="Company" color="var(--purple)" />
           <ul className="mt-5 space-y-3">
+            <li>
+              <SmartLink
+                to="/about"
+                className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
+              >
+                About DIGI BIZ OS
+              </SmartLink>
+            </li>
+            <li>
+              <SmartLink
+                to="/contact"
+                className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
+              >
+                Contact
+              </SmartLink>
+            </li>
             {BUSINESS.map((item) => (
               <li key={item}>
                 <a
