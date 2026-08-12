@@ -14,6 +14,7 @@ const OVERVIEW = [
   { label: "JARVIS AI", to: "/jarvis-ai" },
   { label: "Pricing", to: "/pricing" },
   { label: "Blog", to: "/blog" },
+  { label: "Download", to: "/download" },
   { label: "Comparisons", to: "/compare" },
   { label: "FAQ", to: "/faq" },
 ] as const;
@@ -37,6 +38,10 @@ const RESOURCES = [
   { label: "Multi-Agent AI", to: "/multi-agent-ai" },
   { label: "AI Coding Agent", to: "/ai-coding-agent" },
   { label: "Computer-Use AI", to: "/computer-use-ai" },
+  { label: "JARVIS Alternative", to: "/jarvis-alternative" },
+  { label: "JARVIS for Windows", to: "/jarvis-for-windows" },
+  { label: "Desktop AI Agent", to: "/desktop-ai-agent" },
+  { label: "AI Computer Control", to: "/ai-computer-control" },
 ] as const;
 
 const LEGAL = [
@@ -155,6 +160,22 @@ export default function Footer() {
         <div>
           <EyebrowLabel text="Company" color="var(--purple)" />
           <ul className="mt-5 space-y-3">
+            <li>
+              <SmartLink
+                to="/about"
+                className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
+              >
+                About DIGI BIZ OS
+              </SmartLink>
+            </li>
+            <li>
+              <SmartLink
+                to="/contact"
+                className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
+              >
+                Contact
+              </SmartLink>
+            </li>
             {BUSINESS.map((item) => (
               <li key={item}>
                 <a

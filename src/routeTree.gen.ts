@@ -11,10 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SlugRouteImport } from './routes/$slug'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as AgentsRouteImport } from './routes/agents'
 import { Route as CheckoutRouteImport } from './routes/checkout'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DeliveryRouteImport } from './routes/delivery'
 import { Route as DesktopOsRouteImport } from './routes/desktop-os'
+import { Route as DownloadRouteImport } from './routes/download'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as IntegrationsRouteImport } from './routes/integrations'
 import { Route as PricingRouteImport } from './routes/pricing'
@@ -41,6 +44,11 @@ const SlugRoute = SlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AgentsRoute = AgentsRouteImport.update({
   id: '/agents',
   path: '/agents',
@@ -51,6 +59,11 @@ const CheckoutRoute = CheckoutRouteImport.update({
   path: '/checkout',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DeliveryRoute = DeliveryRouteImport.update({
   id: '/delivery',
   path: '/delivery',
@@ -59,6 +72,11 @@ const DeliveryRoute = DeliveryRouteImport.update({
 const DesktopOsRoute = DesktopOsRouteImport.update({
   id: '/desktop-os',
   path: '/desktop-os',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DownloadRoute = DownloadRouteImport.update({
+  id: '/download',
+  path: '/download',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FaqRoute = FaqRouteImport.update({
@@ -140,10 +158,13 @@ const OrderRefRoute = OrderRefRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$slug': typeof SlugRoute
+  '/about': typeof AboutRoute
   '/agents': typeof AgentsRoute
   '/checkout': typeof CheckoutRoute
+  '/contact': typeof ContactRoute
   '/delivery': typeof DeliveryRoute
   '/desktop-os': typeof DesktopOsRoute
+  '/download': typeof DownloadRoute
   '/faq': typeof FaqRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
@@ -163,10 +184,13 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$slug': typeof SlugRoute
+  '/about': typeof AboutRoute
   '/agents': typeof AgentsRoute
   '/checkout': typeof CheckoutRoute
+  '/contact': typeof ContactRoute
   '/delivery': typeof DeliveryRoute
   '/desktop-os': typeof DesktopOsRoute
+  '/download': typeof DownloadRoute
   '/faq': typeof FaqRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
@@ -187,10 +211,13 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$slug': typeof SlugRoute
+  '/about': typeof AboutRoute
   '/agents': typeof AgentsRoute
   '/checkout': typeof CheckoutRoute
+  '/contact': typeof ContactRoute
   '/delivery': typeof DeliveryRoute
   '/desktop-os': typeof DesktopOsRoute
+  '/download': typeof DownloadRoute
   '/faq': typeof FaqRoute
   '/integrations': typeof IntegrationsRoute
   '/pricing': typeof PricingRoute
@@ -212,10 +239,13 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/$slug'
+    | '/about'
     | '/agents'
     | '/checkout'
+    | '/contact'
     | '/delivery'
     | '/desktop-os'
+    | '/download'
     | '/faq'
     | '/integrations'
     | '/pricing'
@@ -235,10 +265,13 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/$slug'
+    | '/about'
     | '/agents'
     | '/checkout'
+    | '/contact'
     | '/delivery'
     | '/desktop-os'
+    | '/download'
     | '/faq'
     | '/integrations'
     | '/pricing'
@@ -258,10 +291,13 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/$slug'
+    | '/about'
     | '/agents'
     | '/checkout'
+    | '/contact'
     | '/delivery'
     | '/desktop-os'
+    | '/download'
     | '/faq'
     | '/integrations'
     | '/pricing'
@@ -282,10 +318,13 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SlugRoute: typeof SlugRoute
+  AboutRoute: typeof AboutRoute
   AgentsRoute: typeof AgentsRoute
   CheckoutRoute: typeof CheckoutRoute
+  ContactRoute: typeof ContactRoute
   DeliveryRoute: typeof DeliveryRoute
   DesktopOsRoute: typeof DesktopOsRoute
+  DownloadRoute: typeof DownloadRoute
   FaqRoute: typeof FaqRoute
   IntegrationsRoute: typeof IntegrationsRoute
   PricingRoute: typeof PricingRoute
@@ -319,6 +358,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/agents': {
       id: '/agents'
       path: '/agents'
@@ -333,6 +379,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CheckoutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/delivery': {
       id: '/delivery'
       path: '/delivery'
@@ -345,6 +398,13 @@ declare module '@tanstack/react-router' {
       path: '/desktop-os'
       fullPath: '/desktop-os'
       preLoaderRoute: typeof DesktopOsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/download': {
+      id: '/download'
+      path: '/download'
+      fullPath: '/download'
+      preLoaderRoute: typeof DownloadRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faq': {
@@ -458,10 +518,13 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SlugRoute: SlugRoute,
+  AboutRoute: AboutRoute,
   AgentsRoute: AgentsRoute,
   CheckoutRoute: CheckoutRoute,
+  ContactRoute: ContactRoute,
   DeliveryRoute: DeliveryRoute,
   DesktopOsRoute: DesktopOsRoute,
+  DownloadRoute: DownloadRoute,
   FaqRoute: FaqRoute,
   IntegrationsRoute: IntegrationsRoute,
   PricingRoute: PricingRoute,

@@ -60,7 +60,7 @@ function CompareHub() {
 
         <div className="mx-auto mt-12 grid max-w-[1180px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {COMPARE_PAGES.map((p) => (
-            <Link key={p.slug} to={`/compare/${p.slug}`} className="group block h-full">
+            <Link key={p.slug} to="/compare/$slug" params={{ slug: p.slug }} className="group block h-full">
               <GlassCard glowColor="var(--amber)" className="h-full p-6">
                 <span className="font-display text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--amber)]">
                   vs {p.competitor}

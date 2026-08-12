@@ -1355,6 +1355,293 @@ export const SEO_PAGES: SeoPage[] = [
     image: img(osSidebar, "Business automation modules inside DIGI BIZ OS", "Operational modules inside a single OS."),
     accent: "var(--purple)",
   },
+  /* ------------------------------------------------------------------ */
+  /* JARVIS CLUSTER EXPANSION                                           */
+  /* ------------------------------------------------------------------ */
+  {
+    path: "/jarvis-alternative",
+    group: "intent",
+    eyebrow: "JARVIS Alternative",
+    h1: "The JARVIS Alternative",
+    h1Gradient: "That Actually Finishes the Job.",
+    metaTitle: "JARVIS Alternative for PC — Voice AI That Executes Work | DIGI BIZ OS",
+    metaDescription:
+      "Looking for a JARVIS alternative? DIGI BIZ OS is a voice-first AI assistant for Windows with agents, 500+ skills, 150+ mixed tools, desktop control and scheduled automation.",
+    intro:
+      "Most JARVIS-style downloads are voice launchers: a fixed phrase triggers a fixed shortcut. DIGI BIZ OS takes the same idea much further — you speak a real instruction, it plans the steps, chooses the right agent and tools, executes them on your machine and shows you the result.",
+    answers: [
+      { q: "What is the best JARVIS alternative for Windows?", a: "For voice-driven work that produces documents, files, code, reports and scheduled automation, DIGI BIZ OS is a practical alternative because it executes tasks rather than only launching apps." },
+      { q: "Is it free?", a: "No. It is a one-time lifetime licence rather than a subscription, with source code and custom build options available." },
+      { q: "Does it need internet?", a: "Model-driven reasoning uses online models, while many desktop, file and offline utilities run locally on your machine." },
+    ],
+    capabilities: [
+      { title: "Real instructions", body: "Speak naturally instead of memorising trigger phrases." },
+      { title: "Planned execution", body: "Multi-step work is planned before anything runs." },
+      { title: "Agents", body: "Specialist agents own coding, research, documents and operations." },
+      { title: "Desktop reach", body: "Applications, files, clipboard and system actions." },
+      { title: "Automation", body: "Workflows and cron-style jobs keep running without you." },
+      { title: "Full visibility", body: "Live tracking of every step, tool call and output." },
+    ],
+    sections: [
+      {
+        heading: "How to judge a JARVIS alternative",
+        body: "Use four questions before you download anything.",
+        bullets: [
+          "Can it handle an instruction it has never seen before?",
+          "Can it produce work — a file, a document, a report, code — not just an app launch?",
+          "Can it repeat that work on a schedule without you?",
+          "Can you see what it did after the fact?",
+        ],
+      },
+      {
+        heading: "Where simpler tools still win",
+        body: "If all you want is hands-free shortcuts for five commands, a lightweight voice launcher is smaller, free and perfectly adequate. DIGI BIZ OS is aimed at people whose voice requests turn into hours of real work.",
+      },
+    ],
+    faq: [
+      { q: "Is DIGI BIZ OS affiliated with Marvel?", a: "No. It is JARVIS-inspired in experience only and has no affiliation with Marvel or the fictional J.A.R.V.I.S. system." },
+      { q: "Can I keep my current assistant too?", a: "Yes. It runs as a normal Windows application alongside anything else you use." },
+    ],
+    links: [
+      { label: "JARVIS AI overview", to: "/jarvis-ai" },
+      { label: "JARVIS for Windows", to: "/jarvis-for-windows" },
+      { label: "Compare with typical JARVIS apps", to: "/compare/digi-biz-os-vs-jarvis-apps" },
+      { label: "Voice assistant", to: "/features/voice-assistant" },
+      ...CTA_CORE,
+    ],
+    image: img(osTranscript, "Voice transcript in DIGI BIZ OS showing a spoken instruction being executed", "Speak the request; the transcript and run view show what happens next."),
+    accent: "var(--amber)",
+  },
+  {
+    path: "/jarvis-for-windows",
+    group: "intent",
+    eyebrow: "JARVIS for Windows",
+    h1: "JARVIS for Windows —",
+    h1Gradient: "Installed, Not Imagined.",
+    metaTitle: "JARVIS for Windows 10 & 11 — Voice AI Desktop Assistant | DIGI BIZ OS",
+    metaDescription:
+      "A JARVIS-style AI assistant you can install on Windows 10 and 11. Voice control, desktop actions, agents, coding, documents and scheduled automation in one application.",
+    intro:
+      "DIGI BIZ OS is a Windows application, not a browser tab. Install it on Windows 10 or 11, activate your licence and start giving spoken instructions that touch your real files, applications, terminal and documents.",
+    answers: [
+      { q: "Which Windows versions are supported?", a: "Windows 10 and Windows 11. macOS, Linux and a mobile companion are marked coming soon." },
+      { q: "How do I install it?", a: "Download the installer, run it, then activate with the licence key emailed after purchase. Setup usually takes a few minutes." },
+      { q: "Does it control the desktop?", a: "Yes — with your permission it can work with applications, files, folders, clipboard and system actions." },
+    ],
+    capabilities: [
+      { title: "Native install", body: "A real Windows application with a full workspace UI." },
+      { title: "Voice control", body: "Push-to-talk or continuous listening with a live transcript." },
+      { title: "File access", body: "Local folders, batch renaming, sorting and document pipelines." },
+      { title: "Terminal", body: "Command execution and project work inside the coding workspace." },
+      { title: "Scheduling", body: "Jobs that run on your PC on a timetable." },
+      { title: "Multi-model", body: "Route each task to a suitable model." },
+    ],
+    sections: [
+      {
+        heading: "What a desktop install unlocks",
+        body: "Web assistants are sandboxed away from your machine. A native Windows app can open the folder, read the invoice, write the spreadsheet, run the script and save the output where you expect to find it — which is where most of the time saving actually comes from.",
+      },
+      {
+        heading: "Requirements and expectations",
+        body: "A modern Windows 10 or 11 PC with an internet connection for model access. Offline utilities and local file tools continue to work without network access.",
+      },
+    ],
+    faq: [
+      { q: "Is there a macOS version?", a: "Not yet — macOS is listed as coming soon on the home page." },
+      { q: "Can it run at startup?", a: "Yes, it can stay resident so scheduled jobs and voice control are always available." },
+    ],
+    links: [
+      { label: "JARVIS AI overview", to: "/jarvis-ai" },
+      { label: "JARVIS alternative", to: "/jarvis-alternative" },
+      { label: "AI assistant for Windows", to: "/ai-assistant-for-windows" },
+      { label: "Desktop control", to: "/features/computer-use" },
+      ...CTA_CORE,
+    ],
+    image: img(osShell, "DIGI BIZ OS running as a Windows desktop application", "DIGI BIZ OS installed and running on Windows."),
+    accent: "var(--cyan)",
+  },
+  {
+    path: "/ai-computer-control",
+    group: "intent",
+    eyebrow: "Computer Control",
+    h1: "AI That Can",
+    h1Gradient: "Actually Control Your Computer.",
+    metaTitle: "AI That Controls Your Computer — Desktop Control AI | DIGI BIZ OS",
+    metaDescription:
+      "DIGI BIZ OS controls your Windows computer on request: opens applications, works with files and folders, uses the terminal and browser, and reports every action it takes.",
+    intro:
+      "Control is the part most AI tools skip. DIGI BIZ OS is built around it: you grant permission, speak the instruction, and the assistant operates the machine — applications, files, clipboard, terminal, browser — while you watch each step in the run view.",
+    answers: [
+      { q: "Can AI really control a computer?", a: "Yes. Computer-use assistants like DIGI BIZ OS act on the desktop through tools rather than only generating text, so they can open applications, move files and run commands." },
+      { q: "Is it safe?", a: "Actions run under your Windows account with your permission, and every step is logged in the run view so you can see exactly what happened." },
+      { q: "What are common uses?", a: "Sorting and renaming files, processing document batches, running scripts, gathering research, preparing reports and repeating any of these on a schedule." },
+    ],
+    capabilities: [
+      { title: "Applications", body: "Open, focus and drive the programs you already use." },
+      { title: "Files and folders", body: "Find, move, rename, convert and organise at volume." },
+      { title: "Terminal", body: "Run commands and scripts inside your projects." },
+      { title: "Browser", body: "Research, collect and summarise from the web." },
+      { title: "Clipboard and system", body: "Everyday system actions handled hands-free." },
+      { title: "Audit trail", body: "A complete history of the actions taken." },
+    ],
+    sections: [
+      {
+        heading: "Permission first, always",
+        body: "Nothing runs without you asking for it. The assistant stays idle until you give an instruction, and destructive operations are surfaced clearly before and after execution.",
+      },
+      {
+        heading: "Why control beats suggestion",
+        body: "A suggestion still leaves the work with you. Control removes the last mile: the files are actually renamed, the report is actually written and the job actually ran at 7am.",
+      },
+    ],
+    faq: [
+      { q: "Does it need admin rights?", a: "Ordinary tasks run under your normal user account. Only operations that genuinely require elevation would need it." },
+      { q: "Can I limit what it touches?", a: "Yes — you choose which folders and capabilities are in scope for a given task." },
+    ],
+    links: [
+      { label: "Computer-use AI", to: "/computer-use-ai" },
+      { label: "Desktop control module", to: "/features/computer-use" },
+      { label: "AI file management", to: "/features/ai-file-management" },
+      { label: "Desktop AI agent", to: "/desktop-ai-agent" },
+      ...CTA_CORE,
+    ],
+    image: img(osDesktopTools, "Desktop control tools in DIGI BIZ OS acting on files and applications", "Desktop and file tools available to the assistant."),
+    accent: "var(--purple)",
+  },
+  {
+    path: "/desktop-ai-agent",
+    group: "intent",
+    eyebrow: "Desktop Agent",
+    h1: "A Desktop AI Agent",
+    h1Gradient: "That Lives Where You Work.",
+    metaTitle: "Desktop AI Agent for Windows — Autonomous Local Agent | DIGI BIZ OS",
+    metaDescription:
+      "Run autonomous AI agents on your own desktop. DIGI BIZ OS agents plan, use tools, work with local files and projects, and report every step in a live run view.",
+    intro:
+      "A desktop AI agent is an agent that runs where your work already lives: your machine, your folders, your projects. DIGI BIZ OS lets you create agents, give them scope, and let them carry out multi-step work locally instead of in an isolated cloud sandbox.",
+    answers: [
+      { q: "What is a desktop AI agent?", a: "It is an AI agent that executes on your own computer, using local files, applications and tools, rather than running only in a remote environment." },
+      { q: "How is it different from a cloud agent?", a: "Local context. A desktop agent can read the folder you just saved to, run your project's commands and put the output back on your disk." },
+      { q: "Can several agents work together?", a: "Yes. Work can be delegated between specialist agents, with progress visible for each one." },
+    ],
+    capabilities: [
+      { title: "Local context", body: "Your files, projects and documents are the working material." },
+      { title: "Custom agents", body: "Define role, scope, tools and persona per agent." },
+      { title: "Delegation", body: "Agents hand subtasks to the right specialist." },
+      { title: "Tooling", body: "150+ mixed tools available to every agent." },
+      { title: "Persistence", body: "Memories keep context across sessions and projects." },
+      { title: "Live tracking", body: "Watch each agent's steps and outputs as they run." },
+    ],
+    sections: [
+      {
+        heading: "Where desktop agents pay off",
+        body: "Anything that mixes reasoning with local material: reviewing a folder of contracts, refactoring a project, preparing a weekly pack from files on disk, or keeping a research digest current.",
+      },
+      {
+        heading: "Keeping agents accountable",
+        body: "Every run is tracked step by step, so an agent's work can be reviewed, repeated or corrected — which is what makes autonomy usable in a business rather than a novelty.",
+      },
+    ],
+    faq: [
+      { q: "Do agents run without supervision?", a: "They can run scheduled and unattended, and every run is recorded so you can review afterwards." },
+      { q: "Can I build my own?", a: "Yes. Custom agents, skills, tools and memories are created inside the app." },
+    ],
+    links: [
+      { label: "Multi-agent AI", to: "/multi-agent-ai" },
+      { label: "AI agent platform", to: "/ai-agent-platform" },
+      { label: "Agents overview", to: "/agents" },
+      { label: "AI computer control", to: "/ai-computer-control" },
+      ...CTA_CORE,
+    ],
+    image: img(osLiveTracking, "Live tracking view of DIGI BIZ OS agents executing steps on a desktop", "Live tracking of agent runs, step by step."),
+    accent: "var(--cyan)",
+  },
+  /* ------------------------------------------------------------------ */
+  /* ADDITIONAL FEATURE MODULES                                         */
+  /* ------------------------------------------------------------------ */
+  {
+    path: "/features/model-router",
+    group: "feature",
+    eyebrow: "Model Router",
+    h1: "Model Router —",
+    h1Gradient: "The Right Model per Task.",
+    metaTitle: "Model Router — Automatic AI Model Selection | DIGI BIZ OS",
+    metaDescription:
+      "The DIGI BIZ OS model router sends each task to a suitable AI model, so reasoning, speed and cost are balanced automatically across 200+ available models.",
+    intro:
+      "Different jobs need different models. The router picks a suitable one per task — fast models for short operations, stronger models for planning and analysis — so you do not have to think about model names to get good results.",
+    answers: [
+      { q: "What is a model router?", a: "It is the component that decides which AI model handles a given task, based on the type of work, the required depth and your configuration." },
+      { q: "Can I override it?", a: "Yes. You can pin a preferred model for a task, agent or workspace." },
+    ],
+    capabilities: [
+      { title: "200+ models", body: "A broad catalogue available inside the app." },
+      { title: "Task-aware", body: "Routing based on the kind of work requested." },
+      { title: "Manual pinning", body: "Force a specific model when you need consistency." },
+      { title: "Per-agent settings", body: "Each agent can prefer its own model." },
+      { title: "Fallbacks", body: "Work continues if a provider is unavailable." },
+      { title: "Cost awareness", body: "Cheap work stays on cheap models." },
+    ],
+    sections: [
+      {
+        heading: "Why routing matters more than any single model",
+        body: "Sending every request to the largest model is slow and wasteful; sending everything to the smallest one produces poor plans. Routing gets the balance right automatically across a long working day.",
+      },
+    ],
+    faq: [
+      { q: "Does it lock me to one provider?", a: "No — model choice is configurable and multiple providers are supported." },
+    ],
+    links: [
+      { label: "AI models", to: "/features/ai-models" },
+      { label: "Digi AI", to: "/features/digi-ai" },
+      { label: "Memory", to: "/features/memory" },
+      ...CTA_CORE,
+    ],
+    image: img(osRuntime, "Model selection and routing settings in DIGI BIZ OS", "Model routing and runtime configuration."),
+    accent: "var(--purple)",
+  },
+  {
+    path: "/features/ai-file-management",
+    group: "feature",
+    eyebrow: "File Management",
+    h1: "AI File Management —",
+    h1Gradient: "Order Without the Admin.",
+    metaTitle: "AI File Management — Organise Folders and Documents by Voice | DIGI BIZ OS",
+    metaDescription:
+      "Let DIGI BIZ OS sort, rename, convert and file your documents. Describe the structure you want and the assistant applies it across local folders on Windows.",
+    intro:
+      "File admin is the work nobody schedules and everyone loses hours to. Describe the structure you want — by client, by date, by type — and the assistant applies it across your local folders, converting and renaming as it goes.",
+    answers: [
+      { q: "Can AI organise my files?", a: "Yes. DIGI BIZ OS can read, classify, rename, move and convert files in local folders based on rules you describe in plain language." },
+      { q: "Does it work in bulk?", a: "Yes — batches of documents are handled in one run, with a summary of what changed." },
+    ],
+    capabilities: [
+      { title: "Classification", body: "Sort by client, type, date or content." },
+      { title: "Bulk renaming", body: "Consistent naming applied across a folder." },
+      { title: "Conversion", body: "Move between common document and image formats." },
+      { title: "Extraction", body: "Pull data out of documents into structured output." },
+      { title: "Deduplication", body: "Spot and handle repeated files." },
+      { title: "Scheduling", body: "Keep an inbox folder tidy automatically." },
+    ],
+    sections: [
+      {
+        heading: "A worked example",
+        body: "Point it at a downloads folder full of invoices and ask for them filed by client and month with a consistent naming pattern and a summary spreadsheet. One run, one review, done — then schedule it weekly.",
+      },
+    ],
+    faq: [
+      { q: "Will it delete anything?", a: "Destructive actions are surfaced clearly and remain under your control." },
+      { q: "Which folders can it touch?", a: "Only the folders you put in scope for the task." },
+    ],
+    links: [
+      { label: "DigiDocs", to: "/features/digidocs" },
+      { label: "Desktop control", to: "/features/computer-use" },
+      { label: "AI computer control", to: "/ai-computer-control" },
+      ...CTA_CORE,
+    ],
+    image: img(osDocs, "Document and file tools inside DIGI BIZ OS", "Document and file operations in DigiDocs."),
+    accent: "var(--amber)",
+  },
 ];
 
 export const SEO_PAGE_BY_PATH: Record<string, SeoPage> = Object.fromEntries(
