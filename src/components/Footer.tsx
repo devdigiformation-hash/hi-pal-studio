@@ -14,6 +14,7 @@ const OVERVIEW = [
   { label: "JARVIS AI", to: "/jarvis-ai" },
   { label: "Pricing", to: "/pricing" },
   { label: "Blog", to: "/blog" },
+  { label: "Download", to: "/download" },
   { label: "Comparisons", to: "/compare" },
   { label: "FAQ", to: "/faq" },
 ] as const;
@@ -37,6 +38,10 @@ const RESOURCES = [
   { label: "Multi-Agent AI", to: "/multi-agent-ai" },
   { label: "AI Coding Agent", to: "/ai-coding-agent" },
   { label: "Computer-Use AI", to: "/computer-use-ai" },
+  { label: "JARVIS Alternative", to: "/jarvis-alternative" },
+  { label: "JARVIS for Windows", to: "/jarvis-for-windows" },
+  { label: "Desktop AI Agent", to: "/desktop-ai-agent" },
+  { label: "AI Computer Control", to: "/ai-computer-control" },
 ] as const;
 
 const LEGAL = [
