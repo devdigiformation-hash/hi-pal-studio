@@ -68,15 +68,158 @@ export type Database = {
         }
         Relationships: []
       }
+      seo_page_checks: {
+        Row: {
+          canonical: string | null
+          created_at: string
+          description: string | null
+          description_length: number
+          h1_count: number
+          has_jsonld: boolean
+          has_og: boolean
+          id: string
+          issues: string[]
+          scan_id: string
+          score: number
+          status_code: number | null
+          title: string | null
+          title_length: number
+          url: string
+          word_count: number
+        }
+        Insert: {
+          canonical?: string | null
+          created_at?: string
+          description?: string | null
+          description_length?: number
+          h1_count?: number
+          has_jsonld?: boolean
+          has_og?: boolean
+          id?: string
+          issues?: string[]
+          scan_id: string
+          score?: number
+          status_code?: number | null
+          title?: string | null
+          title_length?: number
+          url: string
+          word_count?: number
+        }
+        Update: {
+          canonical?: string | null
+          created_at?: string
+          description?: string | null
+          description_length?: number
+          h1_count?: number
+          has_jsonld?: boolean
+          has_og?: boolean
+          id?: string
+          issues?: string[]
+          scan_id?: string
+          score?: number
+          status_code?: number | null
+          title?: string | null
+          title_length?: number
+          url?: string
+          word_count?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "seo_page_checks_scan_id_fkey"
+            columns: ["scan_id"]
+            isOneToOne: false
+            referencedRelation: "seo_scans"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      seo_scans: {
+        Row: {
+          avg_score: number
+          base_url: string
+          created_at: string
+          error_count: number
+          finished_at: string | null
+          id: string
+          notes: string | null
+          ok_count: number
+          pages_checked: number
+          robots_ok: boolean
+          sitemap_ok: boolean
+          sitemap_url_count: number
+          started_at: string
+          warn_count: number
+        }
+        Insert: {
+          avg_score?: number
+          base_url: string
+          created_at?: string
+          error_count?: number
+          finished_at?: string | null
+          id?: string
+          notes?: string | null
+          ok_count?: number
+          pages_checked?: number
+          robots_ok?: boolean
+          sitemap_ok?: boolean
+          sitemap_url_count?: number
+          started_at?: string
+          warn_count?: number
+        }
+        Update: {
+          avg_score?: number
+          base_url?: string
+          created_at?: string
+          error_count?: number
+          finished_at?: string | null
+          id?: string
+          notes?: string | null
+          ok_count?: number
+          pages_checked?: number
+          robots_ok?: boolean
+          sitemap_ok?: boolean
+          sitemap_url_count?: number
+          started_at?: string
+          warn_count?: number
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "user"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -203,6 +346,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "user"],
+    },
   },
 } as const
