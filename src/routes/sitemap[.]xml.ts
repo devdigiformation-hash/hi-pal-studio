@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { SEO_PAGES } from "@/content/seo-pages";
 import { BLOG_POSTS } from "@/content/blog-posts";
+import { COMPARE_PAGES } from "@/content/compare-pages";
 
 const BASE_URL = "https://hi-pal-studio.lovable.app";
 
@@ -20,6 +21,8 @@ const STATIC: SitemapEntry[] = [
   { path: "/integrations", changefreq: "monthly", priority: "0.7" },
   { path: "/pricing", changefreq: "monthly", priority: "0.9" },
   { path: "/blog", changefreq: "weekly", priority: "0.7" },
+  { path: "/compare", changefreq: "monthly", priority: "0.8" },
+  { path: "/faq", changefreq: "monthly", priority: "0.7" },
   { path: "/terms", changefreq: "yearly", priority: "0.2" },
   { path: "/privacy", changefreq: "yearly", priority: "0.2" },
   { path: "/refund", changefreq: "yearly", priority: "0.2" },
@@ -36,6 +39,11 @@ export const Route = createFileRoute("/sitemap.xml")({
             path: p.path,
             changefreq: "monthly" as const,
             priority: "0.8",
+          })),
+          ...COMPARE_PAGES.map((p) => ({
+            path: `/compare/${p.slug}`,
+            changefreq: "monthly" as const,
+            priority: "0.7",
           })),
           ...BLOG_POSTS.map((p) => ({
             path: `/blog/${p.slug}`,
