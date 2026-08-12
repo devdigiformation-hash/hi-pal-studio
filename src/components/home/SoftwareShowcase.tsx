@@ -5,6 +5,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GradientText from "@/components/GradientText";
 import digiMain from "@/assets/os-main-dashboard.png.asset.json";
+import digiAiHub from "@/assets/os-digi-ai-hub.png.asset.json";
 import digiCode from "@/assets/os-digi-code.png.asset.json";
 import digiDocs from "@/assets/os-digi-docs.png.asset.json";
 import digiTools from "@/assets/os-digi-tools.png.asset.json";
