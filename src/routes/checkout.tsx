@@ -7,6 +7,7 @@ export const Route = createFileRoute("/checkout")({
   }),
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, nofollow" },
       { title: "Secure Checkout — DIGI BIZ OS" },
       {
         name: "description",

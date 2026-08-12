@@ -15,6 +15,7 @@ export const Route = createFileRoute("/terms")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://hi-pal-studio.lovable.app/terms" }],
   }),
   component: () => (
     <LegalPage

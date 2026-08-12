@@ -4,6 +4,7 @@ import OrderStatusPage from "@/pages/OrderStatusPage";
 export const Route = createFileRoute("/order/$ref")({
   head: () => ({
     meta: [
+      { name: "robots", content: "noindex, nofollow" },
       { title: "Your Order — DIGI BIZ OS" },
       {
         name: "description",
