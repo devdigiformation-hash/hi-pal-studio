@@ -27,4 +27,4 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-Sitemap: https://hi-pal-studio.lovable.app/sitemap.xml
+Sitemap: https://digibizos.co.uk/sitemap.xml

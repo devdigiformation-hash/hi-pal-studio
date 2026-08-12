@@ -15,7 +15,7 @@ export const Route = createFileRoute("/refund")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://hi-pal-studio.lovable.app/refund" }],
+    links: [{ rel: "canonical", href: "https://digibizos.co.uk/refund" }],
   }),
   component: () => (
     <LegalPage

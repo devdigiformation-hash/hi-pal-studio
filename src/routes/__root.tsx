@@ -91,6 +91,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "DIGI BIZ OS" },
       { property: "og:locale", content: "en_GB" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+      { name: "theme-color", content: "#020408" },
     ],
     scripts: [
       {
@@ -99,7 +101,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "DIGI BIZ OS",
-          url: "https://hi-pal-studio.lovable.app",
+          url: "https://digibizos.co.uk",
+          logo: "https://digibizos.co.uk/favicon.png",
+          sameAs: ["https://www.digiformation.co.uk/"],
+          areaServed: ["GB", "PK", "US"],
           description:
             "DIGI BIZ OS is a JARVIS-style AI business operating system for Windows, combining voice control, AI agents, skills, tools, workflows and desktop automation.",
           parentOrganization: {
@@ -113,6 +118,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               contactType: "sales",
               email: "info@digiformation.co.uk",
               telephone: "+92-316-446-7464",
+              availableLanguage: ["en", "ur"],
             },
           ],
         }),
@@ -123,7 +129,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "DIGI BIZ OS",
-          url: "https://hi-pal-studio.lovable.app",
+          alternateName: "DigiBiz OS",
+          inLanguage: "en-GB",
+          url: "https://digibizos.co.uk",
+          publisher: { "@type": "Organization", name: "Digiformation Ltd" },
         }),
       },
     ],

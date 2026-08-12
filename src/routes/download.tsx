@@ -55,7 +55,7 @@ export const Route = createFileRoute("/download")({
             softwareLd(
               "DIGI BIZ OS",
               "Voice-first AI agentic business operating system for Windows 10 and 11.",
-              "https://hi-pal-studio.lovable.app/download",
+              "/download",
             ),
           ),
         },
