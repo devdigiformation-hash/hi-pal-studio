@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GradientText from "@/components/GradientText";
+import digiMain from "@/assets/os-main-dashboard.png.asset.json";
 import digiCode from "@/assets/os-digi-code.png.asset.json";
 import digiDocs from "@/assets/os-digi-docs.png.asset.json";
 import digiTools from "@/assets/os-digi-tools.png.asset.json";
@@ -13,6 +14,12 @@ import digiSkills from "@/assets/os-skills.png.asset.json";
 import digiDesktopTools from "@/assets/os-desktop-tools.png.asset.json";
 
 const SLIDES = [
+  {
+    src: digiMain.url,
+    tag: "Live OS",
+    title: "Your entire command surface in one place.",
+    body: "Screen sharing, live transcript, memory, skills, agents, tools and camera — all orbiting a single voice-first workspace that works while you talk.",
+  },
   {
     src: digiCode.url,
     tag: "Digi Code",
