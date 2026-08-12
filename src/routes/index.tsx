@@ -15,12 +15,9 @@ import VisionShowcase from "@/components/home/VisionShowcase";
 import SourceCodeSection from "@/components/home/SourceCodeSection";
 import ComparisonMatrix from "@/components/home/ComparisonMatrix";
 import UseCases from "@/components/home/UseCases";
-import SecuritySection from "@/components/home/SecuritySection";
 import SocialProof from "@/components/home/SocialProof";
-import ROICalculator from "@/components/home/ROICalculator";
 import PricingPreview from "@/components/home/PricingPreview";
 import FAQSection from "@/components/home/FAQSection";
-import FinalCTA from "@/components/home/FinalCTA";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 export const Route = createFileRoute("/")({
@@ -63,12 +60,9 @@ function HomePage() {
       <SourceCodeSection />
       <ComparisonMatrix />
       <UseCases />
-      <SecuritySection />
       <SocialProof />
-      <ROICalculator />
       <PricingPreview />
       <FAQSection />
-      <FinalCTA />
       <WhatsAppFloat />
     </main>
   );
