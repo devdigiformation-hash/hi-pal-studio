@@ -1,24 +1,33 @@
 import { createFileRoute } from "@tanstack/react-router";
 import VoiceAIPage from "@/pages/VoiceAIPage";
+import { buildMeta, breadcrumbLd, softwareLd } from "@/lib/seo";
+
+const PATH = "/voice-ai";
+const TITLE = "Voice AI Assistant for PC — Control Your Computer by Speaking | DIGI BIZ OS";
+const DESC = "Voice-first control for your Windows desktop: speak a request and DIGI BIZ OS plans it, picks the right agent, skill and tool, and executes it live.";
 
 export const Route = createFileRoute("/voice-ai")({
-  head: () => ({
-    meta: [
-      { title: "Voice AI — DIGI BIZ OS" },
-      {
-        name: "description",
-        content:
-          "Real-time live voice control for your desktop: sub-second intent, native command execution.",
-      },
-      { property: "og:title", content: "Voice AI — DIGI BIZ OS" },
-      {
-        property: "og:description",
-        content: "Real-time voice control for your entire desktop workspace.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => {
+    const { meta, links } = buildMeta({ path: PATH, title: TITLE, description: DESC });
+    return {
+      meta,
+      links,
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(
+            breadcrumbLd([
+              { name: "Home", path: "/" },
+              { name: "Voice AI", path: PATH },
+            ]),
+          ),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(softwareLd("DIGI BIZ OS", DESC, PATH)),
+        },
+      ],
+    };
+  },
   component: VoiceAIPage,
 });
-
