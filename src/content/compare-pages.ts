@@ -27,6 +27,62 @@ const CORE_LINKS = [
 
 export const COMPARE_PAGES: ComparePage[] = [
   {
+    slug: "digi-biz-os-vs-stonic-ai",
+    competitor: "Stonic AI",
+    eyebrow: "Comparison",
+    h1: "DIGI BIZ OS vs Stonic AI —",
+    h1Gradient: "Two AI Desktop Approaches.",
+    metaTitle: "DIGI BIZ OS vs Stonic AI — AI Desktop Assistants Compared | DIGI BIZ OS",
+    metaDescription:
+      "A fair look at DIGI BIZ OS and Stonic AI: both are AI desktop assistants for Windows. Compare scope, agents, automation, licensing and who each one suits best.",
+    intro:
+      "Both products sit in the same emerging category: AI assistants that live on your desktop rather than in a browser tab. We have kept this comparison to what is publicly stated by each product, and to the areas where our own scope is clearly defined — check Stonic AI\'s own site for their current feature list before deciding.",
+    summary: {
+      forDigiBiz: [
+        "You want a broad business operating system, not only an assistant.",
+        "You need multi-agent runs, workflows and scheduled jobs.",
+        "You want document, coding and desktop workspaces in one product.",
+        "You want a one-time licence with source code and custom build options.",
+      ],
+      forOther: [
+        "You prefer their specific interface and workflow after trying both.",
+        "Their current feature set already covers everything you need.",
+        "Their pricing or platform support fits your situation better.",
+      ],
+    },
+    rows: [
+      { aspect: "Category", digibiz: "AI agentic business operating system for Windows", other: "AI desktop assistant" },
+      { aspect: "Scope", digibiz: "500+ skills, 150+ mixed tools, agents, documents, coding, automation", other: "See their site for the current capability list" },
+      { aspect: "Agents", digibiz: "Multi-agent delegation with live run tracking", other: "Varies by release" },
+      { aspect: "Automation", digibiz: "Workflows plus cron-style scheduled jobs", other: "Varies by release" },
+      { aspect: "Licensing", digibiz: "One-time lifetime licence; source code and custom build available", other: "See their current pricing page" },
+      { aspect: "Customisation", digibiz: "Custom skills, agents, memories and full source code option", other: "Varies by release" },
+    ],
+    sections: [
+      {
+        heading: "The category is the real story",
+        body: "Both products exist because chat assistants cannot touch your machine. If you are choosing between them, you have already made the important decision — moving AI from a browser tab to the desktop, where your files, projects and applications actually live.",
+      },
+      {
+        heading: "How we would evaluate them",
+        body: "Install both if you can, then run the same real task through each: a multi-step job from your own week that ends in a file. Judge on completion, visibility of what happened, repeatability on a schedule, and total cost over two years rather than on day one.",
+      },
+      {
+        heading: "Where DIGI BIZ OS is deliberately different",
+        body: "The product is built as an operating layer for a business, not only a personal assistant: agents you can define, workflows you can schedule, document and coding workspaces, and a source code licence for teams who want to own and rebrand the software.",
+      },
+    ],
+    faq: [
+      { q: "Is this comparison independent?", a: "No — it is published by DIGI BIZ OS. We have limited the claims to our own scope and encourage you to check Stonic AI\'s site directly for their current features and pricing." },
+      { q: "Can I try both?", a: "Yes, and we recommend it. Run the same real task through each product before committing." },
+    ],
+    links: [
+      { label: "AI desktop assistant", to: "/ai-desktop-assistant" },
+      { label: "AI business operating system", to: "/ai-business-operating-system" },
+      ...CORE_LINKS,
+    ],
+  },
+  {
     slug: "digi-biz-os-vs-chatgpt",
     competitor: "ChatGPT",
     eyebrow: "Comparison",
