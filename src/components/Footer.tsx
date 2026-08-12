@@ -14,6 +14,8 @@ const OVERVIEW = [
   { label: "JARVIS AI", to: "/jarvis-ai" },
   { label: "Pricing", to: "/pricing" },
   { label: "Blog", to: "/blog" },
+  { label: "Comparisons", to: "/compare" },
+  { label: "FAQ", to: "/faq" },
 ] as const;
 
 const FEATURES = [
