@@ -99,7 +99,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "DIGI BIZ OS",
-          url: "https://hi-pal-studio.lovable.app",
+          url: "https://digibizos.co.uk",
           description:
             "DIGI BIZ OS is a JARVIS-style AI business operating system for Windows, combining voice control, AI agents, skills, tools, workflows and desktop automation.",
           parentOrganization: {
@@ -123,7 +123,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "DIGI BIZ OS",
-          url: "https://hi-pal-studio.lovable.app",
+          url: "https://digibizos.co.uk",
         }),
       },
     ],
