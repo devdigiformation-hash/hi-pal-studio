@@ -26,6 +26,7 @@ const SLIDES = [
     tag: "Digi AI Hub",
     title: "Chat, code, personas and agents in one playground.",
     body: "Agent project assistant, multi-model chat, coding assistant, persona manager, providers and app store — everything unified behind one clean interface.",
+  },
   {
     src: digiCode.url,
     tag: "Digi Code",
