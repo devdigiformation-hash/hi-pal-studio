@@ -7,7 +7,7 @@ import osCli from "@/assets/os-digi-cli.png.asset.json";
 import osMcp from "@/assets/os-digi-mcp.png.asset.json";
 import osSkills from "@/assets/os-skills.png.asset.json";
 import osDesktopTools from "@/assets/os-desktop-tools.png.asset.json";
-import osGraph from "@/assets/os-graph.png.asset.json";
+import osGraph from "@/assets/os-graph-full.png.asset.json";
 import osTranscript from "@/assets/os-transcript.png.asset.json";
 import osLiveTracking from "@/assets/os-live-tracking.png.asset.json";
 import osShell from "@/assets/os-shell.png.asset.json";
