@@ -55,11 +55,9 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
               <img
                 src={page.image.src}
                 alt={page.image.alt}
-                width={1600}
-                height={900}
                 loading="lazy"
                 decoding="async"
-                className="block w-full"
+                className="block h-auto w-full"
               />
             </div>
             <figcaption className="mt-3 text-center font-body text-[13px] text-[var(--text-muted)]">
