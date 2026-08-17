@@ -236,7 +236,7 @@ export default function HeroSection() {
             className="mt-10 flex flex-wrap items-center gap-3 sm:gap-4"
           >
             <div className="relative w-auto">
-              <Link to="/download">
+              <Link to="/download" onClick={() => trackDownload("hero_windows")}>
                 <CyanButton
                   size="sm"
                   icon={<WindowsIcon size={15} />}
