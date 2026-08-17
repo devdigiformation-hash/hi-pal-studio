@@ -6,6 +6,8 @@ import GradientText from "@/components/GradientText";
 import CyanButton from "@/components/CyanButton";
 import GhostButton from "@/components/GhostButton";
 import MonoBadge from "@/components/MonoBadge";
+import { Link } from "@tanstack/react-router";
+import { useTrackDownload } from "@/lib/use-download-tracking";
 
 const DOTS = [
   { left: "12%", top: "22%", color: "#2FE0C8" },
@@ -16,6 +18,7 @@ const DOTS = [
 ];
 
 export default function FinalCTA() {
+  const trackDownload = useTrackDownload();
   return (
     <section
       className="relative overflow-hidden px-6 py-[100px] md:px-10"
@@ -62,9 +65,11 @@ export default function FinalCTA() {
             Download DIGI BIZ OS and experience autonomous desktop AI today.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <CyanButton size="lg" icon={<WindowsIcon size={17} />}>
-              Download for Windows
-            </CyanButton>
+            <Link to="/download" onClick={() => trackDownload("final_cta_windows")}>
+              <CyanButton size="lg" icon={<WindowsIcon size={17} />}>
+                Download for Windows
+              </CyanButton>
+            </Link>
             <GhostButton size="lg" icon={<Play size={17} />}>
               Watch Product Demo
             </GhostButton>

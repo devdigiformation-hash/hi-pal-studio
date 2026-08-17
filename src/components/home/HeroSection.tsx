@@ -20,6 +20,7 @@ import PlatformStrip from "@/components/PlatformStrip";
 import MonoBadge from "@/components/MonoBadge";
 import ActivePulse from "@/components/ActivePulse";
 import GradientText from "@/components/GradientText";
+import { useTrackDownload } from "@/lib/use-download-tracking";
 
 const PREFIXES = [
   "Control Your Business",
@@ -155,6 +156,7 @@ function Typewriter() {
 }
 
 export default function HeroSection() {
+  const trackDownload = useTrackDownload();
   const radius = 200;
 
   return (
