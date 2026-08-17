@@ -14,6 +14,36 @@ export type Database = {
   }
   public: {
     Tables: {
+      download_clicks: {
+        Row: {
+          created_at: string
+          id: string
+          page_path: string | null
+          platform: string
+          referrer: string | null
+          source: string
+          user_agent: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          page_path?: string | null
+          platform?: string
+          referrer?: string | null
+          source: string
+          user_agent?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          page_path?: string | null
+          platform?: string
+          referrer?: string | null
+          source?: string
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
       orders: {
         Row: {
           amount: number
