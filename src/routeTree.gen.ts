@@ -28,6 +28,7 @@ import { Route as SitemapRouteImport } from './routes/sitemap'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as VoiceAiRouteImport } from './routes/voice-ai'
+import { Route as AdminDownloadsRouteImport } from './routes/admin.downloads'
 import { Route as AdminSeoRouteImport } from './routes/admin.seo'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
@@ -132,6 +133,11 @@ const VoiceAiRoute = VoiceAiRouteImport.update({
   path: '/voice-ai',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminDownloadsRoute = AdminDownloadsRouteImport.update({
+  id: '/admin/downloads',
+  path: '/admin/downloads',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminSeoRoute = AdminSeoRouteImport.update({
   id: '/admin/seo',
   path: '/admin/seo',
@@ -193,6 +199,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/voice-ai': typeof VoiceAiRoute
+  '/admin/downloads': typeof AdminDownloadsRoute
   '/admin/seo': typeof AdminSeoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
@@ -222,6 +229,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/voice-ai': typeof VoiceAiRoute
+  '/admin/downloads': typeof AdminDownloadsRoute
   '/admin/seo': typeof AdminSeoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
@@ -252,6 +260,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/voice-ai': typeof VoiceAiRoute
+  '/admin/downloads': typeof AdminDownloadsRoute
   '/admin/seo': typeof AdminSeoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
@@ -283,6 +292,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/voice-ai'
+    | '/admin/downloads'
     | '/admin/seo'
     | '/blog/$slug'
     | '/compare/$slug'
@@ -312,6 +322,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/voice-ai'
+    | '/admin/downloads'
     | '/admin/seo'
     | '/blog/$slug'
     | '/compare/$slug'
@@ -341,6 +352,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/voice-ai'
+    | '/admin/downloads'
     | '/admin/seo'
     | '/blog/$slug'
     | '/compare/$slug'
@@ -371,6 +383,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   VoiceAiRoute: typeof VoiceAiRoute
+  AdminDownloadsRoute: typeof AdminDownloadsRoute
   AdminSeoRoute: typeof AdminSeoRoute
   BlogSlugRoute: typeof BlogSlugRoute
   CompareSlugRoute: typeof CompareSlugRoute
@@ -516,6 +529,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VoiceAiRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/downloads': {
+      id: '/admin/downloads'
+      path: '/admin/downloads'
+      fullPath: '/admin/downloads'
+      preLoaderRoute: typeof AdminDownloadsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/admin/seo': {
       id: '/admin/seo'
       path: '/admin/seo'
@@ -595,6 +615,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   VoiceAiRoute: VoiceAiRoute,
+  AdminDownloadsRoute: AdminDownloadsRoute,
   AdminSeoRoute: AdminSeoRoute,
   BlogSlugRoute: BlogSlugRoute,
   CompareSlugRoute: CompareSlugRoute,
