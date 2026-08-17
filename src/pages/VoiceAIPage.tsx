@@ -188,6 +188,7 @@ export default function VoiceAIPage() {
         title="Stop Typing. Start Winning."
         badges={["<200ms Latency", "Live Voice", "Hands-Free"]}
         cta="Download for Windows"
+        trackSource="voice_ai_cta"
         icon={<WindowsIcon size={17} />}
       />
     </motion.main>

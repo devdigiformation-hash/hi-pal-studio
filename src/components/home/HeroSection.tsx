@@ -20,6 +20,7 @@ import PlatformStrip from "@/components/PlatformStrip";
 import MonoBadge from "@/components/MonoBadge";
 import ActivePulse from "@/components/ActivePulse";
 import GradientText from "@/components/GradientText";
+import { useTrackDownload } from "@/lib/use-download-tracking";
 
 const PREFIXES = [
   "Control Your Business",
@@ -155,6 +156,7 @@ function Typewriter() {
 }
 
 export default function HeroSection() {
+  const trackDownload = useTrackDownload();
   const radius = 200;
 
   return (
@@ -236,7 +238,7 @@ export default function HeroSection() {
             className="mt-10 flex flex-wrap items-center gap-3 sm:gap-4"
           >
             <div className="relative w-auto">
-              <Link to="/download">
+              <Link to="/download" onClick={() => trackDownload("hero_windows")}>
                 <CyanButton
                   size="sm"
                   icon={<WindowsIcon size={15} />}

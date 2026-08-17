@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check, Download, MonitorSmartphone } from "lucide-react";
+import { useTrackDownload } from "@/lib/use-download-tracking";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
@@ -67,6 +68,7 @@ export const Route = createFileRoute("/download")({
 });
 
 function DownloadPage() {
+  const trackDownload = useTrackDownload();
   return (
     <main className="min-h-screen pt-[60px] md:pt-[72px]">
       <SectionWrapper>
@@ -89,7 +91,7 @@ function DownloadPage() {
             download link and key arrive by email — usually within minutes.
           </p>
           <div className="reveal-item delay-3 mt-9 flex flex-wrap items-center justify-center gap-3">
-            <Link to="/pricing">
+            <Link to="/pricing" onClick={() => trackDownload("download_page_get_licence")}>
               <CyanButton icon={<Download size={16} />}>Get your licence</CyanButton>
             </Link>
             <Link

@@ -1,19 +1,24 @@
 import type { ReactNode } from "react";
+import { Link } from "@tanstack/react-router";
 import SectionWrapper from "@/components/SectionWrapper";
 import CyanButton from "@/components/CyanButton";
 import MonoBadge from "@/components/MonoBadge";
+import { useTrackDownload } from "@/lib/use-download-tracking";
 
 export default function PageCTA({
   title,
   badges = [],
   cta,
   icon,
+  trackSource,
 }: {
   title: string;
   badges?: string[];
   cta: string;
   icon?: ReactNode;
+  trackSource?: string;
 }) {
+  const trackDownload = useTrackDownload();
   return (
     <SectionWrapper>
       <div className="mx-auto flex max-w-[860px] flex-col items-center text-center">
@@ -28,9 +33,14 @@ export default function PageCTA({
           </div>
         ) : null}
         <div className="reveal-item delay-2 mt-9">
-          <CyanButton size="lg" icon={icon}>
-            {cta}
-          </CyanButton>
+          <Link
+            to="/download"
+            onClick={() => trackDownload(trackSource ?? "page_cta_windows")}
+          >
+            <CyanButton size="lg" icon={icon}>
+              {cta}
+            </CyanButton>
+          </Link>
         </div>
       </div>
     </SectionWrapper>
