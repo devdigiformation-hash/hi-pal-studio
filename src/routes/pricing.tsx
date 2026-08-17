@@ -4,7 +4,7 @@ import { buildMeta, breadcrumbLd, softwareLd } from "@/lib/seo";
 
 const PATH = "/pricing";
 const TITLE = "Pricing — Lifetime Licence, Source Code & Custom Build | DIGI BIZ OS";
-const DESC = "One-time pricing for DIGI BIZ OS: £50 lifetime access, £99 source code licence and £199 fully customised build with your branding and automations.";
+const DESC = "One-time pricing for DIGI BIZ OS: £50 lifetime access, £199 source code licence and £299 fully customised build with your branding and automations.";
 
 export const Route = createFileRoute("/pricing")({
   head: () => {
