@@ -176,6 +176,7 @@ export default function DesktopOSPage() {
         title="One Voice. Total Desktop Domination."
         badges={["Instant Desktop Control", "150+ Mixed Tools", "Windows · macOS soon"]}
         cta="Download for Windows"
+        trackSource="desktop_os_cta"
         icon={<WindowsIcon size={17} />}
       />
     </motion.main>
