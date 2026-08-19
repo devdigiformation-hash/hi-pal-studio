@@ -177,6 +177,14 @@ export default function Footer() {
                 Contact
               </SmartLink>
             </li>
+            <li>
+              <SmartLink
+                to="/open-source"
+                className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
+              >
+                Open Source Software
+              </SmartLink>
+            </li>
             {BUSINESS.map((item) => (
               <li key={item}>
                 <a
