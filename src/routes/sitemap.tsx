@@ -68,6 +68,7 @@ function SiteMapPage() {
     { label: "Blog & Guides", to: "/blog" },
     { label: "FAQ", to: "/faq" },
     { label: "About", to: "/about" },
+    { label: "Open Source Software", to: "/open-source" },
     { label: "Contact", to: "/contact" },
   ];
   const legal = [

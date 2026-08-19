@@ -20,6 +20,7 @@ import { Route as DesktopOsRouteImport } from './routes/desktop-os'
 import { Route as DownloadRouteImport } from './routes/download'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as IntegrationsRouteImport } from './routes/integrations'
+import { Route as OpenSourceRouteImport } from './routes/open-source'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as RefundRouteImport } from './routes/refund'
@@ -91,6 +92,11 @@ const FaqRoute = FaqRouteImport.update({
 const IntegrationsRoute = IntegrationsRouteImport.update({
   id: '/integrations',
   path: '/integrations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OpenSourceRoute = OpenSourceRouteImport.update({
+  id: '/open-source',
+  path: '/open-source',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PricingRoute = PricingRouteImport.update({
@@ -191,6 +197,7 @@ export interface FileRoutesByFullPath {
   '/download': typeof DownloadRoute
   '/faq': typeof FaqRoute
   '/integrations': typeof IntegrationsRoute
+  '/open-source': typeof OpenSourceRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/refund': typeof RefundRoute
@@ -221,6 +228,7 @@ export interface FileRoutesByTo {
   '/download': typeof DownloadRoute
   '/faq': typeof FaqRoute
   '/integrations': typeof IntegrationsRoute
+  '/open-source': typeof OpenSourceRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/refund': typeof RefundRoute
@@ -252,6 +260,7 @@ export interface FileRoutesById {
   '/download': typeof DownloadRoute
   '/faq': typeof FaqRoute
   '/integrations': typeof IntegrationsRoute
+  '/open-source': typeof OpenSourceRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/refund': typeof RefundRoute
@@ -284,6 +293,7 @@ export interface FileRouteTypes {
     | '/download'
     | '/faq'
     | '/integrations'
+    | '/open-source'
     | '/pricing'
     | '/privacy'
     | '/refund'
@@ -314,6 +324,7 @@ export interface FileRouteTypes {
     | '/download'
     | '/faq'
     | '/integrations'
+    | '/open-source'
     | '/pricing'
     | '/privacy'
     | '/refund'
@@ -344,6 +355,7 @@ export interface FileRouteTypes {
     | '/download'
     | '/faq'
     | '/integrations'
+    | '/open-source'
     | '/pricing'
     | '/privacy'
     | '/refund'
@@ -375,6 +387,7 @@ export interface RootRouteChildren {
   DownloadRoute: typeof DownloadRoute
   FaqRoute: typeof FaqRoute
   IntegrationsRoute: typeof IntegrationsRoute
+  OpenSourceRoute: typeof OpenSourceRoute
   PricingRoute: typeof PricingRoute
   PrivacyRoute: typeof PrivacyRoute
   RefundRoute: typeof RefundRoute
@@ -471,6 +484,13 @@ declare module '@tanstack/react-router' {
       path: '/integrations'
       fullPath: '/integrations'
       preLoaderRoute: typeof IntegrationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/open-source': {
+      id: '/open-source'
+      path: '/open-source'
+      fullPath: '/open-source'
+      preLoaderRoute: typeof OpenSourceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pricing': {
@@ -607,6 +627,7 @@ const rootRouteChildren: RootRouteChildren = {
   DownloadRoute: DownloadRoute,
   FaqRoute: FaqRoute,
   IntegrationsRoute: IntegrationsRoute,
+  OpenSourceRoute: OpenSourceRoute,
   PricingRoute: PricingRoute,
   PrivacyRoute: PrivacyRoute,
   RefundRoute: RefundRoute,

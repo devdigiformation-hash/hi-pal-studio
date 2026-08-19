@@ -10,6 +10,7 @@ const STATIC_TOP = new Set([
   "/desktop-os",
   "/features",
   "/integrations",
+  "/open-source",
   "/pricing",
   "/privacy",
   "/refund",
