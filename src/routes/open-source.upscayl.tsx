@@ -10,6 +10,7 @@ import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
 import upscaylShot from "@/assets/upscayl-screenshot.jpg.asset.json";
+import upscaylSetup from "@/assets/upscayl-setup.exe.asset.json";
 
 const TITLE = "Upscayl AI Image Enhancer — Free Offline Upscaler for Windows";
 const DESC =
