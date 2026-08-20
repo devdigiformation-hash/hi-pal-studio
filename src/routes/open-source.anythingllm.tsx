@@ -15,7 +15,7 @@ const TITLE = "AnythingLLM — Free Local Document AI for Windows";
 const DESC =
   "Download AnythingLLM free: chat with PDFs, Word docs, CSVs and websites 100% privately on your Windows PC. Local vector database, multi-LLM support, no subscription.";
 
-const DOWNLOAD_URL = "#";
+const DOWNLOAD_URL = "https://drive.google.com/uc?export=download&id=1QNyBB7YIE8zdCHKPY4baDcbC_DvrHfJt";
 const WHATSAPP = "https://wa.me/923164467464";
 
 const FEATURES = [
@@ -142,7 +142,7 @@ function AnythingLlmPage() {
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
-              <a href={DOWNLOAD_URL} download="AnythingLLM-Setup.exe">
+              <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
                 <CyanButton size="lg" icon={<WindowsIcon />}>Download AnythingLLM</CyanButton>
               </a>
             </div>
@@ -289,7 +289,7 @@ function AnythingLlmPage() {
             Get AnythingLLM free, then automate everything with DIGI BIZ OS
           </h2>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href={DOWNLOAD_URL} download="AnythingLLM-Setup.exe">
+            <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
               <CyanButton size="lg" icon={<WindowsIcon />}>Download AnythingLLM</CyanButton>
             </a>
             <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
