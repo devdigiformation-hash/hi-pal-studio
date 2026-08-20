@@ -13,7 +13,7 @@ import osLiveTracking from "@/assets/os-live-tracking.png.asset.json";
 import osShell from "@/assets/os-shell.png.asset.json";
 import osSidebar from "@/assets/os-sidebar.png.asset.json";
 import osRuntime from "@/assets/os-runtime.png.asset.json";
-import jarvisRobot from "@/assets/jarvis-robot.png.asset.json";
+import jarvisRobot from "@/assets/jarvis-robot.png";
 
 export interface SeoImage {
   src: string;
