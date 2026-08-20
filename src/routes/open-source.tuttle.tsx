@@ -10,12 +10,13 @@ import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
 import screenshot from "@/assets/tuttle-screenshot.jpg.asset.json";
+import setupFile from "@/assets/tuttle-setup.exe.asset.json";
 
 const TITLE = "Tuttle Time Tracker — Free Billable Hours & Productivity App for Windows";
 const DESC =
   "Download Tuttle Time Tracker free: track billable hours, project tasks, and client timesheets 100% privately on your Windows PC. Offline time tracking with CSV, Excel & PDF export.";
 
-const DOWNLOAD_URL = "#";
+const DOWNLOAD_URL = setupFile.url;
 const WHATSAPP = "https://wa.me/923164467464";
 
 const FEATURES = [
