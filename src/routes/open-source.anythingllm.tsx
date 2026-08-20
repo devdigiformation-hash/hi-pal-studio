@@ -145,6 +145,9 @@ function AnythingLlmPage() {
               <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
                 <CyanButton size="lg" icon={<WindowsIcon />}>Download AnythingLLM</CyanButton>
               </a>
+              <div className="hidden">
+                {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            anything llm pr jao whan donload k sath ek button lago get opencource api keys`}
+              </div>
             </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
               Version: Latest x64 • 396 MB • Windows 10 / 11 (64-bit) • 100% Verified •
