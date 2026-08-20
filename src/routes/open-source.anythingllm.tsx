@@ -1,11 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { FileText, ShieldCheck, Globe, Bot, Users, PiggyBank, MessageCircle } from "lucide-react";
+import { FileText, ShieldCheck, Globe, Bot, Users, PiggyBank } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
 import CyanButton from "@/components/CyanButton";
-import GhostButton from "@/components/GhostButton";
 import MonoBadge from "@/components/MonoBadge";
 import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
@@ -145,9 +144,6 @@ function AnythingLlmPage() {
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
               <a href={DOWNLOAD_URL} download="AnythingLLM-Setup.exe">
                 <CyanButton size="lg" icon={<WindowsIcon />}>Download AnythingLLM</CyanButton>
-              </a>
-              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-                <GhostButton size="lg" icon={<MessageCircle size={18} />}>WhatsApp Support</GhostButton>
               </a>
             </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
