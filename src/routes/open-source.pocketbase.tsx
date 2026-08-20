@@ -10,12 +10,13 @@ import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
 import screenshot from "@/assets/pocketbase-screenshot.png.asset.json";
+import setupFile from "@/assets/PocketBase-Setup.exe.asset.json";
 
 const TITLE = "PocketBase Backend — Free Open-Source Database & Auth Server for Windows";
 const DESC =
   "Download PocketBase free: instant high-speed SQLite database, built-in user auth, OAuth, real-time APIs and file storage in a single 32 MB executable for Windows.";
 
-const DOWNLOAD_URL = "#";
+const DOWNLOAD_URL = setupFile.url;
 const WHATSAPP = "https://wa.me/923164467464";
 
 const FEATURES = [
