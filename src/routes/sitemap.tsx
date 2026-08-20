@@ -69,6 +69,7 @@ function SiteMapPage() {
     { label: "FAQ", to: "/faq" },
     { label: "About", to: "/about" },
     { label: "Open Source Software", to: "/open-source" },
+    { label: "Agency Orchestrator — One-Person AI Company", to: "/open-source/agency-orchestrator" },
     { label: "Jan AI — Free Offline AI for Windows", to: "/open-source/jan-ai" },
     { label: "AnythingLLM — Free Local Document AI", to: "/open-source/anythingllm" },
     { label: "Tuttle Time Tracker — Free Billable Hours", to: "/open-source/tuttle" },
