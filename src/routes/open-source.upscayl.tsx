@@ -125,9 +125,14 @@ function UpscaylPage() {
           </div>
 
           <GlassCard glowColor="var(--cyan)" className="p-3">
-            <div className="aspect-video w-full rounded-[10px] bg-[var(--bg-surface)] flex items-center justify-center text-[var(--text-muted)]">
-                [Upscayl Desktop Interface Preview]
-            </div>
+            <img
+              src={upscaylShot.url}
+              alt="Upscayl 2.15.0 desktop app interface showing batch upscayl toggle, AI model selection and 4x image scale on Windows"
+              width={1920}
+              height={1019}
+              loading="lazy"
+              className="w-full rounded-[10px] border border-[var(--border-subtle)]"
+            />
           </GlassCard>
         </div>
       </SectionWrapper>
