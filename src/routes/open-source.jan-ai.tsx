@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Download, MessageCircle, ShieldCheck, WifiOff, Bot, PiggyBank, Zap, Terminal } from "lucide-react";
+import { Download, ShieldCheck, WifiOff, Bot, PiggyBank, Zap, Terminal } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
