@@ -15,7 +15,7 @@ const TITLE = "AnythingLLM — Free Local Document AI for Windows";
 const DESC =
   "Download AnythingLLM free: chat with PDFs, Word docs, CSVs and websites 100% privately on your Windows PC. Local vector database, multi-LLM support, no subscription.";
 
-const DOWNLOAD_URL = "#";
+const DOWNLOAD_URL = "https://drive.google.com/uc?export=download&id=1QNyBB7YIE8zdCHKPY4baDcbC_DvrHfJt";
 const WHATSAPP = "https://wa.me/923164467464";
 
 const FEATURES = [
