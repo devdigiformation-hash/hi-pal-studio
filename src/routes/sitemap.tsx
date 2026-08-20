@@ -69,6 +69,7 @@ function SiteMapPage() {
     { label: "FAQ", to: "/faq" },
     { label: "About", to: "/about" },
     { label: "Open Source Software", to: "/open-source" },
+    { label: "Jan AI — Free Offline AI for Windows", to: "/open-source/jan-ai" },
     { label: "Contact", to: "/contact" },
   ];
   const legal = [
