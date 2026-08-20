@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Download, MessageCircle, ShieldCheck, WifiOff, Bot, PiggyBank, Zap, Terminal } from "lucide-react";
+import { Download, ShieldCheck, WifiOff, Bot, PiggyBank, Zap, Terminal } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
@@ -147,11 +147,6 @@ function JanAiPage() {
               <a href={DOWNLOAD_URL} download="Jan-Setup-x64.exe">
                 <CyanButton size="lg" icon={<Download size={18} />}>
                   Download Jan AI for Windows
-                </CyanButton>
-              </a>
-              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-                <CyanButton size="lg" tone="61,220,132" icon={<MessageCircle size={18} />}>
-                  WhatsApp Support (+92 316 446 7464)
                 </CyanButton>
               </a>
             </div>
