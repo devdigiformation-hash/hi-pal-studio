@@ -38,7 +38,6 @@ import { Route as CompareSlugRouteImport } from './routes/compare.$slug'
 import { Route as FeaturesIndexRouteImport } from './routes/features.index'
 import { Route as FeaturesSlugRouteImport } from './routes/features.$slug'
 import { Route as OpenSourceIndexRouteImport } from './routes/open-source.index'
-import { Route as OpenSourceAnythingllmRouteImport } from './routes/open-source.anythingllm'
 import { Route as OpenSourceJanAiRouteImport } from './routes/open-source.jan-ai'
 import { Route as OrderRefRouteImport } from './routes/order.$ref'
 
@@ -187,11 +186,6 @@ const OpenSourceIndexRoute = OpenSourceIndexRouteImport.update({
   path: '/',
   getParentRoute: () => OpenSourceRoute,
 } as any)
-const OpenSourceAnythingllmRoute = OpenSourceAnythingllmRouteImport.update({
-  id: '/anythingllm',
-  path: '/anythingllm',
-  getParentRoute: () => OpenSourceRoute,
-} as any)
 const OpenSourceJanAiRoute = OpenSourceJanAiRouteImport.update({
   id: '/jan-ai',
   path: '/jan-ai',
@@ -229,7 +223,6 @@ export interface FileRoutesByFullPath {
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
-  '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/order/$ref': typeof OrderRefRoute
   '/blog/': typeof BlogIndexRoute
@@ -262,7 +255,6 @@ export interface FileRoutesByTo {
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
-  '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/order/$ref': typeof OrderRefRoute
   '/blog': typeof BlogIndexRoute
@@ -297,7 +289,6 @@ export interface FileRoutesById {
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
-  '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/order/$ref': typeof OrderRefRoute
   '/blog/': typeof BlogIndexRoute
@@ -333,7 +324,6 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
-    | '/open-source/anythingllm'
     | '/open-source/jan-ai'
     | '/order/$ref'
     | '/blog/'
@@ -366,7 +356,6 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
-    | '/open-source/anythingllm'
     | '/open-source/jan-ai'
     | '/order/$ref'
     | '/blog'
@@ -400,7 +389,6 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
-    | '/open-source/anythingllm'
     | '/open-source/jan-ai'
     | '/order/$ref'
     | '/blog/'
@@ -646,13 +634,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OpenSourceIndexRouteImport
       parentRoute: typeof OpenSourceRoute
     }
-    '/open-source/anythingllm': {
-      id: '/open-source/anythingllm'
-      path: '/anythingllm'
-      fullPath: '/open-source/anythingllm'
-      preLoaderRoute: typeof OpenSourceAnythingllmRouteImport
-      parentRoute: typeof OpenSourceRoute
-    }
     '/open-source/jan-ai': {
       id: '/open-source/jan-ai'
       path: '/jan-ai'
@@ -671,13 +652,11 @@ declare module '@tanstack/react-router' {
 }
 
 interface OpenSourceRouteChildren {
-  OpenSourceAnythingllmRoute: typeof OpenSourceAnythingllmRoute
   OpenSourceJanAiRoute: typeof OpenSourceJanAiRoute
   OpenSourceIndexRoute: typeof OpenSourceIndexRoute
 }
 
 const OpenSourceRouteChildren: OpenSourceRouteChildren = {
-  OpenSourceAnythingllmRoute: OpenSourceAnythingllmRoute,
   OpenSourceJanAiRoute: OpenSourceJanAiRoute,
   OpenSourceIndexRoute: OpenSourceIndexRoute,
 }
