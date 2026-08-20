@@ -250,12 +250,12 @@ export default function HeroSection() {
               <span
                 className="pointer-events-none absolute -top-1.5 right-0 rounded-full border px-1.5 py-[1px] font-mono text-[8px] uppercase tracking-[0.14em] backdrop-blur-md sm:-right-1.5"
                 style={{
-                  color: "#B8C0CC",
-                  borderColor: "rgba(184,192,204,0.45)",
-                  background: "rgba(184,192,204,0.14)",
+                  color: "#F5A623",
+                  borderColor: "rgba(245,166,35,0.45)",
+                  background: "rgba(245,166,35,0.14)",
                 }}
               >
-                Windows 10, 11
+                Coming Soon
               </span>
             </div>
             <GhostButton
