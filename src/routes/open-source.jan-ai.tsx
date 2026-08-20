@@ -298,10 +298,7 @@ function JanAiPage() {
               <CyanButton size="lg" icon={<WindowsIcon />}>Download Jan AI</CyanButton>
             </a>
             <div className="hidden">
-              {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            jan ai page par b same kam kro`}
-            </div>
-            <div className="hidden">
-              {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            भाईजान button बनाना है button. जैसे download का button है Gen AI में और Anything LLM में। दोनों में download button के साथ एक button बनाया है Get Free API Key. ठीक है, यह button बनाना है और उस button के पीछे यह URL लगाना है। यह URL जो है वह OpenCode offer कर रहा है। मतलब OpenCode की site खुलेगी। वहां से जाकर वह अपना personal जो है वह sign up करेंगे और उसके लिए अपनी-अपनी API keys इस्तेमाल करेंगे that's it. तो यह open source है, इस वजह से यह offer दी जा रही है। https://opencode.ai/auth`}
+              {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            Add a “Get Free API Key” button to the Jan AI page that links to https://opencode.ai/auth.`}
             </div>
             <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
               Back to open source software
