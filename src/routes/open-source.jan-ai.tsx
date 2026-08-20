@@ -153,6 +153,7 @@ function JanAiPage() {
               <div className="hidden">
                 {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            us k niche ye url lgao https://opencode.ai/auth ye opencode ki free api key hoti koi b sign up kr k apni persnol key apne software me use kr skta hai`}
               </div>
+            </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
               Version: Latest x64 • 57.7 MB • Windows 10 / 11 (64-bit) • 100% Verified •
               Jan-Setup-x64.exe
