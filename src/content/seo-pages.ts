@@ -13,7 +13,7 @@ import osLiveTracking from "@/assets/os-live-tracking.png.asset.json";
 import osShell from "@/assets/os-shell.png.asset.json";
 import osSidebar from "@/assets/os-sidebar.png.asset.json";
 import osRuntime from "@/assets/os-runtime.png.asset.json";
-import jarvisRobot from "@/assets/jarvis-robot.png.asset.json";
+import jarvisRobot from "@/assets/jarvis-robot.png";
 
 export interface SeoImage {
   src: string;
@@ -129,7 +129,7 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "AI tools", to: "/features/ai-tools" },
       ...CTA_CORE,
     ],
-    image: img(jarvisRobot, "Futuristic humanoid AI robot in profile, representing the JARVIS-style assistant", "JARVIS-style intelligence: an assistant built to listen, plan and execute."),
+    image: img({ url: jarvisRobot }, "Futuristic humanoid AI robot in profile, representing the JARVIS-style assistant", "JARVIS-style intelligence: an assistant built to listen, plan and execute."),
     accent: "var(--cyan)",
   },
   {
