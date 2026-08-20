@@ -107,7 +107,7 @@ function OpenSourcePage() {
           <h2 className="font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[32px]">
             Open software DIGI BIZ OS works with
           </h2>
-          <div className="mt-6">
+          <div className="mt-6 grid gap-4">
             <Link to="/open-source/jan-ai" className="block">
               <GlassCard glowColor="var(--cyan)" className="p-5">
                 <p className="font-mono text-[11.5px] uppercase tracking-[0.16em] text-[var(--amber)]">
@@ -119,6 +119,20 @@ function OpenSourcePage() {
                 <p className="mt-2 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
                   Run DeepSeek, Llama 3, Qwen and Mistral locally. 100% private, works offline, no
                   subscription. Read the full guide and download it here.
+                </p>
+              </GlassCard>
+            </Link>
+            <Link to="/open-source/anythingllm" className="block">
+              <GlassCard glowColor="var(--purple)" className="p-5">
+                <p className="font-mono text-[11.5px] uppercase tracking-[0.16em] text-[var(--amber)]">
+                  Free download
+                </p>
+                <h3 className="mt-2 font-display text-[18px] font-bold text-[var(--text-primary)]">
+                  AnythingLLM — local document AI for Windows
+                </h3>
+                <p className="mt-2 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
+                  Chat with PDFs, Word docs, CSVs and websites locally. Built-in vector database, no
+                  cloud uploads, no subscription. Read the full guide and download it here.
                 </p>
               </GlassCard>
             </Link>

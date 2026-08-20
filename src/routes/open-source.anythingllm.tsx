@@ -1,84 +1,83 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ShieldCheck, WifiOff, Bot, PiggyBank, Zap, Terminal } from "lucide-react";
+import { FileText, ShieldCheck, Globe, Bot, Users, PiggyBank, MessageCircle } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
 import CyanButton from "@/components/CyanButton";
+import GhostButton from "@/components/GhostButton";
 import MonoBadge from "@/components/MonoBadge";
 import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
-import shot from "@/assets/jan-ai-screenshot.jpg.asset.json";
-import setupFile from "@/assets/jan-setup-x64.exe.asset.json";
+import logo from "@/assets/logo.png.asset.json";
 
-const TITLE = "Jan AI — Free Offline ChatGPT Alternative for Windows";
+const TITLE = "AnythingLLM — Free Local Document AI for Windows";
 const DESC =
-  "Download Jan AI free: run DeepSeek, Llama 3, Qwen and Mistral locally on Windows. 100% private, works offline, unlimited messages, no subscription.";
+  "Download AnythingLLM free: chat with PDFs, Word docs, CSVs and websites 100% privately on your Windows PC. Local vector database, multi-LLM support, no subscription.";
 
-const DOWNLOAD_URL = setupFile.url;
+const DOWNLOAD_URL = "#";
 const WHATSAPP = "https://wa.me/923164467464";
 
 const FEATURES = [
   {
-    icon: ShieldCheck,
+    icon: FileText,
     color: "var(--cyan)",
-    title: "100% Private & Air-Gapped",
-    body: "Your chats, confidential files and code never leave your computer. No tracking and no cloud data leaks.",
+    title: "Universal Document Chat (PDF, DOCX, CSV, Notion)",
+    body: "Drag and drop complex PDFs, financial statements, contracts, or books and ask questions with exact page citations.",
   },
   {
-    icon: WifiOff,
+    icon: ShieldCheck,
     color: "var(--purple)",
-    title: "Works 100% Offline",
-    body: "Zero Wi-Fi or internet connection needed. Write code, draft documents and brainstorm anywhere.",
+    title: "Zero Data Leaks (Air-Gapped & Offline)",
+    body: "Built-in vector database (LanceDB) stores your embeddings locally on your PC. No third-party tracking or indexing.",
+  },
+  {
+    icon: Globe,
+    color: "var(--amber)",
+    title: "Web Scraping & Multi-Source Knowledge",
+    body: "Import live web pages, documentation URLs, YouTube video transcripts, or entire GitHub repositories into your AI knowledge base.",
   },
   {
     icon: Bot,
-    color: "var(--amber)",
-    title: "Multi-Model Powerhouse",
-    body: "Switch between DeepSeek-R1, Llama 3.2, Qwen 2.5 and Mistral with a single click.",
+    color: "#7DD3FC",
+    title: "Multi-LLM Flexible Engine",
+    body: "Connects out-of-the-box to local models (Ollama, LM Studio, Jan, LocalAI) or cloud providers (OpenAI, Anthropic, Gemini, Groq).",
+  },
+  {
+    icon: Users,
+    color: "#F472B6",
+    title: "Unlimited Custom Workspaces & Multi-User",
+    body: "Create isolated workspaces for Legal, Accounting, Marketing, or Development with custom system prompts and permissions.",
   },
   {
     icon: PiggyBank,
     color: "#3DDC84",
-    title: "Save $240 / Year",
-    body: "Enjoy unlimited AI capabilities without paying $20/month for ChatGPT Plus or Claude Pro.",
-  },
-  {
-    icon: Zap,
-    color: "#7DD3FC",
-    title: "Dual-Mode Cloud AI",
-    body: "Optionally connect free API keys (Groq, OpenRouter, DeepSeek) for lightning-fast cloud speed with zero RAM usage.",
-  },
-  {
-    icon: Terminal,
-    color: "#F472B6",
-    title: "Developer-Ready & Local API",
-    body: "Includes a built-in local OpenAI-compatible server (localhost:1337) and MCP tool routing.",
+    title: "Save $300+/Year on ChatPDF & Humata",
+    body: "Replaces expensive SaaS document chat tools (ChatPDF, AskYourPDF, Humata AI) with lifetime free unlimited access.",
   },
 ];
 
 const COMPARISON = [
-  { label: "Pricing", jan: "$0 — free forever", chatgpt: "$240 / year", claude: "$240 / year" },
-  { label: "Data privacy", jan: "100% local & private", chatgpt: "Logged on cloud", claude: "Logged on cloud" },
-  { label: "Offline access", jan: "Yes — no internet", chatgpt: "No — always needs Wi-Fi", claude: "No — always needs Wi-Fi" },
-  { label: "Message limits", jan: "Unlimited", chatgpt: "Strict hourly rate caps", claude: "Strict hourly rate caps" },
+  { label: "Pricing", anythingllm: "$0 — Free forever", chatpdf: "$180 / year", humata: "$240 / year" },
+  { label: "Data privacy", anythingllm: "100% local / zero cloud storage", chatpdf: "Uploads PDFs to third-party servers", humata: "Uploads PDFs to third-party servers" },
+  { label: "Supported formats", anythingllm: "PDF, DOCX, TXT, CSV, Notion, Web, YouTube", chatpdf: "Limited to simple PDFs", humata: "Limited to simple PDFs" },
+  { label: "Vector database", anythingllm: "Built-in local LanceDB / Chroma", chatpdf: "Hosted cloud vector DB", humata: "Hosted cloud vector DB" },
 ];
 
 const REQUIREMENTS = [
   "Operating system: Windows 10 / Windows 11 (64-bit)",
-  "RAM: 8 GB minimum (16 GB recommended for 3B/8B models)",
-  "Processor: Intel Core i3 / i5 / i7 or AMD Ryzen",
+  "RAM: 8 GB minimum (16 GB recommended for large PDF collections)",
   "Storage: 2 GB free disk space",
 ];
 
-export const Route = createFileRoute("/open-source/jan-ai")({
+export const Route = createFileRoute("/open-source/anythingllm")({
   head: () => {
     const { meta, links } = buildMeta({
-      path: "/open-source/jan-ai",
+      path: "/open-source/anythingllm",
       title: TITLE,
       description: DESC,
-      image: abs(shot.url),
+      image: abs(logo.url),
     });
     return {
       meta,
@@ -90,7 +89,7 @@ export const Route = createFileRoute("/open-source/jan-ai")({
             breadcrumbLd([
               { name: "Home", path: "/" },
               { name: "Open Source", path: "/open-source" },
-              { name: "Jan AI", path: "/open-source/jan-ai" },
+              { name: "AnythingLLM", path: "/open-source/anythingllm" },
             ]),
           ),
         },
@@ -99,22 +98,22 @@ export const Route = createFileRoute("/open-source/jan-ai")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            name: "Jan AI",
-            applicationCategory: "DeveloperApplication",
+            name: "AnythingLLM Desktop",
+            applicationCategory: "BusinessApplication",
             operatingSystem: "Windows 10, Windows 11 (64-bit)",
             description: DESC,
-            url: abs("/open-source/jan-ai"),
-            image: abs(shot.url),
+            url: abs("/open-source/anythingllm"),
+            image: abs(logo.url),
             offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
           }),
         },
       ],
     };
   },
-  component: JanAiPage,
+  component: AnythingLlmPage,
 });
 
-function JanAiPage() {
+function AnythingLlmPage() {
   return (
     <main className="min-h-screen pt-[60px] md:pt-[72px]">
       <SectionWrapper>
@@ -122,42 +121,45 @@ function JanAiPage() {
           trail={[
             { name: "Home", path: "/" },
             { name: "Open Source", path: "/open-source" },
-            { name: "Jan AI", path: "/open-source/jan-ai" },
+            { name: "AnythingLLM", path: "/open-source/anythingllm" },
           ]}
         />
         <div className="mx-auto grid max-w-[1180px] items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
           <div>
-            <EyebrowLabel text="100% Free & Open-Source Desktop Suite — No Subscription" color="var(--amber)" />
+            <EyebrowLabel text="100% Free & Open-Source Document AI Suite" color="var(--amber)" />
             <p className="reveal-item mt-5 font-display text-[15px] font-bold uppercase tracking-[0.18em] text-[var(--cyan)]">
-              Jan AI
+              AnythingLLM Desktop
             </p>
             <h1 className="reveal-item delay-1 mt-3 font-display text-[32px] font-extrabold leading-[1.1] tracking-[-0.035em] text-[var(--text-primary)] md:text-[48px]">
-              Run Powerful AI on Your PC —{" "}
+              Chat with Any Document, PDF & Knowledge Base —{" "}
               <GradientText from="#2FE0C8" to="#8B7CF6">
-                100% Private, Fast & Offline
+                100% Privately on Your PC
               </GradientText>
             </h1>
             <p className="reveal-item delay-2 mt-6 max-w-[640px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[16.5px]">
-              The ultimate free ChatGPT alternative. Chat with local AI models (DeepSeek, Llama 3, Qwen,
-              Mistral) directly on your laptop RAM with zero internet, zero tracking and lifetime free
-              access.
+              The ultimate all-in-one AI workspace. Turn PDFs, Word docs, spreadsheets, websites, and
+              YouTube videos into an intelligent, searchable chatbot without sending your sensitive
+              data to the cloud.
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
-              <a href={DOWNLOAD_URL} download="Jan-Setup-x64.exe">
-                <CyanButton size="lg" icon={<WindowsIcon />}>Download Jan AI</CyanButton>
+              <a href={DOWNLOAD_URL} download="AnythingLLM-Setup.exe">
+                <CyanButton size="lg" icon={<WindowsIcon />}>Download AnythingLLM</CyanButton>
+              </a>
+              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
+                <GhostButton size="lg" icon={<MessageCircle size={18} />}>WhatsApp Support</GhostButton>
               </a>
             </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
-              Version: Latest x64 • 57.7 MB • Windows 10 / 11 (64-bit) • 100% Verified •
-              Jan-Setup-x64.exe
+              Version: Latest x64 • 396 MB • Windows 10 / 11 (64-bit) • 100% Verified •
+              AnythingLLM-Setup.exe
             </p>
           </div>
 
           <GlassCard glowColor="var(--cyan)" className="p-3">
             <img
-              src={shot.url}
-              alt="Jan AI desktop app on Windows showing the local chat window and model selector"
+              src={logo.url}
+              alt="AnythingLLM Desktop application logo on dark background"
               loading="lazy"
               className="w-full rounded-[10px]"
             />
@@ -189,7 +191,7 @@ function JanAiPage() {
       <SectionWrapper>
         <div className="mx-auto max-w-[1080px]">
           <h2 className="font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[32px]">
-            Jan AI vs paid services
+            AnythingLLM vs paid cloud document AI
           </h2>
           <div className="mt-8 overflow-x-auto">
             <table className="w-full min-w-[620px] border-collapse text-left font-body text-[14px]">
@@ -199,13 +201,13 @@ function JanAiPage() {
                     &nbsp;
                   </th>
                   <th className="border-b border-[var(--border-glass)] py-3 pr-4 font-display text-[13px] uppercase tracking-[0.12em] text-[var(--cyan)]">
-                    Jan AI
+                    AnythingLLM
                   </th>
                   <th className="border-b border-[var(--border-glass)] py-3 pr-4 font-display text-[13px] uppercase tracking-[0.12em]">
-                    ChatGPT Plus
+                    ChatPDF Plus
                   </th>
                   <th className="border-b border-[var(--border-glass)] py-3 font-display text-[13px] uppercase tracking-[0.12em]">
-                    Claude Pro
+                    Humata AI
                   </th>
                 </tr>
               </thead>
@@ -216,13 +218,13 @@ function JanAiPage() {
                       {row.label}
                     </td>
                     <td className="border-b border-[var(--border-glass)] py-3 pr-4 text-[var(--cyan)]">
-                      {row.jan}
+                      {row.anythingllm}
                     </td>
                     <td className="border-b border-[var(--border-glass)] py-3 pr-4 text-[var(--text-secondary)]">
-                      {row.chatgpt}
+                      {row.chatpdf}
                     </td>
                     <td className="border-b border-[var(--border-glass)] py-3 text-[var(--text-secondary)]">
-                      {row.claude}
+                      {row.humata}
                     </td>
                   </tr>
                 ))}
@@ -288,11 +290,11 @@ function JanAiPage() {
       <SectionWrapper>
         <div className="mx-auto max-w-[860px] text-center">
           <h2 className="font-display text-[26px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[38px]">
-            Get Jan AI free, then automate everything with DIGI BIZ OS
+            Get AnythingLLM free, then automate everything with DIGI BIZ OS
           </h2>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href={DOWNLOAD_URL} download="Jan-Setup-x64.exe">
-              <CyanButton size="lg" icon={<WindowsIcon />}>Download Jan AI</CyanButton>
+            <a href={DOWNLOAD_URL} download="AnythingLLM-Setup.exe">
+              <CyanButton size="lg" icon={<WindowsIcon />}>Download AnythingLLM</CyanButton>
             </a>
             <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
               Back to open source software
