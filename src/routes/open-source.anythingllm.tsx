@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { FileText, ShieldCheck, Globe, Bot, Users, PiggyBank } from "lucide-react";
+import { FileText, ShieldCheck, Globe, Bot, Users, PiggyBank, Key } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
