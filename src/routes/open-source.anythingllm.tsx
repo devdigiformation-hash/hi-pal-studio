@@ -41,7 +41,7 @@ const FEATURES = [
     icon: Bot,
     color: "#7DD3FC",
     title: "Multi-LLM Flexible Engine",
-    body: "Connects out-of-the-box to local models (Ollama, LM Studio, Jan, LocalAI) or cloud providers (OpenAI, Anthropic, Gemini, Groq).",
+    body: "Connects out-of-the-box to local models (Ollama, LM Studio, Jan, LocalAI) or cloud providers (OpenAI, Anthropic, Groq, DeepSeek).",
   },
   {
     icon: Users,
