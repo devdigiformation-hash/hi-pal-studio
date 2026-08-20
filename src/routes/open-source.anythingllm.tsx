@@ -9,7 +9,7 @@ import MonoBadge from "@/components/MonoBadge";
 import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
-import logo from "@/assets/logo.png.asset.json";
+import screenshot from "@/assets/anythingllm-screenshot.jpg.asset.json";
 
 const TITLE = "AnythingLLM — Free Local Document AI for Windows";
 const DESC =
@@ -76,7 +76,7 @@ export const Route = createFileRoute("/open-source/anythingllm")({
       path: "/open-source/anythingllm",
       title: TITLE,
       description: DESC,
-      image: abs(logo.url),
+      image: abs(screenshot.url),
     });
     return {
       meta,
@@ -102,7 +102,7 @@ export const Route = createFileRoute("/open-source/anythingllm")({
             operatingSystem: "Windows 10, Windows 11 (64-bit)",
             description: DESC,
             url: abs("/open-source/anythingllm"),
-            image: abs(logo.url),
+            image: abs(screenshot.url),
             offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
           }),
         },
@@ -154,8 +154,8 @@ function AnythingLlmPage() {
 
           <GlassCard glowColor="var(--cyan)" className="p-3">
             <img
-              src={logo.url}
-              alt="AnythingLLM Desktop application logo on dark background"
+              src={screenshot.url}
+              alt="AnythingLLM desktop app running on Windows showing the chat workspace with document upload and thread sidebar"
               loading="lazy"
               className="w-full rounded-[10px]"
             />
