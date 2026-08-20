@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Download, ShieldCheck, WifiOff, Bot, PiggyBank, Zap, Terminal } from "lucide-react";
+import { ShieldCheck, WifiOff, Bot, PiggyBank, Zap, Terminal } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
@@ -145,9 +145,7 @@ function JanAiPage() {
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
               <a href={DOWNLOAD_URL} download="Jan-Setup-x64.exe">
-                <CyanButton size="lg" icon={<Download size={18} />}>
-                  Download Jan AI for Windows
-                </CyanButton>
+                <CyanButton size="lg" icon={<WindowsIcon />}>Download Jan AI for Windows</CyanButton>
               </a>
             </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
@@ -294,9 +292,7 @@ function JanAiPage() {
           </h2>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a href={DOWNLOAD_URL} download="Jan-Setup-x64.exe">
-              <CyanButton size="lg" icon={<Download size={18} />}>
-                Download Jan AI for Windows
-              </CyanButton>
+              <CyanButton size="lg" icon={<WindowsIcon />}>Download Jan AI for Windows</CyanButton>
             </a>
             <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
               Back to open source software
@@ -305,5 +301,20 @@ function JanAiPage() {
         </div>
       </SectionWrapper>
     </main>
+  );
+}
+
+function WindowsIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width="18"
+      height="18"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M0 3.449L9.327 2.12v9.38H0M10.029 1.949L24 0v11.44H10.029M0 12.56h9.327v9.38L0 20.611M10.029 12.56H24V24l-13.971-1.799" />
+    </svg>
   );
 }
