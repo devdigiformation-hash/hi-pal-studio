@@ -145,7 +145,7 @@ function JanAiPage() {
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
               <a href={DOWNLOAD_URL} download="Jan-Setup-x64.exe">
-                <CyanButton size="lg" icon={<WindowsIcon />}>Download Jan AI for Windows</CyanButton>
+                <CyanButton size="lg" icon={<WindowsIcon />}>Download Jan AI</CyanButton>
               </a>
             </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
@@ -292,7 +292,7 @@ function JanAiPage() {
           </h2>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a href={DOWNLOAD_URL} download="Jan-Setup-x64.exe">
-              <CyanButton size="lg" icon={<WindowsIcon />}>Download Jan AI for Windows</CyanButton>
+              <CyanButton size="lg" icon={<WindowsIcon />}>Download Jan AI</CyanButton>
             </a>
             <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
               Back to open source software
