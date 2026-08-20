@@ -72,6 +72,7 @@ function SiteMapPage() {
     { label: "Jan AI — Free Offline AI for Windows", to: "/open-source/jan-ai" },
     { label: "AnythingLLM — Free Local Document AI", to: "/open-source/anythingllm" },
     { label: "Tuttle Time Tracker — Free Billable Hours", to: "/open-source/tuttle" },
+    { label: "PocketBase Backend — Free Database & Auth Server", to: "/open-source/pocketbase" },
     { label: "Contact", to: "/contact" },
   ];
   const legal = [

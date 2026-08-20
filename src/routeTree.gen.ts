@@ -40,6 +40,7 @@ import { Route as FeaturesSlugRouteImport } from './routes/features.$slug'
 import { Route as OpenSourceIndexRouteImport } from './routes/open-source.index'
 import { Route as OpenSourceAnythingllmRouteImport } from './routes/open-source.anythingllm'
 import { Route as OpenSourceJanAiRouteImport } from './routes/open-source.jan-ai'
+import { Route as OpenSourcePocketbaseRouteImport } from './routes/open-source.pocketbase'
 import { Route as OpenSourceTuttleRouteImport } from './routes/open-source.tuttle'
 import { Route as OrderRefRouteImport } from './routes/order.$ref'
 
@@ -198,6 +199,11 @@ const OpenSourceJanAiRoute = OpenSourceJanAiRouteImport.update({
   path: '/jan-ai',
   getParentRoute: () => OpenSourceRoute,
 } as any)
+const OpenSourcePocketbaseRoute = OpenSourcePocketbaseRouteImport.update({
+  id: '/pocketbase',
+  path: '/pocketbase',
+  getParentRoute: () => OpenSourceRoute,
+} as any)
 const OpenSourceTuttleRoute = OpenSourceTuttleRouteImport.update({
   id: '/tuttle',
   path: '/tuttle',
@@ -237,6 +243,7 @@ export interface FileRoutesByFullPath {
   '/features/$slug': typeof FeaturesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
+  '/open-source/pocketbase': typeof OpenSourcePocketbaseRoute
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
   '/order/$ref': typeof OrderRefRoute
   '/blog/': typeof BlogIndexRoute
@@ -271,6 +278,7 @@ export interface FileRoutesByTo {
   '/features/$slug': typeof FeaturesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
+  '/open-source/pocketbase': typeof OpenSourcePocketbaseRoute
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
   '/order/$ref': typeof OrderRefRoute
   '/blog': typeof BlogIndexRoute
@@ -307,6 +315,7 @@ export interface FileRoutesById {
   '/features/$slug': typeof FeaturesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
+  '/open-source/pocketbase': typeof OpenSourcePocketbaseRoute
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
   '/order/$ref': typeof OrderRefRoute
   '/blog/': typeof BlogIndexRoute
@@ -344,6 +353,7 @@ export interface FileRouteTypes {
     | '/features/$slug'
     | '/open-source/anythingllm'
     | '/open-source/jan-ai'
+    | '/open-source/pocketbase'
     | '/open-source/tuttle'
     | '/order/$ref'
     | '/blog/'
@@ -378,6 +388,7 @@ export interface FileRouteTypes {
     | '/features/$slug'
     | '/open-source/anythingllm'
     | '/open-source/jan-ai'
+    | '/open-source/pocketbase'
     | '/open-source/tuttle'
     | '/order/$ref'
     | '/blog'
@@ -413,6 +424,7 @@ export interface FileRouteTypes {
     | '/features/$slug'
     | '/open-source/anythingllm'
     | '/open-source/jan-ai'
+    | '/open-source/pocketbase'
     | '/open-source/tuttle'
     | '/order/$ref'
     | '/blog/'
@@ -672,6 +684,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OpenSourceJanAiRouteImport
       parentRoute: typeof OpenSourceRoute
     }
+    '/open-source/pocketbase': {
+      id: '/open-source/pocketbase'
+      path: '/pocketbase'
+      fullPath: '/open-source/pocketbase'
+      preLoaderRoute: typeof OpenSourcePocketbaseRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
     '/open-source/tuttle': {
       id: '/open-source/tuttle'
       path: '/tuttle'
@@ -692,6 +711,7 @@ declare module '@tanstack/react-router' {
 interface OpenSourceRouteChildren {
   OpenSourceAnythingllmRoute: typeof OpenSourceAnythingllmRoute
   OpenSourceJanAiRoute: typeof OpenSourceJanAiRoute
+  OpenSourcePocketbaseRoute: typeof OpenSourcePocketbaseRoute
   OpenSourceTuttleRoute: typeof OpenSourceTuttleRoute
   OpenSourceIndexRoute: typeof OpenSourceIndexRoute
 }
@@ -699,6 +719,7 @@ interface OpenSourceRouteChildren {
 const OpenSourceRouteChildren: OpenSourceRouteChildren = {
   OpenSourceAnythingllmRoute: OpenSourceAnythingllmRoute,
   OpenSourceJanAiRoute: OpenSourceJanAiRoute,
+  OpenSourcePocketbaseRoute: OpenSourcePocketbaseRoute,
   OpenSourceTuttleRoute: OpenSourceTuttleRoute,
   OpenSourceIndexRoute: OpenSourceIndexRoute,
 }
