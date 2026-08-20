@@ -5,6 +5,8 @@ import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
 import CyanButton from "@/components/CyanButton";
+import MonoBadge from "@/components/MonoBadge";
+import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
 

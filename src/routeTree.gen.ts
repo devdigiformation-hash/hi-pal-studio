@@ -42,6 +42,7 @@ import { Route as OpenSourceAnythingllmRouteImport } from './routes/open-source.
 import { Route as OpenSourceJanAiRouteImport } from './routes/open-source.jan-ai'
 import { Route as OpenSourcePocketbaseRouteImport } from './routes/open-source.pocketbase'
 import { Route as OpenSourceTuttleRouteImport } from './routes/open-source.tuttle'
+import { Route as OpenSourceUpscaylRouteImport } from './routes/open-source.upscayl'
 import { Route as OrderRefRouteImport } from './routes/order.$ref'
 
 const IndexRoute = IndexRouteImport.update({
@@ -209,6 +210,11 @@ const OpenSourceTuttleRoute = OpenSourceTuttleRouteImport.update({
   path: '/tuttle',
   getParentRoute: () => OpenSourceRoute,
 } as any)
+const OpenSourceUpscaylRoute = OpenSourceUpscaylRouteImport.update({
+  id: '/upscayl',
+  path: '/upscayl',
+  getParentRoute: () => OpenSourceRoute,
+} as any)
 const OrderRefRoute = OrderRefRouteImport.update({
   id: '/order/$ref',
   path: '/order/$ref',
@@ -245,6 +251,7 @@ export interface FileRoutesByFullPath {
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/open-source/pocketbase': typeof OpenSourcePocketbaseRoute
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
+  '/open-source/upscayl': typeof OpenSourceUpscaylRoute
   '/order/$ref': typeof OrderRefRoute
   '/blog/': typeof BlogIndexRoute
   '/compare/': typeof CompareIndexRoute
@@ -280,6 +287,7 @@ export interface FileRoutesByTo {
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/open-source/pocketbase': typeof OpenSourcePocketbaseRoute
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
+  '/open-source/upscayl': typeof OpenSourceUpscaylRoute
   '/order/$ref': typeof OrderRefRoute
   '/blog': typeof BlogIndexRoute
   '/compare': typeof CompareIndexRoute
@@ -317,6 +325,7 @@ export interface FileRoutesById {
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/open-source/pocketbase': typeof OpenSourcePocketbaseRoute
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
+  '/open-source/upscayl': typeof OpenSourceUpscaylRoute
   '/order/$ref': typeof OrderRefRoute
   '/blog/': typeof BlogIndexRoute
   '/compare/': typeof CompareIndexRoute
@@ -355,6 +364,7 @@ export interface FileRouteTypes {
     | '/open-source/jan-ai'
     | '/open-source/pocketbase'
     | '/open-source/tuttle'
+    | '/open-source/upscayl'
     | '/order/$ref'
     | '/blog/'
     | '/compare/'
@@ -390,6 +400,7 @@ export interface FileRouteTypes {
     | '/open-source/jan-ai'
     | '/open-source/pocketbase'
     | '/open-source/tuttle'
+    | '/open-source/upscayl'
     | '/order/$ref'
     | '/blog'
     | '/compare'
@@ -426,6 +437,7 @@ export interface FileRouteTypes {
     | '/open-source/jan-ai'
     | '/open-source/pocketbase'
     | '/open-source/tuttle'
+    | '/open-source/upscayl'
     | '/order/$ref'
     | '/blog/'
     | '/compare/'
@@ -698,6 +710,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OpenSourceTuttleRouteImport
       parentRoute: typeof OpenSourceRoute
     }
+    '/open-source/upscayl': {
+      id: '/open-source/upscayl'
+      path: '/upscayl'
+      fullPath: '/open-source/upscayl'
+      preLoaderRoute: typeof OpenSourceUpscaylRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
     '/order/$ref': {
       id: '/order/$ref'
       path: '/order/$ref'
@@ -713,6 +732,7 @@ interface OpenSourceRouteChildren {
   OpenSourceJanAiRoute: typeof OpenSourceJanAiRoute
   OpenSourcePocketbaseRoute: typeof OpenSourcePocketbaseRoute
   OpenSourceTuttleRoute: typeof OpenSourceTuttleRoute
+  OpenSourceUpscaylRoute: typeof OpenSourceUpscaylRoute
   OpenSourceIndexRoute: typeof OpenSourceIndexRoute
 }
 
@@ -721,6 +741,7 @@ const OpenSourceRouteChildren: OpenSourceRouteChildren = {
   OpenSourceJanAiRoute: OpenSourceJanAiRoute,
   OpenSourcePocketbaseRoute: OpenSourcePocketbaseRoute,
   OpenSourceTuttleRoute: OpenSourceTuttleRoute,
+  OpenSourceUpscaylRoute: OpenSourceUpscaylRoute,
   OpenSourceIndexRoute: OpenSourceIndexRoute,
 }
 
