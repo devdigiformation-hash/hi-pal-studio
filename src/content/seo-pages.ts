@@ -129,7 +129,7 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "AI tools", to: "/features/ai-tools" },
       ...CTA_CORE,
     ],
-    image: img(osMain, "DIGI BIZ OS JARVIS-style dashboard with live neural graph and voice transcript", "The DIGI BIZ OS command surface: live reasoning graph on the left, voice transcript on the right."),
+    image: img(jarvisRobot, "Futuristic humanoid AI robot in profile, representing the JARVIS-style assistant", "JARVIS-style intelligence: an assistant built to listen, plan and execute."),
     accent: "var(--cyan)",
   },
   {
