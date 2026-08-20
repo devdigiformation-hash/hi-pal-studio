@@ -164,6 +164,20 @@ function OpenSourcePage() {
                 </p>
               </GlassCard>
             </Link>
+            <Link to="/open-source/upscayl" className="block">
+              <GlassCard glowColor="var(--cyan)" className="p-5">
+                <p className="font-mono text-[11.5px] uppercase tracking-[0.16em] text-[var(--amber)]">
+                  Free download
+                </p>
+                <h3 className="mt-2 font-display text-[18px] font-bold text-[var(--text-primary)]">
+                  Upscayl AI Image Enhancer — free offline AI upscaler for Windows
+                </h3>
+                <p className="mt-2 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
+                  Enhance, sharpen and upscale images locally without losing quality. 100% private,
+                  no watermarks, no subscription. Read the full guide and download it here.
+                </p>
+              </GlassCard>
+            </Link>
           </div>
           <p className="mt-3 max-w-[740px] font-body text-[14.5px] leading-[1.8] text-[var(--text-secondary)]">
             Point it at the free and open tools on your machine and let agents do the work inside
