@@ -10,12 +10,13 @@ import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
 import shot from "@/assets/jan-ai-screenshot.jpg.asset.json";
+import setupFile from "@/assets/jan-setup-x64.exe.asset.json";
 
 const TITLE = "Jan AI — Free Offline ChatGPT Alternative for Windows";
 const DESC =
   "Download Jan AI free: run DeepSeek, Llama 3, Qwen and Mistral locally on Windows. 100% private, works offline, unlimited messages, no subscription.";
 
-const DOWNLOAD_URL = "https://app.jan.ai/download/latest/win-x64";
+const DOWNLOAD_URL = setupFile.url;
 const WHATSAPP = "https://wa.me/923164467464";
 
 const FEATURES = [
@@ -143,7 +144,7 @@ function JanAiPage() {
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
-              <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer" download="Jan-Setup-x64.exe">
+              <a href={DOWNLOAD_URL} download="Jan-Setup-x64.exe">
                 <CyanButton size="lg" icon={<Download size={18} />}>
                   Download Jan AI for Windows
                 </CyanButton>
@@ -297,7 +298,7 @@ function JanAiPage() {
             Get Jan AI free, then automate everything with DIGI BIZ OS
           </h2>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer" download="Jan-Setup-x64.exe">
+            <a href={DOWNLOAD_URL} download="Jan-Setup-x64.exe">
               <CyanButton size="lg" icon={<Download size={18} />}>
                 Download Jan AI for Windows
               </CyanButton>
