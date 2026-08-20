@@ -38,7 +38,6 @@ import { Route as CompareSlugRouteImport } from './routes/compare.$slug'
 import { Route as FeaturesIndexRouteImport } from './routes/features.index'
 import { Route as FeaturesSlugRouteImport } from './routes/features.$slug'
 import { Route as OpenSourceIndexRouteImport } from './routes/open-source.index'
-import { Route as OpenSourceAgencyOrchestratorRouteImport } from './routes/open-source.agency-orchestrator'
 import { Route as OpenSourceAnythingllmRouteImport } from './routes/open-source.anythingllm'
 import { Route as OpenSourceJanAiRouteImport } from './routes/open-source.jan-ai'
 import { Route as OpenSourcePocketbaseRouteImport } from './routes/open-source.pocketbase'
@@ -191,12 +190,6 @@ const OpenSourceIndexRoute = OpenSourceIndexRouteImport.update({
   path: '/',
   getParentRoute: () => OpenSourceRoute,
 } as any)
-const OpenSourceAgencyOrchestratorRoute =
-  OpenSourceAgencyOrchestratorRouteImport.update({
-    id: '/agency-orchestrator',
-    path: '/agency-orchestrator',
-    getParentRoute: () => OpenSourceRoute,
-  } as any)
 const OpenSourceAnythingllmRoute = OpenSourceAnythingllmRouteImport.update({
   id: '/anythingllm',
   path: '/anythingllm',
@@ -254,7 +247,6 @@ export interface FileRoutesByFullPath {
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
-  '/open-source/agency-orchestrator': typeof OpenSourceAgencyOrchestratorRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/open-source/pocketbase': typeof OpenSourcePocketbaseRoute
@@ -291,7 +283,6 @@ export interface FileRoutesByTo {
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
-  '/open-source/agency-orchestrator': typeof OpenSourceAgencyOrchestratorRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/open-source/pocketbase': typeof OpenSourcePocketbaseRoute
@@ -330,7 +321,6 @@ export interface FileRoutesById {
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
-  '/open-source/agency-orchestrator': typeof OpenSourceAgencyOrchestratorRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/open-source/pocketbase': typeof OpenSourcePocketbaseRoute
@@ -370,7 +360,6 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
-    | '/open-source/agency-orchestrator'
     | '/open-source/anythingllm'
     | '/open-source/jan-ai'
     | '/open-source/pocketbase'
@@ -407,7 +396,6 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
-    | '/open-source/agency-orchestrator'
     | '/open-source/anythingllm'
     | '/open-source/jan-ai'
     | '/open-source/pocketbase'
@@ -445,7 +433,6 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
-    | '/open-source/agency-orchestrator'
     | '/open-source/anythingllm'
     | '/open-source/jan-ai'
     | '/open-source/pocketbase'
@@ -695,13 +682,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OpenSourceIndexRouteImport
       parentRoute: typeof OpenSourceRoute
     }
-    '/open-source/agency-orchestrator': {
-      id: '/open-source/agency-orchestrator'
-      path: '/agency-orchestrator'
-      fullPath: '/open-source/agency-orchestrator'
-      preLoaderRoute: typeof OpenSourceAgencyOrchestratorRouteImport
-      parentRoute: typeof OpenSourceRoute
-    }
     '/open-source/anythingllm': {
       id: '/open-source/anythingllm'
       path: '/anythingllm'
@@ -748,7 +728,6 @@ declare module '@tanstack/react-router' {
 }
 
 interface OpenSourceRouteChildren {
-  OpenSourceAgencyOrchestratorRoute: typeof OpenSourceAgencyOrchestratorRoute
   OpenSourceAnythingllmRoute: typeof OpenSourceAnythingllmRoute
   OpenSourceJanAiRoute: typeof OpenSourceJanAiRoute
   OpenSourcePocketbaseRoute: typeof OpenSourcePocketbaseRoute
@@ -758,7 +737,6 @@ interface OpenSourceRouteChildren {
 }
 
 const OpenSourceRouteChildren: OpenSourceRouteChildren = {
-  OpenSourceAgencyOrchestratorRoute: OpenSourceAgencyOrchestratorRoute,
   OpenSourceAnythingllmRoute: OpenSourceAnythingllmRoute,
   OpenSourceJanAiRoute: OpenSourceJanAiRoute,
   OpenSourcePocketbaseRoute: OpenSourcePocketbaseRoute,
@@ -805,13 +783,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

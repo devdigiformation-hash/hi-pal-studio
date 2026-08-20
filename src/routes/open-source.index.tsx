@@ -108,21 +108,6 @@ function OpenSourcePage() {
             Open software DIGI BIZ OS works with
           </h2>
           <div className="mt-6 grid gap-4">
-            <Link to="/open-source/agency-orchestrator" className="block">
-              <GlassCard glowColor="var(--cyan)" className="p-5">
-                <p className="font-mono text-[11.5px] uppercase tracking-[0.16em] text-[var(--amber)]">
-                  Free download
-                </p>
-                <h3 className="mt-2 font-display text-[18px] font-bold text-[var(--text-primary)]">
-                  Agency Orchestrator — one-person AI company with 267 expert agents
-                </h3>
-                <p className="mt-2 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-                  Deploy a virtual workforce of 267 specialized AI agents across 20 business departments.
-                  Multi-agent DAG workflows deliver complete projects in minutes. Read the full guide and
-                  download it here.
-                </p>
-              </GlassCard>
-            </Link>
             <Link to="/open-source/jan-ai" className="block">
               <GlassCard glowColor="var(--cyan)" className="p-5">
                 <p className="font-mono text-[11.5px] uppercase tracking-[0.16em] text-[var(--amber)]">
