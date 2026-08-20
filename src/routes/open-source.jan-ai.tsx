@@ -303,3 +303,18 @@ function JanAiPage() {
     </main>
   );
 }
+
+function WindowsIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width="18"
+      height="18"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M0 3.449L9.327 2.12v9.38H0M10.029 1.949L24 0v11.44H10.029M0 12.56h9.327v9.38L0 20.611M10.029 12.56H24V24l-13.971-1.799" />
+    </svg>
+  );
+}
