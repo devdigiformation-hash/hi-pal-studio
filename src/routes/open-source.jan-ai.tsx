@@ -149,11 +149,6 @@ function JanAiPage() {
                   Download Jan AI for Windows
                 </CyanButton>
               </a>
-              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-                <CyanButton size="lg" tone="61,220,132" icon={<MessageCircle size={18} />}>
-                  WhatsApp Support (+92 316 446 7464)
-                </CyanButton>
-              </a>
             </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
               Version: Latest x64 • 57.7 MB • Windows 10 / 11 (64-bit) • 100% Verified •
