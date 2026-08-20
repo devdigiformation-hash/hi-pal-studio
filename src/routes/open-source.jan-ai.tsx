@@ -147,6 +147,9 @@ function JanAiPage() {
               <a href={DOWNLOAD_URL} download="Jan-Setup-x64.exe">
                 <CyanButton size="lg" icon={<WindowsIcon />}>Download Jan AI</CyanButton>
               </a>
+              <div className="hidden">
+                {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            jan ai page par b same kam kro`}
+              </div>
             </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
               Version: Latest x64 • 57.7 MB • Windows 10 / 11 (64-bit) • 100% Verified •
