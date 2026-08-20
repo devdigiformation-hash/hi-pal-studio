@@ -298,7 +298,7 @@ function JanAiPage() {
               <CyanButton size="lg" icon={<WindowsIcon />}>Download Jan AI</CyanButton>
             </a>
             <div className="hidden">
-              {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            Add a “Get Free API Key” button to the Jan AI page that links to https://opencode.ai/auth.`}
+              {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            updates q ni arhi preview me ?`}
             </div>
             <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
               Back to open source software
