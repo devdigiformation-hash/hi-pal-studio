@@ -148,7 +148,7 @@ function JanAiPage() {
                 <CyanButton size="lg" icon={<WindowsIcon />}>Download Jan AI</CyanButton>
               </a>
               <div className="hidden">
-                {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            updates q ni arhi preview me ?`}
+                {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            HI`}
               </div>
             </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
@@ -298,7 +298,7 @@ function JanAiPage() {
               <CyanButton size="lg" icon={<WindowsIcon />}>Download Jan AI</CyanButton>
             </a>
             <div className="hidden">
-              {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            updates q ni arhi preview me ?`}
+              {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            HI`}
             </div>
             <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
               Back to open source software
