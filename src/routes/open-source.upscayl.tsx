@@ -9,6 +9,7 @@ import MonoBadge from "@/components/MonoBadge";
 import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
+import upscaylShot from "@/assets/upscayl-screenshot.jpg.asset.json";
 
 const TITLE = "Upscayl AI Image Enhancer — Free Offline Upscaler for Windows";
 const DESC =
@@ -125,9 +126,14 @@ function UpscaylPage() {
           </div>
 
           <GlassCard glowColor="var(--cyan)" className="p-3">
-            <div className="aspect-video w-full rounded-[10px] bg-[var(--bg-surface)] flex items-center justify-center text-[var(--text-muted)]">
-                [Upscayl Desktop Interface Preview]
-            </div>
+            <img
+              src={upscaylShot.url}
+              alt="Upscayl 2.15.0 desktop app interface showing batch upscayl toggle, AI model selection and 4x image scale on Windows"
+              width={1920}
+              height={1019}
+              loading="lazy"
+              className="w-full rounded-[10px] border border-[var(--border-subtle)]"
+            />
           </GlassCard>
         </div>
       </SectionWrapper>
