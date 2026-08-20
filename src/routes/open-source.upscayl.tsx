@@ -10,12 +10,13 @@ import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
 import upscaylShot from "@/assets/upscayl-screenshot.jpg.asset.json";
+import upscaylSetup from "@/assets/upscayl-setup.exe.asset.json";
 
 const TITLE = "Upscayl AI Image Enhancer — Free Offline Upscaler for Windows";
 const DESC =
   "Download Upscayl free: enhance, sharpen, and upscale images locally on your Windows PC. 100% private, no watermarks, unlimited processing, no subscription.";
 
-const DOWNLOAD_URL = "#"; 
+const DOWNLOAD_URL = upscaylSetup.url; 
 const WHATSAPP = "https://wa.me/923164467464";
 
 const FEATURES = [
