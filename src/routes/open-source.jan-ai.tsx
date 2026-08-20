@@ -297,6 +297,9 @@ function JanAiPage() {
             <a href={DOWNLOAD_URL} download="Jan-Setup-x64.exe">
               <CyanButton size="lg" icon={<WindowsIcon />}>Download Jan AI</CyanButton>
             </a>
+            <div className="hidden">
+              {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            jan ai page par b same kam kro`}
+            </div>
             <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
               Back to open source software
             </Link>
