@@ -185,6 +185,14 @@ export default function Footer() {
                 Open Source Software
               </SmartLink>
             </li>
+            <li>
+              <SmartLink
+                to="/open-source/jan-ai"
+                className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
+              >
+                Jan AI (Free Download)
+              </SmartLink>
+            </li>
             {BUSINESS.map((item) => (
               <li key={item}>
                 <a

@@ -37,6 +37,8 @@ import { Route as CompareIndexRouteImport } from './routes/compare.index'
 import { Route as CompareSlugRouteImport } from './routes/compare.$slug'
 import { Route as FeaturesIndexRouteImport } from './routes/features.index'
 import { Route as FeaturesSlugRouteImport } from './routes/features.$slug'
+import { Route as OpenSourceIndexRouteImport } from './routes/open-source.index'
+import { Route as OpenSourceJanAiRouteImport } from './routes/open-source.jan-ai'
 import { Route as OrderRefRouteImport } from './routes/order.$ref'
 
 const IndexRoute = IndexRouteImport.update({
@@ -179,6 +181,16 @@ const FeaturesSlugRoute = FeaturesSlugRouteImport.update({
   path: '/features/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OpenSourceIndexRoute = OpenSourceIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => OpenSourceRoute,
+} as any)
+const OpenSourceJanAiRoute = OpenSourceJanAiRouteImport.update({
+  id: '/jan-ai',
+  path: '/jan-ai',
+  getParentRoute: () => OpenSourceRoute,
+} as any)
 const OrderRefRoute = OrderRefRouteImport.update({
   id: '/order/$ref',
   path: '/order/$ref',
@@ -197,7 +209,7 @@ export interface FileRoutesByFullPath {
   '/download': typeof DownloadRoute
   '/faq': typeof FaqRoute
   '/integrations': typeof IntegrationsRoute
-  '/open-source': typeof OpenSourceRoute
+  '/open-source': typeof OpenSourceRouteWithChildren
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/refund': typeof RefundRoute
@@ -211,10 +223,12 @@ export interface FileRoutesByFullPath {
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
+  '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/order/$ref': typeof OrderRefRoute
   '/blog/': typeof BlogIndexRoute
   '/compare/': typeof CompareIndexRoute
   '/features/': typeof FeaturesIndexRoute
+  '/open-source/': typeof OpenSourceIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -228,7 +242,6 @@ export interface FileRoutesByTo {
   '/download': typeof DownloadRoute
   '/faq': typeof FaqRoute
   '/integrations': typeof IntegrationsRoute
-  '/open-source': typeof OpenSourceRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/refund': typeof RefundRoute
@@ -242,10 +255,12 @@ export interface FileRoutesByTo {
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
+  '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/order/$ref': typeof OrderRefRoute
   '/blog': typeof BlogIndexRoute
   '/compare': typeof CompareIndexRoute
   '/features': typeof FeaturesIndexRoute
+  '/open-source': typeof OpenSourceIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -260,7 +275,7 @@ export interface FileRoutesById {
   '/download': typeof DownloadRoute
   '/faq': typeof FaqRoute
   '/integrations': typeof IntegrationsRoute
-  '/open-source': typeof OpenSourceRoute
+  '/open-source': typeof OpenSourceRouteWithChildren
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/refund': typeof RefundRoute
@@ -274,10 +289,12 @@ export interface FileRoutesById {
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
+  '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/order/$ref': typeof OrderRefRoute
   '/blog/': typeof BlogIndexRoute
   '/compare/': typeof CompareIndexRoute
   '/features/': typeof FeaturesIndexRoute
+  '/open-source/': typeof OpenSourceIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -307,10 +324,12 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
+    | '/open-source/jan-ai'
     | '/order/$ref'
     | '/blog/'
     | '/compare/'
     | '/features/'
+    | '/open-source/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -324,7 +343,6 @@ export interface FileRouteTypes {
     | '/download'
     | '/faq'
     | '/integrations'
-    | '/open-source'
     | '/pricing'
     | '/privacy'
     | '/refund'
@@ -338,10 +356,12 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
+    | '/open-source/jan-ai'
     | '/order/$ref'
     | '/blog'
     | '/compare'
     | '/features'
+    | '/open-source'
   id:
     | '__root__'
     | '/'
@@ -369,10 +389,12 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
+    | '/open-source/jan-ai'
     | '/order/$ref'
     | '/blog/'
     | '/compare/'
     | '/features/'
+    | '/open-source/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -387,7 +409,7 @@ export interface RootRouteChildren {
   DownloadRoute: typeof DownloadRoute
   FaqRoute: typeof FaqRoute
   IntegrationsRoute: typeof IntegrationsRoute
-  OpenSourceRoute: typeof OpenSourceRoute
+  OpenSourceRoute: typeof OpenSourceRouteWithChildren
   PricingRoute: typeof PricingRoute
   PrivacyRoute: typeof PrivacyRoute
   RefundRoute: typeof RefundRoute
@@ -605,6 +627,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FeaturesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/open-source/': {
+      id: '/open-source/'
+      path: '/'
+      fullPath: '/open-source/'
+      preLoaderRoute: typeof OpenSourceIndexRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
+    '/open-source/jan-ai': {
+      id: '/open-source/jan-ai'
+      path: '/jan-ai'
+      fullPath: '/open-source/jan-ai'
+      preLoaderRoute: typeof OpenSourceJanAiRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
     '/order/$ref': {
       id: '/order/$ref'
       path: '/order/$ref'
@@ -614,6 +650,20 @@ declare module '@tanstack/react-router' {
     }
   }
 }
+
+interface OpenSourceRouteChildren {
+  OpenSourceJanAiRoute: typeof OpenSourceJanAiRoute
+  OpenSourceIndexRoute: typeof OpenSourceIndexRoute
+}
+
+const OpenSourceRouteChildren: OpenSourceRouteChildren = {
+  OpenSourceJanAiRoute: OpenSourceJanAiRoute,
+  OpenSourceIndexRoute: OpenSourceIndexRoute,
+}
+
+const OpenSourceRouteWithChildren = OpenSourceRoute._addFileChildren(
+  OpenSourceRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -627,7 +677,7 @@ const rootRouteChildren: RootRouteChildren = {
   DownloadRoute: DownloadRoute,
   FaqRoute: FaqRoute,
   IntegrationsRoute: IntegrationsRoute,
-  OpenSourceRoute: OpenSourceRoute,
+  OpenSourceRoute: OpenSourceRouteWithChildren,
   PricingRoute: PricingRoute,
   PrivacyRoute: PrivacyRoute,
   RefundRoute: RefundRoute,
