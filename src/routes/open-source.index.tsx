@@ -51,7 +51,7 @@ const LICENCE_POINTS = [
   "12 months of updates after purchase.",
 ];
 
-export const Route = createFileRoute("/open-source")({
+export const Route = createFileRoute("/open-source/")({
   head: () => {
     const { meta, links } = buildMeta({
       path: "/open-source",
