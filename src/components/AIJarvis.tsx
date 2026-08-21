@@ -137,17 +137,19 @@ export const AIJarvis = () => {
         camera={{ position: [0, 0, 8], fov: 60 }} 
         style={{ 
           width: '100%', 
-          height: '600px',
-          display: 'block',
-          position: 'relative'
+          height: '100%',
+          display: 'block'
         }}
+        onError={(e) => console.error("Canvas error:", e)}
       >
         <color attach="background" args={["#000000"]} />
         <ambientLight intensity={0.4} />
         <directionalLight intensity={1.5} position={[5, 5, 5]} castShadow />
         <pointLight intensity={2} position={[-3, 2, 4]} />
         
-        <RobotScene />
+        <React.Suspense fallback={<RobotFallback />}>
+          <RobotScene />
+        </React.Suspense>
         
         <ContactShadows 
           position={[0, -2.5, 0]} 
