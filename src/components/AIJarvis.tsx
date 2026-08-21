@@ -131,9 +131,6 @@ export const AIJarvis = () => {
         shadows 
         camera={{ position: [0, 0, 8], fov: 60 }} 
         style={{ 
-          position: 'absolute', 
-          top: 0, 
-          left: 0, 
           width: '100%', 
           height: '100%',
           display: 'block'
