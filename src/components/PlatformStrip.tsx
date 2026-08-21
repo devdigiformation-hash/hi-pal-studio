@@ -7,8 +7,6 @@ const SOON = [
   { icon: <AppleIcon size={16} />, tone: "216,220,228", label: "macOS" },
   // Linux / Tux gold-amber
   { icon: <LinuxIcon size={16} />, tone: "246,193,54", label: "Linux" },
-  // Android green
-  { icon: <MobileIcon size={16} />, tone: "61,220,132", label: "Mobile" },
 ];
 
 export default function PlatformStrip() {

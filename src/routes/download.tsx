@@ -24,7 +24,7 @@ const PLATFORMS = [
   { name: "Windows 10 & 11", status: "Available now", live: true },
   { name: "macOS", status: "Coming soon", live: false },
   { name: "Linux", status: "Coming soon", live: false },
-  { name: "Mobile companion", status: "Coming soon", live: false },
+  
 ];
 
 const FAQ = [
