@@ -51,7 +51,7 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
       {page.image ? (
         <SectionWrapper className="!py-0">
           <figure className="mx-auto max-w-[1000px]">
-            <div className="overflow-hidden rounded-[var(--r-lg)] border border-[var(--border-glass)] shadow-[0_30px_90px_rgba(0,0,0,0.55)]">
+            <div className="overflow-hidden rounded-[var(--r-lg)]">
               <img
                 src={page.image.src}
                 alt={page.image.alt}
