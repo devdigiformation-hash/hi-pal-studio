@@ -1,6 +1,6 @@
 import React, { useRef, useState, useMemo } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { useGLTF, Environment, ContactShadows, PerspectiveCamera, PointLight } from '@react-three/drei';
+import { useGLTF, Environment, ContactShadows, PerspectiveCamera } from '@react-three/drei';
 import * as THREE from 'three';
 
 const RobotScene = () => {
