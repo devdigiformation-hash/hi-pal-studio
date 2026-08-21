@@ -104,9 +104,7 @@ const RobotScene = () => {
 
   return (
     <group ref={group}>
-      <React.Suspense fallback={<RobotFallback />}>
-        <Model />
-      </React.Suspense>
+      <Model />
     </group>
   );
 };
