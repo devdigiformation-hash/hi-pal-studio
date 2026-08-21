@@ -47,7 +47,8 @@ const RobotFallback = () => {
 };
 
 const Model = () => {
-  // Attempt to load a generic robot
+  // We use the functional form of useGLTF or an error boundary, but here we'll just check if scene exists.
+  // The React.Suspense in AIJarvis handles the loading state.
   const { scene } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/robot-log-body/model.gltf') as any;
   
   useEffect(() => {
@@ -77,7 +78,6 @@ const Model = () => {
     scene.add(eyeGroup);
   }, [scene]);
 
-  if (!scene) return <RobotFallback />;
   return <primitive object={scene} />;
 };
 
@@ -106,6 +106,29 @@ const RobotScene = () => {
   );
 };
 
+// Error boundary for GLTF loading
+class GLTFErrorBoundary extends React.Component<{ children: React.ReactNode, fallback: React.ReactNode }, { hasError: boolean }> {
+  constructor(props: any) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: any) {
+    console.warn("GLTF loading error caught:", error);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback;
+    }
+    return this.props.children;
+  }
+}
+
 export const AIJarvis = () => {
   return (
     <div 
@@ -130,16 +153,17 @@ export const AIJarvis = () => {
           height: '100%',
           display: 'block'
         }}
-        onError={(e) => console.error("Canvas error:", e)}
       >
         <color attach="background" args={["#000000"]} />
         <ambientLight intensity={0.4} />
         <directionalLight intensity={1.5} position={[5, 5, 5]} castShadow />
         <pointLight intensity={2} position={[-3, 2, 4]} />
         
-        <React.Suspense fallback={<RobotFallback />}>
-          <RobotScene />
-        </React.Suspense>
+        <GLTFErrorBoundary fallback={<RobotFallback />}>
+          <React.Suspense fallback={<RobotFallback />}>
+            <RobotScene />
+          </React.Suspense>
+        </GLTFErrorBoundary>
         
         <ContactShadows 
           position={[0, -2.5, 0]} 
