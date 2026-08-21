@@ -86,8 +86,12 @@ function AIJarvisPage() {
       
       <div className="hidden" aria-hidden="true">
         {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''
+                                        
+                                            
+                                            page khan h nzar ni arha h page to already tha usi pr ye animated robot bnana tha
 
 Create a React component using React Three Fiber (R3F) and Drei for a website page  called "AI Jarvis". 
+
 
 **Requirements:**
 1. **Container:** A full-width div with a black background (#000000), height 100vh or 600px.
