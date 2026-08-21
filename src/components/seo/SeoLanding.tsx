@@ -50,7 +50,7 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
       </SectionWrapper>
 
       {page.path === "/jarvis-ai" ? (
-        <div className="mt-12 bg-black py-12">
+        <div className="mt-12 bg-black py-12 relative z-10" style={{ minHeight: '600px' }}>
           <AIJarvis />
           <div className="mx-auto mt-8 max-w-[800px] text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#00ffff]/20 bg-[#00ffff]/5 backdrop-blur-md">

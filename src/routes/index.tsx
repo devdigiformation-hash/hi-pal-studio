@@ -71,22 +71,7 @@ function HomePage() {
         {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''
                                         
                                             
-                                            For the code present, I get the error below.
-
-Please think step-by-step in order to resolve it.
-\`\`\`
-Could not load https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/robot-log-body/model.gltf: Failed to fetch
-
-{
-  "timestamp": 1787300189265,
-  "error_type": "RUNTIME_ERROR",
-  "filename": "/jarvis-ai",
-  "lineno": 0,
-  "colno": 0,
-  "stack": "Error: Could not load https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/robot-log-body/model.gltf: Failed to fetch\\n    at https://588214df-1d5e-4126-93c8-5d249b243a65.lovableproject.com/node_modules/.vite/deps/react-three-fiber.esm-BRcxtMzq.js?v=511a55af:1063:52\\n    at Object._onError [as onError] (https://588214df-1d5e-4126-93c8-5d249b243a65.lovableproject.com/node_modules/.vite/deps/@react-three_drei.js?v=511a55af:16630:17)\\n    at https://588214df-1d5e-4126-93c8-5d249b243a65.lovableproject.com/node_modules/.vite/deps/three.module-omPc_b5b.js?v=511a55af:31468:36",
-  "has_blank_screen": true
-}
-\`\`\``}
+                                            nazar ni arha robot`}
       </div>
     </main>
   );
