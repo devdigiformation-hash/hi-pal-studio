@@ -54,8 +54,15 @@ const RobotScene = () => {
 
   const Model = () => {
     // Attempt to load a generic robot or the specified one if provided
-    // Using a non-existent URL to trigger fallback as per requirements unless a URL is known
-    const { scene } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/robot-log-body/model.gltf', true);
+    let gltf;
+    try {
+      gltf = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/robot-log-body/model.gltf', true);
+    } catch (e) {
+      console.warn("Failed to load GLTF model, falling back to primitive geometry:", e);
+      return <RobotFallback />;
+    }
+    
+    const { scene } = gltf;
     
     useMemo(() => {
       scene.traverse((obj) => {
