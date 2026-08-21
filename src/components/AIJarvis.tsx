@@ -3,6 +3,7 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { useGLTF, Environment, ContactShadows, PerspectiveCamera, Float } from '@react-three/drei';
 import * as THREE from 'three';
 
+// Move Fallback to top-level for better scoping
 const RobotFallback = () => {
   const material = new THREE.MeshStandardMaterial({
     color: "#111111",
@@ -46,38 +47,41 @@ const RobotFallback = () => {
   );
 };
 
+// Simplified Model component that doesn't use suspense internally to avoid white screens
 const Model = () => {
-  // We use the functional form of useGLTF or an error boundary, but here we'll just check if scene exists.
-  // The React.Suspense in AIJarvis handles the loading state.
-  const { scene } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/robot-log-body/model.gltf') as any;
+  const [loadError, setLoadError] = useState(false);
   
-  useEffect(() => {
-    if (!scene) return;
-    scene.traverse((obj: any) => {
-      if (obj.isMesh) {
-        obj.material = new THREE.MeshStandardMaterial({
-          color: "#111111",
-          metalness: 0.95,
-          roughness: 0.1,
-        });
-      }
-    });
+  // Use a try-catch pattern or just check if it's loading/errored
+  const { scene } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/robot-log-body/model.gltf') as any;
 
-    // Add Eye to the loaded model
-    const eyeGroup = new THREE.Group();
-    const eyeMesh = new THREE.Mesh(
-      new THREE.SphereGeometry(0.1, 16, 16),
-      new THREE.MeshBasicMaterial({ color: "#00ffff" })
-    );
-    const eyeLight = new THREE.PointLight("#00ffff", 2, 2);
-    eyeGroup.add(eyeMesh);
-    eyeGroup.add(eyeLight);
-    
-    // Try to find a head bone or just place it at the top
-    eyeGroup.position.set(0, 1.5, 0.3); 
-    scene.add(eyeGroup);
+  useEffect(() => {
+    if (scene) {
+      scene.traverse((obj: any) => {
+        if (obj.isMesh) {
+          obj.material = new THREE.MeshStandardMaterial({
+            color: "#111111",
+            metalness: 0.95,
+            roughness: 0.1,
+          });
+        }
+      });
+
+      // Add Eye to the loaded model
+      const eyeGroup = new THREE.Group();
+      const eyeMesh = new THREE.Mesh(
+        new THREE.SphereGeometry(0.1, 16, 16),
+        new THREE.MeshBasicMaterial({ color: "#00ffff" })
+      );
+      const eyeLight = new THREE.PointLight("#00ffff", 2, 2);
+      eyeGroup.add(eyeMesh);
+      eyeGroup.add(eyeLight);
+      
+      eyeGroup.position.set(0, 1.5, 0.3); 
+      scene.add(eyeGroup);
+    }
   }, [scene]);
 
+  if (!scene || loadError) return <RobotFallback />;
   return <primitive object={scene} />;
 };
 
@@ -87,14 +91,10 @@ const RobotScene = () => {
 
   useFrame((state) => {
     if (group.current) {
-      // Smoothly rotate towards mouse
       const targetRotationY = mouse.x * 0.5;
       const targetRotationX = -mouse.y * 0.2;
-      
       group.current.rotation.y = THREE.MathUtils.lerp(group.current.rotation.y, targetRotationY, 0.1);
       group.current.rotation.x = THREE.MathUtils.lerp(group.current.rotation.x, targetRotationX, 0.1);
-
-      // Floating animation
       group.current.position.y = Math.sin(state.clock.elapsedTime * 2) * 0.1;
     }
   });
@@ -105,29 +105,6 @@ const RobotScene = () => {
     </group>
   );
 };
-
-// Error boundary for GLTF loading
-class GLTFErrorBoundary extends React.Component<{ children: React.ReactNode, fallback: React.ReactNode }, { hasError: boolean }> {
-  constructor(props: any) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError() {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error: any) {
-    console.warn("GLTF loading error caught:", error);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback;
-    }
-    return this.props.children;
-  }
-}
 
 export const AIJarvis = () => {
   return (
@@ -140,9 +117,9 @@ export const AIJarvis = () => {
         position: 'relative', 
         overflow: 'hidden',
         zIndex: 5,
-        display: 'block',
-        visibility: 'visible',
-        opacity: 1
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
       }}
     >
       <Canvas 
@@ -151,7 +128,7 @@ export const AIJarvis = () => {
         style={{ 
           width: '100%', 
           height: '100%',
-          display: 'block'
+          background: '#000000'
         }}
       >
         <color attach="background" args={["#000000"]} />
@@ -159,11 +136,9 @@ export const AIJarvis = () => {
         <directionalLight intensity={1.5} position={[5, 5, 5]} castShadow />
         <pointLight intensity={2} position={[-3, 2, 4]} />
         
-        <GLTFErrorBoundary fallback={<RobotFallback />}>
-          <React.Suspense fallback={<RobotFallback />}>
-            <RobotScene />
-          </React.Suspense>
-        </GLTFErrorBoundary>
+        <React.Suspense fallback={<RobotFallback />}>
+          <RobotScene />
+        </React.Suspense>
         
         <ContactShadows 
           position={[0, -2.5, 0]} 
