@@ -72,7 +72,6 @@ function HomePage() {
                                         
                                             
                                             langflow wla page fully remove kr do
-`}
 
 Create a massive, heavy-duty futuristic AI robot for a premium business automation platform called JARVIS.
 
