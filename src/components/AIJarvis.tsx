@@ -1,6 +1,6 @@
-import React, { useRef, useState, useMemo } from 'react';
+import React, { useRef, useState, useMemo, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { useGLTF, Environment, ContactShadows, PerspectiveCamera } from '@react-three/drei';
+import { useGLTF, Environment, ContactShadows, PerspectiveCamera, Float } from '@react-three/drei';
 import * as THREE from 'three';
 
 const RobotScene = () => {
@@ -53,21 +53,17 @@ const RobotScene = () => {
   };
 
   const Model = () => {
-    // Attempt to load a generic robot or the specified one if provided
-    let gltf;
-    try {
-      gltf = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/robot-log-body/model.gltf', true);
-    } catch (e) {
-      console.warn("Failed to load GLTF model, falling back to primitive geometry:", e);
+    // Attempt to load a generic robot
+    const { scene, error } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/robot-log-body/model.gltf', true) as any;
+    
+    if (error || !scene) {
       return <RobotFallback />;
     }
     
-    const { scene } = gltf;
-    
     useMemo(() => {
-      scene.traverse((obj) => {
-        if ((obj as THREE.Mesh).isMesh) {
-          (obj as THREE.Mesh).material = new THREE.MeshStandardMaterial({
+      scene.traverse((obj: any) => {
+        if (obj.isMesh) {
+          obj.material = new THREE.MeshStandardMaterial({
             color: "#111111",
             metalness: 0.95,
             roughness: 0.1,
@@ -96,13 +92,15 @@ const RobotScene = () => {
 
   useFrame((state) => {
     if (group.current) {
-      // Mouse tracking
-      const targetX = (mouse.x * viewport.width) / 2;
-      const targetY = (mouse.y * viewport.height) / 2;
-      group.current.lookAt(targetX, targetY, 5);
+      // Smoothly rotate towards mouse
+      const targetRotationY = mouse.x * 0.5;
+      const targetRotationX = -mouse.y * 0.2;
+      
+      group.current.rotation.y = THREE.MathUtils.lerp(group.current.rotation.y, targetRotationY, 0.1);
+      group.current.rotation.x = THREE.MathUtils.lerp(group.current.rotation.x, targetRotationX, 0.1);
 
       // Floating animation
-      group.current.position.y = Math.sin(Date.now() * 0.002) * 0.1;
+      group.current.position.y = Math.sin(state.clock.elapsedTime * 2) * 0.1;
     }
   });
 
@@ -117,8 +115,29 @@ const RobotScene = () => {
 
 export const AIJarvis = () => {
   return (
-    <div style={{ width: '100%', height: '600px', background: '#000000', position: 'relative', overflow: 'hidden' }}>
-      <Canvas shadows camera={{ position: [0, 0, 8], fov: 60 }} style={{ position: 'absolute', top: 0, left: 0 }}>
+    <div 
+      className="jarvis-canvas-container"
+      style={{ 
+        width: '100%', 
+        height: '600px', 
+        background: '#000000', 
+        position: 'relative', 
+        overflow: 'hidden',
+        zIndex: 5,
+        display: 'block',
+        visibility: 'visible',
+        opacity: 1
+      }}
+    >
+      <Canvas 
+        shadows 
+        camera={{ position: [0, 0, 8], fov: 60 }} 
+        style={{ 
+          width: '100%', 
+          height: '100%',
+          display: 'block'
+        }}
+      >
         <color attach="background" args={["#000000"]} />
         <ambientLight intensity={0.4} />
         <directionalLight intensity={1.5} position={[5, 5, 5]} castShadow />
