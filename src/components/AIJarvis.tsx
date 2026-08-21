@@ -56,7 +56,7 @@ const RobotScene = () => {
     // Attempt to load a generic robot
     const { scene } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/robot-log-body/model.gltf') as any;
     
-    useMemo(() => {
+    useEffect(() => {
       if (!scene) return;
       scene.traverse((obj: any) => {
         if (obj.isMesh) {
