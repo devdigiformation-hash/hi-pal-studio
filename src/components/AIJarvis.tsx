@@ -1,61 +1,168 @@
-import { useEffect, useRef, useState } from "react";
-import robotImg from "@/assets/jarvis-robot.png";
+import React, { Suspense, useMemo, useRef, useEffect } from 'react';
+import { Canvas, useFrame, useLoader } from '@react-three/fiber';
+import { 
+  Environment, 
+  Float, 
+  ContactShadows, 
+  useGLTF, 
+  PerspectiveCamera, 
+  MeshDistortMaterial,
+  Sphere
+} from '@react-three/drei';
+import * as THREE from 'three';
 
-export const AIJarvis = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const [tilt, setTilt] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const onMove = (e: MouseEvent) => {
-      const el = ref.current;
-      if (!el) return;
-      const r = el.getBoundingClientRect();
-      const nx = (e.clientX - (r.left + r.width / 2)) / r.width;
-      const ny = (e.clientY - (r.top + r.height / 2)) / r.height;
-      setTilt({ x: Math.max(-1, Math.min(1, nx)), y: Math.max(-1, Math.min(1, ny)) });
-    };
-    window.addEventListener("mousemove", onMove);
-    return () => window.removeEventListener("mousemove", onMove);
-  }, []);
+// Fallback component to show if the model fails to load
+const RobotFallback = () => {
+  const meshRef = useRef<THREE.Mesh>(null);
+  
+  useFrame((state) => {
+    if (!meshRef.current) return;
+    const t = state.clock.getElapsedTime();
+    meshRef.current.rotation.y = t * 0.5;
+    meshRef.current.position.y = Math.sin(t) * 0.2;
+  });
 
   return (
-    <div
-      ref={ref}
-      className="jarvis-canvas-container relative mx-auto flex h-[420px] w-full items-center justify-center overflow-hidden rounded-[20px] border border-[var(--border-soft,rgba(255,255,255,0.08))] md:h-[600px]"
-      style={{
-        background:
-          "radial-gradient(120% 90% at 50% 20%, rgba(47,224,200,0.16) 0%, rgba(139,124,246,0.12) 40%, rgba(7,11,20,0.98) 78%)",
-        perspective: "1200px",
-      }}
-      aria-label="Animated AI Jarvis robot"
-    >
-      {/* glow rings */}
-      <div
-        className="pointer-events-none absolute h-[320px] w-[320px] rounded-full opacity-70 blur-3xl md:h-[460px] md:w-[460px]"
-        style={{ background: "radial-gradient(circle, rgba(47,224,200,0.35), transparent 65%)" }}
-      />
-      <div
-        className="pointer-events-none absolute h-[240px] w-[240px] animate-pulse rounded-full border border-[rgba(47,224,200,0.25)] md:h-[380px] md:w-[380px]"
-      />
+    <group>
+      <Sphere ref={meshRef} args={[1, 64, 64]}>
+        <MeshDistortMaterial
+          color="#101010"
+          roughness={0.1}
+          metalness={1}
+          distort={0.4}
+          speed={2}
+          emissive="#2fe0c8"
+          emissiveIntensity={0.5}
+        />
+      </Sphere>
+      <mesh position={[0, 0, 0.8]}>
+        <sphereGeometry args={[0.2, 32, 32]} />
+        <meshStandardMaterial 
+          color="#2fe0c8" 
+          emissive="#2fe0c8" 
+          emissiveIntensity={2} 
+          toneMapped={false}
+        />
+      </mesh>
+    </group>
+  );
+};
 
-      <img
-        src={robotImg}
-        alt="JARVIS AI robot"
-        className="relative z-10 h-[85%] w-auto max-w-[90%] object-contain drop-shadow-[0_0_45px_rgba(47,224,200,0.35)]"
-        style={{
-          transform: `translate3d(${tilt.x * 18}px, ${tilt.y * 10}px, 0) rotateY(${tilt.x * 12}deg) rotateX(${-tilt.y * 8}deg)`,
-          transition: "transform 400ms cubic-bezier(0.22,1,0.36,1)",
-          animation: "jarvis-float 6s ease-in-out infinite",
-        }}
-        loading="lazy"
-      />
+const Model = () => {
+  // Attempt to load the model - this might fail depending on path
+  const { nodes, materials } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/robot-base/model.gltf');
+  const group = useRef<THREE.Group>(null);
 
-      <style>{`
-        @keyframes jarvis-float {
-          0%, 100% { margin-top: 0px; }
-          50% { margin-top: -18px; }
+  // Apply custom materials to the robot
+  useEffect(() => {
+    if (materials) {
+      Object.values(materials).forEach((material: any) => {
+        if (material) {
+          material.color = new THREE.Color('#000000');
+          material.roughness = 0.1;
+          material.metalness = 1;
         }
-      `}</style>
+      });
+    }
+  }, [materials]);
+
+  useFrame((state) => {
+    if (!group.current) return;
+    const t = state.clock.getElapsedTime();
+    // Smooth mouse follow
+    const mouseX = (state.mouse.x * Math.PI) / 8;
+    const mouseY = (state.mouse.y * Math.PI) / 8;
+    group.current.rotation.y = THREE.MathUtils.lerp(group.current.rotation.y, mouseX, 0.1);
+    group.current.rotation.x = THREE.MathUtils.lerp(group.current.rotation.x, -mouseY, 0.1);
+    group.current.position.y = THREE.MathUtils.lerp(group.current.position.y, Math.sin(t) * 0.1, 0.1);
+  });
+
+  return (
+    <primitive 
+      ref={group}
+      object={nodes.Scene} 
+      scale={2.5} 
+      position={[0, -2, 0]} 
+    />
+  );
+};
+
+const RobotScene = () => {
+  return (
+    <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
+      <Model />
+    </Float>
+  );
+};
+
+// Error boundary for GLTF loading
+class GLTFErrorBoundary extends React.Component<{ children: React.ReactNode, fallback: React.ReactNode }, { hasError: boolean }> {
+  constructor(props: any) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: any) {
+    console.warn("GLTF loading error caught:", error);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback;
+    }
+    return this.props.children;
+  }
+}
+
+export const AIJarvis = () => {
+  return (
+    <div 
+      className="jarvis-canvas-container"
+      style={{ 
+        width: '100%', 
+        height: '600px', 
+        background: '#000000', 
+        position: 'relative', 
+        overflow: 'hidden',
+        zIndex: 5,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}
+    >
+      <Canvas 
+        shadows 
+        camera={{ position: [0, 0, 8], fov: 60 }} 
+        style={{ 
+          width: '100%', 
+          height: '100%',
+          background: '#000000'
+        }}
+      >
+        <color attach="background" args={["#000000"]} />
+        <ambientLight intensity={0.4} />
+        <directionalLight intensity={1.5} position={[5, 5, 5]} castShadow />
+        <pointLight intensity={2} position={[-3, 2, 4]} />
+        
+        <GLTFErrorBoundary fallback={<RobotFallback />}>
+          <Suspense fallback={<RobotFallback />}>
+            <RobotScene />
+          </Suspense>
+        </GLTFErrorBoundary>
+        
+        <ContactShadows 
+          position={[0, -2.5, 0]} 
+          opacity={0.4} 
+          scale={10} 
+          blur={2} 
+          far={4.5} 
+        />
+        <Environment preset="city" />
+      </Canvas>
     </div>
   );
 };
