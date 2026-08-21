@@ -1,106 +1,61 @@
-import React, { useRef } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import * as THREE from "three";
-
-const bodyMaterialProps = {
-  color: "#2A2F3A",
-  metalness: 0.9,
-  roughness: 0.25,
-} as const;
-
-const Robot = () => {
-  const group = useRef<THREE.Group>(null);
-  const { mouse } = useThree();
-
-  useFrame((state) => {
-    if (!group.current) return;
-    const targetY = mouse.x * 0.5;
-    const targetX = -mouse.y * 0.2;
-    group.current.rotation.y = THREE.MathUtils.lerp(group.current.rotation.y, targetY, 0.08);
-    group.current.rotation.x = THREE.MathUtils.lerp(group.current.rotation.x, targetX, 0.08);
-    group.current.position.y = Math.sin(state.clock.elapsedTime * 1.4) * 0.12;
-  });
-
-  return (
-    <group ref={group} position={[0, 0.2, 0]}>
-      {/* Torso */}
-      <mesh position={[0, 0, 0]}>
-        <capsuleGeometry args={[0.7, 1.1, 8, 32]} />
-        <meshStandardMaterial {...bodyMaterialProps} />
-      </mesh>
-      {/* Chest core */}
-      <mesh position={[0, 0.15, 0.66]}>
-        <circleGeometry args={[0.22, 32]} />
-        <meshBasicMaterial color="#2FE0C8" />
-      </mesh>
-      <pointLight color="#2FE0C8" intensity={3} distance={3} position={[0, 0.15, 1]} />
-
-      {/* Neck */}
-      <mesh position={[0, 1.0, 0]}>
-        <cylinderGeometry args={[0.18, 0.18, 0.25, 16]} />
-        <meshStandardMaterial color="#6C7280" metalness={1} roughness={0.3} />
-      </mesh>
-
-      {/* Head */}
-      <mesh position={[0, 1.45, 0]}>
-        <sphereGeometry args={[0.48, 48, 48]} />
-        <meshStandardMaterial color="#3A404D" metalness={0.95} roughness={0.15} />
-      </mesh>
-      {/* Visor */}
-      <mesh position={[0, 1.48, 0.4]}>
-        <boxGeometry args={[0.5, 0.12, 0.06]} />
-        <meshBasicMaterial color="#2FE0C8" />
-      </mesh>
-      <pointLight color="#2FE0C8" intensity={4} distance={3.5} position={[0, 1.5, 1]} />
-
-      {/* Shoulders + arms */}
-      {[1, -1].map((s) => (
-        <group key={s}>
-          <mesh position={[s * 0.85, 0.55, 0]}>
-            <sphereGeometry args={[0.26, 24, 24]} />
-            <meshStandardMaterial color="#6C7280" metalness={1} roughness={0.3} />
-          </mesh>
-          <mesh position={[s * 0.95, -0.15, 0]} rotation={[0, 0, s * -0.12]}>
-            <capsuleGeometry args={[0.16, 0.9, 6, 20]} />
-            <meshStandardMaterial {...bodyMaterialProps} />
-          </mesh>
-        </group>
-      ))}
-
-      {/* Legs */}
-      {[0.38, -0.38].map((x) => (
-        <mesh key={x} position={[x, -1.35, 0]}>
-          <capsuleGeometry args={[0.2, 1.0, 6, 20]} />
-          <meshStandardMaterial {...bodyMaterialProps} />
-        </mesh>
-      ))}
-    </group>
-  );
-};
+import { useEffect, useRef, useState } from "react";
+import robotImg from "@/assets/jarvis-robot.png";
 
 export const AIJarvis = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [tilt, setTilt] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const onMove = (e: MouseEvent) => {
+      const el = ref.current;
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      const nx = (e.clientX - (r.left + r.width / 2)) / r.width;
+      const ny = (e.clientY - (r.top + r.height / 2)) / r.height;
+      setTilt({ x: Math.max(-1, Math.min(1, nx)), y: Math.max(-1, Math.min(1, ny)) });
+    };
+    window.addEventListener("mousemove", onMove);
+    return () => window.removeEventListener("mousemove", onMove);
+  }, []);
+
   return (
     <div
-      className="jarvis-canvas-container"
+      ref={ref}
+      className="jarvis-canvas-container relative mx-auto flex h-[420px] w-full items-center justify-center overflow-hidden rounded-[20px] border border-[var(--border-soft,rgba(255,255,255,0.08))] md:h-[600px]"
       style={{
-        width: "100%",
-        height: "600px",
-        position: "relative",
-        overflow: "hidden",
-        borderRadius: "18px",
+        background:
+          "radial-gradient(120% 90% at 50% 20%, rgba(47,224,200,0.16) 0%, rgba(139,124,246,0.12) 40%, rgba(7,11,20,0.98) 78%)",
+        perspective: "1200px",
       }}
+      aria-label="Animated AI Jarvis robot"
     >
-      <Canvas camera={{ position: [0, 0.4, 6.5], fov: 50 }} style={{ width: "100%", height: "100%" }}>
-        <color attach="background" args={["#070B14"]} />
-        <fog attach="fog" args={["#070B14", 8, 18]} />
-        <ambientLight intensity={0.8} />
-        <hemisphereLight args={["#8B7CF6", "#0A0F1C", 1.2]} />
-        <directionalLight intensity={2.2} position={[4, 6, 5]} />
-        <pointLight intensity={30} color="#2FE0C8" position={[-4, 2, 4]} />
-        <pointLight intensity={20} color="#8B7CF6" position={[4, -1, 3]} />
+      {/* glow rings */}
+      <div
+        className="pointer-events-none absolute h-[320px] w-[320px] rounded-full opacity-70 blur-3xl md:h-[460px] md:w-[460px]"
+        style={{ background: "radial-gradient(circle, rgba(47,224,200,0.35), transparent 65%)" }}
+      />
+      <div
+        className="pointer-events-none absolute h-[240px] w-[240px] animate-pulse rounded-full border border-[rgba(47,224,200,0.25)] md:h-[380px] md:w-[380px]"
+      />
 
-        <Robot />
-      </Canvas>
+      <img
+        src={robotImg}
+        alt="JARVIS AI robot"
+        className="relative z-10 h-[85%] w-auto max-w-[90%] object-contain drop-shadow-[0_0_45px_rgba(47,224,200,0.35)]"
+        style={{
+          transform: `translate3d(${tilt.x * 18}px, ${tilt.y * 10}px, 0) rotateY(${tilt.x * 12}deg) rotateX(${-tilt.y * 8}deg)`,
+          transition: "transform 400ms cubic-bezier(0.22,1,0.36,1)",
+          animation: "jarvis-float 6s ease-in-out infinite",
+        }}
+        loading="lazy"
+      />
+
+      <style>{`
+        @keyframes jarvis-float {
+          0%, 100% { margin-top: 0px; }
+          50% { margin-top: -18px; }
+        }
+      `}</style>
     </div>
   );
 };
