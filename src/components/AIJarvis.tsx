@@ -54,7 +54,14 @@ const RobotScene = () => {
 
   const Model = () => {
     // Attempt to load a generic robot
-    const { scene } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/robot-log-body/model.gltf') as any;
+    let result: any = { scene: null };
+    try {
+      result = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/robot-log-body/model.gltf');
+    } catch (e) {
+      console.warn("useGLTF failed, using fallback", e);
+    }
+    
+    const scene = result?.scene;
     
     useEffect(() => {
       if (!scene) return;
