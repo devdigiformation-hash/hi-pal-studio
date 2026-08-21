@@ -3,7 +3,6 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { useGLTF, Environment, ContactShadows, PerspectiveCamera, Float } from '@react-three/drei';
 import * as THREE from 'three';
 
-// Move Fallback to top-level for better scoping
 const RobotFallback = () => {
   const material = new THREE.MeshStandardMaterial({
     color: "#111111",
@@ -47,11 +46,13 @@ const RobotFallback = () => {
   );
 };
 
-// Simplified Model component that doesn't use suspense internally to avoid white screens
-const Model = () => {
-  const [loadError, setLoadError] = useState(false);
+// Component that handles the GLTF loading with a simple check
+const SafeModel = () => {
+  const [hasError, setHasError] = useState(false);
   
-  // Use a try-catch pattern or just check if it's loading/errored
+  // We use the useGLTF hook directly. 
+  // R3F's Suspense will handle the loading.
+  // We'll catch errors at the Canvas level or through an ErrorBoundary.
   const { scene } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/robot-log-body/model.gltf') as any;
 
   useEffect(() => {
@@ -75,13 +76,11 @@ const Model = () => {
       const eyeLight = new THREE.PointLight("#00ffff", 2, 2);
       eyeGroup.add(eyeMesh);
       eyeGroup.add(eyeLight);
-      
       eyeGroup.position.set(0, 1.5, 0.3); 
       scene.add(eyeGroup);
     }
   }, [scene]);
 
-  if (!scene || loadError) return <RobotFallback />;
   return <primitive object={scene} />;
 };
 
@@ -101,10 +100,33 @@ const RobotScene = () => {
 
   return (
     <group ref={group}>
-      <Model />
+      <SafeModel />
     </group>
   );
 };
+
+// Custom error boundary to prevent R3F crashes from taking down the app
+class R3FErrorBoundary extends React.Component<{ children: React.ReactNode, fallback: React.ReactNode }, { hasError: boolean }> {
+  constructor(props: any) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <group>
+          {this.props.fallback}
+        </group>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 export const AIJarvis = () => {
   return (
@@ -117,9 +139,7 @@ export const AIJarvis = () => {
         position: 'relative', 
         overflow: 'hidden',
         zIndex: 5,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
+        display: 'block'
       }}
     >
       <Canvas 
@@ -136,9 +156,11 @@ export const AIJarvis = () => {
         <directionalLight intensity={1.5} position={[5, 5, 5]} castShadow />
         <pointLight intensity={2} position={[-3, 2, 4]} />
         
-        <React.Suspense fallback={<RobotFallback />}>
-          <RobotScene />
-        </React.Suspense>
+        <R3FErrorBoundary fallback={<RobotFallback />}>
+          <React.Suspense fallback={<RobotFallback />}>
+            <RobotScene />
+          </React.Suspense>
+        </R3FErrorBoundary>
         
         <ContactShadows 
           position={[0, -2.5, 0]} 
