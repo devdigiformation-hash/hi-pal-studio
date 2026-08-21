@@ -6,6 +6,7 @@ import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
 import CyanButton from "@/components/CyanButton";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import { AIJarvis } from "@/components/AIJarvis";
 import type { SeoPage } from "@/content/seo-pages";
 
 export default function SeoLanding({ page }: { page: SeoPage }) {
@@ -48,7 +49,17 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
         </div>
       </SectionWrapper>
 
-      {page.image ? (
+      {page.path === "/jarvis-ai" ? (
+        <div className="mt-12 bg-black py-12">
+          <AIJarvis />
+          <div className="mx-auto mt-8 max-w-[800px] text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#00ffff]/20 bg-[#00ffff]/5 backdrop-blur-md">
+              <div className="w-2 h-2 rounded-full bg-[#00ffff] animate-pulse" />
+              <span className="font-mono text-[12px] tracking-wider text-[#00ffff] uppercase">System Online: JARVIS-CORE-01</span>
+            </div>
+          </div>
+        </div>
+      ) : page.image ? (
         <SectionWrapper className="!py-0">
           <figure className="mx-auto max-w-[1000px]">
             <div className="overflow-hidden rounded-[var(--r-lg)] border border-[var(--border-glass)] shadow-[0_30px_90px_rgba(0,0,0,0.55)]">
