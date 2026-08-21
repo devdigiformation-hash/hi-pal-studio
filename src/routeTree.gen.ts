@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as SlugRouteImport } from './routes/$slug'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AgentsRouteImport } from './routes/agents'
+import { Route as AiJarvisRouteImport } from './routes/ai-jarvis'
 import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DeliveryRouteImport } from './routes/delivery'
@@ -63,6 +64,11 @@ const AboutRoute = AboutRouteImport.update({
 const AgentsRoute = AgentsRouteImport.update({
   id: '/agents',
   path: '/agents',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiJarvisRoute = AiJarvisRouteImport.update({
+  id: '/ai-jarvis',
+  path: '/ai-jarvis',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CheckoutRoute = CheckoutRouteImport.update({
@@ -226,6 +232,7 @@ export interface FileRoutesByFullPath {
   '/$slug': typeof SlugRoute
   '/about': typeof AboutRoute
   '/agents': typeof AgentsRoute
+  '/ai-jarvis': typeof AiJarvisRoute
   '/checkout': typeof CheckoutRoute
   '/contact': typeof ContactRoute
   '/delivery': typeof DeliveryRoute
@@ -263,6 +270,7 @@ export interface FileRoutesByTo {
   '/$slug': typeof SlugRoute
   '/about': typeof AboutRoute
   '/agents': typeof AgentsRoute
+  '/ai-jarvis': typeof AiJarvisRoute
   '/checkout': typeof CheckoutRoute
   '/contact': typeof ContactRoute
   '/delivery': typeof DeliveryRoute
@@ -300,6 +308,7 @@ export interface FileRoutesById {
   '/$slug': typeof SlugRoute
   '/about': typeof AboutRoute
   '/agents': typeof AgentsRoute
+  '/ai-jarvis': typeof AiJarvisRoute
   '/checkout': typeof CheckoutRoute
   '/contact': typeof ContactRoute
   '/delivery': typeof DeliveryRoute
@@ -339,6 +348,7 @@ export interface FileRouteTypes {
     | '/$slug'
     | '/about'
     | '/agents'
+    | '/ai-jarvis'
     | '/checkout'
     | '/contact'
     | '/delivery'
@@ -376,6 +386,7 @@ export interface FileRouteTypes {
     | '/$slug'
     | '/about'
     | '/agents'
+    | '/ai-jarvis'
     | '/checkout'
     | '/contact'
     | '/delivery'
@@ -412,6 +423,7 @@ export interface FileRouteTypes {
     | '/$slug'
     | '/about'
     | '/agents'
+    | '/ai-jarvis'
     | '/checkout'
     | '/contact'
     | '/delivery'
@@ -450,6 +462,7 @@ export interface RootRouteChildren {
   SlugRoute: typeof SlugRoute
   AboutRoute: typeof AboutRoute
   AgentsRoute: typeof AgentsRoute
+  AiJarvisRoute: typeof AiJarvisRoute
   CheckoutRoute: typeof CheckoutRoute
   ContactRoute: typeof ContactRoute
   DeliveryRoute: typeof DeliveryRoute
@@ -505,6 +518,13 @@ declare module '@tanstack/react-router' {
       path: '/agents'
       fullPath: '/agents'
       preLoaderRoute: typeof AgentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-jarvis': {
+      id: '/ai-jarvis'
+      path: '/ai-jarvis'
+      fullPath: '/ai-jarvis'
+      preLoaderRoute: typeof AiJarvisRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/checkout': {
@@ -754,6 +774,7 @@ const rootRouteChildren: RootRouteChildren = {
   SlugRoute: SlugRoute,
   AboutRoute: AboutRoute,
   AgentsRoute: AgentsRoute,
+  AiJarvisRoute: AiJarvisRoute,
   CheckoutRoute: CheckoutRoute,
   ContactRoute: ContactRoute,
   DeliveryRoute: DeliveryRoute,
@@ -783,13 +804,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

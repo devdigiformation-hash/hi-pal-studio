@@ -301,7 +301,26 @@ The final result should look like the physical embodiment of an advanced AI oper
 
 It should immediately communicate:
 
-JARVIS — THINKS. EXECUTES. AUTOMATES. CONTROLS THE BUSINESS.`}
+JARVIS — THINKS. EXECUTES. AUTOMATES. CONTROLS THE BUSINESS.
+
+Create a React component using React Three Fiber (R3F) and Drei for a website page  called "AI Jarvis". 
+
+**Requirements:**
+1. **Container:** A full-width div with a black background (#000000), height 100vh or 600px.
+2. **Scene Setup:** Inside the div, render a from R3F. Set the camera position to [0, 0, 8] and a field of view of 60.
+3. **3D Robot Model (GLB):** Use useGLTF from @react-three/drei to load a 3D robot model. 
+   - *Important: Since I don't have a specific GLB file URL, implement a fallback logic.* 
+   - If the GLB loads, traverse the scene and apply a meshStandardMaterial with color: "#111111", metalness: 0.95, and roughness: 0.1 to make it look glossy black.
+   - If the GLB fails to load, build a basic humanoid robot using primitive geometry (a SphereGeometry for the head, CylinderGeometry for the torso, arms, and legs) and apply the same glossy black material.
+4. **Jarvis Eye:** Add a glowing cyan/blue "eye" on the robot's head. Use a small CircleGeometry or a SphereGeometry with a meshBasicMaterial of color #00ffff. Add a pointLight of color #00ffff around the eye to create a glow effect.
+5. **Lighting:** Add an ambientLight with intensity 0.4, a directionalLight with intensity 1.5 positioned at [5, 5, 5], and a pointLight with intensity 2 positioned at [-3, 2, 4].
+6. **Cursor Interaction:** Implement mouse tracking. Use a useFrame hook to get the mouse coordinates. The robot's group should smoothly lookAt the 3D position corresponding to the mouse cursor.
+7. **Animation:** Add a subtle floating animation to the robot group using Math.sin(Date.now() * 0.002) * 0.1 for the Y position.
+8. **Resizing:** Ensure the canvas and the 3D scene resize automatically when the window or container is resized.
+9. **Performance:** Add the shadows prop to the canvas and enable shadowMap.
+10. **Responsive:** Make sure it looks perfect on both desktop (where mouse is used) and mobile (where touch is used, or it just stays static).
+
+This section should look like a futuristic, sleek, high-tech Jarvis robot interface.`}
       </div>
     </main>
   );
