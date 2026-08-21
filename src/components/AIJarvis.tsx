@@ -132,8 +132,9 @@ export const AIJarvis = () => {
         camera={{ position: [0, 0, 8], fov: 60 }} 
         style={{ 
           width: '100%', 
-          height: '100%',
-          display: 'block'
+          height: '600px',
+          display: 'block',
+          position: 'relative'
         }}
       >
         <color attach="background" args={["#000000"]} />
