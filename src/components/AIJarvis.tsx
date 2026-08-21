@@ -119,8 +119,7 @@ export const AIJarvis = () => {
       className="jarvis-canvas-container"
       style={{ 
         width: '100%', 
-        height: '70vh', 
-        minHeight: '600px', 
+        height: '600px', 
         background: '#000000', 
         position: 'relative', 
         overflow: 'hidden',
