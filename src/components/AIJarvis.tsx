@@ -118,7 +118,8 @@ const RobotScene = () => {
 export const AIJarvis = () => {
   return (
     <div style={{ width: '100%', height: '600px', background: '#000000', position: 'relative', overflow: 'hidden' }}>
-      <Canvas shadows camera={{ position: [0, 0, 8], fov: 60 }}>
+      <Canvas shadows camera={{ position: [0, 0, 10], fov: 60 }} style={{ position: 'absolute', top: 0, left: 0 }}>
+        <color attach="background" args={["#000000"]} />
         <ambientLight intensity={0.4} />
         <directionalLight intensity={1.5} position={[5, 5, 5]} castShadow />
         <pointLight intensity={2} position={[-3, 2, 4]} />
