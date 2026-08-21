@@ -54,13 +54,10 @@ const RobotScene = () => {
 
   const Model = () => {
     // Attempt to load a generic robot
-    const { scene, error } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/robot-log-body/model.gltf', true) as any;
-    
-    if (error || !scene) {
-      return <RobotFallback />;
-    }
+    const { scene } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/robot-log-body/model.gltf') as any;
     
     useMemo(() => {
+      if (!scene) return;
       scene.traverse((obj: any) => {
         if (obj.isMesh) {
           obj.material = new THREE.MeshStandardMaterial({
@@ -87,6 +84,7 @@ const RobotScene = () => {
 
     }, [scene]);
 
+    if (!scene) return <RobotFallback />;
     return <primitive object={scene} />;
   };
 
