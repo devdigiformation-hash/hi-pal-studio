@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Environment, ContactShadows } from "@react-three/drei";
+import { ContactShadows } from "@react-three/drei";
 import * as THREE from "three";
 
 const bodyMaterialProps = {
@@ -103,7 +103,6 @@ export const AIJarvis = () => {
         <Robot />
 
         <ContactShadows position={[0, -2.3, 0]} opacity={0.5} scale={12} blur={2.5} far={5} />
-        <Environment preset="city" />
       </Canvas>
     </div>
   );
