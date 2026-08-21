@@ -61,9 +61,9 @@ const RobotScene = () => {
     }
     
     useMemo(() => {
-      scene.traverse((obj) => {
-        if ((obj as THREE.Mesh).isMesh) {
-          (obj as THREE.Mesh).material = new THREE.MeshStandardMaterial({
+      scene.traverse((obj: any) => {
+        if (obj.isMesh) {
+          obj.material = new THREE.MeshStandardMaterial({
             color: "#111111",
             metalness: 0.95,
             roughness: 0.1,
