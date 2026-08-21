@@ -123,7 +123,10 @@ export const AIJarvis = () => {
         background: '#000000', 
         position: 'relative', 
         overflow: 'hidden',
-        zIndex: 5
+        zIndex: 5,
+        display: 'block',
+        visibility: 'visible',
+        opacity: 1
       }}
     >
       <Canvas 
