@@ -113,20 +113,21 @@ function OpenSourcePage() {
 
                                             ek page dalo whatsapp agent ka`}
             </div>
-            <Link to="/open-source/jan-ai" className="block">
-              <GlassCard glowColor="var(--cyan)" className="p-5">
+            <Link to="/open-source/whatsapp-ai-sales-agent" className="block">
+              <GlassCard glowColor="#25D366" className="p-5">
                 <p className="font-mono text-[11.5px] uppercase tracking-[0.16em] text-[var(--amber)]">
                   Free download
                 </p>
                 <h3 className="mt-2 font-display text-[18px] font-bold text-[var(--text-primary)]">
-                  Jan AI — offline ChatGPT alternative for Windows
+                  Universal WhatsApp AI Sales Agent v2.0 PRO
                 </h3>
                 <p className="mt-2 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-                  Run DeepSeek, Llama 3, Qwen and Mistral locally. 100% private, works offline, no
-                  subscription. Read the full guide and download it here.
+                  24/7 autonomous WhatsApp sales & support engine with Baileys QR pairing, Whisper
+                  voice transcription, local SQLite memory, and Markdown RAG knowledge base.
                 </p>
               </GlassCard>
             </Link>
+            <Link to="/open-source/jan-ai" className="block">
             <Link to="/open-source/anythingllm" className="block">
               <GlassCard glowColor="var(--purple)" className="p-5">
                 <p className="font-mono text-[11.5px] uppercase tracking-[0.16em] text-[var(--amber)]">
