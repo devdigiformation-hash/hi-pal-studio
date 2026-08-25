@@ -110,10 +110,23 @@ function OpenSourcePage() {
           <div className="mt-6 grid gap-4">
             <div className="hidden" aria-hidden="true">
               {`'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''
-                                        
-                                            
-                                            langflow wla page fully remove kr do`}
+
+                                            ek page dalo whatsapp agent ka`}
             </div>
+            <Link to="/open-source/whatsapp-ai-sales-agent" className="block">
+              <GlassCard glowColor="#25D366" className="p-5">
+                <p className="font-mono text-[11.5px] uppercase tracking-[0.16em] text-[var(--amber)]">
+                  Free download
+                </p>
+                <h3 className="mt-2 font-display text-[18px] font-bold text-[var(--text-primary)]">
+                  Universal WhatsApp AI Sales Agent v2.0 PRO
+                </h3>
+                <p className="mt-2 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
+                  24/7 autonomous WhatsApp sales & support engine with Baileys QR pairing, Whisper
+                  voice transcription, local SQLite memory, and Markdown RAG knowledge base.
+                </p>
+              </GlassCard>
+            </Link>
             <Link to="/open-source/jan-ai" className="block">
               <GlassCard glowColor="var(--cyan)" className="p-5">
                 <p className="font-mono text-[11.5px] uppercase tracking-[0.16em] text-[var(--amber)]">
