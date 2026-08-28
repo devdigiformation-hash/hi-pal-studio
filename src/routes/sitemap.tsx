@@ -69,6 +69,7 @@ function SiteMapPage() {
     { label: "FAQ", to: "/faq" },
     { label: "About", to: "/about" },
     { label: "Open Source Software", to: "/open-source" },
+    { label: "OpenClaw Autonomous AI Agent — Free Coding & Research Agent", to: "/open-source/openclaw" },
     { label: "Universal WhatsApp AI Sales Agent v2.0 PRO", to: "/open-source/whatsapp-ai-sales-agent" },
     { label: "Jan AI — Free Offline AI for Windows", to: "/open-source/jan-ai" },
     { label: "Tuttle Time Tracker — Free Billable Hours", to: "/open-source/tuttle" },
