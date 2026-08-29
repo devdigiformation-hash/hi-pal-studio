@@ -34,7 +34,7 @@ const TITLE =
 const DESC =
   "Download OpenHands free: the open-source autonomous AI software engineer that writes, tests and deploys code, fixes GitHub issues, and builds full-stack apps from plain English. MIT license, $0 fees.";
 
-const ZIP_URL = "https://github.com/digiformation/openhands/archive/refs/heads/main.zip";
+const ZIP_URL = openhandsZip.url;
 const WHATSAPP = "https://wa.me/923164467464";
 const COMPANY_WEBSITE = "https://www.digiformation.co.uk/";
 const LINKTREE = "https://linktr.ee/digiformationltd";
