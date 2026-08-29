@@ -41,6 +41,7 @@ import { Route as OpenSourceIndexRouteImport } from './routes/open-source.index'
 import { Route as OpenSourceAnythingllmRouteImport } from './routes/open-source.anythingllm'
 import { Route as OpenSourceJanAiRouteImport } from './routes/open-source.jan-ai'
 import { Route as OpenSourceOpenclawRouteImport } from './routes/open-source.openclaw'
+import { Route as OpenSourceOpenhandsRouteImport } from './routes/open-source.openhands'
 import { Route as OpenSourcePocketbaseRouteImport } from './routes/open-source.pocketbase'
 import { Route as OpenSourceTuttleRouteImport } from './routes/open-source.tuttle'
 import { Route as OpenSourceUpscaylRouteImport } from './routes/open-source.upscayl'
@@ -207,6 +208,11 @@ const OpenSourceOpenclawRoute = OpenSourceOpenclawRouteImport.update({
   path: '/openclaw',
   getParentRoute: () => OpenSourceRoute,
 } as any)
+const OpenSourceOpenhandsRoute = OpenSourceOpenhandsRouteImport.update({
+  id: '/openhands',
+  path: '/openhands',
+  getParentRoute: () => OpenSourceRoute,
+} as any)
 const OpenSourcePocketbaseRoute = OpenSourcePocketbaseRouteImport.update({
   id: '/pocketbase',
   path: '/pocketbase',
@@ -263,6 +269,7 @@ export interface FileRoutesByFullPath {
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/open-source/openclaw': typeof OpenSourceOpenclawRoute
+  '/open-source/openhands': typeof OpenSourceOpenhandsRoute
   '/open-source/pocketbase': typeof OpenSourcePocketbaseRoute
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
   '/open-source/upscayl': typeof OpenSourceUpscaylRoute
@@ -301,6 +308,7 @@ export interface FileRoutesByTo {
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/open-source/openclaw': typeof OpenSourceOpenclawRoute
+  '/open-source/openhands': typeof OpenSourceOpenhandsRoute
   '/open-source/pocketbase': typeof OpenSourcePocketbaseRoute
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
   '/open-source/upscayl': typeof OpenSourceUpscaylRoute
@@ -341,6 +349,7 @@ export interface FileRoutesById {
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/open-source/openclaw': typeof OpenSourceOpenclawRoute
+  '/open-source/openhands': typeof OpenSourceOpenhandsRoute
   '/open-source/pocketbase': typeof OpenSourcePocketbaseRoute
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
   '/open-source/upscayl': typeof OpenSourceUpscaylRoute
@@ -382,6 +391,7 @@ export interface FileRouteTypes {
     | '/open-source/anythingllm'
     | '/open-source/jan-ai'
     | '/open-source/openclaw'
+    | '/open-source/openhands'
     | '/open-source/pocketbase'
     | '/open-source/tuttle'
     | '/open-source/upscayl'
@@ -420,6 +430,7 @@ export interface FileRouteTypes {
     | '/open-source/anythingllm'
     | '/open-source/jan-ai'
     | '/open-source/openclaw'
+    | '/open-source/openhands'
     | '/open-source/pocketbase'
     | '/open-source/tuttle'
     | '/open-source/upscayl'
@@ -459,6 +470,7 @@ export interface FileRouteTypes {
     | '/open-source/anythingllm'
     | '/open-source/jan-ai'
     | '/open-source/openclaw'
+    | '/open-source/openhands'
     | '/open-source/pocketbase'
     | '/open-source/tuttle'
     | '/open-source/upscayl'
@@ -728,6 +740,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OpenSourceOpenclawRouteImport
       parentRoute: typeof OpenSourceRoute
     }
+    '/open-source/openhands': {
+      id: '/open-source/openhands'
+      path: '/openhands'
+      fullPath: '/open-source/openhands'
+      preLoaderRoute: typeof OpenSourceOpenhandsRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
     '/open-source/pocketbase': {
       id: '/open-source/pocketbase'
       path: '/pocketbase'
@@ -770,6 +789,7 @@ interface OpenSourceRouteChildren {
   OpenSourceAnythingllmRoute: typeof OpenSourceAnythingllmRoute
   OpenSourceJanAiRoute: typeof OpenSourceJanAiRoute
   OpenSourceOpenclawRoute: typeof OpenSourceOpenclawRoute
+  OpenSourceOpenhandsRoute: typeof OpenSourceOpenhandsRoute
   OpenSourcePocketbaseRoute: typeof OpenSourcePocketbaseRoute
   OpenSourceTuttleRoute: typeof OpenSourceTuttleRoute
   OpenSourceUpscaylRoute: typeof OpenSourceUpscaylRoute
@@ -781,6 +801,7 @@ const OpenSourceRouteChildren: OpenSourceRouteChildren = {
   OpenSourceAnythingllmRoute: OpenSourceAnythingllmRoute,
   OpenSourceJanAiRoute: OpenSourceJanAiRoute,
   OpenSourceOpenclawRoute: OpenSourceOpenclawRoute,
+  OpenSourceOpenhandsRoute: OpenSourceOpenhandsRoute,
   OpenSourcePocketbaseRoute: OpenSourcePocketbaseRoute,
   OpenSourceTuttleRoute: OpenSourceTuttleRoute,
   OpenSourceUpscaylRoute: OpenSourceUpscaylRoute,

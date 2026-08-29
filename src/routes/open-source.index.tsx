@@ -108,6 +108,21 @@ function OpenSourcePage() {
             Open software DIGI BIZ OS works with
           </h2>
           <div className="mt-6 grid gap-4">
+            <Link to="/open-source/openhands" className="block">
+              <GlassCard glowColor="#3B82F6" className="p-5">
+                <p className="font-mono text-[11.5px] uppercase tracking-[0.16em] text-[var(--amber)]">
+                  Free download
+                </p>
+                <h3 className="mt-2 font-display text-[18px] font-bold text-[var(--text-primary)]">
+                  OpenHands Autonomous AI Software Engineer (Formerly OpenDevin)
+                </h3>
+                <p className="mt-2 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
+                  The open-source alternative to Devin ($500/mo). Writes, tests and deploys code,
+                  fixes GitHub issues, and builds full-stack apps from plain English. MIT license,
+                  $0 fees.
+                </p>
+              </GlassCard>
+            </Link>
             <Link to="/open-source/openclaw" className="block">
               <GlassCard glowColor="#6366F1" className="p-5">
                 <p className="font-mono text-[11.5px] uppercase tracking-[0.16em] text-[var(--amber)]">
