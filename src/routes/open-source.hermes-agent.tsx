@@ -282,13 +282,6 @@ function HermesPage() {
               Windows 10/11 (64-bit) • macOS 13+ • Standalone Desktop Studio • NVIDIA CUDA / Metal Ready
             </p>
 
-            <div className="reveal-item delay-4 mt-6 flex flex-wrap items-center gap-4">
-              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-                <CyanButton size="md" icon={<WhatsAppIcon />} tone="37,211,102">
-                  WhatsApp Consultation (+92 316 446 7464)
-                </CyanButton>
-              </a>
-            </div>
           </div>
 
           <GlassCard glowColor="#F59E0B" className="p-3">
@@ -584,11 +577,6 @@ function HermesPage() {
                 <Link to="/pricing">
                   <CyanButton size="md">View DIGI BIZ OS Pricing</CyanButton>
                 </Link>
-                <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-                  <CyanButton size="md" variant="outline" icon={<WhatsAppIcon />} tone="37,211,102">
-                    WhatsApp Consultation
-                  </CyanButton>
-                </a>
               </div>
             </GlassCard>
           </div>

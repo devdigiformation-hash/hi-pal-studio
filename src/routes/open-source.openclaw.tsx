@@ -248,13 +248,6 @@ function OpenClawPage() {
               1-Click Desktop Installer • Windows 10/11 (64-bit) • Standalone GUI
             </p>
 
-            <div className="reveal-item delay-4 mt-6 flex flex-wrap items-center gap-4">
-              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-                <CyanButton size="md" icon={<WhatsAppIcon />} tone="37,211,102">
-                  WhatsApp Support (+92 316 446 7464)
-                </CyanButton>
-              </a>
-            </div>
           </div>
 
           <GlassCard glowColor="#6366F1" className="p-3">

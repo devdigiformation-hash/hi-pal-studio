@@ -243,11 +243,6 @@ function WhatsAppAgentPage() {
                   Download WhatsApp Sales Agent (Open-Source Repo & Installer)
                 </CyanButton>
               </a>
-              <a href={WHATSAPP_DEMO} target="_blank" rel="noopener noreferrer">
-                <CyanButton size="lg" icon={<WhatsAppIcon />} tone={WHATSAPP_EMERALD}>
-                  Test Live Demo on WhatsApp (+92 316 446 7464)
-                </CyanButton>
-              </a>
             </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
               MIT License • Unlimited WhatsApp Numbers • Zero Cloud Database Leaks
@@ -489,11 +484,6 @@ function WhatsAppAgentPage() {
             <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
               <CyanButton size="lg" icon={<DownloadIcon />}>
                 Download WhatsApp Sales Agent
-              </CyanButton>
-            </a>
-            <a href={WHATSAPP_DEMO} target="_blank" rel="noopener noreferrer">
-              <CyanButton size="lg" icon={<WhatsAppIcon />} tone={WHATSAPP_EMERALD}>
-                Test Live Demo
               </CyanButton>
             </a>
             <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
