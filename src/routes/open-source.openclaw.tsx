@@ -26,6 +26,7 @@ import MonoBadge from "@/components/MonoBadge";
 import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
+import openclawZip from "@/assets/openclaw-main.zip.asset.json";
 
 const TITLE =
   "OpenClaw Autonomous AI Agent — Free Open-Source Coding & Research Agent";
