@@ -138,6 +138,21 @@ function OpenSourcePage() {
                 </p>
               </GlassCard>
             </Link>
+            <Link to="/open-source/hermes-agent" className="block">
+              <GlassCard glowColor="#F59E0B" className="p-5">
+                <p className="font-mono text-[11.5px] uppercase tracking-[0.16em] text-[var(--amber)]">
+                  Free download
+                </p>
+                <h3 className="mt-2 font-display text-[18px] font-bold text-[var(--text-primary)]">
+                  Hermes Autonomous Reasoning & Tool Agent — free AI agent for Windows & macOS
+                </h3>
+                <p className="mt-2 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
+                  The open-source alternative to ChatGPT Pro and Claude Enterprise. Built on the Nous
+                  Hermes 3 architecture for agentic reasoning, structured function calling, and
+                  local offline execution. Apache 2.0, $0 fees.
+                </p>
+              </GlassCard>
+            </Link>
             <Link to="/open-source/whatsapp-ai-sales-agent" className="block">
               <GlassCard glowColor="#25D366" className="p-5">
                 <p className="font-mono text-[11.5px] uppercase tracking-[0.16em] text-[var(--amber)]">
