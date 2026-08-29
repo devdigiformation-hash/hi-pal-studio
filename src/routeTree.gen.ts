@@ -39,6 +39,7 @@ import { Route as FeaturesIndexRouteImport } from './routes/features.index'
 import { Route as FeaturesSlugRouteImport } from './routes/features.$slug'
 import { Route as OpenSourceIndexRouteImport } from './routes/open-source.index'
 import { Route as OpenSourceAnythingllmRouteImport } from './routes/open-source.anythingllm'
+import { Route as OpenSourceHermesAgentRouteImport } from './routes/open-source.hermes-agent'
 import { Route as OpenSourceJanAiRouteImport } from './routes/open-source.jan-ai'
 import { Route as OpenSourceOpenclawRouteImport } from './routes/open-source.openclaw'
 import { Route as OpenSourceOpenhandsRouteImport } from './routes/open-source.openhands'
@@ -198,6 +199,11 @@ const OpenSourceAnythingllmRoute = OpenSourceAnythingllmRouteImport.update({
   path: '/anythingllm',
   getParentRoute: () => OpenSourceRoute,
 } as any)
+const OpenSourceHermesAgentRoute = OpenSourceHermesAgentRouteImport.update({
+  id: '/hermes-agent',
+  path: '/hermes-agent',
+  getParentRoute: () => OpenSourceRoute,
+} as any)
 const OpenSourceJanAiRoute = OpenSourceJanAiRouteImport.update({
   id: '/jan-ai',
   path: '/jan-ai',
@@ -267,6 +273,7 @@ export interface FileRoutesByFullPath {
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
+  '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/open-source/openclaw': typeof OpenSourceOpenclawRoute
   '/open-source/openhands': typeof OpenSourceOpenhandsRoute
@@ -306,6 +313,7 @@ export interface FileRoutesByTo {
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
+  '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/open-source/openclaw': typeof OpenSourceOpenclawRoute
   '/open-source/openhands': typeof OpenSourceOpenhandsRoute
@@ -347,6 +355,7 @@ export interface FileRoutesById {
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
+  '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/open-source/openclaw': typeof OpenSourceOpenclawRoute
   '/open-source/openhands': typeof OpenSourceOpenhandsRoute
@@ -389,6 +398,7 @@ export interface FileRouteTypes {
     | '/compare/$slug'
     | '/features/$slug'
     | '/open-source/anythingllm'
+    | '/open-source/hermes-agent'
     | '/open-source/jan-ai'
     | '/open-source/openclaw'
     | '/open-source/openhands'
@@ -428,6 +438,7 @@ export interface FileRouteTypes {
     | '/compare/$slug'
     | '/features/$slug'
     | '/open-source/anythingllm'
+    | '/open-source/hermes-agent'
     | '/open-source/jan-ai'
     | '/open-source/openclaw'
     | '/open-source/openhands'
@@ -468,6 +479,7 @@ export interface FileRouteTypes {
     | '/compare/$slug'
     | '/features/$slug'
     | '/open-source/anythingllm'
+    | '/open-source/hermes-agent'
     | '/open-source/jan-ai'
     | '/open-source/openclaw'
     | '/open-source/openhands'
@@ -726,6 +738,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OpenSourceAnythingllmRouteImport
       parentRoute: typeof OpenSourceRoute
     }
+    '/open-source/hermes-agent': {
+      id: '/open-source/hermes-agent'
+      path: '/hermes-agent'
+      fullPath: '/open-source/hermes-agent'
+      preLoaderRoute: typeof OpenSourceHermesAgentRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
     '/open-source/jan-ai': {
       id: '/open-source/jan-ai'
       path: '/jan-ai'
@@ -787,6 +806,7 @@ declare module '@tanstack/react-router' {
 
 interface OpenSourceRouteChildren {
   OpenSourceAnythingllmRoute: typeof OpenSourceAnythingllmRoute
+  OpenSourceHermesAgentRoute: typeof OpenSourceHermesAgentRoute
   OpenSourceJanAiRoute: typeof OpenSourceJanAiRoute
   OpenSourceOpenclawRoute: typeof OpenSourceOpenclawRoute
   OpenSourceOpenhandsRoute: typeof OpenSourceOpenhandsRoute
@@ -799,6 +819,7 @@ interface OpenSourceRouteChildren {
 
 const OpenSourceRouteChildren: OpenSourceRouteChildren = {
   OpenSourceAnythingllmRoute: OpenSourceAnythingllmRoute,
+  OpenSourceHermesAgentRoute: OpenSourceHermesAgentRoute,
   OpenSourceJanAiRoute: OpenSourceJanAiRoute,
   OpenSourceOpenclawRoute: OpenSourceOpenclawRoute,
   OpenSourceOpenhandsRoute: OpenSourceOpenhandsRoute,
