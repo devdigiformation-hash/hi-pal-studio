@@ -17,6 +17,7 @@ import {
   Sparkles,
   Monitor,
   Apple,
+  ShieldCheck,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
