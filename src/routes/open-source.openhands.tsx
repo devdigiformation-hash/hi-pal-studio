@@ -27,6 +27,7 @@ import CyanButton from "@/components/CyanButton";
 import MonoBadge from "@/components/MonoBadge";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
+import openhandsZip from "@/assets/OpenHands-main.zip.asset.json";
 
 const TITLE =
   "OpenHands Autonomous AI Software Engineer — Free Open-Source Devin Alternative";
