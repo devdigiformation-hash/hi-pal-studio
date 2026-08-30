@@ -1297,7 +1297,7 @@ export const SEO_PAGES: SeoPage[] = [
         "Digi CRM dashboard showing business overview, contacts, companies, leads, pipeline and recent activity",
         "Digi CRM: Business overview, deals pipeline, contacts, and live activity tracking.",
       ),
-      accent: "var(--cyan)",
+      accent: "#10B981",
     },
     {
       path: "/features/digi-intelligence",
@@ -1344,7 +1344,7 @@ export const SEO_PAGES: SeoPage[] = [
         "Digi Intelligence interface with e-commerce intelligence, marketplace selectors and research history",
         "Digi Intelligence: 20-stage product research across Amazon, eBay, Walmart, TikTok & Shopify.",
       ),
-      accent: "var(--cyan)",
+      accent: "#38BDF8",
     },
     {
       path: "/features/digi-marketing",
@@ -1391,7 +1391,7 @@ export const SEO_PAGES: SeoPage[] = [
         "Digi Marketing compose post dashboard with AI caption generator and account scheduler",
         "Digi Marketing: AI caption studio, multi-account publisher, and campaign scheduler.",
       ),
-      accent: "var(--cyan)",
+      accent: "#F43F5E",
     },
     {
       path: "/features/digi-whatsapp",
@@ -1438,7 +1438,7 @@ export const SEO_PAGES: SeoPage[] = [
         "Digi WhatsApp Agent dashboard with QR pairing, number slots, and AI auto-reply toggles",
         "Digi WhatsApp: Instant QR pairing, AI auto-replies, and multi-number slots.",
       ),
-      accent: "var(--cyan)",
+      accent: "#25D366",
     },
   {
     path: "/features/digicode",
@@ -1488,7 +1488,7 @@ export const SEO_PAGES: SeoPage[] = [
       "DigiCode AI coding workspace screenshot",
       "DigiCode working inside a real project.",
     ),
-    accent: "var(--purple)",
+    accent: "#6366F1",
   },
   {
     path: "/features/digidocs",
@@ -1533,7 +1533,7 @@ export const SEO_PAGES: SeoPage[] = [
       "DigiDocs AI document and PDF workspace screenshot",
       "DigiDocs: PDF, OCR and document processing inside the OS.",
     ),
-    accent: "var(--amber)",
+    accent: "#F59E0B",
   },
   {
     path: "/features/digitools",
@@ -1583,7 +1583,7 @@ export const SEO_PAGES: SeoPage[] = [
       "DigiTools library of mixed AI and offline utilities",
       "The DigiTools library available to you and your agents.",
     ),
-    accent: "var(--cyan)",
+    accent: "#A855F7",
   },
   {
     path: "/features/digicli",
@@ -1624,7 +1624,7 @@ export const SEO_PAGES: SeoPage[] = [
       "DigiCLI terminal module inside DIGI BIZ OS",
       "DigiCLI executing commands with full history.",
     ),
-    accent: "var(--purple)",
+    accent: "#06B6D4",
   },
   {
     path: "/features/digimcp",
@@ -1673,7 +1673,7 @@ export const SEO_PAGES: SeoPage[] = [
       "DigiMCP connected services and local runners panel",
       "DigiMCP managing connected services and local runners.",
     ),
-    accent: "var(--amber)",
+    accent: "#EC4899",
   },
   {
     path: "/features/digiflow",
@@ -1717,7 +1717,7 @@ export const SEO_PAGES: SeoPage[] = [
       "DigiFlow workflow graph inside DIGI BIZ OS",
       "A DigiFlow automation chaining agents and tools.",
     ),
-    accent: "var(--cyan)",
+    accent: "#8B5CF6",
   },
   {
     path: "/features/digijobs",
@@ -1766,7 +1766,7 @@ export const SEO_PAGES: SeoPage[] = [
       "DigiJobs scheduled job monitoring in DIGI BIZ OS",
       "Scheduled jobs with live status and history.",
     ),
-    accent: "var(--purple)",
+    accent: "#F97316",
   },
   {
     path: "/features/digitasks",
@@ -1810,7 +1810,7 @@ export const SEO_PAGES: SeoPage[] = [
       "DigiTasks task tracking view in DIGI BIZ OS",
       "Task tracking with live progress and stored results.",
     ),
-    accent: "var(--amber)",
+    accent: "#14B8A6",
   },
   {
     path: "/features/ai-skills",
@@ -1859,7 +1859,7 @@ export const SEO_PAGES: SeoPage[] = [
       "AI skills library inside DIGI BIZ OS",
       "The skills panel: hundreds of reusable capabilities.",
     ),
-    accent: "var(--cyan)",
+    accent: "#EAB308",
   },
   {
     path: "/features/ai-tools",
@@ -1909,7 +1909,7 @@ export const SEO_PAGES: SeoPage[] = [
       "Mixed AI tools panel inside DIGI BIZ OS",
       "Mixed tools: files, system, documents and productivity utilities.",
     ),
-    accent: "var(--purple)",
+    accent: "#3B82F6",
   },
   {
     path: "/features/ai-models",
@@ -1954,7 +1954,7 @@ export const SEO_PAGES: SeoPage[] = [
       "Model and provider selection inside the Digi AI hub",
       "Providers and models managed from the Digi AI hub.",
     ),
-    accent: "var(--amber)",
+    accent: "#D946EF",
   },
   {
     path: "/features/memory",
@@ -2000,7 +2000,7 @@ export const SEO_PAGES: SeoPage[] = [
       "Memory and personas configuration inside DIGI BIZ OS",
       "Memories and personas shaping how the OS behaves.",
     ),
-    accent: "var(--cyan)",
+    accent: "#818CF8",
   },
   {
     path: "/features/offline-ai",
@@ -2049,7 +2049,7 @@ export const SEO_PAGES: SeoPage[] = [
       "Local runtime execution inside DIGI BIZ OS",
       "Local runtime: execution on your own machine.",
     ),
-    accent: "var(--purple)",
+    accent: "#10B981",
   },
   {
     path: "/features/computer-use",
@@ -2099,7 +2099,7 @@ export const SEO_PAGES: SeoPage[] = [
       "Desktop control tools inside DIGI BIZ OS",
       "Desktop control surfaces for files, system and applications.",
     ),
-    accent: "var(--amber)",
+    accent: "#F43F5E",
   },
   {
     path: "/features/voice-assistant",
@@ -2148,7 +2148,7 @@ export const SEO_PAGES: SeoPage[] = [
       "Voice transcript panel inside DIGI BIZ OS",
       "Live voice transcription driving real execution.",
     ),
-    accent: "var(--cyan)",
+    accent: "#00E5FF",
   },
   {
     path: "/features/business-automation",
@@ -2198,7 +2198,7 @@ export const SEO_PAGES: SeoPage[] = [
       "Business automation modules inside DIGI BIZ OS",
       "Operational modules inside a single OS.",
     ),
-    accent: "var(--purple)",
+    accent: "#22C55E",
   },
   /* ------------------------------------------------------------------ */
   /* JARVIS CLUSTER EXPANSION                                           */

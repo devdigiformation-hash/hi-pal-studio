@@ -39,29 +39,57 @@ export const Route = createFileRoute("/features/")({
 
 function Grid({ pages }: { pages: typeof FEATURE_PAGES }) {
   return (
-    <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {pages.map((p) => (
-        <Link key={p.path} to={p.path} className="group block h-full">
-          <GlassCard glowColor={p.accent ?? "var(--cyan)"} className="h-full p-6">
-            <span
-              className="font-display text-[11px] font-semibold uppercase tracking-[0.16em]"
-              style={{ color: p.accent ?? "var(--cyan)" }}
+    <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {pages.map((p) => {
+        const accent = p.accent || "#2FE0C8";
+        return (
+          <Link key={p.path} to={p.path} className="group block h-full">
+            <GlassCard
+              glowColor={accent}
+              className="relative flex h-full flex-col justify-between overflow-hidden p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/25"
             >
-              {p.eyebrow}
-            </span>
-            <h3 className="mt-3 font-display text-[17px] font-bold text-[var(--text-primary)]">
-              {p.h1} {p.h1Gradient}
-            </h3>
-            <p className="mt-2 line-clamp-3 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-              {p.metaDescription}
-            </p>
-            <span className="mt-4 inline-flex items-center gap-1.5 font-display text-[12.5px] font-semibold text-[var(--cyan)]">
-              View {p.h1} details{" "}
-              <ArrowRight size={13} className="transition-transform group-hover:translate-x-0.5" />
-            </span>
-          </GlassCard>
-        </Link>
-      ))}
+              <div>
+                <div className="flex items-center justify-between">
+                  <span
+                    className="inline-block rounded-full border px-2.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-[0.16em]"
+                    style={{
+                      color: accent,
+                      borderColor: `${accent}40`,
+                      background: `${accent}15`,
+                    }}
+                  >
+                    {p.eyebrow}
+                  </span>
+                  <span
+                    className="h-2 w-2 rounded-full"
+                    style={{ background: accent, boxShadow: `0 0 10px ${accent}` }}
+                  />
+                </div>
+
+                <h3 className="mt-4 font-display text-[18px] font-bold text-[var(--text-primary)] transition group-hover:text-[var(--cyan)]">
+                  {p.h1} {p.h1Gradient}
+                </h3>
+                <p className="mt-2 line-clamp-3 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
+                  {p.metaDescription}
+                </p>
+              </div>
+
+              <div className="mt-5 border-t border-white/10 pt-4 flex items-center justify-between">
+                <span
+                  className="inline-flex items-center gap-1.5 font-display text-[12.5px] font-semibold transition-all group-hover:translate-x-1"
+                  style={{ color: accent }}
+                >
+                  <span>Explore {p.eyebrow}</span>
+                  <ArrowRight size={13} />
+                </span>
+                <span className="font-mono text-[10.5px] text-[var(--text-tertiary)]">
+                  Module
+                </span>
+              </div>
+            </GlassCard>
+          </Link>
+        );
+      })}
     </div>
   );
 }
