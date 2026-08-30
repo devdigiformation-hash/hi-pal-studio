@@ -1,18 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import HeroSection from "@/components/home/HeroSection";
-import TelemetryTicker from "@/components/home/TelemetryTicker";
-import SoftwareShowcase from "@/components/home/SoftwareShowcase";
-import ModulesGrid from "@/components/home/ModulesGrid";
-import CapabilityVault from "@/components/home/CapabilityVault";
-import FourPillars from "@/components/home/FourPillars";
-import ProductWorkbench from "@/components/home/ProductWorkbench";
-import ModelsSection from "@/components/home/ModelsSection";
-import CodebaseIntelligence from "@/components/home/CodebaseIntelligence";
-import WorkflowsSection from "@/components/home/WorkflowsSection";
-import LiveTrackingSection from "@/components/home/LiveTrackingSection";
-import BuildYourOwn from "@/components/home/BuildYourOwn";
-import VisionShowcase from "@/components/home/VisionShowcase";
-import SourceCodeSection from "@/components/home/SourceCodeSection";
+import CommandCore3D from "@/components/home/CommandCore3D";
 import ComparisonMatrix from "@/components/home/ComparisonMatrix";
 import UseCases from "@/components/home/UseCases";
 import SocialProof from "@/components/home/SocialProof";
@@ -45,21 +32,8 @@ export const Route = createFileRoute("/")({
 
 function HomePage() {
   return (
-    <main className="min-h-screen pt-[60px] md:pt-[72px]">
-      <HeroSection />
-      <TelemetryTicker />
-      <SoftwareShowcase />
-      <ModulesGrid />
-      <CapabilityVault />
-      <FourPillars />
-      <ProductWorkbench />
-      <ModelsSection />
-      <CodebaseIntelligence />
-      <WorkflowsSection />
-      <LiveTrackingSection />
-      <BuildYourOwn />
-      <VisionShowcase />
-      <SourceCodeSection />
+    <main className="min-h-screen pt-[60px] md:pt-[72px] bg-[#05070B]">
+      <CommandCore3D />
       <ComparisonMatrix />
       <UseCases />
       <SocialProof />
