@@ -164,8 +164,8 @@ export const SEO_PAGES: SeoPage[] = [
       ...CTA_CORE,
     ],
     image: img(
-      { url: jarvisRobot },
-      "Futuristic humanoid AI robot in profile, representing the JARVIS-style assistant",
+      osMain,
+      "DIGI BIZ OS JARVIS-style AI assistant dashboard interface with live globe and voice controls",
       "JARVIS-style intelligence: an assistant built to listen, plan and execute.",
     ),
     accent: "var(--cyan)",
