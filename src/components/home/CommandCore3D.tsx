@@ -314,82 +314,9 @@ export default function CommandCore3D() {
     const spherePoints = new THREE.Points(sphereGeo, sphereMat);
     coreRoot.add(spherePoints);
 
-    const ringCount = 900;
-    const ringGeo = new THREE.BufferGeometry();
-    const ringPositions = new Float32Array(ringCount * 3);
-    const ringColors = new Float32Array(ringCount * 3);
-
-    for (let i = 0; i < ringCount; i++) {
-      const angle = Math.random() * Math.PI * 2;
-      const dist = 1.6 + Math.random() * 1.1;
-      const isCassini = dist > 2.05 && dist < 2.22;
-
-      const x = Math.cos(angle) * dist;
-      const z = Math.sin(angle) * dist;
-      const y = (Math.random() - 0.5) * 0.04;
-
-      ringPositions[i * 3] = x;
-      ringPositions[i * 3 + 1] = y;
-      ringPositions[i * 3 + 2] = z;
-
-      const alpha = isCassini ? 0.2 : 0.85;
-      ringColors[i * 3] = 0.18 * alpha;
-      ringColors[i * 3 + 1] = 0.88 * alpha;
-      ringColors[i * 3 + 2] = 0.78 * alpha;
-    }
-    ringGeo.setAttribute("position", new THREE.BufferAttribute(ringPositions, 3));
-    ringGeo.setAttribute("color", new THREE.BufferAttribute(ringColors, 3));
-
-    const ringMat = new THREE.PointsMaterial({
-      size: 0.042,
-      vertexColors: true,
-      transparent: true,
-      opacity: 0.75,
-      blending: THREE.AdditiveBlending,
-    });
-    const ringPoints = new THREE.Points(ringGeo, ringMat);
-    ringPoints.rotation.x = 0.38;
-    coreRoot.add(ringPoints);
-
-    const cageGroup = new THREE.Group();
-    coreRoot.add(cageGroup);
-
-    const gimbalTorus1 = new THREE.Mesh(
-      new THREE.TorusGeometry(2.1, 0.035, 16, 100),
-      new THREE.MeshStandardMaterial({ color: 0x181e26, metalness: 0.9, roughness: 0.2 })
-    );
-    cageGroup.add(gimbalTorus1);
-
-    const gimbalTorus2 = new THREE.Mesh(
-      new THREE.TorusGeometry(1.85, 0.028, 16, 100),
-      new THREE.MeshStandardMaterial({ color: 0x222a35, metalness: 0.85, roughness: 0.35 })
-    );
-    gimbalTorus2.rotation.x = Math.PI / 2.8;
-    cageGroup.add(gimbalTorus2);
-
-    const gimbalTorus3 = new THREE.Mesh(
-      new THREE.TorusGeometry(1.65, 0.022, 16, 100),
-      new THREE.MeshStandardMaterial({
-        color: 0x2fe0c8,
-        emissive: 0x2fe0c8,
-        emissiveIntensity: 0.4,
-        metalness: 0.5,
-        roughness: 0.1,
-      })
-    );
-    gimbalTorus3.rotation.y = Math.PI / 2.2;
-    cageGroup.add(gimbalTorus3);
-
-    for (let i = 0; i < 6; i++) {
-      const theta = (i * Math.PI) / 3;
-      const connector = new THREE.Mesh(
-        new THREE.CylinderGeometry(0.08, 0.08, 0.25, 6),
-        new THREE.MeshStandardMaterial({ color: 0x3d4959, metalness: 0.95, roughness: 0.15 })
-      );
-      connector.position.set(Math.cos(theta) * 2.1, Math.sin(theta) * 2.1, 0);
-      connector.rotation.z = theta;
-      cageGroup.add(connector);
-    }
+    // Rings removed on the owner's instruction — no Saturn/Cassini particle
+    // ring, no black gimbal toruses, no metal connectors. Only the Jupiter
+    // particle globe remains.
 
     const moduleMeshes: {
       meshGroup: THREE.Group;
@@ -526,7 +453,6 @@ export default function CommandCore3D() {
       coreRoot.rotation.x = Math.sin(elapsed * 0.3) * 0.08 + (p > 0.3 && p < 0.6 ? 0.2 : 0);
 
       spherePoints.rotation.y = elapsed * 0.08;
-      ringPoints.rotation.z = -elapsed * 0.05;
 
       const posAttr = ribbonGeo.attributes.position as THREE.BufferAttribute;
       const waveFreq = p > 0.15 ? 12 : 5;
@@ -585,8 +511,6 @@ export default function CommandCore3D() {
       renderer.dispose();
       sphereGeo.dispose();
       sphereMat.dispose();
-      ringGeo.dispose();
-      ringMat.dispose();
       ribbonGeo.dispose();
     };
   }, []);
