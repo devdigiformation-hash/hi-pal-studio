@@ -4,7 +4,8 @@ import { buildMeta, breadcrumbLd, softwareLd } from "@/lib/seo";
 
 const PATH = "/integrations";
 const TITLE = "Integrations & DigiMCP — Connect Your Business Tools | DIGI BIZ OS";
-const DESC = "Connect DIGI BIZ OS to the platforms your business already runs on with multi-MCP connectivity, local runners and 150+ agent-accessible tools.";
+const DESC =
+  "Connect DIGI BIZ OS to the platforms your business already runs on with multi-MCP connectivity, local runners and 150+ agent-accessible tools.";
 
 export const Route = createFileRoute("/integrations")({
   head: () => {

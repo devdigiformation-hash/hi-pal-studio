@@ -9,7 +9,12 @@ interface GlassCardProps {
   style?: CSSProperties;
 }
 
-export default function GlassCard({ children, glowColor = "var(--cyan)", className, style }: GlassCardProps) {
+export default function GlassCard({
+  children,
+  glowColor = "var(--cyan)",
+  className,
+  style,
+}: GlassCardProps) {
   const { ref, onMouseMove, onMouseLeave } = useMouseGlow<HTMLDivElement>();
 
   return (

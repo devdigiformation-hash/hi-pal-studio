@@ -59,10 +59,30 @@ const FEATURES = [
 ];
 
 const COMPARISON = [
-  { label: "Pricing", tuttle: "$0 — Free forever", toggl: "$120 / user / year", clockify: "$119 / user / year" },
-  { label: "Data privacy", tuttle: "100% local on your PC", toggl: "Store daily habits on cloud servers", clockify: "Store daily habits on cloud servers" },
-  { label: "User limits", tuttle: "Unlimited tasks & clients", toggl: "Locked behind paid tiers", clockify: "Locked behind paid tiers" },
-  { label: "Offline mode", tuttle: "Full offline tracking", toggl: "Requires active cloud connection", clockify: "Requires active cloud connection" },
+  {
+    label: "Pricing",
+    tuttle: "$0 — Free forever",
+    toggl: "$120 / user / year",
+    clockify: "$119 / user / year",
+  },
+  {
+    label: "Data privacy",
+    tuttle: "100% local on your PC",
+    toggl: "Store daily habits on cloud servers",
+    clockify: "Store daily habits on cloud servers",
+  },
+  {
+    label: "User limits",
+    tuttle: "Unlimited tasks & clients",
+    toggl: "Locked behind paid tiers",
+    clockify: "Locked behind paid tiers",
+  },
+  {
+    label: "Offline mode",
+    tuttle: "Full offline tracking",
+    toggl: "Requires active cloud connection",
+    clockify: "Requires active cloud connection",
+  },
 ];
 
 const REQUIREMENTS = [
@@ -126,7 +146,10 @@ function TuttlePage() {
         />
         <div className="mx-auto grid max-w-[1180px] items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
           <div>
-            <EyebrowLabel text="100% Free & Open-Source Time Tracking & Productivity Suite" color="var(--amber)" />
+            <EyebrowLabel
+              text="100% Free & Open-Source Time Tracking & Productivity Suite"
+              color="var(--amber)"
+            />
             <p className="reveal-item mt-5 font-display text-[15px] font-bold uppercase tracking-[0.18em] text-[var(--cyan)]">
               Tuttle Time Tracker
             </p>
@@ -137,14 +160,16 @@ function TuttlePage() {
               </GradientText>
             </h1>
             <p className="reveal-item delay-2 mt-6 max-w-[640px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[16.5px]">
-              The ultimate privacy-first desktop time tracker for freelancers, developers, and agency
-              teams. Track project tasks, billable hours, and generate professional timesheet reports
-              with zero cloud surveillance.
+              The ultimate privacy-first desktop time tracker for freelancers, developers, and
+              agency teams. Track project tasks, billable hours, and generate professional timesheet
+              reports with zero cloud surveillance.
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
               <a href={DOWNLOAD_URL} download="Tuttle-Setup.exe">
-                <CyanButton size="lg" icon={<WindowsIcon />}>Download Tuttle for Windows</CyanButton>
+                <CyanButton size="lg" icon={<WindowsIcon />}>
+                  Download Tuttle for Windows
+                </CyanButton>
               </a>
             </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
@@ -291,9 +316,14 @@ function TuttlePage() {
           </h2>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a href={DOWNLOAD_URL} download="Tuttle-Setup.exe">
-              <CyanButton size="lg" icon={<WindowsIcon />}>Download Tuttle for Windows</CyanButton>
+              <CyanButton size="lg" icon={<WindowsIcon />}>
+                Download Tuttle for Windows
+              </CyanButton>
             </a>
-            <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
+            <Link
+              to="/open-source"
+              className="font-body text-[14px] text-[var(--cyan)] hover:underline"
+            >
               Back to open source software
             </Link>
           </div>

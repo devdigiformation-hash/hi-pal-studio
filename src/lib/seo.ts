@@ -83,7 +83,12 @@ export function faqLd(items: { q: string; a: string }[]) {
   };
 }
 
-export function articleLd(opts: { title: string; description: string; path: string; date: string }) {
+export function articleLd(opts: {
+  title: string;
+  description: string;
+  path: string;
+  date: string;
+}) {
   const iso = /T/.test(opts.date) ? opts.date : `${opts.date}T09:00:00+00:00`;
   return {
     "@context": "https://schema.org",

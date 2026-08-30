@@ -1,4 +1,14 @@
-import { Bot, Code2, FileText, Wrench, Terminal, Plug, Sparkles, MousePointerClick, type LucideIcon } from "lucide-react";
+import {
+  Bot,
+  Code2,
+  FileText,
+  Wrench,
+  Terminal,
+  Plug,
+  Sparkles,
+  MousePointerClick,
+  type LucideIcon,
+} from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
@@ -21,7 +31,11 @@ const MODULES: Module[] = [
     title: "Digi AI",
     badge: "200+ Models",
     body: "Talk or type to one assistant that carries your memory, sees your screen and executes across the machine.",
-    bullets: ["Voice + chat in one thread", "Screen & camera awareness", "Custom memory and persona"],
+    bullets: [
+      "Voice + chat in one thread",
+      "Screen & camera awareness",
+      "Custom memory and persona",
+    ],
   },
   {
     icon: Code2,
@@ -45,7 +59,11 @@ const MODULES: Module[] = [
     title: "Digi Tools",
     badge: "100+ Offline Utilities",
     body: "Crypto, encoding, converters, generators and analysers — searchable, favouritable and fully offline, so nothing you paste ever leaves the machine.",
-    bullets: ["Instant search & favourites", "Hashing, encoding, formatting", "Zero network required"],
+    bullets: [
+      "Instant search & favourites",
+      "Hashing, encoding, formatting",
+      "Zero network required",
+    ],
   },
   {
     icon: Terminal,
@@ -53,7 +71,11 @@ const MODULES: Module[] = [
     title: "Digi CLI",
     badge: "Local Runners",
     body: "Connect local runners for scripting, version control, document parsing, retrieval and web research — each one toggled live.",
-    bullets: ["One-click connect / disconnect", "Capabilities listed up front", "Add your own runners"],
+    bullets: [
+      "One-click connect / disconnect",
+      "Capabilities listed up front",
+      "Add your own runners",
+    ],
   },
   {
     icon: Plug,
@@ -114,7 +136,10 @@ export default function ModulesGrid() {
                   </p>
                   <ul className="mt-5 space-y-2">
                     {m.bullets.map((b) => (
-                      <li key={b} className="flex gap-2 font-body text-[12.5px] text-[var(--text-muted)]">
+                      <li
+                        key={b}
+                        className="flex gap-2 font-body text-[12.5px] text-[var(--text-muted)]"
+                      >
                         <span style={{ color: m.color }}>✓</span>
                         {b}
                       </li>

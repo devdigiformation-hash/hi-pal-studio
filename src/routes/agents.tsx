@@ -4,7 +4,8 @@ import { buildMeta, breadcrumbLd, softwareLd } from "@/lib/seo";
 
 const PATH = "/agents";
 const TITLE = "AI Agents — Multi-Agent Platform for Real Work | DIGI BIZ OS";
-const DESC = "A multi-agent AI platform on your desktop: specialist agents with skills and tools that plan, delegate and execute business work with live tracking.";
+const DESC =
+  "A multi-agent AI platform on your desktop: specialist agents with skills and tools that plan, delegate and execute business work with live tracking.";
 
 export const Route = createFileRoute("/agents")({
   head: () => {

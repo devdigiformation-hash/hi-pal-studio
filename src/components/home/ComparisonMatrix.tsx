@@ -34,7 +34,10 @@ export default function ComparisonMatrix() {
         <div className="text-center">
           <EyebrowLabel text="Why DIGI BIZ OS" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            Leave Browser AI <GradientText from="#F5A623" to="#4DA3FF">in the Dust.</GradientText>
+            Leave Browser AI{" "}
+            <GradientText from="#F5A623" to="#4DA3FF">
+              in the Dust.
+            </GradientText>
           </h2>
         </div>
 
@@ -70,10 +73,7 @@ export default function ComparisonMatrix() {
                     <td className="px-6 py-4 font-body text-[14px] text-[var(--text-secondary)]">
                       {label}
                     </td>
-                    <td
-                      className="px-4 py-4"
-                      style={{ background: "rgba(47,224,200,0.05)" }}
-                    >
+                    <td className="px-4 py-4" style={{ background: "rgba(47,224,200,0.05)" }}>
                       <Mark on={a} />
                     </td>
                     <td className="px-4 py-4">

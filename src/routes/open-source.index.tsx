@@ -132,9 +132,9 @@ function OpenSourcePage() {
                   OpenClaw Autonomous AI Agent — free coding & research agent for Windows
                 </h3>
                 <p className="mt-2 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-                  The open-source alternative to Devin and Manus AI. Researches the web, writes code,
-                  runs terminal commands, debugs itself, and delivers complete projects. 100% local,
-                  $0 fees.
+                  The open-source alternative to Devin and Manus AI. Researches the web, writes
+                  code, runs terminal commands, debugs itself, and delivers complete projects. 100%
+                  local, $0 fees.
                 </p>
               </GlassCard>
             </Link>
@@ -147,8 +147,8 @@ function OpenSourcePage() {
                   Hermes Autonomous Reasoning & Tool Agent — free AI agent for Windows & macOS
                 </h3>
                 <p className="mt-2 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-                  The open-source alternative to ChatGPT Pro and Claude Enterprise. Built on the Nous
-                  Hermes 3 architecture for agentic reasoning, structured function calling, and
+                  The open-source alternative to ChatGPT Pro and Claude Enterprise. Built on the
+                  Nous Hermes 3 architecture for agentic reasoning, structured function calling, and
                   local offline execution. Apache 2.0, $0 fees.
                 </p>
               </GlassCard>
@@ -205,7 +205,8 @@ function OpenSourcePage() {
                 </h3>
                 <p className="mt-2 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
                   Track project tasks, billable hours, and client timesheets 100% privately. Offline
-                  time tracking with CSV, Excel & PDF export. Read the full guide and download it here.
+                  time tracking with CSV, Excel & PDF export. Read the full guide and download it
+                  here.
                 </p>
               </GlassCard>
             </Link>
@@ -218,8 +219,9 @@ function OpenSourcePage() {
                   PocketBase Backend — free database, auth & storage server for Windows
                 </h3>
                 <p className="mt-2 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-                  Launch an enterprise-grade SQLite database, real-time subscriptions, user authentication
-                  and file storage in a single 32 MB executable. Read the full guide and download it here.
+                  Launch an enterprise-grade SQLite database, real-time subscriptions, user
+                  authentication and file storage in a single 32 MB executable. Read the full guide
+                  and download it here.
                 </p>
               </GlassCard>
             </Link>
@@ -265,9 +267,9 @@ function OpenSourcePage() {
               Own the code, not just a seat
             </h2>
             <p className="mt-4 font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]">
-              The Source Code Licence gives you the complete codebase of DIGI BIZ OS so your team can
-              audit it, extend it, rebrand it and ship it as your own product — a one-time payment of
-              £199.
+              The Source Code Licence gives you the complete codebase of DIGI BIZ OS so your team
+              can audit it, extend it, rebrand it and ship it as your own product — a one-time
+              payment of £199.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-4">
               <Link to="/checkout" search={{ plan: "source_code" }}>

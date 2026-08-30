@@ -16,7 +16,7 @@ const TITLE = "Upscayl AI Image Enhancer — Free Offline Upscaler for Windows";
 const DESC =
   "Download Upscayl free: enhance, sharpen, and upscale images locally on your Windows PC. 100% private, no watermarks, unlimited processing, no subscription.";
 
-const DOWNLOAD_URL = upscaylSetup.url; 
+const DOWNLOAD_URL = upscaylSetup.url;
 const WHATSAPP = "https://wa.me/923164467464";
 
 const FEATURES = [
@@ -116,12 +116,15 @@ function UpscaylPage() {
               </GradientText>
             </h1>
             <p className="reveal-item delay-2 mt-6 max-w-[640px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[16.5px]">
-              Upscayl uses powerful AI models to upscale your images without losing quality. Enhance blurry photos, sharpen graphics, and upscale digital art — all on your own machine.
+              Upscayl uses powerful AI models to upscale your images without losing quality. Enhance
+              blurry photos, sharpen graphics, and upscale digital art — all on your own machine.
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
               <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
-                <CyanButton size="lg" icon={<WindowsIcon />}>Download Upscayl</CyanButton>
+                <CyanButton size="lg" icon={<WindowsIcon />}>
+                  Download Upscayl
+                </CyanButton>
               </a>
             </div>
           </div>
@@ -220,9 +223,14 @@ function UpscaylPage() {
           </h2>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
-              <CyanButton size="lg" icon={<WindowsIcon />}>Download Upscayl</CyanButton>
+              <CyanButton size="lg" icon={<WindowsIcon />}>
+                Download Upscayl
+              </CyanButton>
             </a>
-            <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
+            <Link
+              to="/open-source"
+              className="font-body text-[14px] text-[var(--cyan)] hover:underline"
+            >
               Back to open source software
             </Link>
           </div>

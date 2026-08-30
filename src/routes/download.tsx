@@ -14,24 +14,44 @@ const DESC =
   "Download DIGI BIZ OS for Windows 10 and 11. Install the voice-first AI business operating system, activate your lifetime licence and start running work by voice.";
 
 const STEPS = [
-  { title: "Choose your licence", body: "Pick Lifetime Access, the Source Code Licence or a Custom Build on the pricing page." },
-  { title: "Complete payment", body: "Pay by mobile account or bank transfer in PKR, GBP or USD at checkout." },
-  { title: "Receive your files", body: "Your download link and licence key are emailed once payment is confirmed." },
-  { title: "Install and activate", body: "Run the installer on Windows 10 or 11, enter your key and start speaking." },
+  {
+    title: "Choose your licence",
+    body: "Pick Lifetime Access, the Source Code Licence or a Custom Build on the pricing page.",
+  },
+  {
+    title: "Complete payment",
+    body: "Pay by mobile account or bank transfer in PKR, GBP or USD at checkout.",
+  },
+  {
+    title: "Receive your files",
+    body: "Your download link and licence key are emailed once payment is confirmed.",
+  },
+  {
+    title: "Install and activate",
+    body: "Run the installer on Windows 10 or 11, enter your key and start speaking.",
+  },
 ];
 
 const PLATFORMS = [
   { name: "Windows 10 & 11", status: "Available now", live: true },
   { name: "macOS", status: "Coming soon", live: false },
   { name: "Linux", status: "Coming soon", live: false },
-  
 ];
 
 const FAQ = [
-  { q: "Which Windows versions are supported?", a: "Windows 10 and Windows 11. macOS, Linux and a mobile companion are in development." },
-  { q: "How do I get the download link?", a: "It is emailed to the address you provide at checkout once your payment is confirmed." },
+  {
+    q: "Which Windows versions are supported?",
+    a: "Windows 10 and Windows 11. macOS, Linux and a mobile companion are in development.",
+  },
+  {
+    q: "How do I get the download link?",
+    a: "It is emailed to the address you provide at checkout once your payment is confirmed.",
+  },
   { q: "Is there a subscription?", a: "No. Lifetime Access is a single one-time payment." },
-  { q: "How long does installation take?", a: "A few minutes: run the installer, enter your licence key and the workspace opens." },
+  {
+    q: "How long does installation take?",
+    a: "A few minutes: run the installer, enter your licence key and the workspace opens.",
+  },
 ];
 
 export const Route = createFileRoute("/download")({
@@ -134,12 +154,18 @@ function DownloadPage() {
           </h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {PLATFORMS.map((p) => (
-              <GlassCard key={p.name} glowColor={p.live ? "var(--cyan)" : "var(--purple)"} className="p-6">
+              <GlassCard
+                key={p.name}
+                glowColor={p.live ? "var(--cyan)" : "var(--purple)"}
+                className="p-6"
+              >
                 <MonitorSmartphone size={18} color={p.live ? "var(--cyan)" : "var(--text-muted)"} />
                 <h3 className="mt-3 font-display text-[15.5px] font-bold text-[var(--text-primary)]">
                   {p.name}
                 </h3>
-                <p className="mt-1 font-body text-[13px] text-[var(--text-secondary)]">{p.status}</p>
+                <p className="mt-1 font-body text-[13px] text-[var(--text-secondary)]">
+                  {p.status}
+                </p>
               </GlassCard>
             ))}
           </div>

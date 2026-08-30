@@ -8,8 +8,7 @@ export const Route = createFileRoute("/order/$ref")({
       { title: "Your Order — DIGI BIZ OS" },
       {
         name: "description",
-        content:
-          "Track your DIGI BIZ OS order, send payment proof and get your licence activated.",
+        content: "Track your DIGI BIZ OS order, send payment proof and get your licence activated.",
       },
       { property: "og:title", content: "Your Order — DIGI BIZ OS" },
       { property: "og:description", content: "Order status and licence activation." },

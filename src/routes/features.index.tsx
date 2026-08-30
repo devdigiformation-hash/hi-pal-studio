@@ -29,9 +29,7 @@ export const Route = createFileRoute("/features/")({
         },
         {
           type: "application/ld+json",
-          children: JSON.stringify(
-            softwareLd("DIGI BIZ OS", DESC, "/features"),
-          ),
+          children: JSON.stringify(softwareLd("DIGI BIZ OS", DESC, "/features")),
         },
       ],
     };
@@ -58,7 +56,8 @@ function Grid({ pages }: { pages: typeof FEATURE_PAGES }) {
               {p.metaDescription}
             </p>
             <span className="mt-4 inline-flex items-center gap-1.5 font-display text-[12.5px] font-semibold text-[var(--cyan)]">
-              View {p.h1} details <ArrowRight size={13} className="transition-transform group-hover:translate-x-0.5" />
+              View {p.h1} details{" "}
+              <ArrowRight size={13} className="transition-transform group-hover:translate-x-0.5" />
             </span>
           </GlassCard>
         </Link>

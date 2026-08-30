@@ -69,10 +69,22 @@ function SiteMapPage() {
     { label: "FAQ", to: "/faq" },
     { label: "About", to: "/about" },
     { label: "Open Source Software", to: "/open-source" },
-    { label: "OpenHands Autonomous AI Software Engineer — Free Devin Alternative", to: "/open-source/openhands" },
-    { label: "OpenClaw Autonomous AI Agent — Free Coding & Research Agent", to: "/open-source/openclaw" },
-    { label: "Hermes Autonomous Reasoning & Tool Agent — Free AI Agent for Windows & macOS", to: "/open-source/hermes-agent" },
-    { label: "Universal WhatsApp AI Sales Agent v2.0 PRO", to: "/open-source/whatsapp-ai-sales-agent" },
+    {
+      label: "OpenHands Autonomous AI Software Engineer — Free Devin Alternative",
+      to: "/open-source/openhands",
+    },
+    {
+      label: "OpenClaw Autonomous AI Agent — Free Coding & Research Agent",
+      to: "/open-source/openclaw",
+    },
+    {
+      label: "Hermes Autonomous Reasoning & Tool Agent — Free AI Agent for Windows & macOS",
+      to: "/open-source/hermes-agent",
+    },
+    {
+      label: "Universal WhatsApp AI Sales Agent v2.0 PRO",
+      to: "/open-source/whatsapp-ai-sales-agent",
+    },
     { label: "Jan AI — Free Offline AI for Windows", to: "/open-source/jan-ai" },
     { label: "Tuttle Time Tracker — Free Billable Hours", to: "/open-source/tuttle" },
     { label: "PocketBase Backend — Free Database & Auth Server", to: "/open-source/pocketbase" },
@@ -112,7 +124,10 @@ function SiteMapPage() {
             />
             <Group
               title="Comparisons"
-              links={COMPARE_PAGES.map((p) => ({ label: `DIGI BIZ OS vs ${p.competitor}`, to: `/compare/${p.slug}` }))}
+              links={COMPARE_PAGES.map((p) => ({
+                label: `DIGI BIZ OS vs ${p.competitor}`,
+                to: `/compare/${p.slug}`,
+              }))}
             />
             <Group
               title="Blog articles"

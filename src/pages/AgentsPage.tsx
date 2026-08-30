@@ -71,9 +71,9 @@ export default function AgentTownPage() {
               One Task. <GradientText>Ten Agents. Zero Chaos.</GradientText>
             </h2>
             <p className="reveal-item delay-2 mt-5 max-w-[560px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
-              DIGI BIZ OS delegates complex work to multi specialised
-              sub-agents running simultaneously. Research, code audit, data extraction, email
-              drafting, and browser automation — all at once.
+              DIGI BIZ OS delegates complex work to multi specialised sub-agents running
+              simultaneously. Research, code audit, data extraction, email drafting, and browser
+              automation — all at once.
             </p>
 
             <div className="reveal-item delay-3 mt-7 flex flex-wrap gap-2">
@@ -123,13 +123,34 @@ export default function AgentTownPage() {
               className="mt-5"
               speed={9}
               lines={[
-                { text: '● Research Agent     [RUNNING]  Task: "Market research lookup"', color: "var(--cyan)" },
-                { text: "● Browser Agent      [RUNNING]  Task: web research", color: "var(--cyan)" },
-                { text: "● Email Agent        [IDLE]     Queue: 3 pending", color: "var(--text-muted)" },
-                { text: '● CLI Agent          [RUNNING]  Cmd: "extract_pdf"', color: "var(--purple)" },
-                { text: "● Memory Agent       [ACTIVE]   Indexing: 847 entries", color: "var(--amber)" },
-                { text: "● Calendar Agent     [IDLE]     Queue: 1 pending", color: "var(--text-muted)" },
-                { text: "● Finance Agent      [RUNNING]  Task: invoice reconcile", color: "var(--cyan)" },
+                {
+                  text: '● Research Agent     [RUNNING]  Task: "Market research lookup"',
+                  color: "var(--cyan)",
+                },
+                {
+                  text: "● Browser Agent      [RUNNING]  Task: web research",
+                  color: "var(--cyan)",
+                },
+                {
+                  text: "● Email Agent        [IDLE]     Queue: 3 pending",
+                  color: "var(--text-muted)",
+                },
+                {
+                  text: '● CLI Agent          [RUNNING]  Cmd: "extract_pdf"',
+                  color: "var(--purple)",
+                },
+                {
+                  text: "● Memory Agent       [ACTIVE]   Indexing: 847 entries",
+                  color: "var(--amber)",
+                },
+                {
+                  text: "● Calendar Agent     [IDLE]     Queue: 1 pending",
+                  color: "var(--text-muted)",
+                },
+                {
+                  text: "● Finance Agent      [RUNNING]  Task: invoice reconcile",
+                  color: "var(--cyan)",
+                },
                 { text: "● Compliance Agent   [ACTIVE]   Scan: UK filings", color: "var(--pink)" },
               ]}
             />
@@ -176,8 +197,8 @@ export default function AgentTownPage() {
               </h3>
               <p className="mt-3 font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
                 500+ ready-to-use business and engineering skills — documents, data, marketing,
-                research and automation — with new skills added over time and custom skills of
-                your own.
+                research and automation — with new skills added over time and custom skills of your
+                own.
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {BUSINESS_SKILLS.map((t) => (

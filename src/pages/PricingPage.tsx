@@ -94,7 +94,6 @@ const TIERS: {
   },
 ];
 
-
 export default function PricingPage() {
   const { code } = useCurrency();
 
@@ -141,7 +140,10 @@ export default function PricingPage() {
                     {tier.badge ? <MonoBadge color={tier.accent}>{tier.badge}</MonoBadge> : null}
                   </div>
                   <div className="mt-4 flex items-end gap-2">
-                    <span className="font-display text-[44px] font-extrabold leading-none" style={{ color: tier.accent }}>
+                    <span
+                      className="font-display text-[44px] font-extrabold leading-none"
+                      style={{ color: tier.accent }}
+                    >
                       {formatPrice(plan.priceGbp, code)}
                     </span>
                     {plan.compareGbp ? (
@@ -159,7 +161,8 @@ export default function PricingPage() {
                         className="rounded-full border px-2 py-0.5 text-[10.5px] uppercase tracking-[0.12em]"
                         style={{ color: tier.accent, borderColor: tier.border }}
                       >
-                        Save {Math.round(((plan.compareGbp - plan.priceGbp) / plan.compareGbp) * 100)}%
+                        Save{" "}
+                        {Math.round(((plan.compareGbp - plan.priceGbp) / plan.compareGbp) * 100)}%
                       </span>
                     ) : null}
                   </div>
@@ -181,7 +184,6 @@ export default function PricingPage() {
               );
             })}
           </div>
-
         </div>
       </SectionWrapper>
 

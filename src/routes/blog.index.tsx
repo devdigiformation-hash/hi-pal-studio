@@ -55,7 +55,12 @@ function BlogIndex() {
       <SectionWrapper className="bg-[var(--bg-surface)]">
         <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {BLOG_POSTS.map((post) => (
-            <Link key={post.slug} to="/blog/$slug" params={{ slug: post.slug }} className="group block h-full">
+            <Link
+              key={post.slug}
+              to="/blog/$slug"
+              params={{ slug: post.slug }}
+              className="group block h-full"
+            >
               <GlassCard className="h-full p-6">
                 <span className="font-display text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--cyan)]">
                   {post.cluster}
@@ -67,7 +72,11 @@ function BlogIndex() {
                   {post.description}
                 </p>
                 <span className="mt-4 inline-flex items-center gap-1.5 font-display text-[12.5px] font-semibold text-[var(--cyan)]">
-                  {post.readingTime} <ArrowRight size={13} className="transition-transform group-hover:translate-x-0.5" />
+                  {post.readingTime}{" "}
+                  <ArrowRight
+                    size={13}
+                    className="transition-transform group-hover:translate-x-0.5"
+                  />
                 </span>
               </GlassCard>
             </Link>

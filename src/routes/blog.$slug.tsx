@@ -100,7 +100,10 @@ function BlogPostPage() {
             </section>
           ))}
 
-          <nav aria-label="Related pages" className="mt-14 flex flex-wrap gap-3 border-t border-[var(--border-subtle)] pt-8">
+          <nav
+            aria-label="Related pages"
+            className="mt-14 flex flex-wrap gap-3 border-t border-[var(--border-subtle)] pt-8"
+          >
             {post.links.map((l) => (
               <Link
                 key={l.to}

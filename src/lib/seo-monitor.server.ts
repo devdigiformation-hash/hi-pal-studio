@@ -34,7 +34,9 @@ function firstMatch(html: string, re: RegExp) {
 }
 
 export async function fetchSitemapUrls(baseUrl: string) {
-  const res = await fetch(`${baseUrl}/sitemap.xml`, { headers: { "user-agent": "DigiBizOS-SEO-Monitor" } });
+  const res = await fetch(`${baseUrl}/sitemap.xml`, {
+    headers: { "user-agent": "DigiBizOS-SEO-Monitor" },
+  });
   if (!res.ok) return { ok: false, urls: [] as string[] };
   const xml = await res.text();
   const urls = Array.from(xml.matchAll(/<loc>\s*([^<]+?)\s*<\/loc>/g)).map((m) => decode(m[1]));
@@ -68,10 +70,15 @@ export async function checkPage(url: string): Promise<PageCheck> {
 
   const head = html.slice(0, 200000);
   const title = firstMatch(head, /<title[^>]*>([\s\S]*?)<\/title>/i);
-  const description = firstMatch(head, /<meta[^>]+name=["']description["'][^>]+content=["']([\s\S]*?)["']/i);
+  const description = firstMatch(
+    head,
+    /<meta[^>]+name=["']description["'][^>]+content=["']([\s\S]*?)["']/i,
+  );
   const canonical = firstMatch(head, /<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/i);
   const h1Count = (html.match(/<h1[\s>]/gi) || []).length;
-  const hasOg = /<meta[^>]+property=["']og:title["']/i.test(head) && /<meta[^>]+property=["']og:description["']/i.test(head);
+  const hasOg =
+    /<meta[^>]+property=["']og:title["']/i.test(head) &&
+    /<meta[^>]+property=["']og:description["']/i.test(head);
   const hasJsonLd = /application\/ld\+json/i.test(html);
   const text = html
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
@@ -139,7 +146,9 @@ export async function runCrawl(baseUrl = SITE_URL) {
   await Promise.all(Array.from({ length: Math.min(CONCURRENCY, targets.length) }, worker));
 
   const errorCount = results.filter((r) => r.status_code === null || r.status_code >= 400).length;
-  const warnCount = results.filter((r) => r.issues.length > 0 && r.status_code !== null && r.status_code < 400).length;
+  const warnCount = results.filter(
+    (r) => r.issues.length > 0 && r.status_code !== null && r.status_code < 400,
+  ).length;
   const okCount = results.filter((r) => r.issues.length === 0).length;
   const avgScore = results.length ? results.reduce((a, r) => a + r.score, 0) / results.length : 0;
 

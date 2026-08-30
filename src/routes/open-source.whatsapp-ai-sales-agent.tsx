@@ -29,8 +29,7 @@ import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
 
-const TITLE =
-  "Universal WhatsApp AI Sales Agent v2.0 PRO — Free Open-Source WhatsApp Automation";
+const TITLE = "Universal WhatsApp AI Sales Agent v2.0 PRO — Free Open-Source WhatsApp Automation";
 const DESC =
   "Deploy a 100% free, open-source WhatsApp AI sales & support agent. Multi-number Baileys QR pairing, Whisper voice transcription, local SQLite memory, deterministic sales pipeline, and Markdown RAG knowledge base.";
 
@@ -47,43 +46,37 @@ const FEATURES = [
     icon: QrCode,
     color: "#25D366",
     title: "Multi-Account Baileys QR Pairing (Zero Meta API Fees)",
-    body:
-      "Connect multiple business WhatsApp numbers simultaneously via direct 1-click QR scanning. Avoid expensive $0.05–$0.15 Meta Business Cloud API per-conversation charges forever.",
+    body: "Connect multiple business WhatsApp numbers simultaneously via direct 1-click QR scanning. Avoid expensive $0.05–$0.15 Meta Business Cloud API per-conversation charges forever.",
   },
   {
     icon: Mic,
     color: "var(--cyan)",
     title: "Voice Note Transcription & Roman Urdu/English Engine",
-    body:
-      "Inbound audio voice messages are transcribed in 0.3s via Groq Whisper and answered with authentic, context-aware Pakistani Roman Urdu or professional English replies.",
+    body: "Inbound audio voice messages are transcribed in 0.3s via Groq Whisper and answered with authentic, context-aware Pakistani Roman Urdu or professional English replies.",
   },
   {
     icon: BookOpen,
     color: "var(--purple)",
     title: "Universal Decoupled Markdown Knowledge Base (RAG)",
-    body:
-      "100% business-agnostic. Drop your business profile, pricing tables, services, and FAQs into /knowledge/*.md files and the agent instantly sells for any industry.",
+    body: "100% business-agnostic. Drop your business profile, pricing tables, services, and FAQs into /knowledge/*.md files and the agent instantly sells for any industry.",
   },
   {
     icon: Zap,
     color: "var(--amber)",
     title: "0ms Deterministic Instant Fallback Layer",
-    body:
-      "Instant Zero-AI response for standard inquiries. If external LLMs ever experience latency, the deterministic layer keeps responding seamlessly without hallucinations.",
+    body: "Instant Zero-AI response for standard inquiries. If external LLMs ever experience latency, the deterministic layer keeps responding seamlessly without hallucinations.",
   },
   {
     icon: Gauge,
     color: "#7DD3FC",
     title: "8-Stage Deterministic Sales Pipeline (State Machine)",
-    body:
-      "Structured sales flow from NEW → GREETED → QUALIFIED → PACKAGE_SELECTED → ORDER_INITIATED → DOCUMENTS_PENDING → COMPLETED with Next-Best-Action directives.",
+    body: "Structured sales flow from NEW → GREETED → QUALIFIED → PACKAGE_SELECTED → ORDER_INITIATED → DOCUMENTS_PENDING → COMPLETED with Next-Best-Action directives.",
   },
   {
     icon: Database,
     color: "#3DDC84",
     title: "100% Private Local SQLite Memory & Zero Hallucination Defense",
-    body:
-      "Customer names, locations, selected packages, and order references are stored locally on your server (data/agent_memory.db). Strict price protection rules prevent unauthorized discounts.",
+    body: "Customer names, locations, selected packages, and order references are stored locally on your server (data/agent_memory.db). Strict price protection rules prevent unauthorized discounts.",
   },
 ];
 
@@ -92,29 +85,25 @@ const DASHBOARD_TABS = [
     icon: Smartphone,
     color: "#25D366",
     title: "WhatsApp Numbers Manager",
-    body:
-      "Live QR generator, connection status indicators, battery levels, and 1-click disconnect for every paired number.",
+    body: "Live QR generator, connection status indicators, battery levels, and 1-click disconnect for every paired number.",
   },
   {
     icon: MessageSquare,
     color: "var(--cyan)",
     title: "Live Conversational Log Stream",
-    body:
-      "Real-time WebSocket activity feed (/ws/events), sound chime notifications, state transitions, and audio transcription logs.",
+    body: "Real-time WebSocket activity feed (/ws/events), sound chime notifications, state transitions, and audio transcription logs.",
   },
   {
     icon: Cpu,
     color: "var(--purple)",
     title: "AI Brain & API Keys",
-    body:
-      "Configure Groq ultra-fast Llama models, OpenCode Zen, and adjust temperature with a single click.",
+    body: "Configure Groq ultra-fast Llama models, OpenCode Zen, and adjust temperature with a single click.",
   },
   {
     icon: FileText,
     color: "var(--amber)",
     title: "Visual Knowledge Base Studio",
-    body:
-      "In-browser Markdown editor with instant pre-configured templates for E-Commerce, Digital Agency, and Customer Support.",
+    body: "In-browser Markdown editor with instant pre-configured templates for E-Commerce, Digital Agency, and Customer Support.",
   },
 ];
 
@@ -182,7 +171,10 @@ export const Route = createFileRoute("/open-source/whatsapp-ai-sales-agent")({
             breadcrumbLd([
               { name: "Home", path: "/" },
               { name: "Open Source", path: "/open-source" },
-              { name: "Universal WhatsApp AI Sales Agent", path: "/open-source/whatsapp-ai-sales-agent" },
+              {
+                name: "Universal WhatsApp AI Sales Agent",
+                path: "/open-source/whatsapp-ai-sales-agent",
+              },
             ]),
           ),
         },
@@ -253,7 +245,10 @@ function WhatsAppAgentPage() {
             <div className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-4 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 text-center">
               <div
                 className="flex h-20 w-20 items-center justify-center rounded-full"
-                style={{ background: "rgba(37,211,102,0.15)", boxShadow: "0 0 40px rgba(37,211,102,0.25)" }}
+                style={{
+                  background: "rgba(37,211,102,0.15)",
+                  boxShadow: "0 0 40px rgba(37,211,102,0.25)",
+                }}
               >
                 <Smartphone size={40} color="#25D366" strokeWidth={1.5} />
               </div>
@@ -262,8 +257,8 @@ function WhatsAppAgentPage() {
                   WhatsApp AI Agent Dashboard
                 </p>
                 <p className="mx-auto mt-1 max-w-[320px] font-body text-[13.5px] text-[var(--text-secondary)]">
-                  Live QR pairing, conversation stream, AI brain settings, and Markdown knowledge base
-                  studio.
+                  Live QR pairing, conversation stream, AI brain settings, and Markdown knowledge
+                  base studio.
                 </p>
               </div>
               <div className="flex flex-wrap justify-center gap-2">
@@ -303,8 +298,8 @@ function WhatsAppAgentPage() {
             Built-in React 19 + Tailwind dashboard
           </h2>
           <p className="mt-4 max-w-[780px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]">
-            A production dashboard ships with the agent so you can pair numbers, watch conversations,
-            tune the AI brain, and edit knowledge bases without touching code.
+            A production dashboard ships with the agent so you can pair numbers, watch
+            conversations, tune the AI brain, and edit knowledge bases without touching code.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {DASHBOARD_TABS.map((t) => (
@@ -347,10 +342,7 @@ function WhatsAppAgentPage() {
                   >
                     Feature / Metric
                   </th>
-                  <th
-                    scope="col"
-                    className="p-4 font-display text-[13px] font-bold text-[#25D366]"
-                  >
+                  <th scope="col" className="p-4 font-display text-[13px] font-bold text-[#25D366]">
                     Digiformation WhatsApp Agent
                   </th>
                   <th
@@ -388,7 +380,11 @@ function WhatsAppAgentPage() {
           </h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {SETUP_STEPS.map((s, i) => (
-              <GlassCard key={s.note} glowColor={i === 2 ? "#25D366" : "var(--cyan)"} className="p-5">
+              <GlassCard
+                key={s.note}
+                glowColor={i === 2 ? "#25D366" : "var(--cyan)"}
+                className="p-5"
+              >
                 <div className="flex items-center gap-3">
                   <span
                     className="flex h-8 w-8 items-center justify-center rounded-full font-display text-[13px] font-bold"
@@ -410,9 +406,8 @@ function WhatsAppAgentPage() {
             ))}
           </div>
           <p className="mt-6 font-body text-[14px] leading-[1.8] text-[var(--text-secondary)]">
-            Then open{" "}
-            <MonoBadge>http://localhost:9000</MonoBadge>, scan the QR code from your phone&apos;s
-            WhatsApp Linked Devices, and let AI close deals 24/7.
+            Then open <MonoBadge>http://localhost:9000</MonoBadge>, scan the QR code from your
+            phone&apos;s WhatsApp Linked Devices, and let AI close deals 24/7.
           </p>
         </div>
       </SectionWrapper>
@@ -444,7 +439,12 @@ function WhatsAppAgentPage() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={16} color="var(--cyan)" className="shrink-0" />
-                <a href={WHATSAPP_DEMO} target="_blank" rel="noopener noreferrer" className="text-[var(--cyan)] hover:underline">
+                <a
+                  href={WHATSAPP_DEMO}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--cyan)] hover:underline"
+                >
                   +92 316 446 7464
                 </a>
               </div>
@@ -456,13 +456,23 @@ function WhatsAppAgentPage() {
               </div>
               <div className="flex items-center gap-3">
                 <Globe size={16} color="var(--cyan)" className="shrink-0" />
-                <a href={COMPANY_WEBSITE} target="_blank" rel="noopener noreferrer" className="text-[var(--cyan)] hover:underline">
+                <a
+                  href={COMPANY_WEBSITE}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--cyan)] hover:underline"
+                >
                   www.digiformation.co.uk
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <TreePine size={16} color="var(--cyan)" className="shrink-0" />
-                <a href={LINKTREE} target="_blank" rel="noopener noreferrer" className="text-[var(--cyan)] hover:underline">
+                <a
+                  href={LINKTREE}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--cyan)] hover:underline"
+                >
                   linktr.ee/digiformationltd
                 </a>
               </div>
@@ -477,8 +487,8 @@ function WhatsAppAgentPage() {
             Deploy your free WhatsApp AI sales agent today
           </h2>
           <p className="mt-4 font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]">
-            No subscriptions, no per-message fees, no cloud leaks. Pair your WhatsApp number and start
-            closing deals automatically.
+            No subscriptions, no per-message fees, no cloud leaks. Pair your WhatsApp number and
+            start closing deals automatically.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
@@ -486,7 +496,10 @@ function WhatsAppAgentPage() {
                 Download WhatsApp Sales Agent
               </CyanButton>
             </a>
-            <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
+            <Link
+              to="/open-source"
+              className="font-body text-[14px] text-[var(--cyan)] hover:underline"
+            >
               Back to open source software
             </Link>
           </div>
@@ -516,7 +529,6 @@ function DownloadIcon() {
     </svg>
   );
 }
-
 
 function rgbFromHex(hex: string) {
   const clean = hex.replace("#", "");

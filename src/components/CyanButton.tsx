@@ -37,8 +37,7 @@ export default function CyanButton({
         color: `rgb(${tone})`,
         borderColor: `rgba(${tone},0.45)`,
         boxShadow: `0 8px 32px rgba(${tone},0.18), inset 0 1px 0 rgba(255,255,255,0.16)`,
-        background:
-          `linear-gradient(135deg, rgba(${tone},0.22), rgba(${tone},0.10) 55%, rgba(255,255,255,0.05))`,
+        background: `linear-gradient(135deg, rgba(${tone},0.22), rgba(${tone},0.10) 55%, rgba(255,255,255,0.05))`,
       }}
     >
       <span

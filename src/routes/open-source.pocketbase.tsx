@@ -147,7 +147,10 @@ function PocketBasePage() {
         />
         <div className="mx-auto grid max-w-[1180px] items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
           <div>
-            <EyebrowLabel text="100% Free & Open-Source Cloud Database & Auth Server" color="var(--amber)" />
+            <EyebrowLabel
+              text="100% Free & Open-Source Cloud Database & Auth Server"
+              color="var(--amber)"
+            />
             <p className="reveal-item mt-5 font-display text-[15px] font-bold uppercase tracking-[0.18em] text-[var(--cyan)]">
               PocketBase Backend Server
             </p>
@@ -158,18 +161,21 @@ function PocketBasePage() {
               </GradientText>
             </h1>
             <p className="reveal-item delay-2 mt-6 max-w-[640px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[16.5px]">
-              The ultimate open-source alternative to Firebase and Supabase. Launch an enterprise-grade
-              SQLite database, real-time subscriptions, user authentication, and media storage in 1 click
-              without complex cloud setup.
+              The ultimate open-source alternative to Firebase and Supabase. Launch an
+              enterprise-grade SQLite database, real-time subscriptions, user authentication, and
+              media storage in 1 click without complex cloud setup.
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
               <a href={DOWNLOAD_URL} download="PocketBase-Setup.exe">
-                <CyanButton size="lg" icon={<WindowsIcon />}>Download PocketBase</CyanButton>
+                <CyanButton size="lg" icon={<WindowsIcon />}>
+                  Download PocketBase
+                </CyanButton>
               </a>
             </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
-              Version: Latest x64 • 32.9 MB • Windows 10 / 11 (64-bit) • 100% Verified • PocketBase-Setup.exe
+              Version: Latest x64 • 32.9 MB • Windows 10 / 11 (64-bit) • 100% Verified •
+              PocketBase-Setup.exe
             </p>
           </div>
 
@@ -311,9 +317,14 @@ function PocketBasePage() {
           </h2>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a href={DOWNLOAD_URL} download="PocketBase-Setup.exe">
-              <CyanButton size="lg" icon={<WindowsIcon />}>Download PocketBase</CyanButton>
+              <CyanButton size="lg" icon={<WindowsIcon />}>
+                Download PocketBase
+              </CyanButton>
             </a>
-            <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
+            <Link
+              to="/open-source"
+              className="font-body text-[14px] text-[var(--cyan)] hover:underline"
+            >
               Back to open source software
             </Link>
           </div>

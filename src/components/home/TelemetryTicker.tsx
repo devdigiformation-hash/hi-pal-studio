@@ -3,7 +3,7 @@ const ITEMS = [
   "Digi Tools · Digi CLI · Digi MCP",
   "Digi Flow · Digi Jobs · Digi Tasks",
   "Live Tracking",
-  "Memory · Soul · Skills",
+  "Memory · DIGI CRM · DIGI Marketing · Skills",
   "Screen Sharing & Camera",
   "Multi Agents & Tools",
   "150+ Mixed Tools",

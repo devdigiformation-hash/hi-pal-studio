@@ -57,10 +57,23 @@ function SeoMonitorPage() {
   const { session, ready } = useSession();
 
   if (!ready) {
-    return <Shell><p className="text-sm text-white/60">Checking your session…</p></Shell>;
+    return (
+      <Shell>
+        <p className="text-sm text-white/60">Checking your session…</p>
+      </Shell>
+    );
   }
-  if (!session) return <Shell><SignInCard /></Shell>;
-  return <Shell><Dashboard /></Shell>;
+  if (!session)
+    return (
+      <Shell>
+        <SignInCard />
+      </Shell>
+    );
+  return (
+    <Shell>
+      <Dashboard />
+    </Shell>
+  );
 }
 
 function Shell({ children }: { children: React.ReactNode }) {
@@ -68,7 +81,9 @@ function Shell({ children }: { children: React.ReactNode }) {
     <main className="mx-auto w-full max-w-6xl px-5 pb-24 pt-40">
       <EyebrowLabel text="Private · Admin only" reveal={false} />
       <h1 className="mt-4 font-display text-3xl font-bold sm:text-4xl">
-        <GradientText from="var(--cyan)" to="var(--violet)">SEO Monitor</GradientText>
+        <GradientText from="var(--cyan)" to="var(--violet)">
+          SEO Monitor
+        </GradientText>
       </h1>
       <p className="mt-2 max-w-2xl text-sm text-white/60">
         Sitemap coverage and on-page health for digibizos.co.uk, tracked over time.
@@ -109,15 +124,24 @@ function SignInCard() {
 
   return (
     <GlassCard className="mx-auto max-w-md">
-      <h2 className="text-lg font-semibold">{mode === "signin" ? "Admin sign in" : "Create admin account"}</h2>
+      <h2 className="text-lg font-semibold">
+        {mode === "signin" ? "Admin sign in" : "Create admin account"}
+      </h2>
       <form onSubmit={submit} className="mt-5 space-y-3">
         <input
-          type="email" required value={email} onChange={(e) => setEmail(e.target.value)}
+          type="email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           placeholder="you@digiformation.co.uk"
           className="w-full rounded-xl border border-[var(--border-glass)] bg-white/5 px-4 py-3 text-sm outline-none focus:border-[var(--cyan)]"
         />
         <input
-          type="password" required minLength={8} value={password} onChange={(e) => setPassword(e.target.value)}
+          type="password"
+          required
+          minLength={8}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
           className="w-full rounded-xl border border-[var(--border-glass)] bg-white/5 px-4 py-3 text-sm outline-none focus:border-[var(--cyan)]"
         />
@@ -158,7 +182,8 @@ function Dashboard() {
     onError: (e) => toast.error(e instanceof Error ? e.message : "Scan failed"),
   });
 
-  const forbidden = overview.isError && /admin access required|Forbidden/i.test(String(overview.error));
+  const forbidden =
+    overview.isError && /admin access required|Forbidden/i.test(String(overview.error));
 
   if (overview.isLoading) return <p className="text-sm text-white/60">Loading dashboard…</p>;
 
@@ -167,7 +192,8 @@ function Dashboard() {
       <GlassCard className="mx-auto max-w-md text-sm">
         <h2 className="text-lg font-semibold">Admin access required</h2>
         <p className="mt-2 text-white/60">
-          This account has no admin role. If you are the first person setting this up, claim admin access now.
+          This account has no admin role. If you are the first person setting this up, claim admin
+          access now.
         </p>
         <div className="mt-5 flex gap-3">
           <CyanButton
@@ -190,7 +216,9 @@ function Dashboard() {
   }
 
   if (overview.isError) {
-    return <p className="text-sm text-[var(--gold)]">{String((overview.error as Error).message)}</p>;
+    return (
+      <p className="text-sm text-[var(--gold)]">{String((overview.error as Error).message)}</p>
+    );
   }
 
   const data = overview.data!;
@@ -212,15 +240,37 @@ function Dashboard() {
 
       {!latest ? (
         <GlassCard>
-          <p className="text-sm text-white/60">No scans yet. Run your first scan to start tracking coverage over time.</p>
+          <p className="text-sm text-white/60">
+            No scans yet. Run your first scan to start tracking coverage over time.
+          </p>
         </GlassCard>
       ) : (
         <>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <Stat label="Sitemap URLs" value={latest.sitemap_url_count} hint={latest.sitemap_ok ? "sitemap.xml OK" : "sitemap unreachable"} tone={latest.sitemap_ok ? "cyan" : "gold"} />
-            <Stat label="Pages checked" value={latest.pages_checked} hint={latest.robots_ok ? "robots.txt OK" : "robots.txt issue"} tone={latest.robots_ok ? "cyan" : "gold"} />
-            <Stat label="Clean pages" value={latest.ok_count} hint={`${latest.warn_count} with warnings`} tone="violet" />
-            <Stat label="Health score" value={`${Math.round(Number(latest.avg_score))}%`} hint={`${latest.error_count} broken`} tone={latest.error_count ? "gold" : "cyan"} />
+            <Stat
+              label="Sitemap URLs"
+              value={latest.sitemap_url_count}
+              hint={latest.sitemap_ok ? "sitemap.xml OK" : "sitemap unreachable"}
+              tone={latest.sitemap_ok ? "cyan" : "gold"}
+            />
+            <Stat
+              label="Pages checked"
+              value={latest.pages_checked}
+              hint={latest.robots_ok ? "robots.txt OK" : "robots.txt issue"}
+              tone={latest.robots_ok ? "cyan" : "gold"}
+            />
+            <Stat
+              label="Clean pages"
+              value={latest.ok_count}
+              hint={`${latest.warn_count} with warnings`}
+              tone="violet"
+            />
+            <Stat
+              label="Health score"
+              value={`${Math.round(Number(latest.avg_score))}%`}
+              hint={`${latest.error_count} broken`}
+              tone={latest.error_count ? "gold" : "cyan"}
+            />
           </div>
 
           <TrendCharts scans={data.scans} />
@@ -232,12 +282,25 @@ function Dashboard() {
   );
 }
 
-function Stat({ label, value, hint, tone }: { label: string; value: number | string; hint: string; tone: "cyan" | "violet" | "gold" }) {
-  const colour = tone === "cyan" ? "var(--cyan)" : tone === "violet" ? "var(--violet)" : "var(--gold)";
+function Stat({
+  label,
+  value,
+  hint,
+  tone,
+}: {
+  label: string;
+  value: number | string;
+  hint: string;
+  tone: "cyan" | "violet" | "gold";
+}) {
+  const colour =
+    tone === "cyan" ? "var(--cyan)" : tone === "violet" ? "var(--violet)" : "var(--gold)";
   return (
     <GlassCard glowColor={colour} className="p-5">
       <p className="text-xs uppercase tracking-[0.18em] text-white/45">{label}</p>
-      <p className="mt-2 font-mono text-3xl font-bold" style={{ color: colour }}>{value}</p>
+      <p className="mt-2 font-mono text-3xl font-bold" style={{ color: colour }}>
+        {value}
+      </p>
       <p className="mt-1 text-xs text-white/45">{hint}</p>
     </GlassCard>
   );
@@ -283,8 +346,22 @@ function TrendCharts({ scans }: { scans: ScanRow[] }) {
               <XAxis dataKey="date" tick={axis} tickLine={false} axisLine={false} />
               <YAxis domain={[0, 100]} tick={axis} tickLine={false} axisLine={false} />
               <Tooltip contentStyle={tooltipStyle} />
-              <Area type="monotone" dataKey="score" stroke="var(--cyan)" fill="url(#scoreFill)" strokeWidth={2} name="Health %" />
-              <Line type="monotone" dataKey="coverage" stroke="var(--violet)" strokeWidth={2} dot={false} name="Coverage %" />
+              <Area
+                type="monotone"
+                dataKey="score"
+                stroke="var(--cyan)"
+                fill="url(#scoreFill)"
+                strokeWidth={2}
+                name="Health %"
+              />
+              <Line
+                type="monotone"
+                dataKey="coverage"
+                stroke="var(--violet)"
+                strokeWidth={2}
+                dot={false}
+                name="Coverage %"
+              />
             </AreaChart>
           </ResponsiveContainer>
         </div>
@@ -299,9 +376,30 @@ function TrendCharts({ scans }: { scans: ScanRow[] }) {
               <XAxis dataKey="date" tick={axis} tickLine={false} axisLine={false} />
               <YAxis allowDecimals={false} tick={axis} tickLine={false} axisLine={false} />
               <Tooltip contentStyle={tooltipStyle} />
-              <Line type="monotone" dataKey="clean" stroke="var(--cyan)" strokeWidth={2} dot={false} name="Clean" />
-              <Line type="monotone" dataKey="warnings" stroke="var(--gold)" strokeWidth={2} dot={false} name="Warnings" />
-              <Line type="monotone" dataKey="errors" stroke="#F45B69" strokeWidth={2} dot={false} name="Broken" />
+              <Line
+                type="monotone"
+                dataKey="clean"
+                stroke="var(--cyan)"
+                strokeWidth={2}
+                dot={false}
+                name="Clean"
+              />
+              <Line
+                type="monotone"
+                dataKey="warnings"
+                stroke="var(--gold)"
+                strokeWidth={2}
+                dot={false}
+                name="Warnings"
+              />
+              <Line
+                type="monotone"
+                dataKey="errors"
+                stroke="#F45B69"
+                strokeWidth={2}
+                dot={false}
+                name="Broken"
+              />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -352,7 +450,10 @@ function IssueBreakdown({ pages }: { pages: PageRow[] }) {
       <h2 className="text-sm font-semibold text-white/80">Issues by type (latest scan)</h2>
       <ul className="mt-4 grid gap-2 sm:grid-cols-2">
         {counts.map(([issue, n]) => (
-          <li key={issue} className="flex items-center justify-between rounded-xl border border-[var(--border-glass)] bg-white/[0.03] px-4 py-2 text-sm">
+          <li
+            key={issue}
+            className="flex items-center justify-between rounded-xl border border-[var(--border-glass)] bg-white/[0.03] px-4 py-2 text-sm"
+          >
             <span className="text-white/70">{issue}</span>
             <span className="font-mono text-[var(--gold)]">{n}</span>
           </li>
@@ -385,10 +486,17 @@ function PageTable({ pages }: { pages: PageRow[] }) {
           <tbody className="font-mono">
             {pages.map((p) => (
               <tr key={p.url} className="border-b border-white/5 align-top">
-                <td className="max-w-[260px] truncate py-2 pr-3 text-white/70" title={`${p.url}\n${p.issues.join(" · ")}`}>
+                <td
+                  className="max-w-[260px] truncate py-2 pr-3 text-white/70"
+                  title={`${p.url}\n${p.issues.join(" · ")}`}
+                >
                   {p.url.replace(/^https?:\/\/[^/]+/, "") || "/"}
                 </td>
-                <td className={`py-2 pr-3 ${p.status_code === 200 ? "text-[var(--cyan)]" : "text-[#F45B69]"}`}>{p.status_code ?? "—"}</td>
+                <td
+                  className={`py-2 pr-3 ${p.status_code === 200 ? "text-[var(--cyan)]" : "text-[#F45B69]"}`}
+                >
+                  {p.status_code ?? "—"}
+                </td>
                 <td className="py-2 pr-3 text-white/60">{p.title_length}</td>
                 <td className="py-2 pr-3 text-white/60">{p.description_length}</td>
                 <td className="py-2 pr-3 text-white/60">{p.h1_count}</td>
@@ -396,7 +504,15 @@ function PageTable({ pages }: { pages: PageRow[] }) {
                 <td className="py-2 pr-3">{p.has_og ? "✓" : "✗"}</td>
                 <td className="py-2 pr-3">{p.has_jsonld ? "✓" : "✗"}</td>
                 <td className="py-2 pr-3 text-white/60">{p.word_count}</td>
-                <td className="py-2 pr-3" style={{ color: p.score >= 80 ? "var(--cyan)" : p.score >= 50 ? "var(--gold)" : "#F45B69" }}>{p.score}</td>
+                <td
+                  className="py-2 pr-3"
+                  style={{
+                    color:
+                      p.score >= 80 ? "var(--cyan)" : p.score >= 50 ? "var(--gold)" : "#F45B69",
+                  }}
+                >
+                  {p.score}
+                </td>
               </tr>
             ))}
           </tbody>

@@ -66,11 +66,14 @@ export default function CodebaseIntelligence() {
         <div className="text-center">
           <EyebrowLabel text="Codebase Intelligence" color="var(--purple)" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            Give It a Folder. <GradientText from="#8B7CF6" to="#3DDC84">It Ships the Work.</GradientText>
+            Give It a Folder.{" "}
+            <GradientText from="#8B7CF6" to="#3DDC84">
+              It Ships the Work.
+            </GradientText>
           </h2>
           <p className="reveal-item delay-2 mx-auto mt-5 max-w-[760px] font-body text-[16px] leading-[1.8] text-[var(--text-secondary)] md:text-[17px]">
-            Hand DIGI BIZ OS a project folder or a repository and it takes full ownership —
-            reading, reasoning, reverse engineering and building, right on your computer.
+            Hand DIGI BIZ OS a project folder or a repository and it takes full ownership — reading,
+            reasoning, reverse engineering and building, right on your computer.
           </p>
         </div>
 

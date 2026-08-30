@@ -100,9 +100,12 @@ export default function SoftwareShowcase() {
 
   const closeLightbox = useCallback(() => setLightboxOpen(false), []);
 
-  const goLightbox = useCallback((d: number) => {
-    setLightboxIndex((i) => (i + d + count) % count);
-  }, [count]);
+  const goLightbox = useCallback(
+    (d: number) => {
+      setLightboxIndex((i) => (i + d + count) % count);
+    },
+    [count],
+  );
 
   useEffect(() => {
     if (!lightboxOpen) return;
@@ -127,14 +130,20 @@ export default function SoftwareShowcase() {
       <div className="mx-auto max-w-6xl text-center">
         <EyebrowLabel text="Inside the OS" />
         <h2 className="mt-4 font-display text-[30px] font-bold leading-[1.1] md:text-[50px]">
-          The Workspace That <GradientText from="#F5A623" to="#2FE0C8">Works While You Talk.</GradientText>
+          The Workspace That{" "}
+          <GradientText from="#F5A623" to="#2FE0C8">
+            Works While You Talk.
+          </GradientText>
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-[var(--text-secondary)] md:text-[17px]">
-          Screen sharing, camera, memory, skills, multi agents and tools — exactly what runs on
-          your desktop.
+          Screen sharing, camera, memory, skills, multi agents and tools — exactly what runs on your
+          desktop.
         </p>
 
-        <div className="relative mt-12 select-none overflow-x-clip" style={{ perspective: "1800px" }}>
+        <div
+          className="relative mt-12 select-none overflow-x-clip"
+          style={{ perspective: "1800px" }}
+        >
           <div
             className="pointer-events-none absolute -inset-10 -z-10 rounded-[48px] opacity-60 blur-3xl"
             style={{
@@ -143,9 +152,7 @@ export default function SoftwareShowcase() {
             }}
           />
 
-          <div
-            className="relative mx-auto aspect-[16/9] w-full max-w-[340px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl [transform-style:preserve-3d]"
-          >
+          <div className="relative mx-auto aspect-[16/9] w-full max-w-[340px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl [transform-style:preserve-3d]">
             {SLIDES.map((s, i) => {
               let off = i - index;
               if (off > count / 2) off -= count;
@@ -181,7 +188,8 @@ export default function SoftwareShowcase() {
                     <div
                       className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[10%]"
                       style={{
-                        background: "linear-gradient(to top, rgba(5,7,11,1) 0%, rgba(5,7,11,0.85) 45%, transparent 100%)",
+                        background:
+                          "linear-gradient(to top, rgba(5,7,11,1) 0%, rgba(5,7,11,0.85) 45%, transparent 100%)",
                         borderRadius: "0 0 14px 14px",
                       }}
                     />
@@ -273,7 +281,10 @@ export default function SoftwareShowcase() {
 
             <button
               type="button"
-              onClick={(e) => { e.stopPropagation(); goLightbox(-1); }}
+              onClick={(e) => {
+                e.stopPropagation();
+                goLightbox(-1);
+              }}
               aria-label="Previous screenshot"
               className="absolute left-2 top-1/2 z-10 -translate-y-1/2 grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/5 text-[var(--text-primary)] transition hover:bg-white/10 md:left-6 md:h-12 md:w-12"
             >
@@ -282,7 +293,10 @@ export default function SoftwareShowcase() {
 
             <button
               type="button"
-              onClick={(e) => { e.stopPropagation(); goLightbox(1); }}
+              onClick={(e) => {
+                e.stopPropagation();
+                goLightbox(1);
+              }}
               aria-label="Next screenshot"
               className="absolute right-2 top-1/2 z-10 -translate-y-1/2 grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/5 text-[var(--text-primary)] transition hover:bg-white/10 md:right-6 md:h-12 md:w-12"
             >
@@ -322,7 +336,10 @@ export default function SoftwareShowcase() {
                   key={s.tag}
                   type="button"
                   aria-label={`Go to ${s.tag}`}
-                  onClick={(e) => { e.stopPropagation(); setLightboxIndex(i); }}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setLightboxIndex(i);
+                  }}
                   className="h-1.5 rounded-full transition-all"
                   style={{
                     width: i === lightboxIndex ? 22 : 8,

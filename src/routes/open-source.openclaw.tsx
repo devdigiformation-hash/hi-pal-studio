@@ -28,12 +28,12 @@ import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
 import openclawZip from "@/assets/openclaw-main.zip.asset.json";
 
-const TITLE =
-  "OpenClaw Autonomous AI Agent — Free Open-Source Coding & Research Agent";
+const TITLE = "OpenClaw Autonomous AI Agent — Free Open-Source Coding & Research Agent";
 const DESC =
   "Download OpenClaw free: the open-source autonomous AI agent that researches the web, writes code, runs terminal commands, debugs itself, and delivers complete software projects. 100% local, $0 fees.";
 
-const EXE_URL = "https://drive.google.com/file/d/1bvTjsKITtbskMexWrjZbYmUeS2gmTpuS/view?usp=sharing";
+const EXE_URL =
+  "https://drive.google.com/file/d/1bvTjsKITtbskMexWrjZbYmUeS2gmTpuS/view?usp=sharing";
 const ZIP_URL = openclawZip.url;
 const REPO_URL = "https://github.com/digiformation/openclaw";
 const WHATSAPP = "https://wa.me/923164467464";
@@ -48,43 +48,37 @@ const FEATURES = [
     icon: Bot,
     color: "var(--cyan)",
     title: "Autonomous End-to-End Task Execution",
-    body:
-      "Translate one complex instruction into a complete, working software deliverable. OpenClaw plans the architecture, writes the files, and runs the build pipeline without hand-holding.",
+    body: "Translate one complex instruction into a complete, working software deliverable. OpenClaw plans the architecture, writes the files, and runs the build pipeline without hand-holding.",
   },
   {
     icon: Globe,
     color: "#6366F1",
     title: "Built-in Headless Browser & Live Web Research",
-    body:
-      "Navigates live websites, reads documentation, extracts structured data, and interacts with web forms so the agent always works with real, current information.",
+    body: "Navigates live websites, reads documentation, extracts structured data, and interacts with web forms so the agent always works with real, current information.",
   },
   {
     icon: Terminal,
     color: "var(--amber)",
     title: "Terminal & OS Command Sandbox",
-    body:
-      "Safely installs dependencies, creates files, executes scripts, and tests applications in an isolated local sandbox with user confirmation gates.",
+    body: "Safely installs dependencies, creates files, executes scripts, and tests applications in an isolated local sandbox with user confirmation gates.",
   },
   {
     icon: Bug,
     color: "#F472B6",
     title: "Self-Healing Automated Debugging",
-    body:
-      "When a runtime error or syntax bug occurs, OpenClaw reads the stack trace, diagnoses the root cause, and edits the code until tests pass.",
+    body: "When a runtime error or syntax bug occurs, OpenClaw reads the stack trace, diagnoses the root cause, and edits the code until tests pass.",
   },
   {
     icon: Cpu,
     color: "#7DD3FC",
     title: "Universal Multi-Model Hub",
-    body:
-      "Works with 100% free offline Ollama models (DeepSeek-R1, Llama 3.3, Qwen 2.5) or cloud models (Claude 3.5 Sonnet, OpenAI GPT-4o, Groq).",
+    body: "Works with 100% free offline Ollama models (DeepSeek-R1, Llama 3.3, Qwen 2.5) or cloud models (Claude 3.5 Sonnet, OpenAI GPT-4o, Groq).",
   },
   {
     icon: ShieldCheck,
     color: "#3DDC84",
     title: "100% Local Machine Privacy & $0 Fees",
-    body:
-      "Your source code, business ideas, and credentials stay on your PC. Zero cloud logging and zero monthly seat subscriptions.",
+    body: "Your source code, business ideas, and credentials stay on your PC. Zero cloud logging and zero monthly seat subscriptions.",
   },
 ];
 
@@ -130,18 +124,15 @@ const COMPARISON = [
 const SETUP_STEPS = [
   {
     title: "Choose your installation",
-    body:
-      "Option A: run the OpenClaw-Setup.exe installer for instant Windows desktop studio. Option B: extract openclaw-main.zip and run pip install -r requirements.txt.",
+    body: "Option A: run the OpenClaw-Setup.exe installer for instant Windows desktop studio. Option B: extract openclaw-main.zip and run pip install -r requirements.txt.",
   },
   {
     title: "Select AI engine",
-    body:
-      "Connect your free local Ollama model or paste your API key for Claude, OpenAI, DeepSeek, or Groq.",
+    body: "Connect your free local Ollama model or paste your API key for Claude, OpenAI, DeepSeek, or Groq.",
   },
   {
     title: "Assign missions",
-    body:
-      "Type your goal in plain English, hit Run, and watch OpenClaw research, build, and deliver your project in real-time.",
+    body: "Type your goal in plain English, hit Run, and watch OpenClaw research, build, and deliver your project in real-time.",
   },
 ];
 
@@ -227,9 +218,9 @@ function OpenClawPage() {
               </GradientText>
             </h1>
             <p className="reveal-item delay-2 mt-6 max-w-[640px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[16.5px]">
-              The open-source powerhouse alternative to Devin ($500/mo) and Manus AI. Give OpenClaw a
-              high-level goal in natural language and watch it plan, browse the web, write clean code,
-              execute terminal commands, and self-heal errors autonomously.
+              The open-source powerhouse alternative to Devin ($500/mo) and Manus AI. Give OpenClaw
+              a high-level goal in natural language and watch it plan, browse the web, write clean
+              code, execute terminal commands, and self-heal errors autonomously.
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
@@ -247,7 +238,6 @@ function OpenClawPage() {
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
               1-Click Desktop Installer • Windows 10/11 (64-bit) • Standalone GUI
             </p>
-
           </div>
 
           <GlassCard glowColor="#6366F1" className="p-3">
@@ -266,8 +256,8 @@ function OpenClawPage() {
                   OpenClaw Mission Control
                 </p>
                 <p className="mx-auto mt-1 max-w-[320px] font-body text-[13.5px] text-[var(--text-secondary)]">
-                  Natural-language mission planner, live browser feed, terminal sandbox, code editor,
-                  and self-healing debugger in one desktop studio.
+                  Natural-language mission planner, live browser feed, terminal sandbox, code
+                  editor, and self-healing debugger in one desktop studio.
                 </p>
               </div>
               <div className="flex flex-wrap justify-center gap-2">
@@ -369,7 +359,11 @@ function OpenClawPage() {
           </h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {SETUP_STEPS.map((s, i) => (
-              <GlassCard key={s.title} glowColor={i === 0 ? "#6366F1" : "var(--cyan)"} className="h-full p-5">
+              <GlassCard
+                key={s.title}
+                glowColor={i === 0 ? "#6366F1" : "var(--cyan)"}
+                className="h-full p-5"
+              >
                 <div className="flex items-center gap-3">
                   <span
                     className="flex h-8 w-8 items-center justify-center rounded-full font-display text-[13px] font-bold"
@@ -421,7 +415,12 @@ function OpenClawPage() {
                     Version v1.2.0 Stable • 1-click installer • Standalone GUI for non-technical
                     users.
                   </p>
-                  <a href={EXE_URL} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block">
+                  <a
+                    href={EXE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-block"
+                  >
                     <CyanButton size="md" icon={<WindowsIcon />} tone={INDIGO}>
                       Download .EXE
                     </CyanButton>
@@ -445,14 +444,17 @@ function OpenClawPage() {
                     </h3>
                     <MonoBadge>For Developers</MonoBadge>
                   </div>
-                  <p className="mt-1 font-mono text-[13px] text-[var(--cyan)]">
-                    openclaw-main.zip
-                  </p>
+                  <p className="mt-1 font-mono text-[13px] text-[var(--cyan)]">openclaw-main.zip</p>
                   <p className="mt-2 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
                     Core agent runtime, browser automation tools, prompt templates, and API
                     connectors. For Linux, macOS, and Windows developers.
                   </p>
-                  <a href={ZIP_URL} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block">
+                  <a
+                    href={ZIP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-block"
+                  >
                     <CyanButton size="md" icon={<ZipIcon />}>
                       Download .ZIP
                     </CyanButton>
@@ -491,7 +493,12 @@ function OpenClawPage() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={16} color="var(--cyan)" className="shrink-0" />
-                <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="text-[var(--cyan)] hover:underline">
+                <a
+                  href={WHATSAPP}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--cyan)] hover:underline"
+                >
                   +92 316 446 7464
                 </a>
               </div>
@@ -503,13 +510,23 @@ function OpenClawPage() {
               </div>
               <div className="flex items-center gap-3">
                 <GlobeIcon size={16} color="var(--cyan)" className="shrink-0" />
-                <a href={COMPANY_WEBSITE} target="_blank" rel="noopener noreferrer" className="text-[var(--cyan)] hover:underline">
+                <a
+                  href={COMPANY_WEBSITE}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--cyan)] hover:underline"
+                >
                   www.digiformation.co.uk
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <TreePine size={16} color="var(--cyan)" className="shrink-0" />
-                <a href={LINKTREE} target="_blank" rel="noopener noreferrer" className="text-[var(--cyan)] hover:underline">
+                <a
+                  href={LINKTREE}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--cyan)] hover:underline"
+                >
                   linktr.ee/digiformationltd
                 </a>
               </div>
@@ -529,9 +546,9 @@ function OpenClawPage() {
                 </h2>
                 <p className="mt-4 max-w-[720px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]">
                   OpenClaw is a powerful open-source autonomous agent. But DIGI BIZ OS combines
-                  WhatsApp Business API, CRM, invoicing, project management, voice-controlled desktop
-                  automation, and multi-agent orchestration into one complete business operating
-                  system.
+                  WhatsApp Business API, CRM, invoicing, project management, voice-controlled
+                  desktop automation, and multi-agent orchestration into one complete business
+                  operating system.
                 </p>
                 <ul className="mt-5 space-y-3">
                   {DIGIBIZOS_POINTS.map((p) => (
@@ -551,7 +568,10 @@ function OpenClawPage() {
                     Unlock More Features
                   </CyanButton>
                 </Link>
-                <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
+                <Link
+                  to="/open-source"
+                  className="font-body text-[14px] text-[var(--cyan)] hover:underline"
+                >
                   Back to open source software
                 </Link>
               </div>
@@ -566,8 +586,8 @@ function OpenClawPage() {
             Download OpenClaw free, then automate everything with DIGI BIZ OS
           </h2>
           <p className="mt-4 font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]">
-            No subscriptions, no cloud lock-in, no privacy leaks. Install OpenClaw and let an autonomous
-            AI agent build software for you.
+            No subscriptions, no cloud lock-in, no privacy leaks. Install OpenClaw and let an
+            autonomous AI agent build software for you.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a href={EXE_URL} target="_blank" rel="noopener noreferrer">
@@ -580,7 +600,10 @@ function OpenClawPage() {
                 Download Source Code
               </CyanButton>
             </a>
-            <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
+            <Link
+              to="/open-source"
+              className="font-body text-[14px] text-[var(--cyan)] hover:underline"
+            >
               Back to open source software
             </Link>
           </div>
@@ -625,4 +648,3 @@ function ZipIcon() {
     </svg>
   );
 }
-

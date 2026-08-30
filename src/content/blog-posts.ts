@@ -115,7 +115,9 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         heading: "What makes agents trustworthy",
-        paragraphs: ["Observability. If you cannot see the plan, the current step and the tools being called, you cannot delegate anything that matters."],
+        paragraphs: [
+          "Observability. If you cannot see the plan, the current step and the tools being called, you cannot delegate anything that matters.",
+        ],
       },
     ],
     links: [
@@ -141,7 +143,9 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         heading: "How orchestration works",
-        paragraphs: ["A coordinator builds the plan and assigns steps. Each agent receives the skills and tools it needs, works its step, and returns a result that feeds the next."],
+        paragraphs: [
+          "A coordinator builds the plan and assigns steps. Each agent receives the skills and tools it needs, works its step, and returns a result that feeds the next.",
+        ],
         bullets: [
           "Coding agents handle repository and terminal work.",
           "Document agents handle conversion, OCR and packaging.",
@@ -204,7 +208,9 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         heading: "Where voice wins",
-        paragraphs: ["Voice is strongest when your hands are busy, when the instruction is long, or when the task is one you launch dozens of times a week and never want to click through again."],
+        paragraphs: [
+          "Voice is strongest when your hands are busy, when the instruction is long, or when the task is one you launch dozens of times a week and never want to click through again.",
+        ],
       },
     ],
     links: [
@@ -240,7 +246,9 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         heading: "What still needs you",
-        paragraphs: ["Architecture, security decisions and anything with business consequence. Review remains a human job."],
+        paragraphs: [
+          "Architecture, security decisions and anything with business consequence. Review remains a human job.",
+        ],
       },
     ],
     links: [
@@ -427,7 +435,9 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         heading: "Write the rules down before you automate",
-        paragraphs: ["Most automation projects fail because the process only existed in someone's head."],
+        paragraphs: [
+          "Most automation projects fail because the process only existed in someone's head.",
+        ],
         bullets: [
           "What triggers the work?",
           "What inputs are required, and where do they live?",

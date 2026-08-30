@@ -15,7 +15,8 @@ const TITLE = "AnythingLLM — Free Local Document AI for Windows";
 const DESC =
   "Download AnythingLLM free: chat with PDFs, Word docs, CSVs and websites 100% privately on your Windows PC. Local vector database, multi-LLM support, no subscription.";
 
-const DOWNLOAD_URL = "https://drive.google.com/uc?export=download&id=1QNyBB7YIE8zdCHKPY4baDcbC_DvrHfJt";
+const DOWNLOAD_URL =
+  "https://drive.google.com/uc?export=download&id=1QNyBB7YIE8zdCHKPY4baDcbC_DvrHfJt";
 const WHATSAPP = "https://wa.me/923164467464";
 
 const FEATURES = [
@@ -58,10 +59,30 @@ const FEATURES = [
 ];
 
 const COMPARISON = [
-  { label: "Pricing", anythingllm: "$0 — Free forever", chatpdf: "$180 / year", humata: "$240 / year" },
-  { label: "Data privacy", anythingllm: "100% local / zero cloud storage", chatpdf: "Uploads PDFs to third-party servers", humata: "Uploads PDFs to third-party servers" },
-  { label: "Supported formats", anythingllm: "PDF, DOCX, TXT, CSV, Notion, Web, YouTube", chatpdf: "Limited to simple PDFs", humata: "Limited to simple PDFs" },
-  { label: "Vector database", anythingllm: "Built-in local LanceDB / Chroma", chatpdf: "Hosted cloud vector DB", humata: "Hosted cloud vector DB" },
+  {
+    label: "Pricing",
+    anythingllm: "$0 — Free forever",
+    chatpdf: "$180 / year",
+    humata: "$240 / year",
+  },
+  {
+    label: "Data privacy",
+    anythingllm: "100% local / zero cloud storage",
+    chatpdf: "Uploads PDFs to third-party servers",
+    humata: "Uploads PDFs to third-party servers",
+  },
+  {
+    label: "Supported formats",
+    anythingllm: "PDF, DOCX, TXT, CSV, Notion, Web, YouTube",
+    chatpdf: "Limited to simple PDFs",
+    humata: "Limited to simple PDFs",
+  },
+  {
+    label: "Vector database",
+    anythingllm: "Built-in local LanceDB / Chroma",
+    chatpdf: "Hosted cloud vector DB",
+    humata: "Hosted cloud vector DB",
+  },
 ];
 
 const REQUIREMENTS = [
@@ -136,17 +157,21 @@ function AnythingLlmPage() {
               </GradientText>
             </h1>
             <p className="reveal-item delay-2 mt-6 max-w-[640px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[16.5px]">
-              The ultimate all-in-one AI workspace. Turn PDFs, Word docs, spreadsheets, websites, and
-              YouTube videos into an intelligent, searchable chatbot without sending your sensitive
-              data to the cloud.
+              The ultimate all-in-one AI workspace. Turn PDFs, Word docs, spreadsheets, websites,
+              and YouTube videos into an intelligent, searchable chatbot without sending your
+              sensitive data to the cloud.
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
               <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
-                <CyanButton size="lg" icon={<WindowsIcon />}>Download AnythingLLM</CyanButton>
+                <CyanButton size="lg" icon={<WindowsIcon />}>
+                  Download AnythingLLM
+                </CyanButton>
               </a>
               <a href="https://opencode.ai/auth" target="_blank" rel="noopener noreferrer">
-                <CyanButton size="lg" icon={<Key size={18} />} tone="139,92,246">Get Free API Key</CyanButton>
+                <CyanButton size="lg" icon={<Key size={18} />} tone="139,92,246">
+                  Get Free API Key
+                </CyanButton>
               </a>
             </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
@@ -293,12 +318,19 @@ function AnythingLlmPage() {
           </h2>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
-              <CyanButton size="lg" icon={<WindowsIcon />}>Download AnythingLLM</CyanButton>
+              <CyanButton size="lg" icon={<WindowsIcon />}>
+                Download AnythingLLM
+              </CyanButton>
             </a>
             <a href="https://opencode.ai/auth" target="_blank" rel="noopener noreferrer">
-              <CyanButton size="lg" icon={<Key size={18} />} tone="139,92,246">Get Free API Key</CyanButton>
+              <CyanButton size="lg" icon={<Key size={18} />} tone="139,92,246">
+                Get Free API Key
+              </CyanButton>
             </a>
-            <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
+            <Link
+              to="/open-source"
+              className="font-body text-[14px] text-[var(--cyan)] hover:underline"
+            >
               Back to open source software
             </Link>
           </div>

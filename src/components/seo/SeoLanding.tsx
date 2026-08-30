@@ -90,7 +90,6 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
         </SectionWrapper>
       ) : null}
 
-
       <SectionWrapper className="bg-[var(--bg-surface)]">
         <div className="mx-auto max-w-[1000px]">
           <h2 className="font-display text-[26px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[36px]">
@@ -132,7 +131,10 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
       </SectionWrapper>
 
       {page.sections.map((s, i) => (
-        <SectionWrapper key={s.heading} className={i % 2 === 0 ? "bg-[var(--bg-surface)]" : undefined}>
+        <SectionWrapper
+          key={s.heading}
+          className={i % 2 === 0 ? "bg-[var(--bg-surface)]" : undefined}
+        >
           <div className="mx-auto max-w-[900px]">
             <h2 className="font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[32px]">
               {s.heading}
@@ -144,7 +146,12 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
               <ul className="mt-6 space-y-3">
                 {s.bullets.map((b) => (
                   <li key={b} className="flex items-start gap-3">
-                    <Check size={17} color={accent} strokeWidth={2.4} className="mt-[3px] shrink-0" />
+                    <Check
+                      size={17}
+                      color={accent}
+                      strokeWidth={2.4}
+                      className="mt-[3px] shrink-0"
+                    />
                     <span className="font-body text-[14px] leading-[1.75] text-[var(--text-secondary)] md:text-[15px]">
                       {b}
                     </span>

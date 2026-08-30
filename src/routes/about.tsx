@@ -11,15 +11,47 @@ const DESC =
   "DIGI BIZ OS is an AI agentic business operating system by Digiformation Ltd. See what we build, who it is for and how the modules fit together.";
 
 const MODULES = [
-  { name: "Digi AI", to: "/features/digi-ai", body: "The assistant core: voice, chat, planning and model routing." },
-  { name: "DigiCode", to: "/features/digicode", body: "Coding workspace, terminal and repository work." },
-  { name: "DigiDocs", to: "/features/digidocs", body: "Documents, PDFs, OCR, conversion and extraction." },
-  { name: "DigiTools", to: "/features/digitools", body: "150+ mixed tools for everyday desktop and business work." },
-  { name: "DigiCLI", to: "/features/digicli", body: "Command-line control for technical routines." },
-  { name: "DigiMCP", to: "/features/digimcp", body: "Connectivity to external services and local runners." },
-  { name: "DigiFlow", to: "/features/digiflow", body: "Workflows that chain steps into repeatable processes." },
+  {
+    name: "Digi AI",
+    to: "/features/digi-ai",
+    body: "The assistant core: voice, chat, planning and model routing.",
+  },
+  {
+    name: "DigiCode",
+    to: "/features/digicode",
+    body: "Coding workspace, terminal and repository work.",
+  },
+  {
+    name: "DigiDocs",
+    to: "/features/digidocs",
+    body: "Documents, PDFs, OCR, conversion and extraction.",
+  },
+  {
+    name: "DigiTools",
+    to: "/features/digitools",
+    body: "150+ mixed tools for everyday desktop and business work.",
+  },
+  {
+    name: "DigiCLI",
+    to: "/features/digicli",
+    body: "Command-line control for technical routines.",
+  },
+  {
+    name: "DigiMCP",
+    to: "/features/digimcp",
+    body: "Connectivity to external services and local runners.",
+  },
+  {
+    name: "DigiFlow",
+    to: "/features/digiflow",
+    body: "Workflows that chain steps into repeatable processes.",
+  },
   { name: "DigiJobs", to: "/features/digijobs", body: "Scheduled jobs that run on a timetable." },
-  { name: "DigiTasks", to: "/features/digitasks", body: "Task queues and delegation across agents." },
+  {
+    name: "DigiTasks",
+    to: "/features/digitasks",
+    body: "Task queues and delegation across agents.",
+  },
 ];
 
 export const Route = createFileRoute("/about")({
@@ -111,7 +143,8 @@ function AboutPage() {
             The DIGI BIZ OS ecosystem
           </h2>
           <p className="mt-3 max-w-[720px] font-body text-[14.5px] leading-[1.8] text-[var(--text-secondary)]">
-            Every module below is part of the same product — one install, one licence, one workspace.
+            Every module below is part of the same product — one install, one licence, one
+            workspace.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {MODULES.map((m) => (

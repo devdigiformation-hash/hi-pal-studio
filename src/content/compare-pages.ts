@@ -36,7 +36,7 @@ export const COMPARE_PAGES: ComparePage[] = [
     metaDescription:
       "A fair look at DIGI BIZ OS and Stonic AI: both are AI desktop assistants for Windows. Compare scope, agents, automation, licensing and who each one suits best.",
     intro:
-      "Both products sit in the same emerging category: AI assistants that live on your desktop rather than in a browser tab. We have kept this comparison to what is publicly stated by each product, and to the areas where our own scope is clearly defined — check Stonic AI\'s own site for their current feature list before deciding.",
+      "Both products sit in the same emerging category: AI assistants that live on your desktop rather than in a browser tab. We have kept this comparison to what is publicly stated by each product, and to the areas where our own scope is clearly defined — check Stonic AI's own site for their current feature list before deciding.",
     summary: {
       forDigiBiz: [
         "You want a broad business operating system, not only an assistant.",
@@ -51,12 +51,36 @@ export const COMPARE_PAGES: ComparePage[] = [
       ],
     },
     rows: [
-      { aspect: "Category", digibiz: "AI agentic business operating system for Windows", other: "AI desktop assistant" },
-      { aspect: "Scope", digibiz: "500+ skills, 150+ mixed tools, agents, documents, coding, automation", other: "See their site for the current capability list" },
-      { aspect: "Agents", digibiz: "Multi-agent delegation with live run tracking", other: "Varies by release" },
-      { aspect: "Automation", digibiz: "Workflows plus cron-style scheduled jobs", other: "Varies by release" },
-      { aspect: "Licensing", digibiz: "One-time lifetime licence; source code and custom build available", other: "See their current pricing page" },
-      { aspect: "Customisation", digibiz: "Custom skills, agents, memories and full source code option", other: "Varies by release" },
+      {
+        aspect: "Category",
+        digibiz: "AI agentic business operating system for Windows",
+        other: "AI desktop assistant",
+      },
+      {
+        aspect: "Scope",
+        digibiz: "500+ skills, 150+ mixed tools, agents, documents, coding, automation",
+        other: "See their site for the current capability list",
+      },
+      {
+        aspect: "Agents",
+        digibiz: "Multi-agent delegation with live run tracking",
+        other: "Varies by release",
+      },
+      {
+        aspect: "Automation",
+        digibiz: "Workflows plus cron-style scheduled jobs",
+        other: "Varies by release",
+      },
+      {
+        aspect: "Licensing",
+        digibiz: "One-time lifetime licence; source code and custom build available",
+        other: "See their current pricing page",
+      },
+      {
+        aspect: "Customisation",
+        digibiz: "Custom skills, agents, memories and full source code option",
+        other: "Varies by release",
+      },
     ],
     sections: [
       {
@@ -73,8 +97,14 @@ export const COMPARE_PAGES: ComparePage[] = [
       },
     ],
     faq: [
-      { q: "Is this comparison independent?", a: "No — it is published by DIGI BIZ OS. We have limited the claims to our own scope and encourage you to check Stonic AI\'s site directly for their current features and pricing." },
-      { q: "Can I try both?", a: "Yes, and we recommend it. Run the same real task through each product before committing." },
+      {
+        q: "Is this comparison independent?",
+        a: "No — it is published by DIGI BIZ OS. We have limited the claims to our own scope and encourage you to check Stonic AI's site directly for their current features and pricing.",
+      },
+      {
+        q: "Can I try both?",
+        a: "Yes, and we recommend it. Run the same real task through each product before committing.",
+      },
     ],
     links: [
       { label: "AI desktop assistant", to: "/ai-desktop-assistant" },
@@ -107,13 +137,41 @@ export const COMPARE_PAGES: ComparePage[] = [
       ],
     },
     rows: [
-      { aspect: "Primary purpose", digibiz: "Run business and desktop work end to end", other: "Conversational assistance and content generation" },
-      { aspect: "Where it runs", digibiz: "Installed Windows application on your machine", other: "Web, mobile and desktop clients backed by the cloud" },
-      { aspect: "Voice", digibiz: "Voice-first control with live transcript and execution", other: "Voice conversation" },
-      { aspect: "Desktop control", digibiz: "Applications, files, clipboard and system actions", other: "Not a native desktop controller" },
-      { aspect: "Agents", digibiz: "Multi-agent runs with delegation and live tracking", other: "Assistant-style tasks and tooling" },
-      { aspect: "Scheduling", digibiz: "Cron-style jobs and recurring workflows built in", other: "Limited scheduling" },
-      { aspect: "Pricing model", digibiz: "One-time lifetime licence from £50", other: "Free tier plus monthly subscription plans" },
+      {
+        aspect: "Primary purpose",
+        digibiz: "Run business and desktop work end to end",
+        other: "Conversational assistance and content generation",
+      },
+      {
+        aspect: "Where it runs",
+        digibiz: "Installed Windows application on your machine",
+        other: "Web, mobile and desktop clients backed by the cloud",
+      },
+      {
+        aspect: "Voice",
+        digibiz: "Voice-first control with live transcript and execution",
+        other: "Voice conversation",
+      },
+      {
+        aspect: "Desktop control",
+        digibiz: "Applications, files, clipboard and system actions",
+        other: "Not a native desktop controller",
+      },
+      {
+        aspect: "Agents",
+        digibiz: "Multi-agent runs with delegation and live tracking",
+        other: "Assistant-style tasks and tooling",
+      },
+      {
+        aspect: "Scheduling",
+        digibiz: "Cron-style jobs and recurring workflows built in",
+        other: "Limited scheduling",
+      },
+      {
+        aspect: "Pricing model",
+        digibiz: "One-time lifetime licence from £50",
+        other: "Free tier plus monthly subscription plans",
+      },
     ],
     sections: [
       {
@@ -126,8 +184,14 @@ export const COMPARE_PAGES: ComparePage[] = [
       },
     ],
     faq: [
-      { q: "Does DIGI BIZ OS replace ChatGPT?", a: "Not necessarily. It replaces the manual work that follows a conversation. Many users keep both." },
-      { q: "Which is cheaper long term?", a: "DIGI BIZ OS is a one-time licence, so cost does not grow monthly. Subscription products cost less on day one and more over years." },
+      {
+        q: "Does DIGI BIZ OS replace ChatGPT?",
+        a: "Not necessarily. It replaces the manual work that follows a conversation. Many users keep both.",
+      },
+      {
+        q: "Which is cheaper long term?",
+        a: "DIGI BIZ OS is a one-time licence, so cost does not grow monthly. Subscription products cost less on day one and more over years.",
+      },
     ],
     links: [
       { label: "AI desktop assistant", to: "/ai-desktop-assistant" },
@@ -159,11 +223,31 @@ export const COMPARE_PAGES: ComparePage[] = [
       ],
     },
     rows: [
-      { aspect: "Ecosystem", digibiz: "Vendor-neutral; works alongside whatever you use", other: "Strongest inside Microsoft 365" },
-      { aspect: "Customisation", digibiz: "Custom skills, agents, tools, memories and workflows", other: "Configuration within Microsoft's framework" },
-      { aspect: "Automation", digibiz: "Workflows, cron jobs and task queues in the app", other: "Automation via connected Microsoft services" },
-      { aspect: "Coding", digibiz: "Coding workspace, terminal and repository work", other: "Separate developer products" },
-      { aspect: "Licensing", digibiz: "One-time licence; source code licence available", other: "Per-user subscription" },
+      {
+        aspect: "Ecosystem",
+        digibiz: "Vendor-neutral; works alongside whatever you use",
+        other: "Strongest inside Microsoft 365",
+      },
+      {
+        aspect: "Customisation",
+        digibiz: "Custom skills, agents, tools, memories and workflows",
+        other: "Configuration within Microsoft's framework",
+      },
+      {
+        aspect: "Automation",
+        digibiz: "Workflows, cron jobs and task queues in the app",
+        other: "Automation via connected Microsoft services",
+      },
+      {
+        aspect: "Coding",
+        digibiz: "Coding workspace, terminal and repository work",
+        other: "Separate developer products",
+      },
+      {
+        aspect: "Licensing",
+        digibiz: "One-time licence; source code licence available",
+        other: "Per-user subscription",
+      },
     ],
     sections: [
       {
@@ -176,8 +260,14 @@ export const COMPARE_PAGES: ComparePage[] = [
       },
     ],
     faq: [
-      { q: "Can they run side by side?", a: "Yes. They are separate applications and do not conflict." },
-      { q: "Does DIGI BIZ OS need Microsoft 365?", a: "No. It runs independently on Windows 10 and 11." },
+      {
+        q: "Can they run side by side?",
+        a: "Yes. They are separate applications and do not conflict.",
+      },
+      {
+        q: "Does DIGI BIZ OS need Microsoft 365?",
+        a: "No. It runs independently on Windows 10 and 11.",
+      },
     ],
     links: [
       { label: "AI assistant for Windows", to: "/ai-assistant-for-windows" },
@@ -208,11 +298,31 @@ export const COMPARE_PAGES: ComparePage[] = [
       ],
     },
     rows: [
-      { aspect: "Category", digibiz: "AI business operating system", other: "Conversational model assistant" },
-      { aspect: "Model strategy", digibiz: "Multiple models with routing per task", other: "One model family" },
-      { aspect: "Memory", digibiz: "Custom, reusable business memories", other: "Conversation and project context" },
-      { aspect: "Execution", digibiz: "Files, apps, terminal, browser, documents, jobs", other: "Text output plus limited tooling" },
-      { aspect: "Interface", digibiz: "Voice-first desktop app with live run tracking", other: "Chat interface" },
+      {
+        aspect: "Category",
+        digibiz: "AI business operating system",
+        other: "Conversational model assistant",
+      },
+      {
+        aspect: "Model strategy",
+        digibiz: "Multiple models with routing per task",
+        other: "One model family",
+      },
+      {
+        aspect: "Memory",
+        digibiz: "Custom, reusable business memories",
+        other: "Conversation and project context",
+      },
+      {
+        aspect: "Execution",
+        digibiz: "Files, apps, terminal, browser, documents, jobs",
+        other: "Text output plus limited tooling",
+      },
+      {
+        aspect: "Interface",
+        digibiz: "Voice-first desktop app with live run tracking",
+        other: "Chat interface",
+      },
     ],
     sections: [
       {
@@ -221,8 +331,14 @@ export const COMPARE_PAGES: ComparePage[] = [
       },
     ],
     faq: [
-      { q: "Which model does DIGI BIZ OS use?", a: "It supports multiple models and routes work to a suitable one for the task. Model choice is configurable in the app." },
-      { q: "Is Claude better at writing?", a: "For pure long-form reasoning and drafting, a dedicated model assistant is excellent. DIGI BIZ OS focuses on getting operational work completed." },
+      {
+        q: "Which model does DIGI BIZ OS use?",
+        a: "It supports multiple models and routes work to a suitable one for the task. Model choice is configurable in the app.",
+      },
+      {
+        q: "Is Claude better at writing?",
+        a: "For pure long-form reasoning and drafting, a dedicated model assistant is excellent. DIGI BIZ OS focuses on getting operational work completed.",
+      },
     ],
     links: [
       { label: "AI models and routing", to: "/features/ai-models" },
@@ -255,9 +371,21 @@ export const COMPARE_PAGES: ComparePage[] = [
     rows: [
       { aspect: "Form", digibiz: "Installed Windows application", other: "Developer toolkit" },
       { aspect: "Audience", digibiz: "Business users and developers", other: "Developers" },
-      { aspect: "Interface", digibiz: "Voice, chat and a full workspace UI", other: "Command line driven" },
-      { aspect: "Scope", digibiz: "Coding plus documents, tools, agents and automation", other: "Primarily code execution" },
-      { aspect: "Setup", digibiz: "Install and activate", other: "Manual environment configuration" },
+      {
+        aspect: "Interface",
+        digibiz: "Voice, chat and a full workspace UI",
+        other: "Command line driven",
+      },
+      {
+        aspect: "Scope",
+        digibiz: "Coding plus documents, tools, agents and automation",
+        other: "Primarily code execution",
+      },
+      {
+        aspect: "Setup",
+        digibiz: "Install and activate",
+        other: "Manual environment configuration",
+      },
     ],
     sections: [
       {
@@ -270,8 +398,14 @@ export const COMPARE_PAGES: ComparePage[] = [
       },
     ],
     faq: [
-      { q: "Is DIGI BIZ OS open source?", a: "It is a commercial product. A separate source code licence is available for customers who want to own and modify the codebase." },
-      { q: "Can it run code?", a: "Yes — a coding workspace, terminal access and project work are part of the product." },
+      {
+        q: "Is DIGI BIZ OS open source?",
+        a: "It is a commercial product. A separate source code licence is available for customers who want to own and modify the codebase.",
+      },
+      {
+        q: "Can it run code?",
+        a: "Yes — a coding workspace, terminal access and project work are part of the product.",
+      },
     ],
     links: [
       { label: "Computer-use AI", to: "/computer-use-ai" },
@@ -302,11 +436,31 @@ export const COMPARE_PAGES: ComparePage[] = [
       ],
     },
     rows: [
-      { aspect: "Command model", digibiz: "Natural instruction, planned into steps", other: "Fixed phrase to fixed action" },
-      { aspect: "Capability depth", digibiz: "500+ skills, 150+ mixed tools, agents", other: "A short list of shortcuts" },
-      { aspect: "Work produced", digibiz: "Documents, reports, code, files, automations", other: "App launches and simple actions" },
-      { aspect: "Extensibility", digibiz: "Custom skills, tools, memories, agents, workflows", other: "Scripted additions if supported" },
-      { aspect: "Visibility", digibiz: "Live tracking of every step and result", other: "Usually none" },
+      {
+        aspect: "Command model",
+        digibiz: "Natural instruction, planned into steps",
+        other: "Fixed phrase to fixed action",
+      },
+      {
+        aspect: "Capability depth",
+        digibiz: "500+ skills, 150+ mixed tools, agents",
+        other: "A short list of shortcuts",
+      },
+      {
+        aspect: "Work produced",
+        digibiz: "Documents, reports, code, files, automations",
+        other: "App launches and simple actions",
+      },
+      {
+        aspect: "Extensibility",
+        digibiz: "Custom skills, tools, memories, agents, workflows",
+        other: "Scripted additions if supported",
+      },
+      {
+        aspect: "Visibility",
+        digibiz: "Live tracking of every step and result",
+        other: "Usually none",
+      },
     ],
     sections: [
       {
@@ -315,8 +469,14 @@ export const COMPARE_PAGES: ComparePage[] = [
       },
     ],
     faq: [
-      { q: "Is DIGI BIZ OS a JARVIS clone?", a: "No. It is JARVIS-inspired rather than a copy of the fictional system, and it is not affiliated with Marvel." },
-      { q: "Do I still get simple voice commands?", a: "Yes. Quick commands work exactly as you would expect; the difference is that longer requests are also handled." },
+      {
+        q: "Is DIGI BIZ OS a JARVIS clone?",
+        a: "No. It is JARVIS-inspired rather than a copy of the fictional system, and it is not affiliated with Marvel.",
+      },
+      {
+        q: "Do I still get simple voice commands?",
+        a: "Yes. Quick commands work exactly as you would expect; the difference is that longer requests are also handled.",
+      },
     ],
     links: [
       { label: "JARVIS AI", to: "/jarvis-ai" },

@@ -73,11 +73,7 @@ export default function IntegrationsPage() {
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {CHANNELS.map((c, i) => (
-              <GlassCard
-                key={c.title}
-                glowColor={c.color}
-                className={`reveal-item delay-${i + 1}`}
-              >
+              <GlassCard key={c.title} glowColor={c.color} className={`reveal-item delay-${i + 1}`}>
                 <c.icon size={30} color={c.color} strokeWidth={1.6} />
                 <h3 className="mt-5 font-display text-[20px] font-bold text-[var(--text-primary)]">
                   {c.title}
@@ -126,12 +122,21 @@ export default function IntegrationsPage() {
             <TerminalBlock
               speed={14}
               lines={[
-                { text: 'Voice: "Research this market and build me a brief"', color: "var(--text-primary)" },
+                {
+                  text: 'Voice: "Research this market and build me a brief"',
+                  color: "var(--text-primary)",
+                },
                 { text: "[Research] 12 sources retrieved", color: "var(--cyan)" },
                 { text: "[Docs] 4 PDFs parsed · OCR complete", color: "var(--text-secondary)" },
                 { text: "[Skills] summarise → compare → format", color: "var(--text-secondary)" },
-                { text: "Output: market-brief.pdf · signed & watermarked", color: "var(--success)" },
-                { text: "Processed locally — nothing left the machine", color: "var(--text-secondary)" },
+                {
+                  text: "Output: market-brief.pdf · signed & watermarked",
+                  color: "var(--success)",
+                },
+                {
+                  text: "Processed locally — nothing left the machine",
+                  color: "var(--text-secondary)",
+                },
               ]}
             />
           </GlassCard>

@@ -29,7 +29,9 @@ export async function bootstrapAdmin(userId: string) {
 
   if ((count ?? 0) > 0) return { admin: false as const, granted: false };
 
-  const { error } = await supabaseAdmin.from("user_roles").insert({ user_id: userId, role: "admin" });
+  const { error } = await supabaseAdmin
+    .from("user_roles")
+    .insert({ user_id: userId, role: "admin" });
   if (error) {
     console.error("[seo-monitor] admin bootstrap failed", error.message);
     return { admin: false as const, granted: false };
@@ -91,7 +93,9 @@ export async function readOverview() {
 export async function readScanPages(scanId: string) {
   const { data, error } = await supabaseAdmin
     .from("seo_page_checks")
-    .select("url, status_code, title, title_length, description_length, h1_count, canonical, has_og, has_jsonld, word_count, issues, score")
+    .select(
+      "url, status_code, title, title_length, description_length, h1_count, canonical, has_og, has_jsonld, word_count, issues, score",
+    )
     .eq("scan_id", scanId)
     .order("score", { ascending: true });
 

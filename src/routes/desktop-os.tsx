@@ -4,7 +4,8 @@ import { buildMeta, breadcrumbLd, softwareLd } from "@/lib/seo";
 
 const PATH = "/desktop-os";
 const TITLE = "AI Desktop OS for Windows — Files, Apps & Automation | DIGI BIZ OS";
-const DESC = "The desktop layer of DIGI BIZ OS: work with files, applications, terminal and browser through AI agents, with live tracking of every action.";
+const DESC =
+  "The desktop layer of DIGI BIZ OS: work with files, applications, terminal and browser through AI agents, with live tracking of every action.";
 
 export const Route = createFileRoute("/desktop-os")({
   head: () => {

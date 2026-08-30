@@ -18,7 +18,11 @@ export default function CurrencySelector({ className = "" }: { className?: strin
         className="cursor-pointer bg-transparent font-mono text-[12px] text-[var(--text-primary)] outline-none"
       >
         {CURRENCIES.map((c) => (
-          <option key={c.code} value={c.code} className="bg-[var(--bg-surface)] text-[var(--text-primary)]">
+          <option
+            key={c.code}
+            value={c.code}
+            className="bg-[var(--bg-surface)] text-[var(--text-primary)]"
+          >
             {c.flag} {c.code}
           </option>
         ))}

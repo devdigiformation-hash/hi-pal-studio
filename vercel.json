@@ -1,0 +1,8 @@
+{
+  "framework": "vite",
+  "buildCommand": "bun run build",
+  "outputDirectory": ".vercel/output/static",
+  "env": {
+    "NITRO_PRESET": "vercel"
+  }
+}

@@ -51,7 +51,7 @@ export default function JupiterGlobe({ size = 300, className }: JupiterGlobeProp
     const render = (now: number) => {
       const dt = Math.min(now - last, 50);
       last = now;
-      if (!reduced) angle += dt * 0.00010;
+      if (!reduced) angle += dt * 0.0001;
 
       ctx.clearRect(0, 0, w, h);
       const cosA = Math.cos(angle);

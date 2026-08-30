@@ -4,7 +4,8 @@ import { buildMeta, breadcrumbLd, softwareLd } from "@/lib/seo";
 
 const PATH = "/voice-ai";
 const TITLE = "Voice AI Assistant for PC — Control Your Computer by Speaking | DIGI BIZ OS";
-const DESC = "Voice-first control for your Windows desktop: speak a request and DIGI BIZ OS plans it, picks the right agent, skill and tool, and executes it live.";
+const DESC =
+  "Voice-first control for your Windows desktop: speak a request and DIGI BIZ OS plans it, picks the right agent, skill and tool, and executes it live.";
 
 export const Route = createFileRoute("/voice-ai")({
   head: () => {

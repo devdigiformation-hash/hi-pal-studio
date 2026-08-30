@@ -81,7 +81,11 @@ function Visual({ tab }: { tab: Tab }) {
             style={{ background: "var(--bg-glass-light)" }}
           >
             <span className="flex items-center gap-2 font-body text-[13px] text-[var(--text-secondary)]">
-              {m.active ? <ActivePulse /> : <span className="h-2 w-2 rounded-full bg-[var(--text-mono)]" />}
+              {m.active ? (
+                <ActivePulse />
+              ) : (
+                <span className="h-2 w-2 rounded-full bg-[var(--text-mono)]" />
+              )}
               {m.name}
             </span>
             <span className="font-code text-[12px]" style={{ color: m.color }}>
@@ -164,7 +168,10 @@ export default function ProductWorkbench() {
         <div className="text-center">
           <EyebrowLabel text="Intelligent Workspace" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[34px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[48px]">
-            One Command. <GradientText from="#2FE0C8" to="#F5A623">Every Module.</GradientText>
+            One Command.{" "}
+            <GradientText from="#2FE0C8" to="#F5A623">
+              Every Module.
+            </GradientText>
           </h2>
         </div>
 

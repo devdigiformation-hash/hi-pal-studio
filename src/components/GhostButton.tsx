@@ -33,23 +33,27 @@ export default function GhostButton({
         sizes[size],
         className,
       )}
-      style={{
-        color: `rgb(${tone})`,
-        borderColor: `rgba(${tone},0.28)`,
-        boxShadow: `inset 0 1px 0 rgba(255,255,255,0.12),0 6px 24px rgba(0,0,0,0.25)`,
-        "--hover-bg": `rgba(${tone},0.10)`,
-        "--hover-border": `rgba(${tone},0.55)`,
-        "--hover-glow": `rgba(${tone},0.22)`,
-      } as CSSProperties}
+      style={
+        {
+          color: `rgb(${tone})`,
+          borderColor: `rgba(${tone},0.28)`,
+          boxShadow: `inset 0 1px 0 rgba(255,255,255,0.12),0 6px 24px rgba(0,0,0,0.25)`,
+          "--hover-bg": `rgba(${tone},0.10)`,
+          "--hover-border": `rgba(${tone},0.55)`,
+          "--hover-glow": `rgba(${tone},0.22)`,
+        } as CSSProperties
+      }
       onMouseEnter={(e) => {
         e.currentTarget.style.backgroundColor = "var(--hover-bg)";
         e.currentTarget.style.borderColor = "var(--hover-border)";
-        e.currentTarget.style.boxShadow = "inset 0 1px 0 rgba(255,255,255,0.12),0 0 28px var(--hover-glow)";
+        e.currentTarget.style.boxShadow =
+          "inset 0 1px 0 rgba(255,255,255,0.12),0 0 28px var(--hover-glow)";
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.06)";
         e.currentTarget.style.borderColor = `rgba(${tone},0.28)`;
-        e.currentTarget.style.boxShadow = "inset 0 1px 0 rgba(255,255,255,0.12),0 6px 24px rgba(0,0,0,0.25)";
+        e.currentTarget.style.boxShadow =
+          "inset 0 1px 0 rgba(255,255,255,0.12),0 6px 24px rgba(0,0,0,0.25)";
       }}
     >
       <span

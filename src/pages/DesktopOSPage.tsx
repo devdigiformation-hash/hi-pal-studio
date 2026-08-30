@@ -1,5 +1,14 @@
 import { motion } from "framer-motion";
-import { Mouse, FolderOpen, Cpu, Clipboard, FileSpreadsheet, ScanEye, Globe2, Download } from "lucide-react";
+import {
+  Mouse,
+  FolderOpen,
+  Cpu,
+  Clipboard,
+  FileSpreadsheet,
+  ScanEye,
+  Globe2,
+  Download,
+} from "lucide-react";
 import { WindowsIcon } from "@/components/PlatformIcons";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
@@ -104,9 +113,8 @@ export default function DesktopOSPage() {
               Click, Type, Control — <GradientText>All by Voice.</GradientText>
             </h2>
             <p className="reveal-item delay-2 mt-5 max-w-[560px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
-              DIGI BIZ OS takes voice-triggered commands and
-              controls any visible desktop element — click buttons, type text, manage windows,
-              execute hotkeys, capture screenshots.
+              DIGI BIZ OS takes voice-triggered commands and controls any visible desktop element —
+              click buttons, type text, manage windows, execute hotkeys, capture screenshots.
             </p>
 
             <div className="reveal-item delay-3 mt-8 space-y-4">
@@ -126,7 +134,10 @@ export default function DesktopOSPage() {
           <div className="reveal-item delay-2">
             <TerminalBlock
               lines={[
-                { text: '> voice_command: "Open Chrome and search AI news"', color: "var(--text-primary)" },
+                {
+                  text: '> voice_command: "Open Chrome and search AI news"',
+                  color: "var(--text-primary)",
+                },
                 { text: "→ Opening your browser", color: "var(--cyan)" },
                 { text: '→ Typing "AI news today"', color: "var(--cyan)" },
                 { text: "→ Running the search", color: "var(--purple)" },

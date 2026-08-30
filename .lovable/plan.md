@@ -6,10 +6,10 @@ Create a dedicated sub-page for "Agency Orchestrator" in the Open-Source Free Bu
 
 - **New Route**: Create `src/routes/open-source.agency-orchestrator.tsx`.
 - **Content Implementation**:
-    - Hero section with badge, title, subtitle, and CTAs.
-    - 6 Key features highlights.
-    - System requirements and brand attribution.
-    - Download link for `Agency-Orchestrator-Studio.exe`.
+  - Hero section with badge, title, subtitle, and CTAs.
+  - 6 Key features highlights.
+  - System requirements and brand attribution.
+  - Download link for `Agency-Orchestrator-Studio.exe`.
 - **Navigation**: Add the new tool to the listing in `src/routes/open-source.index.tsx`.
 - **SEO**: Add route head metadata and update sitemap.
 

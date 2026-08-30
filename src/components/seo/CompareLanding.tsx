@@ -50,13 +50,22 @@ export default function CompareLanding({ page }: { page: ComparePage }) {
               </caption>
               <thead>
                 <tr className="bg-white/[0.04]">
-                  <th scope="col" className="p-4 font-display text-[13px] font-bold text-[var(--text-muted)]">
+                  <th
+                    scope="col"
+                    className="p-4 font-display text-[13px] font-bold text-[var(--text-muted)]"
+                  >
                     Aspect
                   </th>
-                  <th scope="col" className="p-4 font-display text-[13px] font-bold text-[var(--cyan)]">
+                  <th
+                    scope="col"
+                    className="p-4 font-display text-[13px] font-bold text-[var(--cyan)]"
+                  >
                     DIGI BIZ OS
                   </th>
-                  <th scope="col" className="p-4 font-display text-[13px] font-bold text-[var(--text-secondary)]">
+                  <th
+                    scope="col"
+                    className="p-4 font-display text-[13px] font-bold text-[var(--text-secondary)]"
+                  >
                     {page.competitor}
                   </th>
                 </tr>
@@ -64,7 +73,10 @@ export default function CompareLanding({ page }: { page: ComparePage }) {
               <tbody>
                 {page.rows.map((r) => (
                   <tr key={r.aspect} className="border-t border-[var(--border-subtle)]">
-                    <th scope="row" className="p-4 font-body text-[13.5px] font-medium text-[var(--text-muted)]">
+                    <th
+                      scope="row"
+                      className="p-4 font-body text-[13.5px] font-medium text-[var(--text-muted)]"
+                    >
                       {r.aspect}
                     </th>
                     <td className="p-4 font-body text-[13.5px] leading-[1.7] text-[var(--text-primary)]">
@@ -90,8 +102,15 @@ export default function CompareLanding({ page }: { page: ComparePage }) {
             <ul className="mt-4 space-y-3">
               {page.summary.forDigiBiz.map((s) => (
                 <li key={s} className="flex items-start gap-3">
-                  <Check size={16} color="var(--cyan)" strokeWidth={2.4} className="mt-[3px] shrink-0" />
-                  <span className="font-body text-[13.5px] leading-[1.75] text-[var(--text-secondary)]">{s}</span>
+                  <Check
+                    size={16}
+                    color="var(--cyan)"
+                    strokeWidth={2.4}
+                    className="mt-[3px] shrink-0"
+                  />
+                  <span className="font-body text-[13.5px] leading-[1.75] text-[var(--text-secondary)]">
+                    {s}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -103,8 +122,15 @@ export default function CompareLanding({ page }: { page: ComparePage }) {
             <ul className="mt-4 space-y-3">
               {page.summary.forOther.map((s) => (
                 <li key={s} className="flex items-start gap-3">
-                  <Minus size={16} color="var(--purple)" strokeWidth={2.4} className="mt-[3px] shrink-0" />
-                  <span className="font-body text-[13.5px] leading-[1.75] text-[var(--text-secondary)]">{s}</span>
+                  <Minus
+                    size={16}
+                    color="var(--purple)"
+                    strokeWidth={2.4}
+                    className="mt-[3px] shrink-0"
+                  />
+                  <span className="font-body text-[13.5px] leading-[1.75] text-[var(--text-secondary)]">
+                    {s}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -113,12 +139,17 @@ export default function CompareLanding({ page }: { page: ComparePage }) {
       </SectionWrapper>
 
       {page.sections.map((s, i) => (
-        <SectionWrapper key={s.heading} className={i % 2 === 0 ? "bg-[var(--bg-surface)]" : undefined}>
+        <SectionWrapper
+          key={s.heading}
+          className={i % 2 === 0 ? "bg-[var(--bg-surface)]" : undefined}
+        >
           <div className="mx-auto max-w-[900px]">
             <h2 className="font-display text-[22px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[30px]">
               {s.heading}
             </h2>
-            <p className="mt-4 font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]">{s.body}</p>
+            <p className="mt-4 font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]">
+              {s.body}
+            </p>
           </div>
         </SectionWrapper>
       ))}
@@ -131,8 +162,12 @@ export default function CompareLanding({ page }: { page: ComparePage }) {
           <dl className="mt-8 space-y-6">
             {page.faq.map((f) => (
               <div key={f.q}>
-                <dt className="font-display text-[15.5px] font-bold text-[var(--text-primary)]">{f.q}</dt>
-                <dd className="mt-2 font-body text-[14px] leading-[1.8] text-[var(--text-secondary)]">{f.a}</dd>
+                <dt className="font-display text-[15.5px] font-bold text-[var(--text-primary)]">
+                  {f.q}
+                </dt>
+                <dd className="mt-2 font-body text-[14px] leading-[1.8] text-[var(--text-secondary)]">
+                  {f.a}
+                </dd>
               </div>
             ))}
           </dl>

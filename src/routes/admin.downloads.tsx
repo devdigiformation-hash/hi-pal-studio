@@ -3,15 +3,7 @@ import { useEffect, useState } from "react";
 import type { Session } from "@supabase/supabase-js";
 import { useQuery } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
-import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
+import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { supabase } from "@/integrations/supabase/client";
 import { getDownloadStats } from "@/lib/download-clicks.functions";
 import GlassCard from "@/components/GlassCard";
@@ -51,7 +43,9 @@ function Shell({ children }: { children: React.ReactNode }) {
     <main className="mx-auto w-full max-w-6xl px-5 pb-24 pt-40">
       <EyebrowLabel text="Private · Admin only" reveal={false} />
       <h1 className="mt-4 font-display text-3xl font-bold sm:text-4xl">
-        <GradientText from="var(--cyan)" to="var(--violet)">Download Clicks</GradientText>
+        <GradientText from="var(--cyan)" to="var(--violet)">
+          Download Clicks
+        </GradientText>
       </h1>
       <p className="mt-2 max-w-2xl text-sm text-white/60">
         How many people click “Download for Windows” across the site.
@@ -63,16 +57,27 @@ function Shell({ children }: { children: React.ReactNode }) {
 
 function DownloadsPage() {
   const { session, ready } = useSession();
-  if (!ready) return <Shell><p className="text-sm text-white/60">Checking your session…</p></Shell>;
+  if (!ready)
+    return (
+      <Shell>
+        <p className="text-sm text-white/60">Checking your session…</p>
+      </Shell>
+    );
   if (!session)
     return (
       <Shell>
         <GlassCard className="p-6">
-          <p className="text-sm text-white/70">Sign in with your admin account to view this dashboard.</p>
+          <p className="text-sm text-white/70">
+            Sign in with your admin account to view this dashboard.
+          </p>
         </GlassCard>
       </Shell>
     );
-  return <Shell><Dashboard /></Shell>;
+  return (
+    <Shell>
+      <Dashboard />
+    </Shell>
+  );
 }
 
 function Stat({ label, value }: { label: string; value: number | string }) {
@@ -106,14 +111,29 @@ function Dashboard() {
       </div>
 
       <GlassCard className="p-5">
-        <p className="mb-4 font-display text-sm font-semibold text-white/80">Clicks per day (last 30 days)</p>
+        <p className="mb-4 font-display text-sm font-semibold text-white/80">
+          Clicks per day (last 30 days)
+        </p>
         <div className="h-64 w-full">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data.daily}>
               <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.08)" />
-              <XAxis dataKey="date" tick={{ fill: "rgba(255,255,255,0.45)", fontSize: 10 }} tickFormatter={(v: string) => v.slice(5)} />
-              <YAxis allowDecimals={false} tick={{ fill: "rgba(255,255,255,0.45)", fontSize: 10 }} />
-              <Tooltip contentStyle={{ background: "#0A0C10", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 12 }} />
+              <XAxis
+                dataKey="date"
+                tick={{ fill: "rgba(255,255,255,0.45)", fontSize: 10 }}
+                tickFormatter={(v: string) => v.slice(5)}
+              />
+              <YAxis
+                allowDecimals={false}
+                tick={{ fill: "rgba(255,255,255,0.45)", fontSize: 10 }}
+              />
+              <Tooltip
+                contentStyle={{
+                  background: "#0A0C10",
+                  border: "1px solid rgba(255,255,255,0.12)",
+                  borderRadius: 12,
+                }}
+              />
               <Bar dataKey="clicks" fill="var(--cyan)" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>

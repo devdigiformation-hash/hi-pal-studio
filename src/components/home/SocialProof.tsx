@@ -32,7 +32,10 @@ export default function SocialProof() {
         <div className="text-center">
           <EyebrowLabel text="From the Community" color="var(--purple)" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            They Spoke. <GradientText from="#3DDC84" to="#F5A623">We Delivered.</GradientText>
+            They Spoke.{" "}
+            <GradientText from="#3DDC84" to="#F5A623">
+              We Delivered.
+            </GradientText>
           </h2>
         </div>
 

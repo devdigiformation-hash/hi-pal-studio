@@ -39,7 +39,12 @@ export default function GlobalBackground() {
       {/* Layer 6 — grain */}
       <svg className="animate-noise-flicker absolute inset-0 h-full w-full opacity-[0.03]">
         <filter id="digibiz-noise">
-          <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.8"
+            numOctaves="3"
+            stitchTiles="stitch"
+          />
         </filter>
         <rect width="100%" height="100%" filter="url(#digibiz-noise)" />
       </svg>

@@ -56,8 +56,12 @@ export async function readDownloadStats() {
     today: within(1),
     last7: within(7),
     last30: within(30),
-    bySource: [...bySource.entries()].map(([source, clicks]) => ({ source, clicks })).sort((a, b) => b.clicks - a.clicks),
-    byPlatform: [...byPlatform.entries()].map(([platform, clicks]) => ({ platform, clicks })).sort((a, b) => b.clicks - a.clicks),
+    bySource: [...bySource.entries()]
+      .map(([source, clicks]) => ({ source, clicks }))
+      .sort((a, b) => b.clicks - a.clicks),
+    byPlatform: [...byPlatform.entries()]
+      .map(([platform, clicks]) => ({ platform, clicks }))
+      .sort((a, b) => b.clicks - a.clicks),
     daily,
     recent: rows.slice(0, 25).map((r) => ({
       source: r.source as string,

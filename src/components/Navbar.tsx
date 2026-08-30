@@ -112,7 +112,10 @@ export default function Navbar() {
               }}
             >
               Get Started
-              <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5" />
+              <ArrowRight
+                size={14}
+                className="transition-transform duration-300 group-hover:translate-x-0.5"
+              />
             </Link>
           </div>
 

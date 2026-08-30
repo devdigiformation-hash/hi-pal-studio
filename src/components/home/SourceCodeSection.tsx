@@ -1,13 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
-import {
-  Code2,
-  Settings,
-  Workflow,
-  Rocket,
-  ShieldCheck,
-  RefreshCw,
-} from "lucide-react";
+import { Code2, Settings, Workflow, Rocket, ShieldCheck, RefreshCw } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
@@ -68,9 +61,9 @@ export default function SourceCodeSection() {
               </GradientText>
             </h2>
             <p className="reveal-item delay-2 mt-5 font-body text-[16px] leading-[1.8] text-[var(--text-secondary)] md:text-[17px]">
-              Buy the full source code licence and rebuild DIGI BIZ OS around your business.
-              Change the brand, add your own modules, wire in your services and let agents run
-              your entire operation — from first task to final delivery.
+              Buy the full source code licence and rebuild DIGI BIZ OS around your business. Change
+              the brand, add your own modules, wire in your services and let agents run your entire
+              operation — from first task to final delivery.
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">

@@ -110,7 +110,10 @@ export default function ROICalculator() {
                 <div className="font-body text-[12px] text-[var(--text-muted)]">
                   Hours saved / week
                 </div>
-                <div key={weekly} className="animate-counter-roll font-code text-[26px] text-[var(--cyan)]">
+                <div
+                  key={weekly}
+                  className="animate-counter-roll font-code text-[26px] text-[var(--cyan)]"
+                >
                   {weekly} hrs
                 </div>
               </div>
@@ -118,14 +121,22 @@ export default function ROICalculator() {
                 <div className="font-body text-[12px] text-[var(--text-muted)]">
                   Monthly productivity value
                 </div>
-                <div key={monthly} className="animate-counter-roll font-code text-[26px] text-[var(--cyan)]">
+                <div
+                  key={monthly}
+                  className="animate-counter-roll font-code text-[26px] text-[var(--cyan)]"
+                >
                   £{fmt(monthly)}
                 </div>
               </div>
               <div>
                 <div className="font-body text-[12px] text-[var(--text-muted)]">Annual ROI</div>
-                <div key={annual} className="animate-counter-roll font-code text-[26px] font-medium">
-                  <GradientText from="#2FE0C8" to="#8B7CF6">£{fmt(annual)}</GradientText>
+                <div
+                  key={annual}
+                  className="animate-counter-roll font-code text-[26px] font-medium"
+                >
+                  <GradientText from="#2FE0C8" to="#8B7CF6">
+                    £{fmt(annual)}
+                  </GradientText>
                 </div>
               </div>
             </div>

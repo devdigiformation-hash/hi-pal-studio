@@ -79,8 +79,8 @@ export default function OrderStatusPage({ orderRef }: { orderRef: string }) {
               </h1>
               <p className="mt-3 font-body text-[14.5px] text-[var(--text-secondary)]">
                 We couldn&apos;t find reference{" "}
-                <span className="font-code text-[var(--cyan)]">{orderRef}</span>. Check the link
-                or contact us and we&apos;ll track it down.
+                <span className="font-code text-[var(--cyan)]">{orderRef}</span>. Check the link or
+                contact us and we&apos;ll track it down.
               </p>
               <div className="mt-7">
                 <Link to="/pricing">

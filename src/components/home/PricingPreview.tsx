@@ -78,7 +78,6 @@ const TIERS = [
   },
 ];
 
-
 export default function PricingPreview() {
   const { code } = useCurrency();
 
@@ -88,7 +87,10 @@ export default function PricingPreview() {
         <div className="text-center">
           <EyebrowLabel text="Pricing" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            Pay Once. <GradientText from="#F5A623" to="#3DDC84">Own the Future.</GradientText>
+            Pay Once.{" "}
+            <GradientText from="#F5A623" to="#3DDC84">
+              Own the Future.
+            </GradientText>
           </h2>
           <div className="reveal-item delay-2 mt-6 flex justify-center">
             <CurrencySelector />
@@ -112,12 +114,13 @@ export default function PricingPreview() {
                   {plan.name}
                 </h3>
                 <div className="mt-3 flex items-end gap-1">
-                  <span className="font-display text-[44px] font-bold leading-none" style={{ color: plan.accent }}>
+                  <span
+                    className="font-display text-[44px] font-bold leading-none"
+                    style={{ color: plan.accent }}
+                  >
                     {formatPrice(plan.gbp, code)}
                   </span>
-                  <span className="font-body text-[13px] text-[var(--text-muted)]">
-                    one-time
-                  </span>
+                  <span className="font-body text-[13px] text-[var(--text-muted)]">one-time</span>
                 </div>
                 <div className="mt-2 flex items-center gap-2">
                   <span className="font-body text-[14px] text-[var(--text-muted)] line-through">
@@ -140,7 +143,10 @@ export default function PricingPreview() {
                 </p>
                 <ul className="mt-6 space-y-3">
                   {plan.features.map((f) => (
-                    <li key={f} className="flex gap-2 font-body text-[13px] text-[var(--text-secondary)]">
+                    <li
+                      key={f}
+                      className="flex gap-2 font-body text-[13px] text-[var(--text-secondary)]"
+                    >
                       <span style={{ color: plan.accent }}>✓</span>
                       {f}
                     </li>
@@ -157,7 +163,6 @@ export default function PricingPreview() {
             </div>
           ))}
         </div>
-
       </div>
     </SectionWrapper>
   );

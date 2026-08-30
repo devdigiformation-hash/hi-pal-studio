@@ -48,7 +48,10 @@ export default function SecuritySection() {
         <div>
           <EyebrowLabel text="Enterprise Privacy" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[44px]">
-            Your Data. <GradientText from="#4DA3FF" to="#2FE0C8">Your Machine. Your Rules.</GradientText>
+            Your Data.{" "}
+            <GradientText from="#4DA3FF" to="#2FE0C8">
+              Your Machine. Your Rules.
+            </GradientText>
           </h2>
           <p className="reveal-item delay-2 mt-5 max-w-[480px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
             Every keystroke, click and capture is processed on your own machine — privacy is the
@@ -70,7 +73,9 @@ export default function SecuritySection() {
                   <span
                     aria-hidden
                     className="absolute left-0 top-4 h-[calc(100%-2rem)] w-px opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                    style={{ background: `linear-gradient(180deg, transparent, ${p.color}, transparent)` }}
+                    style={{
+                      background: `linear-gradient(180deg, transparent, ${p.color}, transparent)`,
+                    }}
                   />
                   <div
                     className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] border border-[var(--border-glass)] transition-transform duration-300 group-hover:-translate-y-0.5"
@@ -129,38 +134,63 @@ export default function SecuritySection() {
             <div className="relative">
               <svg aria-hidden className="pointer-events-none absolute inset-0 h-full w-full">
                 <line
-                  x1="50%" y1="70" x2="50%" y2="130"
-                  stroke="rgba(47,224,200,0.35)" strokeWidth="1" strokeDasharray="4 5"
+                  x1="50%"
+                  y1="70"
+                  x2="50%"
+                  y2="130"
+                  stroke="rgba(47,224,200,0.35)"
+                  strokeWidth="1"
+                  strokeDasharray="4 5"
                   className="animate-draw-wire"
                 />
                 <line
-                  x1="50%" y1="190" x2="25%" y2="250"
-                  stroke="rgba(139,124,246,0.35)" strokeWidth="1" strokeDasharray="4 5"
-                  className="animate-draw-wire" style={{ animationDelay: "0.3s" }}
+                  x1="50%"
+                  y1="190"
+                  x2="25%"
+                  y2="250"
+                  stroke="rgba(139,124,246,0.35)"
+                  strokeWidth="1"
+                  strokeDasharray="4 5"
+                  className="animate-draw-wire"
+                  style={{ animationDelay: "0.3s" }}
                 />
                 <line
-                  x1="50%" y1="190" x2="75%" y2="250"
-                  stroke="rgba(245,166,35,0.35)" strokeWidth="1" strokeDasharray="4 5"
-                  className="animate-draw-wire" style={{ animationDelay: "0.6s" }}
+                  x1="50%"
+                  y1="190"
+                  x2="75%"
+                  y2="250"
+                  stroke="rgba(245,166,35,0.35)"
+                  strokeWidth="1"
+                  strokeDasharray="4 5"
+                  className="animate-draw-wire"
+                  style={{ animationDelay: "0.6s" }}
                 />
               </svg>
 
               <div className="relative space-y-12">
-                <div className="mx-auto w-fit rounded-[var(--r-md)] border border-[var(--border-glass)] px-6 py-3 text-center font-code text-[12px] text-[var(--text-secondary)]"
-                  style={{ background: "var(--bg-glass-light)" }}>
+                <div
+                  className="mx-auto w-fit rounded-[var(--r-md)] border border-[var(--border-glass)] px-6 py-3 text-center font-code text-[12px] text-[var(--text-secondary)]"
+                  style={{ background: "var(--bg-glass-light)" }}
+                >
                   Your Desktop
                 </div>
-                <div className="mx-auto w-fit rounded-[var(--r-md)] border border-[var(--cyan-border)] px-8 py-4 text-center font-display text-[14px] font-bold text-[var(--cyan)]"
-                  style={{ background: "var(--bg-glass)", boxShadow: "var(--glow-cyan)" }}>
+                <div
+                  className="mx-auto w-fit rounded-[var(--r-md)] border border-[var(--cyan-border)] px-8 py-4 text-center font-display text-[14px] font-bold text-[var(--cyan)]"
+                  style={{ background: "var(--bg-glass)", boxShadow: "var(--glow-cyan)" }}
+                >
                   DIGI BIZ OS
                 </div>
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="rounded-[var(--r-md)] border border-[var(--border-glass)] px-4 py-3 text-center font-code text-[11px] text-[var(--text-secondary)]"
-                    style={{ background: "var(--bg-glass-light)" }}>
+                  <div
+                    className="rounded-[var(--r-md)] border border-[var(--border-glass)] px-4 py-3 text-center font-code text-[11px] text-[var(--text-secondary)]"
+                    style={{ background: "var(--bg-glass-light)" }}
+                  >
                     Local Desktop Agent
                   </div>
-                  <div className="rounded-[var(--r-md)] border border-[var(--border-glass)] px-4 py-3 text-center font-code text-[11px] text-[var(--text-secondary)]"
-                    style={{ background: "var(--bg-glass-light)" }}>
+                  <div
+                    className="rounded-[var(--r-md)] border border-[var(--border-glass)] px-4 py-3 text-center font-code text-[11px] text-[var(--text-secondary)]"
+                    style={{ background: "var(--bg-glass-light)" }}
+                  >
                     Encrypted Keys
                   </div>
                 </div>

@@ -98,14 +98,7 @@ export const PLANS: Record<PlanId, Plan> = {
 
 export const PLAN_IDS = Object.keys(PLANS) as PlanId[];
 
-export type MethodId =
-  | "jazzcash"
-  | "easypaisa"
-  | "sadapay"
-  | "nayapay"
-  | "ubl"
-  | "gbp"
-  | "usd";
+export type MethodId = "jazzcash" | "easypaisa" | "sadapay" | "nayapay" | "ubl" | "gbp" | "usd";
 
 export type Currency = "PKR" | "GBP" | "USD";
 

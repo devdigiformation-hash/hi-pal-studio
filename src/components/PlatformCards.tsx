@@ -51,8 +51,8 @@ export default function PlatformCards() {
           sub="Windows 10 & 11"
         />
         <p className="mt-4 mb-6 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-          The full DIGI BIZ OS desktop build — voice control, 150+ built-in mixed tools and AI agents,
-          available today.
+          The full DIGI BIZ OS desktop build — voice control, 150+ built-in mixed tools and AI
+          agents, available today.
         </p>
         <div className="mt-auto">
           <CyanButton className="w-full !px-4 text-[13px]" icon={<WindowsIcon size={15} />}>
@@ -61,7 +61,10 @@ export default function PlatformCards() {
         </div>
       </GlassCard>
 
-      <GlassCard className="flex h-full flex-col p-6 text-left opacity-90" glowColor="var(--purple)">
+      <GlassCard
+        className="flex h-full flex-col p-6 text-left opacity-90"
+        glowColor="var(--purple)"
+      >
         <CardHead
           icon={<AppleIcon size={24} />}
           color="var(--purple)"
@@ -88,7 +91,10 @@ export default function PlatformCards() {
         <ComingSoonBadge color="var(--green)" />
       </GlassCard>
 
-      <GlassCard className="flex h-full flex-col p-6 text-left opacity-90" glowColor="var(--orange)">
+      <GlassCard
+        className="flex h-full flex-col p-6 text-left opacity-90"
+        glowColor="var(--orange)"
+      >
         <CardHead
           icon={<MobileIcon size={24} />}
           color="var(--orange)"

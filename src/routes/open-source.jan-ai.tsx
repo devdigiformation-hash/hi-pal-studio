@@ -60,9 +60,24 @@ const FEATURES = [
 
 const COMPARISON = [
   { label: "Pricing", jan: "$0 — free forever", chatgpt: "$240 / year", claude: "$240 / year" },
-  { label: "Data privacy", jan: "100% local & private", chatgpt: "Logged on cloud", claude: "Logged on cloud" },
-  { label: "Offline access", jan: "Yes — no internet", chatgpt: "No — always needs Wi-Fi", claude: "No — always needs Wi-Fi" },
-  { label: "Message limits", jan: "Unlimited", chatgpt: "Strict hourly rate caps", claude: "Strict hourly rate caps" },
+  {
+    label: "Data privacy",
+    jan: "100% local & private",
+    chatgpt: "Logged on cloud",
+    claude: "Logged on cloud",
+  },
+  {
+    label: "Offline access",
+    jan: "Yes — no internet",
+    chatgpt: "No — always needs Wi-Fi",
+    claude: "No — always needs Wi-Fi",
+  },
+  {
+    label: "Message limits",
+    jan: "Unlimited",
+    chatgpt: "Strict hourly rate caps",
+    claude: "Strict hourly rate caps",
+  },
 ];
 
 const REQUIREMENTS = [
@@ -127,7 +142,10 @@ function JanAiPage() {
         />
         <div className="mx-auto grid max-w-[1180px] items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
           <div>
-            <EyebrowLabel text="100% Free & Open-Source Desktop Suite — No Subscription" color="var(--amber)" />
+            <EyebrowLabel
+              text="100% Free & Open-Source Desktop Suite — No Subscription"
+              color="var(--amber)"
+            />
             <p className="reveal-item mt-5 font-display text-[15px] font-bold uppercase tracking-[0.18em] text-[var(--cyan)]">
               Jan AI
             </p>
@@ -138,17 +156,21 @@ function JanAiPage() {
               </GradientText>
             </h1>
             <p className="reveal-item delay-2 mt-6 max-w-[640px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[16.5px]">
-              The ultimate free ChatGPT alternative. Chat with local AI models (DeepSeek, Llama 3, Qwen,
-              Mistral) directly on your laptop RAM with zero internet, zero tracking and lifetime free
-              access.
+              The ultimate free ChatGPT alternative. Chat with local AI models (DeepSeek, Llama 3,
+              Qwen, Mistral) directly on your laptop RAM with zero internet, zero tracking and
+              lifetime free access.
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
               <a href={DOWNLOAD_URL} download="Jan-Setup-x64.exe">
-                <CyanButton size="lg" icon={<WindowsIcon />}>Download Jan AI</CyanButton>
+                <CyanButton size="lg" icon={<WindowsIcon />}>
+                  Download Jan AI
+                </CyanButton>
               </a>
               <a href="https://opencode.ai/auth" target="_blank" rel="noopener noreferrer">
-                <CyanButton size="lg" icon={<Key size={18} />} tone="139,92,246">Get Free API Key</CyanButton>
+                <CyanButton size="lg" icon={<Key size={18} />} tone="139,92,246">
+                  Get Free API Key
+                </CyanButton>
               </a>
             </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
@@ -295,12 +317,19 @@ function JanAiPage() {
           </h2>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a href={DOWNLOAD_URL} download="Jan-Setup-x64.exe">
-              <CyanButton size="lg" icon={<WindowsIcon />}>Download Jan AI</CyanButton>
+              <CyanButton size="lg" icon={<WindowsIcon />}>
+                Download Jan AI
+              </CyanButton>
             </a>
             <a href="https://opencode.ai/auth" target="_blank" rel="noopener noreferrer">
-              <CyanButton size="lg" icon={<Key size={18} />} tone="139,92,246">Get Free API Key</CyanButton>
+              <CyanButton size="lg" icon={<Key size={18} />} tone="139,92,246">
+                Get Free API Key
+              </CyanButton>
             </a>
-            <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
+            <Link
+              to="/open-source"
+              className="font-body text-[14px] text-[var(--cyan)] hover:underline"
+            >
               Back to open source software
             </Link>
           </div>

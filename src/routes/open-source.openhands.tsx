@@ -29,8 +29,7 @@ import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
 import openhandsZip from "@/assets/OpenHands-main.zip.asset.json";
 
-const TITLE =
-  "OpenHands Autonomous AI Software Engineer — Free Open-Source Devin Alternative";
+const TITLE = "OpenHands Autonomous AI Software Engineer — Free Open-Source Devin Alternative";
 const DESC =
   "Download OpenHands free: the open-source autonomous AI software engineer that writes, tests and deploys code, fixes GitHub issues, and builds full-stack apps from plain English. MIT license, $0 fees.";
 
@@ -47,43 +46,37 @@ const FEATURES = [
     icon: Code2,
     color: "var(--cyan)",
     title: "Full-Stack Autonomous Software Engineering",
-    body:
-      "Writes frontend React/Vue components, builds backend REST/GraphQL APIs, schemas SQLite/Postgres databases, and configures Docker environments from simple English instructions.",
+    body: "Writes frontend React/Vue components, builds backend REST/GraphQL APIs, schemas SQLite/Postgres databases, and configures Docker environments from simple English instructions.",
   },
   {
     icon: Bug,
     color: "#3B82F6",
     title: "SWE-Bench Verified GitHub Issue Resolver",
-    body:
-      "Connects directly to your GitHub repositories, reads existing codebases, understands issue tickets, creates bug fix PRs, and verifies unit tests before submission.",
+    body: "Connects directly to your GitHub repositories, reads existing codebases, understands issue tickets, creates bug fix PRs, and verifies unit tests before submission.",
   },
   {
     icon: MonitorSmartphone,
     color: "var(--amber)",
     title: "Interactive Sandbox Workstation (Terminal + Editor + Browser)",
-    body:
-      "Runs a live isolated environment with full Bash shell access, an integrated VS Code-style editor, and a live web browser preview to inspect running apps in real-time.",
+    body: "Runs a live isolated environment with full Bash shell access, an integrated VS Code-style editor, and a live web browser preview to inspect running apps in real-time.",
   },
   {
     icon: RefreshCcw,
     color: "#F472B6",
     title: "Universal Multi-Model Hub (100+ LLMs)",
-    body:
-      "Seamlessly switch between 100% free local models (DeepSeek-R1, Ollama Llama 3.3, Qwen 2.5 Coder) and top-tier cloud models (Claude 3.5 Sonnet, OpenAI GPT-4o, Groq).",
+    body: "Seamlessly switch between 100% free local models (DeepSeek-R1, Ollama Llama 3.3, Qwen 2.5 Coder) and top-tier cloud models (Claude 3.5 Sonnet, OpenAI GPT-4o, Groq).",
   },
   {
     icon: Wrench,
     color: "#7DD3FC",
     title: "Self-Healing Automated Test & Debug Loop",
-    body:
-      "Executes pytest, npm test, or build scripts in the terminal. If errors occur, OpenHands reads the stack trace, diagnoses the defect, edits the source files, and reruns tests until 100% passing.",
+    body: "Executes pytest, npm test, or build scripts in the terminal. If errors occur, OpenHands reads the stack trace, diagnoses the defect, edits the source files, and reruns tests until 100% passing.",
   },
   {
     icon: BadgeDollarSign,
     color: "#3DDC84",
     title: "Save $6,000+/Year on Devin AI",
-    body:
-      "Enjoy enterprise-grade autonomous software development without paying $500/month Devin subscriptions or restrictive seat licenses.",
+    body: "Enjoy enterprise-grade autonomous software development without paying $500/month Devin subscriptions or restrictive seat licenses.",
   },
 ];
 
@@ -92,29 +85,25 @@ const PANELS = [
     icon: Code,
     color: "var(--cyan)",
     title: "Interactive Code Editor",
-    body:
-      "Live syntax-highlighted editor displaying code modifications and file diffs in real-time.",
+    body: "Live syntax-highlighted editor displaying code modifications and file diffs in real-time.",
   },
   {
     icon: Terminal,
     color: "#3B82F6",
     title: "Autonomous Bash Terminal",
-    body:
-      "Real-time command execution, package installation (npm, pip, cargo), and test runner feed.",
+    body: "Real-time command execution, package installation (npm, pip, cargo), and test runner feed.",
   },
   {
     icon: Globe,
     color: "var(--amber)",
     title: "Embedded Browser Preview",
-    body:
-      "Visual rendering of generated web pages, interactive button testing, and UI inspection.",
+    body: "Visual rendering of generated web pages, interactive button testing, and UI inspection.",
   },
   {
     icon: MessageSquare,
     color: "#F472B6",
     title: "Architectural Chat Stream",
-    body:
-      "Step-by-step reasoning thought trace, file inspection history, and user feedback prompt bar.",
+    body: "Step-by-step reasoning thought trace, file inspection history, and user feedback prompt bar.",
   },
 ];
 
@@ -160,18 +149,15 @@ const COMPARISON = [
 const SETUP_STEPS = [
   {
     title: "Download & unzip the source",
-    body:
-      "Grab openhands-main.zip — the complete GitHub repository with the Python backend orchestrator, React frontend UI, and Docker sandbox definitions.",
+    body: "Grab openhands-main.zip — the complete GitHub repository with the Python backend orchestrator, React frontend UI, and Docker sandbox definitions.",
   },
   {
     title: "Run via Docker or Python",
-    body:
-      "Launch the full workstation with a single docker run command, or start the Python backend directly for development and customization.",
+    body: "Launch the full workstation with a single docker run command, or start the Python backend directly for development and customization.",
   },
   {
     title: "Connect a model & assign tasks",
-    body:
-      "Pick a 100% free local model (Ollama / DeepSeek-R1) or paste a cloud API key, then describe your goal in plain English and watch it code.",
+    body: "Pick a 100% free local model (Ollama / DeepSeek-R1) or paste a cloud API key, then describe your goal in plain English and watch it code.",
   },
 ];
 
@@ -267,7 +253,6 @@ function OpenHandsPage() {
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
               Complete GitHub Repository • Python / React Architecture • MIT Open-Source
             </p>
-
           </div>
 
           <GlassCard glowColor="#3B82F6" className="p-3">
@@ -410,7 +395,11 @@ function OpenHandsPage() {
           </h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {SETUP_STEPS.map((s, i) => (
-              <GlassCard key={s.title} glowColor={i === 0 ? "#3B82F6" : "var(--cyan)"} className="h-full p-5">
+              <GlassCard
+                key={s.title}
+                glowColor={i === 0 ? "#3B82F6" : "var(--cyan)"}
+                className="h-full p-5"
+              >
                 <div className="flex items-center gap-3">
                   <span
                     className="flex h-8 w-8 items-center justify-center rounded-full font-display text-[13px] font-bold"
@@ -466,7 +455,12 @@ function OpenHandsPage() {
                       Micro-Agents
                     </li>
                   </ul>
-                  <a href={ZIP_URL} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block">
+                  <a
+                    href={ZIP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-block"
+                  >
                     <CyanButton size="md" icon={<ZipIcon />} tone={BLUE}>
                       Download .ZIP
                     </CyanButton>
@@ -511,7 +505,12 @@ function OpenHandsPage() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={16} color="var(--cyan)" className="shrink-0" />
-                <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="text-[var(--cyan)] hover:underline">
+                <a
+                  href={WHATSAPP}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--cyan)] hover:underline"
+                >
                   +92 316 446 7464
                 </a>
               </div>
@@ -523,13 +522,23 @@ function OpenHandsPage() {
               </div>
               <div className="flex items-center gap-3">
                 <GlobeIcon size={16} color="var(--cyan)" className="shrink-0" />
-                <a href={COMPANY_WEBSITE} target="_blank" rel="noopener noreferrer" className="text-[var(--cyan)] hover:underline">
+                <a
+                  href={COMPANY_WEBSITE}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--cyan)] hover:underline"
+                >
                   www.digiformation.co.uk
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <TreePine size={16} color="var(--cyan)" className="shrink-0" />
-                <a href={LINKTREE} target="_blank" rel="noopener noreferrer" className="text-[var(--cyan)] hover:underline">
+                <a
+                  href={LINKTREE}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--cyan)] hover:underline"
+                >
                   linktr.ee/digiformationltd
                 </a>
               </div>
@@ -571,7 +580,10 @@ function OpenHandsPage() {
                     Unlock More Features
                   </CyanButton>
                 </Link>
-                <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
+                <Link
+                  to="/open-source"
+                  className="font-body text-[14px] text-[var(--cyan)] hover:underline"
+                >
                   Back to open source software
                 </Link>
               </div>
@@ -595,7 +607,10 @@ function OpenHandsPage() {
                 Download Full Source Code (.ZIP)
               </CyanButton>
             </a>
-            <Link to="/open-source" className="font-body text-[14px] text-[var(--cyan)] hover:underline">
+            <Link
+              to="/open-source"
+              className="font-body text-[14px] text-[var(--cyan)] hover:underline"
+            >
               Back to open source software
             </Link>
           </div>
@@ -625,4 +640,3 @@ function ZipIcon() {
     </svg>
   );
 }
-

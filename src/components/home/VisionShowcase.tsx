@@ -10,15 +10,18 @@ import GradientText from "@/components/GradientText";
 const DEMOS = [
   {
     query: "Explain this error in my terminal →",
-    response: "TypeError at line 42 — `user` is undefined because the fetch resolves after render. Add a loading guard before access.",
+    response:
+      "TypeError at line 42 — `user` is undefined because the fetch resolves after render. Add a loading guard before access.",
   },
   {
     query: "Extract table from this PDF on screen →",
-    response: "Extracted 3 columns × 18 rows · Company | SIC Code | Incorporation Date — exported to /Desktop/extract.csv",
+    response:
+      "Extracted 3 columns × 18 rows · Company | SIC Code | Incorporation Date — exported to /Desktop/extract.csv",
   },
   {
     query: "Debug this React component visually →",
-    response: "Lines 18–24 re-render on every keystroke. Memoize `options` and move the handler out of the render body.",
+    response:
+      "Lines 18–24 re-render on every keystroke. Memoize `options` and move the handler out of the render body.",
   },
 ];
 
@@ -35,11 +38,14 @@ export default function VisionShowcase() {
         <div className="text-center">
           <EyebrowLabel text="Multimodal Intelligence" color="var(--amber)" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[34px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[48px]">
-            It Sees. <GradientText from="#F5A623" to="#8B7CF6">It Understands. It Acts.</GradientText>
+            It Sees.{" "}
+            <GradientText from="#F5A623" to="#8B7CF6">
+              It Understands. It Acts.
+            </GradientText>
           </h2>
           <p className="reveal-item delay-2 mx-auto mt-5 max-w-[620px] font-body text-[15px] leading-[1.75] text-[var(--text-secondary)]">
-            Stream your screen live to the vision engine and receive instant analysis, code review, bug
-            detection, and document extraction in real time.
+            Stream your screen live to the vision engine and receive instant analysis, code review,
+            bug detection, and document extraction in real time.
           </p>
         </div>
 

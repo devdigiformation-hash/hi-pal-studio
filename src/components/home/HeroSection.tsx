@@ -6,6 +6,8 @@ import {
   Brain,
   Camera,
   Cpu,
+  Database,
+  Megaphone,
   Monitor,
   Play,
   Smartphone,
@@ -37,26 +39,18 @@ const CYCLE = [
   "One command. Infinite output.",
 ];
 
-const PHRASES = [
-  "With Voice.",
-  "With AI.",
-  "Hands-Free.",
-  "At Light Speed.",
-  "Around the Clock.",
-];
+const PHRASES = ["With Voice.", "With AI.", "Hands-Free.", "At Light Speed.", "Around the Clock."];
 
 const NODES = [
-  { icon: Brain, label: "Memory", color: "#8B7CF6", angle: -115 },
-  { icon: Sparkles, label: "Soul", color: "#2FE0C8", angle: -65 },
-  { icon: Cpu, label: "Skills", color: "#3B82F6", angle: -20 },
-  
-  { icon: Camera, label: "Camera", color: "#C4B5FD", angle: 65 },
-  { icon: Monitor, label: "Screen", color: "#F5A623", angle: 115 },
-  { icon: Users, label: "Agent", color: "#F472B6", angle: 160 },
-  { icon: Wrench, label: "Tools", color: "#7DD3FC", angle: 200 },
+  { icon: Brain, label: "Memory", color: "#8B7CF6", angle: -135 },
+  { icon: Megaphone, label: "DIGI Marketing", color: "#2FE0C8", angle: -90 },
+  { icon: Cpu, label: "Skills", color: "#3B82F6", angle: -45 },
+  { icon: Database, label: "DIGI CRM", color: "#10B981", angle: 0 },
+  { icon: Camera, label: "Camera", color: "#C4B5FD", angle: 45 },
+  { icon: Monitor, label: "Screen", color: "#F5A623", angle: 90 },
+  { icon: Users, label: "Agent", color: "#F472B6", angle: 135 },
+  { icon: Wrench, label: "Tools", color: "#7DD3FC", angle: 180 },
 ];
-
-
 
 const BADGES = ["500+ AI Skills", "150+ Mixed Tools", "Multi-Agent Execution", "Multi-MCP Ready"];
 
@@ -174,7 +168,6 @@ export default function HeroSection() {
             "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(47,224,200,0.06), transparent), radial-gradient(ellipse 50% 40% at 70% 60%, rgba(139,124,246,0.05), transparent)",
         }}
       />
-
 
       <div className="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-10 md:gap-12 lg:grid-cols-[55%_45%] lg:gap-16">
         {/* LEFT */}
@@ -326,7 +319,7 @@ export default function HeroSection() {
                       >
                         <Icon size={15} color={n.color} strokeWidth={1.6} />
                       </div>
-                      <span className="font-display text-[9px] font-medium text-[var(--text-secondary)]">
+                      <span className="font-display text-[9px] font-medium text-[var(--text-secondary)] whitespace-nowrap text-center">
                         {n.label}
                       </span>
                     </div>
@@ -345,42 +338,42 @@ export default function HeroSection() {
 
           {/* Nodes — orbiting like a solar system */}
           <div className="animate-orbit-spin pointer-events-none absolute inset-0">
-          {NODES.map((n, i) => {
-            const rad = (n.angle * Math.PI) / 180;
-            const Icon = n.icon;
-            return (
-              <motion.div
-                key={n.label}
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 + i * 0.12 }}
-                className="absolute"
-                style={{
-                  left: `calc(50% + ${Math.cos(rad) * radius}px)`,
-                  top: `calc(50% + ${Math.sin(rad) * radius}px)`,
-                  transform: "translate(-50%,-50%)",
-                }}
-              >
-                <div className="animate-orbit-spin-rev flex flex-col items-center gap-1">
-                <div
-                  className="animate-float flex h-14 w-14 items-center justify-center rounded-full border backdrop-blur-xl"
+            {NODES.map((n, i) => {
+              const rad = (n.angle * Math.PI) / 180;
+              const Icon = n.icon;
+              return (
+                <motion.div
+                  key={n.label}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4 + i * 0.12 }}
+                  className="absolute"
                   style={{
-                    background: "var(--bg-glass)",
-                    borderColor: "var(--border-glass)",
-                    boxShadow: `0 0 26px ${n.color}33`,
-                    animationDelay: `${i * 0.4}s`,
+                    left: `calc(50% + ${Math.cos(rad) * radius}px)`,
+                    top: `calc(50% + ${Math.sin(rad) * radius}px)`,
+                    transform: "translate(-50%,-50%)",
                   }}
                 >
-                  <Icon size={22} color={n.color} strokeWidth={1.6} />
-                </div>
-                <span className="font-display text-[11px] font-medium text-[var(--text-secondary)]">
-                  {n.label}
-                </span>
-                </div>
-              </motion.div>
-            );
-          })}
+                  <div className="animate-orbit-spin-rev flex flex-col items-center gap-1">
+                    <div
+                      className="animate-float flex h-14 w-14 items-center justify-center rounded-full border backdrop-blur-xl"
+                      style={{
+                        background: "var(--bg-glass)",
+                        borderColor: "var(--border-glass)",
+                        boxShadow: `0 0 26px ${n.color}33`,
+                        animationDelay: `${i * 0.4}s`,
+                      }}
+                    >
+                      <Icon size={22} color={n.color} strokeWidth={1.6} />
+                    </div>
+                    <span className="font-display text-[11px] font-medium text-[var(--text-secondary)] whitespace-nowrap text-center">
+                      {n.label}
+                    </span>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
 
           {/* Floating mini stat */}

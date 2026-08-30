@@ -77,7 +77,11 @@ function ContactPage() {
               </p>
             </GlassCard>
           </a>
-          <a href={`mailto:${SUPPORT_EMAIL}`} aria-label="Email DIGI BIZ OS support" className="block h-full">
+          <a
+            href={`mailto:${SUPPORT_EMAIL}`}
+            aria-label="Email DIGI BIZ OS support"
+            className="block h-full"
+          >
             <GlassCard glowColor="var(--purple)" className="h-full p-6">
               <Mail size={20} color="var(--purple)" />
               <h2 className="mt-3 font-display text-[16.5px] font-bold text-[var(--text-primary)]">

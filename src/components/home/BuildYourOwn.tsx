@@ -16,14 +16,54 @@ import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
 
 const ITEMS: { icon: LucideIcon; color: string; title: string; body: string }[] = [
-  { icon: Sparkles, color: "var(--cyan)", title: "Custom Skills", body: "Teach DIGI BIZ OS a new skill and reuse it forever across your business." },
-  { icon: Brain, color: "var(--purple)", title: "Custom Memories", body: "Store the facts, rules and preferences your AI should never forget." },
-  { icon: Wrench, color: "var(--amber)", title: "Custom Tools", body: "Add your own tools on top of the 150+ built-in ones already included." },
-  { icon: Users, color: "#F472B6", title: "Custom Agents", body: "Start with multi agents and create as many specialists as your work needs." },
-  { icon: Workflow, color: "#7DD3FC", title: "Custom Workflows", body: "Chain steps into an automation and launch it by voice or on schedule." },
-  { icon: Clock, color: "#3DDC84", title: "Cron Jobs", body: "Schedule anything to run hourly, daily or weekly — fully hands-off." },
-  { icon: Plug, color: "#A855F7", title: "Connected Services", body: "Plug in the platforms your business already runs on, no technical setup." },
-  { icon: MessageSquarePlus, color: "var(--cyan)", title: "Custom Prompts", body: "Save your best instructions as one-tap commands for the whole team." },
+  {
+    icon: Sparkles,
+    color: "var(--cyan)",
+    title: "Custom Skills",
+    body: "Teach DIGI BIZ OS a new skill and reuse it forever across your business.",
+  },
+  {
+    icon: Brain,
+    color: "var(--purple)",
+    title: "Custom Memories",
+    body: "Store the facts, rules and preferences your AI should never forget.",
+  },
+  {
+    icon: Wrench,
+    color: "var(--amber)",
+    title: "Custom Tools",
+    body: "Add your own tools on top of the 150+ built-in ones already included.",
+  },
+  {
+    icon: Users,
+    color: "#F472B6",
+    title: "Custom Agents",
+    body: "Start with multi agents and create as many specialists as your work needs.",
+  },
+  {
+    icon: Workflow,
+    color: "#7DD3FC",
+    title: "Custom Workflows",
+    body: "Chain steps into an automation and launch it by voice or on schedule.",
+  },
+  {
+    icon: Clock,
+    color: "#3DDC84",
+    title: "Cron Jobs",
+    body: "Schedule anything to run hourly, daily or weekly — fully hands-off.",
+  },
+  {
+    icon: Plug,
+    color: "#A855F7",
+    title: "Connected Services",
+    body: "Plug in the platforms your business already runs on, no technical setup.",
+  },
+  {
+    icon: MessageSquarePlus,
+    color: "var(--cyan)",
+    title: "Custom Prompts",
+    body: "Save your best instructions as one-tap commands for the whole team.",
+  },
 ];
 
 export default function BuildYourOwn() {
@@ -33,7 +73,10 @@ export default function BuildYourOwn() {
         <div className="text-center">
           <EyebrowLabel text="Fully Extensible" color="var(--amber)" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
-            Your Rules. <GradientText from="#F5A623" to="#8B7CF6">Your AI. Your Way.</GradientText>
+            Your Rules.{" "}
+            <GradientText from="#F5A623" to="#8B7CF6">
+              Your AI. Your Way.
+            </GradientText>
           </h2>
           <p className="reveal-item delay-2 mx-auto mt-5 max-w-[760px] font-body text-[16px] leading-[1.8] text-[var(--text-secondary)] md:text-[17px]">
             DIGI BIZ OS ships ready to work — and grows with you. Skills, memories, tools, agents,

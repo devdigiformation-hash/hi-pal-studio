@@ -86,12 +86,30 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     capabilities: [
-      { title: "It listens", body: "Voice-first control with live transcription, so you can brief it while you work." },
-      { title: "It understands", body: "Your instruction is turned into an intent with context from memory and your workspace." },
-      { title: "It plans", body: "Multi-step plans are built before execution, so complex requests do not collapse into one answer." },
-      { title: "It uses tools", body: "150+ mixed tools cover files, documents, system utilities, browser and connected services." },
-      { title: "It uses agents", body: "Specialist agents take ownership of coding, research, documents or operations work." },
-      { title: "It reports back", body: "Live tracking shows every step, tool call and result while the work is running." },
+      {
+        title: "It listens",
+        body: "Voice-first control with live transcription, so you can brief it while you work.",
+      },
+      {
+        title: "It understands",
+        body: "Your instruction is turned into an intent with context from memory and your workspace.",
+      },
+      {
+        title: "It plans",
+        body: "Multi-step plans are built before execution, so complex requests do not collapse into one answer.",
+      },
+      {
+        title: "It uses tools",
+        body: "150+ mixed tools cover files, documents, system utilities, browser and connected services.",
+      },
+      {
+        title: "It uses agents",
+        body: "Specialist agents take ownership of coding, research, documents or operations work.",
+      },
+      {
+        title: "It reports back",
+        body: "Live tracking shows every step, tool call and result while the work is running.",
+      },
     ],
     sections: [
       {
@@ -115,10 +133,22 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     faq: [
-      { q: "Does it work on Windows?", a: "Yes. DIGI BIZ OS runs on Windows 10 and Windows 11. macOS, Linux and mobile versions are marked coming soon." },
-      { q: "Do I need to code?", a: "No. Voice and chat are the primary interfaces. Coding tools exist for people who want them." },
-      { q: "Is it a subscription?", a: "No. The core licence is a one-time lifetime payment. Source code and custom build licences are also available." },
-      { q: "Can I add my own skills?", a: "Yes. Custom skills, memories, tools, agents, workflows and scheduled jobs are all created inside the app." },
+      {
+        q: "Does it work on Windows?",
+        a: "Yes. DIGI BIZ OS runs on Windows 10 and Windows 11. macOS, Linux and mobile versions are marked coming soon.",
+      },
+      {
+        q: "Do I need to code?",
+        a: "No. Voice and chat are the primary interfaces. Coding tools exist for people who want them.",
+      },
+      {
+        q: "Is it a subscription?",
+        a: "No. The core licence is a one-time lifetime payment. Source code and custom build licences are also available.",
+      },
+      {
+        q: "Can I add my own skills?",
+        a: "Yes. Custom skills, memories, tools, agents, workflows and scheduled jobs are all created inside the app.",
+      },
     ],
     links: [
       { label: "AI Business Operating System", to: "/ai-business-operating-system" },
@@ -129,7 +159,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "AI tools", to: "/features/ai-tools" },
       ...CTA_CORE,
     ],
-    image: img({ url: jarvisRobot }, "Futuristic humanoid AI robot in profile, representing the JARVIS-style assistant", "JARVIS-style intelligence: an assistant built to listen, plan and execute."),
+    image: img(
+      { url: jarvisRobot },
+      "Futuristic humanoid AI robot in profile, representing the JARVIS-style assistant",
+      "JARVIS-style intelligence: an assistant built to listen, plan and execute.",
+    ),
     accent: "var(--cyan)",
   },
   {
@@ -144,17 +178,41 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "An AI business operating system is the layer where your models, agents, tools, data and business processes live together. Instead of ten disconnected AI tabs, DIGI BIZ OS gives your business one environment that can hold context, run workflows, schedule jobs and complete work on your own machine.",
     answers: [
-      { q: "What is an AI business operating system?", a: "It is a single environment that combines AI models, agents, skills, tools, memory, workflows and scheduling so a business can delegate real operational work to AI instead of only chatting with it." },
-      { q: "How is it different from a chatbot?", a: "A chatbot returns text. An AI business OS selects agents, calls tools, touches files and applications, runs scheduled jobs and produces finished output." },
-      { q: "Who is it for?", a: "Founders, agencies, developers, consultants and small operations teams who want AI to carry recurring work rather than advise on it." },
+      {
+        q: "What is an AI business operating system?",
+        a: "It is a single environment that combines AI models, agents, skills, tools, memory, workflows and scheduling so a business can delegate real operational work to AI instead of only chatting with it.",
+      },
+      {
+        q: "How is it different from a chatbot?",
+        a: "A chatbot returns text. An AI business OS selects agents, calls tools, touches files and applications, runs scheduled jobs and produces finished output.",
+      },
+      {
+        q: "Who is it for?",
+        a: "Founders, agencies, developers, consultants and small operations teams who want AI to carry recurring work rather than advise on it.",
+      },
     ],
     capabilities: [
-      { title: "Intelligence layer", body: "Multiple AI models, a model router, memories and personas keep context consistent." },
+      {
+        title: "Intelligence layer",
+        body: "Multiple AI models, a model router, memories and personas keep context consistent.",
+      },
       { title: "Agent layer", body: "Multi-agent execution with delegation between specialists." },
-      { title: "Skill layer", body: "500+ AI skills plus custom skills you create and reuse forever." },
-      { title: "Tool layer", body: "150+ mixed tools spanning documents, files, system utilities and connected services." },
-      { title: "Automation layer", body: "Workflows, scheduled jobs and background tasks that run without you." },
-      { title: "Computer layer", body: "Desktop control, terminal, browser and document workspace on your own PC." },
+      {
+        title: "Skill layer",
+        body: "500+ AI skills plus custom skills you create and reuse forever.",
+      },
+      {
+        title: "Tool layer",
+        body: "150+ mixed tools spanning documents, files, system utilities and connected services.",
+      },
+      {
+        title: "Automation layer",
+        body: "Workflows, scheduled jobs and background tasks that run without you.",
+      },
+      {
+        title: "Computer layer",
+        body: "Desktop control, terminal, browser and document workspace on your own PC.",
+      },
     ],
     sections: [
       {
@@ -180,9 +238,18 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     faq: [
-      { q: "Does it replace my existing software?", a: "No. It sits on top of your desktop and works with the applications, files and services you already use." },
-      { q: "Can it run unattended?", a: "Yes — workflows and scheduled jobs run hourly, daily or weekly without supervision." },
-      { q: "Can we brand it for our company?", a: "Yes. The custom build licence covers your branding and business-specific automation." },
+      {
+        q: "Does it replace my existing software?",
+        a: "No. It sits on top of your desktop and works with the applications, files and services you already use.",
+      },
+      {
+        q: "Can it run unattended?",
+        a: "Yes — workflows and scheduled jobs run hourly, daily or weekly without supervision.",
+      },
+      {
+        q: "Can we brand it for our company?",
+        a: "Yes. The custom build licence covers your branding and business-specific automation.",
+      },
     ],
     links: [
       { label: "AI business assistant", to: "/ai-business-assistant" },
@@ -193,7 +260,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "JARVIS-style assistant", to: "/jarvis-ai" },
       ...CTA_CORE,
     ],
-    image: img(osGraph, "DIGI BIZ OS execution graph showing agents, skills and tools working together", "Live execution graph: the OS routing a request through agents, skills and tools."),
+    image: img(
+      osGraph,
+      "DIGI BIZ OS execution graph showing agents, skills and tools working together",
+      "Live execution graph: the OS routing a request through agents, skills and tools.",
+    ),
     accent: "var(--purple)",
   },
   {
@@ -208,16 +279,34 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "Most AI assistants stop at advice. A business assistant has to produce output — the report, the converted document, the organised folder, the scheduled check, the drafted response. DIGI BIZ OS is built around that expectation.",
     answers: [
-      { q: "What does an AI business assistant do?", a: "It takes a spoken or written brief, plans the work, uses the right skills and tools, executes it on your computer and returns the finished result." },
-      { q: "Who benefits most?", a: "Founders, agencies, consultants, developers and small operations teams handling repetitive admin, documents, research and reporting." },
+      {
+        q: "What does an AI business assistant do?",
+        a: "It takes a spoken or written brief, plans the work, uses the right skills and tools, executes it on your computer and returns the finished result.",
+      },
+      {
+        q: "Who benefits most?",
+        a: "Founders, agencies, consultants, developers and small operations teams handling repetitive admin, documents, research and reporting.",
+      },
     ],
     capabilities: [
       { title: "Voice briefs", body: "Describe the task out loud while you carry on working." },
-      { title: "Document work", body: "PDF conversion, OCR, compression, signing and redaction through DigiDocs." },
-      { title: "Research", body: "Browser-based research agents that collect and summarise findings." },
+      {
+        title: "Document work",
+        body: "PDF conversion, OCR, compression, signing and redaction through DigiDocs.",
+      },
+      {
+        title: "Research",
+        body: "Browser-based research agents that collect and summarise findings.",
+      },
       { title: "Reporting", body: "Recurring reports produced on a schedule with DigiJobs." },
-      { title: "Admin batches", body: "File renaming, sorting, extraction and clean-up across folders." },
-      { title: "Team memory", body: "Custom memories hold the rules, facts and preferences it must never forget." },
+      {
+        title: "Admin batches",
+        body: "File renaming, sorting, extraction and clean-up across folders.",
+      },
+      {
+        title: "Team memory",
+        body: "Custom memories hold the rules, facts and preferences it must never forget.",
+      },
     ],
     sections: [
       {
@@ -236,8 +325,14 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     faq: [
-      { q: "Is my data sent anywhere?", a: "The OS runs locally on your machine and works with your local files; you control which providers and connected services are enabled." },
-      { q: "How long does setup take?", a: "Install on Windows, sign in and start speaking. Custom skills and workflows can be added later." },
+      {
+        q: "Is my data sent anywhere?",
+        a: "The OS runs locally on your machine and works with your local files; you control which providers and connected services are enabled.",
+      },
+      {
+        q: "How long does setup take?",
+        a: "Install on Windows, sign in and start speaking. Custom skills and workflows can be added later.",
+      },
     ],
     links: [
       { label: "AI business operating system", to: "/ai-business-operating-system" },
@@ -246,7 +341,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "DigiDocs document workspace", to: "/features/digidocs" },
       ...CTA_CORE,
     ],
-    image: img(osSidebar, "DIGI BIZ OS sidebar showing modules for AI, code, documents, tools and automation", "One sidebar, one OS: every business module in a single workspace."),
+    image: img(
+      osSidebar,
+      "DIGI BIZ OS sidebar showing modules for AI, code, documents, tools and automation",
+      "One sidebar, one OS: every business module in a single workspace.",
+    ),
     accent: "var(--amber)",
   },
   {
@@ -261,15 +360,30 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "An AI desktop assistant should be able to touch the desktop. DIGI BIZ OS installs on Windows 10 and 11 and works with your real applications, folders, documents and terminal instead of living inside a browser tab.",
     answers: [
-      { q: "What is an AI desktop assistant?", a: "Software installed on your computer that can understand instructions and then operate the machine — opening applications, handling files, running commands and completing tasks." },
-      { q: "Which operating systems are supported?", a: "Windows 10 and Windows 11 today. macOS, Linux and mobile builds are listed as coming soon." },
+      {
+        q: "What is an AI desktop assistant?",
+        a: "Software installed on your computer that can understand instructions and then operate the machine — opening applications, handling files, running commands and completing tasks.",
+      },
+      {
+        q: "Which operating systems are supported?",
+        a: "Windows 10 and Windows 11 today. macOS, Linux and mobile builds are listed as coming soon.",
+      },
     ],
     capabilities: [
       { title: "Application control", body: "Work with the desktop applications you already use." },
-      { title: "File operations", body: "Find, rename, sort, extract and move files across local folders." },
-      { title: "Terminal access", body: "Run commands through DigiCLI when a task needs the shell." },
+      {
+        title: "File operations",
+        body: "Find, rename, sort, extract and move files across local folders.",
+      },
+      {
+        title: "Terminal access",
+        body: "Run commands through DigiCLI when a task needs the shell.",
+      },
       { title: "Browser work", body: "Research and web tasks handled by a browser agent." },
-      { title: "Screen and camera", body: "Screen sharing and camera support for context-aware help." },
+      {
+        title: "Screen and camera",
+        body: "Screen sharing and camera support for context-aware help.",
+      },
       { title: "Always-on voice", body: "Speak instead of switching windows to type." },
     ],
     sections: [
@@ -284,7 +398,10 @@ export const SEO_PAGES: SeoPage[] = [
     ],
     faq: [
       { q: "Is it a browser extension?", a: "No. It is a desktop application for Windows." },
-      { q: "Can it run offline utilities?", a: "Yes. Many of the 150+ mixed tools are offline utilities." },
+      {
+        q: "Can it run offline utilities?",
+        a: "Yes. Many of the 150+ mixed tools are offline utilities.",
+      },
     ],
     links: [
       { label: "Computer-use AI", to: "/computer-use-ai" },
@@ -293,7 +410,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "Desktop OS overview", to: "/desktop-os" },
       ...CTA_CORE,
     ],
-    image: img(osDesktopTools, "DIGI BIZ OS mixed desktop tools panel with system and file utilities", "The mixed tools panel: system, file and productivity utilities available to you and your agents."),
+    image: img(
+      osDesktopTools,
+      "DIGI BIZ OS mixed desktop tools panel with system and file utilities",
+      "The mixed tools panel: system, file and productivity utilities available to you and your agents.",
+    ),
     accent: "var(--cyan)",
   },
   {
@@ -309,14 +430,29 @@ export const SEO_PAGES: SeoPage[] = [
       "DIGI BIZ OS is a native Windows install, not a web app. Once it is running you can speak to your PC and get finished work back — documents processed, code written, folders organised, jobs scheduled.",
     answers: [
       { q: "Which Windows versions are supported?", a: "Windows 10 and Windows 11." },
-      { q: "What makes it different from built-in assistants?", a: "It executes multi-step work using agents, skills and tools, and it can be extended with your own automations." },
+      {
+        q: "What makes it different from built-in assistants?",
+        a: "It executes multi-step work using agents, skills and tools, and it can be extended with your own automations.",
+      },
     ],
     capabilities: [
-      { title: "One-time licence", body: "Lifetime access from a single payment — no monthly seat fees." },
-      { title: "Voice-first", body: "Speak your request; the live transcript keeps you in control." },
-      { title: "Agents included", body: "Multi-agent execution for coding, documents, research and operations." },
+      {
+        title: "One-time licence",
+        body: "Lifetime access from a single payment — no monthly seat fees.",
+      },
+      {
+        title: "Voice-first",
+        body: "Speak your request; the live transcript keeps you in control.",
+      },
+      {
+        title: "Agents included",
+        body: "Multi-agent execution for coding, documents, research and operations.",
+      },
       { title: "500+ skills", body: "Reusable capabilities you can trigger by voice." },
-      { title: "150+ mixed tools", body: "Utilities that work with files, systems and connected services." },
+      {
+        title: "150+ mixed tools",
+        body: "Utilities that work with files, systems and connected services.",
+      },
       { title: "Scheduling", body: "Hourly, daily or weekly jobs that run in the background." },
     ],
     sections: [
@@ -327,7 +463,10 @@ export const SEO_PAGES: SeoPage[] = [
     ],
     faq: [
       { q: "Is there a Mac version?", a: "macOS is coming soon, along with Linux and mobile." },
-      { q: "Do I get updates?", a: "Yes, the lifetime licence includes ongoing access to the product." },
+      {
+        q: "Do I get updates?",
+        a: "Yes, the lifetime licence includes ongoing access to the product.",
+      },
     ],
     links: [
       { label: "AI desktop assistant", to: "/ai-desktop-assistant" },
@@ -335,7 +474,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "Voice AI", to: "/voice-ai" },
       ...CTA_CORE,
     ],
-    image: img(osMain, "AI assistant for Windows running the DIGI BIZ OS dashboard", "DIGI BIZ OS running on Windows with live voice transcription."),
+    image: img(
+      osMain,
+      "AI assistant for Windows running the DIGI BIZ OS dashboard",
+      "DIGI BIZ OS running on Windows with live voice transcription.",
+    ),
     accent: "var(--cyan)",
   },
   {
@@ -350,7 +493,10 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "The point of a PC assistant is leverage: fewer clicks, fewer repeated routines, fewer context switches. DIGI BIZ OS turns spoken instructions into executed work on your own computer.",
     answers: [
-      { q: "Can an AI assistant control my PC?", a: "DIGI BIZ OS can operate supported desktop actions — applications, files, terminal, browser and documents — under your instruction." },
+      {
+        q: "Can an AI assistant control my PC?",
+        a: "DIGI BIZ OS can operate supported desktop actions — applications, files, terminal, browser and documents — under your instruction.",
+      },
       { q: "Is it hard to learn?", a: "No. You describe the outcome; the OS handles the steps." },
     ],
     capabilities: [
@@ -362,11 +508,17 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Automation", body: "Workflows and scheduled jobs for anything recurring." },
     ],
     sections: [
-      { heading: "What people automate first", body: "Weekly reporting, document conversion batches, downloads folder clean-ups, research digests, repository chores and repeated admin sequences are the most common starting points." },
+      {
+        heading: "What people automate first",
+        body: "Weekly reporting, document conversion batches, downloads folder clean-ups, research digests, repository chores and repeated admin sequences are the most common starting points.",
+      },
     ],
     faq: [
       { q: "Does it need a powerful PC?", a: "It runs on standard Windows 10 and 11 machines." },
-      { q: "Can it work with my existing files?", a: "Yes, it works with your local folders and documents." },
+      {
+        q: "Can it work with my existing files?",
+        a: "Yes, it works with your local folders and documents.",
+      },
     ],
     links: [
       { label: "AI assistant for Windows", to: "/ai-assistant-for-windows" },
@@ -374,7 +526,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "AI productivity assistant", to: "/ai-productivity-assistant" },
       ...CTA_CORE,
     ],
-    image: img(osShell, "DIGI BIZ OS shell running commands on a Windows PC", "DigiCLI executing a command as part of a larger plan."),
+    image: img(
+      osShell,
+      "DIGI BIZ OS shell running commands on a Windows PC",
+      "DigiCLI executing a command as part of a larger plan.",
+    ),
     accent: "var(--purple)",
   },
   {
@@ -389,19 +545,31 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "Voice is the fastest input a human has. DIGI BIZ OS treats it as the primary interface: you speak, the OS transcribes live, interprets, plans and then runs the work.",
     answers: [
-      { q: "What is a voice AI assistant?", a: "An assistant you operate by speaking. In DIGI BIZ OS the voice layer is connected to execution, so speech triggers real actions rather than only replies." },
-      { q: "Does it show what it heard?", a: "Yes — a live transcript panel shows the recognised speech and the resulting plan." },
+      {
+        q: "What is a voice AI assistant?",
+        a: "An assistant you operate by speaking. In DIGI BIZ OS the voice layer is connected to execution, so speech triggers real actions rather than only replies.",
+      },
+      {
+        q: "Does it show what it heard?",
+        a: "Yes — a live transcript panel shows the recognised speech and the resulting plan.",
+      },
     ],
     capabilities: [
       { title: "Live transcription", body: "See the request as it is understood." },
       { title: "Hands-free operation", body: "Brief the OS while you keep working." },
       { title: "Voice-triggered skills", body: "Launch any of the 500+ skills by speaking." },
-      { title: "Voice-triggered workflows", body: "Start multi-step automations with one sentence." },
+      {
+        title: "Voice-triggered workflows",
+        body: "Start multi-step automations with one sentence.",
+      },
       { title: "Interruptible", body: "Stop or redirect a run at any point." },
       { title: "Context aware", body: "Memories and personas shape how requests are handled." },
     ],
     sections: [
-      { heading: "Voice → Understand → Plan → Execute → Report", body: "This loop is what separates a voice assistant from a voice interface. Every spoken instruction is turned into a tracked run you can inspect." },
+      {
+        heading: "Voice → Understand → Plan → Execute → Report",
+        body: "This loop is what separates a voice assistant from a voice interface. Every spoken instruction is turned into a tracked run you can inspect.",
+      },
     ],
     faq: [
       { q: "Can I still type?", a: "Yes. Voice and chat both drive the same execution engine." },
@@ -413,7 +581,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "JARVIS-style AI", to: "/jarvis-ai" },
       ...CTA_CORE,
     ],
-    image: img(osTranscript, "Live voice transcript panel inside DIGI BIZ OS", "Live transcript: what the OS heard, and what it decided to do about it."),
+    image: img(
+      osTranscript,
+      "Live voice transcript panel inside DIGI BIZ OS",
+      "Live transcript: what the OS heard, and what it decided to do about it.",
+    ),
     accent: "var(--cyan)",
   },
   {
@@ -428,7 +600,10 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "Voice-controlled computing only becomes useful when the assistant can act. DIGI BIZ OS connects speech directly to desktop execution on Windows.",
     answers: [
-      { q: "Can I control my PC with voice?", a: "Yes. DIGI BIZ OS accepts spoken instructions and executes supported desktop actions such as file operations, application work, terminal commands and document processing." },
+      {
+        q: "Can I control my PC with voice?",
+        a: "Yes. DIGI BIZ OS accepts spoken instructions and executes supported desktop actions such as file operations, application work, terminal commands and document processing.",
+      },
     ],
     capabilities: [
       { title: "Hands-free control", body: "Speak instead of navigating menus." },
@@ -439,15 +614,27 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Live feedback", body: "Track each step as it runs." },
     ],
     sections: [
-      { heading: "Accessibility and speed", body: "Voice control reduces repetitive navigation for everyone and makes long routines far quicker to launch." },
+      {
+        heading: "Accessibility and speed",
+        body: "Voice control reduces repetitive navigation for everyone and makes long routines far quicker to launch.",
+      },
     ],
-    faq: [{ q: "Does it need internet?", a: "Some capabilities are offline utilities; connected models and services require a connection." }],
+    faq: [
+      {
+        q: "Does it need internet?",
+        a: "Some capabilities are offline utilities; connected models and services require a connection.",
+      },
+    ],
     links: [
       { label: "Voice AI assistant", to: "/voice-ai-assistant" },
       { label: "AI desktop assistant", to: "/ai-desktop-assistant" },
       ...CTA_CORE,
     ],
-    image: img(osTranscript, "Voice controlled PC assistant transcript in DIGI BIZ OS", "Speaking a task and watching the OS act on it."),
+    image: img(
+      osTranscript,
+      "Voice controlled PC assistant transcript in DIGI BIZ OS",
+      "Speaking a task and watching the OS act on it.",
+    ),
     accent: "var(--purple)",
   },
   {
@@ -462,8 +649,14 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "Computer-use AI describes agents that operate a computer the way a person does. DIGI BIZ OS applies that idea to business work on Windows, with visible tracking of every action.",
     answers: [
-      { q: "What is computer-use AI?", a: "AI that performs actions on a computer — using applications, files, the terminal and the browser — instead of only producing text." },
-      { q: "Is it safe?", a: "You stay in control: runs are visible step by step and can be stopped at any time." },
+      {
+        q: "What is computer-use AI?",
+        a: "AI that performs actions on a computer — using applications, files, the terminal and the browser — instead of only producing text.",
+      },
+      {
+        q: "Is it safe?",
+        a: "You stay in control: runs are visible step by step and can be stopped at any time.",
+      },
     ],
     capabilities: [
       { title: "Application work", body: "Operate the desktop apps in your workflow." },
@@ -474,7 +667,10 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Run tracking", body: "Every tool call is logged live." },
     ],
     sections: [
-      { heading: "Why tracking matters", body: "Autonomy without visibility is unusable in a business. The live tracking view shows the plan, the current step, the tool being used and the result — so you can intervene early." },
+      {
+        heading: "Why tracking matters",
+        body: "Autonomy without visibility is unusable in a business. The live tracking view shows the plan, the current step, the tool being used and the result — so you can intervene early.",
+      },
     ],
     faq: [{ q: "Can I stop a run?", a: "Yes, runs can be stopped mid-execution." }],
     links: [
@@ -483,7 +679,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "Multi-agent AI", to: "/multi-agent-ai" },
       ...CTA_CORE,
     ],
-    image: img(osLiveTracking, "Live tracking of an AI computer-use run in DIGI BIZ OS", "Live tracking: plan, current step, tool calls and results."),
+    image: img(
+      osLiveTracking,
+      "Live tracking of an AI computer-use run in DIGI BIZ OS",
+      "Live tracking: plan, current step, tool calls and results.",
+    ),
     accent: "var(--amber)",
   },
   {
@@ -498,7 +698,10 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "Desktop automation used to mean brittle scripts. DIGI BIZ OS lets you describe the routine once, save it as a workflow or skill, and then run it by voice or on a schedule.",
     answers: [
-      { q: "What is AI desktop automation?", a: "Using AI agents and tools to perform repeated computer routines automatically, including on a schedule, without writing scripts." },
+      {
+        q: "What is AI desktop automation?",
+        a: "Using AI agents and tools to perform repeated computer routines automatically, including on a schedule, without writing scripts.",
+      },
     ],
     capabilities: [
       { title: "Workflow builder", body: "Chain steps into a reusable automation." },
@@ -509,7 +712,10 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Notifications", body: "Results reported back when a run completes." },
     ],
     sections: [
-      { heading: "Start with one routine", body: "Pick the routine you repeat most often this month. Record it as a workflow, schedule it, and measure the hours it returns before automating the next one." },
+      {
+        heading: "Start with one routine",
+        body: "Pick the routine you repeat most often this month. Record it as a workflow, schedule it, and measure the hours it returns before automating the next one.",
+      },
     ],
     faq: [{ q: "Do I need to write scripts?", a: "No. Workflows are created inside the app." }],
     links: [
@@ -518,7 +724,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "DigiTasks", to: "/features/digitasks" },
       ...CTA_CORE,
     ],
-    image: img(osLiveTracking, "Scheduled AI automation running inside DIGI BIZ OS", "Automations running in the background with full run history."),
+    image: img(
+      osLiveTracking,
+      "Scheduled AI automation running inside DIGI BIZ OS",
+      "Automations running in the background with full run history.",
+    ),
     accent: "var(--cyan)",
   },
   {
@@ -533,8 +743,14 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "A workflow is a business process the OS can repeat perfectly. In DIGI BIZ OS a workflow chains steps together and each step can call an agent, a skill or a tool.",
     answers: [
-      { q: "What is AI workflow automation?", a: "Automating a multi-step business process where AI decides and executes each step using tools, rather than following a rigid script." },
-      { q: "How are workflows triggered?", a: "By voice, manually, or on a schedule using cron-style jobs." },
+      {
+        q: "What is AI workflow automation?",
+        a: "Automating a multi-step business process where AI decides and executes each step using tools, rather than following a rigid script.",
+      },
+      {
+        q: "How are workflows triggered?",
+        a: "By voice, manually, or on a schedule using cron-style jobs.",
+      },
     ],
     capabilities: [
       { title: "Triggers", body: "Voice, manual or scheduled starts." },
@@ -557,14 +773,23 @@ export const SEO_PAGES: SeoPage[] = [
         ],
       },
     ],
-    faq: [{ q: "Can workflows call other workflows?", a: "Workflows are composed of steps that can use agents, skills and tools; complex processes are built by chaining them." }],
+    faq: [
+      {
+        q: "Can workflows call other workflows?",
+        a: "Workflows are composed of steps that can use agents, skills and tools; complex processes are built by chaining them.",
+      },
+    ],
     links: [
       { label: "DigiFlow", to: "/features/digiflow" },
       { label: "AI business automation", to: "/ai-business-automation" },
       { label: "AI agents", to: "/agents" },
       ...CTA_CORE,
     ],
-    image: img(osGraph, "AI workflow graph in DIGI BIZ OS showing chained steps", "A workflow graph: steps, agents and tools chained into one automation."),
+    image: img(
+      osGraph,
+      "AI workflow graph in DIGI BIZ OS showing chained steps",
+      "A workflow graph: steps, agents and tools chained into one automation.",
+    ),
     accent: "var(--purple)",
   },
   {
@@ -579,7 +804,10 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "Business automation pays off where work is repeated, rule-based and time-consuming. DIGI BIZ OS targets exactly those processes with AI that can execute them end to end.",
     answers: [
-      { q: "What can AI automate in a small business?", a: "Document processing, recurring reporting, research, file and record admin, follow-up preparation, technical maintenance and any repeatable multi-step routine." },
+      {
+        q: "What can AI automate in a small business?",
+        a: "Document processing, recurring reporting, research, file and record admin, follow-up preparation, technical maintenance and any repeatable multi-step routine.",
+      },
     ],
     capabilities: [
       { title: "Document automation", body: "Convert, OCR, compress, sign and redact at volume." },
@@ -590,16 +818,28 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Custom automation", body: "Your own skills, tools, agents and workflows." },
     ],
     sections: [
-      { heading: "Measure it like a hire", body: "Track hours returned per automated process. Most teams find the first three automations cover the cost of the licence quickly, because the licence is one-time rather than per seat." },
+      {
+        heading: "Measure it like a hire",
+        body: "Track hours returned per automated process. Most teams find the first three automations cover the cost of the licence quickly, because the licence is one-time rather than per seat.",
+      },
     ],
-    faq: [{ q: "Can it be customised to our business?", a: "Yes — the custom build licence covers branding and business-specific automation." }],
+    faq: [
+      {
+        q: "Can it be customised to our business?",
+        a: "Yes — the custom build licence covers branding and business-specific automation.",
+      },
+    ],
     links: [
       { label: "AI business operating system", to: "/ai-business-operating-system" },
       { label: "AI workflow automation", to: "/ai-workflow-automation" },
       { label: "AI business assistant", to: "/ai-business-assistant" },
       ...CTA_CORE,
     ],
-    image: img(osSidebar, "DIGI BIZ OS business automation modules", "Automation modules sitting alongside intelligence, documents and tools."),
+    image: img(
+      osSidebar,
+      "DIGI BIZ OS business automation modules",
+      "Automation modules sitting alongside intelligence, documents and tools.",
+    ),
     accent: "var(--amber)",
   },
   {
@@ -614,8 +854,14 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "DIGI BIZ OS ships with a multi-agent platform. You can start with the built-in specialists and then create as many custom agents as your business needs.",
     answers: [
-      { q: "What is an AI agent platform?", a: "An environment for creating agents, giving them tools and skills, running them on real tasks and monitoring their execution." },
-      { q: "How do agents differ from chatbots?", a: "Agents plan and act using tools. Chatbots respond with text." },
+      {
+        q: "What is an AI agent platform?",
+        a: "An environment for creating agents, giving them tools and skills, running them on real tasks and monitoring their execution.",
+      },
+      {
+        q: "How do agents differ from chatbots?",
+        a: "Agents plan and act using tools. Chatbots respond with text.",
+      },
     ],
     capabilities: [
       { title: "Custom agents", body: "Create specialists for your own processes." },
@@ -626,9 +872,17 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Observability", body: "Live tracking of every agent action." },
     ],
     sections: [
-      { heading: "Agents earn their keep on long work", body: "Single answers do not need agents. Multi-step work — research, refactors, document pipelines, recurring operations — is where delegation and orchestration pay off." },
+      {
+        heading: "Agents earn their keep on long work",
+        body: "Single answers do not need agents. Multi-step work — research, refactors, document pipelines, recurring operations — is where delegation and orchestration pay off.",
+      },
     ],
-    faq: [{ q: "Is there a limit on agents?", a: "You can create as many specialist agents as your work requires." }],
+    faq: [
+      {
+        q: "Is there a limit on agents?",
+        a: "You can create as many specialist agents as your work requires.",
+      },
+    ],
     links: [
       { label: "Agents overview", to: "/agents" },
       { label: "Multi-agent AI", to: "/multi-agent-ai" },
@@ -636,7 +890,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "AI tools", to: "/features/ai-tools" },
       ...CTA_CORE,
     ],
-    image: img(osGraph, "Multi-agent orchestration graph in DIGI BIZ OS", "Agents coordinating on a single objective."),
+    image: img(
+      osGraph,
+      "Multi-agent orchestration graph in DIGI BIZ OS",
+      "Agents coordinating on a single objective.",
+    ),
     accent: "var(--purple)",
   },
   {
@@ -651,7 +909,10 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "One generalist agent struggles with long, mixed work. DIGI BIZ OS runs multiple specialists that can delegate between each other while the OS keeps the plan and the context.",
     answers: [
-      { q: "What is multi-agent AI?", a: "An architecture where several AI agents with different specialisations collaborate on one objective, passing work between them." },
+      {
+        q: "What is multi-agent AI?",
+        a: "An architecture where several AI agents with different specialisations collaborate on one objective, passing work between them.",
+      },
     ],
     capabilities: [
       { title: "Specialisation", body: "Coding, documents, research and operations agents." },
@@ -662,16 +923,28 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Custom roster", body: "Add your own agents to the team." },
     ],
     sections: [
-      { heading: "How coordination works", body: "The OS builds the plan, assigns steps to agents, gives each one the skills and tools it needs, and merges the results into a single tracked outcome." },
+      {
+        heading: "How coordination works",
+        body: "The OS builds the plan, assigns steps to agents, gives each one the skills and tools it needs, and merges the results into a single tracked outcome.",
+      },
     ],
-    faq: [{ q: "Do agents share memory?", a: "Context and memories are available across the run so agents do not repeat work." }],
+    faq: [
+      {
+        q: "Do agents share memory?",
+        a: "Context and memories are available across the run so agents do not repeat work.",
+      },
+    ],
     links: [
       { label: "AI agent platform", to: "/ai-agent-platform" },
       { label: "Agents overview", to: "/agents" },
       { label: "AI business operating system", to: "/ai-business-operating-system" },
       ...CTA_CORE,
     ],
-    image: img(osGraph, "Multi-agent AI collaboration graph inside DIGI BIZ OS", "Multi-agent execution visualised as a live graph."),
+    image: img(
+      osGraph,
+      "Multi-agent AI collaboration graph inside DIGI BIZ OS",
+      "Multi-agent execution visualised as a live graph.",
+    ),
     accent: "var(--cyan)",
   },
   {
@@ -686,11 +959,20 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "DigiCode is the development side of DIGI BIZ OS: a coding workspace where an agent can understand a repository, make changes, run commands and report what it did.",
     answers: [
-      { q: "What is an AI coding agent?", a: "An agent that can work inside a codebase — reading files, writing changes and running commands — rather than only suggesting snippets." },
-      { q: "Which languages?", a: "It works with common project stacks including Python, Node.js and JavaScript projects." },
+      {
+        q: "What is an AI coding agent?",
+        a: "An agent that can work inside a codebase — reading files, writing changes and running commands — rather than only suggesting snippets.",
+      },
+      {
+        q: "Which languages?",
+        a: "It works with common project stacks including Python, Node.js and JavaScript projects.",
+      },
     ],
     capabilities: [
-      { title: "Repository intelligence", body: "Understands project structure before changing it." },
+      {
+        title: "Repository intelligence",
+        body: "Understands project structure before changing it.",
+      },
       { title: "Code generation", body: "Writes and edits files in place." },
       { title: "Terminal execution", body: "Runs commands, installs and builds." },
       { title: "Task automation", body: "Repeatable project chores as workflows." },
@@ -698,16 +980,28 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Review support", body: "Explains changes step by step." },
     ],
     sections: [
-      { heading: "Coding as part of the business OS", body: "Because the coding agent lives in the same OS as documents, tools and scheduling, technical work can be part of a wider business workflow rather than a separate tool." },
+      {
+        heading: "Coding as part of the business OS",
+        body: "Because the coding agent lives in the same OS as documents, tools and scheduling, technical work can be part of a wider business workflow rather than a separate tool.",
+      },
     ],
-    faq: [{ q: "Does it replace my IDE?", a: "No — it complements it, handling agentic project work and terminal execution." }],
+    faq: [
+      {
+        q: "Does it replace my IDE?",
+        a: "No — it complements it, handling agentic project work and terminal execution.",
+      },
+    ],
     links: [
       { label: "DigiCode", to: "/features/digicode" },
       { label: "AI terminal assistant", to: "/ai-terminal-assistant" },
       { label: "AI browser agent", to: "/ai-browser-agent" },
       ...CTA_CORE,
     ],
-    image: img(osCode, "DigiCode AI coding agent workspace inside DIGI BIZ OS", "DigiCode: repository-aware coding with terminal execution."),
+    image: img(
+      osCode,
+      "DigiCode AI coding agent workspace inside DIGI BIZ OS",
+      "DigiCode: repository-aware coding with terminal execution.",
+    ),
     accent: "var(--purple)",
   },
   {
@@ -722,7 +1016,10 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "DigiCLI is the command layer of DIGI BIZ OS. Describe what you need and the assistant proposes, runs and explains the commands as part of a larger plan.",
     answers: [
-      { q: "What is an AI terminal assistant?", a: "An assistant that converts natural language into shell commands, executes them and interprets the output." },
+      {
+        q: "What is an AI terminal assistant?",
+        a: "An assistant that converts natural language into shell commands, executes them and interprets the output.",
+      },
     ],
     capabilities: [
       { title: "Natural language to command", body: "Describe the goal, not the syntax." },
@@ -732,14 +1029,28 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "History", body: "Every run recorded for review." },
       { title: "Developer speed", body: "Fewer lookups, fewer mistakes." },
     ],
-    sections: [{ heading: "Safer than copy-paste", body: "Because commands are proposed with context and logged during execution, you get a reviewable trail instead of pasted snippets from the web." }],
-    faq: [{ q: "Can it run build and install commands?", a: "Yes, it can execute standard project commands as part of a task." }],
+    sections: [
+      {
+        heading: "Safer than copy-paste",
+        body: "Because commands are proposed with context and logged during execution, you get a reviewable trail instead of pasted snippets from the web.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can it run build and install commands?",
+        a: "Yes, it can execute standard project commands as part of a task.",
+      },
+    ],
     links: [
       { label: "DigiCLI", to: "/features/digicli" },
       { label: "AI coding agent", to: "/ai-coding-agent" },
       ...CTA_CORE,
     ],
-    image: img(osCli, "DigiCLI AI terminal assistant in DIGI BIZ OS", "DigiCLI translating an instruction into an executed command."),
+    image: img(
+      osCli,
+      "DigiCLI AI terminal assistant in DIGI BIZ OS",
+      "DigiCLI translating an instruction into an executed command.",
+    ),
     accent: "var(--cyan)",
   },
   {
@@ -754,7 +1065,10 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "Web research is a workflow, not a question. The browser agent in DIGI BIZ OS gathers sources, extracts what matters and hands the result to the next step — a document, a report or another agent.",
     answers: [
-      { q: "What is an AI browser agent?", a: "An agent that operates a browser to find, read and extract information, and to complete supported web tasks." },
+      {
+        q: "What is an AI browser agent?",
+        a: "An agent that operates a browser to find, read and extract information, and to complete supported web tasks.",
+      },
     ],
     capabilities: [
       { title: "Multi-source research", body: "Collect information across pages." },
@@ -764,15 +1078,26 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Scheduling", body: "Recurring research digests." },
       { title: "Tracking", body: "See which sources were used." },
     ],
-    sections: [{ heading: "Research inside the OS", body: "Because the browser agent sits next to DigiDocs and DigiFlow, a research run can end as a formatted document or a scheduled digest rather than a chat reply." }],
-    faq: [{ q: "Can it run on a schedule?", a: "Yes, research can be scheduled as a recurring job." }],
+    sections: [
+      {
+        heading: "Research inside the OS",
+        body: "Because the browser agent sits next to DigiDocs and DigiFlow, a research run can end as a formatted document or a scheduled digest rather than a chat reply.",
+      },
+    ],
+    faq: [
+      { q: "Can it run on a schedule?", a: "Yes, research can be scheduled as a recurring job." },
+    ],
     links: [
       { label: "Computer-use AI", to: "/computer-use-ai" },
       { label: "AI agents", to: "/agents" },
       { label: "DigiDocs", to: "/features/digidocs" },
       ...CTA_CORE,
     ],
-    image: img(osRuntime, "AI browser research agent run inside DIGI BIZ OS", "A research run in progress with tracked sources and steps."),
+    image: img(
+      osRuntime,
+      "AI browser research agent run inside DIGI BIZ OS",
+      "A research run in progress with tracked sources and steps.",
+    ),
     accent: "var(--amber)",
   },
   {
@@ -787,7 +1112,10 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "Productivity is lost between tools. DIGI BIZ OS collapses chat, documents, files, code, research, utilities and scheduling into one workspace with one context.",
     answers: [
-      { q: "What is an all-in-one AI assistant?", a: "A single application that covers chat, documents, files, coding, research, utilities and automation rather than requiring a separate tool for each." },
+      {
+        q: "What is an all-in-one AI assistant?",
+        a: "A single application that covers chat, documents, files, coding, research, utilities and automation rather than requiring a separate tool for each.",
+      },
     ],
     capabilities: [
       { title: "One workspace", body: "Every module in one sidebar." },
@@ -797,14 +1125,28 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Reusable skills", body: "Your best routines saved as one-tap commands." },
       { title: "Background jobs", body: "Work that continues without you." },
     ],
-    sections: [{ heading: "Fewer tabs, more output", body: "Each context switch costs minutes. Keeping execution in one place is often a bigger productivity gain than a faster model." }],
-    faq: [{ q: "Is it suitable for individuals?", a: "Yes — solo founders and freelancers use the same OS as teams." }],
+    sections: [
+      {
+        heading: "Fewer tabs, more output",
+        body: "Each context switch costs minutes. Keeping execution in one place is often a bigger productivity gain than a faster model.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is it suitable for individuals?",
+        a: "Yes — solo founders and freelancers use the same OS as teams.",
+      },
+    ],
     links: [
       { label: "AI business assistant", to: "/ai-business-assistant" },
       { label: "Features hub", to: "/features" },
       ...CTA_CORE,
     ],
-    image: img(osAiHub, "Digi AI hub with chat, agents, personas and coding in one workspace", "The Digi AI hub: chat, agents, personas, providers and coding in one place."),
+    image: img(
+      osAiHub,
+      "Digi AI hub with chat, agents, personas and coding in one workspace",
+      "The Digi AI hub: chat, agents, personas, providers and coding in one place.",
+    ),
     accent: "var(--cyan)",
   },
   {
@@ -819,7 +1161,10 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "An operating system coordinates resources so applications can run. An AI operating system coordinates models, memory, agents, skills and tools so work can run. That is the design of DIGI BIZ OS.",
     answers: [
-      { q: "What is an AI operating system?", a: "A layer that manages AI models, memory, agents, skills, tools and automation as shared resources, so any task can draw on them consistently." },
+      {
+        q: "What is an AI operating system?",
+        a: "A layer that manages AI models, memory, agents, skills, tools and automation as shared resources, so any task can draw on them consistently.",
+      },
     ],
     capabilities: [
       { title: "Model management", body: "Multiple models with a router that picks per task." },
@@ -829,7 +1174,12 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Connectivity", body: "DigiMCP servers, integrations and local runners." },
       { title: "Desktop layer", body: "Files, applications, terminal and browser." },
     ],
-    sections: [{ heading: "Resources, not features", body: "Treating models, skills and tools as shared resources is what allows a new agent or workflow to be productive immediately — it inherits the whole environment." }],
+    sections: [
+      {
+        heading: "Resources, not features",
+        body: "Treating models, skills and tools as shared resources is what allows a new agent or workflow to be productive immediately — it inherits the whole environment.",
+      },
+    ],
     faq: [{ q: "Does it replace Windows?", a: "No. It runs on Windows as an AI layer above it." }],
     links: [
       { label: "AI business operating system", to: "/ai-business-operating-system" },
@@ -837,7 +1187,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "Memory", to: "/features/memory" },
       ...CTA_CORE,
     ],
-    image: img(osRuntime, "DIGI BIZ OS runtime managing models, agents and tools", "The runtime layer coordinating models, agents, skills and tools."),
+    image: img(
+      osRuntime,
+      "DIGI BIZ OS runtime managing models, agents and tools",
+      "The runtime layer coordinating models, agents, skills and tools.",
+    ),
     accent: "var(--purple)",
   },
 
@@ -856,7 +1210,10 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "Digi AI is where conversation, personas, providers and agents meet. It is the front door of the OS and the place most work starts.",
     answers: [
-      { q: "What is Digi AI?", a: "The intelligence hub inside DIGI BIZ OS covering chat, coding, personas, model providers, agents and the app store." },
+      {
+        q: "What is Digi AI?",
+        a: "The intelligence hub inside DIGI BIZ OS covering chat, coding, personas, model providers, agents and the app store.",
+      },
     ],
     capabilities: [
       { title: "Chat", body: "Conversational control over the whole OS." },
@@ -866,15 +1223,29 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Coding", body: "Jump into DigiCode from the same surface." },
       { title: "App store", body: "Extend the hub with additional capability." },
     ],
-    sections: [{ heading: "One hub, every module", body: "From Digi AI you can reach coding, documents, tools, automation and agents without losing the thread of what you were doing." }],
-    faq: [{ q: "Can I switch models?", a: "Yes — providers and models are selectable, with a router for automatic selection." }],
+    sections: [
+      {
+        heading: "One hub, every module",
+        body: "From Digi AI you can reach coding, documents, tools, automation and agents without losing the thread of what you were doing.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I switch models?",
+        a: "Yes — providers and models are selectable, with a router for automatic selection.",
+      },
+    ],
     links: [
       { label: "AI models & router", to: "/features/ai-models" },
       { label: "Memory", to: "/features/memory" },
       { label: "JARVIS-style AI", to: "/jarvis-ai" },
       ...CTA_CORE,
     ],
-    image: img(osAiHub, "Digi AI hub interface with agent, chat, coding, personas and providers cards", "Digi AI hub: agents, chat, coding, personas, providers and app store."),
+    image: img(
+      osAiHub,
+      "Digi AI hub interface with agent, chat, coding, personas and providers cards",
+      "Digi AI hub: agents, chat, coding, personas, providers and app store.",
+    ),
     accent: "var(--cyan)",
   },
   {
@@ -886,8 +1257,14 @@ export const SEO_PAGES: SeoPage[] = [
     metaTitle: "DigiCode — AI Coding Workspace & Repository Intelligence | DIGI BIZ OS",
     metaDescription:
       "DigiCode is the AI coding workspace in DIGI BIZ OS: repository intelligence, code generation, terminal execution and project automation for Python and Node.js.",
-    intro: "DigiCode gives the OS a development brain: it can read a project, change it and run it.",
-    answers: [{ q: "What is DigiCode?", a: "The coding and development environment inside DIGI BIZ OS, combining repository understanding, code editing and terminal execution." }],
+    intro:
+      "DigiCode gives the OS a development brain: it can read a project, change it and run it.",
+    answers: [
+      {
+        q: "What is DigiCode?",
+        a: "The coding and development environment inside DIGI BIZ OS, combining repository understanding, code editing and terminal execution.",
+      },
+    ],
     capabilities: [
       { title: "Repository intelligence", body: "Project-wide understanding before edits." },
       { title: "Code generation", body: "Write and refactor real files." },
@@ -896,15 +1273,29 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Project automation", body: "Chores as repeatable workflows." },
       { title: "Docs", body: "Generate and maintain documentation." },
     ],
-    sections: [{ heading: "For developers and non-developers", body: "Developers get an agent that can carry chores. Non-developers get a way to have small technical jobs completed without hiring for them." }],
-    faq: [{ q: "Does it work offline?", a: "The workspace runs locally; model access depends on your provider setup." }],
+    sections: [
+      {
+        heading: "For developers and non-developers",
+        body: "Developers get an agent that can carry chores. Non-developers get a way to have small technical jobs completed without hiring for them.",
+      },
+    ],
+    faq: [
+      {
+        q: "Does it work offline?",
+        a: "The workspace runs locally; model access depends on your provider setup.",
+      },
+    ],
     links: [
       { label: "AI coding agent", to: "/ai-coding-agent" },
       { label: "DigiCLI", to: "/features/digicli" },
       { label: "AI browser agent", to: "/ai-browser-agent" },
       ...CTA_CORE,
     ],
-    image: img(osCode, "DigiCode AI coding workspace screenshot", "DigiCode working inside a real project."),
+    image: img(
+      osCode,
+      "DigiCode AI coding workspace screenshot",
+      "DigiCode working inside a real project.",
+    ),
     accent: "var(--purple)",
   },
   {
@@ -916,8 +1307,14 @@ export const SEO_PAGES: SeoPage[] = [
     metaTitle: "DigiDocs — AI Document & PDF Workspace with OCR | DIGI BIZ OS",
     metaDescription:
       "DigiDocs handles PDFs and documents inside DIGI BIZ OS: conversion, OCR, compression, signing, redaction and automated document workflows.",
-    intro: "Documents are where most business admin time disappears. DigiDocs turns that work into repeatable, automatable pipelines.",
-    answers: [{ q: "What is DigiDocs?", a: "The document and PDF workspace in DIGI BIZ OS, covering conversion, OCR, compression, signing, redaction and document automation." }],
+    intro:
+      "Documents are where most business admin time disappears. DigiDocs turns that work into repeatable, automatable pipelines.",
+    answers: [
+      {
+        q: "What is DigiDocs?",
+        a: "The document and PDF workspace in DIGI BIZ OS, covering conversion, OCR, compression, signing, redaction and document automation.",
+      },
+    ],
     capabilities: [
       { title: "PDF processing", body: "Merge, split, convert and compress." },
       { title: "OCR", body: "Extract text from scans and images." },
@@ -926,7 +1323,12 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Batch pipelines", body: "Process folders, not files." },
       { title: "Workflow ready", body: "Document steps inside larger automations." },
     ],
-    sections: [{ heading: "Document intake as a workflow", body: "Collect, OCR, rename by content, convert, compress and file — one workflow that runs the same way every time and can be scheduled." }],
+    sections: [
+      {
+        heading: "Document intake as a workflow",
+        body: "Collect, OCR, rename by content, convert, compress and file — one workflow that runs the same way every time and can be scheduled.",
+      },
+    ],
     faq: [{ q: "Does it work with scanned documents?", a: "Yes, OCR is built in." }],
     links: [
       { label: "AI business automation", to: "/ai-business-automation" },
@@ -934,7 +1336,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "DigiTools", to: "/features/digitools" },
       ...CTA_CORE,
     ],
-    image: img(osDocs, "DigiDocs AI document and PDF workspace screenshot", "DigiDocs: PDF, OCR and document processing inside the OS."),
+    image: img(
+      osDocs,
+      "DigiDocs AI document and PDF workspace screenshot",
+      "DigiDocs: PDF, OCR and document processing inside the OS.",
+    ),
     accent: "var(--amber)",
   },
   {
@@ -946,8 +1352,14 @@ export const SEO_PAGES: SeoPage[] = [
     metaTitle: "DigiTools — 150+ AI & Offline Tools for Your Desktop | DIGI BIZ OS",
     metaDescription:
       "DigiTools gives DIGI BIZ OS a library of 150+ mixed tools — file, system, document and productivity utilities that both you and your AI agents can use.",
-    intro: "Tools are what make an agent useful. DigiTools is the shared library every agent can draw on.",
-    answers: [{ q: "What are DigiTools?", a: "A library of 150+ mixed tools and offline utilities inside DIGI BIZ OS, available to users and to AI agents during execution." }],
+    intro:
+      "Tools are what make an agent useful. DigiTools is the shared library every agent can draw on.",
+    answers: [
+      {
+        q: "What are DigiTools?",
+        a: "A library of 150+ mixed tools and offline utilities inside DIGI BIZ OS, available to users and to AI agents during execution.",
+      },
+    ],
     capabilities: [
       { title: "File utilities", body: "Search, convert, rename, extract." },
       { title: "System utilities", body: "Desktop and system helpers." },
@@ -956,15 +1368,29 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Offline tools", body: "Many utilities need no connection." },
       { title: "Agent accessible", body: "Agents call tools during runs." },
     ],
-    sections: [{ heading: "Why a shared tool layer matters", body: "A new agent or workflow inherits the whole library immediately, so capability compounds instead of being rebuilt per use case." }],
-    faq: [{ q: "Can I add my own tools?", a: "Yes, custom tools can be added on top of the built-in library." }],
+    sections: [
+      {
+        heading: "Why a shared tool layer matters",
+        body: "A new agent or workflow inherits the whole library immediately, so capability compounds instead of being rebuilt per use case.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I add my own tools?",
+        a: "Yes, custom tools can be added on top of the built-in library.",
+      },
+    ],
     links: [
       { label: "AI tools", to: "/features/ai-tools" },
       { label: "AI skills", to: "/features/ai-skills" },
       { label: "Integrations", to: "/integrations" },
       ...CTA_CORE,
     ],
-    image: img(osTools, "DigiTools library of mixed AI and offline utilities", "The DigiTools library available to you and your agents."),
+    image: img(
+      osTools,
+      "DigiTools library of mixed AI and offline utilities",
+      "The DigiTools library available to you and your agents.",
+    ),
     accent: "var(--cyan)",
   },
   {
@@ -976,8 +1402,11 @@ export const SEO_PAGES: SeoPage[] = [
     metaTitle: "DigiCLI — AI Terminal & Command Execution | DIGI BIZ OS",
     metaDescription:
       "DigiCLI is the terminal layer of DIGI BIZ OS: turn instructions into commands, execute them on your machine and get the output explained.",
-    intro: "DigiCLI is the command execution layer used by you and by agents when a task needs the shell.",
-    answers: [{ q: "What is DigiCLI?", a: "The terminal and command execution module inside DIGI BIZ OS." }],
+    intro:
+      "DigiCLI is the command execution layer used by you and by agents when a task needs the shell.",
+    answers: [
+      { q: "What is DigiCLI?", a: "The terminal and command execution module inside DIGI BIZ OS." },
+    ],
     capabilities: [
       { title: "Command generation", body: "Plain language to shell." },
       { title: "Execution", body: "Runs on your own machine." },
@@ -986,14 +1415,23 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "History", body: "Every command logged." },
       { title: "Workflow steps", body: "Terminal actions inside automations." },
     ],
-    sections: [{ heading: "The shell as a first-class tool", body: "Treating the terminal as a tool rather than a separate app is what allows technical steps to sit inside business workflows." }],
+    sections: [
+      {
+        heading: "The shell as a first-class tool",
+        body: "Treating the terminal as a tool rather than a separate app is what allows technical steps to sit inside business workflows.",
+      },
+    ],
     faq: [{ q: "Is it Windows only?", a: "DIGI BIZ OS currently ships for Windows 10 and 11." }],
     links: [
       { label: "AI terminal assistant", to: "/ai-terminal-assistant" },
       { label: "DigiCode", to: "/features/digicode" },
       ...CTA_CORE,
     ],
-    image: img(osCli, "DigiCLI terminal module inside DIGI BIZ OS", "DigiCLI executing commands with full history."),
+    image: img(
+      osCli,
+      "DigiCLI terminal module inside DIGI BIZ OS",
+      "DigiCLI executing commands with full history.",
+    ),
     accent: "var(--purple)",
   },
   {
@@ -1005,8 +1443,14 @@ export const SEO_PAGES: SeoPage[] = [
     metaTitle: "DigiMCP — Multi-MCP Ready Connectivity & Local Runners | DIGI BIZ OS",
     metaDescription:
       "DigiMCP connects DIGI BIZ OS to MCP servers, integrations and local runners so your agents can reach the platforms your business already uses.",
-    intro: "DigiMCP is the connectivity layer: MCP servers, integrations and local runners that extend what agents can reach.",
-    answers: [{ q: "What is DigiMCP?", a: "The multi-MCP connectivity module in DIGI BIZ OS for connecting servers, integrations and local runners." }],
+    intro:
+      "DigiMCP is the connectivity layer: MCP servers, integrations and local runners that extend what agents can reach.",
+    answers: [
+      {
+        q: "What is DigiMCP?",
+        a: "The multi-MCP connectivity module in DIGI BIZ OS for connecting servers, integrations and local runners.",
+      },
+    ],
     capabilities: [
       { title: "Multi-MCP ready", body: "Connect multiple servers." },
       { title: "Integrations", body: "Reach the platforms you already run on." },
@@ -1015,14 +1459,28 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "No technical setup", body: "Configured inside the app." },
       { title: "Extensible", body: "Add new connections as you grow." },
     ],
-    sections: [{ heading: "Connectivity turns skills into operations", body: "A skill that can reach your actual systems is worth far more than one that only reasons about them." }],
-    faq: [{ q: "Which services can I connect?", a: "Connections are configured in-app; the module is multi-MCP ready and supports local runners." }],
+    sections: [
+      {
+        heading: "Connectivity turns skills into operations",
+        body: "A skill that can reach your actual systems is worth far more than one that only reasons about them.",
+      },
+    ],
+    faq: [
+      {
+        q: "Which services can I connect?",
+        a: "Connections are configured in-app; the module is multi-MCP ready and supports local runners.",
+      },
+    ],
     links: [
       { label: "Integrations", to: "/integrations" },
       { label: "DigiTools", to: "/features/digitools" },
       ...CTA_CORE,
     ],
-    image: img(osMcp, "DigiMCP connected services and local runners panel", "DigiMCP managing connected services and local runners."),
+    image: img(
+      osMcp,
+      "DigiMCP connected services and local runners panel",
+      "DigiMCP managing connected services and local runners.",
+    ),
     accent: "var(--amber)",
   },
   {
@@ -1035,7 +1493,12 @@ export const SEO_PAGES: SeoPage[] = [
     metaDescription:
       "DigiFlow is the workflow engine of DIGI BIZ OS: chain agents, skills and tools into automations triggered by voice, manually or on a schedule.",
     intro: "DigiFlow is where a repeated process becomes a permanent asset.",
-    answers: [{ q: "What is DigiFlow?", a: "The workflow builder and automation engine inside DIGI BIZ OS." }],
+    answers: [
+      {
+        q: "What is DigiFlow?",
+        a: "The workflow builder and automation engine inside DIGI BIZ OS.",
+      },
+    ],
     capabilities: [
       { title: "Step chaining", body: "Compose multi-step processes." },
       { title: "Agent steps", body: "Delegate a step to a specialist." },
@@ -1044,7 +1507,12 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Schedules", body: "Run on a cron-style timetable." },
       { title: "Run history", body: "Full record of every execution." },
     ],
-    sections: [{ heading: "Design once, run forever", body: "The value of a workflow is consistency. The same steps, the same standard, every time — whether you are there or not." }],
+    sections: [
+      {
+        heading: "Design once, run forever",
+        body: "The value of a workflow is consistency. The same steps, the same standard, every time — whether you are there or not.",
+      },
+    ],
     faq: [{ q: "Can flows run unattended?", a: "Yes, scheduled flows run in the background." }],
     links: [
       { label: "AI workflow automation", to: "/ai-workflow-automation" },
@@ -1052,7 +1520,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "DigiTasks", to: "/features/digitasks" },
       ...CTA_CORE,
     ],
-    image: img(osGraph, "DigiFlow workflow graph inside DIGI BIZ OS", "A DigiFlow automation chaining agents and tools."),
+    image: img(
+      osGraph,
+      "DigiFlow workflow graph inside DIGI BIZ OS",
+      "A DigiFlow automation chaining agents and tools.",
+    ),
     accent: "var(--cyan)",
   },
   {
@@ -1065,7 +1537,12 @@ export const SEO_PAGES: SeoPage[] = [
     metaDescription:
       "DigiJobs runs scheduled AI jobs hourly, daily or weekly inside DIGI BIZ OS — recurring reports, document batches, research digests and maintenance routines.",
     intro: "DigiJobs is the scheduler. It is what makes the OS work while you are not at the desk.",
-    answers: [{ q: "What is DigiJobs?", a: "The scheduling module in DIGI BIZ OS for recurring, unattended AI jobs." }],
+    answers: [
+      {
+        q: "What is DigiJobs?",
+        a: "The scheduling module in DIGI BIZ OS for recurring, unattended AI jobs.",
+      },
+    ],
     capabilities: [
       { title: "Cron scheduling", body: "Hourly, daily or weekly." },
       { title: "Unattended runs", body: "No supervision required." },
@@ -1074,15 +1551,29 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Reporting", body: "Results delivered when the job ends." },
       { title: "Retries", body: "Failed runs are visible and re-runnable." },
     ],
-    sections: [{ heading: "Recurring work is the best ROI", body: "Anything you do weekly is a candidate. A single scheduled reporting job usually returns more hours than a dozen one-off prompts." }],
-    faq: [{ q: "Do jobs need my PC on?", a: "Jobs run on your machine, so it must be running for scheduled execution." }],
+    sections: [
+      {
+        heading: "Recurring work is the best ROI",
+        body: "Anything you do weekly is a candidate. A single scheduled reporting job usually returns more hours than a dozen one-off prompts.",
+      },
+    ],
+    faq: [
+      {
+        q: "Do jobs need my PC on?",
+        a: "Jobs run on your machine, so it must be running for scheduled execution.",
+      },
+    ],
     links: [
       { label: "DigiFlow", to: "/features/digiflow" },
       { label: "DigiTasks", to: "/features/digitasks" },
       { label: "AI desktop automation", to: "/ai-desktop-automation" },
       ...CTA_CORE,
     ],
-    image: img(osLiveTracking, "DigiJobs scheduled job monitoring in DIGI BIZ OS", "Scheduled jobs with live status and history."),
+    image: img(
+      osLiveTracking,
+      "DigiJobs scheduled job monitoring in DIGI BIZ OS",
+      "Scheduled jobs with live status and history.",
+    ),
     accent: "var(--purple)",
   },
   {
@@ -1094,8 +1585,11 @@ export const SEO_PAGES: SeoPage[] = [
     metaTitle: "DigiTasks — AI Task Automation & Execution Tracking | DIGI BIZ OS",
     metaDescription:
       "DigiTasks tracks and executes AI tasks inside DIGI BIZ OS: background tasks, task queues, progress monitoring and results you can audit.",
-    intro: "Tasks are the unit of work in the OS. DigiTasks is where they are queued, executed and audited.",
-    answers: [{ q: "What is DigiTasks?", a: "The task execution and tracking module in DIGI BIZ OS." }],
+    intro:
+      "Tasks are the unit of work in the OS. DigiTasks is where they are queued, executed and audited.",
+    answers: [
+      { q: "What is DigiTasks?", a: "The task execution and tracking module in DIGI BIZ OS." },
+    ],
     capabilities: [
       { title: "Task queue", body: "Work lined up and executed in order." },
       { title: "Background execution", body: "Tasks continue while you work." },
@@ -1104,15 +1598,26 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Audit trail", body: "What ran, when and with which tools." },
       { title: "Agent assignment", body: "Tasks routed to the right specialist." },
     ],
-    sections: [{ heading: "Auditability is a business requirement", body: "Being able to show what the AI did, in what order and with which tools, is what makes delegation acceptable in a real company." }],
-    faq: [{ q: "Can I see past runs?", a: "Yes — task history and results are retained for review." }],
+    sections: [
+      {
+        heading: "Auditability is a business requirement",
+        body: "Being able to show what the AI did, in what order and with which tools, is what makes delegation acceptable in a real company.",
+      },
+    ],
+    faq: [
+      { q: "Can I see past runs?", a: "Yes — task history and results are retained for review." },
+    ],
     links: [
       { label: "DigiJobs", to: "/features/digijobs" },
       { label: "DigiFlow", to: "/features/digiflow" },
       { label: "Multi-agent AI", to: "/multi-agent-ai" },
       ...CTA_CORE,
     ],
-    image: img(osLiveTracking, "DigiTasks task tracking view in DIGI BIZ OS", "Task tracking with live progress and stored results."),
+    image: img(
+      osLiveTracking,
+      "DigiTasks task tracking view in DIGI BIZ OS",
+      "Task tracking with live progress and stored results.",
+    ),
     accent: "var(--amber)",
   },
   {
@@ -1124,10 +1629,17 @@ export const SEO_PAGES: SeoPage[] = [
     metaTitle: "AI Skills — 500+ Reusable Skills & Custom Skill Builder | DIGI BIZ OS",
     metaDescription:
       "DIGI BIZ OS ships 500+ AI skills and lets you create custom skills your agents can reuse forever — the reusable capability layer of the OS.",
-    intro: "A skill is a capability the OS can reuse. Teach it once and it is available to every agent and workflow from then on.",
+    intro:
+      "A skill is a capability the OS can reuse. Teach it once and it is available to every agent and workflow from then on.",
     answers: [
-      { q: "What is an AI skill?", a: "A reusable capability an AI agent can invoke — a defined way of performing a specific job, available across agents and workflows." },
-      { q: "Can I create my own?", a: "Yes. Custom skills are created inside the app and reused forever." },
+      {
+        q: "What is an AI skill?",
+        a: "A reusable capability an AI agent can invoke — a defined way of performing a specific job, available across agents and workflows.",
+      },
+      {
+        q: "Can I create my own?",
+        a: "Yes. Custom skills are created inside the app and reused forever.",
+      },
     ],
     capabilities: [
       { title: "500+ built in", body: "Broad coverage from day one." },
@@ -1137,7 +1649,12 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Composable", body: "Skills combine inside workflows." },
       { title: "Shared", body: "Available to the whole roster." },
     ],
-    sections: [{ heading: "Skills are institutional memory", body: "When your best process is stored as a skill, quality no longer depends on who is at the keyboard." }],
+    sections: [
+      {
+        heading: "Skills are institutional memory",
+        body: "When your best process is stored as a skill, quality no longer depends on who is at the keyboard.",
+      },
+    ],
     faq: [{ q: "Do skills need coding?", a: "No, they are created inside the application." }],
     links: [
       { label: "AI tools", to: "/features/ai-tools" },
@@ -1145,7 +1662,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "Memory", to: "/features/memory" },
       ...CTA_CORE,
     ],
-    image: img(osSkills, "AI skills library inside DIGI BIZ OS", "The skills panel: hundreds of reusable capabilities."),
+    image: img(
+      osSkills,
+      "AI skills library inside DIGI BIZ OS",
+      "The skills panel: hundreds of reusable capabilities.",
+    ),
     accent: "var(--cyan)",
   },
   {
@@ -1157,8 +1678,14 @@ export const SEO_PAGES: SeoPage[] = [
     metaTitle: "AI Tools — 150+ Agent-Accessible Tools & Utilities | DIGI BIZ OS",
     metaDescription:
       "The AI tool layer of DIGI BIZ OS: 150+ mixed tools spanning files, documents, system utilities and connected services, callable by you or by agents.",
-    intro: "Tools are how intelligence becomes action. Every agent in DIGI BIZ OS can call the same tool library.",
-    answers: [{ q: "What are AI agent tools?", a: "Functions an agent can call to affect the real world — reading files, converting documents, running commands, browsing or calling connected services." }],
+    intro:
+      "Tools are how intelligence becomes action. Every agent in DIGI BIZ OS can call the same tool library.",
+    answers: [
+      {
+        q: "What are AI agent tools?",
+        a: "Functions an agent can call to affect the real world — reading files, converting documents, running commands, browsing or calling connected services.",
+      },
+    ],
     capabilities: [
       { title: "150+ mixed tools", body: "Wide coverage across daily work." },
       { title: "Offline utilities", body: "Many work without a connection." },
@@ -1167,15 +1694,29 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Workflow steps", body: "Tools as steps in automations." },
       { title: "Extensible", body: "Add your own tools." },
     ],
-    sections: [{ heading: "Tool quality beats model hype", body: "A capable tool layer often improves outcomes more than a bigger model, because most failures are execution failures, not reasoning failures." }],
-    faq: [{ q: "Are tools available to every agent?", a: "Yes, the library is shared across the roster." }],
+    sections: [
+      {
+        heading: "Tool quality beats model hype",
+        body: "A capable tool layer often improves outcomes more than a bigger model, because most failures are execution failures, not reasoning failures.",
+      },
+    ],
+    faq: [
+      {
+        q: "Are tools available to every agent?",
+        a: "Yes, the library is shared across the roster.",
+      },
+    ],
     links: [
       { label: "DigiTools", to: "/features/digitools" },
       { label: "AI skills", to: "/features/ai-skills" },
       { label: "DigiMCP", to: "/features/digimcp" },
       ...CTA_CORE,
     ],
-    image: img(osDesktopTools, "Mixed AI tools panel inside DIGI BIZ OS", "Mixed tools: files, system, documents and productivity utilities."),
+    image: img(
+      osDesktopTools,
+      "Mixed AI tools panel inside DIGI BIZ OS",
+      "Mixed tools: files, system, documents and productivity utilities.",
+    ),
     accent: "var(--purple)",
   },
   {
@@ -1187,8 +1728,14 @@ export const SEO_PAGES: SeoPage[] = [
     metaTitle: "AI Models & Model Router — Multi-Model Intelligence | DIGI BIZ OS",
     metaDescription:
       "Use multiple AI models inside DIGI BIZ OS with a model router that selects the right engine per task, plus provider control and persistent memory.",
-    intro: "Different work needs different engines. DIGI BIZ OS supports multiple models and routes tasks to the appropriate one.",
-    answers: [{ q: "What is a model router?", a: "A layer that chooses which AI model handles a given task, based on the type of work rather than a single fixed default." }],
+    intro:
+      "Different work needs different engines. DIGI BIZ OS supports multiple models and routes tasks to the appropriate one.",
+    answers: [
+      {
+        q: "What is a model router?",
+        a: "A layer that chooses which AI model handles a given task, based on the type of work rather than a single fixed default.",
+      },
+    ],
     capabilities: [
       { title: "Multi-model", body: "More than one engine available." },
       { title: "Model router", body: "Automatic selection per task." },
@@ -1197,7 +1744,12 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Memory aware", body: "Context carries across models." },
       { title: "Cost aware", body: "Heavier engines only where needed." },
     ],
-    sections: [{ heading: "Routing is an operations decision", body: "Fast engines handle routine steps; stronger engines handle reasoning-heavy steps. Routing keeps quality high without paying premium cost on every action." }],
+    sections: [
+      {
+        heading: "Routing is an operations decision",
+        body: "Fast engines handle routine steps; stronger engines handle reasoning-heavy steps. Routing keeps quality high without paying premium cost on every action.",
+      },
+    ],
     faq: [{ q: "Can I force a specific model?", a: "Yes, providers and models are selectable." }],
     links: [
       { label: "Memory", to: "/features/memory" },
@@ -1205,7 +1757,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "Offline AI", to: "/features/offline-ai" },
       ...CTA_CORE,
     ],
-    image: img(osAiHub, "Model and provider selection inside the Digi AI hub", "Providers and models managed from the Digi AI hub."),
+    image: img(
+      osAiHub,
+      "Model and provider selection inside the Digi AI hub",
+      "Providers and models managed from the Digi AI hub.",
+    ),
     accent: "var(--amber)",
   },
   {
@@ -1217,8 +1773,14 @@ export const SEO_PAGES: SeoPage[] = [
     metaTitle: "AI Memory — Custom Memories, Rules & Persistent Context | DIGI BIZ OS",
     metaDescription:
       "Custom memories in DIGI BIZ OS store the facts, rules and preferences your AI should never forget, so every agent and workflow works to your standard.",
-    intro: "Memory is what stops you repeating yourself. Store the rules once and every agent respects them.",
-    answers: [{ q: "What are custom memories?", a: "Stored facts, rules and preferences that the OS applies automatically to future work." }],
+    intro:
+      "Memory is what stops you repeating yourself. Store the rules once and every agent respects them.",
+    answers: [
+      {
+        q: "What are custom memories?",
+        a: "Stored facts, rules and preferences that the OS applies automatically to future work.",
+      },
+    ],
     capabilities: [
       { title: "Business facts", body: "Names, terms, standards and formats." },
       { title: "Working rules", body: "How things must always be done." },
@@ -1227,14 +1789,25 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Editable", body: "Change a rule and it applies everywhere." },
       { title: "Persistent", body: "Survives sessions and restarts." },
     ],
-    sections: [{ heading: "Memory turns an assistant into a colleague", body: "The difference between a tool you re-brief daily and one that already knows your business is entirely memory." }],
-    faq: [{ q: "Can I remove a memory?", a: "Yes, memories can be edited or deleted at any time." }],
+    sections: [
+      {
+        heading: "Memory turns an assistant into a colleague",
+        body: "The difference between a tool you re-brief daily and one that already knows your business is entirely memory.",
+      },
+    ],
+    faq: [
+      { q: "Can I remove a memory?", a: "Yes, memories can be edited or deleted at any time." },
+    ],
     links: [
       { label: "AI models & router", to: "/features/ai-models" },
       { label: "AI skills", to: "/features/ai-skills" },
       ...CTA_CORE,
     ],
-    image: img(osSidebar, "Memory and personas configuration inside DIGI BIZ OS", "Memories and personas shaping how the OS behaves."),
+    image: img(
+      osSidebar,
+      "Memory and personas configuration inside DIGI BIZ OS",
+      "Memories and personas shaping how the OS behaves.",
+    ),
     accent: "var(--cyan)",
   },
   {
@@ -1246,8 +1819,14 @@ export const SEO_PAGES: SeoPage[] = [
     metaTitle: "Offline AI Tools & Local-First Privacy | DIGI BIZ OS",
     metaDescription:
       "DIGI BIZ OS runs on your own Windows machine with local runners and offline utilities, so sensitive business work stays under your control.",
-    intro: "For most businesses the blocker is not capability, it is where the data goes. DIGI BIZ OS is a local-first desktop install.",
-    answers: [{ q: "Does DIGI BIZ OS run locally?", a: "Yes. It is installed on your Windows machine, works with your local files, and includes offline utilities and local runners." }],
+    intro:
+      "For most businesses the blocker is not capability, it is where the data goes. DIGI BIZ OS is a local-first desktop install.",
+    answers: [
+      {
+        q: "Does DIGI BIZ OS run locally?",
+        a: "Yes. It is installed on your Windows machine, works with your local files, and includes offline utilities and local runners.",
+      },
+    ],
     capabilities: [
       { title: "Local install", body: "A desktop application, not a web tab." },
       { title: "Local files", body: "Works directly with your folders." },
@@ -1256,14 +1835,28 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Provider control", body: "You choose what is enabled." },
       { title: "Client-safe work", body: "Suited to confidential material." },
     ],
-    sections: [{ heading: "Privacy as an operating decision", body: "Keeping execution local means client documents and internal files do not have to leave the business by default." }],
-    faq: [{ q: "Is any connection required?", a: "Connected models and services need internet; offline utilities do not." }],
+    sections: [
+      {
+        heading: "Privacy as an operating decision",
+        body: "Keeping execution local means client documents and internal files do not have to leave the business by default.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is any connection required?",
+        a: "Connected models and services need internet; offline utilities do not.",
+      },
+    ],
     links: [
       { label: "Desktop OS", to: "/desktop-os" },
       { label: "DigiMCP", to: "/features/digimcp" },
       ...CTA_CORE,
     ],
-    image: img(osRuntime, "Local runtime execution inside DIGI BIZ OS", "Local runtime: execution on your own machine."),
+    image: img(
+      osRuntime,
+      "Local runtime execution inside DIGI BIZ OS",
+      "Local runtime: execution on your own machine.",
+    ),
     accent: "var(--purple)",
   },
   {
@@ -1275,8 +1868,14 @@ export const SEO_PAGES: SeoPage[] = [
     metaTitle: "Desktop Control — AI Control of Files, Apps & Screen | DIGI BIZ OS",
     metaDescription:
       "DIGI BIZ OS can work with your desktop: applications, files, folders, screen sharing and camera support, all under voice control and full run tracking.",
-    intro: "Desktop control is the capability that separates DIGI BIZ OS from browser-based assistants.",
-    answers: [{ q: "What desktop actions are supported?", a: "Working with applications, files and folders, terminal commands, browser tasks, document processing, plus screen sharing and camera support for context." }],
+    intro:
+      "Desktop control is the capability that separates DIGI BIZ OS from browser-based assistants.",
+    answers: [
+      {
+        q: "What desktop actions are supported?",
+        a: "Working with applications, files and folders, terminal commands, browser tasks, document processing, plus screen sharing and camera support for context.",
+      },
+    ],
     capabilities: [
       { title: "Applications", body: "Operate the apps in your workflow." },
       { title: "Files & folders", body: "Bulk operations across directories." },
@@ -1285,15 +1884,29 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Keyboard & mouse", body: "Supported desktop interactions." },
       { title: "Tracked runs", body: "Every action visible live." },
     ],
-    sections: [{ heading: "Control with oversight", body: "Every desktop action is part of a tracked run you can stop, so autonomy never means losing visibility." }],
-    faq: [{ q: "Can I limit what it does?", a: "You direct each run and can stop execution at any point." }],
+    sections: [
+      {
+        heading: "Control with oversight",
+        body: "Every desktop action is part of a tracked run you can stop, so autonomy never means losing visibility.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I limit what it does?",
+        a: "You direct each run and can stop execution at any point.",
+      },
+    ],
     links: [
       { label: "Computer-use AI", to: "/computer-use-ai" },
       { label: "AI desktop assistant", to: "/ai-desktop-assistant" },
       { label: "Desktop OS", to: "/desktop-os" },
       ...CTA_CORE,
     ],
-    image: img(osDesktopTools, "Desktop control tools inside DIGI BIZ OS", "Desktop control surfaces for files, system and applications."),
+    image: img(
+      osDesktopTools,
+      "Desktop control tools inside DIGI BIZ OS",
+      "Desktop control surfaces for files, system and applications.",
+    ),
     accent: "var(--amber)",
   },
   {
@@ -1306,7 +1919,12 @@ export const SEO_PAGES: SeoPage[] = [
     metaDescription:
       "The voice layer of DIGI BIZ OS: live transcription, hands-free briefing and voice-triggered skills, workflows and agents on your Windows desktop.",
     intro: "Voice is the primary interface of the OS, wired directly into execution.",
-    answers: [{ q: "How does voice control work?", a: "You speak, the OS transcribes live, interprets the request against memory and context, plans the work and executes it with agents, skills and tools." }],
+    answers: [
+      {
+        q: "How does voice control work?",
+        a: "You speak, the OS transcribes live, interprets the request against memory and context, plans the work and executes it with agents, skills and tools.",
+      },
+    ],
     capabilities: [
       { title: "Live transcript", body: "See exactly what was heard." },
       { title: "Hands-free", body: "Brief while you work." },
@@ -1315,15 +1933,29 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Interruptible", body: "Stop or redirect a run." },
       { title: "Chat fallback", body: "Type when speaking is not practical." },
     ],
-    sections: [{ heading: "Speech plus execution", body: "A voice interface that only answers is a novelty. A voice interface connected to agents, tools and scheduling is an operating system." }],
-    faq: [{ q: "Does it work in noisy rooms?", a: "The live transcript lets you confirm and correct what was recognised before work proceeds." }],
+    sections: [
+      {
+        heading: "Speech plus execution",
+        body: "A voice interface that only answers is a novelty. A voice interface connected to agents, tools and scheduling is an operating system.",
+      },
+    ],
+    faq: [
+      {
+        q: "Does it work in noisy rooms?",
+        a: "The live transcript lets you confirm and correct what was recognised before work proceeds.",
+      },
+    ],
     links: [
       { label: "Voice AI", to: "/voice-ai" },
       { label: "Voice AI assistant", to: "/voice-ai-assistant" },
       { label: "JARVIS-style AI", to: "/jarvis-ai" },
       ...CTA_CORE,
     ],
-    image: img(osTranscript, "Voice transcript panel inside DIGI BIZ OS", "Live voice transcription driving real execution."),
+    image: img(
+      osTranscript,
+      "Voice transcript panel inside DIGI BIZ OS",
+      "Live voice transcription driving real execution.",
+    ),
     accent: "var(--cyan)",
   },
   {
@@ -1335,8 +1967,14 @@ export const SEO_PAGES: SeoPage[] = [
     metaTitle: "Business Automation Module — AI Operations Automation | DIGI BIZ OS",
     metaDescription:
       "Automate business operations inside DIGI BIZ OS: document pipelines, recurring reporting, research digests, admin batches and maintenance jobs.",
-    intro: "This is the module map for operational work: what to automate, and with which part of the OS.",
-    answers: [{ q: "What business processes can be automated?", a: "Document intake and processing, recurring reporting, research digests, file and record admin, technical maintenance and any repeatable multi-step routine." }],
+    intro:
+      "This is the module map for operational work: what to automate, and with which part of the OS.",
+    answers: [
+      {
+        q: "What business processes can be automated?",
+        a: "Document intake and processing, recurring reporting, research digests, file and record admin, technical maintenance and any repeatable multi-step routine.",
+      },
+    ],
     capabilities: [
       { title: "Document ops", body: "DigiDocs pipelines at volume." },
       { title: "Reporting ops", body: "DigiJobs scheduled summaries." },
@@ -1345,15 +1983,29 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Technical ops", body: "DigiCode and DigiCLI routines." },
       { title: "Custom ops", body: "Your own skills, agents and flows." },
     ],
-    sections: [{ heading: "Pick processes, not tools", body: "Start from the process that costs the most hours this month, then choose the module that owns it." }],
-    faq: [{ q: "Where should we start?", a: "Usually document processing or recurring reporting — both are high volume and rule-based." }],
+    sections: [
+      {
+        heading: "Pick processes, not tools",
+        body: "Start from the process that costs the most hours this month, then choose the module that owns it.",
+      },
+    ],
+    faq: [
+      {
+        q: "Where should we start?",
+        a: "Usually document processing or recurring reporting — both are high volume and rule-based.",
+      },
+    ],
     links: [
       { label: "AI business automation", to: "/ai-business-automation" },
       { label: "AI business operating system", to: "/ai-business-operating-system" },
       { label: "DigiFlow", to: "/features/digiflow" },
       ...CTA_CORE,
     ],
-    image: img(osSidebar, "Business automation modules inside DIGI BIZ OS", "Operational modules inside a single OS."),
+    image: img(
+      osSidebar,
+      "Business automation modules inside DIGI BIZ OS",
+      "Operational modules inside a single OS.",
+    ),
     accent: "var(--purple)",
   },
   /* ------------------------------------------------------------------ */
@@ -1371,14 +2023,29 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "Most JARVIS-style downloads are voice launchers: a fixed phrase triggers a fixed shortcut. DIGI BIZ OS takes the same idea much further — you speak a real instruction, it plans the steps, chooses the right agent and tools, executes them on your machine and shows you the result.",
     answers: [
-      { q: "What is the best JARVIS alternative for Windows?", a: "For voice-driven work that produces documents, files, code, reports and scheduled automation, DIGI BIZ OS is a practical alternative because it executes tasks rather than only launching apps." },
-      { q: "Is it free?", a: "No. It is a one-time lifetime licence rather than a subscription, with source code and custom build options available." },
-      { q: "Does it need internet?", a: "Model-driven reasoning uses online models, while many desktop, file and offline utilities run locally on your machine." },
+      {
+        q: "What is the best JARVIS alternative for Windows?",
+        a: "For voice-driven work that produces documents, files, code, reports and scheduled automation, DIGI BIZ OS is a practical alternative because it executes tasks rather than only launching apps.",
+      },
+      {
+        q: "Is it free?",
+        a: "No. It is a one-time lifetime licence rather than a subscription, with source code and custom build options available.",
+      },
+      {
+        q: "Does it need internet?",
+        a: "Model-driven reasoning uses online models, while many desktop, file and offline utilities run locally on your machine.",
+      },
     ],
     capabilities: [
-      { title: "Real instructions", body: "Speak naturally instead of memorising trigger phrases." },
+      {
+        title: "Real instructions",
+        body: "Speak naturally instead of memorising trigger phrases.",
+      },
       { title: "Planned execution", body: "Multi-step work is planned before anything runs." },
-      { title: "Agents", body: "Specialist agents own coding, research, documents and operations." },
+      {
+        title: "Agents",
+        body: "Specialist agents own coding, research, documents and operations.",
+      },
       { title: "Desktop reach", body: "Applications, files, clipboard and system actions." },
       { title: "Automation", body: "Workflows and cron-style jobs keep running without you." },
       { title: "Full visibility", body: "Live tracking of every step, tool call and output." },
@@ -1400,8 +2067,14 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     faq: [
-      { q: "Is DIGI BIZ OS affiliated with Marvel?", a: "No. It is JARVIS-inspired in experience only and has no affiliation with Marvel or the fictional J.A.R.V.I.S. system." },
-      { q: "Can I keep my current assistant too?", a: "Yes. It runs as a normal Windows application alongside anything else you use." },
+      {
+        q: "Is DIGI BIZ OS affiliated with Marvel?",
+        a: "No. It is JARVIS-inspired in experience only and has no affiliation with Marvel or the fictional J.A.R.V.I.S. system.",
+      },
+      {
+        q: "Can I keep my current assistant too?",
+        a: "Yes. It runs as a normal Windows application alongside anything else you use.",
+      },
     ],
     links: [
       { label: "JARVIS AI overview", to: "/jarvis-ai" },
@@ -1410,7 +2083,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "Voice assistant", to: "/features/voice-assistant" },
       ...CTA_CORE,
     ],
-    image: img(osTranscript, "Voice transcript in DIGI BIZ OS showing a spoken instruction being executed", "Speak the request; the transcript and run view show what happens next."),
+    image: img(
+      osTranscript,
+      "Voice transcript in DIGI BIZ OS showing a spoken instruction being executed",
+      "Speak the request; the transcript and run view show what happens next.",
+    ),
     accent: "var(--amber)",
   },
   {
@@ -1425,15 +2102,33 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "DIGI BIZ OS is a Windows application, not a browser tab. Install it on Windows 10 or 11, activate your licence and start giving spoken instructions that touch your real files, applications, terminal and documents.",
     answers: [
-      { q: "Which Windows versions are supported?", a: "Windows 10 and Windows 11. macOS, Linux and a mobile companion are marked coming soon." },
-      { q: "How do I install it?", a: "Download the installer, run it, then activate with the licence key emailed after purchase. Setup usually takes a few minutes." },
-      { q: "Does it control the desktop?", a: "Yes — with your permission it can work with applications, files, folders, clipboard and system actions." },
+      {
+        q: "Which Windows versions are supported?",
+        a: "Windows 10 and Windows 11. macOS, Linux and a mobile companion are marked coming soon.",
+      },
+      {
+        q: "How do I install it?",
+        a: "Download the installer, run it, then activate with the licence key emailed after purchase. Setup usually takes a few minutes.",
+      },
+      {
+        q: "Does it control the desktop?",
+        a: "Yes — with your permission it can work with applications, files, folders, clipboard and system actions.",
+      },
     ],
     capabilities: [
       { title: "Native install", body: "A real Windows application with a full workspace UI." },
-      { title: "Voice control", body: "Push-to-talk or continuous listening with a live transcript." },
-      { title: "File access", body: "Local folders, batch renaming, sorting and document pipelines." },
-      { title: "Terminal", body: "Command execution and project work inside the coding workspace." },
+      {
+        title: "Voice control",
+        body: "Push-to-talk or continuous listening with a live transcript.",
+      },
+      {
+        title: "File access",
+        body: "Local folders, batch renaming, sorting and document pipelines.",
+      },
+      {
+        title: "Terminal",
+        body: "Command execution and project work inside the coding workspace.",
+      },
       { title: "Scheduling", body: "Jobs that run on your PC on a timetable." },
       { title: "Multi-model", body: "Route each task to a suitable model." },
     ],
@@ -1448,8 +2143,14 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     faq: [
-      { q: "Is there a macOS version?", a: "Not yet — macOS is listed as coming soon on the home page." },
-      { q: "Can it run at startup?", a: "Yes, it can stay resident so scheduled jobs and voice control are always available." },
+      {
+        q: "Is there a macOS version?",
+        a: "Not yet — macOS is listed as coming soon on the home page.",
+      },
+      {
+        q: "Can it run at startup?",
+        a: "Yes, it can stay resident so scheduled jobs and voice control are always available.",
+      },
     ],
     links: [
       { label: "JARVIS AI overview", to: "/jarvis-ai" },
@@ -1458,7 +2159,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "Desktop control", to: "/features/computer-use" },
       ...CTA_CORE,
     ],
-    image: img(osShell, "DIGI BIZ OS running as a Windows desktop application", "DIGI BIZ OS installed and running on Windows."),
+    image: img(
+      osShell,
+      "DIGI BIZ OS running as a Windows desktop application",
+      "DIGI BIZ OS installed and running on Windows.",
+    ),
     accent: "var(--cyan)",
   },
   {
@@ -1473,9 +2178,18 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "Control is the part most AI tools skip. DIGI BIZ OS is built around it: you grant permission, speak the instruction, and the assistant operates the machine — applications, files, clipboard, terminal, browser — while you watch each step in the run view.",
     answers: [
-      { q: "Can AI really control a computer?", a: "Yes. Computer-use assistants like DIGI BIZ OS act on the desktop through tools rather than only generating text, so they can open applications, move files and run commands." },
-      { q: "Is it safe?", a: "Actions run under your Windows account with your permission, and every step is logged in the run view so you can see exactly what happened." },
-      { q: "What are common uses?", a: "Sorting and renaming files, processing document batches, running scripts, gathering research, preparing reports and repeating any of these on a schedule." },
+      {
+        q: "Can AI really control a computer?",
+        a: "Yes. Computer-use assistants like DIGI BIZ OS act on the desktop through tools rather than only generating text, so they can open applications, move files and run commands.",
+      },
+      {
+        q: "Is it safe?",
+        a: "Actions run under your Windows account with your permission, and every step is logged in the run view so you can see exactly what happened.",
+      },
+      {
+        q: "What are common uses?",
+        a: "Sorting and renaming files, processing document batches, running scripts, gathering research, preparing reports and repeating any of these on a schedule.",
+      },
     ],
     capabilities: [
       { title: "Applications", body: "Open, focus and drive the programs you already use." },
@@ -1496,8 +2210,14 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     faq: [
-      { q: "Does it need admin rights?", a: "Ordinary tasks run under your normal user account. Only operations that genuinely require elevation would need it." },
-      { q: "Can I limit what it touches?", a: "Yes — you choose which folders and capabilities are in scope for a given task." },
+      {
+        q: "Does it need admin rights?",
+        a: "Ordinary tasks run under your normal user account. Only operations that genuinely require elevation would need it.",
+      },
+      {
+        q: "Can I limit what it touches?",
+        a: "Yes — you choose which folders and capabilities are in scope for a given task.",
+      },
     ],
     links: [
       { label: "Computer-use AI", to: "/computer-use-ai" },
@@ -1506,7 +2226,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "Desktop AI agent", to: "/desktop-ai-agent" },
       ...CTA_CORE,
     ],
-    image: img(osDesktopTools, "Desktop control tools in DIGI BIZ OS acting on files and applications", "Desktop and file tools available to the assistant."),
+    image: img(
+      osDesktopTools,
+      "Desktop control tools in DIGI BIZ OS acting on files and applications",
+      "Desktop and file tools available to the assistant.",
+    ),
     accent: "var(--purple)",
   },
   {
@@ -1521,12 +2245,24 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "A desktop AI agent is an agent that runs where your work already lives: your machine, your folders, your projects. DIGI BIZ OS lets you create agents, give them scope, and let them carry out multi-step work locally instead of in an isolated cloud sandbox.",
     answers: [
-      { q: "What is a desktop AI agent?", a: "It is an AI agent that executes on your own computer, using local files, applications and tools, rather than running only in a remote environment." },
-      { q: "How is it different from a cloud agent?", a: "Local context. A desktop agent can read the folder you just saved to, run your project's commands and put the output back on your disk." },
-      { q: "Can several agents work together?", a: "Yes. Work can be delegated between specialist agents, with progress visible for each one." },
+      {
+        q: "What is a desktop AI agent?",
+        a: "It is an AI agent that executes on your own computer, using local files, applications and tools, rather than running only in a remote environment.",
+      },
+      {
+        q: "How is it different from a cloud agent?",
+        a: "Local context. A desktop agent can read the folder you just saved to, run your project's commands and put the output back on your disk.",
+      },
+      {
+        q: "Can several agents work together?",
+        a: "Yes. Work can be delegated between specialist agents, with progress visible for each one.",
+      },
     ],
     capabilities: [
-      { title: "Local context", body: "Your files, projects and documents are the working material." },
+      {
+        title: "Local context",
+        body: "Your files, projects and documents are the working material.",
+      },
       { title: "Custom agents", body: "Define role, scope, tools and persona per agent." },
       { title: "Delegation", body: "Agents hand subtasks to the right specialist." },
       { title: "Tooling", body: "150+ mixed tools available to every agent." },
@@ -1544,8 +2280,14 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     faq: [
-      { q: "Do agents run without supervision?", a: "They can run scheduled and unattended, and every run is recorded so you can review afterwards." },
-      { q: "Can I build my own?", a: "Yes. Custom agents, skills, tools and memories are created inside the app." },
+      {
+        q: "Do agents run without supervision?",
+        a: "They can run scheduled and unattended, and every run is recorded so you can review afterwards.",
+      },
+      {
+        q: "Can I build my own?",
+        a: "Yes. Custom agents, skills, tools and memories are created inside the app.",
+      },
     ],
     links: [
       { label: "Multi-agent AI", to: "/multi-agent-ai" },
@@ -1554,7 +2296,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "AI computer control", to: "/ai-computer-control" },
       ...CTA_CORE,
     ],
-    image: img(osLiveTracking, "Live tracking view of DIGI BIZ OS agents executing steps on a desktop", "Live tracking of agent runs, step by step."),
+    image: img(
+      osLiveTracking,
+      "Live tracking view of DIGI BIZ OS agents executing steps on a desktop",
+      "Live tracking of agent runs, step by step.",
+    ),
     accent: "var(--cyan)",
   },
   /* ------------------------------------------------------------------ */
@@ -1572,8 +2318,14 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "Different jobs need different models. The router picks a suitable one per task — fast models for short operations, stronger models for planning and analysis — so you do not have to think about model names to get good results.",
     answers: [
-      { q: "What is a model router?", a: "It is the component that decides which AI model handles a given task, based on the type of work, the required depth and your configuration." },
-      { q: "Can I override it?", a: "Yes. You can pin a preferred model for a task, agent or workspace." },
+      {
+        q: "What is a model router?",
+        a: "It is the component that decides which AI model handles a given task, based on the type of work, the required depth and your configuration.",
+      },
+      {
+        q: "Can I override it?",
+        a: "Yes. You can pin a preferred model for a task, agent or workspace.",
+      },
     ],
     capabilities: [
       { title: "200+ models", body: "A broad catalogue available inside the app." },
@@ -1590,7 +2342,10 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     faq: [
-      { q: "Does it lock me to one provider?", a: "No — model choice is configurable and multiple providers are supported." },
+      {
+        q: "Does it lock me to one provider?",
+        a: "No — model choice is configurable and multiple providers are supported.",
+      },
     ],
     links: [
       { label: "AI models", to: "/features/ai-models" },
@@ -1598,7 +2353,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "Memory", to: "/features/memory" },
       ...CTA_CORE,
     ],
-    image: img(osRuntime, "Model selection and routing settings in DIGI BIZ OS", "Model routing and runtime configuration."),
+    image: img(
+      osRuntime,
+      "Model selection and routing settings in DIGI BIZ OS",
+      "Model routing and runtime configuration.",
+    ),
     accent: "var(--purple)",
   },
   {
@@ -1613,8 +2372,14 @@ export const SEO_PAGES: SeoPage[] = [
     intro:
       "File admin is the work nobody schedules and everyone loses hours to. Describe the structure you want — by client, by date, by type — and the assistant applies it across your local folders, converting and renaming as it goes.",
     answers: [
-      { q: "Can AI organise my files?", a: "Yes. DIGI BIZ OS can read, classify, rename, move and convert files in local folders based on rules you describe in plain language." },
-      { q: "Does it work in bulk?", a: "Yes — batches of documents are handled in one run, with a summary of what changed." },
+      {
+        q: "Can AI organise my files?",
+        a: "Yes. DIGI BIZ OS can read, classify, rename, move and convert files in local folders based on rules you describe in plain language.",
+      },
+      {
+        q: "Does it work in bulk?",
+        a: "Yes — batches of documents are handled in one run, with a summary of what changed.",
+      },
     ],
     capabilities: [
       { title: "Classification", body: "Sort by client, type, date or content." },
@@ -1631,7 +2396,10 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     faq: [
-      { q: "Will it delete anything?", a: "Destructive actions are surfaced clearly and remain under your control." },
+      {
+        q: "Will it delete anything?",
+        a: "Destructive actions are surfaced clearly and remain under your control.",
+      },
       { q: "Which folders can it touch?", a: "Only the folders you put in scope for the task." },
     ],
     links: [
@@ -1640,7 +2408,11 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "AI computer control", to: "/ai-computer-control" },
       ...CTA_CORE,
     ],
-    image: img(osDocs, "Document and file tools inside DIGI BIZ OS", "Document and file operations in DigiDocs."),
+    image: img(
+      osDocs,
+      "Document and file tools inside DIGI BIZ OS",
+      "Document and file operations in DigiDocs.",
+    ),
     accent: "var(--amber)",
   },
 ];

@@ -1,15 +1,7 @@
 import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useSearch, useNavigate } from "@tanstack/react-router";
-import {
-  ArrowLeft,
-  Check,
-  Copy,
-  Loader2,
-  Lock,
-  MessageCircle,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowLeft, Check, Copy, Loader2, Lock, MessageCircle, ShieldCheck } from "lucide-react";
 import GlassCard from "@/components/GlassCard";
 import CyanButton from "@/components/CyanButton";
 import EyebrowLabel from "@/components/EyebrowLabel";
@@ -58,10 +50,7 @@ export default function CheckoutPage() {
   const plan = PLANS[planId];
 
   const [methodId, setMethodId] = useState<MethodId>("jazzcash");
-  const method = useMemo(
-    () => PAYMENT_METHODS.find((m) => m.id === methodId)!,
-    [methodId],
-  );
+  const method = useMemo(() => PAYMENT_METHODS.find((m) => m.id === methodId)!, [methodId]);
   const amount = amountForMethod(plan, method);
 
   const [form, setForm] = useState({
@@ -75,8 +64,9 @@ export default function CheckoutPage() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-    setForm((f) => ({ ...f, [k]: e.target.value }));
+  const set =
+    (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+      setForm((f) => ({ ...f, [k]: e.target.value }));
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -135,8 +125,8 @@ export default function CheckoutPage() {
             Payment Method
           </h1>
           <p className="mt-3 max-w-[560px] font-body text-[15px] text-[var(--text-secondary)]">
-            Complete your transaction. Pick a rail, send the exact amount, then submit your
-            details — we verify and activate your licence.
+            Complete your transaction. Pick a rail, send the exact amount, then submit your details
+            — we verify and activate your licence.
           </p>
         </div>
 
@@ -172,7 +162,12 @@ export default function CheckoutPage() {
               <ul className="mt-4 space-y-2.5">
                 {plan.includes.map((f) => (
                   <li key={f} className="flex items-start gap-2.5">
-                    <Check size={14} color="var(--cyan)" strokeWidth={2.4} className="mt-1 shrink-0" />
+                    <Check
+                      size={14}
+                      color="var(--cyan)"
+                      strokeWidth={2.4}
+                      className="mt-1 shrink-0"
+                    />
                     <span className="font-body text-[13px] leading-[1.6] text-[var(--text-secondary)]">
                       {f}
                     </span>
