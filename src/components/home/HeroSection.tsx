@@ -151,7 +151,7 @@ function Typewriter() {
 
 export default function HeroSection() {
   const trackDownload = useTrackDownload();
-  const radius = 200;
+  const radius = 175;
 
   return (
     <section
@@ -330,10 +330,10 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="relative hidden h-[520px] items-center justify-center self-start lg:flex lg:-ml-8">
+        <div className="relative hidden h-[500px] w-full max-w-[480px] mx-auto items-center justify-center self-center lg:flex lg:-translate-x-10 xl:-translate-x-14">
           {/* Globe */}
           <div className="pointer-events-none relative flex items-center justify-center">
-            <JupiterGlobe size={280} />
+            <JupiterGlobe size={240} />
           </div>
 
           {/* Nodes — orbiting like a solar system */}
