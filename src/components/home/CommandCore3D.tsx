@@ -767,25 +767,29 @@ export default function CommandCore3D() {
               </p>
             </div>
 
-            {/* Grid of 9 interactive module inspection cards */}
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {MODULES_DATA.map((mod) => {
+            {/* Zigzag reveal — modules alternate right / left / right / left as
+                you scroll down, each one's text aligned to its own side. */}
+            <div className="flex flex-col gap-6 md:gap-8">
+              {MODULES_DATA.map((mod, i) => {
                 const Icon = mod.icon;
                 const isHovered = hoveredModule === mod.id;
+                const onLeft = i % 2 === 0;
                 return (
                   <div
                     key={mod.id}
                     onMouseEnter={() => setHoveredModule(mod.id)}
                     onMouseLeave={() => setHoveredModule(null)}
-                    className="transition-transform duration-200 hover:-translate-y-1"
+                    className={`w-full md:w-[56%] transition-transform duration-200 hover:-translate-y-1 ${
+                      onLeft ? "md:mr-auto" : "md:ml-auto"
+                    }`}
                   >
                     <GlassCard
                       glowColor={mod.color}
-                      className={`h-full p-6 transition-all duration-300 ${
+                      className={`h-full p-6 md:p-7 transition-all duration-300 ${
                         isHovered ? "border-white/40 bg-white/10" : ""
-                      }`}
+                      } ${onLeft ? "md:text-left" : "md:text-right"}`}
                     >
-                      <div className="flex items-center justify-between">
+                      <div className={`flex items-center justify-between ${onLeft ? "" : "md:flex-row-reverse"}`}>
                         <div
                           className="flex h-10 w-10 items-center justify-center rounded-xl border"
                           style={{
@@ -807,10 +811,10 @@ export default function CommandCore3D() {
                         </span>
                       </div>
 
-                      <h3 className="mt-4 font-display text-[18px] font-bold text-white">
+                      <h3 className="mt-4 font-display text-[20px] font-bold text-white md:text-[22px]">
                         {mod.name}
                       </h3>
-                      <p className="mt-2 font-body text-[13.5px] leading-[1.65] text-[var(--text-secondary)]">
+                      <p className={`mt-2 font-body text-[13.5px] leading-[1.65] text-[var(--text-secondary)] ${onLeft ? "" : "md:ml-auto"}`}>
                         {mod.spec}
                       </p>
                     </GlassCard>
