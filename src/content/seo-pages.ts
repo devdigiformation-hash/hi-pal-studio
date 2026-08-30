@@ -1,5 +1,9 @@
 import osMain from "@/assets/os-main-dashboard.png";
 import osAiHub from "@/assets/os-digi-ai-hub.png";
+import osCrm from "@/assets/os-digi-crm.png";
+import osIntel from "@/assets/os-digi-intelligence.png";
+import osMkt from "@/assets/os-digi-marketing.png";
+import osWa from "@/assets/os-digi-whatsapp.png";
 import osCode from "@/assets/os-digi-code.png";
 import osDocs from "@/assets/os-digi-docs.png";
 import osTools from "@/assets/os-digi-tools.png";
@@ -1248,6 +1252,194 @@ export const SEO_PAGES: SeoPage[] = [
     ),
     accent: "var(--cyan)",
   },
+  {
+      path: "/features/digi-crm",
+      group: "feature",
+      eyebrow: "Digi CRM",
+      h1: "Digi CRM —",
+      h1Gradient: "Business, Deals & Lead Pipelines.",
+      metaTitle: "Digi CRM — Intelligent Business, Pipeline & Lead Management | DIGI BIZ OS",
+      metaDescription:
+        "Manage customer contacts, business companies, sales leads, deal pipelines, open tasks, and automated product research reports in Digi CRM.",
+      intro:
+        "Digi CRM consolidates your entire sales funnel, customer relationship history, business overview metrics, and e-commerce product pipelines into a unified command dashboard.",
+      answers: [
+        {
+          q: "What is Digi CRM?",
+          a: "A full-featured customer relationship and business overview dashboard built directly inside DIGI BIZ OS with automated lead tracking and deal pipeline analytics.",
+        },
+      ],
+      capabilities: [
+        { title: "Business overview", body: "Live metrics for contacts, companies, open deals and research." },
+        { title: "Deal pipeline", body: "Visual tracking for open value vs won deal revenue." },
+        { title: "Recent activity", body: "Chronological activity audit for automated lead and product hunts." },
+        { title: "AI reports", body: "One-click automated intelligence summaries on demand." },
+      ],
+      sections: [
+        {
+          heading: "Complete Visibility Over Deals & Clients",
+          body: "Stop wrestling with fragmented spreadsheets. Digi CRM automatically logs every lead hunt, contact creation, and pipeline stage inside your local desktop environment.",
+        },
+      ],
+      faq: [
+        {
+          q: "Is my CRM data stored locally?",
+          a: "Yes — all contacts, deals, and activity logs remain private on your machine.",
+        },
+      ],
+      links: [
+        { label: "Digi Intelligence", to: "/features/digi-intelligence" },
+        { label: "Digi Marketing", to: "/features/digi-marketing" },
+        ...CTA_CORE,
+      ],
+      image: img(
+        osCrm,
+        "Digi CRM dashboard showing business overview, contacts, companies, leads, pipeline and recent activity",
+        "Digi CRM: Business overview, deals pipeline, contacts, and live activity tracking.",
+      ),
+      accent: "var(--cyan)",
+    },
+    {
+      path: "/features/digi-intelligence",
+      group: "feature",
+      eyebrow: "Digi Intelligence",
+      h1: "Digi Intelligence —",
+      h1Gradient: "E-Commerce & Lead Engines.",
+      metaTitle: "Digi Intelligence — E-Commerce Research & Lead Engines | DIGI BIZ OS",
+      metaDescription:
+        "Automate 20-stage product research across Amazon, eBay, Walmart, TikTok, and Shopify, plus automated B2B lead hunting pipelines.",
+      intro:
+        "Digi Intelligence is your autonomous market analysis engine. Enter a product niche or search query and the 20-stage research pipeline pulls market depth, pricing, and opportunity metrics automatically.",
+      answers: [
+        {
+          q: "What is Digi Intelligence?",
+          a: "An autonomous e-commerce and B2B lead generation engine supporting Amazon, eBay, Etsy, Walmart, TikTok, and Shopify marketplace research.",
+        },
+      ],
+      capabilities: [
+        { title: "20-stage pipeline", body: "Deep product research and market opportunity scoring." },
+        { title: "Multi-marketplace", body: "Scrapes and evaluates Amazon, eBay, Walmart, TikTok & Shopify." },
+        { title: "Lead intelligence", body: "Automated B2B prospective customer and contact discovery." },
+        { title: "Research history", body: "Score cards and audit logs saved for fast reference." },
+      ],
+      sections: [
+        {
+          heading: "Autonomous Product Discovery & Analysis",
+          body: "Launch comprehensive market hunts in seconds. The intelligence pipeline queries multiple sources simultaneously and compiles structured research reports.",
+        },
+      ],
+      faq: [
+        {
+          q: "Can I research multiple marketplaces simultaneously?",
+          a: "Yes — simply check the marketplaces you want to evaluate and start the hunt.",
+        },
+      ],
+      links: [
+        { label: "Digi CRM", to: "/features/digi-crm" },
+        { label: "Digi Marketing", to: "/features/digi-marketing" },
+        ...CTA_CORE,
+      ],
+      image: img(
+        osIntel,
+        "Digi Intelligence interface with e-commerce intelligence, marketplace selectors and research history",
+        "Digi Intelligence: 20-stage product research across Amazon, eBay, Walmart, TikTok & Shopify.",
+      ),
+      accent: "var(--cyan)",
+    },
+    {
+      path: "/features/digi-marketing",
+      group: "feature",
+      eyebrow: "Digi Marketing",
+      h1: "Digi Marketing —",
+      h1Gradient: "Content & Multi-Channel Campaigns.",
+      metaTitle: "Digi Marketing — AI Content Studio & Campaign Scheduler | DIGI BIZ OS",
+      metaDescription:
+        "Compose posts with AI captions, manage connected social accounts, and schedule cross-channel marketing campaigns from one interface.",
+      intro:
+        "Digi Marketing streamlines your brand presence across digital platforms. Generate high-converting captions with AI, connect multiple accounts, and schedule publication timetables.",
+      answers: [
+        {
+          q: "What is Digi Marketing?",
+          a: "A dedicated marketing automation studio for composing AI-generated social posts, managing connected brand accounts, and scheduling future releases.",
+        },
+      ],
+      capabilities: [
+        { title: "AI caption generator", body: "Generate optimized copy for different social channels." },
+        { title: "Multi-account hub", body: "Manage multiple connected profiles and channels in one tab." },
+        { title: "Post scheduling", body: "Queue posts for scheduled future automated publishing." },
+        { title: "Campaign history", body: "Audit published and scheduled broadcasts." },
+      ],
+      sections: [
+        {
+          heading: "Unified Social & Campaign Management",
+          body: "Draft once, optimize with AI, and publish or schedule across all your brand channels without logging into separate web dashboards.",
+        },
+      ],
+      faq: [
+        {
+          q: "Does it support scheduled posting?",
+          a: "Yes — enable 'Schedule for later' to set date and time for automatic dispatch.",
+        },
+      ],
+      links: [
+        { label: "Digi WhatsApp", to: "/features/digi-whatsapp" },
+        { label: "Digi CRM", to: "/features/digi-crm" },
+        ...CTA_CORE,
+      ],
+      image: img(
+        osMkt,
+        "Digi Marketing compose post dashboard with AI caption generator and account scheduler",
+        "Digi Marketing: AI caption studio, multi-account publisher, and campaign scheduler.",
+      ),
+      accent: "var(--cyan)",
+    },
+    {
+      path: "/features/digi-whatsapp",
+      group: "feature",
+      eyebrow: "Digi WhatsApp",
+      h1: "Digi WhatsApp —",
+      h1Gradient: "24/7 AI Sales & Customer Support.",
+      metaTitle: "Digi WhatsApp — Autonomous AI Sales Assistant & QR Pairing | DIGI BIZ OS",
+      metaDescription:
+        "Deploy a 24/7 autonomous WhatsApp sales engine with instant QR pairing, Whisper voice note transcription, local SQLite memory, and RAG knowledge bases.",
+      intro:
+        "Digi WhatsApp gives your business a 24/7 autonomous sales and customer support workforce. Pair your WhatsApp number in seconds via QR code, transcribe voice notes, and answer buyer inquiries automatically.",
+      answers: [
+        {
+          q: "What is Digi WhatsApp?",
+          a: "An autonomous WhatsApp sales and customer support assistant powered by Baileys Web QR pairing, voice transcription, and local SQLite memory.",
+        },
+      ],
+      capabilities: [
+        { title: "Instant QR pairing", body: "Pair any WhatsApp number in seconds without Meta API fees." },
+        { title: "AI auto-reply agent", body: "Converts incoming customer chats into closed sales." },
+        { title: "Voice note AI", body: "Transcribes and responds to customer audio messages." },
+        { title: "Multi-slot accounts", body: "Connect multiple phone numbers for different brand lines." },
+      ],
+      sections: [
+        {
+          heading: "24/7 Customer Engagement on WhatsApp",
+          body: "Never miss a customer inquiry. The autonomous agent listens to incoming texts and voice notes, queries your product knowledge base, and delivers instant, accurate replies.",
+        },
+      ],
+      faq: [
+        {
+          q: "Are there per-message fees?",
+          a: "No — it operates directly over WhatsApp Web protocol with zero per-conversation costs.",
+        },
+      ],
+      links: [
+        { label: "Open Source WhatsApp Agent", to: "/open-source/whatsapp-ai-sales-agent" },
+        { label: "Digi CRM", to: "/features/digi-crm" },
+        ...CTA_CORE,
+      ],
+      image: img(
+        osWa,
+        "Digi WhatsApp Agent dashboard with QR pairing, number slots, and AI auto-reply toggles",
+        "Digi WhatsApp: Instant QR pairing, AI auto-replies, and multi-number slots.",
+      ),
+      accent: "var(--cyan)",
+    },
   {
     path: "/features/digicode",
     group: "feature",

@@ -49,6 +49,7 @@ import janScreenshot from "@/assets/jan-ai-screenshot.jpg";
 import pocketbaseScreenshot from "@/assets/pocketbase-screenshot.png";
 import tuttleScreenshot from "@/assets/tuttle-screenshot.jpg";
 import upscaylScreenshot from "@/assets/upscayl-screenshot.jpg";
+import whatsappScreenshot from "@/assets/os-digi-whatsapp.png";
 
 const TITLE = "Open Source AI & Software Bundles — Free Downloads | DIGI BIZ OS";
 const DESC =
@@ -133,6 +134,7 @@ const SOFTWARE_LIST: SoftwareItem[] = [
     license: "Commercial Ready",
     color: "#25D366",
     icon: MessageSquare,
+    image: whatsappScreenshot,
     badge: "Revenue Engine",
     bundle: "Business & Growth Automation",
     bullets: [

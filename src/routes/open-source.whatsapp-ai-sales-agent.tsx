@@ -28,6 +28,7 @@ import MonoBadge from "@/components/MonoBadge";
 import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
+import whatsappScreenshot from "@/assets/os-digi-whatsapp.png";
 
 const TITLE = "Universal WhatsApp AI Sales Agent v2.0 PRO — Free Open-Source WhatsApp Automation";
 const DESC =
@@ -241,30 +242,20 @@ function WhatsAppAgentPage() {
             </p>
           </div>
 
-          <GlassCard glowColor="#25D366" className="p-3">
-            <div className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-4 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 text-center">
-              <div
-                className="flex h-20 w-20 items-center justify-center rounded-full"
-                style={{
-                  background: "rgba(37,211,102,0.15)",
-                  boxShadow: "0 0 40px rgba(37,211,102,0.25)",
-                }}
-              >
-                <Smartphone size={40} color="#25D366" strokeWidth={1.5} />
-              </div>
-              <div>
-                <p className="font-display text-[18px] font-bold text-[var(--text-primary)]">
-                  WhatsApp AI Agent Dashboard
+          <GlassCard glowColor="#25D366" className="p-3 overflow-hidden">
+            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[10px] border border-[var(--border-subtle)] bg-[#05070B]">
+              <img
+                src={whatsappScreenshot}
+                alt="Universal WhatsApp AI Sales Agent v2.0 PRO Dashboard Screenshot"
+                className="h-full w-full object-cover object-top"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#020408]/90 via-[#020408]/40 to-transparent p-4">
+                <p className="font-display text-[15px] font-bold text-[var(--text-primary)]">
+                  WhatsApp AI Agent Live Dashboard
                 </p>
-                <p className="mx-auto mt-1 max-w-[320px] font-body text-[13.5px] text-[var(--text-secondary)]">
-                  Live QR pairing, conversation stream, AI brain settings, and Markdown knowledge
-                  base studio.
+                <p className="mt-0.5 font-body text-[12px] text-[var(--text-secondary)]">
+                  Multi-number QR pairing, conversation stream, AI brain settings & auto-replies.
                 </p>
-              </div>
-              <div className="flex flex-wrap justify-center gap-2">
-                <MonoBadge>React 19 + Tailwind</MonoBadge>
-                <MonoBadge>Baileys Web</MonoBadge>
-                <MonoBadge>Groq Whisper</MonoBadge>
               </div>
             </div>
           </GlassCard>

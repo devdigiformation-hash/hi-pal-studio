@@ -6,6 +6,10 @@ import EyebrowLabel from "@/components/EyebrowLabel";
 import GradientText from "@/components/GradientText";
 import digiMain from "@/assets/os-main-dashboard.png";
 import digiAiHub from "@/assets/os-digi-ai-hub.png";
+import digiCrm from "@/assets/os-digi-crm.png";
+import digiIntelligence from "@/assets/os-digi-intelligence.png";
+import digiMarketing from "@/assets/os-digi-marketing.png";
+import digiWhatsapp from "@/assets/os-digi-whatsapp.png";
 import digiCode from "@/assets/os-digi-code.png";
 import digiDocs from "@/assets/os-digi-docs.png";
 import digiTools from "@/assets/os-digi-tools.png";
@@ -26,6 +30,30 @@ const SLIDES = [
     tag: "Digi AI Hub",
     title: "Chat, code, personas and agents in one playground.",
     body: "Agent project assistant, multi-model chat, coding assistant, persona manager, providers and app store — everything unified behind one clean interface.",
+  },
+  {
+    src: digiCrm,
+    tag: "Digi CRM",
+    title: "Business, leads, pipelines and product intelligence.",
+    body: "Contact tracking, deal pipelines, live revenue tracking, company records, and AI-driven business intelligence reports in one command center.",
+  },
+  {
+    src: digiIntelligence,
+    tag: "Digi Intelligence",
+    title: "E-commerce, market research and lead generation engines.",
+    body: "Automated 20-stage product research across Amazon, eBay, Walmart, TikTok, and Shopify, paired with B2B lead hunting pipelines.",
+  },
+  {
+    src: digiMarketing,
+    tag: "Digi Marketing",
+    title: "Multi-platform social content compose and schedule engine.",
+    body: "AI captions, multi-account publishing, automated scheduled campaigns, and cross-channel marketing automation from a single desktop dashboard.",
+  },
+  {
+    src: digiWhatsapp,
+    tag: "Digi WhatsApp",
+    title: "24/7 autonomous sales and customer support agent.",
+    body: "Instant QR pairing via Baileys engine, voice note audio transcription, AI auto-replies, and local SQLite memory for seamless customer conversions.",
   },
   {
     src: digiCode,
