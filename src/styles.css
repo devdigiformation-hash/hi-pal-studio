@@ -239,11 +239,7 @@ body {
   background-color: var(--bg-base);
   color: var(--text-primary);
   font-family: var(--font-body);
-  /* `clip` prevents horizontal scroll WITHOUT turning body into a scroll
-     container — which is what `overflow-x: hidden` did, and that broke every
-     `position: sticky` element (the 3D Command Core never pinned/scrubbed).
-     `clip` fixes the scroller while still hiding any sideways overflow. */
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 ::selection {
