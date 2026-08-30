@@ -1429,7 +1429,7 @@ export const SEO_PAGES: SeoPage[] = [
         },
       ],
       links: [
-        { label: "Open Source WhatsApp Agent", to: "/open-source/whatsapp-ai-sales-agent" },
+        { label: "Digi Marketing", to: "/features/digi-marketing" },
         { label: "Digi CRM", to: "/features/digi-crm" },
         ...CTA_CORE,
       ],

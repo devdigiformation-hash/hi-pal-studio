@@ -49,11 +49,10 @@ import janScreenshot from "@/assets/jan-ai-screenshot.jpg";
 import pocketbaseScreenshot from "@/assets/pocketbase-screenshot.png";
 import tuttleScreenshot from "@/assets/tuttle-screenshot.jpg";
 import upscaylScreenshot from "@/assets/upscayl-screenshot.jpg";
-import whatsappScreenshot from "@/assets/os-digi-whatsapp.png";
 
 const TITLE = "Open Source AI & Software Bundles — Free Downloads | DIGI BIZ OS";
 const DESC =
-  "Explore curated open-source AI agents, local LLM runners, full-stack backends, WhatsApp sales bots, and developer toolkits. 100% free, private, and fully integrated with DIGI BIZ OS.";
+  "Explore curated open-source AI agents, local LLM runners, full-stack backends, and developer toolkits. 100% free, private, and fully integrated with DIGI BIZ OS.";
 
 interface SoftwareItem {
   id: string;
@@ -127,25 +126,6 @@ const SOFTWARE_LIST: SoftwareItem[] = [
     to: "/open-source/hermes-agent",
   },
   {
-    id: "whatsapp-agent",
-    name: "Universal WhatsApp AI Sales Agent v2.0",
-    category: "Sales & Support",
-    tagline: "24/7 Autonomous WhatsApp Sales & Customer Support Bot with Voice & Memory.",
-    license: "Commercial Ready",
-    color: "#25D366",
-    icon: MessageSquare,
-    image: whatsappScreenshot,
-    badge: "Revenue Engine",
-    bundle: "Business & Growth Automation",
-    bullets: [
-      "Instant WhatsApp Web QR pairing via Baileys engine",
-      "Whisper voice note audio transcription & reply",
-      "Markdown RAG product catalogue & local SQLite memory",
-    ],
-    features: ["Voice Note Audio AI", "24/7 Lead Close", "No Per-Message Cost"],
-    to: "/open-source/whatsapp-ai-sales-agent",
-  },
-  {
     id: "jan-ai",
     name: "Jan AI Desktop Studio",
     category: "Local LLM",
@@ -174,7 +154,7 @@ const SOFTWARE_LIST: SoftwareItem[] = [
     icon: FileText,
     image: anythingllmScreenshot,
     badge: "Enterprise RAG",
-    bundle: "Local Privacy & Offline AI",
+    bundle: "Business & Growth Automation",
     bullets: [
       "Built-in LanceDB vector database — no cloud vector fees",
       "Multi-document workspaces for Legal, Finance, & Tech",
@@ -230,12 +210,12 @@ const SOFTWARE_LIST: SoftwareItem[] = [
     color: "#EC4899",
     icon: ImageIcon,
     image: upscaylScreenshot,
-    badge: "Media Studio",
+    badge: "AI Image Engine",
     bundle: "Local Privacy & Offline AI",
     bullets: [
-      "Vulkan-accelerated neural image scaling with zero quality loss",
-      "Multiple AI models for photo, anime, digital art, & textures",
-      "Batch folder processing with no watermarks or limits",
+      "Enhance low-resolution photos, graphics, & designs up to 16x",
+      "GPU-accelerated local batch processing with Vulkan support",
+      "Works 100% offline without uploading images to cloud servers",
     ],
     features: ["16x AI Upscaling", "Vulkan GPU Speed", "No Watermarks"],
     to: "/open-source/upscayl",
@@ -252,12 +232,12 @@ const BUNDLE_GROUPS = [
     ids: ["openhands", "openclaw", "hermes-agent"],
   },
   {
-    title: "Business, Sales & Growth Automation",
+    title: "Business, Backends & Productivity",
     subtitle:
-      "Automate customer acquisition, WhatsApp customer support, databases, and billable hours.",
-    color: "#25D366",
+      "Deploy self-hosted SQLite databases, real-time auth APIs, private document search, and timesheets.",
+    color: "#10B981",
     icon: Megaphone,
-    ids: ["whatsapp-agent", "pocketbase", "tuttle"],
+    ids: ["pocketbase", "anythingllm", "tuttle"],
   },
   {
     title: "Local Privacy & Offline AI Powerhouse",
@@ -678,10 +658,10 @@ function OpenSourcePage() {
                 color: "#8B7CF6",
               },
               {
-                icon: Globe,
-                title: "Multi-Channel Outbox",
-                desc: "Seamlessly dispatch scheduled WhatsApp updates and CRM records with the WhatsApp AI Sales Agent.",
-                color: "#25D366",
+                icon: Sparkles,
+                title: "Offline AI & Upscaling",
+                desc: "Run 100% private local LLMs and AI image upscaling natively on your Windows PC hardware with Jan AI and Upscayl.",
+                color: "#EC4899",
               },
             ].map((item, i) => {
               const ItemIcon = item.icon;

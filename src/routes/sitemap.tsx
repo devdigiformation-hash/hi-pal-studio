@@ -81,10 +81,6 @@ function SiteMapPage() {
       label: "Hermes Autonomous Reasoning & Tool Agent — Free AI Agent for Windows & macOS",
       to: "/open-source/hermes-agent",
     },
-    {
-      label: "Universal WhatsApp AI Sales Agent v2.0 PRO",
-      to: "/open-source/whatsapp-ai-sales-agent",
-    },
     { label: "Jan AI — Free Offline AI for Windows", to: "/open-source/jan-ai" },
     { label: "Tuttle Time Tracker — Free Billable Hours", to: "/open-source/tuttle" },
     { label: "PocketBase Backend — Free Database & Auth Server", to: "/open-source/pocketbase" },

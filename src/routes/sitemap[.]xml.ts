@@ -27,7 +27,6 @@ const STATIC: SitemapEntry[] = [
   { path: "/open-source/openhands", changefreq: "monthly", priority: "0.7" },
   { path: "/open-source/openclaw", changefreq: "monthly", priority: "0.7" },
   { path: "/open-source/hermes-agent", changefreq: "monthly", priority: "0.7" },
-  { path: "/open-source/whatsapp-ai-sales-agent", changefreq: "monthly", priority: "0.7" },
   { path: "/open-source/jan-ai", changefreq: "monthly", priority: "0.7" },
   { path: "/open-source/anythingllm", changefreq: "monthly", priority: "0.7" },
   { path: "/open-source/tuttle", changefreq: "monthly", priority: "0.7" },
