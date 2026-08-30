@@ -48,42 +48,32 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
         </div>
       </SectionWrapper>
 
-      {page.image ? (
-        <SectionWrapper className="!py-0">
-          <figure className="mx-auto max-w-[1000px]">
+      {page.image && page.image.src ? (
+        <SectionWrapper className="!py-4 md:!py-8">
+          <figure className="mx-auto max-w-[1080px]">
             <div className="relative">
-              {/* ambient light behind the subject */}
+              {/* ambient light behind the window */}
               <div
                 aria-hidden
-                className="pointer-events-none absolute inset-0"
+                className="pointer-events-none absolute -inset-6 -z-10 rounded-[36px] opacity-70 blur-3xl"
                 style={{
                   background:
-                    "radial-gradient(ellipse 55% 55% at 50% 45%, rgba(47,224,200,0.16), transparent 70%), radial-gradient(ellipse 45% 45% at 50% 80%, rgba(139,124,246,0.14), transparent 72%)",
-                  filter: "blur(6px)",
+                    "radial-gradient(ellipse 60% 60% at 50% 50%, rgba(47,224,200,0.2), transparent 70%), radial-gradient(ellipse 50% 50% at 50% 70%, rgba(139,124,246,0.18), transparent 70%)",
                 }}
               />
-              <img
-                src={page.image.src}
-                alt={page.image.alt}
-                loading="lazy"
-                decoding="async"
-                className="relative block h-auto w-full"
-                style={{
-                  maskImage:
-                    "linear-gradient(to bottom, #000 0%, #000 62%, rgba(0,0,0,0.75) 82%, rgba(0,0,0,0) 100%)",
-                }}
-              />
-              {/* floor light sweep so the cut dissolves into the page */}
-              <div
-                aria-hidden
-                className="pointer-events-none absolute inset-x-0 bottom-0 h-[38%]"
-                style={{
-                  background:
-                    "radial-gradient(ellipse 60% 100% at 50% 100%, rgba(47,224,200,0.22), rgba(47,224,200,0.05) 55%, transparent 75%)",
-                }}
-              />
+              <div className="overflow-hidden rounded-[18px] border border-white/15 bg-[#05070B] p-1.5 shadow-[0_30px_100px_-20px_rgba(0,0,0,0.85)] md:rounded-[24px] md:p-2.5">
+                <div className="overflow-hidden rounded-[14px] bg-[#020408] md:rounded-[18px]">
+                  <img
+                    src={page.image.src}
+                    alt={page.image.alt}
+                    loading="eager"
+                    decoding="async"
+                    className="block h-auto w-full object-contain"
+                  />
+                </div>
+              </div>
             </div>
-            <figcaption className="mt-3 text-center font-body text-[13px] text-[var(--text-muted)]">
+            <figcaption className="mt-4 text-center font-body text-[13.5px] text-[var(--text-secondary)]">
               {page.image.caption}
             </figcaption>
           </figure>

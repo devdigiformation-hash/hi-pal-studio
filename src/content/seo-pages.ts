@@ -49,8 +49,8 @@ export interface SeoPage {
   accent?: string;
 }
 
-const img = (a: { url: string }, alt: string, caption: string): SeoImage => ({
-  src: a.url,
+const img = (a: string | { url: string }, alt: string, caption: string): SeoImage => ({
+  src: typeof a === "string" ? a : a.url,
   alt,
   caption,
 });
