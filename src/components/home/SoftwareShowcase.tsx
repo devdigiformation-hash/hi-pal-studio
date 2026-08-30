@@ -4,67 +4,67 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GradientText from "@/components/GradientText";
-import digiMain from "@/assets/os-main-dashboard.png.asset.json";
-import digiAiHub from "@/assets/os-digi-ai-hub.png.asset.json";
-import digiCode from "@/assets/os-digi-code.png.asset.json";
-import digiDocs from "@/assets/os-digi-docs.png.asset.json";
-import digiTools from "@/assets/os-digi-tools.png.asset.json";
-import digiCli from "@/assets/os-digi-cli.png.asset.json";
-import digiMcp from "@/assets/os-digi-mcp.png.asset.json";
-import digiSkills from "@/assets/os-skills.png.asset.json";
-import digiDesktopTools from "@/assets/os-desktop-tools.png.asset.json";
+import digiMain from "@/assets/os-main-dashboard.png";
+import digiAiHub from "@/assets/os-digi-ai-hub.png";
+import digiCode from "@/assets/os-digi-code.png";
+import digiDocs from "@/assets/os-digi-docs.png";
+import digiTools from "@/assets/os-digi-tools.png";
+import digiCli from "@/assets/os-digi-cli.png";
+import digiMcp from "@/assets/os-digi-mcp.png";
+import digiSkills from "@/assets/os-skills.png";
+import digiDesktopTools from "@/assets/os-desktop-tools.png";
 
 const SLIDES = [
   {
-    src: digiMain.url,
+    src: digiMain,
     tag: "Live OS",
     title: "Your entire command surface in one place.",
     body: "Screen sharing, live transcript, memory, skills, agents, tools and camera — all orbiting a single voice-first workspace that works while you talk.",
   },
   {
-    src: digiAiHub.url,
+    src: digiAiHub,
     tag: "Digi AI Hub",
     title: "Chat, code, personas and agents in one playground.",
     body: "Agent project assistant, multi-model chat, coding assistant, persona manager, providers and app store — everything unified behind one clean interface.",
   },
   {
-    src: digiCode.url,
+    src: digiCode,
     tag: "Digi Code",
     title: "A coding agent that works inside your projects.",
     body: "Sessions, project and branch context, slash commands and @ references — point it at a repo or folder and it reasons, refactors and ships from one prompt bar.",
   },
   {
-    src: digiDocs.url,
+    src: digiDocs,
     tag: "Digi Docs",
     title: "A full document suite, offline and on your machine.",
     body: "Merge, compare, compress, convert, OCR, redact, sign, timestamp, password-protect and watermark — every document tool one search away.",
   },
   {
-    src: digiTools.url,
+    src: digiTools,
     tag: "Digi Tools",
     title: "100+ offline utilities, always at hand.",
     body: "Crypto, encoding, converters, generators and analysers — searchable, favouritable and fully offline, so nothing you paste ever leaves the machine.",
   },
   {
-    src: digiCli.url,
+    src: digiCli,
     tag: "Digi CLI",
     title: "Connect local runners and toggle them live.",
     body: "Script runners, version control, document parsing, retrieval and web research — each connection on, off or added in a click, with capabilities listed up front.",
   },
   {
-    src: digiMcp.url,
+    src: digiMcp,
     tag: "Digi MCP",
     title: "Multi-MCP ready — 40+ servers, one switchboard.",
     body: "Desktop automation, research, browsing, documentation and private routing servers imported and toggled live, so your agents gain new powers instantly.",
   },
   {
-    src: digiSkills.url,
+    src: digiSkills,
     tag: "Skills",
     title: "500+ skills, every one switchable.",
     body: "API calls, calculation, data analysis, document parsing, file transforms, web research and more — each skill shows its runner, its live status and a one-tap on/off.",
   },
   {
-    src: digiDesktopTools.url,
+    src: digiDesktopTools,
     tag: "Mixed Tools",
     title: "150+ built-in tools that actually drive your machine.",
     body: "Folder analysis, screenshot understanding, bulk file operations and renames, clipboard, brightness, power and application control — real desktop automation, one switch each.",

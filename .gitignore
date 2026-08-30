@@ -22,6 +22,12 @@ dist-ssr
 .netlify/
 .vercel/
 
+# Large binary installers & zips (served via asset CDN/R2)
+src/assets/*.zip
+src/assets/*.exe
+public/__l5e/**/*.zip
+public/__l5e/**/*.exe
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
