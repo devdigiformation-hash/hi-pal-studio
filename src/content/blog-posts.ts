@@ -320,7 +320,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Where DIGI BIZ OS fits",
         paragraphs: [
-          "DIGI BIZ OS sits in the fourth category: an installed Windows application with voice control, agents, 500+ skills, 150+ mixed tools, document and coding workspaces, and scheduled jobs. It is a one-time licence rather than a subscription.",
+          "DIGI BIZ OS sits in the fourth category: an installed Windows application with voice control, agents, 500+ skills, 150+ mixed tools, document and coding workspaces, and automated workflows. It is a one-time licence rather than a subscription.",
           "If you only need hands-free shortcuts, a voice launcher is the lighter and cheaper answer — and that is a perfectly reasonable outcome of this comparison.",
         ],
       },
@@ -446,17 +446,17 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
       },
       {
-        heading: "Schedule, then measure",
+        heading: "Automate, then measure",
         paragraphs: [
-          "Once a workflow runs correctly by hand, put it on a schedule so it happens without anyone remembering. Then check the honest number after a month: hours saved, errors avoided, and whether the review step is still needed every time.",
-          "In DIGI BIZ OS this maps to workflows for the steps and jobs for the timetable, with run history as the evidence.",
+          "Once a workflow runs correctly by hand, configure it to run on demand or trigger automatically so it happens without anyone remembering. Then check the honest number after a month: hours saved, errors avoided, and whether the review step is still needed every time.",
+          "In DIGI BIZ OS this maps to workflows for the multi-step execution, with run history as the evidence.",
         ],
       },
     ],
     links: [
       { label: "AI workflow automation", to: "/ai-workflow-automation" },
       { label: "Business automation", to: "/features/business-automation" },
-      { label: "DigiJobs", to: "/features/digijobs" },
+      { label: "DigiFlow", to: "/features/digiflow" },
     ],
   },
 ];

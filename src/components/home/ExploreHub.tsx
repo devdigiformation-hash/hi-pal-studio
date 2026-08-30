@@ -38,7 +38,7 @@ const HUB = [
   {
     to: "/features",
     title: "All Features",
-    desc: "Every module in the operating system: Digi AI, DigiCode, DigiDocs, DigiFlow, DigiJobs and more.",
+    desc: "Every module in the operating system: Digi AI, Digi CRM, Digi Intelligence, Digi Marketing, Digi WhatsApp, DigiCode, DigiDocs, DigiFlow and more.",
   },
   {
     to: "/compare",

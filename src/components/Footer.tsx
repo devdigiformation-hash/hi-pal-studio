@@ -21,13 +21,16 @@ const OVERVIEW = [
 
 const FEATURES = [
   { label: "Digi AI", to: "/features/digi-ai" },
+  { label: "Digi CRM", to: "/features/digi-crm" },
+  { label: "Digi Intelligence", to: "/features/digi-intelligence" },
+  { label: "Digi Marketing", to: "/features/digi-marketing" },
+  { label: "Digi WhatsApp", to: "/features/digi-whatsapp" },
   { label: "DigiCode", to: "/features/digicode" },
   { label: "DigiDocs", to: "/features/digidocs" },
   { label: "DigiTools", to: "/features/digitools" },
   { label: "DigiCLI", to: "/features/digicli" },
   { label: "DigiMCP", to: "/features/digimcp" },
   { label: "DigiFlow", to: "/features/digiflow" },
-  { label: "DigiJobs", to: "/features/digijobs" },
   { label: "DigiTasks", to: "/features/digitasks" },
 ] as const;
 

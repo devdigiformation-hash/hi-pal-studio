@@ -9,7 +9,7 @@ import { buildMeta, breadcrumbLd, softwareLd } from "@/lib/seo";
 
 const TITLE = "All Features — DIGI BIZ OS AI Business Operating System";
 const DESC =
-  "Every module of DIGI BIZ OS: Digi AI, DigiCode, DigiDocs, DigiTools, DigiCLI, DigiMCP, DigiFlow, DigiJobs, DigiTasks, plus voice control, agents, skills and desktop automation.";
+  "Every module of DIGI BIZ OS: Digi AI, Digi CRM, Digi Intelligence, Digi Marketing, Digi WhatsApp, DigiCode, DigiDocs, DigiTools, DigiCLI, DigiMCP, DigiFlow, DigiTasks, plus voice control, agents, skills and desktop automation.";
 
 export const Route = createFileRoute("/features/")({
   head: () => {
@@ -108,7 +108,7 @@ function FeaturesHub() {
           </h1>
           <p className="reveal-item delay-2 mx-auto mt-6 max-w-[760px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[17px]">
             DIGI BIZ OS is a JARVIS-style AI business operating system for Windows. Voice, agents,
-            500+ skills, 150+ mixed tools, coding, documents, workflows and scheduled jobs — all in
+            500+ skills, 150+ mixed tools, coding, documents, workflows and tasks — all in
             one desktop environment. Explore every module below.
           </p>
         </div>

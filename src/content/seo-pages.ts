@@ -151,7 +151,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
       {
         q: "Can I add my own skills?",
-        a: "Yes. Custom skills, memories, tools, agents, workflows and scheduled jobs are all created inside the app.",
+        a: "Yes. Custom skills, memories, tools, agents, workflows and tasks are all created inside the app.",
       },
     ],
     links: [
@@ -178,17 +178,17 @@ export const SEO_PAGES: SeoPage[] = [
     h1Gradient: "That Can Actually Execute.",
     metaTitle: "AI Business Operating System — Agents, Workflows & Automation | DIGI BIZ OS",
     metaDescription:
-      "DIGI BIZ OS is an AI business operating system: voice control, AI agents, 500+ skills, 150+ tools, workflows, scheduled jobs and desktop automation in one Windows app.",
+      "DIGI BIZ OS is an AI business operating system: voice control, AI agents, 500+ skills, 150+ tools, workflows, tasks and desktop automation in one Windows app.",
     intro:
-      "An AI business operating system is the layer where your models, agents, tools, data and business processes live together. Instead of ten disconnected AI tabs, DIGI BIZ OS gives your business one environment that can hold context, run workflows, schedule jobs and complete work on your own machine.",
+      "An AI business operating system is the layer where your models, agents, tools, data and business processes live together. Instead of ten disconnected AI tabs, DIGI BIZ OS gives your business one environment that can hold context, run workflows and complete work on your own machine.",
     answers: [
       {
         q: "What is an AI business operating system?",
-        a: "It is a single environment that combines AI models, agents, skills, tools, memory, workflows and scheduling so a business can delegate real operational work to AI instead of only chatting with it.",
+        a: "It is a single environment that combines AI models, agents, skills, tools, memory and workflows so a business can delegate real operational work to AI instead of only chatting with it.",
       },
       {
         q: "How is it different from a chatbot?",
-        a: "A chatbot returns text. An AI business OS selects agents, calls tools, touches files and applications, runs scheduled jobs and produces finished output.",
+        a: "A chatbot returns text. An AI business OS selects agents, calls tools, touches files and applications, runs workflows and produces finished output.",
       },
       {
         q: "Who is it for?",
@@ -211,7 +211,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
       {
         title: "Automation layer",
-        body: "Workflows, scheduled jobs and background tasks that run without you.",
+        body: "Workflows, background tasks and automations that run without you.",
       },
       {
         title: "Computer layer",
@@ -229,12 +229,12 @@ export const SEO_PAGES: SeoPage[] = [
           "DigiTools — 150+ mixed and offline utilities available to you and to agents.",
           "DigiCLI — terminal and command execution.",
           "DigiMCP — connected services and local runners.",
-          "DigiFlow, DigiJobs, DigiTasks — workflows, scheduled jobs and task execution.",
+          "DigiFlow, DigiTasks — workflows and task execution.",
         ],
       },
       {
         heading: "Operations you can hand over",
-        body: "Because the OS can execute, the unit of delegation becomes a process, not a prompt. Typical handovers include document intake and conversion, recurring reporting, research digests, repository maintenance, file organisation, admin batches and scheduled business checks.",
+        body: "Because the OS can execute, the unit of delegation becomes a process, not a prompt. Typical handovers include document intake and conversion, recurring reporting, research digests, repository maintenance, file organisation, admin batches and business workflow checks.",
       },
       {
         heading: "One licence, no per-seat AI sprawl",
@@ -248,7 +248,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
       {
         q: "Can it run unattended?",
-        a: "Yes — workflows and scheduled jobs run hourly, daily or weekly without supervision.",
+        a: "Yes — workflows and background tasks run automatically without supervision.",
       },
       {
         q: "Can we brand it for our company?",
@@ -259,7 +259,6 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "AI business assistant", to: "/ai-business-assistant" },
       { label: "AI workflow automation", to: "/ai-workflow-automation" },
       { label: "AI agents platform", to: "/agents" },
-      { label: "DigiJobs — scheduled jobs", to: "/features/digijobs" },
       { label: "DigiTasks — task automation", to: "/features/digitasks" },
       { label: "JARVIS-style assistant", to: "/jarvis-ai" },
       ...CTA_CORE,
@@ -279,9 +278,9 @@ export const SEO_PAGES: SeoPage[] = [
     h1Gradient: "That Finishes the Job.",
     metaTitle: "AI Business Assistant for Founders, Agencies & Teams | DIGI BIZ OS",
     metaDescription:
-      "An AI business assistant that executes: voice briefs, agents, skills, tools, documents, reporting and scheduled jobs — running on your own Windows machine.",
+      "An AI business assistant that executes: voice briefs, agents, skills, tools, documents, reporting and automated workflows — running on your own Windows machine.",
     intro:
-      "Most AI assistants stop at advice. A business assistant has to produce output — the report, the converted document, the organised folder, the scheduled check, the drafted response. DIGI BIZ OS is built around that expectation.",
+      "Most AI assistants stop at advice. A business assistant has to produce output — the report, the converted document, the organised folder, the automated check, the drafted response. DIGI BIZ OS is built around that expectation.",
     answers: [
       {
         q: "What does an AI business assistant do?",
@@ -302,7 +301,7 @@ export const SEO_PAGES: SeoPage[] = [
         title: "Research",
         body: "Browser-based research agents that collect and summarise findings.",
       },
-      { title: "Reporting", body: "Recurring reports produced on a schedule with DigiJobs." },
+      { title: "Reporting", body: "Comprehensive reports produced through automated workflows." },
       {
         title: "Admin batches",
         body: "File renaming, sorting, extraction and clean-up across folders.",
@@ -397,7 +396,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
       {
         heading: "Desktop automation without scripting",
-        body: "Recurring desktop routines become workflows and scheduled jobs. Anything you repeat weekly can be handed over once and then simply monitored.",
+        body: "Recurring desktop routines become automated workflows. Anything you repeat weekly can be handed over once and then simply monitored.",
       },
     ],
     faq: [
@@ -509,7 +508,7 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Documents", body: "PDF and document processing built in." },
       { title: "Terminal", body: "Command execution when a task needs it." },
       { title: "Browser", body: "Web research handled by an agent." },
-      { title: "Automation", body: "Workflows and scheduled jobs for anything recurring." },
+      { title: "Automation", body: "Automated workflows and tasks for anything recurring." },
     ],
     sections: [
       {
@@ -696,21 +695,21 @@ export const SEO_PAGES: SeoPage[] = [
     eyebrow: "Automation",
     h1: "AI Desktop Automation",
     h1Gradient: "Repeat Nothing Twice.",
-    metaTitle: "AI Desktop Automation for Windows — Workflows & Scheduled Jobs | DIGI BIZ OS",
+    metaTitle: "AI Desktop Automation for Windows — Workflows & Agent Automation | DIGI BIZ OS",
     metaDescription:
-      "Automate desktop work with AI: build workflows, schedule jobs hourly, daily or weekly, and let agents handle files, documents and reporting on your PC.",
+      "Automate desktop work with AI: build workflows, trigger agent tasks, and let agents handle files, documents and reporting on your PC.",
     intro:
-      "Desktop automation used to mean brittle scripts. DIGI BIZ OS lets you describe the routine once, save it as a workflow or skill, and then run it by voice or on a schedule.",
+      "Desktop automation used to mean brittle scripts. DIGI BIZ OS lets you describe the routine once, save it as a workflow or skill, and then run it by voice or on demand.",
     answers: [
       {
         q: "What is AI desktop automation?",
-        a: "Using AI agents and tools to perform repeated computer routines automatically, including on a schedule, without writing scripts.",
+        a: "Using AI agents and tools to perform repeated computer routines automatically without writing scripts.",
       },
     ],
     capabilities: [
       { title: "Workflow builder", body: "Chain steps into a reusable automation." },
-      { title: "Cron scheduling", body: "Hourly, daily or weekly execution." },
-      { title: "Background jobs", body: "Work continues while you do something else." },
+      { title: "Event triggers", body: "Voice, hotkeys and event-driven execution." },
+      { title: "Background tasks", body: "Work continues while you do something else." },
       { title: "File pipelines", body: "Batch operations across folders." },
       { title: "Document pipelines", body: "Convert, OCR, compress and package." },
       { title: "Notifications", body: "Results reported back when a run completes." },
@@ -718,19 +717,19 @@ export const SEO_PAGES: SeoPage[] = [
     sections: [
       {
         heading: "Start with one routine",
-        body: "Pick the routine you repeat most often this month. Record it as a workflow, schedule it, and measure the hours it returns before automating the next one.",
+        body: "Pick the routine you repeat most often this month. Record it as a workflow, automate it, and measure the hours it returns before automating the next one.",
       },
     ],
     faq: [{ q: "Do I need to write scripts?", a: "No. Workflows are created inside the app." }],
     links: [
       { label: "AI workflow automation", to: "/ai-workflow-automation" },
-      { label: "DigiJobs", to: "/features/digijobs" },
+      { label: "DigiFlow", to: "/features/digiflow" },
       { label: "DigiTasks", to: "/features/digitasks" },
       ...CTA_CORE,
     ],
     image: img(
       osLiveTracking,
-      "Scheduled AI automation running inside DIGI BIZ OS",
+      "AI automation running inside DIGI BIZ OS",
       "Automations running in the background with full run history.",
     ),
     accent: "var(--cyan)",
@@ -804,7 +803,7 @@ export const SEO_PAGES: SeoPage[] = [
     h1Gradient: "Processes, Not Prompts.",
     metaTitle: "AI Business Automation Software for Small Business | DIGI BIZ OS",
     metaDescription:
-      "AI business automation for founders and small teams: automate documents, reporting, research, admin and recurring operations with agents, skills and scheduled jobs.",
+      "AI business automation for founders and small teams: automate documents, reporting, research, admin and recurring operations with agents, skills and workflows.",
     intro:
       "Business automation pays off where work is repeated, rule-based and time-consuming. DIGI BIZ OS targets exactly those processes with AI that can execute them end to end.",
     answers: [
@@ -815,7 +814,7 @@ export const SEO_PAGES: SeoPage[] = [
     ],
     capabilities: [
       { title: "Document automation", body: "Convert, OCR, compress, sign and redact at volume." },
-      { title: "Reporting automation", body: "Scheduled summaries produced without prompting." },
+      { title: "Reporting automation", body: "Automated summaries produced without prompting." },
       { title: "Research automation", body: "Browser agents that gather and structure findings." },
       { title: "Admin automation", body: "Bulk file and record operations." },
       { title: "Technical automation", body: "Code, terminal and repository routines." },
@@ -1708,7 +1707,6 @@ export const SEO_PAGES: SeoPage[] = [
     faq: [{ q: "Can flows run unattended?", a: "Yes, scheduled flows run in the background." }],
     links: [
       { label: "AI workflow automation", to: "/ai-workflow-automation" },
-      { label: "DigiJobs", to: "/features/digijobs" },
       { label: "DigiTasks", to: "/features/digitasks" },
       ...CTA_CORE,
     ],
@@ -1718,55 +1716,6 @@ export const SEO_PAGES: SeoPage[] = [
       "A DigiFlow automation chaining agents and tools.",
     ),
     accent: "#8B5CF6",
-  },
-  {
-    path: "/features/digijobs",
-    group: "feature",
-    eyebrow: "DigiJobs",
-    h1: "DigiJobs —",
-    h1Gradient: "Scheduled AI Jobs.",
-    metaTitle: "DigiJobs — Scheduled AI Jobs & Cron Automation | DIGI BIZ OS",
-    metaDescription:
-      "DigiJobs runs scheduled AI jobs hourly, daily or weekly inside DIGI BIZ OS — recurring reports, document batches, research digests and maintenance routines.",
-    intro: "DigiJobs is the scheduler. It is what makes the OS work while you are not at the desk.",
-    answers: [
-      {
-        q: "What is DigiJobs?",
-        a: "The scheduling module in DIGI BIZ OS for recurring, unattended AI jobs.",
-      },
-    ],
-    capabilities: [
-      { title: "Cron scheduling", body: "Hourly, daily or weekly." },
-      { title: "Unattended runs", body: "No supervision required." },
-      { title: "Any workflow", body: "Schedule a flow, skill or agent task." },
-      { title: "Monitoring", body: "See job status and history." },
-      { title: "Reporting", body: "Results delivered when the job ends." },
-      { title: "Retries", body: "Failed runs are visible and re-runnable." },
-    ],
-    sections: [
-      {
-        heading: "Recurring work is the best ROI",
-        body: "Anything you do weekly is a candidate. A single scheduled reporting job usually returns more hours than a dozen one-off prompts.",
-      },
-    ],
-    faq: [
-      {
-        q: "Do jobs need my PC on?",
-        a: "Jobs run on your machine, so it must be running for scheduled execution.",
-      },
-    ],
-    links: [
-      { label: "DigiFlow", to: "/features/digiflow" },
-      { label: "DigiTasks", to: "/features/digitasks" },
-      { label: "AI desktop automation", to: "/ai-desktop-automation" },
-      ...CTA_CORE,
-    ],
-    image: img(
-      osLiveTracking,
-      "DigiJobs scheduled job monitoring in DIGI BIZ OS",
-      "Scheduled jobs with live status and history.",
-    ),
-    accent: "#F97316",
   },
   {
     path: "/features/digitasks",
@@ -1800,7 +1749,7 @@ export const SEO_PAGES: SeoPage[] = [
       { q: "Can I see past runs?", a: "Yes — task history and results are retained for review." },
     ],
     links: [
-      { label: "DigiJobs", to: "/features/digijobs" },
+      { label: "DigiCode", to: "/features/digicode" },
       { label: "DigiFlow", to: "/features/digiflow" },
       { label: "Multi-agent AI", to: "/multi-agent-ai" },
       ...CTA_CORE,
@@ -2169,7 +2118,7 @@ export const SEO_PAGES: SeoPage[] = [
     ],
     capabilities: [
       { title: "Document ops", body: "DigiDocs pipelines at volume." },
-      { title: "Reporting ops", body: "DigiJobs scheduled summaries." },
+      { title: "Reporting ops", body: "DigiFlow workflow summaries." },
       { title: "Research ops", body: "Browser agents on a timetable." },
       { title: "Admin ops", body: "Bulk file and record work." },
       { title: "Technical ops", body: "DigiCode and DigiCLI routines." },
@@ -2341,7 +2290,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
       {
         q: "Can it run at startup?",
-        a: "Yes, it can stay resident so scheduled jobs and voice control are always available.",
+        a: "Yes, it can stay resident so background workflows and voice control are always available.",
       },
     ],
     links: [

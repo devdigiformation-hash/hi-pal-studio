@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Clock, GitBranch, Repeat, Workflow } from "lucide-react";
+import { GitBranch, Repeat, Sparkles, Workflow, Zap } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
@@ -7,17 +7,17 @@ import GradientText from "@/components/GradientText";
 import MonoBadge from "@/components/MonoBadge";
 
 const FLOW = [
-  { label: "Trigger", detail: "Voice, schedule or event", color: "var(--cyan)" },
+  { label: "Trigger", detail: "Voice, hotkey or system event", color: "var(--cyan)" },
   { label: "Agents", detail: "Work split across multi agents", color: "var(--purple)" },
   { label: "Tools", detail: "150+ built-in mixed tools fire", color: "var(--amber)" },
   { label: "Delivered", detail: "Report, message or file", color: "#3DDC84" },
 ];
 
-const SCHEDULES = [
-  { time: "07:00 · Daily", task: "Morning business briefing compiled and delivered" },
-  { time: "Every 15 min", task: "New enquiries triaged, tagged and answered" },
-  { time: "17:30 · Weekdays", task: "Follow-ups sent to every open lead" },
-  { time: "Mon 09:00", task: "Weekly performance report generated" },
+const AUTOMATIONS = [
+  { trigger: "Voice Command", task: "Morning business briefing compiled and delivered" },
+  { trigger: "New Webhook Event", task: "New enquiries triaged, tagged and answered" },
+  { trigger: "Sales Pipeline Action", task: "Follow-ups sent to every open lead" },
+  { trigger: "System Quick-Key", task: "Weekly performance report generated" },
 ];
 
 export default function WorkflowsSection() {
@@ -25,7 +25,7 @@ export default function WorkflowsSection() {
     <SectionWrapper id="workflows" className="bg-[var(--bg-surface)]">
       <div className="mx-auto max-w-[1280px]">
         <div className="text-center">
-          <EyebrowLabel text="Workflows & Scheduling" color="var(--purple)" />
+          <EyebrowLabel text="Workflows & Automation" color="var(--purple)" />
           <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
             Automate the Boring.{" "}
             <GradientText from="#8B7CF6" to="#2FE0C8">
@@ -34,7 +34,7 @@ export default function WorkflowsSection() {
           </h2>
           <p className="reveal-item delay-2 mx-auto mt-5 max-w-[740px] font-body text-[16px] leading-[1.8] text-[var(--text-secondary)] md:text-[17px]">
             Turn any repeatable part of your business into an automated workflow — created in
-            minutes, scheduled on a timer, and executed by your agents while you sleep.
+            minutes, triggered by voice or events, and executed by your agents in the background.
           </p>
         </div>
 
@@ -91,20 +91,20 @@ export default function WorkflowsSection() {
 
           <GlassCard glowColor="var(--amber)" className="reveal-item delay-3 p-8">
             <div className="flex items-center gap-3">
-              <Clock size={20} className="text-[var(--amber)]" />
+              <Zap size={20} className="text-[var(--amber)]" />
               <span className="font-display text-[18px] font-bold text-[var(--text-primary)]">
-                Scheduled Jobs (Cron)
+                Autonomous Triggers & Actions
               </span>
             </div>
             <p className="mt-3 font-body text-[14px] leading-[1.8] text-[var(--text-secondary)]">
-              Set it once and DIGI BIZ OS keeps the business moving on schedule — hourly, daily,
-              weekly or on your own custom timing.
+              Trigger multi-step agent actions through voice commands, system hotkeys, inbound
+              webhooks or contextual rules.
             </p>
 
             <div className="mt-6 space-y-3">
-              {SCHEDULES.map((s, i) => (
+              {AUTOMATIONS.map((s, i) => (
                 <motion.div
-                  key={s.time}
+                  key={s.trigger}
                   initial={{ opacity: 0, y: 14 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.4 }}
@@ -112,7 +112,7 @@ export default function WorkflowsSection() {
                   className="rounded-xl border border-[var(--border-glass)] bg-[var(--bg-glass-light)] px-4 py-3"
                 >
                   <div className="font-code text-[11px] uppercase tracking-[0.12em] text-[var(--amber)]">
-                    {s.time}
+                    {s.trigger}
                   </div>
                   <div className="mt-1 font-body text-[13px] text-[var(--text-secondary)]">
                     {s.task}

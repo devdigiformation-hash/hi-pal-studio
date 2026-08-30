@@ -46,7 +46,6 @@ const MODULES = [
     to: "/features/digiflow",
     body: "Workflows that chain steps into repeatable processes.",
   },
-  { name: "DigiJobs", to: "/features/digijobs", body: "Scheduled jobs that run on a timetable." },
   {
     name: "DigiTasks",
     to: "/features/digitasks",

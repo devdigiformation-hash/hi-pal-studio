@@ -40,7 +40,7 @@ export const COMPARE_PAGES: ComparePage[] = [
     summary: {
       forDigiBiz: [
         "You want a broad business operating system, not only an assistant.",
-        "You need multi-agent runs, workflows and scheduled jobs.",
+        "You need multi-agent runs, workflows and automated tasks.",
         "You want document, coding and desktop workspaces in one product.",
         "You want a one-time licence with source code and custom build options.",
       ],
@@ -68,7 +68,7 @@ export const COMPARE_PAGES: ComparePage[] = [
       },
       {
         aspect: "Automation",
-        digibiz: "Workflows plus cron-style scheduled jobs",
+        digibiz: "Workflows plus trigger-based event automation",
         other: "Varies by release",
       },
       {
@@ -122,11 +122,11 @@ export const COMPARE_PAGES: ComparePage[] = [
     metaDescription:
       "An honest comparison of DIGI BIZ OS and ChatGPT: where a chat assistant is the better tool, and where a desktop AI that runs work on your PC wins.",
     intro:
-      "These two products solve different halves of the same problem. ChatGPT is an outstanding general assistant you talk to in a browser or app. DIGI BIZ OS is a Windows application that carries out work on your own machine — files, documents, terminal, browser, scheduled jobs and multi-agent runs. Many people use both.",
+      "These two products solve different halves of the same problem. ChatGPT is an outstanding general assistant you talk to in a browser or app. DIGI BIZ OS is a Windows application that carries out work on your own machine — files, documents, terminal, browser, automated workflows and multi-agent runs. Many people use both.",
     summary: {
       forDigiBiz: [
         "You want work executed on your PC, not described to you.",
-        "You need scheduled jobs, workflows and repeatable operations.",
+        "You need automated workflows, tasks and repeatable operations.",
         "You want local desktop control, file handling and document pipelines.",
         "You prefer a one-time licence over a monthly subscription.",
       ],
