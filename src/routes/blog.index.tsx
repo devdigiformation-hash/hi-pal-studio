@@ -11,6 +11,8 @@ const TITLE = "Blog — AI Agents, Business Automation & JARVIS-Style AI | DIGI 
 const DESC =
   "Practical guides on JARVIS-style AI assistants, AI business operating systems, agents, voice control, computer-use AI and coding agents.";
 
+import { useState } from "react";
+
 export const Route = createFileRoute("/blog/")({
   head: () => {
     const { meta, links } = buildMeta({ path: "/blog", title: TITLE, description: DESC });
@@ -34,27 +36,64 @@ export const Route = createFileRoute("/blog/")({
 });
 
 function BlogIndex() {
+  const [selectedCluster, setSelectedCluster] = useState<string>("All");
+
+  const clusters = [
+    "All",
+    "Software Comparisons",
+    "Business OS",
+    "CRM",
+    "JARVIS",
+    "AI Models",
+    "Agents",
+    "Voice",
+  ];
+
+  const filteredPosts =
+    selectedCluster === "All"
+      ? BLOG_POSTS
+      : BLOG_POSTS.filter((p) => p.cluster === selectedCluster);
+
   return (
     <main className="min-h-screen pt-[60px] md:pt-[72px]">
       <SectionWrapper>
         <div className="mx-auto max-w-[900px] text-center">
-          <EyebrowLabel text="Content Hub" color="var(--purple)" />
+          <EyebrowLabel text="Knowledge & Comparisons" color="var(--purple)" />
           <h1 className="reveal-item delay-1 mt-5 font-display text-[34px] font-extrabold leading-[1.08] tracking-[-0.035em] text-[var(--text-primary)] md:text-[54px]">
-            Guides to{" "}
+            Guides, Deep Dives &{" "}
             <GradientText from="#8B7CF6" to="#2FE0C8">
-              AI That Does the Work.
+              Software Comparisons.
             </GradientText>
           </h1>
           <p className="reveal-item delay-2 mx-auto mt-6 max-w-[720px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[17px]">
-            Clear, practical writing on JARVIS-style assistants, AI business operating systems,
-            agents, workflows, voice control and computer-use AI.
+            Practical guides on Business Operating Systems, CRM automation, software comparisons,
+            JARVIS voice AI, open-source tools, and local AI execution.
           </p>
+
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
+            {clusters.map((c) => {
+              const active = selectedCluster === c;
+              return (
+                <button
+                  key={c}
+                  onClick={() => setSelectedCluster(c)}
+                  className={`rounded-full px-4 py-1.5 font-mono text-[12px] font-medium transition-all ${
+                    active
+                      ? "bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 shadow-sm"
+                      : "bg-white/5 text-[var(--text-secondary)] border border-white/10 hover:border-white/20 hover:text-white"
+                  }`}
+                >
+                  {c}
+                </button>
+              );
+            })}
+          </div>
         </div>
       </SectionWrapper>
 
       <SectionWrapper className="bg-[var(--bg-surface)]">
         <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {BLOG_POSTS.map((post) => (
+          {filteredPosts.map((post) => (
             <Link
               key={post.slug}
               to="/blog/$slug"

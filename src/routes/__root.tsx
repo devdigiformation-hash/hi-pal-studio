@@ -163,7 +163,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             ["Open Source Software Suite", "/open-source"],
             ["One-Time Lifetime Pricing", "/pricing"],
             ["Download for Windows", "/download"],
-            ["Software Comparisons", "/compare"],
             ["Multi-Agent Platform", "/agents"],
             ["Desktop Automation OS", "/desktop-os"],
             ["Blog & Knowledge Hub", "/blog"],

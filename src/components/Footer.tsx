@@ -16,7 +16,6 @@ const OVERVIEW = [
   { label: "Open Source Suite", to: "/open-source" },
   { label: "One-Time Pricing", to: "/pricing" },
   { label: "Download for Windows", to: "/download" },
-  { label: "Software Comparisons", to: "/compare" },
   { label: "Blog & Guides", to: "/blog" },
   { label: "FAQ", to: "/faq" },
 ] as const;

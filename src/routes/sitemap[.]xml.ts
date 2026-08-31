@@ -22,8 +22,7 @@ const STATIC: SitemapEntry[] = [
   { path: "/agents", changefreq: "monthly", priority: "0.8" },
   { path: "/integrations", changefreq: "monthly", priority: "0.7" },
   { path: "/pricing", changefreq: "monthly", priority: "0.9" },
-  { path: "/blog", changefreq: "weekly", priority: "0.7" },
-  { path: "/compare", changefreq: "monthly", priority: "0.8" },
+  { path: "/blog", changefreq: "weekly", priority: "0.8" },
   { path: "/download", changefreq: "monthly", priority: "0.9" },
   { path: "/open-source", changefreq: "monthly", priority: "0.7" },
   { path: "/open-source/openhands", changefreq: "monthly", priority: "0.7" },
@@ -74,15 +73,10 @@ export const Route = createFileRoute("/sitemap.xml")({
             changefreq: "monthly" as const,
             priority: "0.8",
           })),
-          ...COMPARE_PAGES.map((p) => ({
-            path: `/compare/${p.slug}`,
-            changefreq: "monthly" as const,
-            priority: "0.7",
-          })),
           ...BLOG_POSTS.map((p) => ({
             path: `/blog/${p.slug}`,
             changefreq: "monthly" as const,
-            priority: "0.6",
+            priority: "0.7",
           })),
         ];
 

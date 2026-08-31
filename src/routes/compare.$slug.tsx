@@ -1,41 +1,10 @@
-import { createFileRoute, notFound } from "@tanstack/react-router";
-import CompareLanding from "@/components/seo/CompareLanding";
-import { COMPARE_BY_SLUG } from "@/content/compare-pages";
-import { buildMeta, breadcrumbLd, faqLd } from "@/lib/seo";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/compare/$slug")({
   beforeLoad: ({ params }) => {
-    if (!COMPARE_BY_SLUG[params.slug]) throw notFound();
+    throw redirect({ to: "/blog/$slug", params: { slug: params.slug } });
   },
-  head: ({ params }) => {
-    const page = COMPARE_BY_SLUG[params.slug];
-    if (!page) return { meta: [{ title: "Not found" }, { name: "robots", content: "noindex" }] };
-    const path = `/compare/${page.slug}`;
-    const { meta, links } = buildMeta({
-      path,
-      title: page.metaTitle,
-      description: page.metaDescription,
-      type: "article",
-    });
-    return {
-      meta,
-      links,
-      scripts: [
-        {
-          type: "application/ld+json",
-          children: JSON.stringify(
-            breadcrumbLd([
-              { name: "Home", path: "/" },
-              { name: "Comparisons", path: "/compare" },
-              { name: `DIGI BIZ OS vs ${page.competitor}`, path },
-            ]),
-          ),
-        },
-        { type: "application/ld+json", children: JSON.stringify(faqLd(page.faq)) },
-      ],
-    };
-  },
-  component: ComparePageRoute,
+  component: () => null,
 });
 
 function ComparePageRoute() {

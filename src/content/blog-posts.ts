@@ -759,6 +759,299 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Download DIGI BIZ OS", to: "/download" },
     ],
   },
+  {
+    slug: "digi-biz-os-vs-stonic-ai",
+    title: "DIGI BIZ OS vs Stonic AI: Two AI Desktop Approaches Compared",
+    metaTitle: "DIGI BIZ OS vs Stonic AI — AI Desktop Assistants Compared | DIGI BIZ OS",
+    description:
+      "A fair look at DIGI BIZ OS and Stonic AI: both are AI desktop assistants for Windows. Compare scope, agents, automation, licensing and who each one suits best.",
+    cluster: "Software Comparisons",
+    date: "2026-08-26",
+    readingTime: "7 min read",
+    body: [
+      {
+        heading: "Two Desktop AI Philosophies",
+        paragraphs: [
+          "Both products sit in the same emerging category: AI assistants that live on your desktop rather than in a browser tab. Moving AI from a browser to the desktop allows interacting with files, projects, and native system processes.",
+        ],
+      },
+      {
+        heading: "Where DIGI BIZ OS is deliberately different",
+        paragraphs: [
+          "DIGI BIZ OS is built as an operating layer for a business, not only a personal assistant: native CRM pipelines, WhatsApp sales bots, scheduled cron workflows, document cryptography, and an offline utility suite with a one-time £50 lifetime licence.",
+        ],
+        bullets: [
+          "DIGI BIZ OS: Complete Business OS with CRM, WhatsApp, Docs, and Code workspaces.",
+          "Stonic AI: Dedicated AI desktop assistant interface.",
+          "Evaluation Tip: Run the same multi-step business workflow through each before deciding.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Digi CRM Module", to: "/modules/crm" },
+      { label: "JARVIS Voice Control", to: "/voice-ai" },
+      { label: "Pricing & Lifetime Licence", to: "/pricing" },
+    ],
+  },
+  {
+    slug: "digi-biz-os-vs-chatgpt",
+    title: "DIGI BIZ OS vs ChatGPT: Desktop Execution vs Chat Assistance",
+    metaTitle: "DIGI BIZ OS vs ChatGPT — Desktop Execution vs Chat | DIGI BIZ OS",
+    description:
+      "An honest comparison of DIGI BIZ OS and ChatGPT: where a chat assistant is the better tool, and where a desktop AI that runs work on your PC wins.",
+    cluster: "Software Comparisons",
+    date: "2026-08-25",
+    readingTime: "8 min read",
+    body: [
+      {
+        heading: "The Honest Difference: Conversation vs Execution",
+        paragraphs: [
+          "A chat assistant is judged on the quality of its text answer in a browser window. A desktop AI operating system is judged on whether the actual computer job is finished.",
+          "If your bottleneck is brainstorming or open-ended Q&A, a chat assistant is excellent. If your bottleneck is repetitive operational work on files, local databases, WhatsApp leads, and document processing, an execution layer is required.",
+        ],
+      },
+      {
+        heading: "Comparison Summary",
+        paragraphs: [
+          "Many businesses use both: drafting high-level strategy in ChatGPT, and using DIGI BIZ OS to execute, file, automate, and manage customer pipelines on Windows.",
+        ],
+        bullets: [
+          "Execution: DIGI BIZ OS operates native Windows files, terminal, and SQLite CRM.",
+          "Pricing: DIGI BIZ OS is a £50 one-time licence ($0 monthly subscriptions).",
+          "Privacy: 100% local processing option with air-gapped data sovereignty.",
+        ],
+      },
+    ],
+    links: [
+      { label: "All DIGI BIZ OS Features", to: "/features" },
+      { label: "Enterprise Modules", to: "/modules" },
+      { label: "Download for Windows", to: "/download" },
+    ],
+  },
+  {
+    slug: "digi-biz-os-vs-copilot",
+    title: "DIGI BIZ OS vs Microsoft Copilot: Open Automation vs Office Suite Assistance",
+    metaTitle: "DIGI BIZ OS vs Microsoft Copilot — Which AI Assistant for Windows | DIGI BIZ OS",
+    description:
+      "Compare DIGI BIZ OS and Microsoft Copilot for Windows: suite-integrated assistance versus a voice-first AI business operating system with agents, jobs and desktop control.",
+    cluster: "Software Comparisons",
+    date: "2026-08-24",
+    readingTime: "8 min read",
+    body: [
+      {
+        heading: "Suite Integration vs Open Desktop Automation",
+        paragraphs: [
+          "Microsoft Copilot is deeply integrated with Microsoft 365 apps (Word, Excel, Outlook). DIGI BIZ OS is an independent AI business operating system that installs on Windows to execute multi-step work with custom agents, skills, local databases, and cron schedules.",
+        ],
+        bullets: [
+          "Ecosystem: DIGI BIZ OS is vendor-neutral and works with any file, database, or API.",
+          "CRM & Communication: Native SQLite CRM and automated WhatsApp sales agents.",
+          "Licensing: One-time lifetime access vs per-user monthly SaaS recurring billing.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Digi CRM Module", to: "/modules/crm" },
+      { label: "Digi Flow Workflows", to: "/modules/workflows" },
+      { label: "Pricing Overview", to: "/pricing" },
+    ],
+  },
+  {
+    slug: "digi-biz-os-vs-claude",
+    title: "DIGI BIZ OS vs Claude: Model Assistant vs AI Operating System",
+    metaTitle: "DIGI BIZ OS vs Claude — Model Assistant vs AI Operating System | DIGI BIZ OS",
+    description:
+      "Claude is a strong reasoning assistant. DIGI BIZ OS is the operating layer around models: voice, agents, skills, tools, documents, desktop control and scheduling on Windows.",
+    cluster: "Software Comparisons",
+    date: "2026-08-23",
+    readingTime: "6 min read",
+    body: [
+      {
+        heading: "Comparing a Model with an Operating System",
+        paragraphs: [
+          "Comparing DIGI BIZ OS with Claude is comparing a product category with a model interface. Claude is used for reasoning, analysis and long-form work. DIGI BIZ OS is the environment that plans, routes and executes work on your machine — and can even call Claude via API when frontier reasoning is required.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Digi Code Workspace", to: "/modules/code" },
+      { label: "AI Models Universe", to: "/models" },
+    ],
+  },
+  {
+    slug: "digi-biz-os-vs-openhands",
+    title: "DIGI BIZ OS vs OpenHands: Complete Business OS vs Autonomous Developer Agent",
+    metaTitle: "DIGI BIZ OS vs OpenHands — AI OS vs Autonomous Developer | DIGI BIZ OS",
+    description:
+      "Compare DIGI BIZ OS and OpenHands (formerly OpenDevin): a complete business OS with voice and CRM versus a dedicated software engineering agent.",
+    cluster: "Software Comparisons",
+    date: "2026-08-22",
+    readingTime: "7 min read",
+    body: [
+      {
+        heading: "Dedicated Coding vs Full Business Operations",
+        paragraphs: [
+          "OpenHands focuses specifically on writing software in isolated Docker containers. DIGI BIZ OS provides an entire company operational system: CRM, WhatsApp, marketing, document processing, and includes OpenHands synergy inside Digi Code.",
+        ],
+      },
+    ],
+    links: [
+      { label: "OpenHands Open Source Hub", to: "/open-source/openhands" },
+      { label: "Digi Code Module", to: "/modules/code" },
+    ],
+  },
+  {
+    slug: "digi-biz-os-vs-devin",
+    title: "DIGI BIZ OS vs Devin: AI Business Operating System vs Coding Agent",
+    metaTitle: "DIGI BIZ OS vs Devin — AI Business Platform vs Coding Agent | DIGI BIZ OS",
+    description:
+      "Compare DIGI BIZ OS with Cognition Devin: all-in-one business operations, CRM, and voice AI versus a dedicated autonomous software engineering agent.",
+    cluster: "Software Comparisons",
+    date: "2026-08-21",
+    readingTime: "6 min read",
+    body: [
+      {
+        heading: "Enterprise Scope Comparison",
+        paragraphs: [
+          "Devin is engineered exclusively for software development teams with steep enterprise pricing. DIGI BIZ OS covers the complete operational footprint of a small business — sales, support, marketing, documents, and code — for a single £50 lifetime price.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Enterprise Modules", to: "/modules" },
+      { label: "Digi CRM", to: "/modules/crm" },
+    ],
+  },
+  {
+    slug: "digi-biz-os-vs-voice-launchers",
+    title: "DIGI BIZ OS vs Voice Launchers: AI Operating System vs Simple Voice Shortcuts",
+    metaTitle: "DIGI BIZ OS vs Voice Launchers — Simple Shortcuts vs AI OS | DIGI BIZ OS",
+    description:
+      "Why voice shortcut apps hit a ceiling: how DIGI BIZ OS plans, reasons, and executes multi-step business workflows beyond basic keyboard hotkeys.",
+    cluster: "Software Comparisons",
+    date: "2026-08-20",
+    readingTime: "6 min read",
+    body: [
+      {
+        heading: "Why phrase-mapping hits a ceiling",
+        paragraphs: [
+          "A shortcut launcher maps spoken phrases to fixed keys or app launches. It cannot handle requests like 'analyze this month's invoices, file them by client, and WhatsApp me the revenue summary'. DIGI BIZ OS bridges this gap with reasoning planners and multi-tool execution.",
+        ],
+      },
+    ],
+    links: [
+      { label: "JARVIS Voice Assistant", to: "/voice-ai" },
+      { label: "Digi Flow Automation", to: "/modules/workflows" },
+    ],
+  },
+  {
+    slug: "opencut-vs-capcut",
+    title: "OpenCut vs CapCut: Free Offline Open-Source vs Cloud Video Editing",
+    metaTitle: "OpenCut vs CapCut — Free Open-Source PC Video Editor Compared | DIGI BIZ OS",
+    description:
+      "Compare OpenCut and CapCut: 9:16 vertical presets, export watermarks, privacy, cloud locks, and desktop workflows for content creators.",
+    cluster: "Software Comparisons",
+    date: "2026-08-19",
+    readingTime: "7 min read",
+    body: [
+      {
+        heading: "Why creators switch to open-source video editors",
+        paragraphs: [
+          "Commercial editors increasingly lock basic features like custom fonts, high-framerate exports, and 4K renders behind recurring monthly subscriptions. OpenCut provides clean, unrestricted video cutting without licensing traps or cloud dependency.",
+        ],
+        bullets: [
+          "OpenCut: 100% free (MIT Open Source) with zero watermark export restrictions.",
+          "Privacy: 100% local processing on your PC drive without cloud telemetry.",
+          "Aspect Ratios: Native 9:16 vertical reels presets with magnetic snapping timeline.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Download OpenCut Studio", to: "/open-source/opencut" },
+      { label: "Digi Marketing Suite", to: "/modules/marketing" },
+    ],
+  },
+  {
+    slug: "open-seo-spider-vs-screaming-frog",
+    title: "Open SEO Spider vs Screaming Frog: Unlimited Free vs Paid SEO Crawler",
+    metaTitle: "Open SEO Spider vs Screaming Frog — Free Technical Website Crawler | DIGI BIZ OS",
+    description:
+      "Compare Open SEO Spider and Screaming Frog: crawl limits, Google Sitelinks schema validation, Core Web Vitals, and pricing for SEO agencies.",
+    cluster: "Software Comparisons",
+    date: "2026-08-18",
+    readingTime: "7 min read",
+    body: [
+      {
+        heading: "Eliminating artificial crawl limits for growing websites",
+        paragraphs: [
+          "Most small business websites exceed 500 URLs once blog posts, products, and categories are indexed. Open SEO Spider removes the £199/year paywall, giving developers and agencies deep audit power without budget constraints.",
+        ],
+        bullets: [
+          "Crawl Limits: Unlimited URLs (constrained only by PC RAM / storage).",
+          "Schema Validation: Built-in Google Sitelinks & JSON-LD Entity Graph tester.",
+          "Automation: Triggered via voice commands and cron schedules inside DIGI BIZ OS.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Download Open SEO Spider", to: "/open-source/seo-spider" },
+      { label: "Digi Tools Suite", to: "/modules/tools" },
+    ],
+  },
+  {
+    slug: "kdenlive-vs-premiere-pro",
+    title: "Kdenlive vs Adobe Premiere Pro: Free Open Source vs Creative Cloud",
+    metaTitle: "Kdenlive vs Adobe Premiere Pro — Free Video Editor Comparison | DIGI BIZ OS",
+    description:
+      "A complete comparison of Kdenlive and Adobe Premiere Pro: multi-track editing, color grading, system resource usage, and $0 vs $239/year pricing.",
+    cluster: "Software Comparisons",
+    date: "2026-08-17",
+    readingTime: "7 min read",
+    body: [
+      {
+        heading: "True software ownership for video creators",
+        paragraphs: [
+          "Adobe's subscription model means losing access to your project files the moment you stop paying. Kdenlive ensures your editing workstation remains perpetually functional with zero lock-in.",
+        ],
+        bullets: [
+          "Pricing: 100% Free & Open-Source (GPL-3.0) with zero subscription fees.",
+          "Footprint: Lightweight system resource usage without background Adobe daemons.",
+          "Resolution: Full 4K, ProRes, MP4, and hardware GPU NVENC export support.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Download Kdenlive for Windows", to: "/open-source/kdenlive" },
+      { label: "Open-Source Suite", to: "/open-source" },
+    ],
+  },
+  {
+    slug: "pocketbase-vs-supabase",
+    title: "PocketBase vs Supabase: Single Binary Simplicity vs Cloud Infrastructure",
+    metaTitle: "PocketBase vs Supabase — Self-Hosted Backend Comparison | DIGI BIZ OS",
+    description:
+      "Compare PocketBase and Supabase: 1-file SQLite simplicity, real-time subscriptions, auth, system resources, and self-hosted developer workflows.",
+    cluster: "Software Comparisons",
+    date: "2026-08-16",
+    readingTime: "7 min read",
+    body: [
+      {
+        heading: "The power of embedded databases for desktop business tools",
+        paragraphs: [
+          "Not every business application requires a multi-node PostgreSQL cluster. PocketBase gives DIGI BIZ OS lightning-fast local querying, instant backup by copying a single file, and complete data privacy.",
+        ],
+        bullets: [
+          "Architecture: 1 Single Executable (Go + SQLite) under 40 MB.",
+          "Footprint: ~15-30 MB RAM idle vs ~1 GB+ for multi-container clusters.",
+          "Setup: Instant double-click execution on Windows with zero Docker requirement.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Download PocketBase Backend", to: "/open-source/pocketbase" },
+      { label: "Digi Code Workspace", to: "/modules/code" },
+    ],
+  },
 ];
 
 export const BLOG_BY_SLUG: Record<string, BlogPost> = Object.fromEntries(

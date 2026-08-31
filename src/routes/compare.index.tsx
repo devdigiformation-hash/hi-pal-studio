@@ -1,37 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
-import SectionWrapper from "@/components/SectionWrapper";
-import EyebrowLabel from "@/components/EyebrowLabel";
-import GlassCard from "@/components/GlassCard";
-import GradientText from "@/components/GradientText";
-import Breadcrumbs from "@/components/seo/Breadcrumbs";
-import { COMPARE_PAGES } from "@/content/compare-pages";
-import { buildMeta, breadcrumbLd } from "@/lib/seo";
-
-const TITLE = "DIGI BIZ OS Comparisons — How It Compares to Other AI Assistants";
-const DESC =
-  "Balanced comparisons between DIGI BIZ OS and ChatGPT, Microsoft Copilot, Claude, Open Interpreter and typical JARVIS apps — including where each alternative is the better choice.";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/compare/")({
-  head: () => {
-    const { meta, links } = buildMeta({ path: "/compare", title: TITLE, description: DESC });
-    return {
-      meta,
-      links,
-      scripts: [
-        {
-          type: "application/ld+json",
-          children: JSON.stringify(
-            breadcrumbLd([
-              { name: "Home", path: "/" },
-              { name: "Comparisons", path: "/compare" },
-            ]),
-          ),
-        },
-      ],
-    };
+  beforeLoad: () => {
+    throw redirect({ to: "/blog" });
   },
-  component: CompareHub,
+  component: () => null,
 });
 
 function CompareHub() {

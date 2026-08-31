@@ -15,7 +15,6 @@ const NAV_LINKS = [
   { label: "Voice AI", to: "/voice-ai" },
   { label: "Open Source", to: "/open-source" },
   { label: "Agents", to: "/agents" },
-  { label: "Compare", to: "/compare" },
   { label: "Blog", to: "/blog" },
   { label: "Pricing", to: "/pricing" },
 ] as const;

@@ -5,7 +5,6 @@ import EyebrowLabel from "@/components/EyebrowLabel";
 import GradientText from "@/components/GradientText";
 import { buildMeta, breadcrumbLd } from "@/lib/seo";
 import { FEATURE_PAGES, INTENT_PAGES } from "@/content/seo-pages";
-import { COMPARE_PAGES } from "@/content/compare-pages";
 import { BLOG_POSTS } from "@/content/blog-posts";
 import { MODULES_LIST } from "@/content/modules-data";
 import { MODELS_LIST } from "@/content/models-data";
@@ -136,14 +135,7 @@ function SiteMapPage() {
               links={INTENT_PAGES.map((p) => ({ label: p.h1, to: p.path }))}
             />
             <Group
-              title="Comparisons"
-              links={COMPARE_PAGES.map((p) => ({
-                label: `DIGI BIZ OS vs ${p.competitor}`,
-                to: `/compare/${p.slug}`,
-              }))}
-            />
-            <Group
-              title="Blog articles"
+              title="Blog & Comparison Guides"
               links={BLOG_POSTS.map((p) => ({ label: p.title, to: `/blog/${p.slug}` }))}
             />
             <Group title="Legal" links={legal} />
