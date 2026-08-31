@@ -91,6 +91,7 @@ function SiteMapPage() {
     { label: "Shotcut 4K Video Editor — Free Filmora & Vegas Alternative", to: "/open-source/shotcut" },
     { label: "Audacity Audio Studio — Free Open-Source Multi-Track Workstation", to: "/open-source/audacity" },
     { label: "OpenCut Social Video Editor — Free Vertical Video & Reels Studio", to: "/open-source/opencut" },
+    { label: "Open SEO Spider & Technical Audit Suite — Free Crawler & Schema Validator", to: "/open-source/seo-spider" },
     { label: "Contact", to: "/contact" },
   ];
   const legal = [

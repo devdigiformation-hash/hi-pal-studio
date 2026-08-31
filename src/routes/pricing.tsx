@@ -3,7 +3,7 @@ import PricingPage from "@/pages/PricingPage";
 import { buildMeta, breadcrumbLd, softwareLd } from "@/lib/seo";
 
 const PATH = "/pricing";
-const TITLE = "Pricing — Lifetime Licence, Source Code & Custom Build | DIGI BIZ OS";
+const TITLE = "One-Time Pricing — Lifetime Licence & Source Code | DIGI BIZ OS";
 const DESC =
   "One-time pricing for DIGI BIZ OS: £50 lifetime access, £199 source code licence and £299 fully customised build with your branding and automations.";
 

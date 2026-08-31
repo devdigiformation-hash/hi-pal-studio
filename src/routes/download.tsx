@@ -9,9 +9,9 @@ import CyanButton from "@/components/CyanButton";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, faqLd, softwareLd } from "@/lib/seo";
 
-const TITLE = "Download DIGI BIZ OS for Windows 10 & 11 — AI Desktop Assistant";
+const TITLE = "JARVIS AI Desktop Download — DIGI BIZ OS for Windows 10 & 11";
 const DESC =
-  "Download DIGI BIZ OS for Windows 10 and 11. Install the voice-first AI business operating system, activate your lifetime licence and start running work by voice.";
+  "Download JARVIS AI for Windows 10 & 11. Install the voice-first AI business operating system, activate your lifetime licence and start running work by voice.";
 
 const STEPS = [
   {

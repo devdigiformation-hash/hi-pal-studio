@@ -34,7 +34,7 @@ export function buildMeta({ path, title, description, type = "website", image }:
   return { meta, links: [{ rel: "canonical", href: url }] };
 }
 
-export function breadcrumbLd(trail: { name: string; path: string }[]) {
+export function breadcrumbLd(trail: { name: string; path?: string; url?: string }[]) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -42,9 +42,19 @@ export function breadcrumbLd(trail: { name: string; path: string }[]) {
       "@type": "ListItem",
       position: i + 1,
       name: t.name,
-      item: abs(t.path),
+      item: t.url ? (t.url.startsWith("http") ? t.url : abs(t.url)) : abs(t.path || "/"),
     })),
   };
+}
+
+export function siteNavigationLd(items: [string, string][]) {
+  return items.map(([name, path]) => ({
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    name,
+    url: abs(path),
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+  }));
 }
 
 export function softwareLd(name: string, description: string, url: string) {

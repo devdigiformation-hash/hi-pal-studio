@@ -38,6 +38,7 @@ const STATIC: SitemapEntry[] = [
   { path: "/open-source/shotcut", changefreq: "monthly", priority: "0.7" },
   { path: "/open-source/audacity", changefreq: "monthly", priority: "0.7" },
   { path: "/open-source/opencut", changefreq: "monthly", priority: "0.7" },
+  { path: "/open-source/seo-spider", changefreq: "monthly", priority: "0.7" },
   { path: "/about", changefreq: "yearly", priority: "0.5" },
   { path: "/contact", changefreq: "yearly", priority: "0.6" },
   { path: "/faq", changefreq: "monthly", priority: "0.7" },

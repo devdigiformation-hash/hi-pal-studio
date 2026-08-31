@@ -37,6 +37,7 @@ import {
   Film,
   Mic,
   Smartphone,
+  Search,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
@@ -56,9 +57,9 @@ import pocketbaseScreenshot from "@/assets/pocketbase-screenshot.png";
 import tuttleScreenshot from "@/assets/tuttle-screenshot.jpg";
 import upscaylScreenshot from "@/assets/upscayl-screenshot.jpg";
 
-const TITLE = "Open Source AI & Software Bundles — Free Downloads | DIGI BIZ OS";
+const TITLE = "Free Open Source Tools Hub — AI Agents, Media & Utilities | DIGI BIZ OS";
 const DESC =
-  "Explore curated open-source AI agents, local LLM runners, full-stack backends, and developer toolkits. 100% free, private, and fully integrated with DIGI BIZ OS.";
+  "Download top curated open-source software for Windows: Open SEO Spider, Kdenlive, Shotcut, Audacity, FaceFusion, Deep-Live-Cam, OpenCut, Hermes Agent, Jan AI, AnythingLLM & PocketBase.";
 
 interface SoftwareItem {
   id: string;
@@ -334,6 +335,24 @@ const SOFTWARE_LIST: SoftwareItem[] = [
     features: ["9:16 Vertical Video", "Magnetic Timeline", "Zero Watermark"],
     to: "/open-source/opencut",
   },
+  {
+    id: "seo-spider",
+    name: "Open SEO Spider & Technical Audit Suite",
+    category: "SEO & Web Tools",
+    tagline: "Offline technical SEO website crawler. Validate JSON-LD Schema, Google Sitelinks & 404 links.",
+    license: "GPL / MIT",
+    color: "#2FE0C8",
+    icon: Search,
+    badge: "Technical SEO Suite",
+    bundle: "Business, Backends & Productivity",
+    bullets: [
+      "Deep technical website crawler for 404 broken links, redirects & canonicals",
+      "Schema.org JSON-LD validator for Google Rich Results & Sitelinks structure",
+      "Core Web Vitals & PageSpeed audit engine with unlimited local crawls",
+    ],
+    features: ["Schema.org Validator", "Google Sitelinks", "Unlimited Crawls"],
+    to: "/open-source/seo-spider",
+  },
 ];
 
 const BUNDLE_GROUPS = [
@@ -359,7 +378,7 @@ const BUNDLE_GROUPS = [
       "Deploy self-hosted SQLite databases, real-time auth APIs, private document search, and timesheets.",
     color: "#10B981",
     icon: Megaphone,
-    ids: ["pocketbase", "anythingllm", "tuttle"],
+    ids: ["pocketbase", "anythingllm", "tuttle", "seo-spider"],
   },
   {
     title: "Local Privacy & Offline AI Powerhouse",

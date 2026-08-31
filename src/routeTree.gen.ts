@@ -49,6 +49,7 @@ import { Route as OpenSourceOpenclawRouteImport } from './routes/open-source.ope
 import { Route as OpenSourceOpencutRouteImport } from './routes/open-source.opencut'
 import { Route as OpenSourceOpenhandsRouteImport } from './routes/open-source.openhands'
 import { Route as OpenSourcePocketbaseRouteImport } from './routes/open-source.pocketbase'
+import { Route as OpenSourceSeoSpiderRouteImport } from './routes/open-source.seo-spider'
 import { Route as OpenSourceShotcutRouteImport } from './routes/open-source.shotcut'
 import { Route as OpenSourceTuttleRouteImport } from './routes/open-source.tuttle'
 import { Route as OpenSourceUpscaylRouteImport } from './routes/open-source.upscayl'
@@ -255,6 +256,11 @@ const OpenSourcePocketbaseRoute = OpenSourcePocketbaseRouteImport.update({
   path: '/pocketbase',
   getParentRoute: () => OpenSourceRoute,
 } as any)
+const OpenSourceSeoSpiderRoute = OpenSourceSeoSpiderRouteImport.update({
+  id: '/seo-spider',
+  path: '/seo-spider',
+  getParentRoute: () => OpenSourceRoute,
+} as any)
 const OpenSourceShotcutRoute = OpenSourceShotcutRouteImport.update({
   id: '/shotcut',
   path: '/shotcut',
@@ -319,6 +325,7 @@ export interface FileRoutesByFullPath {
   '/open-source/opencut': typeof OpenSourceOpencutRoute
   '/open-source/openhands': typeof OpenSourceOpenhandsRoute
   '/open-source/pocketbase': typeof OpenSourcePocketbaseRoute
+  '/open-source/seo-spider': typeof OpenSourceSeoSpiderRoute
   '/open-source/shotcut': typeof OpenSourceShotcutRoute
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
   '/open-source/upscayl': typeof OpenSourceUpscaylRoute
@@ -365,6 +372,7 @@ export interface FileRoutesByTo {
   '/open-source/opencut': typeof OpenSourceOpencutRoute
   '/open-source/openhands': typeof OpenSourceOpenhandsRoute
   '/open-source/pocketbase': typeof OpenSourcePocketbaseRoute
+  '/open-source/seo-spider': typeof OpenSourceSeoSpiderRoute
   '/open-source/shotcut': typeof OpenSourceShotcutRoute
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
   '/open-source/upscayl': typeof OpenSourceUpscaylRoute
@@ -413,6 +421,7 @@ export interface FileRoutesById {
   '/open-source/opencut': typeof OpenSourceOpencutRoute
   '/open-source/openhands': typeof OpenSourceOpenhandsRoute
   '/open-source/pocketbase': typeof OpenSourcePocketbaseRoute
+  '/open-source/seo-spider': typeof OpenSourceSeoSpiderRoute
   '/open-source/shotcut': typeof OpenSourceShotcutRoute
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
   '/open-source/upscayl': typeof OpenSourceUpscaylRoute
@@ -462,6 +471,7 @@ export interface FileRouteTypes {
     | '/open-source/opencut'
     | '/open-source/openhands'
     | '/open-source/pocketbase'
+    | '/open-source/seo-spider'
     | '/open-source/shotcut'
     | '/open-source/tuttle'
     | '/open-source/upscayl'
@@ -508,6 +518,7 @@ export interface FileRouteTypes {
     | '/open-source/opencut'
     | '/open-source/openhands'
     | '/open-source/pocketbase'
+    | '/open-source/seo-spider'
     | '/open-source/shotcut'
     | '/open-source/tuttle'
     | '/open-source/upscayl'
@@ -555,6 +566,7 @@ export interface FileRouteTypes {
     | '/open-source/opencut'
     | '/open-source/openhands'
     | '/open-source/pocketbase'
+    | '/open-source/seo-spider'
     | '/open-source/shotcut'
     | '/open-source/tuttle'
     | '/open-source/upscayl'
@@ -880,6 +892,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OpenSourcePocketbaseRouteImport
       parentRoute: typeof OpenSourceRoute
     }
+    '/open-source/seo-spider': {
+      id: '/open-source/seo-spider'
+      path: '/seo-spider'
+      fullPath: '/open-source/seo-spider'
+      preLoaderRoute: typeof OpenSourceSeoSpiderRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
     '/open-source/shotcut': {
       id: '/open-source/shotcut'
       path: '/shotcut'
@@ -930,6 +949,7 @@ interface OpenSourceRouteChildren {
   OpenSourceOpencutRoute: typeof OpenSourceOpencutRoute
   OpenSourceOpenhandsRoute: typeof OpenSourceOpenhandsRoute
   OpenSourcePocketbaseRoute: typeof OpenSourcePocketbaseRoute
+  OpenSourceSeoSpiderRoute: typeof OpenSourceSeoSpiderRoute
   OpenSourceShotcutRoute: typeof OpenSourceShotcutRoute
   OpenSourceTuttleRoute: typeof OpenSourceTuttleRoute
   OpenSourceUpscaylRoute: typeof OpenSourceUpscaylRoute
@@ -949,6 +969,7 @@ const OpenSourceRouteChildren: OpenSourceRouteChildren = {
   OpenSourceOpencutRoute: OpenSourceOpencutRoute,
   OpenSourceOpenhandsRoute: OpenSourceOpenhandsRoute,
   OpenSourcePocketbaseRoute: OpenSourcePocketbaseRoute,
+  OpenSourceSeoSpiderRoute: OpenSourceSeoSpiderRoute,
   OpenSourceShotcutRoute: OpenSourceShotcutRoute,
   OpenSourceTuttleRoute: OpenSourceTuttleRoute,
   OpenSourceUpscaylRoute: OpenSourceUpscaylRoute,
