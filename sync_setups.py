@@ -22,6 +22,13 @@ ready_tools = [
         "route_file": "src/routes/open-source.shotcut.tsx",
     },
     {
+        "slug": "audacity",
+        "source_file": os.path.join(digi_collection, "33-Digi-Audacity-Audio", "Audacity-Setup.exe"),
+        "filename": "Audacity-Setup.exe",
+        "asset_json": "audacity-setup.exe.asset.json",
+        "route_file": "src/routes/open-source.audacity.tsx",
+    },
+    {
         "slug": "facefusion",
         "source_file": os.path.join(digi_collection, "34-Digi-FaceFusion-AI", "facefusion-master.zip"),
         "filename": "facefusion-master.zip",

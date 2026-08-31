@@ -35,6 +35,7 @@ import {
   Smile,
   Camera,
   Film,
+  Mic,
   Smartphone,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -298,6 +299,24 @@ const SOFTWARE_LIST: SoftwareItem[] = [
     to: "/open-source/shotcut",
   },
   {
+    id: "audacity",
+    name: "Audacity Multi-Track Audio Studio",
+    category: "Audio & Podcast",
+    tagline: "The world's #1 multi-track audio workstation. 1-click noise reduction, VST3 plugins & studio mastering.",
+    license: "GPL-3.0",
+    color: "#3B82F6",
+    icon: Mic,
+    badge: "Multi-Track DAW",
+    bundle: "Creative, Video & Media Suite",
+    bullets: [
+      "Multi-track live voice recording, editing, and podcast production",
+      "1-click AI spectral noise reduction for fan hums and room hiss",
+      "Real-time VST3 audio plugin support and lossless 32-bit audio export",
+    ],
+    features: ["1-Click Noise Removal", "Multi-Track Recording", "VST3 Support"],
+    to: "/open-source/audacity",
+  },
+  {
     id: "opencut",
     name: "OpenCut Social Video Studio",
     category: "Video & Editing",
@@ -329,10 +348,10 @@ const BUNDLE_GROUPS = [
   {
     title: "Creative, Video & Media Suite",
     subtitle:
-      "4K video editing, AI face swapping, live webcam manipulation, and vertical reels.",
+      "4K video editing, AI face swapping, live webcam manipulation, multi-track audio, and vertical reels.",
     color: "#EC4899",
     icon: Video,
-    ids: ["kdenlive", "facefusion", "deep-live-cam", "shotcut", "opencut"],
+    ids: ["kdenlive", "facefusion", "deep-live-cam", "shotcut", "audacity", "opencut"],
   },
   {
     title: "Business, Backends & Productivity",

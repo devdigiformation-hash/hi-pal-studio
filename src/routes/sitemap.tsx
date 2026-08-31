@@ -89,6 +89,7 @@ function SiteMapPage() {
     { label: "FaceFusion AI Face Swap Studio — Free Next-Gen Face Swapper", to: "/open-source/facefusion" },
     { label: "Deep-Live-Cam — Free Real-Time Live Webcam Face Swapper", to: "/open-source/deep-live-cam" },
     { label: "Shotcut 4K Video Editor — Free Filmora & Vegas Alternative", to: "/open-source/shotcut" },
+    { label: "Audacity Audio Studio — Free Open-Source Multi-Track Workstation", to: "/open-source/audacity" },
     { label: "OpenCut Social Video Editor — Free Vertical Video & Reels Studio", to: "/open-source/opencut" },
     { label: "Contact", to: "/contact" },
   ];
