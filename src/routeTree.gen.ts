@@ -39,7 +39,6 @@ import { Route as FeaturesIndexRouteImport } from './routes/features.index'
 import { Route as FeaturesSlugRouteImport } from './routes/features.$slug'
 import { Route as OpenSourceIndexRouteImport } from './routes/open-source.index'
 import { Route as OpenSourceAnythingllmRouteImport } from './routes/open-source.anythingllm'
-import { Route as OpenSourceAudacityRouteImport } from './routes/open-source.audacity'
 import { Route as OpenSourceDeepLiveCamRouteImport } from './routes/open-source.deep-live-cam'
 import { Route as OpenSourceFacefusionRouteImport } from './routes/open-source.facefusion'
 import { Route as OpenSourceHermesAgentRouteImport } from './routes/open-source.hermes-agent'
@@ -205,11 +204,6 @@ const OpenSourceAnythingllmRoute = OpenSourceAnythingllmRouteImport.update({
   path: '/anythingllm',
   getParentRoute: () => OpenSourceRoute,
 } as any)
-const OpenSourceAudacityRoute = OpenSourceAudacityRouteImport.update({
-  id: '/audacity',
-  path: '/audacity',
-  getParentRoute: () => OpenSourceRoute,
-} as any)
 const OpenSourceDeepLiveCamRoute = OpenSourceDeepLiveCamRouteImport.update({
   id: '/deep-live-cam',
   path: '/deep-live-cam',
@@ -309,7 +303,6 @@ export interface FileRoutesByFullPath {
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
-  '/open-source/audacity': typeof OpenSourceAudacityRoute
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
   '/open-source/facefusion': typeof OpenSourceFacefusionRoute
   '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
@@ -355,7 +348,6 @@ export interface FileRoutesByTo {
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
-  '/open-source/audacity': typeof OpenSourceAudacityRoute
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
   '/open-source/facefusion': typeof OpenSourceFacefusionRoute
   '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
@@ -403,7 +395,6 @@ export interface FileRoutesById {
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
-  '/open-source/audacity': typeof OpenSourceAudacityRoute
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
   '/open-source/facefusion': typeof OpenSourceFacefusionRoute
   '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
@@ -452,7 +443,6 @@ export interface FileRouteTypes {
     | '/compare/$slug'
     | '/features/$slug'
     | '/open-source/anythingllm'
-    | '/open-source/audacity'
     | '/open-source/deep-live-cam'
     | '/open-source/facefusion'
     | '/open-source/hermes-agent'
@@ -498,7 +488,6 @@ export interface FileRouteTypes {
     | '/compare/$slug'
     | '/features/$slug'
     | '/open-source/anythingllm'
-    | '/open-source/audacity'
     | '/open-source/deep-live-cam'
     | '/open-source/facefusion'
     | '/open-source/hermes-agent'
@@ -545,7 +534,6 @@ export interface FileRouteTypes {
     | '/compare/$slug'
     | '/features/$slug'
     | '/open-source/anythingllm'
-    | '/open-source/audacity'
     | '/open-source/deep-live-cam'
     | '/open-source/facefusion'
     | '/open-source/hermes-agent'
@@ -810,13 +798,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OpenSourceAnythingllmRouteImport
       parentRoute: typeof OpenSourceRoute
     }
-    '/open-source/audacity': {
-      id: '/open-source/audacity'
-      path: '/audacity'
-      fullPath: '/open-source/audacity'
-      preLoaderRoute: typeof OpenSourceAudacityRouteImport
-      parentRoute: typeof OpenSourceRoute
-    }
     '/open-source/deep-live-cam': {
       id: '/open-source/deep-live-cam'
       path: '/deep-live-cam'
@@ -920,7 +901,6 @@ declare module '@tanstack/react-router' {
 
 interface OpenSourceRouteChildren {
   OpenSourceAnythingllmRoute: typeof OpenSourceAnythingllmRoute
-  OpenSourceAudacityRoute: typeof OpenSourceAudacityRoute
   OpenSourceDeepLiveCamRoute: typeof OpenSourceDeepLiveCamRoute
   OpenSourceFacefusionRoute: typeof OpenSourceFacefusionRoute
   OpenSourceHermesAgentRoute: typeof OpenSourceHermesAgentRoute
@@ -939,7 +919,6 @@ interface OpenSourceRouteChildren {
 
 const OpenSourceRouteChildren: OpenSourceRouteChildren = {
   OpenSourceAnythingllmRoute: OpenSourceAnythingllmRoute,
-  OpenSourceAudacityRoute: OpenSourceAudacityRoute,
   OpenSourceDeepLiveCamRoute: OpenSourceDeepLiveCamRoute,
   OpenSourceFacefusionRoute: OpenSourceFacefusionRoute,
   OpenSourceHermesAgentRoute: OpenSourceHermesAgentRoute,
