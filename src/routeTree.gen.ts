@@ -37,6 +37,8 @@ import { Route as CompareIndexRouteImport } from './routes/compare.index'
 import { Route as CompareSlugRouteImport } from './routes/compare.$slug'
 import { Route as FeaturesIndexRouteImport } from './routes/features.index'
 import { Route as FeaturesSlugRouteImport } from './routes/features.$slug'
+import { Route as ModelsIndexRouteImport } from './routes/models.index'
+import { Route as ModelsSlugRouteImport } from './routes/models.$slug'
 import { Route as ModulesIndexRouteImport } from './routes/modules.index'
 import { Route as ModulesSlugRouteImport } from './routes/modules.$slug'
 import { Route as OpenSourceIndexRouteImport } from './routes/open-source.index'
@@ -198,6 +200,16 @@ const FeaturesSlugRoute = FeaturesSlugRouteImport.update({
   path: '/features/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ModelsIndexRoute = ModelsIndexRouteImport.update({
+  id: '/models/',
+  path: '/models/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ModelsSlugRoute = ModelsSlugRouteImport.update({
+  id: '/models/$slug',
+  path: '/models/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ModulesIndexRoute = ModulesIndexRouteImport.update({
   id: '/modules/',
   path: '/modules/',
@@ -326,6 +338,7 @@ export interface FileRoutesByFullPath {
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
+  '/models/$slug': typeof ModelsSlugRoute
   '/modules/$slug': typeof ModulesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/audacity': typeof OpenSourceAudacityRoute
@@ -347,6 +360,7 @@ export interface FileRoutesByFullPath {
   '/blog/': typeof BlogIndexRoute
   '/compare/': typeof CompareIndexRoute
   '/features/': typeof FeaturesIndexRoute
+  '/models/': typeof ModelsIndexRoute
   '/modules/': typeof ModulesIndexRoute
   '/open-source/': typeof OpenSourceIndexRoute
 }
@@ -375,6 +389,7 @@ export interface FileRoutesByTo {
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
+  '/models/$slug': typeof ModelsSlugRoute
   '/modules/$slug': typeof ModulesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/audacity': typeof OpenSourceAudacityRoute
@@ -396,6 +411,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogIndexRoute
   '/compare': typeof CompareIndexRoute
   '/features': typeof FeaturesIndexRoute
+  '/models': typeof ModelsIndexRoute
   '/modules': typeof ModulesIndexRoute
   '/open-source': typeof OpenSourceIndexRoute
 }
@@ -426,6 +442,7 @@ export interface FileRoutesById {
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
+  '/models/$slug': typeof ModelsSlugRoute
   '/modules/$slug': typeof ModulesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/audacity': typeof OpenSourceAudacityRoute
@@ -447,6 +464,7 @@ export interface FileRoutesById {
   '/blog/': typeof BlogIndexRoute
   '/compare/': typeof CompareIndexRoute
   '/features/': typeof FeaturesIndexRoute
+  '/models/': typeof ModelsIndexRoute
   '/modules/': typeof ModulesIndexRoute
   '/open-source/': typeof OpenSourceIndexRoute
 }
@@ -478,6 +496,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
+    | '/models/$slug'
     | '/modules/$slug'
     | '/open-source/anythingllm'
     | '/open-source/audacity'
@@ -499,6 +518,7 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/compare/'
     | '/features/'
+    | '/models/'
     | '/modules/'
     | '/open-source/'
   fileRoutesByTo: FileRoutesByTo
@@ -527,6 +547,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
+    | '/models/$slug'
     | '/modules/$slug'
     | '/open-source/anythingllm'
     | '/open-source/audacity'
@@ -548,6 +569,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/compare'
     | '/features'
+    | '/models'
     | '/modules'
     | '/open-source'
   id:
@@ -577,6 +599,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
+    | '/models/$slug'
     | '/modules/$slug'
     | '/open-source/anythingllm'
     | '/open-source/audacity'
@@ -598,6 +621,7 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/compare/'
     | '/features/'
+    | '/models/'
     | '/modules/'
     | '/open-source/'
   fileRoutesById: FileRoutesById
@@ -628,11 +652,13 @@ export interface RootRouteChildren {
   BlogSlugRoute: typeof BlogSlugRoute
   CompareSlugRoute: typeof CompareSlugRoute
   FeaturesSlugRoute: typeof FeaturesSlugRoute
+  ModelsSlugRoute: typeof ModelsSlugRoute
   ModulesSlugRoute: typeof ModulesSlugRoute
   OrderRefRoute: typeof OrderRefRoute
   BlogIndexRoute: typeof BlogIndexRoute
   CompareIndexRoute: typeof CompareIndexRoute
   FeaturesIndexRoute: typeof FeaturesIndexRoute
+  ModelsIndexRoute: typeof ModelsIndexRoute
   ModulesIndexRoute: typeof ModulesIndexRoute
 }
 
@@ -832,6 +858,20 @@ declare module '@tanstack/react-router' {
       path: '/features/$slug'
       fullPath: '/features/$slug'
       preLoaderRoute: typeof FeaturesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/models/': {
+      id: '/models/'
+      path: '/models'
+      fullPath: '/models/'
+      preLoaderRoute: typeof ModelsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/models/$slug': {
+      id: '/models/$slug'
+      path: '/models/$slug'
+      fullPath: '/models/$slug'
+      preLoaderRoute: typeof ModelsSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/modules/': {
@@ -1047,11 +1087,13 @@ const rootRouteChildren: RootRouteChildren = {
   BlogSlugRoute: BlogSlugRoute,
   CompareSlugRoute: CompareSlugRoute,
   FeaturesSlugRoute: FeaturesSlugRoute,
+  ModelsSlugRoute: ModelsSlugRoute,
   ModulesSlugRoute: ModulesSlugRoute,
   OrderRefRoute: OrderRefRoute,
   BlogIndexRoute: BlogIndexRoute,
   CompareIndexRoute: CompareIndexRoute,
   FeaturesIndexRoute: FeaturesIndexRoute,
+  ModelsIndexRoute: ModelsIndexRoute,
   ModulesIndexRoute: ModulesIndexRoute,
 }
 export const routeTree = rootRouteImport

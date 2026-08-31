@@ -498,7 +498,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "ai-crm-for-small-business",
     title: "The Death of Per-Seat Cloud CRMs: Why Local AI CRMs Win",
     metaTitle: "Local AI CRM for Small Business — Goodbye Per-Seat SaaS | DIGI BIZ OS",
-    metaDescription:
+    description:
       "Why growing businesses are switching from expensive cloud CRMs to local SQLite-powered AI CRMs on Windows with $0 monthly fees.",
     cluster: "Business Strategy",
     date: "2026-08-28",
@@ -527,7 +527,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "best-free-capcut-alternatives-windows",
     title: "Best Free CapCut Alternatives for Windows: Video Editing Without Watermarks",
     metaTitle: "Best Free CapCut Alternatives for Windows — 2026 Guide | DIGI BIZ OS",
-    metaDescription:
+    description:
       "Looking for a free CapCut alternative for Windows? Compare OpenCut, Kdenlive, and Shotcut for 9:16 vertical reels, zero watermarks, and offline editing.",
     cluster: "Media & Editing",
     date: "2026-08-25",
@@ -559,7 +559,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "open-source-seo-tools-guide",
     title: "Open-Source Technical SEO: Auditing Sitelinks, Schema & 404s for Free",
     metaTitle: "Open Source Technical SEO Tools — Free Crawler & Schema Guide | DIGI BIZ OS",
-    metaDescription:
+    description:
       "Master technical SEO with open-source desktop software: unlimited URL crawling, Google Sitelinks validation, and Schema.org JSON-LD audits.",
     cluster: "Technical SEO",
     date: "2026-08-22",
@@ -582,6 +582,181 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Download Open SEO Spider", to: "/open-source/seo-spider" },
       { label: "Open SEO Spider vs Screaming Frog", to: "/compare/open-seo-spider-vs-screaming-frog" },
       { label: "Digi Tools Suite", to: "/modules/tools" },
+    ],
+  },
+  {
+    slug: "what-is-a-business-operating-system",
+    title: "What is a Business Operating System (Business OS)? The Definitive Guide",
+    metaTitle: "What is a Business Operating System (Business OS)? 2026 Guide | DIGI BIZ OS",
+    description:
+      "Understand what a Business Operating System (Business OS) is: how it unifies CRM, AI voice automation, documents, and workflows into one local-first platform.",
+    cluster: "Business OS",
+    date: "2026-08-31",
+    readingTime: "9 min read",
+    body: [
+      {
+        heading: "Defining the Business Operating System",
+        paragraphs: [
+          "A Business Operating System (Business OS) is a unified software layer that coordinates every operational capability of an enterprise — customer relationship management (CRM), communication, market intelligence, document processing, code execution, and background workflows — from a single, cohesive environment.",
+          "Unlike fragmented point-solution SaaS tools that require fragile Zapier webhooks and separate monthly invoices, a Business OS provides native shared memory, local data privacy, and autonomous agent orchestration.",
+        ],
+      },
+      {
+        heading: "The Five Core Pillars of a Modern Business OS",
+        paragraphs: [
+          "Modern business operations require five interconnected layers:",
+        ],
+        bullets: [
+          "1. Customer & Pipeline Layer (Native CRM and WhatsApp sales automation).",
+          "2. Voice & Interaction Layer (JARVIS-style hands-free voice control).",
+          "3. Intelligence & Data Layer (Autonomous web scraping and competitor monitoring).",
+          "4. Document & Legal Layer (Air-gapped OCR, redaction, and cryptographic signing).",
+          "5. Automation Layer (Cron schedules and multi-agent deterministic pipelines).",
+        ],
+      },
+      {
+        heading: "Why Local-First Business OS Architecture Matters",
+        paragraphs: [
+          "Running business software locally on Windows hardware rather than trusting multi-tenant cloud servers eliminates per-seat SaaS costs, guarantees 100% offline uptime, and ensures proprietary business data remains under your absolute control.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Explore DIGI BIZ OS Modules", to: "/modules" },
+      { label: "Digi CRM Pipeline", to: "/modules/crm" },
+      { label: "JARVIS Voice Assistant", to: "/voice-ai" },
+    ],
+  },
+  {
+    slug: "what-is-an-ai-crm",
+    title: "What is an AI CRM? How Artificial Intelligence Transforms Sales & Pipelines",
+    metaTitle: "What is an AI CRM? Features, Benefits & Architecture | DIGI BIZ OS",
+    description:
+      "Learn what an AI CRM is: autonomous lead scoring, automated WhatsApp conversations, voice-driven deal updates, and local database privacy.",
+    cluster: "CRM",
+    date: "2026-08-31",
+    readingTime: "8 min read",
+    body: [
+      {
+        heading: "How AI transforms traditional CRM software",
+        paragraphs: [
+          "A traditional CRM acts as a passive database where sales reps manually log calls, type notes, and drag cards across columns. An AI CRM transforms this database into an active, autonomous revenue system.",
+          "An AI CRM actively listens to voice commands, transcribes incoming WhatsApp voice notes, calculates lead close probabilities based on customer responses, and drafts personalized follow-up proposals automatically.",
+        ],
+      },
+      {
+        heading: "Key Capabilities of an AI-Powered CRM",
+        paragraphs: [
+          "The major capabilities that differentiate an AI CRM include:",
+        ],
+        bullets: [
+          "Autonomous 24/7 WhatsApp & Email Lead Qualification.",
+          "Voice-Driven Pipeline Updates via natural language.",
+          "Automated Sentiment Analysis & Objection Detection.",
+          "Instant Contract & Proposal Generation inside local document workspaces.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Digi CRM Module", to: "/modules/crm" },
+      { label: "Digi WhatsApp Agent", to: "/modules/whatsapp" },
+      { label: "Pricing & Lifetime Licence", to: "/pricing" },
+    ],
+  },
+  {
+    slug: "business-os-vs-crm-vs-erp",
+    title: "Business OS vs CRM vs ERP: Which Software Does Your Company Actually Need?",
+    metaTitle: "Business OS vs CRM vs ERP — Architecture & Differences Explained | DIGI BIZ OS",
+    description:
+      "Compare Business Operating Systems (Business OS), Customer Relationship Management (CRM), and Enterprise Resource Planning (ERP) systems for small & mid-size businesses.",
+    cluster: "Business Strategy",
+    date: "2026-08-30",
+    readingTime: "10 min read",
+    body: [
+      {
+        heading: "The Software Landscape: Point Solutions vs Unified Systems",
+        paragraphs: [
+          "Growing businesses frequently struggle to decide whether they need a standalone CRM, an expensive ERP suite like SAP/NetSuite, or a modern AI Business Operating System.",
+          "Understanding the architectural scope and cost structure of each category is essential for making an informed technology decision.",
+        ],
+      },
+      {
+        heading: "Direct Comparison Breakdown",
+        paragraphs: [
+          "• CRM (Customer Relationship Management): Focuses purely on customer contacts, sales pipelines, and support tickets.",
+          "• ERP (Enterprise Resource Planning): Heavy corporate systems focused on manufacturing supply chains, complex payroll, and multi-national inventory management.",
+          "• Business OS (Business Operating System): Unifies CRM, marketing, WhatsApp, AI voice assistance, document processing, and coding into one agile desktop platform.",
+        ],
+      },
+    ],
+    links: [
+      { label: "All DIGI BIZ OS Features", to: "/features" },
+      { label: "Enterprise Modules Hub", to: "/modules" },
+      { label: "One-Time Pricing", to: "/pricing" },
+    ],
+  },
+  {
+    slug: "best-open-source-ai-models-for-business",
+    title: "Best Free & Open-Source AI Models for Business in 2026",
+    metaTitle: "Best Free Open-Source AI Models for Business (2026) | DIGI BIZ OS",
+    description:
+      "Discover the top open-weights AI models for business: DeepSeek R1, Llama 3.3 70B, Qwen 2.5 Coder, Phi-4, and Whisper for local offline PC deployment.",
+    cluster: "AI Models",
+    date: "2026-08-29",
+    readingTime: "8 min read",
+    body: [
+      {
+        heading: "Why businesses are migrating to open-weights models",
+        paragraphs: [
+          "In 2026, open-weights models like DeepSeek R1, Llama 3.3, and Qwen 2.5 Coder match or exceed closed frontier models on critical benchmarks while costing zero per-token inference fees when self-hosted.",
+          "By deploying models locally on Windows workstations, organizations retain 100% data sovereignty and avoid sending confidential customer contracts to external cloud servers.",
+        ],
+      },
+      {
+        heading: "Top Recommended Open Models by Use Case",
+        paragraphs: [
+          "1. DeepSeek R1 — Best for deep logical reasoning, complex math, and competitive market audits.",
+          "2. Meta Llama 3.3 70B — Best for general business knowledge, multilingual communication, and marketing.",
+          "3. Qwen 2.5 Coder 32B/72B — Best for automated coding, SQL querying, and terminal scripts.",
+          "4. Microsoft Phi-4 (14B) — Best lightweight reasoning model for standard consumer laptops.",
+          "5. OpenAI Whisper — Best 100% offline speech recognition for voice AI assistants.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Browse AI Models Universe", to: "/models" },
+      { label: "DeepSeek R1 Specs", to: "/models/deepseek-r1" },
+      { label: "Whisper Voice Engine", to: "/models/whisper" },
+    ],
+  },
+  {
+    slug: "voice-controlled-crm-guide",
+    title: "The Rise of Voice-Controlled CRMs: How Voice AI Boosts Sales Productivity",
+    metaTitle: "Voice-Controlled CRM Guide — Hands-Free Sales Automation | DIGI BIZ OS",
+    description:
+      "How voice-controlled CRMs empower sales reps to update pipelines, log calls, and draft WhatsApp messages hands-free using JARVIS voice AI.",
+    cluster: "Voice AI & CRM",
+    date: "2026-08-27",
+    readingTime: "7 min read",
+    body: [
+      {
+        heading: "The Death of Manual Data Entry in Sales",
+        paragraphs: [
+          "Sales professionals spend up to 40% of their workday typing notes into CRM fields instead of closing deals. Voice-controlled CRMs eliminate this friction by allowing reps to speak naturally after every client interaction.",
+          "Saying 'Log a call with John: agreed on the £10k proposal, schedule follow-up for Tuesday' instantly updates the deal stage, sets calendar alarms, and drafts the confirmation email.",
+        ],
+      },
+      {
+        heading: "How JARVIS Voice AI Integrates with Digi CRM",
+        paragraphs: [
+          "DIGI BIZ OS combines offline Whisper speech recognition with deterministic SQLite transactions, ensuring zero latency and 100% voice command execution accuracy.",
+        ],
+      },
+    ],
+    links: [
+      { label: "JARVIS Voice Assistant", to: "/voice-ai" },
+      { label: "Digi CRM Module", to: "/modules/crm" },
+      { label: "Download DIGI BIZ OS", to: "/download" },
     ],
   },
 ];

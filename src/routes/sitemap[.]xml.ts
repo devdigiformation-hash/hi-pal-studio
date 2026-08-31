@@ -4,6 +4,7 @@ import { SEO_PAGES } from "@/content/seo-pages";
 import { BLOG_POSTS } from "@/content/blog-posts";
 import { COMPARE_PAGES } from "@/content/compare-pages";
 import { MODULES_LIST } from "@/content/modules-data";
+import { MODELS_LIST } from "@/content/models-data";
 
 const BASE_URL = "https://digibizos.co.uk";
 
@@ -59,6 +60,12 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/modules", changefreq: "weekly" as const, priority: "0.9" },
           ...MODULES_LIST.map((m) => ({
             path: `/modules/${m.slug}`,
+            changefreq: "monthly" as const,
+            priority: "0.85",
+          })),
+          { path: "/models", changefreq: "weekly" as const, priority: "0.9" },
+          ...MODELS_LIST.map((m) => ({
+            path: `/models/${m.slug}`,
             changefreq: "monthly" as const,
             priority: "0.85",
           })),

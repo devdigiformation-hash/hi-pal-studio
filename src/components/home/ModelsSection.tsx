@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "@tanstack/react-router";
 import { Bot, Code2, MessageSquare, Sparkles, Zap, type LucideIcon } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
@@ -113,11 +114,47 @@ export default function ModelsSection() {
           })}
         </div>
 
+        <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center justify-center gap-2">
+          <Link to="/models/deepseek-r1">
+            <span className="rounded-full border border-blue-500/40 bg-blue-500/10 px-3.5 py-1.5 font-mono text-[12px] text-blue-400 transition-colors hover:border-blue-400 hover:text-white">
+              DeepSeek R1
+            </span>
+          </Link>
+          <Link to="/models/llama-3-3">
+            <span className="rounded-full border border-sky-500/40 bg-sky-500/10 px-3.5 py-1.5 font-mono text-[12px] text-sky-400 transition-colors hover:border-sky-400 hover:text-white">
+              Llama 3.3 70B
+            </span>
+          </Link>
+          <Link to="/models/qwen-2-5">
+            <span className="rounded-full border border-indigo-500/40 bg-indigo-500/10 px-3.5 py-1.5 font-mono text-[12px] text-indigo-400 transition-colors hover:border-indigo-400 hover:text-white">
+              Qwen 2.5 Coder
+            </span>
+          </Link>
+          <Link to="/models/phi-4">
+            <span className="rounded-full border border-cyan-500/40 bg-cyan-500/10 px-3.5 py-1.5 font-mono text-[12px] text-cyan-400 transition-colors hover:border-cyan-400 hover:text-white">
+              Microsoft Phi-4
+            </span>
+          </Link>
+          <Link to="/models/whisper">
+            <span className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3.5 py-1.5 font-mono text-[12px] text-emerald-400 transition-colors hover:border-emerald-400 hover:text-white">
+              OpenAI Whisper
+            </span>
+          </Link>
+          <Link to="/models/mistral-large">
+            <span className="rounded-full border border-orange-500/40 bg-orange-500/10 px-3.5 py-1.5 font-mono text-[12px] text-orange-400 transition-colors hover:border-orange-400 hover:text-white">
+              Mistral Large
+            </span>
+          </Link>
+        </div>
+
         <div className="reveal-item delay-3 mt-6 flex flex-wrap items-center justify-center gap-3">
           <Bot size={16} className="text-[var(--text-muted)]" />
           <span className="font-code text-[12px] text-[var(--text-muted)]">
             Model routing is automatic — DIGI BIZ OS picks the right engine for every task.
           </span>
+          <Link to="/models" className="font-mono text-[12px] font-semibold text-[var(--cyan)] underline underline-offset-4 hover:text-white">
+            Explore All 200+ Free & Open Models →
+          </Link>
         </div>
       </div>
     </SectionWrapper>

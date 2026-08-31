@@ -9,6 +9,7 @@ import MonoBadge from "./MonoBadge";
 const OVERVIEW = [
   { label: "Overview", to: "/" },
   { label: "Enterprise Modules", to: "/modules" },
+  { label: "AI Models Universe", to: "/models" },
   { label: "Voice AI & JARVIS", to: "/voice-ai" },
   { label: "Desktop Automation", to: "/desktop-os" },
   { label: "Multi-Agent Platform", to: "/agents" },

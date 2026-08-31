@@ -8,6 +8,7 @@ import { FEATURE_PAGES, INTENT_PAGES } from "@/content/seo-pages";
 import { COMPARE_PAGES } from "@/content/compare-pages";
 import { BLOG_POSTS } from "@/content/blog-posts";
 import { MODULES_LIST } from "@/content/modules-data";
+import { MODELS_LIST } from "@/content/models-data";
 
 const TITLE = "Site Map — All DIGI BIZ OS Pages";
 const DESC =
@@ -121,6 +122,10 @@ function SiteMapPage() {
             <Group
               title="Enterprise Modules"
               links={MODULES_LIST.map((m) => ({ label: m.name, to: `/modules/${m.slug}` }))}
+            />
+            <Group
+              title="AI Models Universe"
+              links={MODELS_LIST.map((m) => ({ label: m.name, to: `/models/${m.slug}` }))}
             />
             <Group
               title="Product features"
