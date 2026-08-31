@@ -8,30 +8,40 @@ import MonoBadge from "./MonoBadge";
 
 const OVERVIEW = [
   { label: "Overview", to: "/" },
-  { label: "All Features", to: "/features" },
-  { label: "AI Business OS for PC", to: "/desktop-os" },
-  { label: "AI Business Operating System", to: "/ai-business-operating-system" },
-  { label: "JARVIS AI", to: "/jarvis-ai" },
-  { label: "Pricing", to: "/pricing" },
-  { label: "Blog", to: "/blog" },
-  { label: "Download", to: "/download" },
-  { label: "Comparisons", to: "/compare" },
+  { label: "Enterprise Modules", to: "/modules" },
+  { label: "Voice AI & JARVIS", to: "/voice-ai" },
+  { label: "Desktop Automation", to: "/desktop-os" },
+  { label: "Multi-Agent Platform", to: "/agents" },
+  { label: "Open Source Suite", to: "/open-source" },
+  { label: "One-Time Pricing", to: "/pricing" },
+  { label: "Download for Windows", to: "/download" },
+  { label: "Software Comparisons", to: "/compare" },
+  { label: "Blog & Guides", to: "/blog" },
   { label: "FAQ", to: "/faq" },
 ] as const;
 
-const FEATURES = [
-  { label: "Digi AI", to: "/features/digi-ai" },
-  { label: "Digi CRM", to: "/features/digi-crm" },
-  { label: "Digi Intelligence", to: "/features/digi-intelligence" },
-  { label: "Digi Marketing", to: "/features/digi-marketing" },
-  { label: "Digi WhatsApp", to: "/features/digi-whatsapp" },
-  { label: "DigiCode", to: "/features/digicode" },
-  { label: "DigiDocs", to: "/features/digidocs" },
-  { label: "DigiTools", to: "/features/digitools" },
-  { label: "DigiCLI", to: "/features/digicli" },
-  { label: "DigiMCP", to: "/features/digimcp" },
-  { label: "DigiFlow", to: "/features/digiflow" },
-  { label: "DigiTasks", to: "/features/digitasks" },
+const MODULES = [
+  { label: "Digi CRM", to: "/modules/crm" },
+  { label: "Digi WhatsApp Agent", to: "/modules/whatsapp" },
+  { label: "Digi Marketing", to: "/modules/marketing" },
+  { label: "Digi Intelligence", to: "/modules/intelligence" },
+  { label: "Digi Flow Workflows", to: "/modules/workflows" },
+  { label: "Digi Docs", to: "/modules/docs" },
+  { label: "Digi Code", to: "/modules/code" },
+  { label: "Digi Tools", to: "/modules/tools" },
+] as const;
+
+const OPEN_SOURCE = [
+  { label: "Open SEO Spider", to: "/open-source/seo-spider" },
+  { label: "OpenCut Social Studio", to: "/open-source/opencut" },
+  { label: "Deep-Live-Cam", to: "/open-source/deep-live-cam" },
+  { label: "FaceFusion AI", to: "/open-source/facefusion" },
+  { label: "Kdenlive Video Editor", to: "/open-source/kdenlive" },
+  { label: "Shotcut 4K Studio", to: "/open-source/shotcut" },
+  { label: "Audacity Audio", to: "/open-source/audacity" },
+  { label: "Jan AI Local LLMs", to: "/open-source/jan-ai" },
+  { label: "PocketBase Backend", to: "/open-source/pocketbase" },
+  { label: "AnythingLLM RAG", to: "/open-source/anythingllm" },
 ] as const;
 
 const RESOURCES = [
@@ -115,9 +125,9 @@ export default function Footer() {
         </div>
 
         <div>
-          <EyebrowLabel text="Features" color="var(--cyan)" />
+          <EyebrowLabel text="Modules" color="var(--cyan)" />
           <ul className="mt-5 space-y-3">
-            {FEATURES.map((item) => (
+            {MODULES.map((item) => (
               <li key={item.label}>
                 <SmartLink
                   to={item.to}
@@ -131,7 +141,23 @@ export default function Footer() {
         </div>
 
         <div>
-          <EyebrowLabel text="Resources" color="var(--purple)" />
+          <EyebrowLabel text="Open Source" color="var(--green)" />
+          <ul className="mt-5 space-y-3">
+            {OPEN_SOURCE.map((item) => (
+              <li key={item.label}>
+                <SmartLink
+                  to={item.to}
+                  className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
+                >
+                  {item.label}
+                </SmartLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <EyebrowLabel text="Solutions" color="var(--purple)" />
           <ul className="mt-5 space-y-3">
             {RESOURCES.map((item) => (
               <li key={item.label}>

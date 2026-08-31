@@ -479,8 +479,267 @@ export const COMPARE_PAGES: ComparePage[] = [
       },
     ],
     links: [
-      { label: "JARVIS AI", to: "/jarvis-ai" },
-      { label: "JARVIS alternative", to: "/jarvis-alternative" },
+      { label: "Voice AI Control", to: "/voice-ai" },
+      { label: "All features", to: "/features" },
+      ...CORE_LINKS,
+    ],
+  },
+  {
+    slug: "opencut-vs-capcut",
+    competitor: "CapCut",
+    eyebrow: "Video Editing Comparison",
+    h1: "OpenCut vs CapCut —",
+    h1Gradient: "Free Offline vs Cloud Video Editing.",
+    metaTitle: "OpenCut vs CapCut — Free Open-Source PC Video Editor Compared | DIGI BIZ OS",
+    metaDescription:
+      "Compare OpenCut and CapCut: 9:16 vertical presets, export watermarks, privacy, cloud locks, and desktop workflows for content creators.",
+    intro:
+      "A direct, factual comparison between OpenCut (free open-source video editor) and CapCut (commercial mobile/desktop editor). Discover differences in licensing, export watermarks, local privacy, and integration with DIGI BIZ OS marketing workflows.",
+    summary: {
+      forDigiBiz: [
+        "100% free with MIT open-source license and zero watermark export restrictions.",
+        "Complete offline privacy — no forced account logins or telemetry tracking.",
+        "Native 9:16 vertical reels presets with magnetic snapping timeline.",
+        "Directly integrated with DIGI BIZ OS for automated video script production.",
+      ],
+      forOther: [
+        "Large built-in library of cloud trending templates and music tracks.",
+        "Automatic cloud synchronization between mobile phones and desktop.",
+        "Proprietary cloud background removal and AI effects.",
+      ],
+    },
+    rows: [
+      {
+        aspect: "Pricing & Licence",
+        digibiz: "100% Free (MIT Open Source) • Zero Subscription",
+        other: "Freemium with paid Pro Subscription ($9.99+/mo)",
+      },
+      {
+        aspect: "Watermark Policy",
+        digibiz: "Zero watermarks on any video resolution or export",
+        other: "May require Pro subscription or ending card for some assets",
+      },
+      {
+        aspect: "Data Privacy",
+        digibiz: "100% Local processing on your PC drive • Air-gapped",
+        other: "Cloud-connected with user data uploaded to servers",
+      },
+      {
+        aspect: "Aspect Ratio Support",
+        digibiz: "Instant 9:16 (Shorts/Reels), 1:1, 16:9, and 4:5 presets",
+        other: "Full aspect ratio support",
+      },
+      {
+        aspect: "Ecosystem Fit",
+        digibiz: "Pairs with Digi Marketing for instant AI script generation",
+        other: "Standalone consumer application",
+      },
+    ],
+    sections: [
+      {
+        heading: "Why creators switch to open-source editors",
+        body: "Commercial editors increasingly lock basic features like custom fonts, high-framerate exports, and 4K renders behind recurring monthly subscriptions. OpenCut provides clean, unrestricted video cutting without licensing traps or cloud dependency.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is OpenCut completely free for commercial use?",
+        a: "Yes. Released under the MIT open-source license, you can edit and monetize client videos, ads, and YouTube content with zero royalties.",
+      },
+      {
+        q: "Can I download OpenCut directly for Windows?",
+        a: "Yes. You can download the OpenCut installer directly from the DIGI BIZ OS open-source suite.",
+      },
+    ],
+    links: [
+      { label: "Download OpenCut Studio", to: "/open-source/opencut" },
+      { label: "Digi Marketing Suite", to: "/modules/marketing" },
+      ...CORE_LINKS,
+    ],
+  },
+  {
+    slug: "open-seo-spider-vs-screaming-frog",
+    competitor: "Screaming Frog",
+    eyebrow: "Technical SEO Comparison",
+    h1: "Open SEO Spider vs Screaming Frog —",
+    h1Gradient: "Unlimited Free vs Paid SEO Crawler.",
+    metaTitle: "Open SEO Spider vs Screaming Frog — Free Technical Website Crawler | DIGI BIZ OS",
+    metaDescription:
+      "Compare Open SEO Spider and Screaming Frog: crawl limits, Google Sitelinks schema validation, Core Web Vitals, and pricing for SEO agencies.",
+    intro:
+      "Compare Open SEO Spider and Screaming Frog SEO Spider. Evaluate crawl depth limits, Schema.org JSON-LD validation, Core Web Vitals audit capabilities, and how Open SEO Spider integrates with DIGI BIZ OS automation.",
+    summary: {
+      forDigiBiz: [
+        "Unlimited free crawl depth with zero 500-URL artificial limits.",
+        "Built-in Google Sitelinks (6-pack) and SiteNavigationElement schema validator.",
+        "100% offline local crawl database with zero recurring licence renewal.",
+        "Pairs with Digi Flow for automated scheduled website health audits.",
+      ],
+      forOther: [
+        "Industry standard legacy desktop crawler with 10+ years of active development.",
+        "Direct Google Search Console and Google Analytics 4 API connectors.",
+        "Advanced custom JavaScript rendering options with Chromium integration.",
+      ],
+    },
+    rows: [
+      {
+        aspect: "Pricing & Licence",
+        digibiz: "100% Free & Open-Source • No Annual Licence Fee",
+        other: "Free up to 500 URLs • £199/year per licence",
+      },
+      {
+        aspect: "Crawl Limit",
+        digibiz: "Unlimited URLs (constrained only by PC RAM / storage)",
+        other: "500 URLs on free version; unlimited on paid",
+      },
+      {
+        aspect: "Schema Validation",
+        digibiz: "Built-in Google Sitelinks & JSON-LD Entity Graph tester",
+        other: "Schema validation via Google Rich Results API",
+      },
+      {
+        aspect: "Automation",
+        digibiz: "Triggered via JARVIS voice commands and cron schedules",
+        other: "Command-line automation in paid version",
+      },
+    ],
+    sections: [
+      {
+        heading: "Eliminating artificial crawl limits for growing websites",
+        body: "Most small business websites exceed 500 URLs once blog posts, products, and categories are indexed. Open SEO Spider removes the £199/year paywall, giving developers and agencies deep audit power without budget constraints.",
+      },
+    ],
+    faq: [
+      {
+        q: "Does Open SEO Spider find broken 404 links and redirect chains?",
+        a: "Yes. It audits response codes (200, 301, 302, 404, 500), canonical tags, missing meta tags, and internal link distributions.",
+      },
+      {
+        q: "Where does Open SEO Spider store crawl data?",
+        a: "All crawl databases and audit logs are saved locally on your Windows machine in private SQLite files.",
+      },
+    ],
+    links: [
+      { label: "Download Open SEO Spider", to: "/open-source/seo-spider" },
+      { label: "Digi Tools Suite", to: "/modules/tools" },
+      ...CORE_LINKS,
+    ],
+  },
+  {
+    slug: "kdenlive-vs-premiere-pro",
+    competitor: "Adobe Premiere Pro",
+    eyebrow: "Professional Video Comparison",
+    h1: "Kdenlive vs Adobe Premiere Pro —",
+    h1Gradient: "Open Source vs Creative Cloud.",
+    metaTitle: "Kdenlive vs Adobe Premiere Pro — Free Video Editor Comparison | DIGI BIZ OS",
+    metaDescription:
+      "A complete comparison of Kdenlive and Adobe Premiere Pro: multi-track editing, color grading, system resource usage, and $0 vs $239/year pricing.",
+    intro:
+      "A side-by-side analysis of Kdenlive (the premier open-source video editor) and Adobe Premiere Pro. Compare multi-track timelines, proxy workflows, rendering stability, and the financial impact of perpetual ownership vs Creative Cloud subscriptions.",
+    summary: {
+      forDigiBiz: [
+        "100% Free & Open-Source (GPL-3.0) with zero subscription or cancellation fees.",
+        "Lightweight system footprint that runs smoothly on standard Windows laptops.",
+        "Full multi-track timeline, keyframe animations, and proxy editing.",
+        "Included in the DIGI BIZ OS open-source media suite with direct offline installer.",
+      ],
+      forOther: [
+        "Industry standard in Hollywood and major broadcast media production.",
+        "Seamless roundtrip integration with After Effects and Photoshop.",
+        "Proprietary Adobe Sensei generative AI features and auto-reframe.",
+      ],
+    },
+    rows: [
+      {
+        aspect: "Pricing & Licence",
+        digibiz: "Free Forever (GPL-3.0) • $0",
+        other: "$22.99/mo or $239.88/year recurring Creative Cloud",
+      },
+      {
+        aspect: "Offline Execution",
+        digibiz: "100% Offline • Never requires online licence check-in",
+        other: "Requires periodic Adobe cloud account verification",
+      },
+      {
+        aspect: "System Overhead",
+        digibiz: "Fast startup • Low RAM and background CPU usage",
+        other: "Heavy background services (Creative Cloud daemon)",
+      },
+    ],
+    sections: [
+      {
+        heading: "True software ownership for video creators",
+        body: "Adobe's subscription model means losing access to your project files the moment you stop paying. Kdenlive ensures your editing workstation remains perpetually functional with zero lock-in.",
+      },
+    ],
+    faq: [
+      {
+        q: "Does Kdenlive support 4K video rendering?",
+        a: "Yes. Kdenlive supports 4K, ProRes, MP4, WebM, and hardware-accelerated NVENC GPU exports.",
+      },
+    ],
+    links: [
+      { label: "Download Kdenlive for Windows", to: "/open-source/kdenlive" },
+      { label: "Open-Source Media Suite", to: "/open-source" },
+      ...CORE_LINKS,
+    ],
+  },
+  {
+    slug: "pocketbase-vs-supabase",
+    competitor: "Supabase",
+    eyebrow: "Backend Architecture Comparison",
+    h1: "PocketBase vs Supabase —",
+    h1Gradient: "Single Binary vs Cloud Infrastructure.",
+    metaTitle: "PocketBase vs Supabase — Self-Hosted Backend Comparison | DIGI BIZ OS",
+    metaDescription:
+      "Compare PocketBase and Supabase: 1-file SQLite simplicity, real-time subscriptions, auth, system resources, and self-hosted developer workflows.",
+    intro:
+      "A technical comparison of PocketBase (single-file Go/SQLite backend) and Supabase (PostgreSQL cloud platform). Discover when a lightweight local backend outperforms complex cloud clusters for desktop and business software.",
+    summary: {
+      forDigiBiz: [
+        "Packaged in a single self-contained binary under 40 MB.",
+        "Instant zero-config setup with embedded SQLite and real-time event subscriptions.",
+        "Runs directly on Windows desktop without requiring Docker or Kubernetes.",
+        "Zero cloud hosting bills or ingress/egress bandwidth charges.",
+      ],
+      forOther: [
+        "Full enterprise PostgreSQL with Row-Level Security (RLS) and pgvector.",
+        "Managed global edge infrastructure and serverless cloud functions.",
+        "Native multi-region failover and enterprise clustering.",
+      ],
+    },
+    rows: [
+      {
+        aspect: "Architecture",
+        digibiz: "1 Single Executable (Go + SQLite)",
+        other: "Multi-container PostgreSQL cluster",
+      },
+      {
+        aspect: "Setup Complexity",
+        digibiz: "Instant (Download & Double-Click)",
+        other: "Requires Docker or Cloud Account Provisioning",
+      },
+      {
+        aspect: "RAM Footprint",
+        digibiz: "~15-30 MB RAM idle",
+        other: "~500 MB - 1 GB+ RAM for full stack",
+      },
+    ],
+    sections: [
+      {
+        heading: "The power of embedded databases for desktop business tools",
+        body: "Not every business application requires a multi-node PostgreSQL cluster. PocketBase gives DIGI BIZ OS lightning-fast local querying, instant backup by copying a single file, and complete data privacy.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can PocketBase handle thousands of concurrent queries?",
+        a: "Yes. Powered by SQLite in WAL mode and Go, PocketBase comfortably handles 10,000+ requests per second on standard PC hardware.",
+      },
+    ],
+    links: [
+      { label: "Download PocketBase Backend", to: "/open-source/pocketbase" },
+      { label: "Digi Code Workspace", to: "/modules/code" },
       ...CORE_LINKS,
     ],
   },

@@ -7,6 +7,7 @@ import { buildMeta, breadcrumbLd } from "@/lib/seo";
 import { FEATURE_PAGES, INTENT_PAGES } from "@/content/seo-pages";
 import { COMPARE_PAGES } from "@/content/compare-pages";
 import { BLOG_POSTS } from "@/content/blog-posts";
+import { MODULES_LIST } from "@/content/modules-data";
 
 const TITLE = "Site Map — All DIGI BIZ OS Pages";
 const DESC =
@@ -118,7 +119,11 @@ function SiteMapPage() {
           <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             <Group title="Main pages" links={main} />
             <Group
-              title="Product modules"
+              title="Enterprise Modules"
+              links={MODULES_LIST.map((m) => ({ label: m.name, to: `/modules/${m.slug}` }))}
+            />
+            <Group
+              title="Product features"
               links={FEATURE_PAGES.map((p) => ({ label: p.h1, to: p.path }))}
             />
             <Group

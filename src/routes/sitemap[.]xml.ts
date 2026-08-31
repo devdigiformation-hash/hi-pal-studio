@@ -3,6 +3,7 @@ import type {} from "@tanstack/react-start";
 import { SEO_PAGES } from "@/content/seo-pages";
 import { BLOG_POSTS } from "@/content/blog-posts";
 import { COMPARE_PAGES } from "@/content/compare-pages";
+import { MODULES_LIST } from "@/content/modules-data";
 
 const BASE_URL = "https://digibizos.co.uk";
 
@@ -55,6 +56,12 @@ export const Route = createFileRoute("/sitemap.xml")({
       GET: async () => {
         const entries: SitemapEntry[] = [
           ...STATIC,
+          { path: "/modules", changefreq: "weekly" as const, priority: "0.9" },
+          ...MODULES_LIST.map((m) => ({
+            path: `/modules/${m.slug}`,
+            changefreq: "monthly" as const,
+            priority: "0.85",
+          })),
           ...SEO_PAGES.map((p) => ({
             path: p.path,
             changefreq: "monthly" as const,

@@ -37,6 +37,8 @@ import { Route as CompareIndexRouteImport } from './routes/compare.index'
 import { Route as CompareSlugRouteImport } from './routes/compare.$slug'
 import { Route as FeaturesIndexRouteImport } from './routes/features.index'
 import { Route as FeaturesSlugRouteImport } from './routes/features.$slug'
+import { Route as ModulesIndexRouteImport } from './routes/modules.index'
+import { Route as ModulesSlugRouteImport } from './routes/modules.$slug'
 import { Route as OpenSourceIndexRouteImport } from './routes/open-source.index'
 import { Route as OpenSourceAnythingllmRouteImport } from './routes/open-source.anythingllm'
 import { Route as OpenSourceAudacityRouteImport } from './routes/open-source.audacity'
@@ -196,6 +198,16 @@ const FeaturesSlugRoute = FeaturesSlugRouteImport.update({
   path: '/features/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ModulesIndexRoute = ModulesIndexRouteImport.update({
+  id: '/modules/',
+  path: '/modules/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ModulesSlugRoute = ModulesSlugRouteImport.update({
+  id: '/modules/$slug',
+  path: '/modules/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OpenSourceIndexRoute = OpenSourceIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -314,6 +326,7 @@ export interface FileRoutesByFullPath {
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
+  '/modules/$slug': typeof ModulesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/audacity': typeof OpenSourceAudacityRoute
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
@@ -334,6 +347,7 @@ export interface FileRoutesByFullPath {
   '/blog/': typeof BlogIndexRoute
   '/compare/': typeof CompareIndexRoute
   '/features/': typeof FeaturesIndexRoute
+  '/modules/': typeof ModulesIndexRoute
   '/open-source/': typeof OpenSourceIndexRoute
 }
 export interface FileRoutesByTo {
@@ -361,6 +375,7 @@ export interface FileRoutesByTo {
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
+  '/modules/$slug': typeof ModulesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/audacity': typeof OpenSourceAudacityRoute
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
@@ -381,6 +396,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogIndexRoute
   '/compare': typeof CompareIndexRoute
   '/features': typeof FeaturesIndexRoute
+  '/modules': typeof ModulesIndexRoute
   '/open-source': typeof OpenSourceIndexRoute
 }
 export interface FileRoutesById {
@@ -410,6 +426,7 @@ export interface FileRoutesById {
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
+  '/modules/$slug': typeof ModulesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/audacity': typeof OpenSourceAudacityRoute
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
@@ -430,6 +447,7 @@ export interface FileRoutesById {
   '/blog/': typeof BlogIndexRoute
   '/compare/': typeof CompareIndexRoute
   '/features/': typeof FeaturesIndexRoute
+  '/modules/': typeof ModulesIndexRoute
   '/open-source/': typeof OpenSourceIndexRoute
 }
 export interface FileRouteTypes {
@@ -460,6 +478,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
+    | '/modules/$slug'
     | '/open-source/anythingllm'
     | '/open-source/audacity'
     | '/open-source/deep-live-cam'
@@ -480,6 +499,7 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/compare/'
     | '/features/'
+    | '/modules/'
     | '/open-source/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -507,6 +527,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
+    | '/modules/$slug'
     | '/open-source/anythingllm'
     | '/open-source/audacity'
     | '/open-source/deep-live-cam'
@@ -527,6 +548,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/compare'
     | '/features'
+    | '/modules'
     | '/open-source'
   id:
     | '__root__'
@@ -555,6 +577,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
+    | '/modules/$slug'
     | '/open-source/anythingllm'
     | '/open-source/audacity'
     | '/open-source/deep-live-cam'
@@ -575,6 +598,7 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/compare/'
     | '/features/'
+    | '/modules/'
     | '/open-source/'
   fileRoutesById: FileRoutesById
 }
@@ -604,10 +628,12 @@ export interface RootRouteChildren {
   BlogSlugRoute: typeof BlogSlugRoute
   CompareSlugRoute: typeof CompareSlugRoute
   FeaturesSlugRoute: typeof FeaturesSlugRoute
+  ModulesSlugRoute: typeof ModulesSlugRoute
   OrderRefRoute: typeof OrderRefRoute
   BlogIndexRoute: typeof BlogIndexRoute
   CompareIndexRoute: typeof CompareIndexRoute
   FeaturesIndexRoute: typeof FeaturesIndexRoute
+  ModulesIndexRoute: typeof ModulesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -806,6 +832,20 @@ declare module '@tanstack/react-router' {
       path: '/features/$slug'
       fullPath: '/features/$slug'
       preLoaderRoute: typeof FeaturesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/modules/': {
+      id: '/modules/'
+      path: '/modules'
+      fullPath: '/modules/'
+      preLoaderRoute: typeof ModulesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/modules/$slug': {
+      id: '/modules/$slug'
+      path: '/modules/$slug'
+      fullPath: '/modules/$slug'
+      preLoaderRoute: typeof ModulesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/open-source/': {
@@ -1007,10 +1047,12 @@ const rootRouteChildren: RootRouteChildren = {
   BlogSlugRoute: BlogSlugRoute,
   CompareSlugRoute: CompareSlugRoute,
   FeaturesSlugRoute: FeaturesSlugRoute,
+  ModulesSlugRoute: ModulesSlugRoute,
   OrderRefRoute: OrderRefRoute,
   BlogIndexRoute: BlogIndexRoute,
   CompareIndexRoute: CompareIndexRoute,
   FeaturesIndexRoute: FeaturesIndexRoute,
+  ModulesIndexRoute: ModulesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

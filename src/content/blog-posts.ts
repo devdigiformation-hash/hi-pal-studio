@@ -454,9 +454,134 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     links: [
-      { label: "AI workflow automation", to: "/ai-workflow-automation" },
-      { label: "Business automation", to: "/features/business-automation" },
-      { label: "DigiFlow", to: "/features/digiflow" },
+      { label: "AI workflow automation", to: "/modules/workflows" },
+      { label: "Business automation", to: "/modules/workflows" },
+      { label: "DigiFlow Workflows", to: "/modules/workflows" },
+    ],
+  },
+  {
+    slug: "whatsapp-ai-sales-agent-guide",
+    title: "How to Build a 24/7 WhatsApp AI Sales Agent on Windows",
+    metaTitle: "WhatsApp AI Sales Agent Guide — 24/7 Support on Windows | DIGI BIZ OS",
+    description:
+      "A complete guide to automating customer conversations, lead qualification, catalog sharing, and CRM order logging via an offline WhatsApp AI agent on Windows.",
+    cluster: "Business Automation",
+    date: "2026-08-30",
+    readingTime: "7 min read",
+    body: [
+      {
+        heading: "Why WhatsApp is the primary commercial channel in 2026",
+        paragraphs: [
+          "For millions of businesses in the UK, Middle East, Pakistan, and South America, WhatsApp has completely replaced email for sales inquiries and customer support.",
+          "However, slow human response times during nights and weekends cost businesses over 40% of their prospective deals. An autonomous WhatsApp AI agent solves this by answering within seconds.",
+        ],
+      },
+      {
+        heading: "Key capabilities of a desktop WhatsApp agent",
+        paragraphs: [
+          "Unlike restrictive cloud chatbots that bill per message, running an agent locally through DIGI BIZ OS gives you unlimited messaging, full PDF document knowledge base access, and zero data leakage.",
+        ],
+        bullets: [
+          "Instant multi-lingual replies (English, Urdu, Arabic, Spanish).",
+          "Automatic lead scoring and transfer into local CRM pipelines.",
+          "Voice note transcription and contextual audio answers.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Digi WhatsApp Agent Module", to: "/modules/whatsapp" },
+      { label: "Digi CRM Pipeline", to: "/modules/crm" },
+      { label: "Download DIGI BIZ OS", to: "/download" },
+    ],
+  },
+  {
+    slug: "ai-crm-for-small-business",
+    title: "The Death of Per-Seat Cloud CRMs: Why Local AI CRMs Win",
+    metaTitle: "Local AI CRM for Small Business — Goodbye Per-Seat SaaS | DIGI BIZ OS",
+    metaDescription:
+      "Why growing businesses are switching from expensive cloud CRMs to local SQLite-powered AI CRMs on Windows with $0 monthly fees.",
+    cluster: "Business Strategy",
+    date: "2026-08-28",
+    readingTime: "5 min read",
+    body: [
+      {
+        heading: "The true cost of cloud SaaS subscriptions",
+        paragraphs: [
+          "Modern small businesses often spend over £300 to £1,000 per month across CRM, email marketing, and document automation tools. As teams grow, per-seat licensing fees compound aggressively.",
+          "Local-first AI operating systems like DIGI BIZ OS reverse this trend by packaging full CRM functionality into a one-time £50 licence.",
+        ],
+      },
+      {
+        heading: "Data sovereignty and security",
+        paragraphs: [
+          "When your client records reside on your own encrypted Windows drive, your business is immune to cloud data breaches and unauthorized AI model training on customer data.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Digi CRM Module", to: "/modules/crm" },
+      { label: "One-Time Pricing", to: "/pricing" },
+    ],
+  },
+  {
+    slug: "best-free-capcut-alternatives-windows",
+    title: "Best Free CapCut Alternatives for Windows: Video Editing Without Watermarks",
+    metaTitle: "Best Free CapCut Alternatives for Windows — 2026 Guide | DIGI BIZ OS",
+    metaDescription:
+      "Looking for a free CapCut alternative for Windows? Compare OpenCut, Kdenlive, and Shotcut for 9:16 vertical reels, zero watermarks, and offline editing.",
+    cluster: "Media & Editing",
+    date: "2026-08-25",
+    readingTime: "8 min read",
+    body: [
+      {
+        heading: "Why creators are seeking CapCut alternatives",
+        paragraphs: [
+          "While CapCut remains popular on mobile, its desktop version has introduced restrictive watermark policies and expensive monthly Pro tier requirements for essential features.",
+          "Open-source editors like OpenCut, Kdenlive, and Shotcut provide professional 4K cutting, 9:16 aspect ratio presets, and zero export watermarks for free.",
+        ],
+      },
+      {
+        heading: "Top 3 Open-Source Video Editors for PC",
+        paragraphs: [
+          "1. OpenCut Studio — Social-first 9:16 vertical reels, magnetic timeline, zero watermarks.",
+          "2. Kdenlive — Full multi-track 4K video suite for YouTube and commercial video production.",
+          "3. Shotcut — Lightweight, fast rendering, and hardware GPU acceleration.",
+        ],
+      },
+    ],
+    links: [
+      { label: "OpenCut Studio Page", to: "/open-source/opencut" },
+      { label: "OpenCut vs CapCut Comparison", to: "/compare/opencut-vs-capcut" },
+      { label: "Kdenlive Video Editor", to: "/open-source/kdenlive" },
+    ],
+  },
+  {
+    slug: "open-source-seo-tools-guide",
+    title: "Open-Source Technical SEO: Auditing Sitelinks, Schema & 404s for Free",
+    metaTitle: "Open Source Technical SEO Tools — Free Crawler & Schema Guide | DIGI BIZ OS",
+    metaDescription:
+      "Master technical SEO with open-source desktop software: unlimited URL crawling, Google Sitelinks validation, and Schema.org JSON-LD audits.",
+    cluster: "Technical SEO",
+    date: "2026-08-22",
+    readingTime: "6 min read",
+    body: [
+      {
+        heading: "Why technical SEO is essential for organic growth",
+        paragraphs: [
+          "Search engines cannot rank what they cannot properly crawl and understand. Ensuring your site has valid Schema.org markup, zero 404 broken links, and clean heading hierarchies is the prerequisite for ranking on competitive commercial queries.",
+        ],
+      },
+      {
+        heading: "The Open SEO Spider advantage",
+        paragraphs: [
+          "Unlike commercial desktop crawlers that limit free users to 500 URLs, Open SEO Spider offers unlimited crawl depth, multi-tier JSON-LD verification, and instant Google Sitelinks testing on Windows.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Download Open SEO Spider", to: "/open-source/seo-spider" },
+      { label: "Open SEO Spider vs Screaming Frog", to: "/compare/open-seo-spider-vs-screaming-frog" },
+      { label: "Digi Tools Suite", to: "/modules/tools" },
     ],
   },
 ];
