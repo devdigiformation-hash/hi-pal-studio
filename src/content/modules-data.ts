@@ -267,43 +267,43 @@ export const MODULES_LIST: ModuleData[] = [
   },
   {
     slug: "intelligence",
-    name: "Digi Intelligence & Product/Lead Hunting",
-    eyebrow: "Market Surveillance & Data Mining",
-    h1: "Digi Intelligence — AI Product Hunting &",
-    h1Gradient: "High-Intent Lead Discovery",
-    metaTitle: "Digi Intelligence — AI Product Research & Lead Mining | DIGI BIZ OS",
+    name: "Digi Intelligence & Companies House Verification",
+    eyebrow: "Market Surveillance & Registry Intelligence",
+    h1: "Digi Intelligence — UK Companies House &",
+    h1Gradient: "B2B Market Intelligence Suite",
+    metaTitle: "Digi Intelligence — UK Companies House Search & B2B Intelligence | DIGI BIZ OS",
     metaDescription:
-      "Scout winning e-commerce products, track competitor pricing, and extract high-intent B2B sales leads automatically on Windows.",
+      "Search UK Companies House live, verify directors and SIC codes, monitor competitor prices, and mine verified B2B leads on Windows.",
     accentColor: "#3B82F6",
     directAnswer:
-      "Digi Intelligence is a comprehensive data harvesting and market analysis suite inside DIGI BIZ OS. It automates product research across marketplaces, tracks competitor pricing in real-time, and mines verified B2B leads based on custom criteria.",
+      "Digi Intelligence is an advanced corporate research, registry lookup, and market intelligence suite inside DIGI BIZ OS. It features live UK Companies House director and filing verification, Standard Industrial Classification (SIC) industry code searches, automated competitor price monitoring, and B2B lead generation directly on your Windows desktop.",
     problemSolved: [
-      "Saves hundreds of hours of manual product research and spreadsheet logging.",
-      "Identifies viral e-commerce trends before markets become saturated.",
-      "Extracts verified decision-maker contact details (Email, Phone, LinkedIn) for outbound sales.",
-      "Monitors competitor website changes, pricing updates, and inventory levels automatically.",
+      "Eliminates third-party paid subscriptions for company credit checks and director verification.",
+      "Instantly verifies official UK corporate status, filing history, active officers, and registered offices.",
+      "Identifies market opportunities by filtering businesses across 700+ SIC trade classifications.",
+      "Monitors competitor website price changes and inventory fluctuations automatically.",
     ],
     targetAudience: [
-      "Amazon, Shopify, and TikTok Shop sellers searching for high-margin winning products.",
-      "B2B Sales Executives and Agencies building cold outreach prospect lists.",
-      "Market Researchers and Investors analyzing industry trends and competitor moves.",
+      "B2B Sales Teams and Agencies performing corporate due diligence and prospect discovery.",
+      "Accountants, Legal Advisors, and Compliance Officers auditing UK business filings.",
+      "E-commerce brands and Market Researchers tracking competitor pricing and supplier intelligence.",
     ],
     coreCapabilities: [
       {
-        title: "Automated Marketplace Scraping",
-        description: "Extracts sales volume estimates, review velocity, and price historical data without manual clicking.",
+        title: "Live UK Companies House Lookup",
+        description: "Searches official UK corporate registry data: active status, incorporation date, directors, PSCs, and accounts due.",
+      },
+      {
+        title: "Standard Industrial Classification (SIC) Search",
+        description: "Filters and categorizes thousands of businesses by exact 5-digit industry trade codes.",
+      },
+      {
+        title: "Competitor Price & Product Surveillance",
+        description: "Tracks rival websites on schedules and alerts you when prices or stock availability change.",
       },
       {
         title: "B2B Lead Enrichment Engine",
-        description: "Finds verified company emails, CEO names, and phone numbers matching your ideal customer profile.",
-      },
-      {
-        title: "Competitor Price Surveillance",
-        description: "Monitors rival store prices on a schedule and alerts you when competitors change pricing or stock.",
-      },
-      {
-        title: "Sentiment & Review Gap Analysis",
-        description: "Scans thousands of 1-star and 2-star competitor reviews to pinpoint product flaws you can solve.",
+        description: "Enriches corporate records with verified decision-maker names, phone numbers, and direct contacts.",
       },
     ],
     workflows: [
