@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   PiggyBank,
   CheckCircle2,
+  Download,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
@@ -18,14 +19,15 @@ import MonoBadge from "@/components/MonoBadge";
 import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
-import setupFile from "@/assets/facefusion-master.zip.asset.json";
+import exeFile from "@/assets/facefusion-studio.exe.asset.json";
+import zipFile from "@/assets/facefusion-master.zip.asset.json";
 
 const TITLE = "FaceFusion AI Face Swap Studio — Free Next-Gen Face Swapper for Windows";
 const DESC =
   "Download FaceFusion free for Windows: swap faces in 4K videos & photos, built-in GFPGAN/CodeFormer AI facial restoration, lip-sync, and 100% local privacy.";
 
-// Direct setup package download
-const DOWNLOAD_URL = setupFile.url;
+const EXE_URL = exeFile.url;
+const ZIP_URL = zipFile.url;
 
 const FEATURES = [
   {
@@ -180,15 +182,19 @@ function FaceFusionPage() {
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
-              <a href={DOWNLOAD_URL} download="facefusion-master.zip">
+              <a href={EXE_URL} download="FaceFusion-Studio.exe">
                 <CyanButton size="lg" icon={<WindowsIcon />}>
-                  Download FaceFusion Studio (.ZIP)
+                  Download FaceFusion Studio (.EXE)
                 </CyanButton>
+              </a>
+              <a href={ZIP_URL} download="facefusion-master.zip">
+                <GhostButton size="lg" icon={<Download size={18} />}>
+                  Source Code (.ZIP)
+                </GhostButton>
               </a>
             </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
-              Direct File Trigger: facefusion-master.zip • Windows 10/11 (64-bit) & Web UI • 100% Free
-              (MIT License)
+              Direct File Trigger: FaceFusion-Studio.exe + facefusion-master.zip • Windows 10/11 & Web UI • MIT License
             </p>
           </div>
 
@@ -343,10 +349,15 @@ function FaceFusionPage() {
             Enjoy full access with zero watermarks, zero subscription fees, and 100% offline privacy.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href={DOWNLOAD_URL} download="facefusion-master.zip">
+            <a href={EXE_URL} download="FaceFusion-Studio.exe">
               <CyanButton size="lg" icon={<WindowsIcon />}>
-                Download FaceFusion Studio (.ZIP)
+                Download FaceFusion Studio (.EXE)
               </CyanButton>
+            </a>
+            <a href={ZIP_URL} download="facefusion-master.zip">
+              <GhostButton size="lg" icon={<Download size={18} />}>
+                Download Source (.ZIP)
+              </GhostButton>
             </a>
             <Link
               to="/open-source"

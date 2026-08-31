@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   PiggyBank,
   CheckCircle2,
+  Download,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
@@ -18,13 +19,15 @@ import MonoBadge from "@/components/MonoBadge";
 import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
+import exeFile from "@/assets/deep-live-cam-studio.exe.asset.json";
+import zipFile from "@/assets/deep-live-cam-main.zip.asset.json";
 
 const TITLE = "Deep-Live-Cam — Free Real-Time Live Stream & Webcam Face Swapper";
 const DESC =
   "Download Deep-Live-Cam free for Windows: real-time live webcam face swapping for OBS, Zoom, Google Meet & Discord with 1 single portrait photo.";
 
-// CONFIGURABLE DOWNLOAD URL: Replace with your direct Google Drive or hosted package link
-const DOWNLOAD_URL = "https://github.com/hacksider/Deep-Live-Cam/releases";
+const EXE_URL = exeFile.url;
+const ZIP_URL = zipFile.url;
 
 const FEATURES = [
   {
@@ -179,15 +182,19 @@ function DeepLiveCamPage() {
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
-              <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+              <a href={EXE_URL} download="Deep-Live-Cam-Studio.exe">
                 <CyanButton size="lg" icon={<WindowsIcon />}>
-                  Download Deep-Live-Cam (.ZIP)
+                  Download Deep-Live-Cam (.EXE)
                 </CyanButton>
+              </a>
+              <a href={ZIP_URL} download="deep-live-cam-main.zip">
+                <GhostButton size="lg" icon={<Download size={18} />}>
+                  Source Code (.ZIP)
+                </GhostButton>
               </a>
             </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
-              Direct File Trigger: deep-live-cam-main.zip • Windows 10/11 (OBS Virtual Camera /
-              Direct Webcam) • GPL-3.0
+              Direct File Trigger: Deep-Live-Cam-Studio.exe + deep-live-cam-main.zip (67 MB) • Windows 10/11 • GPL-3.0
             </p>
           </div>
 
@@ -342,10 +349,15 @@ function DeepLiveCamPage() {
             Enjoy full access with zero watermarks, zero subscription fees, and 100% offline privacy.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+            <a href={EXE_URL} download="Deep-Live-Cam-Studio.exe">
               <CyanButton size="lg" icon={<WindowsIcon />}>
-                Download Deep-Live-Cam (.ZIP)
+                Download Deep-Live-Cam (.EXE)
               </CyanButton>
+            </a>
+            <a href={ZIP_URL} download="deep-live-cam-main.zip">
+              <GhostButton size="lg" icon={<Download size={18} />}>
+                Download Source (.ZIP)
+              </GhostButton>
             </a>
             <Link
               to="/open-source"

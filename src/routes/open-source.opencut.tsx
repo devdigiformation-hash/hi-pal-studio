@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   PiggyBank,
   CheckCircle2,
+  Download,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
@@ -18,13 +19,15 @@ import MonoBadge from "@/components/MonoBadge";
 import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
+import exeFile from "@/assets/opencut-studio.exe.asset.json";
+import zipFile from "@/assets/opencut-main.zip.asset.json";
 
 const TITLE = "OpenCut Social Video Editor — Free Open-Source CapCut & Canva Alternative";
 const DESC =
   "Download OpenCut free: fast video cuts, 9:16 vertical presets for TikTok & Reels, animated text overlays, and clean exports with zero watermarks.";
 
-// CONFIGURABLE DOWNLOAD URL: Replace with your direct Google Drive or hosted package link
-const DOWNLOAD_URL = "https://github.com/opencut/opencut/releases";
+const EXE_URL = exeFile.url;
+const ZIP_URL = zipFile.url;
 
 const FEATURES = [
   {
@@ -179,14 +182,19 @@ function OpenCutPage() {
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
-              <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+              <a href={EXE_URL} download="OpenCut-Studio.exe">
                 <CyanButton size="lg" icon={<WindowsIcon />}>
-                  Download OpenCut Studio (.ZIP)
+                  Download OpenCut Studio (.EXE)
                 </CyanButton>
+              </a>
+              <a href={ZIP_URL} download="opencut-main.zip">
+                <GhostButton size="lg" icon={<Download size={18} />}>
+                  Source Code (.ZIP)
+                </GhostButton>
               </a>
             </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
-              Direct File Trigger: opencut-main.zip • Cross-Platform Web & Desktop Studio • MIT License
+              Direct File Trigger: OpenCut-Studio.exe + opencut-main.zip • Windows 10/11 & Web • MIT License
             </p>
           </div>
 
@@ -341,10 +349,15 @@ function OpenCutPage() {
             Enjoy full access with zero watermarks, zero subscription fees, and 100% offline privacy.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+            <a href={EXE_URL} download="OpenCut-Studio.exe">
               <CyanButton size="lg" icon={<WindowsIcon />}>
-                Download OpenCut Studio (.ZIP)
+                Download OpenCut Studio (.EXE)
               </CyanButton>
+            </a>
+            <a href={ZIP_URL} download="opencut-main.zip">
+              <GhostButton size="lg" icon={<Download size={18} />}>
+                Download Source (.ZIP)
+              </GhostButton>
             </a>
             <Link
               to="/open-source"
