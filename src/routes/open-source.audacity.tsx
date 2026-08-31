@@ -19,13 +19,14 @@ import MonoBadge from "@/components/MonoBadge";
 import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
+import setupFile from "@/assets/audacity-setup.exe.asset.json";
 
 const TITLE = "Audacity Audio Studio — Free Open-Source Adobe Audition Alternative";
 const DESC =
   "Download Audacity free for Windows: multi-track recording, 1-click background noise reduction, studio mastering, VST3 plugins, and lossless audio export.";
 
-// CONFIGURABLE DOWNLOAD URL: Replace with your direct Google Drive or hosted EXE link
-const DOWNLOAD_URL = "https://www.audacityteam.org/download/windows/";
+// Direct setup installer download
+const DOWNLOAD_URL = setupFile.url;
 
 const FEATURES = [
   {
@@ -180,7 +181,7 @@ function AudacityPage() {
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
-              <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+              <a href={DOWNLOAD_URL} download="Audacity-Setup.exe">
                 <CyanButton size="lg" icon={<WindowsIcon />}>
                   Download Audacity for Windows (.EXE)
                 </CyanButton>
@@ -343,7 +344,7 @@ function AudacityPage() {
             Enjoy full access with zero watermarks, zero subscription fees, and 100% offline privacy.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+            <a href={DOWNLOAD_URL} download="Audacity-Setup.exe">
               <CyanButton size="lg" icon={<WindowsIcon />}>
                 Download Audacity for Windows (.EXE)
               </CyanButton>

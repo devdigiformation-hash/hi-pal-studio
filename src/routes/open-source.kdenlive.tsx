@@ -20,13 +20,14 @@ import MonoBadge from "@/components/MonoBadge";
 import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
+import setupFile from "@/assets/kdenlive-setup.exe.asset.json";
 
 const TITLE = "Kdenlive Video Editor — Free Open-Source CapCut & Premiere Alternative";
 const DESC =
   "Download Kdenlive free for Windows: 4K multi-track video editing, OpenAI Whisper auto-subtitles, chroma key, motion tracking, and zero export watermarks.";
 
-// CONFIGURABLE DOWNLOAD URL: Replace with your direct Google Drive or hosted EXE link
-const DOWNLOAD_URL = "https://kdenlive.org/download/";
+// Direct setup installer download
+const DOWNLOAD_URL = setupFile.url;
 
 const FEATURES = [
   {
@@ -181,7 +182,7 @@ function KdenlivePage() {
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
-              <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+              <a href={DOWNLOAD_URL} download="Kdenlive-Setup.exe">
                 <CyanButton size="lg" icon={<WindowsIcon />}>
                   Download Kdenlive for Windows (.EXE)
                 </CyanButton>
@@ -344,7 +345,7 @@ function KdenlivePage() {
             Enjoy full access with zero watermarks, zero subscription fees, and 100% offline privacy.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+            <a href={DOWNLOAD_URL} download="Kdenlive-Setup.exe">
               <CyanButton size="lg" icon={<WindowsIcon />}>
                 Download Kdenlive for Windows (.EXE)
               </CyanButton>
