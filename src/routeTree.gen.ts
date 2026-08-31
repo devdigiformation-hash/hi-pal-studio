@@ -39,11 +39,17 @@ import { Route as FeaturesIndexRouteImport } from './routes/features.index'
 import { Route as FeaturesSlugRouteImport } from './routes/features.$slug'
 import { Route as OpenSourceIndexRouteImport } from './routes/open-source.index'
 import { Route as OpenSourceAnythingllmRouteImport } from './routes/open-source.anythingllm'
+import { Route as OpenSourceAudacityRouteImport } from './routes/open-source.audacity'
+import { Route as OpenSourceDeepLiveCamRouteImport } from './routes/open-source.deep-live-cam'
+import { Route as OpenSourceFacefusionRouteImport } from './routes/open-source.facefusion'
 import { Route as OpenSourceHermesAgentRouteImport } from './routes/open-source.hermes-agent'
 import { Route as OpenSourceJanAiRouteImport } from './routes/open-source.jan-ai'
+import { Route as OpenSourceKdenliveRouteImport } from './routes/open-source.kdenlive'
 import { Route as OpenSourceOpenclawRouteImport } from './routes/open-source.openclaw'
+import { Route as OpenSourceOpencutRouteImport } from './routes/open-source.opencut'
 import { Route as OpenSourceOpenhandsRouteImport } from './routes/open-source.openhands'
 import { Route as OpenSourcePocketbaseRouteImport } from './routes/open-source.pocketbase'
+import { Route as OpenSourceShotcutRouteImport } from './routes/open-source.shotcut'
 import { Route as OpenSourceTuttleRouteImport } from './routes/open-source.tuttle'
 import { Route as OpenSourceUpscaylRouteImport } from './routes/open-source.upscayl'
 import { Route as OpenSourceWhatsappAiSalesAgentRouteImport } from './routes/open-source.whatsapp-ai-sales-agent'
@@ -199,6 +205,21 @@ const OpenSourceAnythingllmRoute = OpenSourceAnythingllmRouteImport.update({
   path: '/anythingllm',
   getParentRoute: () => OpenSourceRoute,
 } as any)
+const OpenSourceAudacityRoute = OpenSourceAudacityRouteImport.update({
+  id: '/audacity',
+  path: '/audacity',
+  getParentRoute: () => OpenSourceRoute,
+} as any)
+const OpenSourceDeepLiveCamRoute = OpenSourceDeepLiveCamRouteImport.update({
+  id: '/deep-live-cam',
+  path: '/deep-live-cam',
+  getParentRoute: () => OpenSourceRoute,
+} as any)
+const OpenSourceFacefusionRoute = OpenSourceFacefusionRouteImport.update({
+  id: '/facefusion',
+  path: '/facefusion',
+  getParentRoute: () => OpenSourceRoute,
+} as any)
 const OpenSourceHermesAgentRoute = OpenSourceHermesAgentRouteImport.update({
   id: '/hermes-agent',
   path: '/hermes-agent',
@@ -209,9 +230,19 @@ const OpenSourceJanAiRoute = OpenSourceJanAiRouteImport.update({
   path: '/jan-ai',
   getParentRoute: () => OpenSourceRoute,
 } as any)
+const OpenSourceKdenliveRoute = OpenSourceKdenliveRouteImport.update({
+  id: '/kdenlive',
+  path: '/kdenlive',
+  getParentRoute: () => OpenSourceRoute,
+} as any)
 const OpenSourceOpenclawRoute = OpenSourceOpenclawRouteImport.update({
   id: '/openclaw',
   path: '/openclaw',
+  getParentRoute: () => OpenSourceRoute,
+} as any)
+const OpenSourceOpencutRoute = OpenSourceOpencutRouteImport.update({
+  id: '/opencut',
+  path: '/opencut',
   getParentRoute: () => OpenSourceRoute,
 } as any)
 const OpenSourceOpenhandsRoute = OpenSourceOpenhandsRouteImport.update({
@@ -222,6 +253,11 @@ const OpenSourceOpenhandsRoute = OpenSourceOpenhandsRouteImport.update({
 const OpenSourcePocketbaseRoute = OpenSourcePocketbaseRouteImport.update({
   id: '/pocketbase',
   path: '/pocketbase',
+  getParentRoute: () => OpenSourceRoute,
+} as any)
+const OpenSourceShotcutRoute = OpenSourceShotcutRouteImport.update({
+  id: '/shotcut',
+  path: '/shotcut',
   getParentRoute: () => OpenSourceRoute,
 } as any)
 const OpenSourceTuttleRoute = OpenSourceTuttleRouteImport.update({
@@ -273,11 +309,17 @@ export interface FileRoutesByFullPath {
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
+  '/open-source/audacity': typeof OpenSourceAudacityRoute
+  '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
+  '/open-source/facefusion': typeof OpenSourceFacefusionRoute
   '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
+  '/open-source/kdenlive': typeof OpenSourceKdenliveRoute
   '/open-source/openclaw': typeof OpenSourceOpenclawRoute
+  '/open-source/opencut': typeof OpenSourceOpencutRoute
   '/open-source/openhands': typeof OpenSourceOpenhandsRoute
   '/open-source/pocketbase': typeof OpenSourcePocketbaseRoute
+  '/open-source/shotcut': typeof OpenSourceShotcutRoute
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
   '/open-source/upscayl': typeof OpenSourceUpscaylRoute
   '/open-source/whatsapp-ai-sales-agent': typeof OpenSourceWhatsappAiSalesAgentRoute
@@ -313,11 +355,17 @@ export interface FileRoutesByTo {
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
+  '/open-source/audacity': typeof OpenSourceAudacityRoute
+  '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
+  '/open-source/facefusion': typeof OpenSourceFacefusionRoute
   '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
+  '/open-source/kdenlive': typeof OpenSourceKdenliveRoute
   '/open-source/openclaw': typeof OpenSourceOpenclawRoute
+  '/open-source/opencut': typeof OpenSourceOpencutRoute
   '/open-source/openhands': typeof OpenSourceOpenhandsRoute
   '/open-source/pocketbase': typeof OpenSourcePocketbaseRoute
+  '/open-source/shotcut': typeof OpenSourceShotcutRoute
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
   '/open-source/upscayl': typeof OpenSourceUpscaylRoute
   '/open-source/whatsapp-ai-sales-agent': typeof OpenSourceWhatsappAiSalesAgentRoute
@@ -355,11 +403,17 @@ export interface FileRoutesById {
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
+  '/open-source/audacity': typeof OpenSourceAudacityRoute
+  '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
+  '/open-source/facefusion': typeof OpenSourceFacefusionRoute
   '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
+  '/open-source/kdenlive': typeof OpenSourceKdenliveRoute
   '/open-source/openclaw': typeof OpenSourceOpenclawRoute
+  '/open-source/opencut': typeof OpenSourceOpencutRoute
   '/open-source/openhands': typeof OpenSourceOpenhandsRoute
   '/open-source/pocketbase': typeof OpenSourcePocketbaseRoute
+  '/open-source/shotcut': typeof OpenSourceShotcutRoute
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
   '/open-source/upscayl': typeof OpenSourceUpscaylRoute
   '/open-source/whatsapp-ai-sales-agent': typeof OpenSourceWhatsappAiSalesAgentRoute
@@ -398,11 +452,17 @@ export interface FileRouteTypes {
     | '/compare/$slug'
     | '/features/$slug'
     | '/open-source/anythingllm'
+    | '/open-source/audacity'
+    | '/open-source/deep-live-cam'
+    | '/open-source/facefusion'
     | '/open-source/hermes-agent'
     | '/open-source/jan-ai'
+    | '/open-source/kdenlive'
     | '/open-source/openclaw'
+    | '/open-source/opencut'
     | '/open-source/openhands'
     | '/open-source/pocketbase'
+    | '/open-source/shotcut'
     | '/open-source/tuttle'
     | '/open-source/upscayl'
     | '/open-source/whatsapp-ai-sales-agent'
@@ -438,11 +498,17 @@ export interface FileRouteTypes {
     | '/compare/$slug'
     | '/features/$slug'
     | '/open-source/anythingllm'
+    | '/open-source/audacity'
+    | '/open-source/deep-live-cam'
+    | '/open-source/facefusion'
     | '/open-source/hermes-agent'
     | '/open-source/jan-ai'
+    | '/open-source/kdenlive'
     | '/open-source/openclaw'
+    | '/open-source/opencut'
     | '/open-source/openhands'
     | '/open-source/pocketbase'
+    | '/open-source/shotcut'
     | '/open-source/tuttle'
     | '/open-source/upscayl'
     | '/open-source/whatsapp-ai-sales-agent'
@@ -479,11 +545,17 @@ export interface FileRouteTypes {
     | '/compare/$slug'
     | '/features/$slug'
     | '/open-source/anythingllm'
+    | '/open-source/audacity'
+    | '/open-source/deep-live-cam'
+    | '/open-source/facefusion'
     | '/open-source/hermes-agent'
     | '/open-source/jan-ai'
+    | '/open-source/kdenlive'
     | '/open-source/openclaw'
+    | '/open-source/opencut'
     | '/open-source/openhands'
     | '/open-source/pocketbase'
+    | '/open-source/shotcut'
     | '/open-source/tuttle'
     | '/open-source/upscayl'
     | '/open-source/whatsapp-ai-sales-agent'
@@ -738,6 +810,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OpenSourceAnythingllmRouteImport
       parentRoute: typeof OpenSourceRoute
     }
+    '/open-source/audacity': {
+      id: '/open-source/audacity'
+      path: '/audacity'
+      fullPath: '/open-source/audacity'
+      preLoaderRoute: typeof OpenSourceAudacityRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
+    '/open-source/deep-live-cam': {
+      id: '/open-source/deep-live-cam'
+      path: '/deep-live-cam'
+      fullPath: '/open-source/deep-live-cam'
+      preLoaderRoute: typeof OpenSourceDeepLiveCamRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
+    '/open-source/facefusion': {
+      id: '/open-source/facefusion'
+      path: '/facefusion'
+      fullPath: '/open-source/facefusion'
+      preLoaderRoute: typeof OpenSourceFacefusionRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
     '/open-source/hermes-agent': {
       id: '/open-source/hermes-agent'
       path: '/hermes-agent'
@@ -752,11 +845,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OpenSourceJanAiRouteImport
       parentRoute: typeof OpenSourceRoute
     }
+    '/open-source/kdenlive': {
+      id: '/open-source/kdenlive'
+      path: '/kdenlive'
+      fullPath: '/open-source/kdenlive'
+      preLoaderRoute: typeof OpenSourceKdenliveRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
     '/open-source/openclaw': {
       id: '/open-source/openclaw'
       path: '/openclaw'
       fullPath: '/open-source/openclaw'
       preLoaderRoute: typeof OpenSourceOpenclawRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
+    '/open-source/opencut': {
+      id: '/open-source/opencut'
+      path: '/opencut'
+      fullPath: '/open-source/opencut'
+      preLoaderRoute: typeof OpenSourceOpencutRouteImport
       parentRoute: typeof OpenSourceRoute
     }
     '/open-source/openhands': {
@@ -771,6 +878,13 @@ declare module '@tanstack/react-router' {
       path: '/pocketbase'
       fullPath: '/open-source/pocketbase'
       preLoaderRoute: typeof OpenSourcePocketbaseRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
+    '/open-source/shotcut': {
+      id: '/open-source/shotcut'
+      path: '/shotcut'
+      fullPath: '/open-source/shotcut'
+      preLoaderRoute: typeof OpenSourceShotcutRouteImport
       parentRoute: typeof OpenSourceRoute
     }
     '/open-source/tuttle': {
@@ -806,11 +920,17 @@ declare module '@tanstack/react-router' {
 
 interface OpenSourceRouteChildren {
   OpenSourceAnythingllmRoute: typeof OpenSourceAnythingllmRoute
+  OpenSourceAudacityRoute: typeof OpenSourceAudacityRoute
+  OpenSourceDeepLiveCamRoute: typeof OpenSourceDeepLiveCamRoute
+  OpenSourceFacefusionRoute: typeof OpenSourceFacefusionRoute
   OpenSourceHermesAgentRoute: typeof OpenSourceHermesAgentRoute
   OpenSourceJanAiRoute: typeof OpenSourceJanAiRoute
+  OpenSourceKdenliveRoute: typeof OpenSourceKdenliveRoute
   OpenSourceOpenclawRoute: typeof OpenSourceOpenclawRoute
+  OpenSourceOpencutRoute: typeof OpenSourceOpencutRoute
   OpenSourceOpenhandsRoute: typeof OpenSourceOpenhandsRoute
   OpenSourcePocketbaseRoute: typeof OpenSourcePocketbaseRoute
+  OpenSourceShotcutRoute: typeof OpenSourceShotcutRoute
   OpenSourceTuttleRoute: typeof OpenSourceTuttleRoute
   OpenSourceUpscaylRoute: typeof OpenSourceUpscaylRoute
   OpenSourceWhatsappAiSalesAgentRoute: typeof OpenSourceWhatsappAiSalesAgentRoute
@@ -819,11 +939,17 @@ interface OpenSourceRouteChildren {
 
 const OpenSourceRouteChildren: OpenSourceRouteChildren = {
   OpenSourceAnythingllmRoute: OpenSourceAnythingllmRoute,
+  OpenSourceAudacityRoute: OpenSourceAudacityRoute,
+  OpenSourceDeepLiveCamRoute: OpenSourceDeepLiveCamRoute,
+  OpenSourceFacefusionRoute: OpenSourceFacefusionRoute,
   OpenSourceHermesAgentRoute: OpenSourceHermesAgentRoute,
   OpenSourceJanAiRoute: OpenSourceJanAiRoute,
+  OpenSourceKdenliveRoute: OpenSourceKdenliveRoute,
   OpenSourceOpenclawRoute: OpenSourceOpenclawRoute,
+  OpenSourceOpencutRoute: OpenSourceOpencutRoute,
   OpenSourceOpenhandsRoute: OpenSourceOpenhandsRoute,
   OpenSourcePocketbaseRoute: OpenSourcePocketbaseRoute,
+  OpenSourceShotcutRoute: OpenSourceShotcutRoute,
   OpenSourceTuttleRoute: OpenSourceTuttleRoute,
   OpenSourceUpscaylRoute: OpenSourceUpscaylRoute,
   OpenSourceWhatsappAiSalesAgentRoute: OpenSourceWhatsappAiSalesAgentRoute,

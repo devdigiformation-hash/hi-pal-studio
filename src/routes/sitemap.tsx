@@ -85,6 +85,12 @@ function SiteMapPage() {
     { label: "Tuttle Time Tracker — Free Billable Hours", to: "/open-source/tuttle" },
     { label: "PocketBase Backend — Free Database & Auth Server", to: "/open-source/pocketbase" },
     { label: "Upscayl AI Image Enhancer — Free Offline Upscaler", to: "/open-source/upscayl" },
+    { label: "Kdenlive Video Editor — Free Open-Source CapCut & Premiere Alternative", to: "/open-source/kdenlive" },
+    { label: "FaceFusion AI Face Swap Studio — Free Next-Gen Face Swapper", to: "/open-source/facefusion" },
+    { label: "Deep-Live-Cam — Free Real-Time Live Webcam Face Swapper", to: "/open-source/deep-live-cam" },
+    { label: "Shotcut 4K Video Editor — Free Filmora & Vegas Alternative", to: "/open-source/shotcut" },
+    { label: "Audacity Audio Studio — Free Open-Source Multi-Track Workstation", to: "/open-source/audacity" },
+    { label: "OpenCut Social Video Editor — Free Vertical Video & Reels Studio", to: "/open-source/opencut" },
     { label: "Contact", to: "/contact" },
   ];
   const legal = [

@@ -31,6 +31,12 @@ import {
   Users,
   Wrench,
   Zap,
+  Video,
+  Smile,
+  Camera,
+  Film,
+  Mic,
+  Smartphone,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
@@ -220,6 +226,114 @@ const SOFTWARE_LIST: SoftwareItem[] = [
     features: ["16x AI Upscaling", "Vulkan GPU Speed", "No Watermarks"],
     to: "/open-source/upscayl",
   },
+  {
+    id: "kdenlive",
+    name: "Kdenlive Professional Video Editor",
+    category: "Video & Editing",
+    tagline: "Free Open-Source Premiere & CapCut Alternative. Multi-track 4K, motion tracking & Whisper AI subtitles.",
+    license: "GPL-3.0",
+    color: "#3B82F6",
+    icon: Video,
+    badge: "Open-Source Premiere Alt",
+    bundle: "Creative, Video & Media Suite",
+    bullets: [
+      "Built-in OpenAI Whisper speech-to-text auto-captions in 1-click",
+      "Multi-track 4K timeline with chroma key & motion tracking",
+      "Hardware GPU accelerated 60FPS exports with zero watermarks",
+    ],
+    features: ["Whisper AI Subtitles", "4K Multi-Track Timeline", "Zero Watermark"],
+    to: "/open-source/kdenlive",
+  },
+  {
+    id: "facefusion",
+    name: "FaceFusion Next-Gen AI Face Swapper",
+    category: "AI Media",
+    tagline: "Industry-standard open-source facial manipulation. 4K video face swap, GFPGAN enhancement & lip-sync.",
+    license: "MIT License",
+    color: "#EC4899",
+    icon: Smile,
+    badge: "AI Face Swap Engine",
+    bundle: "Creative, Video & Media Suite",
+    bullets: [
+      "High-fidelity face swapping for 4K video footage and portrait photos",
+      "Integrated GFPGAN and CodeFormer AI facial restoration neural nets",
+      "100% offline local processing with NVIDIA CUDA GPU acceleration",
+    ],
+    features: ["GFPGAN 4K Enhancer", "Real-Time Lip-Sync", "100% Local GPU"],
+    to: "/open-source/facefusion",
+  },
+  {
+    id: "deep-live-cam",
+    name: "Deep-Live-Cam Real-Time Webcam Swapper",
+    category: "AI Media",
+    tagline: "Live real-time webcam face swapping for OBS, Zoom, Meet & Discord with a single portrait photo.",
+    license: "GPL-3.0",
+    color: "#8B5CF6",
+    icon: Camera,
+    badge: "Live Webcam Swap",
+    bundle: "Creative, Video & Media Suite",
+    bullets: [
+      "Instant 1-photo setup for 3D live facial mesh and tracking",
+      "Real-time OBS virtual camera integration for streaming & calls",
+      "Ultra-low latency 30+ FPS tracking on consumer PC hardware",
+    ],
+    features: ["OBS Virtual Cam", "1-Photo Setup", "30+ FPS Real-Time"],
+    to: "/open-source/deep-live-cam",
+  },
+  {
+    id: "shotcut",
+    name: "Shotcut 4K Video Editor Workhorse",
+    category: "Video & Editing",
+    tagline: "Lightweight, stable 4K video editor. Universal FFmpeg formats, 3-way color grading & zero ads.",
+    license: "GPL-3.0",
+    color: "#10B981",
+    icon: Film,
+    badge: "Stable 4K Workhorse",
+    bundle: "Creative, Video & Media Suite",
+    bullets: [
+      "Native support for hundreds of audio and video formats via FFmpeg",
+      "3-way color grading wheels, audio peak visualizers & LUT filters",
+      "Lightweight ~85MB installer with zero background bloatware or ads",
+    ],
+    features: ["Universal Codecs", "Color Wheels", "Zero Watermark"],
+    to: "/open-source/shotcut",
+  },
+  {
+    id: "audacity",
+    name: "Audacity Multi-Track Audio Studio",
+    category: "Audio & Podcast",
+    tagline: "The world's #1 multi-track audio workstation. 1-click noise reduction, VST3 plugins & studio mastering.",
+    license: "GPL-3.0",
+    color: "#3B82F6",
+    icon: Mic,
+    badge: "Multi-Track DAW",
+    bundle: "Creative, Video & Media Suite",
+    bullets: [
+      "Multi-track live voice recording, editing, and podcast production",
+      "1-click AI spectral noise reduction for fan hums and room hiss",
+      "Real-time VST3 audio plugin support and lossless 32-bit audio export",
+    ],
+    features: ["1-Click Noise Removal", "Multi-Track Recording", "VST3 Support"],
+    to: "/open-source/audacity",
+  },
+  {
+    id: "opencut",
+    name: "OpenCut Social Video Studio",
+    category: "Video & Editing",
+    tagline: "Modern CapCut alternative for creators. 9:16 vertical presets, magnetic snapping & fast cuts.",
+    license: "MIT License",
+    color: "#F59E0B",
+    icon: Smartphone,
+    badge: "Shorts & Reels Editor",
+    bundle: "Creative, Video & Media Suite",
+    bullets: [
+      "Native 9:16 vertical presets optimized for TikTok, Reels & Shorts",
+      "Magnetic snapping timeline for fast trimming and split edits",
+      "Animated text overlays, sticker presets, and zero watermark exports",
+    ],
+    features: ["9:16 Vertical Video", "Magnetic Timeline", "Zero Watermark"],
+    to: "/open-source/opencut",
+  },
 ];
 
 const BUNDLE_GROUPS = [
@@ -230,6 +344,14 @@ const BUNDLE_GROUPS = [
     color: "#3B82F6",
     icon: Code2,
     ids: ["openhands", "openclaw", "hermes-agent"],
+  },
+  {
+    title: "Creative, Video & Media Suite",
+    subtitle:
+      "4K video editing, AI face swapping, live webcam manipulation, multi-track audio, and vertical reels.",
+    color: "#EC4899",
+    icon: Video,
+    ids: ["kdenlive", "facefusion", "deep-live-cam", "shotcut", "audacity", "opencut"],
   },
   {
     title: "Business, Backends & Productivity",
@@ -249,7 +371,7 @@ const BUNDLE_GROUPS = [
   },
 ];
 
-const TABS = ["All Softwares", "Autonomous Agents", "Local AI & Chat", "Business & Sales", "Dev & Tools"];
+const TABS = ["All Softwares", "Autonomous Agents", "Video & Media", "Local AI & Chat", "Business & Sales", "Dev & Tools"];
 
 export const Route = createFileRoute("/open-source/")({
   head: () => {
@@ -283,9 +405,27 @@ function OpenSourcePage() {
   const filtered = SOFTWARE_LIST.filter((item) => {
     if (activeTab === "All Softwares") return true;
     if (activeTab === "Autonomous Agents") return item.category === "Autonomous Agent";
-    if (activeTab === "Local AI & Chat") return item.category === "Local LLM" || item.category === "Document AI" || item.category === "Reasoning & LLM";
-    if (activeTab === "Business & Sales") return item.category === "Sales & Support" || item.category === "Productivity";
-    if (activeTab === "Dev & Tools") return item.category === "Backend & Database" || item.category === "Media & AI" || item.category === "Autonomous Agent";
+    if (activeTab === "Video & Media")
+      return (
+        item.category === "Video & Editing" ||
+        item.category === "AI Media" ||
+        item.category === "Audio & Podcast" ||
+        item.category === "Media & AI"
+      );
+    if (activeTab === "Local AI & Chat")
+      return (
+        item.category === "Local LLM" ||
+        item.category === "Document AI" ||
+        item.category === "Reasoning & LLM"
+      );
+    if (activeTab === "Business & Sales")
+      return item.category === "Sales & Support" || item.category === "Productivity";
+    if (activeTab === "Dev & Tools")
+      return (
+        item.category === "Backend & Database" ||
+        item.category === "Media & AI" ||
+        item.category === "Autonomous Agent"
+      );
     return true;
   });
 
