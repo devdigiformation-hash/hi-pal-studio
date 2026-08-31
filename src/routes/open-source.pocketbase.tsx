@@ -17,7 +17,6 @@ const DESC =
   "Download PocketBase free: instant high-speed SQLite database, built-in user auth, OAuth, real-time APIs and file storage in a single 32 MB executable for Windows.";
 
 const DOWNLOAD_URL = setupFile.url;
-const WHATSAPP = "https://wa.me/923164467464";
 
 const FEATURES = [
   {
@@ -296,14 +295,6 @@ function PocketBasePage() {
                 className="text-[var(--cyan)] hover:underline"
               >
                 Linktree
-              </a>
-              <a
-                href={WHATSAPP}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--cyan)] hover:underline"
-              >
-                WhatsApp support
               </a>
             </div>
           </GlassCard>

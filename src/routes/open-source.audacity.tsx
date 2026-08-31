@@ -7,7 +7,6 @@ import {
   FileAudio,
   PiggyBank,
   ShieldCheck,
-  MessageSquare,
   CheckCircle2,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -27,7 +26,6 @@ const DESC =
 
 // CONFIGURABLE DOWNLOAD URL: Replace with your direct Google Drive or hosted EXE link
 const DOWNLOAD_URL = "https://www.audacityteam.org/download/windows/";
-const WHATSAPP_URL = "https://wa.me/923164467464";
 
 const FEATURES = [
   {
@@ -187,11 +185,6 @@ function AudacityPage() {
                   Download Audacity for Windows (.EXE)
                 </CyanButton>
               </a>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                <GhostButton size="lg" icon={<MessageSquare size={18} />}>
-                  WhatsApp Support
-                </GhostButton>
-              </a>
             </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
               Direct File Trigger: Audacity-Setup.exe (~30 MB) • Windows 10/11 (64-bit Standalone) •
@@ -336,14 +329,6 @@ function AudacityPage() {
               >
                 Linktree
               </a>
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--cyan)] hover:underline"
-              >
-                WhatsApp support
-              </a>
             </div>
           </GlassCard>
         </div>
@@ -362,11 +347,6 @@ function AudacityPage() {
               <CyanButton size="lg" icon={<WindowsIcon />}>
                 Download Audacity for Windows (.EXE)
               </CyanButton>
-            </a>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              <GhostButton size="lg" icon={<MessageSquare size={18} />}>
-                WhatsApp: +92 316 446 7464
-              </GhostButton>
             </a>
             <Link
               to="/open-source"

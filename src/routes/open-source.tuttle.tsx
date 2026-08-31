@@ -17,7 +17,6 @@ const DESC =
   "Download Tuttle Time Tracker free: track billable hours, project tasks, and client timesheets 100% privately on your Windows PC. Offline time tracking with CSV, Excel & PDF export.";
 
 const DOWNLOAD_URL = setupFile.url;
-const WHATSAPP = "https://wa.me/923164467464";
 
 const FEATURES = [
   {
@@ -295,14 +294,6 @@ function TuttlePage() {
                 className="text-[var(--cyan)] hover:underline"
               >
                 Linktree
-              </a>
-              <a
-                href={WHATSAPP}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--cyan)] hover:underline"
-              >
-                WhatsApp support
               </a>
             </div>
           </GlassCard>

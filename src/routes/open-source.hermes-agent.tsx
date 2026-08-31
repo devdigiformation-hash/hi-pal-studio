@@ -39,7 +39,6 @@ const EXE_URL =
 const DMG_URL = "https://github.com/digiformation/hermes-agent/releases";
 const ZIP_URL = hermesZip.url;
 const REPO_URL = "https://github.com/digiformation/hermes-agent";
-const WHATSAPP = "https://wa.me/923164467464";
 const COMPANY_WEBSITE = "https://www.digiformation.co.uk/";
 const LINKTREE = "https://linktr.ee/digiformationltd";
 const EMAIL = "mailto:info@digiformation.co.uk";
@@ -519,14 +518,12 @@ function HermesPage() {
                   </span>
                 </a>
                 <a
-                  href={WHATSAPP}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="tel:+923164467464"
                   className="flex items-center gap-3 font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
                 >
                   <Phone size={17} className="text-[var(--cyan)]" />
                   <span>
-                    <span className="text-[var(--text-primary)]">WhatsApp Support:</span> +92 316
+                    <span className="text-[var(--text-primary)]">Direct Phone:</span> +92 316
                     446 7464
                   </span>
                 </a>

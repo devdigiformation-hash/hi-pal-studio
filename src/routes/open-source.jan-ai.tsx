@@ -17,7 +17,6 @@ const DESC =
   "Download Jan AI free: run DeepSeek, Llama 3, Qwen and Mistral locally on Windows. 100% private, works offline, unlimited messages, no subscription.";
 
 const DOWNLOAD_URL = setupFile.url;
-const WHATSAPP = "https://wa.me/923164467464";
 
 const FEATURES = [
   {
@@ -296,14 +295,6 @@ function JanAiPage() {
                 className="text-[var(--cyan)] hover:underline"
               >
                 Linktree
-              </a>
-              <a
-                href={WHATSAPP}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--cyan)] hover:underline"
-              >
-                WhatsApp support
               </a>
             </div>
           </GlassCard>

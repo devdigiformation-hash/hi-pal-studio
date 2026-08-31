@@ -36,7 +36,6 @@ const EXE_URL =
   "https://drive.google.com/file/d/1bvTjsKITtbskMexWrjZbYmUeS2gmTpuS/view?usp=sharing";
 const ZIP_URL = openclawZip.url;
 const REPO_URL = "https://github.com/digiformation/openclaw";
-const WHATSAPP = "https://wa.me/923164467464";
 const COMPANY_WEBSITE = "https://www.digiformation.co.uk/";
 const LINKTREE = "https://linktr.ee/digiformationltd";
 const EMAIL = "mailto:info@digiformation.co.uk";
@@ -494,9 +493,7 @@ function OpenClawPage() {
               <div className="flex items-center gap-3">
                 <Phone size={16} color="var(--cyan)" className="shrink-0" />
                 <a
-                  href={WHATSAPP}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="tel:+923164467464"
                   className="text-[var(--cyan)] hover:underline"
                 >
                   +92 316 446 7464

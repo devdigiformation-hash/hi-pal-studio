@@ -17,7 +17,6 @@ const DESC =
   "Download Upscayl free: enhance, sharpen, and upscale images locally on your Windows PC. 100% private, no watermarks, unlimited processing, no subscription.";
 
 const DOWNLOAD_URL = upscaylSetup.url;
-const WHATSAPP = "https://wa.me/923164467464";
 
 const FEATURES = [
   {
@@ -202,14 +201,6 @@ function UpscaylPage() {
                 className="text-[var(--cyan)] hover:underline"
               >
                 Linktree
-              </a>
-              <a
-                href={WHATSAPP}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--cyan)] hover:underline"
-              >
-                WhatsApp support
               </a>
             </div>
           </GlassCard>

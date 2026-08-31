@@ -6,7 +6,6 @@ import {
   Zap,
   ShieldCheck,
   PiggyBank,
-  MessageSquare,
   CheckCircle2,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -26,7 +25,6 @@ const DESC =
 
 // CONFIGURABLE DOWNLOAD URL: Replace with your direct Google Drive or hosted package link
 const DOWNLOAD_URL = "https://github.com/opencut/opencut/releases";
-const WHATSAPP_URL = "https://wa.me/923164467464";
 
 const FEATURES = [
   {
@@ -186,11 +184,6 @@ function OpenCutPage() {
                   Download OpenCut Studio (.ZIP)
                 </CyanButton>
               </a>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                <GhostButton size="lg" icon={<MessageSquare size={18} />}>
-                  WhatsApp Support
-                </GhostButton>
-              </a>
             </div>
             <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
               Direct File Trigger: opencut-main.zip • Cross-Platform Web & Desktop Studio • MIT License
@@ -334,14 +327,6 @@ function OpenCutPage() {
               >
                 Linktree
               </a>
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--cyan)] hover:underline"
-              >
-                WhatsApp support
-              </a>
             </div>
           </GlassCard>
         </div>
@@ -360,11 +345,6 @@ function OpenCutPage() {
               <CyanButton size="lg" icon={<WindowsIcon />}>
                 Download OpenCut Studio (.ZIP)
               </CyanButton>
-            </a>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              <GhostButton size="lg" icon={<MessageSquare size={18} />}>
-                WhatsApp: +92 316 446 7464
-              </GhostButton>
             </a>
             <Link
               to="/open-source"

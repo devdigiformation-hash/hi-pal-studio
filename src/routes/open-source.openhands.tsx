@@ -34,7 +34,7 @@ const DESC =
   "Download OpenHands free: the open-source autonomous AI software engineer that writes, tests and deploys code, fixes GitHub issues, and builds full-stack apps from plain English. MIT license, $0 fees.";
 
 const ZIP_URL = openhandsZip.url;
-const WHATSAPP = "https://wa.me/923164467464";
+const REPO_URL = "https://github.com/All-Hands-AI/OpenHands";
 const COMPANY_WEBSITE = "https://www.digiformation.co.uk/";
 const LINKTREE = "https://linktr.ee/digiformationltd";
 const EMAIL = "mailto:info@digiformation.co.uk";
@@ -506,9 +506,7 @@ function OpenHandsPage() {
               <div className="flex items-center gap-3">
                 <Phone size={16} color="var(--cyan)" className="shrink-0" />
                 <a
-                  href={WHATSAPP}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="tel:+923164467464"
                   className="text-[var(--cyan)] hover:underline"
                 >
                   +92 316 446 7464
