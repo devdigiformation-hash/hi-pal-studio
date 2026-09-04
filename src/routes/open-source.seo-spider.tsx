@@ -12,6 +12,7 @@ import {
   Activity,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
+import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
@@ -108,42 +109,46 @@ const REQUIREMENTS = [
 ];
 
 export const Route = createFileRoute("/open-source/seo-spider")({
-  head: () => ({
-    meta: buildMeta({
+  head: () => {
+    const { meta, links } = buildMeta({
       title: TITLE,
       description: DESC,
       path: "/open-source/seo-spider",
-    }),
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(
-          breadcrumbLd([
-            { name: "Home", url: abs("/") },
-            { name: "Open Source Hub", url: abs("/open-source") },
-            { name: "Open SEO Spider", url: abs("/open-source/seo-spider") },
-          ])
-        ),
-      },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
-          name: "Open SEO Spider & Technical Audit Suite",
-          operatingSystem: "Windows 10, Windows 11",
-          applicationCategory: "DeveloperApplication, BusinessApplication",
-          offers: {
-            "@type": "Offer",
-            price: "0",
-            priceCurrency: "USD",
-          },
-          description: DESC,
-          downloadUrl: DOWNLOAD_URL,
-        }),
-      },
-    ],
-  }),
+    });
+    return {
+      meta,
+      links,
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(
+            breadcrumbLd([
+              { name: "Home", path: "/" },
+              { name: "Open Source Hub", path: "/open-source" },
+              { name: "Open SEO Spider", path: "/open-source/seo-spider" },
+            ])
+          ),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "Open SEO Spider & Technical Audit Suite",
+            operatingSystem: "Windows 10, Windows 11",
+            applicationCategory: "DeveloperApplication, BusinessApplication",
+            offers: {
+              "@type": "Offer",
+              price: "0",
+              priceCurrency: "USD",
+            },
+            description: DESC,
+            downloadUrl: DOWNLOAD_URL,
+          }),
+        },
+      ],
+    };
+  },
   component: OpenSeoSpiderPage,
 });
 
@@ -152,10 +157,10 @@ function OpenSeoSpiderPage() {
     <main className="min-h-screen pt-[100px] md:pt-[120px]">
       <SectionWrapper>
         <Breadcrumbs
-          items={[
-            { label: "Home", to: "/" },
-            { label: "Open Source Tools", to: "/open-source" },
-            { label: "Open SEO Spider", to: "/open-source/seo-spider" },
+          trail={[
+            { name: "Home", path: "/" },
+            { name: "Open Source", path: "/open-source" },
+            { name: "Open SEO Spider", path: "/open-source/seo-spider" },
           ]}
         />
 
@@ -192,33 +197,21 @@ function OpenSeoSpiderPage() {
             </p>
           </div>
 
-          <GlassCard glowColor="#2FE0C8" className="p-3">
-            <div className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-4 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 text-center">
-              <div
-                className="flex h-20 w-20 items-center justify-center rounded-full"
-                style={{
-                  background: "#2FE0C826",
-                  boxShadow: "0 0 40px #2FE0C840",
-                }}
-              >
-                <Search size={40} color="#2FE0C8" strokeWidth={1.5} />
-              </div>
-              <div>
-                <p className="font-display text-[18px] font-bold text-[var(--text-primary)]">
-                  Open SEO Spider Workstation
-                </p>
-                <p className="mx-auto mt-1 max-w-[320px] font-body text-[13.5px] text-[var(--text-secondary)]">
-                  Multi-threaded HTTP crawler, Schema.org JSON-LD validator, redirect mapper &
-                  Google Sitelinks visualizer.
-                </p>
-              </div>
-              <div className="flex flex-wrap justify-center gap-2">
-                <MonoBadge>Unlimited Crawl URLs</MonoBadge>
-                <MonoBadge>Schema.org JSON-LD</MonoBadge>
-                <MonoBadge>Zero Cloud Fees</MonoBadge>
-              </div>
-            </div>
-          </GlassCard>
+          <OpenSourceHeroStage
+            toolId="seo-spider"
+            title="Open SEO Spider Technical Crawler"
+            category="SEO & Web Tools"
+            color="#2FE0C8"
+            downloadUrl={DOWNLOAD_URL}
+            downloadFilename="open-seo-spider.zip"
+            license="MIT / GPL (100% Free)"
+            stars="17.3k ★"
+            version="v3.4.0"
+            
+            quickCommand={"npx @digiformation/seo-spider crawl --url=https://example.com --audit=all"}
+            badges={["Schema.org JSON-LD Validator","Google Sitelinks","Unlimited URLs"]}
+            annualSavings="Save $259 / year vs Screaming Frog"
+          />
         </div>
       </SectionWrapper>
 

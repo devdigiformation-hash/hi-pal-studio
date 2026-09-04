@@ -11,6 +11,7 @@ import {
   Download,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
+import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
@@ -199,33 +200,21 @@ function DeepLiveCamPage() {
             </p>
           </div>
 
-          <GlassCard glowColor="#8B5CF6" className="p-3">
-            <div className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-4 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 text-center">
-              <div
-                className="flex h-20 w-20 items-center justify-center rounded-full"
-                style={{
-                  background: "#8B5CF626",
-                  boxShadow: "0 0 40px #8B5CF640",
-                }}
-              >
-                <Camera size={40} color="#8B5CF6" strokeWidth={1.5} />
-              </div>
-              <div>
-                <p className="font-display text-[18px] font-bold text-[var(--text-primary)]">
-                  Deep-Live-Cam Virtual Studio
-                </p>
-                <p className="mx-auto mt-1 max-w-[320px] font-body text-[13.5px] text-[var(--text-secondary)]">
-                  Single-photo instant 3D mesh, 30+ FPS live webcam tracking for OBS, Zoom, Meet and
-                  Discord.
-                </p>
-              </div>
-              <div className="flex flex-wrap justify-center gap-2">
-                <MonoBadge>45,000+ Stars</MonoBadge>
-                <MonoBadge>Live OBS Virtual Cam</MonoBadge>
-                <MonoBadge>30+ FPS Ultra-Low Latency</MonoBadge>
-              </div>
-            </div>
-          </GlassCard>
+          <OpenSourceHeroStage
+            toolId="deep-live-cam"
+            title="Deep-Live-Cam Realtime Streamer"
+            category="AI Media"
+            color="#A855F7"
+            downloadUrl={ZIP_URL}
+            downloadFilename="Deep-Live-Cam-main.zip"
+            license="GPL-3.0 (100% Free)"
+            stars="41.5k ★"
+            version="v2.0.4"
+            
+            quickCommand={"python run.py --target live --camera 0 --execution-provider directml"}
+            badges={["60 FPS Live Camera","OBS Virtual Cam Sync","Zero Telemetry"]}
+            annualSavings="Save $600 / year vs Avatars SaaS"
+          />
         </div>
       </SectionWrapper>
 

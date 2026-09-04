@@ -49,6 +49,8 @@ import MonoBadge from "@/components/MonoBadge";
 import ActivePulse from "@/components/ActivePulse";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import MasterOpenSourceValueTable from "@/components/seo/MasterOpenSourceValueTable";
+import OpenSourceZigZagShowcase from "@/components/seo/OpenSourceZigZagShowcase";
+import ThreeDTiltCard from "@/components/ui/ThreeDTiltCard";
 import { buildMeta, breadcrumbLd } from "@/lib/seo";
 
 import anythingllmLogo from "@/assets/anythingllm-logo.jpg";
@@ -471,7 +473,7 @@ function OpenSourcePage() {
 
           <h1 className="reveal-item delay-1 mt-5 font-display text-[34px] font-extrabold leading-[1.08] tracking-[-0.035em] text-[var(--text-primary)] sm:text-[44px] md:text-[56px] lg:text-[62px]">
             Open Source AI Software Bundles,{" "}
-            <GradientText from="#2FE0C8" via="#8B7CF6" to="#38BDF8">
+            <GradientText from="#2FE0C8" to="#38BDF8">
               Fully Under Your Command.
             </GradientText>
           </h1>
@@ -609,65 +611,72 @@ function OpenSourcePage() {
             </div>
           </div>
 
-          {/* Software Grid */}
+          {/* High-Level 3D Software Release Grid */}
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {filtered.map((s) => {
               const Icon = s.icon;
               return (
                 <Link key={s.id} to={s.to} className="group block h-full">
-                  <GlassCard
+                  <ThreeDTiltCard
                     glowColor={s.color}
-                    className="relative flex h-full flex-col justify-between overflow-hidden p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/25"
+                    className="relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/15 bg-[#060A12]/90 p-6 shadow-xl backdrop-blur-xl transition-all duration-300 group-hover:border-white/30"
                   >
-                    {/* Top row */}
+                    {/* Top Status & Release Chip Bar */}
                     <div>
                       <div className="flex items-start justify-between gap-3">
                         <div
-                          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border backdrop-blur-md transition-transform duration-300 group-hover:scale-105"
+                          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border backdrop-blur-md transition-transform duration-300 group-hover:scale-110"
                           style={{
                             background: `${s.color}15`,
-                            borderColor: `${s.color}40`,
-                            boxShadow: `0 0 24px ${s.color}25`,
+                            borderColor: `${s.color}50`,
+                            boxShadow: `0 0 24px ${s.color}30`,
                           }}
                         >
                           <Icon size={24} color={s.color} />
                         </div>
 
-                        <div className="flex flex-col items-end gap-1">
-                          <span
-                            className="rounded-full border px-2.5 py-0.5 font-mono text-[9.5px] uppercase tracking-[0.14em]"
-                            style={{
-                              color: s.color,
-                              borderColor: `${s.color}40`,
-                              background: `${s.color}10`,
-                            }}
-                          >
-                            {s.badge}
-                          </span>
-                          <span className="font-mono text-[10px] text-[var(--text-tertiary)]">
-                            {s.license}
+                        <div className="flex flex-col items-end gap-1.5">
+                          <div className="flex items-center gap-1.5">
+                            <span className="h-1.5 w-1.5 rounded-full animate-ping" style={{ backgroundColor: s.color }} />
+                            <span
+                              className="rounded-full border px-2.5 py-0.5 font-mono text-[9.5px] font-semibold uppercase tracking-[0.14em]"
+                              style={{
+                                color: s.color,
+                                borderColor: `${s.color}50`,
+                                background: `${s.color}15`,
+                              }}
+                            >
+                              {s.badge}
+                            </span>
+                          </div>
+                          <span className="rounded bg-white/5 px-2 py-0.5 font-mono text-[9.5px] text-zinc-400 border border-white/5">
+                            {s.license} • 100% Free
                           </span>
                         </div>
                       </div>
 
                       {/* Name & Tagline */}
-                      <h3 className="mt-5 font-display text-[18px] font-bold leading-snug text-[var(--text-primary)] transition group-hover:text-[var(--cyan)]">
+                      <h3 className="mt-5 font-display text-[18px] font-bold leading-snug text-white transition group-hover:text-[var(--cyan)]">
                         {s.name}
                       </h3>
-                      <p className="mt-2 font-body text-[13.5px] leading-[1.65] text-[var(--text-secondary)]">
+                      <p className="mt-2 font-body text-[13.5px] leading-[1.65] text-zinc-400">
                         {s.tagline}
                       </p>
 
                       {/* Visual Preview Screenshot (if present) */}
                       {s.image && (
-                        <div className="mt-4 overflow-hidden rounded-lg border border-white/10 bg-[#05070B] aspect-[16/9] relative">
+                        <div className="mt-4 overflow-hidden rounded-xl border border-white/10 bg-[#03060C] aspect-[16/9] relative group-hover:border-white/20 transition">
                           <img
                             src={s.image}
                             alt={`${s.name} screenshot preview`}
                             loading="lazy"
                             className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-[#020408]/80 to-transparent" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#020408]/90 via-transparent to-transparent" />
+                          <div className="absolute bottom-2 left-2.5 flex items-center gap-1.5 font-mono text-[10px] text-zinc-300">
+                            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                            <span>Verified Standalone App</span>
+                          </div>
                         </div>
                       )}
 
@@ -676,7 +685,7 @@ function OpenSourcePage() {
                         {s.bullets.map((b, idx) => (
                           <li
                             key={idx}
-                            className="flex items-start gap-2 font-body text-[12.5px] leading-[1.6] text-[var(--text-secondary)]"
+                            className="flex items-start gap-2 font-body text-[12.5px] leading-[1.6] text-zinc-300"
                           >
                             <CheckCircle2
                               size={14}
@@ -689,25 +698,25 @@ function OpenSourcePage() {
                       </ul>
                     </div>
 
-                    {/* Bottom CTA Row */}
+                    {/* Bottom CTA Row with 1-Click Launch styling */}
                     <div className="mt-6 border-t border-white/10 pt-4 flex items-center justify-between">
                       <div className="flex flex-wrap gap-1.5">
                         {s.features.slice(0, 2).map((f) => (
                           <span
                             key={f}
-                            className="rounded border border-white/10 bg-white/[0.03] px-2 py-0.5 font-mono text-[9.5px] text-[var(--text-tertiary)]"
+                            className="rounded-md border border-white/10 bg-white/[0.04] px-2 py-0.5 font-mono text-[10px] text-zinc-400"
                           >
                             {f}
                           </span>
                         ))}
                       </div>
 
-                      <div className="flex items-center gap-1.5 font-display text-[12.5px] font-semibold text-[var(--cyan)] group-hover:underline">
-                        <span>Open Hub</span>
-                        <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                      <div className="flex items-center gap-1.5 rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 font-mono text-[11px] font-bold text-cyan-300 transition-all group-hover:bg-cyan-500/20 group-hover:border-cyan-400 group-hover:shadow-[0_0_12px_rgba(47,224,200,0.3)]">
+                        <span>Launch Hub</span>
+                        <ArrowRight size={13} className="transition-transform group-hover:translate-x-1" />
                       </div>
                     </div>
-                  </GlassCard>
+                  </ThreeDTiltCard>
                 </Link>
               );
             })}

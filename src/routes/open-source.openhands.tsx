@@ -21,6 +21,7 @@ import {
   MessageSquare,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
+import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
@@ -256,33 +257,21 @@ function OpenHandsPage() {
             </p>
           </div>
 
-          <GlassCard glowColor="#3B82F6" className="p-3">
-            <div className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-4 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 text-center">
-              <div
-                className="flex h-20 w-20 items-center justify-center rounded-full"
-                style={{
-                  background: "rgba(59,130,246,0.15)",
-                  boxShadow: "0 0 40px rgba(59,130,246,0.25)",
-                }}
-              >
-                <Code2 size={40} color="#3B82F6" strokeWidth={1.5} />
-              </div>
-              <div>
-                <p className="font-display text-[18px] font-bold text-[var(--text-primary)]">
-                  OpenHands 4-Panel Engineering Studio
-                </p>
-                <p className="mx-auto mt-1 max-w-[320px] font-body text-[13.5px] text-[var(--text-secondary)]">
-                  Live code editor, autonomous Bash terminal, embedded browser preview, and
-                  architectural chat stream in one workstation.
-                </p>
-              </div>
-              <div className="flex flex-wrap justify-center gap-2">
-                <MonoBadge>Python + React</MonoBadge>
-                <MonoBadge>Docker Sandbox</MonoBadge>
-                <MonoBadge>100+ LLMs</MonoBadge>
-              </div>
-            </div>
-          </GlassCard>
+          <OpenSourceHeroStage
+            toolId="openhands"
+            title="OpenHands Autonomous AI Engineer"
+            category="Autonomous Agent"
+            color="#3B82F6"
+            downloadUrl={ZIP_URL}
+            downloadFilename="OpenHands-main.zip"
+            license="MIT License (100% Free)"
+            stars="46.2k ★"
+            version="v0.28.0 (SWE-Bench 53%+)"
+            
+            quickCommand={"docker run -it --pull=always -e SANDBOX_USER_ID=$(id -u) -v /var/run/docker.sock:/var/run/docker.sock -p 3000:3000 ghcr.io/all-hands-ai/openhands:0.28"}
+            badges={["SWE-Bench Verified","Docker Sandbox","VS Code Shell"]}
+            annualSavings="Save $6,000 / year vs Devin"
+          />
         </div>
       </SectionWrapper>
 

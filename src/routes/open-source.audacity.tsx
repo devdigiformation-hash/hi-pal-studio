@@ -11,6 +11,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
+import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
@@ -194,33 +195,21 @@ function AudacityPage() {
             </p>
           </div>
 
-          <GlassCard glowColor="#3B82F6" className="p-3">
-            <div className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-4 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 text-center">
-              <div
-                className="flex h-20 w-20 items-center justify-center rounded-full"
-                style={{
-                  background: "#3B82F626",
-                  boxShadow: "0 0 40px #3B82F640",
-                }}
-              >
-                <Mic size={40} color="#3B82F6" strokeWidth={1.5} />
-              </div>
-              <div>
-                <p className="font-display text-[18px] font-bold text-[var(--text-primary)]">
-                  Audacity Multi-Track Studio
-                </p>
-                <p className="mx-auto mt-1 max-w-[320px] font-body text-[13.5px] text-[var(--text-secondary)]">
-                  Live voice recording, 1-click spectral noise cleaning, parametric EQ, compressor & real-time
-                  VST3 plugins.
-                </p>
-              </div>
-              <div className="flex flex-wrap justify-center gap-2">
-                <MonoBadge>Multi-Track Audio</MonoBadge>
-                <MonoBadge>1-Click Noise Removal</MonoBadge>
-                <MonoBadge>VST3 Plugin Suite</MonoBadge>
-              </div>
-            </div>
-          </GlassCard>
+          <OpenSourceHeroStage
+            toolId="audacity"
+            title="Audacity Multi-Track Audio Studio"
+            category="Audio & Podcast"
+            color="#3B82F6"
+            downloadUrl={DOWNLOAD_URL}
+            downloadFilename="audacity-win-x64.exe"
+            license="GPL-3.0 (100% Free)"
+            stars="14.2k ★"
+            version="v3.7.1"
+            
+            quickCommand={"winget install Audacity.Audacity"}
+            badges={["AI Spectral Noise Gate","VST3 Plugin Engine","Lossless 32-Bit"]}
+            annualSavings="Save $240 / year vs Adobe Audition"
+          />
         </div>
       </SectionWrapper>
 

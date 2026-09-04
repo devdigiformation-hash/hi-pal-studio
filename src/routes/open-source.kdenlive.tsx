@@ -12,6 +12,7 @@ import {
   Film,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
+import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
@@ -195,33 +196,21 @@ function KdenlivePage() {
             </p>
           </div>
 
-          <GlassCard glowColor="#3B82F6" className="p-3">
-            <div className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-4 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 text-center">
-              <div
-                className="flex h-20 w-20 items-center justify-center rounded-full"
-                style={{
-                  background: "#3B82F626",
-                  boxShadow: "0 0 40px #3B82F640",
-                }}
-              >
-                <Video size={40} color="#3B82F6" strokeWidth={1.5} />
-              </div>
-              <div>
-                <p className="font-display text-[18px] font-bold text-[var(--text-primary)]">
-                  Kdenlive Studio Timeline
-                </p>
-                <p className="mx-auto mt-1 max-w-[320px] font-body text-[13.5px] text-[var(--text-secondary)]">
-                  Multi-track 4K timeline, Whisper AI speech-to-text captions, keyframe motion
-                  tracking & GPU acceleration.
-                </p>
-              </div>
-              <div className="flex flex-wrap justify-center gap-2">
-                <MonoBadge>4K / 60FPS Timeline</MonoBadge>
-                <MonoBadge>Whisper Subtitles</MonoBadge>
-                <MonoBadge>Zero Watermark</MonoBadge>
-              </div>
-            </div>
-          </GlassCard>
+          <OpenSourceHeroStage
+            toolId="kdenlive"
+            title="Kdenlive 4K Multi-Track Video Studio"
+            category="Video & Editing"
+            color="#3B82F6"
+            downloadUrl={DOWNLOAD_URL}
+            downloadFilename="kdenlive-setup.exe"
+            license="GPL-3.0 (100% Free)"
+            stars="15.4k ★"
+            version="v24.12.0"
+            
+            quickCommand={"winget install KDE.Kdenlive"}
+            badges={["Whisper AI Subtitles","4K 60FPS Timeline","Zero Watermark"]}
+            annualSavings="Save $600 / year vs Premiere Pro"
+          />
         </div>
       </SectionWrapper>
 

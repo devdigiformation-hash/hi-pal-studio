@@ -2,6 +2,7 @@ import OpenSourceValueComparisonChart from "@/components/seo/OpenSourceValueComp
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ShieldCheck, WifiOff, Bot, PiggyBank, Zap, Terminal, Key } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
+import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
@@ -179,14 +180,21 @@ function JanAiPage() {
             </p>
           </div>
 
-          <GlassCard glowColor="var(--cyan)" className="p-3">
-            <img
-              src={shot.url}
-              alt="Jan AI desktop app on Windows showing the local chat window and model selector"
-              loading="lazy"
-              className="w-full rounded-[10px]"
-            />
-          </GlassCard>
+          <OpenSourceHeroStage
+            toolId="jan-ai"
+            title="Jan AI Local LLM Studio"
+            category="Local LLM"
+            color="#2FE0C8"
+            downloadUrl={DOWNLOAD_URL}
+            downloadFilename="Jan-Setup-x64.exe"
+            license="AGPL-3.0 (100% Free)"
+            stars="32.5k ★"
+            version="v0.5.14"
+            image={shot.url}
+            quickCommand={"winget install Jan.Jan"}
+            badges={["100% Offline","DeepSeek & Llama 3","Local REST API"]}
+            annualSavings="Save $240 / year vs ChatGPT Plus"
+          />
         </div>
       </SectionWrapper>
 

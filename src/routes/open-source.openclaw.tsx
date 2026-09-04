@@ -19,6 +19,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
+import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
@@ -241,33 +242,21 @@ function OpenClawPage() {
             </p>
           </div>
 
-          <GlassCard glowColor="#6366F1" className="p-3">
-            <div className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-4 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 text-center">
-              <div
-                className="flex h-20 w-20 items-center justify-center rounded-full"
-                style={{
-                  background: "rgba(99,102,241,0.15)",
-                  boxShadow: "0 0 40px rgba(99,102,241,0.25)",
-                }}
-              >
-                <Bot size={40} color="#6366F1" strokeWidth={1.5} />
-              </div>
-              <div>
-                <p className="font-display text-[18px] font-bold text-[var(--text-primary)]">
-                  OpenClaw Mission Control
-                </p>
-                <p className="mx-auto mt-1 max-w-[320px] font-body text-[13.5px] text-[var(--text-secondary)]">
-                  Natural-language mission planner, live browser feed, terminal sandbox, code
-                  editor, and self-healing debugger in one desktop studio.
-                </p>
-              </div>
-              <div className="flex flex-wrap justify-center gap-2">
-                <MonoBadge>Python + Node.js</MonoBadge>
-                <MonoBadge>Headless Browser</MonoBadge>
-                <MonoBadge>Ollama / Cloud LLMs</MonoBadge>
-              </div>
-            </div>
-          </GlassCard>
+          <OpenSourceHeroStage
+            toolId="openclaw"
+            title="OpenClaw Autonomous Desktop Operator"
+            category="Autonomous Agent"
+            color="#6366F1"
+            downloadUrl={ZIP_URL}
+            downloadFilename="OpenClaw-main.zip"
+            license="MIT License (100% Free)"
+            stars="24.1k ★"
+            version="v1.1.2 Stable"
+            
+            quickCommand={"git clone https://github.com/openclaw/openclaw && cd openclaw && pip install -r requirements.txt"}
+            badges={["Browser Automation","Local Python Sandbox","Zero Cloud Fees"]}
+            annualSavings="Save $2,400 / year vs Manus/Devin"
+          />
         </div>
       </SectionWrapper>
 

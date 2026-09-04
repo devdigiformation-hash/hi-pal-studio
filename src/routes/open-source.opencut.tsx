@@ -11,6 +11,7 @@ import {
   Download,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
+import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
@@ -199,33 +200,21 @@ function OpenCutPage() {
             </p>
           </div>
 
-          <GlassCard glowColor="#F59E0B" className="p-3">
-            <div className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-4 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 text-center">
-              <div
-                className="flex h-20 w-20 items-center justify-center rounded-full"
-                style={{
-                  background: "#F59E0B26",
-                  boxShadow: "0 0 40px #F59E0B40",
-                }}
-              >
-                <Smartphone size={40} color="#F59E0B" strokeWidth={1.5} />
-              </div>
-              <div>
-                <p className="font-display text-[18px] font-bold text-[var(--text-primary)]">
-                  OpenCut Reels & Shorts Studio
-                </p>
-                <p className="mx-auto mt-1 max-w-[320px] font-body text-[13.5px] text-[var(--text-secondary)]">
-                  Instant 9:16 TikTok/Reels presets, magnetic snapping timeline, animated text
-                  overlays & zero watermarks.
-                </p>
-              </div>
-              <div className="flex flex-wrap justify-center gap-2">
-                <MonoBadge>9:16 Vertical Video</MonoBadge>
-                <MonoBadge>Magnetic Snapping</MonoBadge>
-                <MonoBadge>Zero Watermark</MonoBadge>
-              </div>
-            </div>
-          </GlassCard>
+          <OpenSourceHeroStage
+            toolId="opencut"
+            title="OpenCut Social & Reels Video Studio"
+            category="Video & Editing"
+            color="#F59E0B"
+            downloadUrl={DOWNLOAD_URL}
+            downloadFilename="OpenCut-Setup.exe"
+            license="MIT License (100% Free)"
+            stars="11.6k ★"
+            version="v1.3.0"
+            
+            quickCommand={"git clone https://github.com/opencut/opencut && cd opencut && npm run dev"}
+            badges={["9:16 Shorts Presets","Magnetic Snapping","Zero Watermark"]}
+            annualSavings="Save $120 / year vs CapCut Pro"
+          />
         </div>
       </SectionWrapper>
 

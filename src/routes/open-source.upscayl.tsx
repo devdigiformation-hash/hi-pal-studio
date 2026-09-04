@@ -2,6 +2,7 @@ import OpenSourceValueComparisonChart from "@/components/seo/OpenSourceValueComp
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Sparkles, ShieldCheck, Zap, Bot, Database, PiggyBank } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
+import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
@@ -130,16 +131,21 @@ function UpscaylPage() {
             </div>
           </div>
 
-          <GlassCard glowColor="var(--cyan)" className="p-3">
-            <img
-              src={upscaylShot.url}
-              alt="Upscayl 2.15.0 desktop app interface showing batch upscayl toggle, AI model selection and 4x image scale on Windows"
-              width={1920}
-              height={1019}
-              loading="lazy"
-              className="w-full rounded-[10px] border border-[var(--border-subtle)]"
-            />
-          </GlassCard>
+          <OpenSourceHeroStage
+            toolId="upscayl"
+            title="Upscayl AI Image & Graphic Enhancer"
+            category="Media & AI"
+            color="#EC4899"
+            downloadUrl={DOWNLOAD_URL}
+            downloadFilename="upscayl-setup.exe"
+            license="AGPL-3.0 (100% Free)"
+            stars="31.2k ★"
+            version="v2.15.0"
+            image={shot.url}
+            quickCommand={"winget install Upscayl.Upscayl"}
+            badges={["Real-ESRGAN Model","16X Ultra-HD","Direct Vulkan GPU"]}
+            annualSavings="Save $120 / year vs Topaz Gigapixel"
+          />
         </div>
       </SectionWrapper>
 

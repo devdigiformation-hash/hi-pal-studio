@@ -2,6 +2,7 @@ import OpenSourceValueComparisonChart from "@/components/seo/OpenSourceValueComp
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Database, Users, FolderArchive, LayoutDashboard, Unplug, PiggyBank } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
+import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
@@ -179,14 +180,21 @@ function PocketBasePage() {
             </p>
           </div>
 
-          <GlassCard glowColor="var(--cyan)" className="p-3">
-            <img
-              src={screenshot.url}
-              alt="PocketBase admin dashboard showing the Collections view, API preview and database editor"
-              loading="lazy"
-              className="w-full rounded-[10px]"
-            />
-          </GlassCard>
+          <OpenSourceHeroStage
+            toolId="pocketbase"
+            title="PocketBase Realtime Backend & DB"
+            category="Backend & Database"
+            color="#7DD3FC"
+            downloadUrl={DOWNLOAD_URL}
+            downloadFilename="pocketbase_windows_amd64.zip"
+            license="MIT License (100% Free)"
+            stars="42.8k ★"
+            version="v0.25.9"
+            image={shot.url}
+            quickCommand={"./pocketbase.exe serve --http=127.0.0.1:8090"}
+            badges={["Single 32MB Binary","Realtime WebSockets","Instant Admin UI"]}
+            annualSavings="Save $300 / year vs Supabase Pro"
+          />
         </div>
       </SectionWrapper>
 

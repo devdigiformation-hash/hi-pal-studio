@@ -11,6 +11,7 @@ import {
   Download,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
+import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
@@ -199,33 +200,21 @@ function FaceFusionPage() {
             </p>
           </div>
 
-          <GlassCard glowColor="#EC4899" className="p-3">
-            <div className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-4 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 text-center">
-              <div
-                className="flex h-20 w-20 items-center justify-center rounded-full"
-                style={{
-                  background: "#EC489926",
-                  boxShadow: "0 0 40px #EC489940",
-                }}
-              >
-                <Smile size={40} color="#EC4899" strokeWidth={1.5} />
-              </div>
-              <div>
-                <p className="font-display text-[18px] font-bold text-[var(--text-primary)]">
-                  FaceFusion AI Face Engine
-                </p>
-                <p className="mx-auto mt-1 max-w-[320px] font-body text-[13.5px] text-[var(--text-secondary)]">
-                  High-fidelity video & photo face swap, GFPGAN 4K face enhancement, lip-sync & CUDA
-                  GPU acceleration.
-                </p>
-              </div>
-              <div className="flex flex-wrap justify-center gap-2">
-                <MonoBadge>25,000+ Stars</MonoBadge>
-                <MonoBadge>GFPGAN 4K</MonoBadge>
-                <MonoBadge>100% Local</MonoBadge>
-              </div>
-            </div>
-          </GlassCard>
+          <OpenSourceHeroStage
+            toolId="facefusion"
+            title="FaceFusion Next-Gen Neural Swapper"
+            category="AI Media"
+            color="#F43F5E"
+            downloadUrl={ZIP_URL}
+            downloadFilename="facefusion-master.zip"
+            license="MIT License (100% Free)"
+            stars="28.9k ★"
+            version="v3.1.1"
+            
+            quickCommand={"python run.py --execution-providers cuda --face-swapper-model inswapper_128"}
+            badges={["Real-Time CUDA GPU","Lip Sync & Enhancer","Zero Cloud Fees"]}
+            annualSavings="Save $348 / year vs HeyGen"
+          />
         </div>
       </SectionWrapper>
 

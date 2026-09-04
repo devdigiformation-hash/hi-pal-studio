@@ -10,6 +10,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
+import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
@@ -192,33 +193,21 @@ function ShotcutPage() {
             </p>
           </div>
 
-          <GlassCard glowColor="#10B981" className="p-3">
-            <div className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-4 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 text-center">
-              <div
-                className="flex h-20 w-20 items-center justify-center rounded-full"
-                style={{
-                  background: "#10B98126",
-                  boxShadow: "0 0 40px #10B98140",
-                }}
-              >
-                <Film size={40} color="#10B981" strokeWidth={1.5} />
-              </div>
-              <div>
-                <p className="font-display text-[18px] font-bold text-[var(--text-primary)]">
-                  Shotcut 4K Video Studio
-                </p>
-                <p className="mx-auto mt-1 max-w-[320px] font-body text-[13.5px] text-[var(--text-secondary)]">
-                  Universal FFmpeg format support, 3-way color grading wheels, audio peak mixing & keyframe
-                  easing.
-                </p>
-              </div>
-              <div className="flex flex-wrap justify-center gap-2">
-                <MonoBadge>4K / ProRes / RAW</MonoBadge>
-                <MonoBadge>Zero Ads or Watermarks</MonoBadge>
-                <MonoBadge>Lightweight ~85MB</MonoBadge>
-              </div>
-            </div>
-          </GlassCard>
+          <OpenSourceHeroStage
+            toolId="shotcut"
+            title="Shotcut Pro Video Workstation"
+            category="Video & Editing"
+            color="#10B981"
+            downloadUrl={DOWNLOAD_URL}
+            downloadFilename="shotcut-win64.exe"
+            license="GPL-3.0 (100% Free)"
+            stars="12.8k ★"
+            version="v25.01.25"
+            
+            quickCommand={"winget install Meltytech.Shotcut"}
+            badges={["GPU Codec Acceleration","Pro Color Grading","Multi-Format Export"]}
+            annualSavings="Save $360 / year vs Vegas Pro"
+          />
         </div>
       </SectionWrapper>
 

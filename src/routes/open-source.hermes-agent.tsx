@@ -21,6 +21,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
+import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
@@ -285,33 +286,21 @@ function HermesPage() {
             </p>
           </div>
 
-          <GlassCard glowColor="#F59E0B" className="p-3">
-            <div className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-4 rounded-[10px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 text-center">
-              <div
-                className="flex h-20 w-20 items-center justify-center rounded-full"
-                style={{
-                  background: "rgba(245,158,11,0.15)",
-                  boxShadow: "0 0 40px rgba(245,158,11,0.25)",
-                }}
-              >
-                <Brain size={40} color="#F59E0B" strokeWidth={1.5} />
-              </div>
-              <div>
-                <p className="font-display text-[18px] font-bold text-[var(--text-primary)]">
-                  Hermes Reasoning Studio
-                </p>
-                <p className="mx-auto mt-1 max-w-[320px] font-body text-[13.5px] text-[var(--text-secondary)]">
-                  Natural-language mission planner, structured tool calls, 128K context research,
-                  and local GPU acceleration in one desktop studio.
-                </p>
-              </div>
-              <div className="flex flex-wrap justify-center gap-2">
-                <MonoBadge>Hermes-3 Architecture</MonoBadge>
-                <MonoBadge>Function Calling</MonoBadge>
-                <MonoBadge>GGUF / MLX</MonoBadge>
-              </div>
-            </div>
-          </GlassCard>
+          <OpenSourceHeroStage
+            toolId="hermes-agent"
+            title="Hermes Autonomous Reasoning Core"
+            category="Reasoning & LLM"
+            color="#F59E0B"
+            downloadUrl={ZIP_URL}
+            downloadFilename="Hermes-Agent-main.zip"
+            license="Apache 2.0 (100% Free)"
+            stars="18.9k ★"
+            version="v3.2.0"
+            
+            quickCommand={"ollama run hermes3:8b-instruct-q4_K_M"}
+            badges={["Nous Hermes 3 Core","Function Calling","100% Offline"]}
+            annualSavings="Save $2,400 / year vs Claude Pro"
+          />
         </div>
       </SectionWrapper>
 

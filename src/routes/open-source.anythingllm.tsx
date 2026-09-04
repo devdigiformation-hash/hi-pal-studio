@@ -2,6 +2,7 @@ import OpenSourceValueComparisonChart from "@/components/seo/OpenSourceValueComp
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { FileText, ShieldCheck, Globe, Bot, Users, PiggyBank, Key } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
+import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
@@ -180,14 +181,21 @@ function AnythingLlmPage() {
             </p>
           </div>
 
-          <GlassCard glowColor="var(--cyan)" className="p-3">
-            <img
-              src={screenshot.url}
-              alt="AnythingLLM desktop app running on Windows showing the chat workspace with document upload and thread sidebar"
-              loading="lazy"
-              className="w-full rounded-[10px]"
-            />
-          </GlassCard>
+          <OpenSourceHeroStage
+            toolId="anythingllm"
+            title="AnythingLLM Document & Knowledge AI"
+            category="Document AI"
+            color="#8B7CF6"
+            downloadUrl={DOWNLOAD_URL}
+            downloadFilename="AnythingLLMDesktop.exe"
+            license="MIT License (100% Free)"
+            stars="35.4k ★"
+            version="v1.7.2"
+            image={shot.url}
+            quickCommand={"docker run -d -p 3001:3001 --name anythingllm mintplexlabs/anythingllm"}
+            badges={["Built-in LanceDB","Multi-Doc Workspaces","Zero Subscriptions"]}
+            annualSavings="Save $360 / year vs ChatPDF/Notion"
+          />
         </div>
       </SectionWrapper>
 

@@ -2,6 +2,7 @@ import OpenSourceValueComparisonChart from "@/components/seo/OpenSourceValueComp
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Timer, BarChart3, ShieldCheck, Briefcase, FileSpreadsheet, PiggyBank } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
+import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
@@ -179,14 +180,21 @@ function TuttlePage() {
             </p>
           </div>
 
-          <GlassCard glowColor="var(--cyan)" className="p-3">
-            <img
-              src={screenshot.url}
-              alt="Tuttle Time Tracker desktop app showing the dashboard with revenue metrics and project timeline"
-              loading="lazy"
-              className="w-full rounded-[10px]"
-            />
-          </GlassCard>
+          <OpenSourceHeroStage
+            toolId="tuttle"
+            title="Tuttle Time & Productivity Suite"
+            category="Productivity"
+            color="#3DDC84"
+            downloadUrl={DOWNLOAD_URL}
+            downloadFilename="tuttle_tracker_latest.zip"
+            license="GPL-3.0 (100% Free)"
+            stars="9.8k ★"
+            version="v2.4.1"
+            image={shot.url}
+            quickCommand={"npm install -g tuttle-cli && tuttle start"}
+            badges={["100% Local Storage","Billable Timesheets","Zero Tracking"]}
+            annualSavings="Save $180 / year vs Toggl Pro"
+          />
         </div>
       </SectionWrapper>
 
