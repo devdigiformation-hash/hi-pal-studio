@@ -119,8 +119,8 @@ const SLIDES = [
   {
     src: digiStudioTranscript,
     tag: "Digi Studio — Transcript Intelligence & Course Maker",
-    title: "Instant auto-fetching, Whisper audio transcription, and course synthesis.",
-    body: "Paste any video or playlist link for zero-download instant text fetching, or upload media files for local Whisper transcription, structured study notes, and course generation.",
+    title: "Instant auto-fetching, AI audio transcription, and course synthesis.",
+    body: "Paste any video or playlist link for zero-download instant text fetching, or upload media files for local AI speech-to-text transcription, structured study notes, and course generation.",
   },
   {
     src: digiMarketing,

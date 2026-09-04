@@ -10,7 +10,7 @@ const ITEMS = [
   "Offline Video Editor & Talking Avatar",
   "Multilingual Voice TTS & Audiobooks",
   "Always-On Business Rules",
-  "Live Transcripts & Whisper",
+  "Live Transcripts & Speech-to-Text",
   "Mobile Companion",
 ];
 

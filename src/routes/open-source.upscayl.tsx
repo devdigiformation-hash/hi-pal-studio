@@ -16,7 +16,8 @@ const TITLE = "Upscayl AI Image Enhancer — Free Offline Upscaler for Windows";
 const DESC =
   "Download Upscayl free: enhance, sharpen, and upscale images locally on your Windows PC. 100% private, no watermarks, unlimited processing, no subscription.";
 
-const DOWNLOAD_URL = upscaylSetup.url;
+const DOWNLOAD_URL =
+  "https://github.com/upscayl/upscayl/releases/download/v2.15.0/upscayl-2.15.0-win.exe";
 
 const FEATURES = [
   {

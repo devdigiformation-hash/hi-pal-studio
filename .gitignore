@@ -27,6 +27,8 @@ src/assets/*.zip
 src/assets/*.exe
 public/__l5e/**/*.zip
 public/__l5e/**/*.exe
+public/downloads/*.zip
+public/downloads/*.exe
 
 # Editor directories and files
 .vscode/*

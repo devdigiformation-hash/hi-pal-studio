@@ -16,7 +16,8 @@ const TITLE = "Tuttle Time Tracker — Free Billable Hours & Productivity App fo
 const DESC =
   "Download Tuttle Time Tracker free: track billable hours, project tasks, and client timesheets 100% privately on your Windows PC. Offline time tracking with CSV, Excel & PDF export.";
 
-const DOWNLOAD_URL = setupFile.url;
+const DOWNLOAD_URL =
+  "https://github.com/tuttle-dev/tuttle/releases/download/v4.4.0/Tuttle-4.4.0-Windows-Setup.exe";
 
 const FEATURES = [
   {

@@ -123,14 +123,17 @@ const COMPARISON = [
   },
 ];
 
+const DIRECT_EXE_URL = "/downloads/Hermes-Setup.exe";
+
 const DOWNLOAD_CARDS = [
   {
     icon: Monitor,
     title: "Windows 10/11 Desktop Studio",
-    filename: "Hermes-Agent-Setup.exe",
+    filename: "Hermes-Setup.exe",
     specs: "Windows 10/11 (x64) • 8GB+ RAM • Optional NVIDIA GPU (RTX 3060+)",
     badge: "Recommended for Windows",
-    url: EXE_URL,
+    url: DIRECT_EXE_URL,
+    download: "Hermes-Setup.exe",
   },
   {
     icon: Apple,
@@ -139,6 +142,7 @@ const DOWNLOAD_CARDS = [
     specs: "macOS 13.0+ (Ventura/Sonoma/Sequoia) • Apple M1/M2/M3/M4 / Intel",
     badge: "Native Apple Silicon Metal Optimized",
     url: DMG_URL,
+    download: undefined,
   },
   {
     icon: FileArchive,
@@ -147,6 +151,7 @@ const DOWNLOAD_CARDS = [
     specs: "Python core, LangChain/LlamaIndex bridges, tool definitions & CLI scripts",
     badge: "Cross-Platform & Linux",
     url: ZIP_URL,
+    download: "hermes-agent-main.zip",
   },
 ];
 
@@ -257,19 +262,19 @@ function HermesPage() {
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
-              <a href={EXE_URL} target="_blank" rel="noopener noreferrer">
+              <a href={DIRECT_EXE_URL} download="Hermes-Setup.exe">
                 <CyanButton size="lg" icon={<WindowsIcon />} tone={AMBER}>
                   Download for Windows (.EXE)
                 </CyanButton>
               </a>
-              <a href={DMG_URL} target="_blank" rel="noopener noreferrer">
-                <CyanButton size="lg" icon={<AppleIcon />}>
-                  Download for macOS (.DMG)
-                </CyanButton>
-              </a>
-              <a href={ZIP_URL} target="_blank" rel="noopener noreferrer">
+              <a href={ZIP_URL} download="hermes-agent-main.zip">
                 <CyanButton size="lg" icon={<ZipIcon />}>
                   Download Source Code (.ZIP)
+                </CyanButton>
+              </a>
+              <a href={DMG_URL} target="_blank" rel="noopener noreferrer">
+                <CyanButton size="lg" icon={<AppleIcon />}>
+                  macOS (.DMG)
                 </CyanButton>
               </a>
             </div>
@@ -364,8 +369,7 @@ function HermesPage() {
                 </p>
                 <a
                   href={card.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  {...(card.download ? { download: card.download } : { target: "_blank", rel: "noopener noreferrer" })}
                   className="mt-5 inline-flex items-center justify-center gap-2 rounded-[10px] bg-[var(--cyan)] px-4 py-2.5 font-display text-[13px] font-bold text-[var(--bg-dark)] transition-transform hover:scale-[1.02]"
                 >
                   <Download size={16} />

@@ -34,6 +34,7 @@ const DESC =
 
 const EXE_URL =
   "https://drive.google.com/file/d/1bvTjsKITtbskMexWrjZbYmUeS2gmTpuS/view?usp=sharing";
+const LOCAL_EXE_URL = "/downloads/OpenClawCompanion-Setup-x64.exe";
 const ZIP_URL = openclawZip.url;
 const REPO_URL = "https://github.com/digiformation/openclaw";
 const COMPANY_WEBSITE = "https://www.digiformation.co.uk/";
@@ -223,12 +224,12 @@ function OpenClawPage() {
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
-              <a href={EXE_URL} target="_blank" rel="noopener noreferrer">
+              <a href={LOCAL_EXE_URL} download="OpenClawCompanion-Setup-x64.exe">
                 <CyanButton size="lg" icon={<WindowsIcon />} tone={INDIGO}>
                   Download OpenClaw for Windows (.EXE)
                 </CyanButton>
               </a>
-              <a href={ZIP_URL} target="_blank" rel="noopener noreferrer">
+              <a href={ZIP_URL} download="openclaw-main.zip">
                 <CyanButton size="lg" icon={<ZipIcon />}>
                   Download Source Code (.ZIP)
                 </CyanButton>
@@ -415,9 +416,8 @@ function OpenClawPage() {
                     users.
                   </p>
                   <a
-                    href={EXE_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={LOCAL_EXE_URL}
+                    download="OpenClawCompanion-Setup-x64.exe"
                     className="mt-4 inline-block"
                   >
                     <CyanButton size="md" icon={<WindowsIcon />} tone={INDIGO}>
@@ -450,8 +450,7 @@ function OpenClawPage() {
                   </p>
                   <a
                     href={ZIP_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    download="openclaw-main.zip"
                     className="mt-4 inline-block"
                   >
                     <CyanButton size="md" icon={<ZipIcon />}>
@@ -587,12 +586,12 @@ function OpenClawPage() {
             autonomous AI agent build software for you.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href={EXE_URL} target="_blank" rel="noopener noreferrer">
+            <a href={LOCAL_EXE_URL} download="OpenClawCompanion-Setup-x64.exe">
               <CyanButton size="lg" icon={<WindowsIcon />} tone={INDIGO}>
                 Download OpenClaw for Windows
               </CyanButton>
             </a>
-            <a href={ZIP_URL} target="_blank" rel="noopener noreferrer">
+            <a href={ZIP_URL} download="openclaw-main.zip">
               <CyanButton size="lg" icon={<ZipIcon />}>
                 Download Source Code
               </CyanButton>

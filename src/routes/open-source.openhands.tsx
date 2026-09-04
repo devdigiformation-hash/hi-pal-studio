@@ -244,7 +244,7 @@ function OpenHandsPage() {
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
-              <a href={ZIP_URL} target="_blank" rel="noopener noreferrer">
+              <a href={ZIP_URL} download="OpenHands-main.zip">
                 <CyanButton size="lg" icon={<ZipIcon />} tone={BLUE}>
                   Download Full Source Code (.ZIP)
                 </CyanButton>
@@ -457,8 +457,7 @@ function OpenHandsPage() {
                   </ul>
                   <a
                     href={ZIP_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    download="OpenHands-main.zip"
                     className="mt-4 inline-block"
                   >
                     <CyanButton size="md" icon={<ZipIcon />} tone={BLUE}>
@@ -600,7 +599,7 @@ function OpenHandsPage() {
             autonomous AI software engineer build, test, and deploy for you.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href={ZIP_URL} target="_blank" rel="noopener noreferrer">
+            <a href={ZIP_URL} download="OpenHands-main.zip">
               <CyanButton size="lg" icon={<ZipIcon />} tone={BLUE}>
                 Download Full Source Code (.ZIP)
               </CyanButton>

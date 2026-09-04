@@ -115,7 +115,7 @@ const MODULES: Module[] = [
     color: "#FBBF24",
     title: "Digi CLI",
     badge: "Custom Command Runner",
-    body: "Add and execute custom shell commands via visual UI with streaming output, backed by pre-integrated offline engines (FFmpeg, Whisper, DuckDB, Typst).",
+    body: "Add and execute custom shell commands via visual UI with streaming output, backed by pre-integrated offline engines (Media Processors, Speech Engines, Analytics DB, Document Compilers).",
     bullets: [
       "Visual command definition & runner",
       "Live streaming stdout / stderr",
