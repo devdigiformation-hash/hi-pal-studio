@@ -1,3 +1,29 @@
+import osMain from "@/assets/os-main-dashboard.png";
+import osActiveAgent from "@/assets/os-active-agent-search.png";
+import osAiChat from "@/assets/os-digi-ai-chat.png";
+import osAiImage from "@/assets/os-digi-ai-image.png";
+import osCrmDash from "@/assets/os-digi-crm-dashboard.png";
+import osCrmNav from "@/assets/os-digi-crm-navigation.png";
+import osCrmAccounts from "@/assets/os-digi-crm-accounts.png";
+import osCrmWa from "@/assets/os-digi-crm-whatsapp.png";
+import osCrmIntel from "@/assets/os-digi-crm-intelligence.png";
+import osIntel from "@/assets/os-digi-intelligence.png";
+import osMkt from "@/assets/os-digi-marketing.png";
+import osWa from "@/assets/os-digi-whatsapp.png";
+import osFlow from "@/assets/os-digi-flow.png";
+import osCode from "@/assets/os-digi-code.png";
+import osStudioVideo from "@/assets/os-digi-studio-video-editor.png";
+import osStudioAvatar from "@/assets/os-digi-studio-avatar.png";
+import osStudioVoice from "@/assets/os-digi-studio-voice.png";
+import osStudioImage from "@/assets/os-digi-studio-image.png";
+import osStudioTranscript from "@/assets/os-digi-studio-transcript.png";
+import osLiveTrackingModal from "@/assets/os-live-tracking-modal.png";
+import osCli from "@/assets/os-digi-cli.png";
+import osMcp from "@/assets/os-digi-mcp.png";
+import osShell from "@/assets/os-shell.png";
+import osRuntime from "@/assets/os-runtime.png";
+import type { ScreenshotItem } from "@/components/seo/InteractiveSoftwareScreenshotStage";
+
 export interface ModuleFeature {
   title: string;
   description: string;
@@ -26,6 +52,8 @@ export interface ModuleData {
   faq: { q: string; a: string }[];
   relatedModules: { name: string; slug: string; description: string }[];
   openSourceSynergy: string;
+  screenshots?: ScreenshotItem[];
+  image?: { src: string; alt: string; caption?: string };
 }
 
 export const MODULES_LIST: ModuleData[] = [
@@ -112,6 +140,44 @@ export const MODULES_LIST: ModuleData[] = [
     ],
     openSourceSynergy:
       "Seamlessly links with local SQLite database engines for maximum data throughput and Jan AI or local LLMs for private local intelligence.",
+  
+    screenshots: [
+      {
+        src: osCrmDash,
+        title: "Executive Revenue & Order Pipeline Command",
+        subtitle: "Real-time orders, invoice statuses, conversion funnels and AI executive brief",
+        caption: "Executive nerve center tracking total gross revenue, pipeline stages, and daily AI briefings.",
+      },
+      {
+        src: osCrmAccounts,
+        title: "Offline Double-Entry Ledger & Financial P&L",
+        subtitle: "Multi-currency balance sheets, 6-month income vs expenses, tax audit records",
+        caption: "Run full double-entry bookkeeping with real-time profit margins without cloud accounting subscriptions.",
+      },
+      {
+        src: osCrmNav,
+        title: "Complete CRM Suite Navigation & Operations",
+        subtitle: "Company formation, banking, support desk, email outreach and databases",
+        caption: "Comprehensive operations suite uniting 11 business modules into one unified desktop OS.",
+      },
+      {
+        src: osCrmWa,
+        title: "Integrated WhatsApp Conversational AI Sales Agent",
+        subtitle: "Pair mobile numbers to intake orders and answer customer inquiries 24/7",
+        caption: "Direct WhatsApp conversational commerce synced directly with the CRM order database.",
+      },
+      {
+        src: osCrmIntel,
+        title: "E-Commerce Market Intelligence & Winning Product Hunter",
+        subtitle: "20-stage research across Amazon, eBay, Shopify, TikTok, and Walmart",
+        caption: "Autonomous market research pipeline uncovering high-margin products and verified B2B leads.",
+      },
+    ],
+    image: {
+      src: osCrmDash,
+      alt: "Digi CRM Executive Dashboard",
+      caption: "Digi CRM: Executive overview, deals pipeline, contacts, and live activity tracking.",
+    },
   },
   {
     slug: "studio",
@@ -206,6 +272,44 @@ export const MODULES_LIST: ModuleData[] = [
     ],
     openSourceSynergy:
       "Integrates natively with offline media processing and audio synthesis pipelines for studio-grade manipulation.",
+  
+    screenshots: [
+      {
+        src: osStudioVideo,
+        title: "Offline Multi-Track Video Editor (CapCut Pro Alternative)",
+        subtitle: "Hardware-accelerated cutting, 9:16 vertical reels, speed ramps, captioning",
+        caption: "Cut, trim, auto-frame for vertical TikTok/Reels, slow-mo, and export MP4 with zero cloud fees.",
+      },
+      {
+        src: osStudioAvatar,
+        title: "Talking AI Presenter & Face Motion Studio",
+        subtitle: "Transform portraits and voice recordings into animated presenter videos",
+        caption: "Upload a portrait and speech audio to generate talking avatar presentation videos locally.",
+      },
+      {
+        src: osStudioVoice,
+        title: "Voice Intelligence & Multilingual Audiobook Generator",
+        subtitle: "Natural neural TTS in 50+ languages, PDF-to-audiobook, audio denoise",
+        caption: "Studio voice generation across 50+ languages with 1-click background noise reduction.",
+      },
+      {
+        src: osStudioImage,
+        title: "4K/8K Photo Factory & E-Commerce Batch Studio",
+        subtitle: "1-click AI background removal, product framing, and 4x neural upscaling",
+        caption: "Instant transparent PNG cutouts, white product backdrops, and AI super-resolution.",
+      },
+      {
+        src: osStudioTranscript,
+        title: "Transcript Intelligence & Instant Course Generator",
+        subtitle: "Auto-fetches YouTube playlists into structured study notes and syllabi",
+        caption: "Convert long video playlists into verbatim transcripts and structured course notes.",
+      },
+    ],
+    image: {
+      src: osStudioVideo,
+      alt: "Digi Studio Multimedia Creation Suite",
+      caption: "Digi Studio: Offline timeline video editor with native audio, caption tracks, and zero watermarks.",
+    },
   },
   {
     slug: "ai",
@@ -290,6 +394,26 @@ export const MODULES_LIST: ModuleData[] = [
     ],
     openSourceSynergy:
       "Pairs with local open-source LLM runners like Jan AI and AnythingLLM for fully air-gapped offline conversational computing.",
+  
+    screenshots: [
+      {
+        src: osAiChat,
+        title: "Multi-Model Conversational Chat & Document Reasoning",
+        subtitle: "Deep reasoning, local document queries, custom personas, and zero telemetry",
+        caption: "Conversational intelligence surface with custom system personas and air-gapped document reasoning.",
+      },
+      {
+        src: osAiImage,
+        title: "Studio-Grade Photorealistic AI Image Generator",
+        subtitle: "High-resolution image synthesis, negative prompts, seed controls, local media vault",
+        caption: "Generate marketing graphics and product mockups locally with complete commercial ownership.",
+      },
+    ],
+    image: {
+      src: osAiChat,
+      alt: "Digi AI Chat and Reasoning Hub",
+      caption: "Digi AI: Multi-model reasoning, autonomous task dispatch, and local persona customization.",
+    },
   },
   {
     slug: "whatsapp",
@@ -374,6 +498,26 @@ export const MODULES_LIST: ModuleData[] = [
     ],
     openSourceSynergy:
       "Combines offline speech-to-text transcription with embedded local databases for zero-latency conversation archiving.",
+  
+    screenshots: [
+      {
+        src: osWa,
+        title: "WhatsApp Autonomous Agent & Mobile QR Pairing",
+        subtitle: "Instant mobile QR pairing, autonomous sales bot, multi-number slots, and voice note transcription",
+        caption: "Scan QR code to deploy 24/7 autonomous sales assistant with zero Meta API approvals.",
+      },
+      {
+        src: osCrmWa,
+        title: "Live WhatsApp Inbox & Conversation Pipeline in CRM",
+        subtitle: "Synchronized chat logs, customer profile enrichment, order tagging, and instant human takeover",
+        caption: "Monitor live customer conversations and manage orders directly within the offline desktop CRM.",
+      },
+    ],
+    image: {
+      src: osWa,
+      alt: "Digi WhatsApp Autonomous Sales Agent",
+      caption: "Digi WhatsApp: Instant QR pairing, AI auto-replies, and multi-number slots.",
+    },
   },
   {
     slug: "marketing",
@@ -458,6 +602,26 @@ export const MODULES_LIST: ModuleData[] = [
     ],
     openSourceSynergy:
       "Integrates with native desktop graphic optimization and image compression engines for automated formatting before multi-platform dispatch.",
+  
+    screenshots: [
+      {
+        src: osMkt,
+        title: "8-Platform Social Switchboard & Campaign Composer",
+        subtitle: "AI ad copywriter, mathematical typography, and scheduled multi-network dispatch",
+        caption: "Draft once and publish across Facebook, LinkedIn, X, Telegram, Instagram, and YouTube.",
+      },
+      {
+        src: osCrmWa,
+        title: "Conversational WhatsApp Lead Acquisition Channel",
+        subtitle: "Direct bridge converting social ad traffic into confirmed CRM customer orders",
+        caption: "Pair social campaigns directly with automated WhatsApp inquiry handling.",
+      },
+    ],
+    image: {
+      src: osMkt,
+      alt: "Digi Marketing Campaign Studio",
+      caption: "Digi Marketing: AI caption studio, multi-account publisher, and campaign scheduler.",
+    },
   },
   {
     slug: "workflows",
@@ -542,6 +706,26 @@ export const MODULES_LIST: ModuleData[] = [
     ],
     openSourceSynergy:
       "Integrates with Graphviz for workflow topology visualization and SQLite for permanent execution transcript auditing.",
+  
+    screenshots: [
+      {
+        src: osFlow,
+        title: "Always-On Autonomous Business Workflows",
+        subtitle: "Automated routines for overdue invoices, low stock reorders, and lead nudges",
+        caption: "Visual automated workflows running 24/7 locally without monthly subscription fees.",
+      },
+      {
+        src: osLiveTrackingModal,
+        title: "Real-Time Workflow Telemetry & Event Audit Stream",
+        subtitle: "Granular visibility into every reasoning step and tool call duration",
+        caption: "Watch every background workflow step execute live with millisecond timers.",
+      },
+    ],
+    image: {
+      src: osFlow,
+      alt: "Digi Flow Always-On Business Automations",
+      caption: "DigiFlow: Always-on autonomous business workflows running 24/7 on your local PC.",
+    },
   },
   {
     slug: "code",
@@ -626,6 +810,26 @@ export const MODULES_LIST: ModuleData[] = [
     ],
     openSourceSynergy:
       "Native synergy with Git, OpenHands, and terminal compilers for high-performance offline software engineering.",
+  
+    screenshots: [
+      {
+        src: osCode,
+        title: "AI Code Workspace & Repository Intelligence",
+        subtitle: "Monaco editor, multi-file architectural understanding, and slash commands",
+        caption: "Point the AI coding agent at your local folder to plan, refactor, and ship code.",
+      },
+      {
+        src: osCli,
+        title: "Autonomous Integrated Terminal & Shell Execution",
+        subtitle: "Interactive command execution with automated error triage and fix loops",
+        caption: "Integrated terminal runner with self-healing command execution.",
+      },
+    ],
+    image: {
+      src: osCode,
+      alt: "Digi Code Workspace",
+      caption: "DigiCode: Monaco editor, multi-file architectural understanding, and slash commands.",
+    },
   },
   {
     slug: "mcp",
@@ -710,6 +914,20 @@ export const MODULES_LIST: ModuleData[] = [
     ],
     openSourceSynergy:
       "Fully compliant with the Anthropic Model Context Protocol standard, enabling seamless compatibility with all community MCP servers.",
+  
+    screenshots: [
+      {
+        src: osMcp,
+        title: "Model Context Protocol Hub & Extensibility",
+        subtitle: "Stdio JSON-RPC 2.0 MCP client with dynamic tool discovery",
+        caption: "Connect standard MCP servers to dynamically discover and inject tools into agents.",
+      },
+    ],
+    image: {
+      src: osMcp,
+      alt: "Digi MCP Extensibility Hub",
+      caption: "DigiMCP: Managing active JSON-RPC 2.0 servers and dynamic agent tools.",
+    },
   },
   {
     slug: "cli",
@@ -794,6 +1012,26 @@ export const MODULES_LIST: ModuleData[] = [
     ],
     openSourceSynergy:
       "Native runner for local data analysis, document compilation, media processing, and high-speed search, providing true desktop computing power.",
+  
+    screenshots: [
+      {
+        src: osCli,
+        title: "Terminal & Command Execution Engine",
+        subtitle: "Natural language to shell execution with security confirmation gates",
+        caption: "Execute PowerShell and bash commands with natural language guidance.",
+      },
+      {
+        src: osShell,
+        title: "Native System Shell & Local Binary Runner",
+        subtitle: "Low-level binary management and interactive script runner",
+        caption: "Manage bundled media converters, database runners, and local binaries.",
+      },
+    ],
+    image: {
+      src: osCli,
+      alt: "Digi CLI Terminal Engine",
+      caption: "DigiCLI: Terminal execution console with real-time output stream and safety confirmation.",
+    },
   },
   {
     slug: "models",
@@ -878,6 +1116,26 @@ export const MODULES_LIST: ModuleData[] = [
     ],
     openSourceSynergy:
       "Compatible with Groq, Cerebras, and SambaNova for ultra-low latency token generation, plus local Ollama endpoints.",
+  
+    screenshots: [
+      {
+        src: osAiChat,
+        title: "Multi-Model Provider Selection & Reasoning Engine",
+        subtitle: "DeepSeek, Claude, GPT-4o, and local Ollama switchboard",
+        caption: "Seamlessly switch between top cloud APIs and completely free open models.",
+      },
+      {
+        src: osRuntime,
+        title: "Runtime Engine & Hardware VRAM Allocation",
+        subtitle: "Quantized local inference optimization and hardware monitoring",
+        caption: "Monitor local GPU VRAM allocation and execution speed.",
+      },
+    ],
+    image: {
+      src: osAiChat,
+      alt: "AI Models & Model Router Hub",
+      caption: "Providers and models managed from the Digi AI hub.",
+    },
   },
   {
     slug: "connectors",
@@ -962,6 +1220,26 @@ export const MODULES_LIST: ModuleData[] = [
     ],
     openSourceSynergy:
       "Integrates with standard IMAP/SMTP protocols and cURL for reliable, open-standard business communication.",
+  
+    screenshots: [
+      {
+        src: osMcp,
+        title: "Universal API Gateway & MCP Integration Hub",
+        subtitle: "Connect REST APIs, SQL databases, GitHub, and custom webhooks",
+        caption: "Manage secure local credentials and link desktop workflows to external webhooks.",
+      },
+      {
+        src: osCrmNav,
+        title: "Connected Enterprise Services & Data Sources",
+        subtitle: "Full-stack integration for banking, payment processing, and messaging",
+        caption: "Pre-integrated bridges for banking feeds, WhatsApp Business, and payment gateways.",
+      },
+    ],
+    image: {
+      src: osMcp,
+      alt: "Digi Connectors Integration Gateway",
+      caption: "Digi Connectors: Managing active API channels, secure endpoints, and databases.",
+    },
   },
   {
     slug: "intelligence",
@@ -1046,6 +1324,26 @@ export const MODULES_LIST: ModuleData[] = [
     ],
     openSourceSynergy:
       "Pairs with high-speed local analytical querying over large product datasets and built-in technical SEO auditing.",
+  
+    screenshots: [
+      {
+        src: osCrmIntel,
+        title: "E-Commerce Supplier & Market Analysis Intelligence",
+        subtitle: "Multi-platform winning product hunter across Amazon, eBay, Shopify, TikTok",
+        caption: "20-stage deep market analysis scoring winning products and verified supplier contacts.",
+      },
+      {
+        src: osIntel,
+        title: "20-Stage Deep Market Intelligence Engine",
+        subtitle: "Market depth evaluation, historical margin calculations, and B2B leads",
+        caption: "Multi-marketplace scraping engine evaluating pricing spreads and consumer demand.",
+      },
+    ],
+    image: {
+      src: osCrmIntel,
+      alt: "Digi Intelligence Market Research",
+      caption: "Digi Intelligence: 20-stage product research across Amazon, eBay, Walmart, TikTok & Shopify.",
+    },
   },
 ];
 

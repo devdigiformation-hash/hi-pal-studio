@@ -28,6 +28,7 @@ import ThreeDTiltCard from "@/components/ui/ThreeDTiltCard";
 import SubPageInteractiveWorkbench from "@/components/seo/SubPageInteractiveWorkbench";
 import SubPageWorkflowBeam from "@/components/seo/SubPageWorkflowBeam";
 import SubPageBentoShowcase from "@/components/seo/SubPageBentoShowcase";
+import InteractiveSoftwareScreenshotStage from "@/components/seo/InteractiveSoftwareScreenshotStage";
 import type { ModuleData } from "@/content/modules-data";
 
 export default function ModuleLanding({ module }: { module: ModuleData }) {
@@ -151,6 +152,19 @@ export default function ModuleLanding({ module }: { module: ModuleData }) {
             </ThreeDTiltCard>
           </div>
         </div>
+
+        {/* ── 3D HOLOGRAPHIC PINNED SOFTWARE SHOWCASE ─────────── */}
+        {((module.screenshots && module.screenshots.length > 0) || (module.image && module.image.src)) && (
+          <div className="mt-12">
+            <InteractiveSoftwareScreenshotStage
+              src={module.image?.src}
+              alt={module.image?.alt || `${module.name} Interface`}
+              caption={module.image?.caption}
+              screenshots={module.screenshots}
+              accentColor={accent}
+            />
+          </div>
+        )}
 
         {/* PROBLEM SOLVED & TARGET AUDIENCE */}
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">

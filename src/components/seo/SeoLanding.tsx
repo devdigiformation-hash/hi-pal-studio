@@ -80,12 +80,13 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
       </SectionWrapper>
 
       {/* ── 3D HOLOGRAPHIC PINNED SOFTWARE SHOWCASE ─────────── */}
-      {page.image && page.image.src ? (
+      {(page.screenshots && page.screenshots.length > 0) || (page.image && page.image.src) ? (
         <SectionWrapper className="!py-4 md:!py-10">
           <InteractiveSoftwareScreenshotStage
-            src={page.image.src}
-            alt={page.image.alt}
-            caption={page.image.caption}
+            src={page.image?.src}
+            alt={page.image?.alt}
+            caption={page.image?.caption}
+            screenshots={page.screenshots}
             accentColor={accent}
           />
         </SectionWrapper>

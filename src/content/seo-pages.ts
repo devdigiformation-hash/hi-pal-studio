@@ -1,9 +1,18 @@
 import osMain from "@/assets/os-main-dashboard.png";
+import osActiveAgent from "@/assets/os-active-agent-search.png";
+import osAiChat from "@/assets/os-digi-ai-chat.png";
+import osAiImage from "@/assets/os-digi-ai-image.png";
 import osAiHub from "@/assets/os-digi-ai-hub.png";
+import osCrmDash from "@/assets/os-digi-crm-dashboard.png";
+import osCrmNav from "@/assets/os-digi-crm-navigation.png";
+import osCrmAccounts from "@/assets/os-digi-crm-accounts.png";
+import osCrmWa from "@/assets/os-digi-crm-whatsapp.png";
+import osCrmIntel from "@/assets/os-digi-crm-intelligence.png";
 import osCrm from "@/assets/os-digi-crm.png";
 import osIntel from "@/assets/os-digi-intelligence.png";
 import osMkt from "@/assets/os-digi-marketing.png";
 import osWa from "@/assets/os-digi-whatsapp.png";
+import osFlow from "@/assets/os-digi-flow.png";
 import osCode from "@/assets/os-digi-code.png";
 import osStudioVideo from "@/assets/os-digi-studio-video-editor.png";
 import osStudioAvatar from "@/assets/os-digi-studio-avatar.png";
@@ -15,13 +24,17 @@ import osCli from "@/assets/os-digi-cli.png";
 import osMcp from "@/assets/os-digi-mcp.png";
 import osSkills from "@/assets/os-skills.png";
 import osDesktopTools from "@/assets/os-desktop-tools.png";
-import osGraph from "@/assets/os-graph-full.png";
+import osTools from "@/assets/os-digi-tools.png";
+import osDocs from "@/assets/os-digi-docs.png";
+import osGraphFull from "@/assets/os-graph-full.png";
+import osGraph from "@/assets/os-graph.png";
 import osTranscript from "@/assets/os-transcript.png";
 import osLiveTracking from "@/assets/os-live-tracking.png";
 import osShell from "@/assets/os-shell.png";
 import osSidebar from "@/assets/os-sidebar.png";
 import osRuntime from "@/assets/os-runtime.png";
 import jarvisRobot from "@/assets/jarvis-robot.png";
+import type { ScreenshotItem } from "@/components/seo/InteractiveSoftwareScreenshotStage";
 
 export interface SeoImage {
   src: string;
@@ -50,6 +63,7 @@ export interface SeoPage {
   faq: { q: string; a: string }[];
   links: { label: string; to: string }[];
   image?: SeoImage;
+  screenshots?: ScreenshotItem[];
   accent?: string;
 }
 
@@ -172,6 +186,26 @@ export const SEO_PAGES: SeoPage[] = [
       "DIGI BIZ OS JARVIS-style AI assistant dashboard interface with live globe and voice controls",
       "JARVIS-style intelligence: an assistant built to listen, plan and execute.",
     ),
+    screenshots: [
+      {
+        src: osMain,
+        title: "Live OS Command Surface",
+        subtitle: "11 Core Business Apps, live particle visualizer, memory, skills, camera, voice",
+        caption: "Your entire command surface in one unified desktop workspace.",
+      },
+      {
+        src: osActiveAgent,
+        title: "Autonomous Agents & Vision Execution",
+        subtitle: "Watch agents autonomously search, browse, extract data, and communicate",
+        caption: "Live browser research and computer tasks under human supervision.",
+      },
+      {
+        src: osLiveTrackingModal,
+        title: "Live Tracking & Forensic Transparency",
+        subtitle: "Full audit trails of every tool call, reasoning step, and execution duration",
+        caption: "Complete audit trails with zero black-box mystery.",
+      },
+    ],
     accent: "var(--cyan)",
   },
   {
@@ -269,10 +303,30 @@ export const SEO_PAGES: SeoPage[] = [
       ...CTA_CORE,
     ],
     image: img(
-      osGraph,
-      "DIGI BIZ OS execution graph showing agents, skills and tools working together",
-      "Live execution graph: the OS routing a request through agents, skills and tools.",
+      osMain,
+      "Unified Desktop AI Business Operating System interface",
+      "An AI business operating system that can actually execute.",
     ),
+    screenshots: [
+      {
+        src: osMain,
+        title: "Unified Desktop AI Business Operating System",
+        subtitle: "Your models, agents, tools, data, and business processes in one Windows environment",
+        caption: "Offline-first sovereign desktop command center on Windows 10/11.",
+      },
+      {
+        src: osCrmDash,
+        title: "Executive CRM & Revenue Operations Command",
+        subtitle: "Live financial pulse, lead stages, and revenue metrics in 1 dashboard",
+        caption: "Real-time revenue, orders, invoice pipelines, and lead intelligence.",
+      },
+      {
+        src: osFlow,
+        title: "Always-On Autonomous Business Workflows",
+        subtitle: "Autonomous business workflows that run 24/7 without intervention",
+        caption: "Automate overdue invoices, stock alerts, and customer follow-ups.",
+      },
+    ],
     accent: "var(--purple)",
   },
   {
@@ -590,10 +644,24 @@ export const SEO_PAGES: SeoPage[] = [
       ...CTA_CORE,
     ],
     image: img(
-      osTranscript,
-      "Live voice transcript panel inside DIGI BIZ OS",
-      "Live transcript: what the OS heard, and what it decided to do about it.",
+      osStudioVoice,
+      "Voice AI assistant interface in DIGI BIZ OS",
+      "Voice AI assistant: Speak instructions that turn into executed work.",
     ),
+    screenshots: [
+      {
+        src: osStudioVoice,
+        title: "Multilingual Speech Engine & Studio Voiceovers",
+        subtitle: "Direct voice-to-intent engine, 50+ languages, zero-latency speech",
+        caption: "Studio voice generation across 50+ languages with 1-click background noise reduction.",
+      },
+      {
+        src: osTranscript,
+        title: "Live Real-Time Audio Transcript & Speech Visualizer",
+        subtitle: "Live transcription with acoustic wave monitoring and speech correction",
+        caption: "Real-time acoustic visualizer with immediate text transcription.",
+      },
+    ],
     accent: "var(--cyan)",
   },
   {
@@ -639,10 +707,24 @@ export const SEO_PAGES: SeoPage[] = [
       ...CTA_CORE,
     ],
     image: img(
-      osTranscript,
-      "Voice controlled PC assistant transcript in DIGI BIZ OS",
-      "Speaking a task and watching the OS act on it.",
+      osStudioVoice,
+      "Voice assistant for PC in DIGI BIZ OS",
+      "A voice assistant for PC that does real work on your computer.",
     ),
+    screenshots: [
+      {
+        src: osStudioVoice,
+        title: "Multilingual Speech Engine & Studio Voiceovers",
+        subtitle: "Direct voice-to-intent engine, 50+ languages, zero-latency speech",
+        caption: "Studio voice generation across 50+ languages with 1-click background noise reduction.",
+      },
+      {
+        src: osTranscript,
+        title: "Live Real-Time Audio Transcript & Speech Visualizer",
+        subtitle: "Live transcription with acoustic wave monitoring and speech correction",
+        caption: "Real-time acoustic visualizer with immediate text transcription.",
+      },
+    ],
     accent: "var(--purple)",
   },
   {
@@ -688,10 +770,24 @@ export const SEO_PAGES: SeoPage[] = [
       ...CTA_CORE,
     ],
     image: img(
-      osLiveTracking,
-      "Live tracking of an AI computer-use run in DIGI BIZ OS",
-      "Live tracking: plan, current step, tool calls and results.",
+      osActiveAgent,
+      "Computer Use AI executing browser automation and computer tasks",
+      "Computer Use AI: Autonomous agent driving browser and desktop tasks.",
     ),
+    screenshots: [
+      {
+        src: osActiveAgent,
+        title: "Autonomous Agent Browser & Vision Navigation",
+        subtitle: "Real browser automation, visual element detection, autonomous computer tasks",
+        caption: "Watch agents autonomously browse, extract pricing data, and interact with web pages.",
+      },
+      {
+        src: osMain,
+        title: "Unified Desktop Operating System Command Surface",
+        subtitle: "Files, apps, terminal, screen sharing, and multi-agent supervisor",
+        caption: "Complete operating environment running natively on Windows 10/11.",
+      },
+    ],
     accent: "var(--amber)",
   },
   {
@@ -1007,9 +1103,23 @@ export const SEO_PAGES: SeoPage[] = [
     ],
     image: img(
       osCode,
-      "DigiCode AI coding agent workspace inside DIGI BIZ OS",
-      "DigiCode: repository-aware coding with terminal execution.",
+      "AI coding agent working inside a real project in DIGI BIZ OS",
+      "AI coding agent: Reads projects, edits files and runs builds on your machine.",
     ),
+    screenshots: [
+      {
+        src: osCode,
+        title: "AI Code Workspace & Repository Intelligence",
+        subtitle: "Monaco editor, multi-file architectural understanding, and slash commands",
+        caption: "Point the AI coding agent at your local folder to plan, refactor, and ship code.",
+      },
+      {
+        src: osCli,
+        title: "Autonomous Integrated Terminal & Shell Execution",
+        subtitle: "Interactive command execution with automated error triage and fix loops",
+        caption: "Integrated terminal runner with self-healing command execution.",
+      },
+    ],
     accent: "var(--purple)",
   },
   {
@@ -1250,10 +1360,24 @@ export const SEO_PAGES: SeoPage[] = [
       ...CTA_CORE,
     ],
     image: img(
-      osAiHub,
-      "Digi AI hub interface with agent, chat, coding, personas and providers cards",
-      "Digi AI hub: agents, chat, coding, personas, providers and app store.",
+      osAiChat,
+      "Digi AI conversational chat interface with multi-model reasoning and file analysis",
+      "Digi AI: Multi-model reasoning, autonomous task dispatch, and local persona customization.",
     ),
+    screenshots: [
+      {
+        src: osAiChat,
+        title: "Multi-Model Conversational Chat & Document Reasoning",
+        subtitle: "Deep reasoning, local document queries, custom personas, and zero telemetry",
+        caption: "Conversational intelligence surface with custom system personas and air-gapped document reasoning.",
+      },
+      {
+        src: osAiImage,
+        title: "Studio-Grade Photorealistic AI Image Generator",
+        subtitle: "High-resolution image synthesis, negative prompts, seed controls, local media vault",
+        caption: "Generate marketing graphics and product mockups locally with complete commercial ownership.",
+      },
+    ],
     accent: "var(--cyan)",
   },
   {
@@ -1297,10 +1421,42 @@ export const SEO_PAGES: SeoPage[] = [
         ...CTA_CORE,
       ],
       image: img(
-        osCrm,
-        "Digi CRM dashboard showing business overview, contacts, companies, leads, pipeline and recent activity",
-        "Digi CRM: Business overview, deals pipeline, contacts, and live activity tracking.",
-      ),
+      osCrmDash,
+      "Digi CRM executive dashboard showing real-time revenue, order pipeline, and financial metrics",
+      "Digi CRM: Executive overview, deals pipeline, contacts, and live activity tracking.",
+    ),
+    screenshots: [
+      {
+        src: osCrmDash,
+        title: "Executive Revenue & Order Pipeline Command",
+        subtitle: "Real-time orders, invoice statuses, conversion funnels and AI executive brief",
+        caption: "Executive nerve center tracking total gross revenue, pipeline stages, and daily AI briefings.",
+      },
+      {
+        src: osCrmAccounts,
+        title: "Offline Double-Entry Ledger & Financial P&L",
+        subtitle: "Multi-currency balance sheets, 6-month income vs expenses, tax audit records",
+        caption: "Run full double-entry bookkeeping with real-time profit margins without cloud accounting subscriptions.",
+      },
+      {
+        src: osCrmNav,
+        title: "Complete CRM Suite Navigation & Operations",
+        subtitle: "Company formation, banking, support desk, email outreach and databases",
+        caption: "Comprehensive operations suite uniting 11 business modules into one unified desktop OS.",
+      },
+      {
+        src: osCrmWa,
+        title: "Integrated WhatsApp Conversational AI Sales Agent",
+        subtitle: "Pair mobile numbers to intake orders and answer customer inquiries 24/7",
+        caption: "Direct WhatsApp conversational commerce synced directly with the CRM order database.",
+      },
+      {
+        src: osCrmIntel,
+        title: "E-Commerce Market Intelligence & Winning Product Hunter",
+        subtitle: "20-stage research across Amazon, eBay, Shopify, TikTok, and Walmart",
+        caption: "Autonomous market research pipeline uncovering high-margin products and verified B2B leads.",
+      },
+    ],
       accent: "#10B981",
     },
     {
@@ -1344,10 +1500,24 @@ export const SEO_PAGES: SeoPage[] = [
         ...CTA_CORE,
       ],
       image: img(
-        osIntel,
-        "Digi Intelligence interface with e-commerce intelligence, marketplace selectors and research history",
-        "Digi Intelligence: 20-stage product research across Amazon, eBay, Walmart, TikTok & Shopify.",
-      ),
+      osCrmIntel,
+      "Digi Intelligence e-commerce research and supplier comparison interface",
+      "Digi Intelligence: 20-stage product research across Amazon, eBay, Walmart, TikTok & Shopify.",
+    ),
+    screenshots: [
+      {
+        src: osCrmIntel,
+        title: "E-Commerce Supplier & Market Analysis Intelligence",
+        subtitle: "Multi-platform winning product hunter across Amazon, eBay, Shopify, TikTok",
+        caption: "20-stage deep market analysis scoring winning products and verified supplier contacts.",
+      },
+      {
+        src: osIntel,
+        title: "20-Stage Deep Market Intelligence Engine",
+        subtitle: "Market depth evaluation, historical margin calculations, and B2B leads",
+        caption: "Multi-marketplace scraping engine evaluating pricing spreads and consumer demand.",
+      },
+    ],
       accent: "#38BDF8",
     },
     {
@@ -1393,10 +1563,24 @@ export const SEO_PAGES: SeoPage[] = [
         ...CTA_CORE,
       ],
       image: img(
-        osMkt,
-        "Digi Marketing compose post dashboard with AI caption generator and account scheduler",
-        "Digi Marketing: AI caption studio, multi-account publisher, and campaign scheduler.",
-      ),
+      osMkt,
+      "Digi Marketing 8-platform social switchboard and campaign composer interface",
+      "Digi Marketing: AI caption studio, multi-account publisher, and campaign scheduler.",
+    ),
+    screenshots: [
+      {
+        src: osMkt,
+        title: "8-Platform Social Switchboard & Campaign Composer",
+        subtitle: "AI ad copywriter, mathematical typography, and scheduled multi-network dispatch",
+        caption: "Draft once and publish across Facebook, LinkedIn, X, Telegram, Instagram, and YouTube.",
+      },
+      {
+        src: osCrmWa,
+        title: "Conversational WhatsApp Lead Acquisition Channel",
+        subtitle: "Direct bridge converting social ad traffic into confirmed CRM customer orders",
+        caption: "Pair social campaigns directly with automated WhatsApp inquiry handling.",
+      },
+    ],
       accent: "#F43F5E",
     },
     {
@@ -1440,10 +1624,24 @@ export const SEO_PAGES: SeoPage[] = [
         ...CTA_CORE,
       ],
       image: img(
-        osWa,
-        "Digi WhatsApp Agent dashboard with QR pairing, number slots, and AI auto-reply toggles",
-        "Digi WhatsApp: Instant QR pairing, AI auto-replies, and multi-number slots.",
-      ),
+      osWa,
+      "Digi WhatsApp Autonomous Agent dashboard with instant QR pairing, multi-number slots, and AI auto-reply toggles",
+      "Digi WhatsApp: Instant QR pairing, AI auto-replies, and multi-number slots.",
+    ),
+    screenshots: [
+      {
+        src: osWa,
+        title: "WhatsApp Autonomous Agent & Mobile QR Pairing",
+        subtitle: "Instant mobile QR pairing, autonomous sales bot, multi-number slots, and voice note transcription",
+        caption: "Scan QR code to deploy 24/7 autonomous sales assistant with zero Meta API approvals.",
+      },
+      {
+        src: osCrmWa,
+        title: "Live WhatsApp Inbox & Conversation Pipeline in CRM",
+        subtitle: "Synchronized chat logs, customer profile enrichment, order tagging, and instant human takeover",
+        caption: "Monitor live customer conversations and manage orders directly within the offline desktop CRM.",
+      },
+    ],
       accent: "#25D366",
     },
   {
@@ -1491,9 +1689,23 @@ export const SEO_PAGES: SeoPage[] = [
     ],
     image: img(
       osCode,
-      "DigiCode AI coding workspace screenshot",
-      "DigiCode working inside a real project.",
+      "DigiCode AI coding workspace with Monaco editor and full repository intelligence",
+      "DigiCode: Monaco editor, multi-file architectural understanding, and slash commands.",
     ),
+    screenshots: [
+      {
+        src: osCode,
+        title: "AI Code Workspace & Repository Intelligence",
+        subtitle: "Monaco editor, multi-file architectural understanding, and slash commands",
+        caption: "Point the AI coding agent at your local folder to plan, refactor, and ship code.",
+      },
+      {
+        src: osCli,
+        title: "Autonomous Integrated Terminal & Shell Execution",
+        subtitle: "Interactive command execution with automated error triage and fix loops",
+        caption: "Integrated terminal runner with self-healing command execution.",
+      },
+    ],
     accent: "#6366F1",
   },
   {
@@ -1553,9 +1765,41 @@ export const SEO_PAGES: SeoPage[] = [
     ],
     image: img(
       osStudioVideo,
-      "Digi Studio multi-track video editing interface screenshot",
-      "Digi Studio timeline video editor with native audio and caption tracks.",
+      "Digi Studio multi-track timeline video editor interface screenshot",
+      "Digi Studio: Offline timeline video editor with native audio, caption tracks, and zero watermarks.",
     ),
+    screenshots: [
+      {
+        src: osStudioVideo,
+        title: "Offline Multi-Track Video Editor (CapCut Pro Alternative)",
+        subtitle: "Hardware-accelerated cutting, 9:16 vertical reels, speed ramps, captioning",
+        caption: "Cut, trim, auto-frame for vertical TikTok/Reels, slow-mo, and export MP4 with zero cloud fees.",
+      },
+      {
+        src: osStudioAvatar,
+        title: "Talking AI Presenter & Face Motion Studio",
+        subtitle: "Transform portraits and voice recordings into animated presenter videos",
+        caption: "Upload a portrait and speech audio to generate talking avatar presentation videos locally.",
+      },
+      {
+        src: osStudioVoice,
+        title: "Voice Intelligence & Multilingual Audiobook Generator",
+        subtitle: "Natural neural TTS in 50+ languages, PDF-to-audiobook, audio denoise",
+        caption: "Studio voice generation across 50+ languages with 1-click background noise reduction.",
+      },
+      {
+        src: osStudioImage,
+        title: "4K/8K Photo Factory & E-Commerce Batch Studio",
+        subtitle: "1-click AI background removal, product framing, and 4x neural upscaling",
+        caption: "Instant transparent PNG cutouts, white product backdrops, and AI super-resolution.",
+      },
+      {
+        src: osStudioTranscript,
+        title: "Transcript Intelligence & Instant Course Generator",
+        subtitle: "Auto-fetches YouTube playlists into structured study notes and syllabi",
+        caption: "Convert long video playlists into verbatim transcripts and structured course notes.",
+      },
+    ],
     accent: "#EC4899",
   },
   {
@@ -1606,8 +1850,22 @@ export const SEO_PAGES: SeoPage[] = [
     image: img(
       osCli,
       "DigiCLI command execution console inside DIGI BIZ OS",
-      "DigiCLI terminal execution console with real-time output stream.",
+      "DigiCLI: Terminal execution console with real-time output stream and safety confirmation.",
     ),
+    screenshots: [
+      {
+        src: osCli,
+        title: "Terminal & Command Execution Engine",
+        subtitle: "Natural language to shell execution with security confirmation gates",
+        caption: "Execute PowerShell and bash commands with natural language guidance.",
+      },
+      {
+        src: osShell,
+        title: "Native System Shell & Local Binary Runner",
+        subtitle: "Low-level binary management and interactive script runner",
+        caption: "Manage bundled media converters, database runners, and local binaries.",
+      },
+    ],
     accent: "#06B6D4",
   },
   {
@@ -1664,8 +1922,16 @@ export const SEO_PAGES: SeoPage[] = [
     image: img(
       osMcp,
       "DigiMCP server management and tool discovery interface screenshot",
-      "DigiMCP managing active JSON-RPC 2.0 servers and dynamic agent tools.",
+      "DigiMCP: Managing active JSON-RPC 2.0 servers and dynamic agent tools.",
     ),
+    screenshots: [
+      {
+        src: osMcp,
+        title: "Model Context Protocol Hub & Extensibility",
+        subtitle: "Stdio JSON-RPC 2.0 MCP client with dynamic tool discovery",
+        caption: "Connect standard MCP servers to dynamically discover and inject tools into agents.",
+      },
+    ],
     accent: "#EC4899",
   },
   {
@@ -1716,10 +1982,24 @@ export const SEO_PAGES: SeoPage[] = [
       ...CTA_CORE,
     ],
     image: img(
-      osRuntime,
+      osMcp,
       "Digi Connectors integration gateway and API configuration screenshot",
-      "Digi Connectors managing active API channels and secure endpoints.",
+      "Digi Connectors: Managing active API channels, secure endpoints, and databases.",
     ),
+    screenshots: [
+      {
+        src: osMcp,
+        title: "Universal API Gateway & MCP Integration Hub",
+        subtitle: "Connect REST APIs, SQL databases, GitHub, and custom webhooks",
+        caption: "Manage secure local credentials and link desktop workflows to external webhooks.",
+      },
+      {
+        src: osCrmNav,
+        title: "Connected Enterprise Services & Data Sources",
+        subtitle: "Full-stack integration for banking, payment processing, and messaging",
+        caption: "Pre-integrated bridges for banking feeds, WhatsApp Business, and payment gateways.",
+      },
+    ],
     accent: "#3B82F6",
   },
   {
@@ -1759,10 +2039,24 @@ export const SEO_PAGES: SeoPage[] = [
       ...CTA_CORE,
     ],
     image: img(
-      osGraph,
-      "DigiFlow workflow graph inside DIGI BIZ OS",
-      "A DigiFlow automation chaining agents and tools.",
+      osFlow,
+      "DigiFlow always-on business automation workflow engine interface",
+      "DigiFlow: Always-on autonomous business workflows running 24/7 on your local PC.",
     ),
+    screenshots: [
+      {
+        src: osFlow,
+        title: "Always-On Autonomous Business Workflows",
+        subtitle: "Automated routines for overdue invoices, low stock reorders, and lead nudges",
+        caption: "Visual automated workflows running 24/7 locally without monthly subscription fees.",
+      },
+      {
+        src: osLiveTrackingModal,
+        title: "Real-Time Workflow Telemetry & Event Audit Stream",
+        subtitle: "Granular visibility into every reasoning step and tool call duration",
+        caption: "Watch every background workflow step execute live with millisecond timers.",
+      },
+    ],
     accent: "#8B5CF6",
   },
   {
@@ -1803,10 +2097,24 @@ export const SEO_PAGES: SeoPage[] = [
       ...CTA_CORE,
     ],
     image: img(
-      osLiveTracking,
-      "DigiTasks task tracking view in DIGI BIZ OS",
-      "Task tracking with live progress and stored results.",
+      osLiveTrackingModal,
+      "DigiTasks task execution and telemetry inspector in DIGI BIZ OS",
+      "DigiTasks: Task tracking with live progress and stored forensic results.",
     ),
+    screenshots: [
+      {
+        src: osLiveTrackingModal,
+        title: "Forensic Task Execution & Telemetry Inspector",
+        subtitle: "Live status, duration counters, payload inspector, and kill-switch",
+        caption: "Monitor background task progress with granular step timing and audit logs.",
+      },
+      {
+        src: osFlow,
+        title: "Automated Task Queues & Background Workers",
+        subtitle: "Tasks queued, executed, and audited across autonomous workers",
+        caption: "Autonomous background execution that continues running while you work.",
+      },
+    ],
     accent: "#14B8A6",
   },
   {
@@ -1861,6 +2169,20 @@ export const SEO_PAGES: SeoPage[] = [
       "Live Tracking forensic audit stream and event modal screenshot",
       "Live Tracking modal displaying real-time agent event stream and tool payloads.",
     ),
+    screenshots: [
+      {
+        src: osLiveTrackingModal,
+        title: "30-Event Forensic Stream & Modal Inspector",
+        subtitle: "Millisecond event inspection, tool input/output traces, and status counters",
+        caption: "No black-box mystery: inspect every tool call and reasoning step in real time.",
+      },
+      {
+        src: osLiveTracking,
+        title: "Real-Time Operations Center & System Metrics",
+        subtitle: "Active agent monitoring with active, warning, and error counters",
+        caption: "High-level operations telemetry board with emergency kill-switch controls.",
+      },
+    ],
     accent: "#10B981",
   },
   {
@@ -1907,9 +2229,17 @@ export const SEO_PAGES: SeoPage[] = [
     ],
     image: img(
       osSkills,
-      "AI skills library inside DIGI BIZ OS",
-      "The skills panel: hundreds of reusable capabilities.",
+      "AI skills library inside DIGI BIZ OS with 500+ switchable capabilities",
+      "The skills panel: hundreds of reusable capabilities with one-tap switches.",
     ),
+    screenshots: [
+      {
+        src: osSkills,
+        title: "500+ Built-in Switchable AI Skills Ecosystem",
+        subtitle: "One-tap toggle for calculation, web scraping, document transforms, and APIs",
+        caption: "Every skill shows its runner, status, and instant toggle switch.",
+      },
+    ],
     accent: "#EAB308",
   },
   {
@@ -1957,9 +2287,23 @@ export const SEO_PAGES: SeoPage[] = [
     ],
     image: img(
       osDesktopTools,
-      "Mixed AI tools panel inside DIGI BIZ OS",
-      "Mixed tools: files, system, documents and productivity utilities.",
+      "Mixed AI tools panel inside DIGI BIZ OS with 200+ native desktop tools",
+      "Mixed tools: files, system, documents, hardware control, and productivity utilities.",
     ),
+    screenshots: [
+      {
+        src: osDesktopTools,
+        title: "200+ System & Desktop Automation Tools",
+        subtitle: "Native utilities for folder analysis, screenshot understanding, and bulk ops",
+        caption: "Real desktop automation tools that drive your machine directly.",
+      },
+      {
+        src: osTools,
+        title: "Low-Level Desktop Hardware & OS Controllers",
+        subtitle: "Direct desktop automation for brightness, audio, power, and app control",
+        caption: "Hardware-level utilities for screen capture, audio control, and power states.",
+      },
+    ],
     accent: "#3B82F6",
   },
   {
@@ -2001,10 +2345,24 @@ export const SEO_PAGES: SeoPage[] = [
       ...CTA_CORE,
     ],
     image: img(
-      osAiHub,
+      osAiChat,
       "Model and provider selection inside the Digi AI hub",
       "Providers and models managed from the Digi AI hub.",
     ),
+    screenshots: [
+      {
+        src: osAiChat,
+        title: "Multi-Model Provider Selection & Reasoning Engine",
+        subtitle: "DeepSeek, Claude, GPT-4o, and local Ollama switchboard",
+        caption: "Seamlessly switch between top cloud APIs and completely free open models.",
+      },
+      {
+        src: osRuntime,
+        title: "Runtime Engine & Hardware VRAM Allocation",
+        subtitle: "Quantized local inference optimization and hardware monitoring",
+        caption: "Monitor local GPU VRAM allocation and execution speed.",
+      },
+    ],
     accent: "#D946EF",
   },
   {
@@ -2047,10 +2405,24 @@ export const SEO_PAGES: SeoPage[] = [
       ...CTA_CORE,
     ],
     image: img(
-      osSidebar,
-      "Memory and personas configuration inside DIGI BIZ OS",
-      "Memories and personas shaping how the OS behaves.",
+      osGraphFull,
+      "Persistent sovereign knowledge graph and memory visualizer in DIGI BIZ OS",
+      "Persistent knowledge graph: Sovereign memory linking clients, deals, and facts.",
     ),
+    screenshots: [
+      {
+        src: osGraphFull,
+        title: "Persistent Sovereign Knowledge Graph & Rules",
+        subtitle: "Bi-directional memory nodes, cross-entity relationships, and zero leaks",
+        caption: "Bi-directional knowledge graph connecting operational facts and client rules.",
+      },
+      {
+        src: osGraph,
+        title: "Contextual Memory Visualizer & Entity Explorer",
+        subtitle: "Radial relationship map linking clients, deals, rules, and facts",
+        caption: "Explore associative memory nodes and relationships visually.",
+      },
+    ],
     accent: "#818CF8",
   },
   {
@@ -2096,10 +2468,24 @@ export const SEO_PAGES: SeoPage[] = [
       ...CTA_CORE,
     ],
     image: img(
-      osRuntime,
-      "Local runtime execution inside DIGI BIZ OS",
-      "Local runtime: execution on your own machine.",
+      osMain,
+      "100% Air-gapped local desktop operating system interface",
+      "Local runtime: 100% air-gapped execution on your own Windows PC.",
     ),
+    screenshots: [
+      {
+        src: osMain,
+        title: "100% Air-Gapped Local Desktop Operating System",
+        subtitle: "Local SQLite database, zero external telemetry, client-safe privacy",
+        caption: "All business records and client data reside on your local drive.",
+      },
+      {
+        src: osAiChat,
+        title: "Local Ollama & Open-Weights Offline Inference",
+        subtitle: "Run open models entirely offline on your local GPU/CPU",
+        caption: "Run DeepSeek, Llama 3, and Mistral without sending prompts to cloud servers.",
+      },
+    ],
     accent: "#10B981",
   },
   {
@@ -2146,10 +2532,24 @@ export const SEO_PAGES: SeoPage[] = [
       ...CTA_CORE,
     ],
     image: img(
-      osDesktopTools,
-      "Desktop control tools inside DIGI BIZ OS",
-      "Desktop control surfaces for files, system and applications.",
+      osActiveAgent,
+      "Autonomous agent executing browser navigation and computer use",
+      "Computer control: Autonomous agent executing vision and computer tasks.",
     ),
+    screenshots: [
+      {
+        src: osActiveAgent,
+        title: "Autonomous Agent Execution & Computer Vision",
+        subtitle: "Real browser automation, visual element detection, autonomous web research",
+        caption: "Watch agents autonomously browse, extract pricing data, and interact with web pages.",
+      },
+      {
+        src: osMain,
+        title: "Unified Desktop Operating System Command Surface",
+        subtitle: "Files, apps, terminal, screen sharing, and multi-agent supervisor",
+        caption: "Complete operating environment running natively on Windows 10/11.",
+      },
+    ],
     accent: "#F43F5E",
   },
   {
@@ -2195,10 +2595,24 @@ export const SEO_PAGES: SeoPage[] = [
       ...CTA_CORE,
     ],
     image: img(
-      osTranscript,
-      "Voice transcript panel inside DIGI BIZ OS",
-      "Live voice transcription driving real execution.",
+      osStudioVoice,
+      "Voice assistant and multilingual speech engine interface",
+      "Voice assistant: Multilingual speech recognition and instant intent execution.",
     ),
+    screenshots: [
+      {
+        src: osStudioVoice,
+        title: "Multilingual Speech Engine & Studio Voiceovers",
+        subtitle: "Direct voice-to-intent engine, 50+ languages, zero-latency speech",
+        caption: "Speak naturally to command the OS, query data, and generate audiobooks.",
+      },
+      {
+        src: osTranscript,
+        title: "Live Real-Time Audio Transcript & Speech Visualizer",
+        subtitle: "Live transcription with acoustic wave monitoring and speech correction",
+        caption: "Verify transcribed instructions before execution begins.",
+      },
+    ],
     accent: "#00E5FF",
   },
   {
@@ -2245,10 +2659,24 @@ export const SEO_PAGES: SeoPage[] = [
       ...CTA_CORE,
     ],
     image: img(
-      osSidebar,
-      "Business automation modules inside DIGI BIZ OS",
-      "Operational modules inside a single OS.",
+      osFlow,
+      "Business automation workflows inside DIGI BIZ OS",
+      "Operational workflows running 24/7 inside a single OS.",
     ),
+    screenshots: [
+      {
+        src: osFlow,
+        title: "Always-On Autonomous Business Workflows",
+        subtitle: "Automate invoice chasers, stock alerts, and lead follow-ups 24/7",
+        caption: "Set it and forget it: autonomous routines keep business pipelines moving.",
+      },
+      {
+        src: osLiveTrackingModal,
+        title: "Execution Telemetry & Audit Stream",
+        subtitle: "Full auditability for recurring business processes",
+        caption: "Complete audit logs ensuring autonomous operations remain compliant.",
+      },
+    ],
     accent: "#22C55E",
   },
   /* ------------------------------------------------------------------ */
@@ -2470,10 +2898,24 @@ export const SEO_PAGES: SeoPage[] = [
       ...CTA_CORE,
     ],
     image: img(
-      osDesktopTools,
-      "Desktop control tools in DIGI BIZ OS acting on files and applications",
-      "Desktop and file tools available to the assistant.",
+      osActiveAgent,
+      "Desktop computer control by AI agents in DIGI BIZ OS",
+      "Direct desktop automation: files, apps, screen, camera and terminal.",
     ),
+    screenshots: [
+      {
+        src: osActiveAgent,
+        title: "Autonomous Agent Execution & Vision Navigation",
+        subtitle: "Real browser automation, visual element detection, autonomous computer tasks",
+        caption: "Direct visual inspection and mouse/keyboard navigation across desktop apps.",
+      },
+      {
+        src: osMain,
+        title: "Unified Desktop Operating System Command Surface",
+        subtitle: "Files, apps, terminal, screen sharing, and multi-agent supervisor",
+        caption: "Complete operating environment running natively on Windows 10/11.",
+      },
+    ],
     accent: "var(--purple)",
   },
   {
@@ -2597,10 +3039,24 @@ export const SEO_PAGES: SeoPage[] = [
       ...CTA_CORE,
     ],
     image: img(
-      osRuntime,
-      "Model selection and routing settings in DIGI BIZ OS",
-      "Model routing and runtime configuration.",
+      osAiChat,
+      "Task-aware model router configuration in DIGI BIZ OS",
+      "Model router: Automatic task-aware selection across 50+ AI models.",
     ),
+    screenshots: [
+      {
+        src: osAiChat,
+        title: "Intelligent Task-Aware Model Router",
+        subtitle: "Routes routine tasks to fast models and complex tasks to heavy models",
+        caption: "Automatically match model capability and speed to each user prompt.",
+      },
+      {
+        src: osRuntime,
+        title: "Runtime Engine & Local Provider Dispatcher",
+        subtitle: "Hardware VRAM allocation, speed/cost balancing across 50+ models",
+        caption: "Balance token costs and local hardware performance seamlessly.",
+      },
+    ],
     accent: "var(--purple)",
   },
   {
@@ -2652,10 +3108,24 @@ export const SEO_PAGES: SeoPage[] = [
       ...CTA_CORE,
     ],
     image: img(
-      osMain,
-      "Document and file tools inside DIGI BIZ OS",
-      "Document and file operations inside DIGI BIZ OS.",
+      osDocs,
+      "Document cryptography and sovereign file workspace in DIGI BIZ OS",
+      "Document and file operations: Cryptographic storage and batch file organization.",
     ),
+    screenshots: [
+      {
+        src: osDocs,
+        title: "Document Cryptography & Sovereign File Workspace",
+        subtitle: "Local document encryption, PDF processing, bulk renaming, and conversion",
+        caption: "Encrypted local workspace for confidential business documents and invoices.",
+      },
+      {
+        src: osDesktopTools,
+        title: "Native Desktop File Utilities & Batch Operations",
+        subtitle: "200+ mixed tools for bulk folder analysis and system management",
+        caption: "Sort, rename, and convert large document archives in seconds.",
+      },
+    ],
     accent: "var(--amber)",
   },
 ];
