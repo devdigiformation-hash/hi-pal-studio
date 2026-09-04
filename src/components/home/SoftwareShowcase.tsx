@@ -22,10 +22,6 @@ import digiStudioTranscript from "@/assets/os-digi-studio-transcript.png";
 import digiStudioImage from "@/assets/os-digi-studio-image.png";
 import digiStudioVoice from "@/assets/os-digi-studio-voice.png";
 import digiCode from "@/assets/os-digi-code.png";
-import digiDocs from "@/assets/os-digi-docs.png";
-import digiTools from "@/assets/os-digi-tools.png";
-import digiCli from "@/assets/os-digi-cli.png";
-import digiMcp from "@/assets/os-digi-mcp.png";
 import digiSkills from "@/assets/os-skills.png";
 import digiDesktopTools from "@/assets/os-desktop-tools.png";
 
@@ -137,30 +133,6 @@ const SLIDES = [
     tag: "Digi Code",
     title: "A coding agent that works inside your projects.",
     body: "Sessions, project and branch context, slash commands and @ references — point it at a repo or folder and it reasons, refactors and ships from one prompt bar.",
-  },
-  {
-    src: digiDocs,
-    tag: "Digi Docs",
-    title: "A full document suite, offline and on your machine.",
-    body: "Merge, compare, compress, convert, OCR, redact, sign, timestamp, password-protect and watermark — every document tool one search away.",
-  },
-  {
-    src: digiTools,
-    tag: "Digi Tools",
-    title: "100+ offline utilities, always at hand.",
-    body: "Crypto, encoding, converters, generators and analysers — searchable, favouritable and fully offline, so nothing you paste ever leaves the machine.",
-  },
-  {
-    src: digiCli,
-    tag: "Digi CLI",
-    title: "Connect local runners and toggle them live.",
-    body: "Script runners, version control, document parsing, retrieval and web research — each connection on, off or added in a click, with capabilities listed up front.",
-  },
-  {
-    src: digiMcp,
-    tag: "Digi MCP",
-    title: "Multi-MCP ready — 40+ servers, one switchboard.",
-    body: "Desktop automation, research, browsing, documentation and private routing servers imported and toggled live, so your agents gain new powers instantly.",
   },
   {
     src: digiSkills,
