@@ -16,6 +16,11 @@ import digiFlow from "@/assets/os-digi-flow.png";
 import digiIntelligence from "@/assets/os-digi-crm-intelligence.png";
 import digiWhatsapp from "@/assets/os-digi-crm-whatsapp.png";
 import digiMarketing from "@/assets/os-digi-marketing.png";
+import digiStudioVideo from "@/assets/os-digi-studio-video-editor.png";
+import digiStudioAvatar from "@/assets/os-digi-studio-avatar.png";
+import digiStudioTranscript from "@/assets/os-digi-studio-transcript.png";
+import digiStudioImage from "@/assets/os-digi-studio-image.png";
+import digiStudioVoice from "@/assets/os-digi-studio-voice.png";
 import digiCode from "@/assets/os-digi-code.png";
 import digiDocs from "@/assets/os-digi-docs.png";
 import digiTools from "@/assets/os-digi-tools.png";
@@ -90,6 +95,36 @@ const SLIDES = [
     tag: "Digi Intelligence — E-Commerce Research",
     title: "One-click 20-stage deep market analysis across major marketplaces.",
     body: "Automated multi-platform product and supplier hunting across Amazon, eBay, Etsy, Walmart, TikTok, and Shopify with historical research tracking.",
+  },
+  {
+    src: digiStudioVideo,
+    tag: "Digi Studio — Offline Video Editor",
+    title: "Free CapCut alternative powered by local FFmpeg.",
+    body: "Trim, crop, resize for Reels and Shorts, timeline control, speed ramp, add captions, background music, fades, color grading, format conversion — 100% offline with zero subscriptions.",
+  },
+  {
+    src: digiStudioAvatar,
+    tag: "Digi Studio — Avatar Intelligence",
+    title: "Transform still face photos and audio into talking AI presenter videos.",
+    body: "Upload face portraits, generate or record voice narrations, and create synchronized talking avatar videos locally with lightweight offline speech-to-motion engines.",
+  },
+  {
+    src: digiStudioVoice,
+    tag: "Digi Studio — Voice Intelligence & Audiobooks",
+    title: "Human-grade multilingual text-to-speech studio with instant preview.",
+    body: "Generate studio-quality voiceovers in English, Urdu, Hindi, Arabic, Persian, Pashto, Chinese, French and more. Convert full PDFs and long documents into audiobooks in one click.",
+  },
+  {
+    src: digiStudioImage,
+    tag: "Digi Studio — Image Intelligence & Photo Factory",
+    title: "Automated batch photo studio with AI background removal and upscaling.",
+    body: "Instant background removal, white background product prep, sharpen, denoise, 2x/4x AI upscaling, and grayscale conversion — stacked and processed completely offline.",
+  },
+  {
+    src: digiStudioTranscript,
+    tag: "Digi Studio — Transcript Intelligence & Course Maker",
+    title: "Instant auto-fetching, Whisper audio transcription, and course synthesis.",
+    body: "Paste any video or playlist link for zero-download instant text fetching, or upload media files for local Whisper transcription, structured study notes, and course generation.",
   },
   {
     src: digiCode,
