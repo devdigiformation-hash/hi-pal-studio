@@ -22,7 +22,7 @@ const FAQS = [
   },
   {
     q: "Is this really a one-time payment?",
-    a: "Yes. Every package is a single one-time payment — £50 lifetime access, £100 for done-for-you software setup with 5 custom business workflows, or £199 for the full source code licence. No monthly software seat fees.",
+    a: "Yes. Every package is a single one-time payment — £50 lifetime access, £50 for done-for-you software setup with 5 custom business workflows, or £199 for the full source code licence. No monthly software seat fees.",
   },
   {
     q: "What does the Software Setup & Business Customization package include?",
@@ -83,7 +83,6 @@ const TIERS: {
     accentRgb: "245,166,35",
     border: "var(--amber-border)",
     glow: "var(--glow-amber)",
-    badge: "Most Popular",
     cta: "Order Software Setup",
   },
   {
@@ -112,7 +111,7 @@ export default function PricingPage() {
         eyebrow="Pricing"
         title="DIGI BIZ OS Pricing —"
         gradientTitle="Lifetime Licences"
-        subtitle="Three clear packages — £50 lifetime access, £100 done-for-you software setup with 5 custom business workflows, or £199 full source code."
+        subtitle="Three clear packages — £50 lifetime access, £50 done-for-you software setup with 5 custom business workflows, or £199 full source code."
         height="min-h-[50vh]"
       />
 
@@ -127,16 +126,11 @@ export default function PricingPage() {
           <div className="mt-12 grid items-start gap-6 lg:grid-cols-3">
             {TIERS.map((tier, i) => {
               const plan = PLANS[tier.id];
-              const isPopular = tier.id === "custom_build";
               return (
                 <GlassCard
                   key={tier.id}
-                  className={
-                    isPopular
-                      ? `reveal-item delay-${i} p-8 lg:-mt-4 lg:scale-[1.02]`
-                      : `reveal-item delay-${i} p-8`
-                  }
-                  style={{ borderColor: tier.border, boxShadow: isPopular ? tier.glow : undefined }}
+                  className={`reveal-item delay-${i} p-8`}
+                  style={{ borderColor: tier.border }}
                   glowColor={tier.accent}
                 >
                   <div className="flex items-center justify-between gap-3">
