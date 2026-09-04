@@ -1368,10 +1368,12 @@ export const SEO_PAGES: SeoPage[] = [
         },
       ],
       capabilities: [
-        { title: "AI caption generator", body: "Generate optimized copy for different social channels." },
-        { title: "Multi-account hub", body: "Manage multiple connected profiles and channels in one tab." },
-        { title: "Post scheduling", body: "Queue posts for scheduled future automated publishing." },
-        { title: "Campaign history", body: "Audit published and scheduled broadcasts." },
+        { title: "8-Platform Social Switchboard", body: "Publish and schedule across Facebook, LinkedIn, X, Telegram, Instagram, YouTube, Bluesky, and Mastodon from one workspace." },
+        { title: "Direct-Response AI Copywriter", body: "Generate high-converting headlines, hooks, and sales copy based on proven advertising frameworks (AIDA, PAS, BAB)." },
+        { title: "Unicode Typography Styling", body: "Apply Mathematical Bold and Italic text formatting that stays styled across mobile social feeds without rich text loss." },
+        { title: "Visual Media Attachments", body: "Attach promotional flyers, product photos from Image Studio, or video clips with destination-specific media validation." },
+        { title: "Calendar Publishing Queue", body: "Schedule posts days or weeks in advance with automated background dispatch, draft persistence, and retry handling." },
+        { title: "Autonomous WhatsApp Sync", body: "Seamlessly links with Digi WhatsApp for 24/7 autonomous customer inquiries and CRM order capture." },
       ],
       sections: [
         {
@@ -1516,12 +1518,12 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     capabilities: [
-      { title: "Timeline Video Editor", body: "Multi-track video sequencing, cuts, transitions, captions, and 4K export." },
-      { title: "Multilingual Voice TTS", body: "Natural voice generation and long-form audiobook production in 50+ languages." },
-      { title: "AI Avatar Studio", body: "Photorealistic digital presenters and talking avatars synced to script audio." },
-      { title: "Speech-to-Text Transcriber", body: "Audio transcription with timestamped subtitles and SRT generation." },
-      { title: "AI Photo Studio", body: "AI image upscaling, background removal, object cleanup, and thumbnail creation." },
-      { title: "Automated Social Rendering", body: "1-click aspect ratio conversion for YouTube, Reels, TikTok, and LinkedIn." },
+      { title: "Offline Timeline Video Editor", body: "Hardware-accelerated cutting, 9:16 vertical crop, slow-mo interpolation, captions, audio mixing, and MP4/GIF export with zero watermark." },
+      { title: "AI Audio Denoise & Sound FX", body: "1-click background rumble, AC hum, and traffic clean-up, 2x-4x dynamic volume booster, stereo vocal remover, and spatial reverb." },
+      { title: "Transcript & Course Intelligence", body: "Auto-fetches YouTube links & 25-hour playlists without downloading; turns media into complete course syllabi, study notes, or video prompts." },
+      { title: "AI Talking Avatar & Face Presenter", body: "Transform portrait photos and voice tracks into animated talking presenters with synchronized lip motion, plus local face swapping." },
+      { title: "Multilingual Voice & Audiobooks", body: "Natural studio narration and unlimited neural voices in Urdu, Hindi, English, Arabic, and 40+ languages; converts PDFs to MP3 audiobooks." },
+      { title: "AI Photo Studio & 4K Upscaler", body: "Instant AI background removal, white e-commerce product framing, edge sharpening, denoising, and 2x/4x high-resolution upscaling." },
     ],
     sections: [
       {

@@ -138,24 +138,34 @@ export const MODULES_LIST: ModuleData[] = [
     ],
     coreCapabilities: [
       {
-        title: "Offline Video Editor (CapCut Alternative)",
+        title: "Offline Video Editor (CapCut Pro Alternative)",
         description:
-          "Full timeline video editor with native hardware acceleration. Trim, crop, resize for vertical 9:16 formats, adjust speed, add text overlays, mix background music, and convert video formats with zero cloud rendering lag.",
+          "Timeline video editor with live video scrubber, clip markers, 9:16 vertical crop for Reels/Shorts/TikTok, smooth slow-mo interpolation, text captions, background music mixing, and multi-format export (MP4, MOV, WEBM, GIF) with zero watermark.",
       },
       {
-        title: "Avatar Intelligence (Photo to Talking Presenter)",
+        title: "AI Audio Denoise & Sound FX (Adobe Podcast Alternative)",
         description:
-          "Transform still face portraits and voice recordings into natural talking AI presenter videos with accurate facial motion and lip-syncing, processed entirely on your Windows desktop.",
+          "1-click background noise reduction: eliminates fan hum, traffic rumble, and room hiss using spectral filtering and broadcast loudness normalization. Includes 2x-4x dynamic volume booster, stereo vocal remover (karaoke filter), and spatial reverb.",
       },
       {
-        title: "Multilingual Voice Intelligence & Audiobooks",
+        title: "Transcript & Course Intelligence (Otter.ai & NoteGPT Alternative)",
         description:
-          "Generate human-quality voiceovers in English, Urdu, Hindi, Arabic, Persian, French, and 40+ languages. Convert entire PDF documents and long articles into multi-chapter audiobooks with one click.",
+          "Auto-fetches YouTube videos and entire 25-hour playlists without pre-downloading. AI generates verbatim transcripts, multi-module course syllabi, structured study notes, and video prompt extraction with instant export to PDF, Markdown, and TXT.",
       },
       {
-        title: "Image Studio & Photo Factory",
+        title: "Avatar Intelligence & Face Presenter (HeyGen Alternative)",
         description:
-          "Automated batch image enhancement: instant AI background removal, white-background product prep, edge sharpening, denoising, and 2x/4x AI upscaling for e-commerce listings.",
+          "Transform still face portraits and narration audio or live microphone recordings into natural talking AI presenter videos with facial animation and lip-syncing, plus local face swapping for promo videos.",
+      },
+      {
+        title: "Multilingual Voice TTS & Document Audiobooks (ElevenLabs Alternative)",
+        description:
+          "Natural studio voice generation plus unlimited neural voices in Urdu, Hindi, English, Arabic, Persian, French, and 40+ languages. Upload PDF, DOCX, or text files to generate multi-chapter audiobooks with zero character caps.",
+      },
+      {
+        title: "Image Studio & Photo Factory (Photoroom & Topaz Alternative)",
+        description:
+          "Instant AI background removal, clean white e-commerce product backdrop generation, edge sharpening, denoising, 2x/4x high-resolution upscaling, and Gaussian privacy blur.",
       },
     ],
     workflows: [
@@ -447,7 +457,7 @@ export const MODULES_LIST: ModuleData[] = [
       { name: "Digi Flow Workflows", slug: "workflows", description: "Automate recurring marketing audits and publishing routines on cron schedules." },
     ],
     openSourceSynergy:
-      "Integrates with ImageMagick and pngquant for automated image compression and formatting before multi-platform dispatch.",
+      "Integrates with native desktop graphic optimization and image compression engines for automated formatting before multi-platform dispatch.",
   },
   {
     slug: "workflows",
