@@ -477,8 +477,8 @@ function OpenSourcePage() {
           </h1>
 
           <p className="reveal-item delay-2 mx-auto mt-6 max-w-[760px] font-body text-[16px] leading-[1.8] text-[var(--text-secondary)] md:text-[18px]">
-            Production-grade autonomous AI agents, local LLM runners, full-stack backends, and WhatsApp
-            sales bots. Install, run on your machine, connect to DIGI BIZ OS, or own the entire source code.
+            Production-grade autonomous AI agents, local LLM runners, full-stack backends, and offline media suites.
+            Install, run on your machine, connect to DIGI BIZ OS, or own the entire source code.
           </p>
 
           {/* Quick Metrics Badges */}

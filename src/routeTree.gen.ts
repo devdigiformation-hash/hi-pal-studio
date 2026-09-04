@@ -57,7 +57,6 @@ import { Route as OpenSourceSeoSpiderRouteImport } from './routes/open-source.se
 import { Route as OpenSourceShotcutRouteImport } from './routes/open-source.shotcut'
 import { Route as OpenSourceTuttleRouteImport } from './routes/open-source.tuttle'
 import { Route as OpenSourceUpscaylRouteImport } from './routes/open-source.upscayl'
-import { Route as OpenSourceWhatsappAiSalesAgentRouteImport } from './routes/open-source.whatsapp-ai-sales-agent'
 import { Route as OrderRefRouteImport } from './routes/order.$ref'
 
 const IndexRoute = IndexRouteImport.update({
@@ -300,12 +299,6 @@ const OpenSourceUpscaylRoute = OpenSourceUpscaylRouteImport.update({
   path: '/upscayl',
   getParentRoute: () => OpenSourceRoute,
 } as any)
-const OpenSourceWhatsappAiSalesAgentRoute =
-  OpenSourceWhatsappAiSalesAgentRouteImport.update({
-    id: '/whatsapp-ai-sales-agent',
-    path: '/whatsapp-ai-sales-agent',
-    getParentRoute: () => OpenSourceRoute,
-  } as any)
 const OrderRefRoute = OrderRefRouteImport.update({
   id: '/order/$ref',
   path: '/order/$ref',
@@ -355,7 +348,6 @@ export interface FileRoutesByFullPath {
   '/open-source/shotcut': typeof OpenSourceShotcutRoute
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
   '/open-source/upscayl': typeof OpenSourceUpscaylRoute
-  '/open-source/whatsapp-ai-sales-agent': typeof OpenSourceWhatsappAiSalesAgentRoute
   '/order/$ref': typeof OrderRefRoute
   '/blog/': typeof BlogIndexRoute
   '/compare/': typeof CompareIndexRoute
@@ -406,7 +398,6 @@ export interface FileRoutesByTo {
   '/open-source/shotcut': typeof OpenSourceShotcutRoute
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
   '/open-source/upscayl': typeof OpenSourceUpscaylRoute
-  '/open-source/whatsapp-ai-sales-agent': typeof OpenSourceWhatsappAiSalesAgentRoute
   '/order/$ref': typeof OrderRefRoute
   '/blog': typeof BlogIndexRoute
   '/compare': typeof CompareIndexRoute
@@ -459,7 +450,6 @@ export interface FileRoutesById {
   '/open-source/shotcut': typeof OpenSourceShotcutRoute
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
   '/open-source/upscayl': typeof OpenSourceUpscaylRoute
-  '/open-source/whatsapp-ai-sales-agent': typeof OpenSourceWhatsappAiSalesAgentRoute
   '/order/$ref': typeof OrderRefRoute
   '/blog/': typeof BlogIndexRoute
   '/compare/': typeof CompareIndexRoute
@@ -513,7 +503,6 @@ export interface FileRouteTypes {
     | '/open-source/shotcut'
     | '/open-source/tuttle'
     | '/open-source/upscayl'
-    | '/open-source/whatsapp-ai-sales-agent'
     | '/order/$ref'
     | '/blog/'
     | '/compare/'
@@ -564,7 +553,6 @@ export interface FileRouteTypes {
     | '/open-source/shotcut'
     | '/open-source/tuttle'
     | '/open-source/upscayl'
-    | '/open-source/whatsapp-ai-sales-agent'
     | '/order/$ref'
     | '/blog'
     | '/compare'
@@ -616,7 +604,6 @@ export interface FileRouteTypes {
     | '/open-source/shotcut'
     | '/open-source/tuttle'
     | '/open-source/upscayl'
-    | '/open-source/whatsapp-ai-sales-agent'
     | '/order/$ref'
     | '/blog/'
     | '/compare/'
@@ -1000,13 +987,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OpenSourceUpscaylRouteImport
       parentRoute: typeof OpenSourceRoute
     }
-    '/open-source/whatsapp-ai-sales-agent': {
-      id: '/open-source/whatsapp-ai-sales-agent'
-      path: '/whatsapp-ai-sales-agent'
-      fullPath: '/open-source/whatsapp-ai-sales-agent'
-      preLoaderRoute: typeof OpenSourceWhatsappAiSalesAgentRouteImport
-      parentRoute: typeof OpenSourceRoute
-    }
     '/order/$ref': {
       id: '/order/$ref'
       path: '/order/$ref'
@@ -1033,7 +1013,6 @@ interface OpenSourceRouteChildren {
   OpenSourceShotcutRoute: typeof OpenSourceShotcutRoute
   OpenSourceTuttleRoute: typeof OpenSourceTuttleRoute
   OpenSourceUpscaylRoute: typeof OpenSourceUpscaylRoute
-  OpenSourceWhatsappAiSalesAgentRoute: typeof OpenSourceWhatsappAiSalesAgentRoute
   OpenSourceIndexRoute: typeof OpenSourceIndexRoute
 }
 
@@ -1053,7 +1032,6 @@ const OpenSourceRouteChildren: OpenSourceRouteChildren = {
   OpenSourceShotcutRoute: OpenSourceShotcutRoute,
   OpenSourceTuttleRoute: OpenSourceTuttleRoute,
   OpenSourceUpscaylRoute: OpenSourceUpscaylRoute,
-  OpenSourceWhatsappAiSalesAgentRoute: OpenSourceWhatsappAiSalesAgentRoute,
   OpenSourceIndexRoute: OpenSourceIndexRoute,
 }
 

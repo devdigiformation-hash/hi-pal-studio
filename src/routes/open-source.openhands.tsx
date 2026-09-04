@@ -164,9 +164,9 @@ const SETUP_STEPS = [
 
 const DIGIBIZOS_POINTS = [
   "Multi-agent business orchestration with human-in-the-loop approvals.",
-  "Built-in CRM, invoicing, project management, and WhatsApp Business API.",
+  "Built-in CRM, invoicing, project management, and automated sales pipelines.",
   "Voice-controlled desktop automation and autonomous task scheduling.",
-  "White-label and source-code licence for full ownership and resale.",
+  "Complete source-code licence option for full ownership and developer extensibility.",
 ];
 
 const QUICKSTART_CMD =
@@ -478,7 +478,7 @@ function OpenHandsPage() {
                 </h2>
                 <p className="mt-4 max-w-[720px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]">
                   OpenHands is a powerful open-source software engineer. But DIGI BIZ OS combines
-                  WhatsApp Business API, CRM, invoicing, project management, voice-controlled
+                  omnichannel marketing, CRM, invoicing, project management, voice-controlled
                   desktop automation, and multi-agent orchestration into one complete business
                   operating system.
                 </p>

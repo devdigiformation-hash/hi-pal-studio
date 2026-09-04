@@ -181,9 +181,9 @@ const REQUIREMENTS = [
 
 const DIGIBIZOS_POINTS = [
   "Multi-agent business orchestration with human-in-the-loop approvals.",
-  "Built-in CRM, invoicing, project management, and WhatsApp Business API.",
+  "Built-in CRM, invoicing, project management, and automated sales pipelines.",
   "Voice-controlled desktop automation and autonomous task scheduling.",
-  "White-label and source-code licence for full ownership and resale.",
+  "Complete source-code licence option for full ownership and developer extensibility.",
 ];
 
 export const Route = createFileRoute("/open-source/hermes-agent")({
