@@ -29,8 +29,8 @@ const FAQS = [
     a: "Complete end-to-end installation of DIGI BIZ OS on your PC, full configuration of your AI API keys, WhatsApp AI sales agent setup, business knowledge base ingestion, and 5 custom automated business workflows built specifically for your business operations.",
   },
   {
-    q: "What is the maintenance policy after 1 month?",
-    a: "All packages include 1 month of complimentary setup support and updates. After month 1, ongoing maintenance and priority update support is completely optional at just £5/month, or you can continue using your lifetime license with zero recurring fees.",
+    q: "Are there any recurring maintenance fees?",
+    a: "No. All packages are 100% one-time payments with zero monthly software fees, seat subscriptions, or forced maintenance costs.",
   },
   {
     q: "What do I get with the source code licence?",
