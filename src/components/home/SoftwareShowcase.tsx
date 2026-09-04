@@ -7,8 +7,10 @@ import GradientText from "@/components/GradientText";
 import digiMain from "@/assets/os-main-dashboard.png";
 import digiActiveAgent from "@/assets/os-active-agent-search.png";
 import digiLiveTracking from "@/assets/os-live-tracking-modal.png";
-import digiAiHub from "@/assets/os-digi-ai-hub.png";
-import digiCrm from "@/assets/os-digi-crm.png";
+import digiAiChat from "@/assets/os-digi-ai-chat.png";
+import digiAiImage from "@/assets/os-digi-ai-image.png";
+import digiCrmDash from "@/assets/os-digi-crm-dashboard.png";
+import digiCrmNav from "@/assets/os-digi-crm-navigation.png";
 import digiIntelligence from "@/assets/os-digi-intelligence.png";
 import digiMarketing from "@/assets/os-digi-marketing.png";
 import digiWhatsapp from "@/assets/os-digi-whatsapp.png";
@@ -40,16 +42,28 @@ const SLIDES = [
     body: "Track every tool call, reasoning step, routing decision, and execution duration in real time with active, good, warning, and error counters.",
   },
   {
-    src: digiAiHub,
-    tag: "Digi AI Hub",
-    title: "Chat, code, personas and agents in one playground.",
-    body: "Agent project assistant, multi-model chat, coding assistant, persona manager, providers and app store — everything unified behind one clean interface.",
+    src: digiAiChat,
+    tag: "Digi AI — Chat & Reasoning",
+    title: "Multi-model reasoning, autonomous task dispatch, and real-time chat.",
+    body: "Switch between chat and image modes, load custom system personas, query internal knowledge, and dispatch autonomous multi-step agent routines with full privacy.",
   },
   {
-    src: digiCrm,
-    tag: "Digi CRM",
-    title: "Business, leads, pipelines and product intelligence.",
-    body: "Contact tracking, deal pipelines, live revenue tracking, company records, and AI-driven business intelligence reports in one command center.",
+    src: digiAiImage,
+    tag: "Digi AI — Image Generation Studio",
+    title: "Studio-grade photorealistic visual generation with instant prompt controls.",
+    body: "Native high-resolution image synthesis with custom aspect ratios, style presets, negative prompts, seed controls, and an offline local gallery.",
+  },
+  {
+    src: digiCrmDash,
+    tag: "Digi CRM — Executive Overview",
+    title: "Real-time revenue, orders, invoice pipelines, and lead intelligence.",
+    body: "Live financial tracking, daily AI executive briefing toggles, order fulfillments, payment statuses, and instant WhatsApp lead sync in one unified command center.",
+  },
+  {
+    src: digiCrmNav,
+    tag: "Digi CRM — Complete Suite",
+    title: "Comprehensive enterprise CRM with accounting, outreach, and database.",
+    body: "From company formation and bank accounting to automated customer support, pipeline management, email campaigns, and direct database management.",
   },
   {
     src: digiIntelligence,
