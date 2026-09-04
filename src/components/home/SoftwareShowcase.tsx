@@ -137,13 +137,13 @@ const SLIDES = [
   {
     src: digiSkills,
     tag: "Skills",
-    title: "500+ skills, every one switchable.",
+    title: "Extensive skills library, every one switchable.",
     body: "API calls, calculation, data analysis, document parsing, file transforms, web research and more — each skill shows its runner, its live status and a one-tap on/off.",
   },
   {
     src: digiDesktopTools,
     tag: "Mixed Tools",
-    title: "200+ built-in tools that actually drive your machine.",
+    title: "Native automation tools that actually drive your machine.",
     body: "Folder analysis, screenshot understanding, bulk file operations and renames, clipboard, brightness, power and application control — real desktop automation, one switch each.",
   },
 ];

@@ -6,6 +6,7 @@ import GradientText from "@/components/GradientText";
 import { buildMeta, breadcrumbLd } from "@/lib/seo";
 import { FEATURE_PAGES, INTENT_PAGES } from "@/content/seo-pages";
 import { BLOG_POSTS } from "@/content/blog-posts";
+import { COMPARE_PAGES } from "@/content/compare-pages";
 import { MODULES_LIST } from "@/content/modules-data";
 import { MODELS_LIST } from "@/content/models-data";
 
@@ -133,6 +134,13 @@ function SiteMapPage() {
             <Group
               title="Solutions & guides"
               links={INTENT_PAGES.map((p) => ({ label: p.h1, to: p.path }))}
+            />
+            <Group
+              title="Product Comparisons"
+              links={[
+                { label: "All Comparisons", to: "/compare" },
+                ...COMPARE_PAGES.map((c) => ({ label: `${c.competitor} Comparison`, to: `/compare/${c.slug}` })),
+              ]}
             />
             <Group
               title="Blog & Comparison Guides"

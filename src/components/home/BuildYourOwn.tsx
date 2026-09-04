@@ -32,7 +32,7 @@ const ITEMS: { icon: LucideIcon; color: string; title: string; body: string }[] 
     icon: Wrench,
     color: "var(--amber)",
     title: "Custom Tools",
-    body: "Add your own tools on top of the 200+ built-in ones already included.",
+    body: "Add your own custom tools and skills alongside the extensive built-in automation suite.",
   },
   {
     icon: Users,

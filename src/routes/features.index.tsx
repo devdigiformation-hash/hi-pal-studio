@@ -108,7 +108,7 @@ function FeaturesHub() {
           </h1>
           <p className="reveal-item delay-2 mx-auto mt-6 max-w-[760px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[17px]">
             DIGI BIZ OS is a JARVIS-style AI business operating system for Windows. Voice, agents,
-            500+ skills, 200+ mixed tools, coding, documents, workflows and tasks — all in
+            extensive skills, native desktop tools, coding, documents, workflows and tasks — all in
             one local Windows application with zero monthly subscription.
           </p>
         </div>

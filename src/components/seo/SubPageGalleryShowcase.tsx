@@ -285,7 +285,7 @@ const MODULE_GALLERIES: Record<string, GalleryItem[]> = {
       summary:
         "Complete offline-first IDE and pair programming environment. Understands entire project architectures, refactors multi-file dependency trees, and runs terminal commands with local air-gapped privacy.",
       highlights: [
-        "Monaco-powered editor with syntax highlighting, diff viewer, and file tree",
+        "Professional code workspace with syntax highlighting, diff viewer, and file tree",
         "Integrated terminal with automated command execution and error self-correction",
         "Zero code telemetry leakage — proprietary algorithms stay on your drive",
       ],

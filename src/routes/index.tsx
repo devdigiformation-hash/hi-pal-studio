@@ -25,7 +25,7 @@ import { buildMeta, softwareLd } from "@/lib/seo";
 
 const TITLE = "DIGI BIZ OS — JARVIS AI for PC | Sci-Fi Desktop Experience";
 const DESC =
-  "The JARVIS AI for PC and business you've been searching for. DIGI BIZ OS turns Windows into a cinematic, voice-controlled sci-fi desktop — multi-agent automation, 500+ skills, local privacy, $0 subscription.";
+  "The JARVIS AI for PC and business you've been searching for. DIGI BIZ OS turns Windows into a cinematic, voice-controlled sci-fi desktop — multi-agent automation, extensive skills library, local privacy, $0 subscription.";
 
 export const Route = createFileRoute("/")({
   head: () => {

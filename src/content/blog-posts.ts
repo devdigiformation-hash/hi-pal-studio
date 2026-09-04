@@ -320,7 +320,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Where DIGI BIZ OS fits",
         paragraphs: [
-          "DIGI BIZ OS sits in the fourth category: an installed Windows application with voice control, agents, 500+ skills, 200+ mixed tools, document and coding workspaces, and automated workflows. It is a one-time licence rather than a subscription.",
+          "DIGI BIZ OS sits in the fourth category: an installed Windows application with voice control, agents, extensive skills library, native desktop tools, document and coding workspaces, and automated workflows. It is a one-time licence rather than a subscription.",
           "If you only need hands-free shortcuts, a voice launcher is the lighter and cheaper answer — and that is a perfectly reasonable outcome of this comparison.",
         ],
       },
@@ -499,7 +499,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "The Death of Per-Seat Cloud CRMs: Why Local AI CRMs Win",
     metaTitle: "Local AI CRM for Small Business — Goodbye Per-Seat SaaS | DIGI BIZ OS",
     description:
-      "Why growing businesses are switching from expensive cloud CRMs to local SQLite-powered AI CRMs on Windows with $0 monthly fees.",
+      "Why growing businesses are switching from expensive cloud CRMs to local sovereign AI CRMs on Windows with $0 monthly fees.",
     cluster: "Business Strategy",
     date: "2026-08-28",
     readingTime: "5 min read",
@@ -749,7 +749,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "How JARVIS Voice AI Integrates with Digi CRM",
         paragraphs: [
-          "DIGI BIZ OS combines offline Whisper speech recognition with deterministic SQLite transactions, ensuring zero latency and 100% voice command execution accuracy.",
+          "DIGI BIZ OS combines offline Whisper speech recognition with deterministic local database transactions, ensuring zero latency and 100% voice command execution accuracy.",
         ],
       },
     ],
@@ -816,7 +816,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Many businesses use both: drafting high-level strategy in ChatGPT, and using DIGI BIZ OS to execute, file, automate, and manage customer pipelines on Windows.",
         ],
         bullets: [
-          "Execution: DIGI BIZ OS operates native Windows files, terminal, and SQLite CRM.",
+          "Execution: DIGI BIZ OS operates native Windows files, terminal, and local sovereign CRM.",
           "Pricing: DIGI BIZ OS is a £50 one-time licence ($0 monthly subscriptions).",
           "Privacy: 100% local processing option with air-gapped data sovereignty.",
         ],
@@ -845,7 +845,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
         bullets: [
           "Ecosystem: DIGI BIZ OS is vendor-neutral and works with any file, database, or API.",
-          "CRM & Communication: Native SQLite CRM and automated WhatsApp sales agents.",
+          "CRM & Communication: Native sovereign CRM and automated WhatsApp sales agents.",
           "Licensing: One-time lifetime access vs per-user monthly SaaS recurring billing.",
         ],
       },

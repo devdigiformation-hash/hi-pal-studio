@@ -206,7 +206,7 @@ export default function VoiceAIPage() {
                   color: "var(--text-primary)",
                 },
                 { text: "Agent: Launching Digi Intelligence browser crawler...", color: "var(--cyan)" },
-                { text: "Agent: Extracted 5 listings. Updating local SQLite database...", color: "var(--purple)" },
+                { text: "Agent: Extracted 5 listings. Updating local customer database...", color: "var(--purple)" },
                 { text: "✓ Task Complete — 2.8s total execution time", color: "var(--success)" },
               ]}
             />

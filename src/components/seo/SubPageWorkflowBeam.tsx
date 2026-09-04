@@ -48,7 +48,7 @@ const DEFAULT_STEPS: WorkflowStep[] = [
   {
     step: "03",
     title: "Local Hardware Sandbox Run",
-    description: "Commands execute natively on your PC: querying SQLite, calling offline engines (FFmpeg, local LLMs), or operating files with zero cloud latency.",
+    description: "Commands execute natively on your PC: querying your secure local database, calling offline media & AI engines, or operating files with zero cloud latency.",
     icon: Cpu,
     tag: "Native Desktop Speed",
   },

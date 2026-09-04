@@ -73,6 +73,12 @@ export const Route = createFileRoute("/sitemap.xml")({
             changefreq: "monthly" as const,
             priority: "0.8",
           })),
+          { path: "/compare", changefreq: "weekly" as const, priority: "0.8" },
+          ...COMPARE_PAGES.map((c) => ({
+            path: `/compare/${c.slug}`,
+            changefreq: "monthly" as const,
+            priority: "0.75",
+          })),
           ...BLOG_POSTS.map((p) => ({
             path: `/blog/${p.slug}`,
             changefreq: "monthly" as const,

@@ -57,7 +57,7 @@ const MODULES: Module[] = [
     badge: "Creative Media Suite",
     body: "Offline video editor (CapCut alternative for vertical Reels/Shorts), talking avatar AI, multilingual voice TTS audiobooks, and batch photo studio.",
     bullets: [
-      "Local FFmpeg timeline video editor",
+      "Local timeline video editor",
       "Photo to talking avatar videos",
       "Multilingual TTS & PDF audiobooks",
     ],
@@ -103,9 +103,9 @@ const MODULES: Module[] = [
     color: "#E879F9",
     title: "Digi MCP",
     badge: "Universal Protocol Client",
-    body: "Real Model Context Protocol stdio client (JSON-RPC 2.0). Connect local and npm tool servers, discover tools dynamically, and toggle powers live.",
+    body: "Real Model Context Protocol (MCP) client. Connect local and community tool servers, discover tools dynamically, and toggle powers live.",
     bullets: [
-      "Official JSON-RPC 2.0 stdio client",
+      "Universal MCP client",
       "Dynamic tool discovery & testing",
       "Zero-config visual management",
     ],

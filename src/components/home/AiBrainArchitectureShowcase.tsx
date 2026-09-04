@@ -45,7 +45,7 @@ const FLOWS: ModuleFlow[] = [
     category: "Customer & Revenue Operations",
     voicePrompt: "Check new leads from WhatsApp, qualify real estate buyers, and generate quotation invoices.",
     brainAction:
-      "The AI Brain parses the spoken intent, extracts lead qualification metrics against the Business Knowledge Base, validates pricing tiers, and updates the local SQLite ledger.",
+      "The AI Brain parses the spoken intent, extracts lead qualification metrics against the Business Knowledge Base, validates pricing tiers, and updates the local business ledger.",
     backendExecution: [
       "Transcribes user voice via local offline audio pipeline",
       "Performs intent extraction & sentiment analysis",
@@ -61,7 +61,7 @@ const FLOWS: ModuleFlow[] = [
     category: "Video, Voice & Avatar Production",
     voicePrompt: "Cut the podcast silence, generate captions in brand colors, and export vertical 9:16 reels.",
     brainAction:
-      "The AI Brain inspects audio waveform spectral energy, identifies topic shifts for smart reel splitting, formats animated captions, and coordinates FFmpeg render queues.",
+      "The AI Brain inspects audio waveform spectral energy, identifies topic shifts for smart reel splitting, formats animated captions, and coordinates hardware-accelerated media render queues.",
     backendExecution: [
       "VAD (Voice Activity Detection) isolates dead air",
       "Semantic NLP determines high-virality punchlines",

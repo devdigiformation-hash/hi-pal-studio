@@ -14,8 +14,8 @@ import CapabilityVault from "@/components/home/CapabilityVault";
 
 const WORKFLOWS = [
   { id: "Workflow A", steps: ["Voice", "Orchestrator", "5 agents", "Report"] },
-  { id: "Workflow B", steps: ["Voice", "Browser agent", "200+ mixed tools", "Data"] },
-  { id: "Workflow C", steps: ["Voice", "AI Skills", "500+ skills", "Execute"] },
+  { id: "Workflow B", steps: ["Voice", "Browser agent", "Desktop tools", "Data"] },
+  { id: "Workflow C", steps: ["Voice", "AI Skills", "Skills library", "Execute"] },
 ];
 
 const WEB_TOOLS = [
@@ -78,9 +78,9 @@ export default function AgentTownPage() {
 
             <div className="reveal-item delay-3 mt-7 flex flex-wrap gap-2">
               <MonoBadge>Multi Concurrent Agents</MonoBadge>
-              <MonoBadge color="var(--purple)">200+ Mixed Tools</MonoBadge>
+              <MonoBadge color="var(--purple)">Desktop Automation Tools</MonoBadge>
               <MonoBadge color="var(--amber)">Multi-Agent Platform</MonoBadge>
-              <MonoBadge color="var(--pink)">500+ AI Skills</MonoBadge>
+              <MonoBadge color="var(--pink)">Extensive AI Skills</MonoBadge>
             </div>
 
             <div className="reveal-item delay-4 mt-8 space-y-3">
@@ -167,7 +167,7 @@ export default function AgentTownPage() {
       <SectionWrapper className="bg-[var(--bg-surface)]">
         <div className="mx-auto max-w-[1100px]">
           <div className="text-center">
-            <EyebrowLabel text="200+ Mixed Tools" color="var(--amber)" />
+            <EyebrowLabel text="Desktop Automation Tools" color="var(--amber)" />
             <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
               Web Automation + Business Skills. Combined.
             </h2>
@@ -193,10 +193,10 @@ export default function AgentTownPage() {
             <GlassCard className="reveal-item delay-2 p-8" glowColor="var(--purple)">
               <Terminal size={30} color="var(--purple)" strokeWidth={1.6} />
               <h3 className="mt-5 font-display text-[21px] font-bold text-[var(--text-primary)]">
-                500+ AI Skills
+                Extensive AI Skills
               </h3>
               <p className="mt-3 font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
-                500+ ready-to-use business and engineering skills — documents, data, marketing,
+                Ready-to-use business and engineering skills — documents, data, marketing,
                 research and automation — with new skills added over time and custom skills of your
                 own.
               </p>
@@ -217,7 +217,7 @@ export default function AgentTownPage() {
 
       <PageCTA
         title="Mobilize Your Entire AI Workforce."
-        badges={["Multi-Agent", "200+ Tools", "500+ Skills"]}
+        badges={["Multi-Agent", "Desktop Tools", "Extensive Skills"]}
         cta="Deploy Your Agents"
       />
     </motion.main>

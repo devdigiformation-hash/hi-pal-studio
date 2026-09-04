@@ -100,7 +100,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
       {
         q: "Is DIGI BIZ OS a real JARVIS?",
-        a: "DIGI BIZ OS is JARVIS-inspired, not the fictional Marvel system. It delivers the practical part of the idea: voice interaction, planning, multi-agent execution, 500+ skills, 200+ mixed tools, desktop control, coding, documents and business automation in one app for Windows.",
+        a: "DIGI BIZ OS is JARVIS-inspired, not the fictional Marvel system. It delivers the practical part of the idea: voice interaction, planning, multi-agent execution, extensive skills library, native desktop automation tools, desktop control, coding, documents and business automation in one app for Windows.",
       },
       {
         q: "What can it actually do?",
@@ -122,7 +122,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
       {
         title: "It uses tools",
-        body: "200+ mixed tools cover files, documents, system utilities, browser and connected services.",
+        body: "Native automation tools cover files, documents, system utilities, browser and connected services.",
       },
       {
         title: "It uses agents",
@@ -216,7 +216,7 @@ export const SEO_PAGES: SeoPage[] = [
     h1Gradient: "That Can Actually Execute.",
     metaTitle: "AI Business Operating System — Agents, Workflows & Automation | DIGI BIZ OS",
     metaDescription:
-      "DIGI BIZ OS is an AI business operating system: voice control, AI agents, 500+ skills, 200+ tools, workflows, tasks and desktop automation in one Windows app.",
+      "DIGI BIZ OS is an AI business operating system: voice control, AI agents, extensive skills library, native desktop automation tools, workflows, tasks and desktop automation in one Windows app.",
     intro:
       "An AI business operating system is the layer where your models, agents, tools, data and business processes live together. Instead of ten disconnected AI tabs, DIGI BIZ OS gives your business one environment that can hold context, run workflows and complete work on your own machine.",
     answers: [
@@ -241,11 +241,11 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Agent layer", body: "Multi-agent execution with delegation between specialists." },
       {
         title: "Skill layer",
-        body: "500+ AI skills plus custom skills you create and reuse forever.",
+        body: "Comprehensive AI skills plus custom skills you create and reuse forever.",
       },
       {
         title: "Tool layer",
-        body: "200+ mixed tools spanning documents, files, system utilities and connected services.",
+        body: "Native automation tools spanning documents, files, system utilities and connected services.",
       },
       {
         title: "Automation layer",
@@ -266,7 +266,7 @@ export const SEO_PAGES: SeoPage[] = [
           "Digi Studio — video editing, voice cloning, audiobooks, AI avatars and photo studio.",
           "DigiCode — coding workspace, repository intelligence and project automation.",
           "DigiCLI — terminal execution engine with embedded bin runners.",
-          "DigiMCP — stdio JSON-RPC 2.0 client with dynamic tool discovery.",
+          "DigiMCP — Universal Model Context Protocol client with dynamic tool discovery.",
           "Digi Connectors & Models — universal API gateways and private local LLMs.",
           "DigiFlow & Operations Center — always-on rules, visual workflows and 30-event live tracking.",
         ],
@@ -418,7 +418,7 @@ export const SEO_PAGES: SeoPage[] = [
     h1Gradient: "For Windows 10 and 11.",
     metaTitle: "AI Desktop Assistant for Windows 10 & 11 | DIGI BIZ OS",
     metaDescription:
-      "An AI desktop assistant for Windows that controls applications, files, terminal and browser by voice — with agents, 500+ skills and 200+ tools built in.",
+      "An AI desktop assistant for Windows that controls applications, files, terminal and browser by voice — with agents, extensive built-in skills and native desktop tools built in.",
     intro:
       "An AI desktop assistant should be able to touch the desktop. DIGI BIZ OS installs on Windows 10 and 11 and works with your real applications, folders, documents and terminal instead of living inside a browser tab.",
     answers: [
@@ -462,7 +462,7 @@ export const SEO_PAGES: SeoPage[] = [
       { q: "Is it a browser extension?", a: "No. It is a desktop application for Windows." },
       {
         q: "Can it run offline utilities?",
-        a: "Yes. Many of the 200+ mixed tools are offline utilities.",
+        a: "Yes. Many of the native desktop tools are offline utilities.",
       },
     ],
     links: [
@@ -487,7 +487,7 @@ export const SEO_PAGES: SeoPage[] = [
     h1Gradient: "Voice In, Work Out.",
     metaTitle: "AI Assistant for Windows PC — Voice, Agents & Automation | DIGI BIZ OS",
     metaDescription:
-      "Install a full AI assistant on your Windows PC: voice control, multi-agent execution, 500+ skills, 200+ tools, coding, documents and scheduled automation.",
+      "Install a full AI assistant on your Windows PC: voice control, multi-agent execution, extensive skills library, native desktop tools, coding, documents and scheduled automation.",
     intro:
       "DIGI BIZ OS is a native Windows install, not a web app. Once it is running you can speak to your PC and get finished work back — documents processed, code written, folders organised, jobs scheduled.",
     answers: [
@@ -510,9 +510,9 @@ export const SEO_PAGES: SeoPage[] = [
         title: "Agents included",
         body: "Multi-agent execution for coding, documents, research and operations.",
       },
-      { title: "500+ skills", body: "Reusable capabilities you can trigger by voice." },
+      { title: "Extensive skills", body: "Reusable capabilities you can trigger by voice." },
       {
-        title: "200+ mixed tools",
+        title: "Native desktop tools",
         body: "Utilities that work with files, systems and connected services.",
       },
       { title: "Scheduling", body: "Hourly, daily or weekly jobs that run in the background." },
@@ -619,7 +619,7 @@ export const SEO_PAGES: SeoPage[] = [
     capabilities: [
       { title: "Live transcription", body: "See the request as it is understood." },
       { title: "Hands-free operation", body: "Brief the OS while you keep working." },
-      { title: "Voice-triggered skills", body: "Launch any of the 500+ skills by speaking." },
+      { title: "Voice-triggered skills", body: "Launch any of the built-in skills by speaking." },
       {
         title: "Voice-triggered workflows",
         body: "Start multi-step automations with one sentence.",
@@ -1110,7 +1110,7 @@ export const SEO_PAGES: SeoPage[] = [
       {
         src: osCode,
         title: "AI Code Workspace & Repository Intelligence",
-        subtitle: "Monaco editor, multi-file architectural understanding, and slash commands",
+        subtitle: "Integrated code editor, multi-file architectural understanding, and slash commands",
         caption: "Point the AI coding agent at your local folder to plan, refactor, and ship code.",
       },
       {
@@ -1288,7 +1288,7 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Model management", body: "Multiple models with a router that picks per task." },
       { title: "Memory", body: "Persistent facts, rules and preferences." },
       { title: "Process management", body: "Workflows, jobs and tasks." },
-      { title: "Tool layer", body: "200+ mixed tools available to every agent." },
+      { title: "Tool layer", body: "Native automation tools available to every agent." },
       { title: "Connectivity", body: "DigiMCP servers, integrations and local runners." },
       { title: "Desktop layer", body: "Files, applications, terminal and browser." },
     ],
@@ -1597,7 +1597,7 @@ export const SEO_PAGES: SeoPage[] = [
       answers: [
         {
           q: "What is Digi WhatsApp?",
-          a: "An autonomous WhatsApp sales and customer support assistant powered by Baileys Web QR pairing, voice transcription, and local SQLite memory.",
+          a: "An autonomous WhatsApp sales and customer support assistant powered by instant mobile QR pairing, voice transcription, and local secure memory.",
         },
       ],
       capabilities: [
@@ -1689,14 +1689,14 @@ export const SEO_PAGES: SeoPage[] = [
     ],
     image: img(
       osCode,
-      "DigiCode AI coding workspace with Monaco editor and full repository intelligence",
-      "DigiCode: Monaco editor, multi-file architectural understanding, and slash commands.",
+      "DigiCode AI coding workspace with integrated professional code editor and full repository intelligence",
+      "DigiCode: Integrated professional code editor, multi-file architectural understanding, and slash commands.",
     ),
     screenshots: [
       {
         src: osCode,
         title: "AI Code Workspace & Repository Intelligence",
-        subtitle: "Monaco editor, multi-file architectural understanding, and slash commands",
+        subtitle: "Integrated code editor, multi-file architectural understanding, and slash commands",
         caption: "Point the AI coding agent at your local folder to plan, refactor, and ship code.",
       },
       {
@@ -1874,15 +1874,15 @@ export const SEO_PAGES: SeoPage[] = [
     eyebrow: "DigiMCP",
     h1: "DigiMCP —",
     h1Gradient: "Universal Tool Architecture.",
-    metaTitle: "DigiMCP — Stdio JSON-RPC 2.0 MCP Client & Dynamic Tool Discovery | DIGI BIZ OS",
+    metaTitle: "DigiMCP — Model Context Protocol Client & Dynamic Tool Discovery | DIGI BIZ OS",
     metaDescription:
-      "DigiMCP is the native Model Context Protocol client in DIGI BIZ OS: connect standard stdio JSON-RPC 2.0 servers, discover dynamic tool definitions, and empower agents with enterprise integrations.",
+      "DigiMCP is the native Model Context Protocol client in DIGI BIZ OS: connect standard Model Context Protocol servers, discover dynamic tool definitions, and empower agents with enterprise integrations.",
     intro:
-      "DigiMCP transforms external software into first-class agent tools. Connect standard Model Context Protocol servers over stdio JSON-RPC 2.0 and let your AI agents discover and execute tools on demand.",
+      "DigiMCP transforms external software into first-class agent tools. Connect standard Model Context Protocol servers and let your AI agents discover and execute tools on demand.",
     answers: [
       {
         q: "What is DigiMCP?",
-        a: "DigiMCP is the native Model Context Protocol (MCP) client built into DIGI BIZ OS. It manages stdio JSON-RPC 2.0 server processes, inspects tool schemas, and injects capabilities directly into agent reasoning loops.",
+        a: "DigiMCP is the native Model Context Protocol (MCP) client built into DIGI BIZ OS. It manages Model Context Protocol server processes, inspects tool schemas, and injects capabilities directly into agent reasoning loops.",
       },
       {
         q: "Can I connect any standard MCP server?",
@@ -1890,7 +1890,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     capabilities: [
-      { title: "Stdio JSON-RPC 2.0 Client", body: "Direct process lifecycle management for local and containerized MCP servers." },
+      { title: "Universal MCP Client", body: "Direct process lifecycle management for local and containerized MCP servers." },
       { title: "Dynamic Tool Discovery", body: "Automatic schema inspection and dynamic registration of available tool definitions." },
       { title: "Agent Tool Binding", body: "Seamless runtime tool binding allowing autonomous agents to invoke MCP tools." },
       { title: "Environment Isolation", body: "Secure per-server environment variable isolation and secret management." },
@@ -1910,7 +1910,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
       {
         q: "Can custom scripts act as MCP servers?",
-        a: "Yes. Any executable that implements stdio JSON-RPC 2.0 protocol can be registered as an MCP server.",
+        a: "Yes. Any executable or server script that implements the open Model Context Protocol can be registered as an MCP server.",
       },
     ],
     links: [
@@ -1928,7 +1928,7 @@ export const SEO_PAGES: SeoPage[] = [
       {
         src: osMcp,
         title: "Model Context Protocol Hub & Extensibility",
-        subtitle: "Stdio JSON-RPC 2.0 MCP client with dynamic tool discovery",
+        subtitle: "Universal Model Context Protocol client with dynamic tool discovery",
         caption: "Connect standard MCP servers to dynamically discover and inject tools into agents.",
       },
     ],
@@ -1960,7 +1960,7 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Secure Local Key Vault", body: "Hardware-backed AES encryption for API keys, bearer tokens, and OAuth credentials." },
       { title: "WhatsApp & Messaging Sync", body: "Direct bridge to WhatsApp Cloud API, Telegram, and business communication channels." },
       { title: "Payment & Invoicing Gateway", body: "Connect Stripe, PayPal, and bank feeds for automatic transaction reconciliation." },
-      { title: "Cloud Database Connectors", body: "Query PostgreSQL, MySQL, Supabase, and SQLite databases securely." },
+      { title: "Cloud Database Connectors", body: "Query PostgreSQL, MySQL, Supabase, and local databases securely." },
       { title: "Rate Limiting & Retry Logic", body: "Automated exponential backoff handling to prevent API throttling." },
     ],
     sections: [
@@ -2190,10 +2190,10 @@ export const SEO_PAGES: SeoPage[] = [
     group: "feature",
     eyebrow: "Skills",
     h1: "AI Skills —",
-    h1Gradient: "500+ and Counting.",
-    metaTitle: "AI Skills — 500+ Reusable Skills & Custom Skill Builder | DIGI BIZ OS",
+    h1Gradient: "Extensive Skills Library.",
+    metaTitle: "AI Skills — Comprehensive Skills Library & Custom Skill Builder | DIGI BIZ OS",
     metaDescription:
-      "DIGI BIZ OS ships 500+ AI skills and lets you create custom skills your agents can reuse forever — the reusable capability layer of the OS.",
+      "DIGI BIZ OS ships with an extensive skills library and lets you create custom skills your agents can reuse forever — the reusable capability layer of the OS.",
     intro:
       "A skill is a capability the OS can reuse. Teach it once and it is available to every agent and workflow from then on.",
     answers: [
@@ -2207,7 +2207,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     capabilities: [
-      { title: "500+ built in", body: "Broad coverage from day one." },
+      { title: "Broad coverage", body: "Extensive business and development skills from day one." },
       { title: "Custom skills", body: "Teach the OS your own way of working." },
       { title: "Agent skills", body: "Attach skills to specific agents." },
       { title: "Voice triggered", body: "Invoke a skill by speaking." },
@@ -2229,13 +2229,13 @@ export const SEO_PAGES: SeoPage[] = [
     ],
     image: img(
       osSkills,
-      "AI skills library inside DIGI BIZ OS with 500+ switchable capabilities",
+      "AI skills library inside DIGI BIZ OS with broad switchable capabilities",
       "The skills panel: hundreds of reusable capabilities with one-tap switches.",
     ),
     screenshots: [
       {
         src: osSkills,
-        title: "500+ Built-in Switchable AI Skills Ecosystem",
+        title: "Comprehensive Switchable AI Skills Ecosystem",
         subtitle: "One-tap toggle for calculation, web scraping, document transforms, and APIs",
         caption: "Every skill shows its runner, status, and instant toggle switch.",
       },
@@ -2248,9 +2248,9 @@ export const SEO_PAGES: SeoPage[] = [
     eyebrow: "Tools",
     h1: "AI Tools —",
     h1Gradient: "The Hands of the OS.",
-    metaTitle: "AI Tools — 200+ Agent-Accessible Tools & Utilities | DIGI BIZ OS",
+    metaTitle: "AI Tools — Native Agent-Accessible Tools & Utilities | DIGI BIZ OS",
     metaDescription:
-      "The AI tool layer of DIGI BIZ OS: 200+ mixed tools spanning files, documents, system utilities and connected services, callable by you or by agents.",
+      "The AI tool layer of DIGI BIZ OS: native desktop tools spanning files, documents, system utilities and connected services, callable by you or by agents.",
     intro:
       "Tools are how intelligence becomes action. Every agent in DIGI BIZ OS can call the same tool library.",
     answers: [
@@ -2260,7 +2260,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     capabilities: [
-      { title: "200+ mixed tools", body: "Wide coverage across daily work." },
+      { title: "Desktop tools", body: "Wide coverage across daily operations." },
       { title: "Offline utilities", body: "Many work without a connection." },
       { title: "Agent callable", body: "Used automatically during runs." },
       { title: "Manual use", body: "Run any tool yourself." },
@@ -2287,13 +2287,13 @@ export const SEO_PAGES: SeoPage[] = [
     ],
     image: img(
       osDesktopTools,
-      "Mixed AI tools panel inside DIGI BIZ OS with 200+ native desktop tools",
+      "Native AI tools panel inside DIGI BIZ OS with desktop automation tools",
       "Mixed tools: files, system, documents, hardware control, and productivity utilities.",
     ),
     screenshots: [
       {
         src: osDesktopTools,
-        title: "200+ System & Desktop Automation Tools",
+        title: "Native System & Desktop Automation Tools",
         subtitle: "Native utilities for folder analysis, screenshot understanding, and bulk ops",
         caption: "Real desktop automation tools that drive your machine directly.",
       },
@@ -2476,7 +2476,7 @@ export const SEO_PAGES: SeoPage[] = [
       {
         src: osMain,
         title: "100% Air-Gapped Local Desktop Operating System",
-        subtitle: "Local SQLite database, zero external telemetry, client-safe privacy",
+        subtitle: "Encrypted local database, zero external telemetry, client-safe privacy",
         caption: "All business records and client data reside on your local drive.",
       },
       {
@@ -2690,7 +2690,7 @@ export const SEO_PAGES: SeoPage[] = [
     h1Gradient: "That Actually Finishes the Job.",
     metaTitle: "JARVIS Alternative for PC — Voice AI That Executes Work | DIGI BIZ OS",
     metaDescription:
-      "Looking for a JARVIS alternative? DIGI BIZ OS is a voice-first AI assistant for Windows with agents, 500+ skills, 200+ mixed tools, desktop control and scheduled automation.",
+      "Looking for a JARVIS alternative? DIGI BIZ OS is a voice-first AI assistant for Windows with agents, extensive skills library, native automation tools, desktop control and scheduled automation.",
     intro:
       "Most JARVIS-style downloads are voice launchers: a fixed phrase triggers a fixed shortcut. DIGI BIZ OS takes the same idea much further — you speak a real instruction, it plans the steps, chooses the right agent and tools, executes them on your machine and shows you the result.",
     answers: [
@@ -2950,7 +2950,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
       { title: "Custom agents", body: "Define role, scope, tools and persona per agent." },
       { title: "Delegation", body: "Agents hand subtasks to the right specialist." },
-      { title: "Tooling", body: "200+ mixed tools available to every agent." },
+      { title: "Tooling", body: "Native automation tools available to every agent." },
       { title: "Persistence", body: "Memories keep context across sessions and projects." },
       { title: "Live tracking", body: "Watch each agent's steps and outputs as they run." },
     ],
@@ -3122,7 +3122,7 @@ export const SEO_PAGES: SeoPage[] = [
       {
         src: osDesktopTools,
         title: "Native Desktop File Utilities & Batch Operations",
-        subtitle: "200+ mixed tools for bulk folder analysis and system management",
+        subtitle: "Native automation tools for bulk folder analysis and system management",
         caption: "Sort, rename, and convert large document archives in seconds.",
       },
     ],

@@ -72,7 +72,7 @@ export const MODULES_LIST: ModuleData[] = [
     problemSolved: [
       "Eliminates expensive monthly per-seat SaaS subscription fees (e.g. Salesforce, HubSpot, or Zoho).",
       "Stops repetitive data entry via a centralized Business Knowledge Base that auto-configures every template, invoice, auto-reply, and agent action.",
-      "Protects sensitive client data and financial transaction records by storing everything strictly on your local PC in high-performance encrypted SQLite databases.",
+      "Protects sensitive client data and financial transaction records by storing everything strictly on your local PC in high-performance encrypted local databases.",
       "Prevents deal leakage and fulfillment delays with 1-click trigger buttons that advance statuses, generate invoices, and send customer updates instantly.",
     ],
     targetAudience: [
@@ -126,7 +126,7 @@ export const MODULES_LIST: ModuleData[] = [
       },
       {
         q: "How does the Business Setup / Knowledge Base work?",
-        a: "You enter your company name, contact information, services, brand color, and tone once. That information automatically populates all outgoing emails, WhatsApp replies, invoice headers, and AI agent responses.",
+        a: "It is a central business information source that configures company profiles, contact info, brand voice, and templates across all modules without repeated manual entry. That master configuration automatically feeds all outgoing emails, WhatsApp replies, invoice headers, and AI agent reasoning.",
       },
       {
         q: "Can I export financial reports to Excel, Word, or PDF?",
@@ -139,7 +139,7 @@ export const MODULES_LIST: ModuleData[] = [
       { name: "Digi Flow Workflows", slug: "workflows", description: "Schedule always-on business automations and recurring task pipelines." },
     ],
     openSourceSynergy:
-      "Seamlessly links with local SQLite database engines for maximum data throughput and Jan AI or local LLMs for private local intelligence.",
+      "Seamlessly links with local database engines for maximum data throughput and Jan AI or local LLMs for private local intelligence.",
   
     screenshots: [
       {
@@ -705,7 +705,7 @@ export const MODULES_LIST: ModuleData[] = [
       { name: "Digi Marketing", slug: "marketing", description: "Schedule social media publishing workflows across multi-channel queues." },
     ],
     openSourceSynergy:
-      "Integrates with Graphviz for workflow topology visualization and SQLite for permanent execution transcript auditing.",
+      "Integrates with Graphviz for workflow topology visualization and local encrypted storage for permanent execution transcript auditing.",
   
     screenshots: [
       {
@@ -815,7 +815,7 @@ export const MODULES_LIST: ModuleData[] = [
       {
         src: osCode,
         title: "AI Code Workspace & Repository Intelligence",
-        subtitle: "Monaco editor, multi-file architectural understanding, and slash commands",
+        subtitle: "Professional code workspace, multi-file architectural understanding, and slash commands",
         caption: "Point the AI coding agent at your local folder to plan, refactor, and ship code.",
       },
       {
@@ -828,7 +828,7 @@ export const MODULES_LIST: ModuleData[] = [
     image: {
       src: osCode,
       alt: "Digi Code Workspace",
-      caption: "DigiCode: Monaco editor, multi-file architectural understanding, and slash commands.",
+      caption: "DigiCode: Professional code workspace, multi-file architectural understanding, and slash commands.",
     },
   },
   {
@@ -836,17 +836,17 @@ export const MODULES_LIST: ModuleData[] = [
     name: "Digi MCP Universal Protocol Switchboard",
     eyebrow: "Extensible Tool Connectivity",
     h1: "Digi MCP — Universal Model Context Protocol",
-    h1Gradient: "Stdio Client & Live Tool Switchboard",
+    h1Gradient: "Native MCP Client & Live Tool Switchboard",
     metaTitle: "Digi MCP — Universal Model Context Protocol (MCP) Client | DIGI BIZ OS",
     metaDescription:
-      "Universal Model Context Protocol (MCP) client on Windows: stdio JSON-RPC 2.0 runner, automatic tool discovery, zero-config server management, and instant agent powers.",
+      "Universal Model Context Protocol (MCP) client on Windows: automatic tool discovery, zero-config server management, and instant agent capabilities.",
     accentColor: "#E879F9",
     directAnswer:
-      "Digi MCP is an authentic Model Context Protocol (MCP) client built into DIGI BIZ OS. Operating over standard stdio using JSON-RPC 2.0, it allows you to connect any local executable or npm/npx MCP server (e.g. filesystem, database, web search, browser automation), automatically discover all available tools, and execute them safely from the UI and voice assistant with zero manual config file editing.",
+      "Digi MCP is an authentic Model Context Protocol (MCP) client built into DIGI BIZ OS. It allows you to connect any local executable or npm/npx MCP server (e.g. filesystem, database, web search, browser automation), automatically discover all available tools, and execute them safely from the UI and voice assistant with zero manual config file editing.",
     problemSolved: [
       "Eliminates the complexity of hand-editing fragile JSON configuration files in hidden application directories.",
       "Provides universal compatibility with the entire open-source Model Context Protocol ecosystem.",
-      "Discovers server capabilities dynamically via official JSON-RPC 2.0 handshakes rather than relying on hardcoded static tool lists.",
+      "Discovers server capabilities dynamically via official MCP handshakes rather than relying on hardcoded static tool lists.",
       "Persists connected servers across reboots with 1-click toggling and immediate connection testing.",
     ],
     targetAudience: [
@@ -856,9 +856,9 @@ export const MODULES_LIST: ModuleData[] = [
     ],
     coreCapabilities: [
       {
-        title: "Standard Stdio JSON-RPC 2.0 Transport",
+        title: "Standard Model Context Protocol Integration",
         description:
-          "Communicates over standard input/output using the official Model Context Protocol specifications with complete platform compatibility.",
+          "Communicates using the official Model Context Protocol specifications with complete platform compatibility and sandboxed process execution.",
       },
       {
         title: "Live Automatic Tool Discovery",
@@ -885,7 +885,7 @@ export const MODULES_LIST: ModuleData[] = [
       {
         step: "02",
         title: "Test Connection & Discover Tools",
-        description: "Click Test to initiate the stdio handshake. The system displays server info and lists every discovered tool with its parameters.",
+        description: "Click Test to initiate the server handshake. The system displays server info and lists every discovered tool with its parameters.",
       },
       {
         step: "03",
@@ -900,7 +900,7 @@ export const MODULES_LIST: ModuleData[] = [
       },
       {
         q: "Can I connect custom in-house MCP servers written in Python or Node.js?",
-        a: "Yes. Any executable that communicates over standard input/output (stdio) using JSON-RPC 2.0 can be connected instantly.",
+        a: "Yes. Any executable or server script that implements the open Model Context Protocol can be connected instantly.",
       },
       {
         q: "How does Digi MCP handle Windows execution for npm/npx packages?",
@@ -919,14 +919,14 @@ export const MODULES_LIST: ModuleData[] = [
       {
         src: osMcp,
         title: "Model Context Protocol Hub & Extensibility",
-        subtitle: "Stdio JSON-RPC 2.0 MCP client with dynamic tool discovery",
+        subtitle: "Universal Model Context Protocol client with dynamic tool discovery",
         caption: "Connect standard MCP servers to dynamically discover and inject tools into agents.",
       },
     ],
     image: {
       src: osMcp,
       alt: "Digi MCP Extensibility Hub",
-      caption: "DigiMCP: Managing active JSON-RPC 2.0 servers and dynamic agent tools.",
+      caption: "DigiMCP: Managing active MCP servers and dynamic agent tools.",
     },
   },
   {

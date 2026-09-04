@@ -193,7 +193,7 @@ export default function SubPageInteractiveWorkbench({
                   <span className="text-[var(--cyan)]">$</span> digi-biz-os --module="{active.title.toLowerCase().replace(/\s+/g, '-')}" --listen
                 </p>
                 <p className="mt-1 text-emerald-400/90">
-                  ✔ Module verified: SHA256 integrity passed. Local encrypted SQLite mounted.
+                  ✔ Module verified: SHA256 integrity passed. Local encrypted database mounted.
                 </p>
                 <p className="mt-1 text-amber-300/80">
                   ⚡ Voice Assistant standby in prompt box. Neural orchestrator attached.

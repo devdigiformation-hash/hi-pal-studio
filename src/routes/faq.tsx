@@ -24,7 +24,7 @@ const GROUPS: { heading: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "What can it actually do?",
-        a: "It ships with 500+ AI skills and 200+ mixed tools, multi-agent runs, a coding workspace, document processing, browser and file operations, custom memories and workflows.",
+        a: "It ships with an extensive library of AI skills and native desktop tools, multi-agent runs, a coding workspace, document processing, browser and file operations, custom memories and workflows.",
       },
       {
         q: "Does it work without voice?",

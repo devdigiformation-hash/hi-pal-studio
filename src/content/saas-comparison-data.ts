@@ -208,11 +208,11 @@ export const SAAS_COMPARISONS: SaasReplacementItem[] = [
     monthlyCost: 40,
     annualCost: 480,
     costLabel: "$40/mo ($480/yr)",
-    digiFeature: "Universal stdio MCP Client & API Connectors Hub",
+    digiFeature: "Universal MCP Client & API Connectors Hub",
     digiModule: "Digi MCP & Connectors",
     digiCost: "100% Free (Included)",
     highlights: [
-      "Official stdio JSON-RPC 2.0 MCP server integration",
+      "Official Model Context Protocol (MCP) server integration",
       "Hardware-backed local key vault for secure credentials",
       "Webhooks, payment processor sync, and database connectors",
     ],

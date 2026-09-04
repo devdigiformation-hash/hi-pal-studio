@@ -226,7 +226,7 @@ export default function SubPageBentoShowcase({
                   </div>
                   <p className="mt-2 font-display text-[16px] font-bold text-white">Direct Metal</p>
                   <p className="mt-1 font-body text-[12px] text-[var(--text-muted)]">
-                    Hardware accelerated video, AI & SQLite drivers.
+                    Hardware accelerated video, AI & local database engines.
                   </p>
                 </div>
 

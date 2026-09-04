@@ -76,12 +76,12 @@ const DEFAULT_PINS: ScreenshotPin[] = [
     tag: "Zero-Click Flow",
   },
   {
-    id: "pin-sqlite",
+    id: "pin-local-db",
     x: "18%",
     y: "78%",
     title: "Local Sovereign Database",
     category: "Encrypted Storage",
-    description: "All client records, media files, and ledger entries are stored strictly on your local PC disk in SQLite.",
+    description: "All client records, media files, and ledger entries are stored strictly on your local PC disk in an encrypted, sovereign database.",
     tag: "100% Air-Gapped",
   },
 ];
