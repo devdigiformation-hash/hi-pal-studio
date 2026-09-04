@@ -320,7 +320,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Where DIGI BIZ OS fits",
         paragraphs: [
-          "DIGI BIZ OS sits in the fourth category: an installed Windows application with voice control, agents, 500+ skills, 150+ mixed tools, document and coding workspaces, and automated workflows. It is a one-time licence rather than a subscription.",
+          "DIGI BIZ OS sits in the fourth category: an installed Windows application with voice control, agents, 500+ skills, 200+ mixed tools, document and coding workspaces, and automated workflows. It is a one-time licence rather than a subscription.",
           "If you only need hands-free shortcuts, a voice launcher is the lighter and cheaper answer — and that is a perfectly reasonable outcome of this comparison.",
         ],
       },

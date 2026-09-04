@@ -86,7 +86,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
       {
         q: "Is DIGI BIZ OS a real JARVIS?",
-        a: "DIGI BIZ OS is JARVIS-inspired, not the fictional Marvel system. It delivers the practical part of the idea: voice interaction, planning, multi-agent execution, 500+ skills, 150+ mixed tools, desktop control, coding, documents and business automation in one app for Windows.",
+        a: "DIGI BIZ OS is JARVIS-inspired, not the fictional Marvel system. It delivers the practical part of the idea: voice interaction, planning, multi-agent execution, 500+ skills, 200+ mixed tools, desktop control, coding, documents and business automation in one app for Windows.",
       },
       {
         q: "What can it actually do?",
@@ -108,7 +108,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
       {
         title: "It uses tools",
-        body: "150+ mixed tools cover files, documents, system utilities, browser and connected services.",
+        body: "200+ mixed tools cover files, documents, system utilities, browser and connected services.",
       },
       {
         title: "It uses agents",
@@ -182,7 +182,7 @@ export const SEO_PAGES: SeoPage[] = [
     h1Gradient: "That Can Actually Execute.",
     metaTitle: "AI Business Operating System — Agents, Workflows & Automation | DIGI BIZ OS",
     metaDescription:
-      "DIGI BIZ OS is an AI business operating system: voice control, AI agents, 500+ skills, 150+ tools, workflows, tasks and desktop automation in one Windows app.",
+      "DIGI BIZ OS is an AI business operating system: voice control, AI agents, 500+ skills, 200+ tools, workflows, tasks and desktop automation in one Windows app.",
     intro:
       "An AI business operating system is the layer where your models, agents, tools, data and business processes live together. Instead of ten disconnected AI tabs, DIGI BIZ OS gives your business one environment that can hold context, run workflows and complete work on your own machine.",
     answers: [
@@ -211,7 +211,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
       {
         title: "Tool layer",
-        body: "150+ mixed tools spanning documents, files, system utilities and connected services.",
+        body: "200+ mixed tools spanning documents, files, system utilities and connected services.",
       },
       {
         title: "Automation layer",
@@ -364,7 +364,7 @@ export const SEO_PAGES: SeoPage[] = [
     h1Gradient: "For Windows 10 and 11.",
     metaTitle: "AI Desktop Assistant for Windows 10 & 11 | DIGI BIZ OS",
     metaDescription:
-      "An AI desktop assistant for Windows that controls applications, files, terminal and browser by voice — with agents, 500+ skills and 150+ tools built in.",
+      "An AI desktop assistant for Windows that controls applications, files, terminal and browser by voice — with agents, 500+ skills and 200+ tools built in.",
     intro:
       "An AI desktop assistant should be able to touch the desktop. DIGI BIZ OS installs on Windows 10 and 11 and works with your real applications, folders, documents and terminal instead of living inside a browser tab.",
     answers: [
@@ -408,7 +408,7 @@ export const SEO_PAGES: SeoPage[] = [
       { q: "Is it a browser extension?", a: "No. It is a desktop application for Windows." },
       {
         q: "Can it run offline utilities?",
-        a: "Yes. Many of the 150+ mixed tools are offline utilities.",
+        a: "Yes. Many of the 200+ mixed tools are offline utilities.",
       },
     ],
     links: [
@@ -433,7 +433,7 @@ export const SEO_PAGES: SeoPage[] = [
     h1Gradient: "Voice In, Work Out.",
     metaTitle: "AI Assistant for Windows PC — Voice, Agents & Automation | DIGI BIZ OS",
     metaDescription:
-      "Install a full AI assistant on your Windows PC: voice control, multi-agent execution, 500+ skills, 150+ tools, coding, documents and scheduled automation.",
+      "Install a full AI assistant on your Windows PC: voice control, multi-agent execution, 500+ skills, 200+ tools, coding, documents and scheduled automation.",
     intro:
       "DIGI BIZ OS is a native Windows install, not a web app. Once it is running you can speak to your PC and get finished work back — documents processed, code written, folders organised, jobs scheduled.",
     answers: [
@@ -458,7 +458,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
       { title: "500+ skills", body: "Reusable capabilities you can trigger by voice." },
       {
-        title: "150+ mixed tools",
+        title: "200+ mixed tools",
         body: "Utilities that work with files, systems and connected services.",
       },
       { title: "Scheduling", body: "Hourly, daily or weekly jobs that run in the background." },
@@ -1178,7 +1178,7 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Model management", body: "Multiple models with a router that picks per task." },
       { title: "Memory", body: "Persistent facts, rules and preferences." },
       { title: "Process management", body: "Workflows, jobs and tasks." },
-      { title: "Tool layer", body: "150+ mixed tools available to every agent." },
+      { title: "Tool layer", body: "200+ mixed tools available to every agent." },
       { title: "Connectivity", body: "DigiMCP servers, integrations and local runners." },
       { title: "Desktop layer", body: "Files, applications, terminal and browser." },
     ],
@@ -1916,9 +1916,9 @@ export const SEO_PAGES: SeoPage[] = [
     eyebrow: "Tools",
     h1: "AI Tools —",
     h1Gradient: "The Hands of the OS.",
-    metaTitle: "AI Tools — 150+ Agent-Accessible Tools & Utilities | DIGI BIZ OS",
+    metaTitle: "AI Tools — 200+ Agent-Accessible Tools & Utilities | DIGI BIZ OS",
     metaDescription:
-      "The AI tool layer of DIGI BIZ OS: 150+ mixed tools spanning files, documents, system utilities and connected services, callable by you or by agents.",
+      "The AI tool layer of DIGI BIZ OS: 200+ mixed tools spanning files, documents, system utilities and connected services, callable by you or by agents.",
     intro:
       "Tools are how intelligence becomes action. Every agent in DIGI BIZ OS can call the same tool library.",
     answers: [
@@ -1928,7 +1928,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     capabilities: [
-      { title: "150+ mixed tools", body: "Wide coverage across daily work." },
+      { title: "200+ mixed tools", body: "Wide coverage across daily work." },
       { title: "Offline utilities", body: "Many work without a connection." },
       { title: "Agent callable", body: "Used automatically during runs." },
       { title: "Manual use", body: "Run any tool yourself." },
@@ -2260,7 +2260,7 @@ export const SEO_PAGES: SeoPage[] = [
     h1Gradient: "That Actually Finishes the Job.",
     metaTitle: "JARVIS Alternative for PC — Voice AI That Executes Work | DIGI BIZ OS",
     metaDescription:
-      "Looking for a JARVIS alternative? DIGI BIZ OS is a voice-first AI assistant for Windows with agents, 500+ skills, 150+ mixed tools, desktop control and scheduled automation.",
+      "Looking for a JARVIS alternative? DIGI BIZ OS is a voice-first AI assistant for Windows with agents, 500+ skills, 200+ mixed tools, desktop control and scheduled automation.",
     intro:
       "Most JARVIS-style downloads are voice launchers: a fixed phrase triggers a fixed shortcut. DIGI BIZ OS takes the same idea much further — you speak a real instruction, it plans the steps, chooses the right agent and tools, executes them on your machine and shows you the result.",
     answers: [
@@ -2506,7 +2506,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
       { title: "Custom agents", body: "Define role, scope, tools and persona per agent." },
       { title: "Delegation", body: "Agents hand subtasks to the right specialist." },
-      { title: "Tooling", body: "150+ mixed tools available to every agent." },
+      { title: "Tooling", body: "200+ mixed tools available to every agent." },
       { title: "Persistence", body: "Memories keep context across sessions and projects." },
       { title: "Live tracking", body: "Watch each agent's steps and outputs as they run." },
     ],

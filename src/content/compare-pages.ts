@@ -58,7 +58,7 @@ export const COMPARE_PAGES: ComparePage[] = [
       },
       {
         aspect: "Scope",
-        digibiz: "500+ skills, 150+ mixed tools, agents, documents, coding, automation",
+        digibiz: "500+ skills, 200+ mixed tools, agents, documents, coding, automation",
         other: "See their site for the current capability list",
       },
       {
@@ -421,7 +421,7 @@ export const COMPARE_PAGES: ComparePage[] = [
     h1Gradient: "Beyond Voice Commands.",
     metaTitle: "DIGI BIZ OS vs Typical JARVIS Apps — JARVIS Alternative Compared | DIGI BIZ OS",
     metaDescription:
-      "Most JARVIS-style apps map a phrase to a shortcut. Compare that approach with DIGI BIZ OS: planning, agents, 500+ skills, 150+ tools, documents and scheduled automation.",
+      "Most JARVIS-style apps map a phrase to a shortcut. Compare that approach with DIGI BIZ OS: planning, agents, 500+ skills, 200+ tools, documents and scheduled automation.",
     intro:
       "Search for a JARVIS app and you mostly find voice launchers: say a phrase, trigger a shortcut. That is useful, but it is not an assistant that can carry out a multi-step business task. This page compares the two approaches so you can pick the right one.",
     summary: {
@@ -443,7 +443,7 @@ export const COMPARE_PAGES: ComparePage[] = [
       },
       {
         aspect: "Capability depth",
-        digibiz: "500+ skills, 150+ mixed tools, agents",
+        digibiz: "500+ skills, 200+ mixed tools, agents",
         other: "A short list of shortcuts",
       },
       {

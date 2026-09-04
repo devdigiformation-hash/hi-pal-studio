@@ -102,7 +102,7 @@ export default function DesktopOSPage() {
         eyebrow="Native Desktop Control"
         title="Your Desktop."
         gradientTitle="Your Command Center."
-        subtitle="150+ built-in mixed tools. Pixel-perfect desktop control. Complete OS-level execution via voice command."
+        subtitle="200+ built-in mixed tools. Pixel-perfect desktop control. Complete OS-level execution via voice command."
       />
 
       <SectionWrapper id="control-center">
@@ -185,7 +185,7 @@ export default function DesktopOSPage() {
 
       <PageCTA
         title="One Voice. Total Desktop Domination."
-        badges={["Instant Desktop Control", "150+ Mixed Tools", "Windows · macOS soon"]}
+        badges={["Instant Desktop Control", "200+ Mixed Tools", "Windows · macOS soon"]}
         cta="Download for Windows"
         trackSource="desktop_os_cta"
         icon={<WindowsIcon size={17} />}
