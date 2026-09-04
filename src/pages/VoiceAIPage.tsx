@@ -18,6 +18,7 @@ import GradientText from "@/components/GradientText";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import ModelsSection from "@/components/home/ModelsSection";
 import LiveTrackingSection from "@/components/home/LiveTrackingSection";
+import SubPageComparisonChart from "@/components/seo/SubPageComparisonChart";
 
 const STATES = ["disconnected", "connecting", "listening", "thinking", "speaking"];
 
@@ -311,6 +312,12 @@ export default function VoiceAIPage() {
               </tbody>
             </table>
           </div>
+
+          <SubPageComparisonChart
+            slug="voice-ai"
+            title="Why Pay Monthly for Voice AI & Transcription?"
+            accentColor="var(--cyan)"
+          />
         </div>
       </SectionWrapper>
 

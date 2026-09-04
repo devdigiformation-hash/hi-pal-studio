@@ -21,6 +21,7 @@ import CyanButton from "@/components/CyanButton";
 import GhostButton from "@/components/GhostButton";
 import MonoBadge from "@/components/MonoBadge";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import SubPageComparisonChart from "@/components/seo/SubPageComparisonChart";
 import type { ModuleData } from "@/content/modules-data";
 
 export default function ModuleLanding({ module }: { module: ModuleData }) {
@@ -118,7 +119,7 @@ export default function ModuleLanding({ module }: { module: ModuleData }) {
                 </div>
                 <div>
                   <p className="font-mono text-[11px] uppercase text-[var(--text-muted)]">
-                    Open Source Synergy
+                    Desktop Integration Synergy
                   </p>
                   <p className="font-body text-[13px] text-[var(--text-secondary)]">
                     {module.openSourceSynergy}
@@ -228,6 +229,13 @@ export default function ModuleLanding({ module }: { module: ModuleData }) {
             ))}
           </div>
         </div>
+
+        {/* SPECIFIC VALUE COMPARISON CHART */}
+        <SubPageComparisonChart
+          slug={module.slug}
+          title={`How ${module.name} Compares to Expensive Paid Tools`}
+          accentColor={accent}
+        />
 
         {/* FAQ SECTION */}
         <div className="mt-24">

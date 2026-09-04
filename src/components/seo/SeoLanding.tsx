@@ -6,6 +6,7 @@ import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
 import CyanButton from "@/components/CyanButton";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import SubPageComparisonChart from "@/components/seo/SubPageComparisonChart";
 import type { SeoPage } from "@/content/seo-pages";
 
 export default function SeoLanding({ page }: { page: SeoPage }) {
@@ -152,6 +153,16 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
           </div>
         </SectionWrapper>
       ))}
+
+      <SectionWrapper>
+        <div className="mx-auto max-w-[1000px]">
+          <SubPageComparisonChart
+            slug={page.path.replace("/features/", "").replace("/", "")}
+            title={`Why Pay Subscriptions? ${page.eyebrow} Is Included 100% Free`}
+            accentColor={accent}
+          />
+        </div>
+      </SectionWrapper>
 
       <SectionWrapper>
         <div className="mx-auto max-w-[900px]">

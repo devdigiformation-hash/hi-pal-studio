@@ -64,7 +64,7 @@ export const Route = createFileRoute("/terms")({
         {
           heading: "Acceptable use",
           body: [
-            "Do not resell, sublicense, redistribute or reverse-engineer the software, and do not use it for unlawful automation. Licences found in breach may be deactivated without refund.",
+            "Do not resell, sublicense, or redistribute the software without authorisation, and do not use it for unlawful automation. Licences found in breach may be deactivated without refund.",
           ],
         },
         {

@@ -39,9 +39,9 @@ const CARDS: { icon: LucideIcon; color: string; title: string; body: string; tag
   {
     icon: FileSearch,
     color: "#F472B6",
-    title: "Reverse Engineering",
-    body: "Inherited an undocumented system? DIGI BIZ OS reconstructs how it works, documents every module, and rebuilds or modernises it piece by piece.",
-    tags: ["Legacy Systems", "Auto Documentation", "Rebuild & Modernise"],
+    title: "System Architecture Mapping",
+    body: "Inherited an undocumented codebase? DIGI BIZ OS maps how it works, documents every module, and modernises it piece by piece.",
+    tags: ["System Mapping", "Auto Documentation", "Modernisation"],
   },
   {
     icon: Wrench,
@@ -73,7 +73,7 @@ export default function CodebaseIntelligence() {
           </h2>
           <p className="reveal-item delay-2 mx-auto mt-5 max-w-[760px] font-body text-[16px] leading-[1.8] text-[var(--text-secondary)] md:text-[17px]">
             Hand DIGI BIZ OS a project folder or a repository and it takes full ownership — reading,
-            reasoning, reverse engineering and building, right on your computer.
+            reasoning, architectural mapping and building, right on your computer.
           </p>
         </div>
 
