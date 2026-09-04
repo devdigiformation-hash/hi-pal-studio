@@ -2555,7 +2555,7 @@ export const SEO_PAGES: SeoPage[] = [
     h1Gradient: "The Right Model per Task.",
     metaTitle: "Model Router — Automatic AI Model Selection | DIGI BIZ OS",
     metaDescription:
-      "The DIGI BIZ OS model router sends each task to a suitable AI model, so reasoning, speed and cost are balanced automatically across 200+ available models.",
+      "The DIGI BIZ OS model router sends each task to a suitable AI model, so reasoning, speed and cost are balanced automatically across 50+ available models.",
     intro:
       "Different jobs need different models. The router picks a suitable one per task — fast models for short operations, stronger models for planning and analysis — so you do not have to think about model names to get good results.",
     answers: [
@@ -2569,7 +2569,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     capabilities: [
-      { title: "200+ models", body: "A broad catalogue available inside the app." },
+      { title: "50+ models", body: "A broad catalogue available inside the app." },
       { title: "Task-aware", body: "Routing based on the kind of work requested." },
       { title: "Manual pinning", body: "Force a specific model when you need consistency." },
       { title: "Per-agent settings", body: "Each agent can prefer its own model." },

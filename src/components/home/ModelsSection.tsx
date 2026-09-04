@@ -8,7 +8,7 @@ import GradientText from "@/components/GradientText";
 import MonoBadge from "@/components/MonoBadge";
 
 const STATS = [
-  { value: "200+", label: "AI Models Included" },
+  { value: "50+", label: "AI Models Included" },
   { value: "Free", label: "Open Models Library" },
   { value: "Premium", label: "Frontier Models Included" },
   { value: "1-Click", label: "Model Switching" },
@@ -18,7 +18,7 @@ const CARDS: { icon: LucideIcon; color: string; title: string; body: string; tag
   {
     icon: Sparkles,
     color: "var(--cyan)",
-    title: "DIGI AI — 200+ Models In One Place",
+    title: "DIGI AI — 50+ Models In One Place",
     body: "Reasoning models, fast chat models, vision models and long-context models — all bundled and ready. No juggling subscriptions, no separate billing, no setup.",
     tags: ["Reasoning", "Vision", "Long Context", "Fast Chat"],
   },
@@ -153,7 +153,7 @@ export default function ModelsSection() {
             Model routing is automatic — DIGI BIZ OS picks the right engine for every task.
           </span>
           <Link to="/models" className="font-mono text-[12px] font-semibold text-[var(--cyan)] underline underline-offset-4 hover:text-white">
-            Explore All 200+ Free & Open Models →
+            Explore All 50+ Free & Open Models →
           </Link>
         </div>
       </div>

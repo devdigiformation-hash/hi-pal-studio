@@ -12,7 +12,7 @@ import { buildMeta, breadcrumbLd, softwareLd } from "@/lib/seo";
 
 const TITLE = "Free AI Models & Open Source LLMs for Windows | DIGI BIZ OS";
 const DESC =
-  "Discover and deploy 200+ free open-source AI models locally on Windows: DeepSeek R1, Llama 3.3, Qwen 2.5 Coder, Phi-4, Whisper, Gemma 2, and Hermes 3 with DIGI BIZ OS.";
+  "Discover and deploy 50+ free open-source AI models locally on Windows: DeepSeek R1, Llama 3.3, Qwen 2.5 Coder, Phi-4, Whisper, Gemma 2, and Hermes 3 with DIGI BIZ OS.";
 
 export const Route = createFileRoute("/models/")({
   head: () => {

@@ -14,7 +14,7 @@ type Tab = (typeof TABS)[number];
 const COPY: Record<Tab, { title: string; body: string; badges: string[]; bullets: string[] }> = {
   Intelligence: {
     title: "AI Model Gateway",
-    body: "Route intelligence across fast cloud models, ultra-low-latency inference, 200+ routed models, and fully local engines — with live latency metrics.",
+    body: "Route intelligence across fast cloud models, ultra-low-latency inference, 50+ routed models, and fully local engines — with live latency metrics.",
     badges: ["Flash Engine", "Turbo Engine", "Model Router", "Local Engine"],
     bullets: [
       "Automatic provider failover",
@@ -72,7 +72,7 @@ function Visual({ tab }: { tab: Tab }) {
         {[
           { name: "Flash Engine", ms: "~180ms", color: "var(--cyan)", active: true },
           { name: "Turbo Engine", ms: "~95ms", color: "var(--green)", active: true },
-          { name: "Model Router (200+)", ms: "~320ms", color: "var(--purple)", active: false },
+          { name: "Model Router (50+)", ms: "~320ms", color: "var(--purple)", active: false },
           { name: "Local Engine", ms: "~410ms", color: "var(--amber)", active: false },
         ].map((m) => (
           <div
