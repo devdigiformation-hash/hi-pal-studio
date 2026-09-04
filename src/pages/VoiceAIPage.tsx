@@ -106,7 +106,7 @@ const VOICE_MODULE_INTEGRATIONS = [
     icon: Palette,
     title: "JARVIS + Digi Studio",
     color: "#F472B6",
-    desc: 'Speak: "Crop this product video into 9:16 vertical format and generate multilingual Urdu and Arabic voiceovers" — local FFmpeg execution in seconds.',
+    desc: 'Speak: "Crop this product video into 9:16 vertical format and generate multilingual Urdu and Arabic voiceovers" — instant native desktop video processing in seconds.',
     link: "/modules/studio",
   },
   {
@@ -151,7 +151,7 @@ export default function VoiceAIPage() {
               <span>Direct Answer — What Is the DIGI BIZ OS Voice Assistant?</span>
             </div>
             <p className="mt-3 font-body text-[15px] leading-[1.8] text-[var(--text-primary)] font-medium">
-              The DIGI BIZ OS Voice Assistant is an installed, real-time desktop AI controller for Windows 10 and 11. Unlike cloud web chatbots, it combines offline Whisper speech recognition, screen awareness, terminal execution, and local database routing to plan and execute complex desktop tasks by voice with sub-200ms round-trip latency.
+              The DIGI BIZ OS Voice Assistant is an installed, real-time desktop AI controller for Windows 10 and 11. Unlike cloud web chatbots, it combines offline neural speech recognition, screen awareness, terminal execution, and local database routing to plan and execute complex desktop tasks by voice with sub-200ms round-trip latency.
             </p>
           </div>
         </div>
@@ -177,7 +177,7 @@ export default function VoiceAIPage() {
                 'Wake phrase: "Hey Digi" or custom push-to-talk hotkey',
                 "Custom AI persona and tone calibration via Soul Engine",
                 "Full screen awareness & OCR to see what you are working on",
-                "100% offline Whisper transcription option for air-gapped privacy",
+                "100% offline neural speech transcription option for air-gapped privacy",
               ]}
             />
           </div>
@@ -295,7 +295,7 @@ export default function VoiceAIPage() {
                 </tr>
                 <tr>
                   <td className="p-4 font-semibold text-[var(--text-primary)]">Offline Privacy</td>
-                  <td className="p-4 text-[var(--cyan)]">100% Offline Local Model & Whisper Support</td>
+                  <td className="p-4 text-[var(--cyan)]">100% Offline Local Model & Speech Recognition</td>
                   <td className="p-4">Zero offline capability (Requires cloud)</td>
                 </tr>
                 <tr>

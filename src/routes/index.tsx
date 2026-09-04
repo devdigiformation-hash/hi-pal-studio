@@ -13,7 +13,7 @@ import LiveTrackingSection from "@/components/home/LiveTrackingSection";
 import BuildYourOwn from "@/components/home/BuildYourOwn";
 import VisionShowcase from "@/components/home/VisionShowcase";
 import SourceCodeSection from "@/components/home/SourceCodeSection";
-import ComparisonMatrix from "@/components/home/ComparisonMatrix";
+import SaasComparisonMatrix from "@/components/home/SaasComparisonMatrix";
 import UseCases from "@/components/home/UseCases";
 import SocialProof from "@/components/home/SocialProof";
 import PricingPreview from "@/components/home/PricingPreview";
@@ -60,7 +60,7 @@ function HomePage() {
       <BuildYourOwn />
       <VisionShowcase />
       <SourceCodeSection />
-      <ComparisonMatrix />
+      <SaasComparisonMatrix />
       <UseCases />
       <SocialProof />
       <PricingPreview />

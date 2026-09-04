@@ -1405,7 +1405,7 @@ export const SEO_PAGES: SeoPage[] = [
       h1Gradient: "24/7 AI Sales & Customer Support.",
       metaTitle: "Digi WhatsApp — Autonomous AI Sales Assistant & QR Pairing | DIGI BIZ OS",
       metaDescription:
-        "Deploy a 24/7 autonomous WhatsApp sales engine with instant QR pairing, Whisper voice note transcription, local SQLite memory, and RAG knowledge bases.",
+        "Deploy a 24/7 autonomous WhatsApp sales engine with instant QR pairing, voice note transcription, local conversation memory, and RAG knowledge bases.",
       intro:
         "Digi WhatsApp gives your business a 24/7 autonomous sales and customer support workforce. Pair your WhatsApp number in seconds via QR code, transcribe voice notes, and answer buyer inquiries automatically.",
       answers: [
@@ -1508,18 +1508,18 @@ export const SEO_PAGES: SeoPage[] = [
     answers: [
       {
         q: "What is Digi Studio?",
-        a: "Digi Studio is the multimedia creative suite built into DIGI BIZ OS, uniting timeline video editing, text-to-speech voice generation, audiobook creation, AI avatars, Whisper transcription, and photo editing.",
+        a: "Digi Studio is the multimedia creative suite built into DIGI BIZ OS, uniting timeline video editing, text-to-speech voice generation, audiobook creation, AI avatars, speech-to-text audio transcription, and photo editing.",
       },
       {
         q: "Does Digi Studio require internet access?",
-        a: "Core video processing, local Whisper audio transcription, and offline media tools run locally on your Windows PC using native desktop acceleration.",
+        a: "Core video processing, local speech-to-text audio transcription, and offline media tools run locally on your Windows PC using native desktop acceleration.",
       },
     ],
     capabilities: [
       { title: "Timeline Video Editor", body: "Multi-track video sequencing, cuts, transitions, captions, and 4K export." },
       { title: "Multilingual Voice TTS", body: "Natural voice generation and long-form audiobook production in 50+ languages." },
       { title: "AI Avatar Studio", body: "Photorealistic digital presenters and talking avatars synced to script audio." },
-      { title: "Whisper Audio Transcriber", body: "Speech-to-text transcription with timestamped subtitles and SRT generation." },
+      { title: "Speech-to-Text Transcriber", body: "Audio transcription with timestamped subtitles and SRT generation." },
       { title: "AI Photo Studio", body: "AI image upscaling, background removal, object cleanup, and thumbnail creation." },
       { title: "Automated Social Rendering", body: "1-click aspect ratio conversion for YouTube, Reels, TikTok, and LinkedIn." },
     ],
@@ -1570,7 +1570,7 @@ export const SEO_PAGES: SeoPage[] = [
     answers: [
       {
         q: "What is DigiCLI?",
-        a: "DigiCLI is the local execution runner in DIGI BIZ OS that executes custom shell commands and leverages embedded local binaries (such as FFmpeg, Whisper, and database runners) under strict security boundaries.",
+        a: "DigiCLI is the local execution runner in DIGI BIZ OS that executes custom shell commands and leverages embedded local binaries (such as media processors, audio transcribers, and database runners) under strict security boundaries.",
       },
       {
         q: "Does DigiCLI run commands automatically without confirmation?",
@@ -1579,7 +1579,7 @@ export const SEO_PAGES: SeoPage[] = [
     ],
     capabilities: [
       { title: "Natural Language to Shell", body: "Describe operational tasks in plain English and receive precise shell commands." },
-      { title: "Local Binary Runners", body: "Direct integration with local engines including FFmpeg, Whisper, and file utilities." },
+      { title: "Local Binary Runners", body: "Direct integration with local engines including media processing, speech transcription, and file utilities." },
       { title: "Agentic Tool Execution", body: "Autonomous agents invoke DigiCLI to inspect directories, compile code, and run scripts." },
       { title: "Safety Confirmation Gates", body: "Visual prompt review before executing system modifications." },
       { title: "Full Execution Log", body: "Timestamped audit history of stdout, stderr, and exit codes." },

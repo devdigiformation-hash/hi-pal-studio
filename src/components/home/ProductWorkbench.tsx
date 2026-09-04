@@ -47,7 +47,7 @@ const COPY: Record<Tab, { title: string; body: string; badges: string[]; bullets
   },
   Developer: {
     title: "CLI + MCP",
-    body: "Digi CLI custom command execution with live streaming output, pre-integrated offline engines (FFmpeg, Whisper, DuckDB, Typst), and universal stdio MCP client.",
+    body: "Digi CLI custom command execution with live streaming output, pre-integrated offline media and database engines, and universal stdio MCP client.",
     badges: ["Custom CLI Runner", "Universal MCP Client", "Offline Engines"],
     bullets: [
       "Visual command definition & runner",

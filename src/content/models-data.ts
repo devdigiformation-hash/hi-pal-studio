@@ -281,7 +281,7 @@ export const MODELS_LIST: ModelEntity[] = [
       },
       {
         title: "Sub-200ms Local Latency",
-        desc: "Optimized with Whisper.cpp and TensorRT-LLM for instant push-to-talk voice interactions.",
+        desc: "Optimized with native desktop acceleration for instant push-to-talk voice interactions.",
       },
       {
         title: "Robust to Noise & Accents",
@@ -289,19 +289,19 @@ export const MODELS_LIST: ModelEntity[] = [
       },
     ],
     digiSynergy:
-      "Whisper is the listening ear of the JARVIS Voice Assistant (/voice-ai) in DIGI BIZ OS. It automatically transcribes WhatsApp voice notes in Digi WhatsApp and translates spoken instructions into CRM pipeline updates.",
+      "This voice intelligence forms the listening ear of the JARVIS Voice Assistant (/voice-ai) in DIGI BIZ OS. It automatically transcribes WhatsApp voice notes in Digi WhatsApp and translates spoken instructions into CRM pipeline updates.",
     alternatives: [
       { name: "Hermes 3", slug: "hermes-3" },
       { name: "Phi-4 14B", slug: "phi-4" },
     ],
     faq: [
       {
-        q: "Does Whisper require an active internet connection?",
-        a: "No. Whisper is executed entirely on your local Windows PC using native C++ binaries.",
+        q: "Does local speech-to-text require an active internet connection?",
+        a: "No. Speech recognition is executed entirely on your local Windows PC using native hardware-accelerated processing.",
       },
       {
-        q: "Which Whisper model sizes are included in DIGI BIZ OS?",
-        a: "DIGI BIZ OS supports Whisper Tiny, Base, Small, Medium, and Large-v3 Turbo, letting you balance speed and accuracy.",
+        q: "Which speech recognition models are available?",
+        a: "Multiple model profiles are supported (Fast, Balanced, High-Accuracy, and Large Turbo), letting you balance speed and accuracy.",
       },
     ],
   },

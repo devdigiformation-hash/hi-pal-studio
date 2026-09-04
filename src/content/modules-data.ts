@@ -121,10 +121,10 @@ export const MODULES_LIST: ModuleData[] = [
     h1Gradient: "Multilingual Voice TTS & Photo Studio",
     metaTitle: "Digi Studio — Offline Video Editor, Avatar AI & Multilingual Voice TTS | DIGI BIZ OS",
     metaDescription:
-      "Complete offline media studio on Windows: local FFmpeg video editor (CapCut alternative), talking avatar AI, studio-grade multilingual voice TTS, and photo factory.",
+      "Complete offline media studio on Windows: built-in timeline video editor (CapCut Pro alternative), talking avatar AI, studio-grade multilingual voice TTS, and photo factory.",
     accentColor: "#F472B6",
     directAnswer:
-      "Digi Studio is a comprehensive offline creative and media production suite built into DIGI BIZ OS. Powered by high-performance local media engines, it provides a full video editor (CapCut alternative for vertical Reels/Shorts), photo-to-talking-avatar video synthesis, studio-grade multilingual text-to-speech with audiobook generation, an AI photo factory with background removal and upscaling, and Whisper audio transcription—all 100% offline with zero cloud rendering fees.",
+      "Digi Studio is a comprehensive offline creative and media production suite built into DIGI BIZ OS. Powered by high-performance local media processing, it provides a full timeline video editor (free alternative to CapCut Pro and Premiere Pro for vertical Reels/Shorts), photo-to-talking-avatar video synthesis, studio-grade multilingual text-to-speech with audiobook generation, an AI photo factory with background removal and 4K upscaling, and offline speech-to-text audio transcription—all 100% offline with zero cloud rendering fees.",
     problemSolved: [
       "Eliminates expensive monthly subscriptions for online video editors, voiceover tools, and AI avatar platforms (e.g. CapCut Pro, ElevenLabs, HeyGen).",
       "Protects proprietary media, unreleased product footage, and confidential voiceovers by processing all video and audio locally on your PC.",
@@ -140,7 +140,7 @@ export const MODULES_LIST: ModuleData[] = [
       {
         title: "Offline Video Editor (CapCut Alternative)",
         description:
-          "Full timeline video editor powered by local FFmpeg. Trim, crop, resize for vertical 9:16 formats, adjust speed, add text overlays, mix background music, and convert video formats with zero cloud rendering lag.",
+          "Full timeline video editor with native hardware acceleration. Trim, crop, resize for vertical 9:16 formats, adjust speed, add text overlays, mix background music, and convert video formats with zero cloud rendering lag.",
       },
       {
         title: "Avatar Intelligence (Photo to Talking Presenter)",
@@ -178,7 +178,7 @@ export const MODULES_LIST: ModuleData[] = [
     faq: [
       {
         q: "Does Digi Studio require internet access or cloud rendering credits?",
-        a: "No. Digi Studio utilizes local system processing engines (including FFmpeg and local neural models), meaning video rendering and audio synthesis run 100% offline on your PC with zero per-minute rendering fees.",
+        a: "No. Digi Studio utilizes native local system processing engines and offline neural models, meaning video rendering and audio synthesis run 100% offline on your PC with zero per-minute rendering fees.",
       },
       {
         q: "Can I generate full audiobooks from PDF documents?",
@@ -195,7 +195,7 @@ export const MODULES_LIST: ModuleData[] = [
       { name: "Digi CRM", slug: "crm", description: "Attach product media and promotional videos directly to sales proposals." },
     ],
     openSourceSynergy:
-      "Synergizes natively with FFmpeg, Whisper.cpp, and SoX for studio-grade offline audio and video manipulation.",
+      "Integrates natively with offline media processing and audio synthesis pipelines for studio-grade manipulation.",
   },
   {
     slug: "ai",
@@ -292,11 +292,11 @@ export const MODULES_LIST: ModuleData[] = [
       "Turn WhatsApp into an autonomous sales machine: 24/7 QR pairing, voice note transcription, product catalog sharing, order taking, and automatic CRM sync.",
     accentColor: "#25D366",
     directAnswer:
-      "Digi WhatsApp is an autonomous sales and customer service agent running directly on your Windows PC. Featuring instant mobile QR code pairing with standard or business phone numbers, it answers customer inquiries 24/7, transcribes incoming voice notes with Whisper, shares product catalogs, captures customer details, and creates orders directly inside Digi CRM with zero per-message cloud markup.",
+      "Digi WhatsApp is an autonomous sales and customer service agent running directly on your Windows PC. Featuring instant mobile QR code pairing with standard or business phone numbers, it answers customer inquiries 24/7, transcribes incoming voice notes automatically, shares product catalogs, captures customer details, and creates orders directly inside Digi CRM with zero per-message cloud markup.",
     problemSolved: [
       "Stops missed sales opportunities during off-hours, weekends, and holidays by replying in seconds 24/7.",
       "Eliminates expensive monthly third-party WhatsApp automation platforms (e.g. Wati or ManyChat) and per-conversation charges.",
-      "Understands incoming customer voice audio notes automatically via integrated offline Whisper speech recognition.",
+      "Understands incoming customer voice audio notes automatically via integrated offline speech recognition.",
       "Syncs customer conversation transcripts and contact details directly with your local Digi CRM database.",
     ],
     targetAudience: [
@@ -313,7 +313,7 @@ export const MODULES_LIST: ModuleData[] = [
       {
         title: "Voice Note Speech Recognition",
         description:
-          "When customers send audio voice messages, the agent transcribes them locally via Whisper and contextually formulates an accurate answer.",
+          "When customers send audio voice messages, the agent transcribes them locally and contextually formulates an accurate answer.",
       },
       {
         title: "Autonomous Catalog & Order Intake",
@@ -363,7 +363,7 @@ export const MODULES_LIST: ModuleData[] = [
       { name: "Digi Flow Workflows", slug: "workflows", description: "Trigger automated follow-up sequences based on customer response stages." },
     ],
     openSourceSynergy:
-      "Combines with Whisper.cpp for offline audio transcription and SQLite for zero-latency local conversation archiving.",
+      "Combines offline speech-to-text transcription with embedded local databases for zero-latency conversation archiving.",
   },
   {
     slug: "marketing",
@@ -709,10 +709,10 @@ export const MODULES_LIST: ModuleData[] = [
     h1Gradient: "Offline Shared Engine Layer",
     metaTitle: "Digi CLI — Custom Command Runner & Offline Engines | DIGI BIZ OS",
     metaDescription:
-      "Custom CLI runner on Windows: add and run your own shell commands via UI, live streaming stdout/stderr, and pre-integrated engines (FFmpeg, Whisper, DuckDB, Typst).",
+      "Custom CLI runner on Windows: add and run your own shell commands via UI, live streaming stdout/stderr, and pre-integrated offline media processors, SQL engines, and document compilers.",
     accentColor: "#FBBF24",
     directAnswer:
-      "Digi CLI is a custom command runner and shared engine management system in DIGI BIZ OS. It allows users to define custom commands in the UI, persist them, and execute them on demand with live streaming terminal outputs—completely without opening external command prompts. It connects natively with the app's managed engine bin containing essential open-source tools (FFmpeg, Whisper.cpp, yt-dlp, Typst, Pandoc, DuckDB, Tesseract OCR, and ImageMagick).",
+      "Digi CLI is a custom command runner and shared engine management system in DIGI BIZ OS. It allows users to define custom commands in the UI, persist them, and execute them on demand with live streaming terminal outputs—completely without opening external command prompts. It connects natively with the app's managed local engine bin for media processing, speech-to-text, document compilation, high-speed SQL analytics, and OCR extraction.",
     problemSolved: [
       "Eliminates command-line anxiety by providing a clean visual UI to run and monitor system commands.",
       "Prevents shell injection vulnerabilities by passing arguments as strict arrays rather than raw shell strings.",
@@ -721,8 +721,8 @@ export const MODULES_LIST: ModuleData[] = [
     ],
     targetAudience: [
       "Power Users and System Administrators executing regular data transformation and file management routines.",
-      "Content Creators running batch media conversions and video downloads via yt-dlp and FFmpeg.",
-      "Data Analysts running high-speed local SQL analytics over CSV files via embedded DuckDB.",
+      "Content Creators running batch video conversions, audio extraction, and asset generation.",
+      "Data Analysts running high-speed in-memory SQL queries over massive CSV and Parquet files.",
     ],
     coreCapabilities: [
       {
@@ -738,7 +738,7 @@ export const MODULES_LIST: ModuleData[] = [
       {
         title: "Managed Engine Layer",
         description:
-          "Directly leverages pre-bundled and auto-installed engines: FFmpeg (video), Whisper.cpp (speech), yt-dlp (download), Typst (typesetting), DuckDB (SQL), and Tesseract (OCR).",
+          "Directly leverages pre-integrated offline engines: video and audio rendering, offline speech recognition, automated document typesetting, high-speed SQL, and OCR.",
       },
       {
         title: "No-Shell Security Protocol",
@@ -750,7 +750,7 @@ export const MODULES_LIST: ModuleData[] = [
       {
         step: "01",
         title: "Define Custom Command",
-        description: "Specify the program name and arguments (e.g. ffmpeg -i input.mp4 output.webm) and save it to your dashboard.",
+        description: "Specify the program name and arguments (e.g. custom media conversions or python scripts) and save it to your dashboard.",
       },
       {
         step: "02",
@@ -783,7 +783,7 @@ export const MODULES_LIST: ModuleData[] = [
       { name: "Digi Studio", slug: "studio", description: "Leverage media engines for advanced video, audio, and image manipulation." },
     ],
     openSourceSynergy:
-      "Native runner for DuckDB, Typst, Pandoc, SoX, and ripgrep, providing high-speed offline desktop computing power.",
+      "Native runner for local data analysis, document compilation, media processing, and high-speed search, providing true desktop computing power.",
   },
   {
     slug: "models",
@@ -1035,7 +1035,7 @@ export const MODULES_LIST: ModuleData[] = [
       { name: "Digi Marketing", slug: "marketing", description: "Deploy promotional campaigns for newly launched product offerings." },
     ],
     openSourceSynergy:
-      "Pairs with DuckDB for high-speed analytical querying over large product datasets and Open SEO Spider for technical store auditing.",
+      "Pairs with high-speed local analytical querying over large product datasets and built-in technical SEO auditing.",
   },
 ];
 

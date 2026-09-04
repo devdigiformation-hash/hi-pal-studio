@@ -36,17 +36,17 @@ const MODULES = [
   { label: "Digi Intelligence", to: "/modules/intelligence" },
 ] as const;
 
-const OPEN_SOURCE = [
-  { label: "Open SEO Spider", to: "/open-source/seo-spider" },
-  { label: "OpenCut Social Studio", to: "/open-source/opencut" },
-  { label: "Deep-Live-Cam", to: "/open-source/deep-live-cam" },
-  { label: "FaceFusion AI", to: "/open-source/facefusion" },
-  { label: "Kdenlive Video Editor", to: "/open-source/kdenlive" },
-  { label: "Shotcut 4K Studio", to: "/open-source/shotcut" },
-  { label: "Audacity Audio", to: "/open-source/audacity" },
-  { label: "Jan AI Local LLMs", to: "/open-source/jan-ai" },
-  { label: "PocketBase Backend", to: "/open-source/pocketbase" },
-  { label: "AnythingLLM RAG", to: "/open-source/anythingllm" },
+const SAAS_ALTERNATIVES = [
+  { label: "CapCut Pro Alternative", to: "/compare/opencut-vs-capcut" },
+  { label: "Premiere Pro Alternative", to: "/compare/kdenlive-vs-premiere-pro" },
+  { label: "ElevenLabs Voice Alternative", to: "/compare" },
+  { label: "HeyGen Avatar Alternative", to: "/compare" },
+  { label: "HubSpot CRM Alternative", to: "/compare" },
+  { label: "Zapier Automation Alternative", to: "/compare" },
+  { label: "Cursor AI Coding Alternative", to: "/compare" },
+  { label: "Screaming Frog SEO Alternative", to: "/compare/open-seo-spider-vs-screaming-frog" },
+  { label: "ChatGPT & Copilot Alternative", to: "/compare/digi-biz-os-vs-chatgpt" },
+  { label: "All Paid vs Free Comparisons →", to: "/compare" },
 ] as const;
 
 const RESOURCES = [
@@ -146,9 +146,9 @@ export default function Footer() {
         </div>
 
         <div>
-          <EyebrowLabel text="Open Source" color="var(--green)" />
+          <EyebrowLabel text="SaaS Alternatives" color="var(--green)" />
           <ul className="mt-5 space-y-3">
-            {OPEN_SOURCE.map((item) => (
+            {SAAS_ALTERNATIVES.map((item) => (
               <li key={item.label}>
                 <SmartLink
                   to={item.to}
@@ -213,18 +213,18 @@ export default function Footer() {
             </li>
             <li>
               <SmartLink
-                to="/open-source"
+                to="/compare"
                 className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
               >
-                Open Source Software
+                SaaS vs DIGI BIZ OS ($4,800+ Saved)
               </SmartLink>
             </li>
             <li>
               <SmartLink
-                to="/open-source/jan-ai"
+                to="/models"
                 className="font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
               >
-                Jan AI (Free Download)
+                50+ Free & Open Models
               </SmartLink>
             </li>
             {BUSINESS.map((item) => (
