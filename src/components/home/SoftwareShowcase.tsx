@@ -127,6 +127,12 @@ const SLIDES = [
     body: "Paste any video or playlist link for zero-download instant text fetching, or upload media files for local Whisper transcription, structured study notes, and course generation.",
   },
   {
+    src: digiMarketing,
+    tag: "Digi Marketing — AI Compose & Ad Campaigns",
+    title: "AI copy generation, flyer visual studio, and multi-channel publishing.",
+    body: "Multi-platform post compose engine with instant AI ad copy generation, token quota counter, flyer attachments, business details injection, and scheduled social campaigns.",
+  },
+  {
     src: digiCode,
     tag: "Digi Code",
     title: "A coding agent that works inside your projects.",
