@@ -7,6 +7,7 @@ import GradientText from "@/components/GradientText";
 import CyanButton from "@/components/CyanButton";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import SubPageComparisonChart from "@/components/seo/SubPageComparisonChart";
+import SubPageGalleryShowcase from "@/components/seo/SubPageGalleryShowcase";
 import type { SeoPage } from "@/content/seo-pages";
 
 export default function SeoLanding({ page }: { page: SeoPage }) {
@@ -153,6 +154,17 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
           </div>
         </SectionWrapper>
       ))}
+
+      <SectionWrapper>
+        <div className="mx-auto max-w-[1100px]">
+          <SubPageGalleryShowcase
+            slug={page.path.replace("/features/", "").replace("/", "")}
+            title={`Live Software Interface: ${page.eyebrow}`}
+            eyebrow="Interactive Screenshot Showcase"
+            accentColor={accent}
+          />
+        </div>
+      </SectionWrapper>
 
       <SectionWrapper>
         <div className="mx-auto max-w-[1000px]">

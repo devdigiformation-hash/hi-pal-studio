@@ -95,7 +95,7 @@ const SLIDES = [
   {
     src: digiStudioVideo,
     tag: "Digi Studio — Offline Video Editor",
-    title: "Free CapCut alternative powered by local FFmpeg.",
+    title: "Free CapCut alternative powered by native desktop hardware acceleration.",
     body: "Trim, crop, resize for Reels and Shorts, timeline control, speed ramp, add captions, background music, fades, color grading, format conversion — 100% offline with zero subscriptions.",
   },
   {

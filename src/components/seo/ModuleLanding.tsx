@@ -22,6 +22,7 @@ import GhostButton from "@/components/GhostButton";
 import MonoBadge from "@/components/MonoBadge";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import SubPageComparisonChart from "@/components/seo/SubPageComparisonChart";
+import SubPageGalleryShowcase from "@/components/seo/SubPageGalleryShowcase";
 import type { ModuleData } from "@/content/modules-data";
 
 export default function ModuleLanding({ module }: { module: ModuleData }) {
@@ -171,6 +172,14 @@ export default function ModuleLanding({ module }: { module: ModuleData }) {
             </ul>
           </GlassCard>
         </div>
+
+        {/* INTERACTIVE SOFTWARE GALLERY SHOWCASE */}
+        <SubPageGalleryShowcase
+          slug={module.slug}
+          title={`Live Software Interface: ${module.name}`}
+          eyebrow="Interactive Screenshot Showcase"
+          accentColor={accent}
+        />
 
         {/* CORE CAPABILITIES */}
         <div className="mt-24">
