@@ -34,7 +34,7 @@ const PILLARS: Pillar[] = [
     color: "var(--purple)",
     title: "Native Desktop Execution",
     body: "DIGI BIZ OS works your desktop the way you do — opening apps, clicking, typing, managing windows, bulk-renaming files and reading folders, all by voice.",
-    badge: "150+ Mixed Tools · 500+ AI Skills",
+    badge: "Desktop Automation · Local Execution",
     bullets: [
       "Real mouse, keyboard & window control",
       "Bulk file operations, renames & folder analysis",
@@ -54,11 +54,11 @@ const PILLARS: Pillar[] = [
     color: "var(--pink)",
     title: "Multi Agent Parallel Execution",
     body: "One command puts a team of specialised AI agents to work at once — research, engineering, documents, outreach and automation, all running in parallel.",
-    badge: "Multi Agents · 40+ MCP Servers",
+    badge: "Multi-Agent · Universal MCP",
     bullets: [
       "Concurrent agent execution",
-      "Digi CLI local runners",
-      "Multi-MCP switchboard, live toggles",
+      "Digi CLI custom runners",
+      "Universal MCP switchboard, live toggles",
     ],
   },
 ];

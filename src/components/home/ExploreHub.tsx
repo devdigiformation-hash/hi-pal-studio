@@ -33,12 +33,12 @@ const HUB = [
   {
     to: "/integrations",
     title: "Integrations & Tools",
-    desc: "150+ built-in tools plus multi-MCP connectivity to the services your business already uses.",
+    desc: "Universal MCP connectivity, custom CLI runners, and messaging connectors for the services your business already uses.",
   },
   {
     to: "/features",
     title: "All Features",
-    desc: "Every module in the operating system: Digi AI, Digi CRM, Digi Intelligence, Digi Marketing, Digi WhatsApp, DigiCode, DigiDocs, DigiFlow and more.",
+    desc: "Every core module in the operating system: Digi AI, Digi CRM, Digi Studio, Digi Flow, Digi Marketing, Digi WhatsApp, Digi Code, Digi MCP, Digi CLI, and more.",
   },
   {
     to: "/compare",

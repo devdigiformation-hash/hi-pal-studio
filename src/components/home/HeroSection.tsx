@@ -52,7 +52,7 @@ const NODES = [
   { icon: Wrench, label: "Tools", color: "#7DD3FC", angle: 180 },
 ];
 
-const BADGES = ["500+ AI Skills", "150+ Mixed Tools", "Multi-Agent Execution", "Multi-MCP Ready"];
+const BADGES = ["AI Business OS", "Desktop Automation", "Multi-Agent Execution", "Universal MCP Ready"];
 
 function RotatingPhrase() {
   const [i, setI] = useState(0);
@@ -219,9 +219,9 @@ export default function HeroSection() {
             transition={{ delay: 0.6 }}
             className="mt-5 max-w-[580px] font-body text-[16px] leading-[1.75] text-[var(--text-secondary)] md:text-[18px]"
           >
-            DIGI BIZ OS turns your voice into a full business operating system — 500+ AI skills,
-            150+ built-in mixed tools and collaborative AI agents that research, automate and
-            deliver work for your business.
+            DIGI BIZ OS turns your voice into a full business operating system — autonomous AI
+            CRM, offline media studio, workflow automation, and collaborative AI agents that research,
+            automate, and deliver work for your business.
           </motion.p>
 
           <motion.div

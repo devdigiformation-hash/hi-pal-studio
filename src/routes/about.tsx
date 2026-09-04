@@ -22,14 +22,14 @@ const MODULES = [
     body: "Coding workspace, terminal and repository work.",
   },
   {
-    name: "DigiDocs",
-    to: "/features/digidocs",
-    body: "Documents, PDFs, OCR, conversion and extraction.",
+    name: "Digi Studio",
+    to: "/features/digi-studio",
+    body: "Offline video editor, talking avatars, multilingual voiceover TTS and photo studio.",
   },
   {
-    name: "DigiTools",
-    to: "/features/digitools",
-    body: "150+ mixed tools for everyday desktop and business work.",
+    name: "Digi CRM",
+    to: "/features/digi-crm",
+    body: "Knowledge Base setup, 1-second live dashboard, 1-click trigger actions and accounting ledger.",
   },
   {
     name: "DigiCLI",

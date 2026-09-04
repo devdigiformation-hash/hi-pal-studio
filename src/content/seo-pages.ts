@@ -5,8 +5,12 @@ import osIntel from "@/assets/os-digi-intelligence.png";
 import osMkt from "@/assets/os-digi-marketing.png";
 import osWa from "@/assets/os-digi-whatsapp.png";
 import osCode from "@/assets/os-digi-code.png";
-import osDocs from "@/assets/os-digi-docs.png";
-import osTools from "@/assets/os-digi-tools.png";
+import osStudioVideo from "@/assets/os-digi-studio-video-editor.png";
+import osStudioAvatar from "@/assets/os-digi-studio-avatar.png";
+import osStudioVoice from "@/assets/os-digi-studio-voice.png";
+import osStudioImage from "@/assets/os-digi-studio-image.png";
+import osStudioTranscript from "@/assets/os-digi-studio-transcript.png";
+import osLiveTrackingModal from "@/assets/os-live-tracking-modal.png";
 import osCli from "@/assets/os-digi-cli.png";
 import osMcp from "@/assets/os-digi-mcp.png";
 import osSkills from "@/assets/os-skills.png";
@@ -223,13 +227,14 @@ export const SEO_PAGES: SeoPage[] = [
         heading: "The DIGI BIZ OS module map",
         body: "Every module is a named part of the ecosystem so you always know where work happens.",
         bullets: [
-          "Digi AI — chat, personas, providers and the intelligence hub.",
+          "Digi AI & JARVIS — voice conversation, personas, multi-model intelligence hub.",
+          "Digi CRM — 20 operational sub-modules, unified knowledge base and account management.",
+          "Digi Studio — video editing, voice cloning, audiobooks, AI avatars and photo studio.",
           "DigiCode — coding workspace, repository intelligence and project automation.",
-          "DigiDocs — PDF and document processing, conversion and OCR.",
-          "DigiTools — 150+ mixed and offline utilities available to you and to agents.",
-          "DigiCLI — terminal and command execution.",
-          "DigiMCP — connected services and local runners.",
-          "DigiFlow, DigiTasks — workflows and task execution.",
+          "DigiCLI — terminal execution engine with embedded bin runners.",
+          "DigiMCP — stdio JSON-RPC 2.0 client with dynamic tool discovery.",
+          "Digi Connectors & Models — universal API gateways and private local LLMs.",
+          "DigiFlow & Operations Center — always-on rules, visual workflows and 30-event live tracking.",
         ],
       },
       {
@@ -295,7 +300,7 @@ export const SEO_PAGES: SeoPage[] = [
       { title: "Voice briefs", body: "Describe the task out loud while you carry on working." },
       {
         title: "Document work",
-        body: "PDF conversion, OCR, compression, signing and redaction through DigiDocs.",
+        body: "Multimedia production, video editing, voice cloning and avatars through Digi Studio.",
       },
       {
         title: "Research",
@@ -341,7 +346,7 @@ export const SEO_PAGES: SeoPage[] = [
       { label: "AI business operating system", to: "/ai-business-operating-system" },
       { label: "AI business automation", to: "/ai-business-automation" },
       { label: "AI workflow automation", to: "/ai-workflow-automation" },
-      { label: "DigiDocs document workspace", to: "/features/digidocs" },
+      { label: "Digi Studio creative suite", to: "/features/digi-studio" },
       ...CTA_CORE,
     ],
     image: img(
@@ -1084,7 +1089,7 @@ export const SEO_PAGES: SeoPage[] = [
     sections: [
       {
         heading: "Research inside the OS",
-        body: "Because the browser agent sits next to DigiDocs and DigiFlow, a research run can end as a formatted document or a scheduled digest rather than a chat reply.",
+        body: "Because the browser agent sits next to Digi Studio and DigiFlow, a research run can end as a formatted report, video script, or a scheduled digest rather than a plain chat reply.",
       },
     ],
     faq: [
@@ -1093,7 +1098,7 @@ export const SEO_PAGES: SeoPage[] = [
     links: [
       { label: "Computer-use AI", to: "/computer-use-ai" },
       { label: "AI agents", to: "/agents" },
-      { label: "DigiDocs", to: "/features/digidocs" },
+      { label: "Digi Studio", to: "/features/digi-studio" },
       ...CTA_CORE,
     ],
     image: img(
@@ -1490,138 +1495,116 @@ export const SEO_PAGES: SeoPage[] = [
     accent: "#6366F1",
   },
   {
-    path: "/features/digidocs",
+    path: "/features/digi-studio",
     group: "feature",
-    eyebrow: "DigiDocs",
-    h1: "DigiDocs —",
-    h1Gradient: "AI Document Workspace.",
-    metaTitle: "DigiDocs — AI Document & PDF Workspace with OCR | DIGI BIZ OS",
+    eyebrow: "Digi Studio",
+    h1: "Digi Studio —",
+    h1Gradient: "Multimedia Creation Suite.",
+    metaTitle: "Digi Studio — AI Video Editor, Voice Cloning, Avatars & Photo Studio | DIGI BIZ OS",
     metaDescription:
-      "DigiDocs handles PDFs and documents inside DIGI BIZ OS: conversion, OCR, compression, signing, redaction and automated document workflows.",
+      "Digi Studio combines native video editing, multilingual voice cloning, audiobook generation, photorealistic AI avatars and image enhancement inside DIGI BIZ OS.",
     intro:
-      "Documents are where most business admin time disappears. DigiDocs turns that work into repeatable, automatable pipelines.",
+      "Digi Studio is the built-in creative media workstation inside DIGI BIZ OS. Produce promotional videos, generate realistic voiceovers, create AI talking avatars, and edit graphics without third-party subscriptions.",
     answers: [
       {
-        q: "What is DigiDocs?",
-        a: "The document and PDF workspace in DIGI BIZ OS, covering conversion, OCR, compression, signing, redaction and document automation.",
+        q: "What is Digi Studio?",
+        a: "Digi Studio is the multimedia creative suite built into DIGI BIZ OS, uniting timeline video editing, text-to-speech voice generation, audiobook creation, AI avatars, Whisper transcription, and photo editing.",
+      },
+      {
+        q: "Does Digi Studio require internet access?",
+        a: "Core video processing, local Whisper audio transcription, and offline media tools run locally on your Windows PC using native desktop acceleration.",
       },
     ],
     capabilities: [
-      { title: "PDF processing", body: "Merge, split, convert and compress." },
-      { title: "OCR", body: "Extract text from scans and images." },
-      { title: "Signing", body: "Sign documents inside the OS." },
-      { title: "Redaction", body: "Remove sensitive content before sharing." },
-      { title: "Batch pipelines", body: "Process folders, not files." },
-      { title: "Workflow ready", body: "Document steps inside larger automations." },
+      { title: "Timeline Video Editor", body: "Multi-track video sequencing, cuts, transitions, captions, and 4K export." },
+      { title: "Multilingual Voice TTS", body: "Natural voice generation and long-form audiobook production in 50+ languages." },
+      { title: "AI Avatar Studio", body: "Photorealistic digital presenters and talking avatars synced to script audio." },
+      { title: "Whisper Audio Transcriber", body: "Speech-to-text transcription with timestamped subtitles and SRT generation." },
+      { title: "AI Photo Studio", body: "AI image upscaling, background removal, object cleanup, and thumbnail creation." },
+      { title: "Automated Social Rendering", body: "1-click aspect ratio conversion for YouTube, Reels, TikTok, and LinkedIn." },
     ],
     sections: [
       {
-        heading: "Document intake as a workflow",
-        body: "Collect, OCR, rename by content, convert, compress and file — one workflow that runs the same way every time and can be scheduled.",
+        heading: "Full Creative Production Without Cloud Subscriptions",
+        body: "Traditional content production forces businesses to pay multiple SaaS subscriptions for video editors, caption generators, voice cloning, and avatar tools. Digi Studio consolidates the entire multimedia workflow into one desktop interface that integrates directly with Digi CRM and Digi Marketing.",
       },
-    ],
-    faq: [{ q: "Does it work with scanned documents?", a: "Yes, OCR is built in." }],
-    links: [
-      { label: "AI business automation", to: "/ai-business-automation" },
-      { label: "AI workflow automation", to: "/ai-workflow-automation" },
-      { label: "DigiTools", to: "/features/digitools" },
-      ...CTA_CORE,
-    ],
-    image: img(
-      osDocs,
-      "DigiDocs AI document and PDF workspace screenshot",
-      "DigiDocs: PDF, OCR and document processing inside the OS.",
-    ),
-    accent: "#F59E0B",
-  },
-  {
-    path: "/features/digitools",
-    group: "feature",
-    eyebrow: "DigiTools",
-    h1: "DigiTools —",
-    h1Gradient: "150+ Mixed Tools.",
-    metaTitle: "DigiTools — 150+ AI & Offline Tools for Your Desktop | DIGI BIZ OS",
-    metaDescription:
-      "DigiTools gives DIGI BIZ OS a library of 150+ mixed tools — file, system, document and productivity utilities that both you and your AI agents can use.",
-    intro:
-      "Tools are what make an agent useful. DigiTools is the shared library every agent can draw on.",
-    answers: [
       {
-        q: "What are DigiTools?",
-        a: "A library of 150+ mixed tools and offline utilities inside DIGI BIZ OS, available to users and to AI agents during execution.",
-      },
-    ],
-    capabilities: [
-      { title: "File utilities", body: "Search, convert, rename, extract." },
-      { title: "System utilities", body: "Desktop and system helpers." },
-      { title: "Document utilities", body: "Work alongside DigiDocs." },
-      { title: "Productivity tools", body: "Everyday shortcuts in one place." },
-      { title: "Offline tools", body: "Many utilities need no connection." },
-      { title: "Agent accessible", body: "Agents call tools during runs." },
-    ],
-    sections: [
-      {
-        heading: "Why a shared tool layer matters",
-        body: "A new agent or workflow inherits the whole library immediately, so capability compounds instead of being rebuilt per use case.",
+        heading: "From Script to Finished Video in Seconds",
+        body: "Combine Digi AI scriptwriting, Digi Studio voice synthesis, and automated video timeline assembly. Create training modules, client presentations, and marketing clips directly from your business data.",
       },
     ],
     faq: [
       {
-        q: "Can I add my own tools?",
-        a: "Yes, custom tools can be added on top of the built-in library.",
+        q: "Can I import my own media assets?",
+        a: "Yes. Digi Studio supports MP4, MOV, MKV, MP3, WAV, PNG, JPG, and web formats with hardware-accelerated preview rendering.",
+      },
+      {
+        q: "How does it connect with Digi Marketing?",
+        a: "Rendered videos, audio snippets, and graphics can be scheduled and dispatched directly through Digi Marketing and WhatsApp pipelines.",
       },
     ],
     links: [
-      { label: "AI tools", to: "/features/ai-tools" },
-      { label: "AI skills", to: "/features/ai-skills" },
-      { label: "Integrations", to: "/integrations" },
+      { label: "Digi Marketing", to: "/modules/marketing" },
+      { label: "Digi CRM", to: "/modules/crm" },
+      { label: "Digi AI Hub", to: "/features/digiai" },
       ...CTA_CORE,
     ],
     image: img(
-      osTools,
-      "DigiTools library of mixed AI and offline utilities",
-      "The DigiTools library available to you and your agents.",
+      osStudioVideo,
+      "Digi Studio multi-track video editing interface screenshot",
+      "Digi Studio timeline video editor with native audio and caption tracks.",
     ),
-    accent: "#A855F7",
+    accent: "#EC4899",
   },
   {
     path: "/features/digicli",
     group: "feature",
     eyebrow: "DigiCLI",
     h1: "DigiCLI —",
-    h1Gradient: "Terminal, With Intelligence.",
-    metaTitle: "DigiCLI — AI Terminal & Command Execution | DIGI BIZ OS",
+    h1Gradient: "Custom Local Command Engine.",
+    metaTitle: "DigiCLI — Custom AI Command Runner & Local Engine Bin | DIGI BIZ OS",
     metaDescription:
-      "DigiCLI is the terminal layer of DIGI BIZ OS: turn instructions into commands, execute them on your machine and get the output explained.",
+      "DigiCLI is the local command execution engine of DIGI BIZ OS: run custom shell commands, bundled media and database binaries, and terminal automations with human confirmation.",
     intro:
-      "DigiCLI is the command execution layer used by you and by agents when a task needs the shell.",
+      "DigiCLI provides a structured, sandboxed command execution layer. It pairs natural language instruction with direct terminal execution and local utility engines on your Windows desktop.",
     answers: [
-      { q: "What is DigiCLI?", a: "The terminal and command execution module inside DIGI BIZ OS." },
+      {
+        q: "What is DigiCLI?",
+        a: "DigiCLI is the local execution runner in DIGI BIZ OS that executes custom shell commands and leverages embedded local binaries (such as FFmpeg, Whisper, and database runners) under strict security boundaries.",
+      },
+      {
+        q: "Does DigiCLI run commands automatically without confirmation?",
+        a: "High-risk, system-altering, or destructive commands require explicit user authorization before execution.",
+      },
     ],
     capabilities: [
-      { title: "Command generation", body: "Plain language to shell." },
-      { title: "Execution", body: "Runs on your own machine." },
-      { title: "Explanations", body: "Output interpreted for you." },
-      { title: "Agent access", body: "Agents use the terminal as a tool." },
-      { title: "History", body: "Every command logged." },
-      { title: "Workflow steps", body: "Terminal actions inside automations." },
+      { title: "Natural Language to Shell", body: "Describe operational tasks in plain English and receive precise shell commands." },
+      { title: "Local Binary Runners", body: "Direct integration with local engines including FFmpeg, Whisper, and file utilities." },
+      { title: "Agentic Tool Execution", body: "Autonomous agents invoke DigiCLI to inspect directories, compile code, and run scripts." },
+      { title: "Safety Confirmation Gates", body: "Visual prompt review before executing system modifications." },
+      { title: "Full Execution Log", body: "Timestamped audit history of stdout, stderr, and exit codes." },
+      { title: "Script Orchestration", body: "Chain PowerShell, batch, and bash scripts into automated DigiFlow recipes." },
     ],
     sections: [
       {
-        heading: "The shell as a first-class tool",
-        body: "Treating the terminal as a tool rather than a separate app is what allows technical steps to sit inside business workflows.",
+        heading: "Native Windows Execution Without Fragile Wrappers",
+        body: "Instead of relying on remote sandboxes that fail when accessing local business data, DigiCLI executes locally on your Windows 10 and 11 machine with zero latency and full file system awareness.",
       },
     ],
-    faq: [{ q: "Is it Windows only?", a: "DIGI BIZ OS currently ships for Windows 10 and 11." }],
+    faq: [
+      { q: "Can DigiCLI run PowerShell scripts?", a: "Yes, DigiCLI supports native Windows PowerShell and command line scripts." },
+      { q: "Is execution sandboxed?", a: "DigiCLI adheres to user permissions and surfaces confirmation for elevated actions." },
+    ],
     links: [
       { label: "AI terminal assistant", to: "/ai-terminal-assistant" },
       { label: "DigiCode", to: "/features/digicode" },
+      { label: "DigiMCP", to: "/features/digimcp" },
       ...CTA_CORE,
     ],
     image: img(
       osCli,
-      "DigiCLI terminal module inside DIGI BIZ OS",
-      "DigiCLI executing commands with full history.",
+      "DigiCLI command execution console inside DIGI BIZ OS",
+      "DigiCLI terminal execution console with real-time output stream.",
     ),
     accent: "#06B6D4",
   },
@@ -1630,49 +1613,112 @@ export const SEO_PAGES: SeoPage[] = [
     group: "feature",
     eyebrow: "DigiMCP",
     h1: "DigiMCP —",
-    h1Gradient: "Connected Services.",
-    metaTitle: "DigiMCP — Multi-MCP Ready Connectivity & Local Runners | DIGI BIZ OS",
+    h1Gradient: "Universal Tool Architecture.",
+    metaTitle: "DigiMCP — Stdio JSON-RPC 2.0 MCP Client & Dynamic Tool Discovery | DIGI BIZ OS",
     metaDescription:
-      "DigiMCP connects DIGI BIZ OS to MCP servers, integrations and local runners so your agents can reach the platforms your business already uses.",
+      "DigiMCP is the native Model Context Protocol client in DIGI BIZ OS: connect standard stdio JSON-RPC 2.0 servers, discover dynamic tool definitions, and empower agents with enterprise integrations.",
     intro:
-      "DigiMCP is the connectivity layer: MCP servers, integrations and local runners that extend what agents can reach.",
+      "DigiMCP transforms external software into first-class agent tools. Connect standard Model Context Protocol servers over stdio JSON-RPC 2.0 and let your AI agents discover and execute tools on demand.",
     answers: [
       {
         q: "What is DigiMCP?",
-        a: "The multi-MCP connectivity module in DIGI BIZ OS for connecting servers, integrations and local runners.",
+        a: "DigiMCP is the native Model Context Protocol (MCP) client built into DIGI BIZ OS. It manages stdio JSON-RPC 2.0 server processes, inspects tool schemas, and injects capabilities directly into agent reasoning loops.",
+      },
+      {
+        q: "Can I connect any standard MCP server?",
+        a: "Yes. Any MCP server adhering to the open JSON-RPC specification (filesystem, GitHub, databases, web scraping, custom APIs) connects with zero code changes.",
       },
     ],
     capabilities: [
-      { title: "Multi-MCP ready", body: "Connect multiple servers." },
-      { title: "Integrations", body: "Reach the platforms you already run on." },
-      { title: "Local runners", body: "Keep execution on your machine." },
-      { title: "Agent access", body: "Connected services become agent tools." },
-      { title: "No technical setup", body: "Configured inside the app." },
-      { title: "Extensible", body: "Add new connections as you grow." },
+      { title: "Stdio JSON-RPC 2.0 Client", body: "Direct process lifecycle management for local and containerized MCP servers." },
+      { title: "Dynamic Tool Discovery", body: "Automatic schema inspection and dynamic registration of available tool definitions." },
+      { title: "Agent Tool Binding", body: "Seamless runtime tool binding allowing autonomous agents to invoke MCP tools." },
+      { title: "Environment Isolation", body: "Secure per-server environment variable isolation and secret management." },
+      { title: "Multi-Server Orchestration", body: "Run multiple concurrent MCP servers without port collisions or memory leaks." },
+      { title: "Live Inspector & Debugger", body: "Real-time logging of tool requests, parameters, payloads, and responses." },
     ],
     sections: [
       {
-        heading: "Connectivity turns skills into operations",
-        body: "A skill that can reach your actual systems is worth far more than one that only reasons about them.",
+        heading: "Open Standard Extensibility Without Vendor Lock-In",
+        body: "Unlike closed AI platforms that restrict you to proprietary plugins, DIGI BIZ OS embraces the universal Model Context Protocol standard. Connect community-built servers or build your own custom Python/Node.js servers in minutes.",
       },
     ],
     faq: [
       {
-        q: "Which services can I connect?",
-        a: "Connections are configured in-app; the module is multi-MCP ready and supports local runners.",
+        q: "How do I add a new MCP server?",
+        a: "Add the server command and environment arguments in the DigiMCP configuration panel. Tools are discovered immediately.",
+      },
+      {
+        q: "Can custom scripts act as MCP servers?",
+        a: "Yes. Any executable that implements stdio JSON-RPC 2.0 protocol can be registered as an MCP server.",
       },
     ],
     links: [
+      { label: "Digi Connectors", to: "/features/digi-connectors" },
+      { label: "DigiCLI", to: "/features/digicli" },
       { label: "Integrations", to: "/integrations" },
-      { label: "DigiTools", to: "/features/digitools" },
       ...CTA_CORE,
     ],
     image: img(
       osMcp,
-      "DigiMCP connected services and local runners panel",
-      "DigiMCP managing connected services and local runners.",
+      "DigiMCP server management and tool discovery interface screenshot",
+      "DigiMCP managing active JSON-RPC 2.0 servers and dynamic agent tools.",
     ),
     accent: "#EC4899",
+  },
+  {
+    path: "/features/digi-connectors",
+    group: "feature",
+    eyebrow: "Digi Connectors",
+    h1: "Digi Connectors —",
+    h1Gradient: "Universal API Gateway.",
+    metaTitle: "Digi Connectors — Enterprise API & Third-Party Integration Gateway | DIGI BIZ OS",
+    metaDescription:
+      "Digi Connectors links DIGI BIZ OS to enterprise APIs, payment processors, WhatsApp Business, CRMs, webhooks, and cloud databases with secure local key management.",
+    intro:
+      "Digi Connectors serves as the universal API and communication gateway of DIGI BIZ OS. Link your desktop operations to external webhooks, email providers, payment gateways, and cloud platforms without exposing credentials.",
+    answers: [
+      {
+        q: "What is Digi Connectors?",
+        a: "Digi Connectors is the integration management panel inside DIGI BIZ OS that connects local workflows to cloud services, third-party REST APIs, webhooks, and messaging endpoints.",
+      },
+      {
+        q: "Where are API credentials stored?",
+        a: "All API keys, secrets, and authorization tokens are encrypted locally on your Windows machine and are never uploaded to central servers.",
+      },
+    ],
+    capabilities: [
+      { title: "Universal REST & Webhook Engine", body: "Send and receive authenticated webhooks with automated payload formatting." },
+      { title: "Secure Local Key Vault", body: "Hardware-backed AES encryption for API keys, bearer tokens, and OAuth credentials." },
+      { title: "WhatsApp & Messaging Sync", body: "Direct bridge to WhatsApp Cloud API, Telegram, and business communication channels." },
+      { title: "Payment & Invoicing Gateway", body: "Connect Stripe, PayPal, and bank feeds for automatic transaction reconciliation." },
+      { title: "Cloud Database Connectors", body: "Query PostgreSQL, MySQL, Supabase, and SQLite databases securely." },
+      { title: "Rate Limiting & Retry Logic", body: "Automated exponential backoff handling to prevent API throttling." },
+    ],
+    sections: [
+      {
+        heading: "Bridge Desktop Control with Cloud Infrastructure",
+        body: "Digi Connectors combines the speed and security of local desktop computing with the scale of the cloud. Trigger cloud webhooks from local voice commands or ingest external customer leads directly into Digi CRM in real time.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I connect custom internal APIs?",
+        a: "Yes. Digi Connectors allows custom endpoints, headers, authentication methods, and payload mapping.",
+      },
+    ],
+    links: [
+      { label: "Digi CRM", to: "/modules/crm" },
+      { label: "DigiMCP", to: "/features/digimcp" },
+      { label: "DigiFlow", to: "/features/digiflow" },
+      ...CTA_CORE,
+    ],
+    image: img(
+      osRuntime,
+      "Digi Connectors integration gateway and API configuration screenshot",
+      "Digi Connectors managing active API channels and secure endpoints.",
+    ),
+    accent: "#3B82F6",
   },
   {
     path: "/features/digiflow",
@@ -1762,6 +1808,60 @@ export const SEO_PAGES: SeoPage[] = [
     accent: "#14B8A6",
   },
   {
+    path: "/features/live-tracking",
+    group: "feature",
+    eyebrow: "Live Tracking",
+    h1: "Live Tracking —",
+    h1Gradient: "30-Event Forensic Stream.",
+    metaTitle: "Live Tracking — 30-Event Real-Time Audit Stream & Agent Telemetry | DIGI BIZ OS",
+    metaDescription:
+      "Monitor autonomous agent execution in real time with DIGI BIZ OS Live Tracking: inspect reasoning steps, tool payloads, terminal outputs, and 30 distinct event types.",
+    intro:
+      "Complete transparency into what your AI is doing at every microsecond. Live Tracking streams up to 30 granular operational events so you maintain forensic oversight over agents, workflows, and tools.",
+    answers: [
+      {
+        q: "What is Live Tracking?",
+        a: "Live Tracking is the real-time telemetry and audit stream inside DIGI BIZ OS that captures every step of agent execution, tool call, error trace, and system interaction across 30 event categories.",
+      },
+      {
+        q: "Can I pause or stop an agent during Live Tracking?",
+        a: "Yes. The Operations Center provides instant kill-switch and pause controls directly from the live telemetry feed.",
+      },
+    ],
+    capabilities: [
+      { title: "30-Event Forensic Stream", body: "Granular classification of agent thoughts, tool calls, file writes, and shell events." },
+      { title: "Real-Time Step Inspection", body: "Expand any event to inspect raw input arguments, execution timing, and returned payloads." },
+      { title: "Instant Kill-Switch Control", body: "Halt any runaway agent or long-running process with a single click." },
+      { title: "Interactive Modal Inspector", body: "Deep-dive view into complex payloads, diffs, and generated artifacts." },
+      { title: "Persistent Audit Log", body: "Searchable local history of past sessions for compliance and performance analysis." },
+      { title: "Token & Latency Metrics", body: "Live tracking of token consumption, model response latency, and execution duration." },
+    ],
+    sections: [
+      {
+        heading: "Enterprise Trust Demands Absolute Transparency",
+        body: "Black-box AI that hides execution details cannot be trusted with mission-critical business operations. Live Tracking reveals every decision, API request, and file modification as it occurs, giving business operators complete peace of mind.",
+      },
+    ],
+    faq: [
+      {
+        q: "Are audit logs saved locally?",
+        a: "Yes, all telemetry and execution logs are stored locally on your machine and can be exported as JSON or CSV.",
+      },
+    ],
+    links: [
+      { label: "DigiTasks", to: "/features/digitasks" },
+      { label: "DigiFlow", to: "/features/digiflow" },
+      { label: "Digi AI Hub", to: "/features/digiai" },
+      ...CTA_CORE,
+    ],
+    image: img(
+      osLiveTrackingModal,
+      "Live Tracking forensic audit stream and event modal screenshot",
+      "Live Tracking modal displaying real-time agent event stream and tool payloads.",
+    ),
+    accent: "#10B981",
+  },
+  {
     path: "/features/ai-skills",
     group: "feature",
     eyebrow: "Skills",
@@ -1848,8 +1948,8 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     links: [
-      { label: "DigiTools", to: "/features/digitools" },
-      { label: "AI skills", to: "/features/ai-skills" },
+      { label: "Digi Studio", to: "/features/digi-studio" },
+      { label: "DigiCLI", to: "/features/digicli" },
       { label: "DigiMCP", to: "/features/digimcp" },
       ...CTA_CORE,
     ],
@@ -2117,7 +2217,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     capabilities: [
-      { title: "Document ops", body: "DigiDocs pipelines at volume." },
+      { title: "CRM & business ops", body: "Digi CRM pipelines and account workflows." },
       { title: "Reporting ops", body: "DigiFlow workflow summaries." },
       { title: "Research ops", body: "Browser agents on a timetable." },
       { title: "Admin ops", body: "Bulk file and record work." },
@@ -2544,15 +2644,15 @@ export const SEO_PAGES: SeoPage[] = [
       { q: "Which folders can it touch?", a: "Only the folders you put in scope for the task." },
     ],
     links: [
-      { label: "DigiDocs", to: "/features/digidocs" },
+      { label: "Digi Studio", to: "/features/digi-studio" },
       { label: "Desktop control", to: "/features/computer-use" },
       { label: "AI computer control", to: "/ai-computer-control" },
       ...CTA_CORE,
     ],
     image: img(
-      osDocs,
+      osMain,
       "Document and file tools inside DIGI BIZ OS",
-      "Document and file operations in DigiDocs.",
+      "Document and file operations inside DIGI BIZ OS.",
     ),
     accent: "var(--amber)",
   },

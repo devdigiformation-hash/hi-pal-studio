@@ -7,16 +7,16 @@ import GradientText from "@/components/GradientText";
 
 const ROWS: [string, boolean, boolean, boolean][] = [
   ["Native Desktop Mouse & Keyboard Control", true, false, false],
-  ["Real-Time Screen Vision Stream", true, false, false],
+  ["Real-Time Screen & Camera Vision Stream", true, false, false],
   ["Multi Agent Concurrent Execution", true, false, false],
   ["Voice-First Zero-Latency Operation", true, false, false],
-  ["Local File System Full Access", true, false, true],
-  ["Multi-Provider AI Model Routing", true, true, false],
-  ["Offline Document Suite (OCR, redact, sign)", true, false, false],
-  ["100+ Offline Utilities Built In", true, false, false],
-  ["500+ AI Skills Library", true, false, false],
-  ["40+ MCP Servers, Toggled Live", true, true, false],
-  ["WhatsApp + Email + Discord Unified", true, false, false],
+  ["Local File System Full Sovereign Access", true, false, true],
+  ["Multi-Provider AI Model Routing & Free Fallback", true, true, false],
+  ["Offline Video Editor & Talking Avatar AI", true, false, false],
+  ["Single Knowledge Base CRM Auto-Configuration", true, false, false],
+  ["Always-On Automated Business Rules", true, false, false],
+  ["Universal Model Context Protocol (MCP) Client", true, true, false],
+  ["WhatsApp QR 24/7 Sales Agent & Order Intake", true, false, false],
 ];
 
 function Mark({ on }: { on: boolean }) {

@@ -11,7 +11,7 @@ const FAQS = [
   },
   {
     q: "Do I need my own AI API keys?",
-    a: "Yes — connect your own AI provider key. Local models work fully offline with no API key.",
+    a: "Many everyday operations run completely free on our built-in free model fallback stack. You can also optionally connect your own API keys for Google Gemini, OpenRouter, Groq, or local models.",
   },
   {
     q: "Is my desktop data private?",
@@ -35,7 +35,7 @@ const FAQS = [
   },
   {
     q: "Can developers extend it with custom skills?",
-    a: "Yes — through 500+ AI skills, custom skills and multi-MCP connections.",
+    a: "Yes — through custom CLI command runners, shared offline engines, and universal Model Context Protocol (MCP) server integration.",
   },
 ];
 

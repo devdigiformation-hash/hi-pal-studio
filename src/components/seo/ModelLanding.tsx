@@ -191,8 +191,8 @@ export default function ModelLanding({ model }: { model: ModelEntity }) {
                   <Link to="/modules/code">
                     <MonoBadge color="var(--amber)">Digi Code</MonoBadge>
                   </Link>
-                  <Link to="/modules/docs">
-                    <MonoBadge color="var(--green)">Digi Docs</MonoBadge>
+                  <Link to="/modules/studio">
+                    <MonoBadge color="var(--pink)">Digi Studio</MonoBadge>
                   </Link>
                 </div>
               </div>

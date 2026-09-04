@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Mic, Brain, ArrowRight, Sparkles, CheckCircle2, Zap, ShieldCheck, HelpCircle, Layers, MessageSquare, Code2, FileText, Workflow, Megaphone } from "lucide-react";
+import { Mic, Brain, ArrowRight, Sparkles, CheckCircle2, Zap, ShieldCheck, HelpCircle, Layers, MessageSquare, Code2, Palette, Workflow, Megaphone } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { WindowsIcon } from "@/components/PlatformIcons";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -103,11 +103,11 @@ const VOICE_MODULE_INTEGRATIONS = [
     link: "/modules/code",
   },
   {
-    icon: FileText,
-    title: "JARVIS + Digi Docs",
-    color: "#EF4444",
-    desc: 'Speak: "Merge all client invoices for August and redact customer phone numbers" — air-gapped local PDF execution in seconds.',
-    link: "/modules/docs",
+    icon: Palette,
+    title: "JARVIS + Digi Studio",
+    color: "#F472B6",
+    desc: 'Speak: "Crop this product video into 9:16 vertical format and generate multilingual Urdu and Arabic voiceovers" — local FFmpeg execution in seconds.',
+    link: "/modules/studio",
   },
   {
     icon: Workflow,

@@ -8,6 +8,7 @@ import MonoBadge from "./MonoBadge";
 
 const OVERVIEW = [
   { label: "Overview", to: "/" },
+  { label: "All Features Hub", to: "/features" },
   { label: "Enterprise Modules", to: "/modules" },
   { label: "AI Models Universe", to: "/models" },
   { label: "Voice AI & JARVIS", to: "/voice-ai" },
@@ -21,14 +22,18 @@ const OVERVIEW = [
 ] as const;
 
 const MODULES = [
-  { label: "Digi CRM", to: "/modules/crm" },
+  { label: "Digi CRM & Operations", to: "/modules/crm" },
+  { label: "Digi Studio Creative Suite", to: "/modules/studio" },
+  { label: "Digi AI Studio", to: "/modules/ai" },
   { label: "Digi WhatsApp Agent", to: "/modules/whatsapp" },
   { label: "Digi Marketing", to: "/modules/marketing" },
+  { label: "Digi Flow Automations", to: "/modules/workflows" },
+  { label: "Digi Code Workspace", to: "/modules/code" },
+  { label: "Digi MCP Protocol Client", to: "/modules/mcp" },
+  { label: "Digi CLI Command Runner", to: "/modules/cli" },
+  { label: "Digi Models Router", to: "/modules/models" },
+  { label: "Digi Connectors Hub", to: "/modules/connectors" },
   { label: "Digi Intelligence", to: "/modules/intelligence" },
-  { label: "Digi Flow Workflows", to: "/modules/workflows" },
-  { label: "Digi Docs", to: "/modules/docs" },
-  { label: "Digi Code", to: "/modules/code" },
-  { label: "Digi Tools", to: "/modules/tools" },
 ] as const;
 
 const OPEN_SOURCE = [
