@@ -417,7 +417,7 @@ export default function SubPageGalleryShowcase({
 
           {/* Desktop Window Frame */}
           <ThreeDTiltCard
-            maxTilt={6}
+            maxTilt={3}
             glowColor={`${accentColor}35`}
             className="rounded-xl border border-white/10 bg-black/60 overflow-hidden shadow-2xl"
           >

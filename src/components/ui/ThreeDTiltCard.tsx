@@ -11,10 +11,10 @@ export default function ThreeDTiltCard({
   children,
   className = '',
   glowColor = 'rgba(47, 224, 200, 0.4)',
-  maxTilt = 12,
+  maxTilt = 4,
 }: ThreeDTiltCardProps) {
   const cardRef = useRef<HTMLDivElement | null>(null);
-  const [transform, setTransform] = useState('perspective(1000px) rotateX(0deg) rotateY(0deg)');
+  const [transform, setTransform] = useState('perspective(1800px) rotateX(0deg) rotateY(0deg)');
   const [glarePosition, setGlarePosition] = useState({ x: 50, y: 50, opacity: 0 });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -29,16 +29,16 @@ export default function ThreeDTiltCard({
     const rotateX = ((y - centerY) / centerY) * -maxTilt;
     const rotateY = ((x - centerX) / centerX) * maxTilt;
 
-    setTransform(`perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.015, 1.015, 1.015)`);
+    setTransform(`perspective(1800px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.006, 1.006, 1.006)`);
     setGlarePosition({
       x: (x / rect.width) * 100,
       y: (y / rect.height) * 100,
-      opacity: 0.28,
+      opacity: 0.12,
     });
   };
 
   const handleMouseLeave = () => {
-    setTransform('perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)');
+    setTransform('perspective(1800px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)');
     setGlarePosition((prev) => ({ ...prev, opacity: 0 }));
   };
 
@@ -49,7 +49,7 @@ export default function ThreeDTiltCard({
       onMouseLeave={handleMouseLeave}
       style={{
         transform,
-        transition: 'transform 0.18s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.18s ease',
+        transition: 'transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease',
         transformStyle: 'preserve-3d',
       }}
       className={`relative overflow-hidden rounded-[16px] border border-[rgba(255,255,255,0.08)] bg-[rgba(13,17,23,0.7)] backdrop-blur-xl ${className}`}
