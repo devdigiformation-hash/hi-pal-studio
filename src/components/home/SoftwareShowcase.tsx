@@ -5,6 +5,8 @@ import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GradientText from "@/components/GradientText";
 import digiMain from "@/assets/os-main-dashboard.png";
+import digiActiveAgent from "@/assets/os-active-agent-search.png";
+import digiLiveTracking from "@/assets/os-live-tracking-modal.png";
 import digiAiHub from "@/assets/os-digi-ai-hub.png";
 import digiCrm from "@/assets/os-digi-crm.png";
 import digiIntelligence from "@/assets/os-digi-intelligence.png";
@@ -21,9 +23,21 @@ import digiDesktopTools from "@/assets/os-desktop-tools.png";
 const SLIDES = [
   {
     src: digiMain,
-    tag: "Live OS",
-    title: "Your entire command surface in one place.",
-    body: "Screen sharing, live transcript, memory, skills, agents, tools and camera — all orbiting a single voice-first workspace that works while you talk.",
+    tag: "Live OS Surface",
+    title: "Your entire command surface in one unified desktop workspace.",
+    body: "11 Core Business Apps, live particle visualizer, memory, skills, soul engine, camera, screen share, and multi-agent supervisor — all in one offline-first Windows OS.",
+  },
+  {
+    src: digiActiveAgent,
+    tag: "Live Execution & Vision",
+    title: "Autonomous agents executing real browser research and computer tasks.",
+    body: "Watch agents autonomously search, browse, extract data, and communicate via real-time multilingual voice transcripts while you supervise.",
+  },
+  {
+    src: digiLiveTracking,
+    tag: "Live Tracking & Transparency",
+    title: "Complete audit trails with zero black-box mystery.",
+    body: "Track every tool call, reasoning step, routing decision, and execution duration in real time with active, good, warning, and error counters.",
   },
   {
     src: digiAiHub,
