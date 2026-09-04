@@ -8,6 +8,8 @@ import CyanButton from "@/components/CyanButton";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import SubPageComparisonChart from "@/components/seo/SubPageComparisonChart";
 import SubPageGalleryShowcase from "@/components/seo/SubPageGalleryShowcase";
+import InteractiveCyberBackground from "@/components/ui/InteractiveCyberBackground";
+import ThreeDTiltCard from "@/components/ui/ThreeDTiltCard";
 import type { SeoPage } from "@/content/seo-pages";
 
 export default function SeoLanding({ page }: { page: SeoPage }) {
@@ -23,7 +25,8 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
 
   return (
     <main className="min-h-screen pt-[60px] md:pt-[72px]">
-      <SectionWrapper>
+      <SectionWrapper className="relative overflow-hidden">
+        <InteractiveCyberBackground color={accent} particleCount={38} />
         <Breadcrumbs trail={trail} />
         <div className="mx-auto max-w-[900px] text-center">
           <EyebrowLabel text={page.eyebrow} color={accent} />
@@ -53,28 +56,17 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
       {page.image && page.image.src ? (
         <SectionWrapper className="!py-4 md:!py-8">
           <figure className="mx-auto max-w-[1080px]">
-            <div className="relative">
-              {/* ambient light behind the window */}
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -inset-6 -z-10 rounded-[36px] opacity-70 blur-3xl"
-                style={{
-                  background:
-                    "radial-gradient(ellipse 60% 60% at 50% 50%, rgba(47,224,200,0.2), transparent 70%), radial-gradient(ellipse 50% 50% at 50% 70%, rgba(139,124,246,0.18), transparent 70%)",
-                }}
-              />
-              <div className="overflow-hidden rounded-[18px] border border-white/15 bg-[#05070B] p-1.5 shadow-[0_30px_100px_-20px_rgba(0,0,0,0.85)] md:rounded-[24px] md:p-2.5">
-                <div className="overflow-hidden rounded-[14px] bg-[#020408] md:rounded-[18px]">
-                  <img
-                    src={page.image.src}
-                    alt={page.image.alt}
-                    loading="eager"
-                    decoding="async"
-                    className="block h-auto w-full object-contain"
-                  />
-                </div>
+            <ThreeDTiltCard glowColor={`${accent}35`} className="p-2 md:p-3">
+              <div className="overflow-hidden rounded-[14px] bg-[#020408] md:rounded-[18px]">
+                <img
+                  src={page.image.src}
+                  alt={page.image.alt}
+                  loading="eager"
+                  decoding="async"
+                  className="block h-auto w-full object-contain"
+                />
               </div>
-            </div>
+            </ThreeDTiltCard>
             <figcaption className="mt-4 text-center font-body text-[13.5px] text-[var(--text-secondary)]">
               {page.image.caption}
             </figcaption>

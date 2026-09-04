@@ -48,6 +48,7 @@ import GhostButton from "@/components/GhostButton";
 import MonoBadge from "@/components/MonoBadge";
 import ActivePulse from "@/components/ActivePulse";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import MasterOpenSourceValueTable from "@/components/seo/MasterOpenSourceValueTable";
 import { buildMeta, breadcrumbLd } from "@/lib/seo";
 
 import anythingllmLogo from "@/assets/anythingllm-logo.jpg";
@@ -482,9 +483,10 @@ function OpenSourcePage() {
 
           {/* Quick Metrics Badges */}
           <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
-            <MonoBadge>⚡ 9+ Free Open-Source Packages</MonoBadge>
+            <MonoBadge>⚡ 15+ Curated Open-Source Suites</MonoBadge>
+            <MonoBadge>💰 $14,800+/yr Saved vs Cloud SaaS</MonoBadge>
             <MonoBadge>🔒 100% Offline & Private</MonoBadge>
-            <MonoBadge>📜 MIT & Apache 2.0 Licenses</MonoBadge>
+            <MonoBadge>📜 Permissive MIT & Apache 2.0</MonoBadge>
             <MonoBadge>💻 One-Click Windows & Mac Setup</MonoBadge>
           </div>
         </div>
@@ -713,6 +715,13 @@ function OpenSourcePage() {
         </div>
       </SectionWrapper>
 
+      {/* ── MASTER VALUE & SAVINGS COMPARISON TABLE ───────────── */}
+      <SectionWrapper className="py-14 md:py-20">
+        <div className="mx-auto max-w-[1240px]">
+          <MasterOpenSourceValueTable />
+        </div>
+      </SectionWrapper>
+
       {/* ── SOURCE CODE & COMMERCIAL LICENCE ───────────────── */}
       <SectionWrapper className="bg-[var(--bg-surface)] py-14 md:py-20">
         <div className="mx-auto grid max-w-[1140px] items-center gap-10 lg:grid-cols-[55%_45%]">
@@ -725,14 +734,14 @@ function OpenSourcePage() {
             <h2 className="mt-4 font-display text-[28px] font-extrabold tracking-[-0.03em] text-[var(--text-primary)] md:text-[38px]">
               Own the Full Source Code.{" "}
               <GradientText from="#8B7CF6" to="#2FE0C8">
-                Rebrand, Modify & Resell.
+                Adapt, Extend & Automate.
               </GradientText>
             </h2>
 
             <p className="mt-4 font-body text-[15.5px] leading-[1.85] text-[var(--text-secondary)]">
               The Source Code Licence grants your organization full ownership of the entire DIGI BIZ OS
               desktop codebase and multi-agent automation orchestration core. Audit every line, add custom
-              skills, integrate private enterprise models, or white-label and sell it to clients.
+              skills, integrate private enterprise models, or tailor complete workflows for your operations.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -765,8 +774,8 @@ function OpenSourcePage() {
             <ul className="mt-5 space-y-3.5">
               {[
                 "100% complete TypeScript, React, and Python backend orchestrator source code",
-                "Full white-label rebranding rights (change logos, colors, splash screens)",
-                "Commercial resale rights included with zero royalties or revenue sharing",
+                "Full developer access to customize UI screens, models and workflow engines",
+                "Deploy across your organization or create bespoke client solutions with zero royalties",
                 "12 months of core updates and security patches included",
                 "Direct developer documentation and custom skill creation guides",
               ].map((point, i) => (

@@ -93,7 +93,7 @@ export const COMPARE_PAGES: ComparePage[] = [
       },
       {
         heading: "Where DIGI BIZ OS is deliberately different",
-        body: "The product is built as an operating layer for a business, not only a personal assistant: agents you can define, workflows you can schedule, document and coding workspaces, and a source code licence for teams who want to own and rebrand the software.",
+        body: "The product is built as an operating layer for a business, not only a personal assistant: agents you can define, workflows you can schedule, document and coding workspaces, and a source code licence for teams who want full technical ownership and complete code customization.",
       },
     ],
     faq: [

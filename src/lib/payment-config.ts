@@ -55,7 +55,8 @@ export const PLANS: Record<PlanId, Plan> = {
     compareGbp: 150,
     compareUsd: 195,
     comparePkr: 54000,
-    billingNote: "One-time payment · Complete done-for-you business setup",
+    billingNote:
+      "One-time payment · Complete done-for-you business setup · Optional £5/mo ongoing maintenance after month 1",
     includes: [
       "Everything in Lifetime Access",
       "Full software installation & desktop environment setup on your PC",
@@ -64,7 +65,7 @@ export const PLANS: Record<PlanId, Plan> = {
       "WhatsApp AI Sales Agent setup & business prompt tuning",
       "Business Knowledge Base ingestion & CRM data configuration",
       "1-on-1 walkthrough & handover session with our team",
-      "1 month priority setup support included",
+      "1 month priority setup support included (Optional £5/mo ongoing maintenance afterwards)",
     ],
     bestFor: ["Business Owners", "Agencies", "Store Owners", "Service Providers"],
   },

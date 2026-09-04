@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import HeroSection from "@/components/home/HeroSection";
 import TelemetryTicker from "@/components/home/TelemetryTicker";
 import SoftwareShowcase from "@/components/home/SoftwareShowcase";
+import AiBrainArchitectureShowcase from "@/components/home/AiBrainArchitectureShowcase";
 import ModulesGrid from "@/components/home/ModulesGrid";
 import CapabilityVault from "@/components/home/CapabilityVault";
 import FourPillars from "@/components/home/FourPillars";
@@ -49,6 +50,7 @@ function HomePage() {
       <HeroSection />
       <TelemetryTicker />
       <SoftwareShowcase />
+      <AiBrainArchitectureShowcase />
       <ModulesGrid />
       <CapabilityVault />
       <FourPillars />

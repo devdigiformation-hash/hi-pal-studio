@@ -18,7 +18,7 @@ const PERKS = [
     icon: Settings,
     color: "var(--purple)",
     title: "Customise Everything",
-    body: "Rebrand screens, rewrite workflows and tune the AI to match your business exactly.",
+    body: "Customise UI screens, rewrite business workflows and tune AI models to match your business.",
   },
   {
     icon: Workflow,
@@ -29,14 +29,14 @@ const PERKS = [
   {
     icon: Rocket,
     color: "#F472B6",
-    title: "Ship as Your Product",
-    body: "Build signed installers, add your licence and sell your own branded AI OS.",
+    title: "Ship to Your Organization",
+    body: "Build custom installers, deploy private models and empower your team with sovereign AI.",
   },
   {
     icon: ShieldCheck,
     color: "#7DD3FC",
     title: "Full Commercial Rights",
-    body: "Resale is included. Use it for one client or ship it to thousands — no royalties.",
+    body: "Full commercial freedom. Deploy for your business or build proprietary solutions with no royalties.",
   },
   {
     icon: RefreshCw,
@@ -61,9 +61,9 @@ export default function SourceCodeSection() {
               </GradientText>
             </h2>
             <p className="reveal-item delay-2 mt-5 font-body text-[16px] leading-[1.8] text-[var(--text-secondary)] md:text-[17px]">
-              Buy the full source code licence and rebuild DIGI BIZ OS around your business. Change
-              the brand, add your own modules, wire in your services and let agents run your entire
-              operation — from first task to final delivery.
+              Buy the full source code licence and adapt DIGI BIZ OS directly for your business. Add your own
+              modules, wire in custom backend pipelines, and let autonomous agents execute your operations
+              with complete technical sovereignty.
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
