@@ -11,9 +11,11 @@ import digiAiChat from "@/assets/os-digi-ai-chat.png";
 import digiAiImage from "@/assets/os-digi-ai-image.png";
 import digiCrmDash from "@/assets/os-digi-crm-dashboard.png";
 import digiCrmNav from "@/assets/os-digi-crm-navigation.png";
-import digiIntelligence from "@/assets/os-digi-intelligence.png";
+import digiCrmAccounts from "@/assets/os-digi-crm-accounts.png";
+import digiFlow from "@/assets/os-digi-flow.png";
+import digiIntelligence from "@/assets/os-digi-crm-intelligence.png";
+import digiWhatsapp from "@/assets/os-digi-crm-whatsapp.png";
 import digiMarketing from "@/assets/os-digi-marketing.png";
-import digiWhatsapp from "@/assets/os-digi-whatsapp.png";
 import digiCode from "@/assets/os-digi-code.png";
 import digiDocs from "@/assets/os-digi-docs.png";
 import digiTools from "@/assets/os-digi-tools.png";
@@ -66,22 +68,28 @@ const SLIDES = [
     body: "From company formation and bank accounting to automated customer support, pipeline management, email campaigns, and direct database management.",
   },
   {
-    src: digiIntelligence,
-    tag: "Digi Intelligence",
-    title: "E-commerce, market research and lead generation engines.",
-    body: "Automated 20-stage product research across Amazon, eBay, Walmart, TikTok, and Shopify, paired with B2B lead hunting pipelines.",
+    src: digiCrmAccounts,
+    tag: "Digi CRM — Financial Accounting & Ledger",
+    title: "Complete offline financial command with live profit margins and tax tracking.",
+    body: "Multi-currency ledger, 6-month income vs. expenses analytics, receivables tracking, instant expense logging, and one-click AI financial audit reports.",
   },
   {
-    src: digiMarketing,
-    tag: "Digi Marketing",
-    title: "Multi-platform social content compose and schedule engine.",
-    body: "AI captions, multi-account publishing, automated scheduled campaigns, and cross-channel marketing automation from a single desktop dashboard.",
+    src: digiFlow,
+    tag: "Digi Flow — Always-On Automations",
+    title: "Autonomous business workflows that run 24/7 without intervention.",
+    body: "Built-in automated routines for overdue invoice chaser, low-stock reorder alerts, stalled deal reminders, new-lead follow-ups, ticket escalation, and company transfers.",
   },
   {
     src: digiWhatsapp,
-    tag: "Digi WhatsApp",
-    title: "24/7 autonomous sales and customer support agent.",
-    body: "Instant QR pairing via Baileys engine, voice note audio transcription, AI auto-replies, and local SQLite memory for seamless customer conversions.",
+    tag: "Digi CRM — WhatsApp Autonomous Agent",
+    title: "Instant QR pairing with 24/7 intelligent sales assistant.",
+    body: "Direct mobile QR pairing, live communication logs, multi-number management, AI brain reasoning, and automated customer conversation pipelines.",
+  },
+  {
+    src: digiIntelligence,
+    tag: "Digi Intelligence — E-Commerce Research",
+    title: "One-click 20-stage deep market analysis across major marketplaces.",
+    body: "Automated multi-platform product and supplier hunting across Amazon, eBay, Etsy, Walmart, TikTok, and Shopify with historical research tracking.",
   },
   {
     src: digiCode,
