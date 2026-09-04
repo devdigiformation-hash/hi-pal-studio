@@ -275,7 +275,7 @@ export default function ModuleLanding({ module }: { module: ModuleData }) {
             {module.relatedModules.map((rel) => (
               <Link
                 key={rel.slug}
-                to={`/modules/${rel.slug}`}
+                to={`/modules/${rel.slug}` as any}
                 className="group block rounded-2xl border border-white/10 bg-white/[0.02] p-5 text-left transition hover:border-[var(--cyan)] hover:bg-white/[0.04]"
               >
                 <h3 className="font-display text-[16px] font-bold text-[var(--text-primary)] group-hover:text-[var(--cyan)] transition-colors">

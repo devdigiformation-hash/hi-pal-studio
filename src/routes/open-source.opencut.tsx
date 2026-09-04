@@ -205,7 +205,7 @@ function OpenCutPage() {
             title="OpenCut Social & Reels Video Studio"
             category="Video & Editing"
             color="#F59E0B"
-            downloadUrl={DOWNLOAD_URL}
+            downloadUrl={ZIP_URL}
             downloadFilename="OpenCut-Setup.exe"
             license="MIT License (100% Free)"
             stars="11.6k ★"

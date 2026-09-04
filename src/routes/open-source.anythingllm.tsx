@@ -191,7 +191,7 @@ function AnythingLlmPage() {
             license="MIT License (100% Free)"
             stars="35.4k ★"
             version="v1.7.2"
-            image={shot.url}
+            image={screenshot.url}
             quickCommand={"docker run -d -p 3001:3001 --name anythingllm mintplexlabs/anythingllm"}
             badges={["Built-in LanceDB","Multi-Doc Workspaces","Zero Subscriptions"]}
             annualSavings="Save $360 / year vs ChatPDF/Notion"

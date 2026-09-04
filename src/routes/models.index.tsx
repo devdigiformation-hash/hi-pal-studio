@@ -78,7 +78,7 @@ function ModelsDirectoryPage() {
           {MODELS_LIST.map((mod) => {
             const accent = mod.accentColor || "#3B82F6";
             return (
-              <Link key={mod.slug} to={`/models/${mod.slug}`} className="group block h-full">
+              <Link key={mod.slug} to={`/models/${mod.slug}` as any} className="group block h-full">
                 <GlassCard
                   glowColor={accent}
                   className="flex h-full flex-col justify-between p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-white/30"

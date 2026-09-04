@@ -3,7 +3,7 @@ export interface BlogPost {
   title: string;
   metaTitle: string;
   description: string;
-  cluster: "JARVIS" | "AI Business" | "Agents" | "Voice" | "Computer Use" | "Coding";
+  cluster: string;
   date: string;
   readingTime: string;
   body: { heading: string; paragraphs: string[]; bullets?: string[] }[];

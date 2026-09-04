@@ -306,7 +306,7 @@ export default function AiBrainArchitectureShowcase() {
                       Latency: ~180ms · Zero Manual Coding
                     </span>
                     <Link
-                      to={current.id === "crm" ? "/modules/crm" : current.id === "studio" ? "/modules/studio" : current.id === "marketing" ? "/modules/marketing" : "/features"}
+                      to={(current.id === "crm" ? "/modules/crm" : current.id === "studio" ? "/modules/studio" : current.id === "marketing" ? "/modules/marketing" : "/features") as any}
                       className="inline-flex items-center gap-1.5 font-display text-[12.5px] font-bold hover:underline"
                       style={{ color: current.color }}
                     >

@@ -190,7 +190,7 @@ function TuttlePage() {
             license="GPL-3.0 (100% Free)"
             stars="9.8k ★"
             version="v2.4.1"
-            image={shot.url}
+            image={screenshot.url}
             quickCommand={"npm install -g tuttle-cli && tuttle start"}
             badges={["100% Local Storage","Billable Timesheets","Zero Tracking"]}
             annualSavings="Save $180 / year vs Toggl Pro"

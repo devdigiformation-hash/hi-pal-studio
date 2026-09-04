@@ -141,7 +141,7 @@ function UpscaylPage() {
             license="AGPL-3.0 (100% Free)"
             stars="31.2k ★"
             version="v2.15.0"
-            image={shot.url}
+            image={upscaylShot.url}
             quickCommand={"winget install Upscayl.Upscayl"}
             badges={["Real-ESRGAN Model","16X Ultra-HD","Direct Vulkan GPU"]}
             annualSavings="Save $120 / year vs Topaz Gigapixel"

@@ -218,14 +218,16 @@ export default function SaasComparisonMatrix() {
               Get full lifetime access to all 12 modules, timeline video editing, multilingual voice TTS, 20-module CRM,
               always-on workflows, and JARVIS voice control for a single £50 lifetime license.
             </p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-              <CyanButton to="/pricing">
-                Get Lifetime Licence (£50) <ArrowRight size={16} className="ml-2" />
-              </CyanButton>
-              <GhostButton to="/compare">
-                View Full Detailed Comparisons
-              </GhostButton>
-            </div>
+              <Link to="/pricing">
+                <CyanButton>
+                  Get Lifetime Licence (£50) <ArrowRight size={16} className="ml-2" />
+                </CyanButton>
+              </Link>
+              <Link to="/compare">
+                <GhostButton>
+                  View Full Detailed Comparisons
+                </GhostButton>
+              </Link>
           </div>
         </div>
       </div>

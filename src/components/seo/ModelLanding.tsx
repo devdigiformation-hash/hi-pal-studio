@@ -182,22 +182,22 @@ export default function ModelLanding({ model }: { model: ModelEntity }) {
                   {model.digiSynergy}
                 </p>
                 <div className="mt-6 flex flex-wrap items-center gap-3">
-                  <Link to="/modules/crm">
+                  <Link to={"/modules/crm" as any}>
                     <MonoBadge color="var(--cyan)">Digi CRM</MonoBadge>
                   </Link>
                   <Link to="/voice-ai">
                     <MonoBadge color="var(--purple)">JARVIS Voice</MonoBadge>
                   </Link>
-                  <Link to="/modules/code">
+                  <Link to={"/modules/code" as any}>
                     <MonoBadge color="var(--amber)">Digi Code</MonoBadge>
                   </Link>
-                  <Link to="/modules/studio">
+                  <Link to={"/modules/studio" as any}>
                     <MonoBadge color="var(--pink)">Digi Studio</MonoBadge>
                   </Link>
                 </div>
               </div>
               <div className="text-center md:col-span-4 md:text-right">
-                <Link to="/download">
+                <Link to="/pricing">
                   <CyanButton size="lg" icon={<Zap size={18} />}>
                     Download Installer
                   </CyanButton>
@@ -241,7 +241,7 @@ export default function ModelLanding({ model }: { model: ModelEntity }) {
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
             {model.alternatives.map((alt) => (
-              <Link key={alt.slug} to={`/models/${alt.slug}`} className="group block">
+              <Link key={alt.slug} to={`/models/${alt.slug}` as any} className="group block">
                 <GlassCard
                   glowColor={accent}
                   className="h-full p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/30"

@@ -5,6 +5,7 @@ interface EyebrowLabelProps {
   color?: string;
   className?: string;
   reveal?: boolean;
+  icon?: any;
 }
 
 export default function EyebrowLabel({
@@ -12,17 +13,19 @@ export default function EyebrowLabel({
   color = "var(--cyan)",
   className,
   reveal = true,
+  icon: Icon,
 }: EyebrowLabelProps) {
   return (
     <span
       style={{ color, letterSpacing: "0.16em" }}
       className={cn(
         reveal ? "reveal-item" : "",
-        "inline-block font-display text-[12px] font-semibold uppercase",
+        "inline-flex items-center gap-1.5 font-display text-[12px] font-semibold uppercase",
         className,
       )}
     >
-      {text}
+      {Icon && <Icon size={14} className="shrink-0" />}
+      <span>{text}</span>
     </span>
   );
 }

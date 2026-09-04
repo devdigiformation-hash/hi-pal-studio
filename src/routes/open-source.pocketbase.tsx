@@ -190,7 +190,7 @@ function PocketBasePage() {
             license="MIT License (100% Free)"
             stars="42.8k ★"
             version="v0.25.9"
-            image={shot.url}
+            image={screenshot.url}
             quickCommand={"./pocketbase.exe serve --http=127.0.0.1:8090"}
             badges={["Single 32MB Binary","Realtime WebSockets","Instant Admin UI"]}
             annualSavings="Save $300 / year vs Supabase Pro"

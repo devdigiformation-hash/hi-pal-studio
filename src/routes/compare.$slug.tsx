@@ -7,9 +7,3 @@ export const Route = createFileRoute("/compare/$slug")({
   component: () => null,
 });
 
-function ComparePageRoute() {
-  const { slug } = Route.useParams();
-  const page = COMPARE_BY_SLUG[slug];
-  if (!page) return null;
-  return <CompareLanding page={page} />;
-}
