@@ -139,7 +139,7 @@ function SiteMapPage() {
               title="Product Comparisons"
               links={[
                 { label: "All Comparisons", to: "/compare" },
-                ...COMPARE_PAGES.map((c) => ({ label: `${c.competitor} Comparison`, to: `/compare/${c.slug}` })),
+                ...COMPARE_PAGES.map((c) => ({ label: `${c.competitor} Comparison`, to: `/blog/${c.slug}` })),
               ]}
             />
             <Group
