@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, Sparkles, HelpCircle } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
@@ -9,7 +9,10 @@ import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import SubPageComparisonChart from "@/components/seo/SubPageComparisonChart";
 import SubPageGalleryShowcase from "@/components/seo/SubPageGalleryShowcase";
 import InteractiveCyberBackground from "@/components/ui/InteractiveCyberBackground";
-import ThreeDTiltCard from "@/components/ui/ThreeDTiltCard";
+import InteractiveSoftwareScreenshotStage from "@/components/seo/InteractiveSoftwareScreenshotStage";
+import SubPageInteractiveWorkbench from "@/components/seo/SubPageInteractiveWorkbench";
+import SubPageWorkflowBeam from "@/components/seo/SubPageWorkflowBeam";
+import SubPageBentoShowcase from "@/components/seo/SubPageBentoShowcase";
 import type { SeoPage } from "@/content/seo-pages";
 
 export default function SeoLanding({ page }: { page: SeoPage }) {
@@ -23,12 +26,35 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
     { name: page.eyebrow, path: page.path },
   ];
 
+  const workbenchCapabilities = page.capabilities.map((c, i) => ({
+    title: c.title,
+    body: c.body,
+    tag: `Engine Feature 0${i + 1}`,
+    metric: "100% Native Speed",
+    actionText: "Simulate Execution",
+  }));
+
+  const workflowSteps = (page.sections[0]?.bullets && page.sections[0].bullets.length >= 3)
+    ? page.sections[0].bullets.slice(0, 4).map((b, i) => {
+        const parts = b.split("—");
+        const title = parts[0]?.trim() || `Stage 0${i + 1}`;
+        const description = parts[1]?.trim() || b;
+        return {
+          step: `0${i + 1}`,
+          title,
+          description,
+          tag: `Pipeline Stage 0${i + 1}`,
+        };
+      })
+    : undefined;
+
   return (
     <main className="min-h-screen pt-[60px] md:pt-[72px]">
-      <SectionWrapper className="relative overflow-hidden">
-        <InteractiveCyberBackground color={accent} particleCount={38} />
+      {/* ── HERO SECTION ─────────────────────────────────── */}
+      <SectionWrapper className="relative overflow-hidden pb-10">
+        <InteractiveCyberBackground color={accent} particleCount={42} />
         <Breadcrumbs trail={trail} />
-        <div className="mx-auto max-w-[900px] text-center">
+        <div className="mx-auto max-w-[920px] text-center">
           <EyebrowLabel text={page.eyebrow} color={accent} />
           <h1 className="reveal-item delay-1 mt-5 font-display text-[34px] font-extrabold leading-[1.08] tracking-[-0.035em] text-[var(--text-primary)] md:text-[56px]">
             {page.h1}{" "}
@@ -41,7 +67,7 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
           </p>
           <div className="reveal-item delay-3 mt-9 flex flex-wrap items-center justify-center gap-3">
             <Link to="/pricing">
-              <CyanButton icon={<ArrowRight size={16} />}>Get DIGI BIZ OS</CyanButton>
+              <CyanButton icon={<ArrowRight size={16} />}>Get DIGI BIZ OS — £50</CyanButton>
             </Link>
             <Link
               to="/features"
@@ -53,27 +79,46 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
         </div>
       </SectionWrapper>
 
+      {/* ── 3D HOLOGRAPHIC PINNED SOFTWARE SHOWCASE ─────────── */}
       {page.image && page.image.src ? (
-        <SectionWrapper className="!py-4 md:!py-8">
-          <figure className="mx-auto max-w-[1080px]">
-            <ThreeDTiltCard glowColor={`${accent}35`} className="p-2 md:p-3">
-              <div className="overflow-hidden rounded-[14px] bg-[#020408] md:rounded-[18px]">
-                <img
-                  src={page.image.src}
-                  alt={page.image.alt}
-                  loading="eager"
-                  decoding="async"
-                  className="block h-auto w-full object-contain"
-                />
-              </div>
-            </ThreeDTiltCard>
-            <figcaption className="mt-4 text-center font-body text-[13.5px] text-[var(--text-secondary)]">
-              {page.image.caption}
-            </figcaption>
-          </figure>
+        <SectionWrapper className="!py-4 md:!py-10">
+          <InteractiveSoftwareScreenshotStage
+            src={page.image.src}
+            alt={page.image.alt}
+            caption={page.image.caption}
+            accentColor={accent}
+          />
         </SectionWrapper>
       ) : null}
 
+      {/* ── INTERACTIVE WORKBENCH (REPLACES BORING BOXES) ──── */}
+      <SectionWrapper className="py-14 md:py-20">
+        <SubPageInteractiveWorkbench
+          capabilities={workbenchCapabilities}
+          accentColor={accent}
+          moduleName={page.eyebrow}
+        />
+      </SectionWrapper>
+
+      {/* ── ASYMMETRICAL 4-CARD BENTO GRID ──────────────────── */}
+      <SectionWrapper className="bg-[var(--bg-surface)] py-14 md:py-20">
+        <SubPageBentoShowcase
+          moduleName={page.eyebrow}
+          accentColor={accent}
+        />
+      </SectionWrapper>
+
+      {/* ── ANIMATED DATA BEAM WORKFLOW CONDUIT ─────────────── */}
+      <SectionWrapper className="py-14 md:py-20">
+        <SubPageWorkflowBeam
+          title={`How ${page.eyebrow} Executes On Your Machine`}
+          subtitle="From voice instruction to local database write and final deliverable — with zero cloud lock-in."
+          steps={workflowSteps}
+          accentColor={accent}
+        />
+      </SectionWrapper>
+
+      {/* ── DIRECT TECHNICAL ANSWERS ────────────────────────── */}
       <SectionWrapper className="bg-[var(--bg-surface)]">
         <div className="mx-auto max-w-[1000px]">
           <h2 className="font-display text-[26px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[36px]">
@@ -81,7 +126,7 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
           </h2>
           <dl className="mt-8 space-y-6">
             {page.answers.map((a) => (
-              <div key={a.q}>
+              <div key={a.q} className="rounded-xl border border-white/5 bg-white/[0.02] p-5">
                 <dt className="font-display text-[16px] font-bold text-[var(--text-primary)] md:text-[18px]">
                   {a.q}
                 </dt>
@@ -94,59 +139,7 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper>
-        <div className="mx-auto max-w-[1180px]">
-          <h2 className="font-display text-[26px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[36px]">
-            What you get
-          </h2>
-          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {page.capabilities.map((c) => (
-              <GlassCard key={c.title} glowColor={accent} className="h-full p-6">
-                <h3 className="font-display text-[16px] font-bold text-[var(--text-primary)]">
-                  {c.title}
-                </h3>
-                <p className="mt-2 font-body text-[13.5px] leading-[1.75] text-[var(--text-secondary)]">
-                  {c.body}
-                </p>
-              </GlassCard>
-            ))}
-          </div>
-        </div>
-      </SectionWrapper>
-
-      {page.sections.map((s, i) => (
-        <SectionWrapper
-          key={s.heading}
-          className={i % 2 === 0 ? "bg-[var(--bg-surface)]" : undefined}
-        >
-          <div className="mx-auto max-w-[900px]">
-            <h2 className="font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[32px]">
-              {s.heading}
-            </h2>
-            <p className="mt-4 font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[16px]">
-              {s.body}
-            </p>
-            {s.bullets ? (
-              <ul className="mt-6 space-y-3">
-                {s.bullets.map((b) => (
-                  <li key={b} className="flex items-start gap-3">
-                    <Check
-                      size={17}
-                      color={accent}
-                      strokeWidth={2.4}
-                      className="mt-[3px] shrink-0"
-                    />
-                    <span className="font-body text-[14px] leading-[1.75] text-[var(--text-secondary)] md:text-[15px]">
-                      {b}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            ) : null}
-          </div>
-        </SectionWrapper>
-      ))}
-
+      {/* ── INTERACTIVE SCREENSHOT GALLERY ──────────────────── */}
       <SectionWrapper>
         <div className="mx-auto max-w-[1100px]">
           <SubPageGalleryShowcase
@@ -158,6 +151,7 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
         </div>
       </SectionWrapper>
 
+      {/* ── COMPARISON CHART ────────────────────────────────── */}
       <SectionWrapper>
         <div className="mx-auto max-w-[1000px]">
           <SubPageComparisonChart
@@ -168,7 +162,8 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper>
+      {/* ── FAQ ─────────────────────────────────────────────── */}
+      <SectionWrapper className="bg-[var(--bg-surface)]">
         <div className="mx-auto max-w-[900px]">
           <h2 className="font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[32px]">
             Frequently asked
@@ -188,7 +183,8 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className="bg-[var(--bg-surface)]">
+      {/* ── RELATED NAVIGATION ──────────────────────────────── */}
+      <SectionWrapper>
         <div className="mx-auto max-w-[1000px]">
           <h2 className="font-display text-[22px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[28px]">
             Continue exploring DIGI BIZ OS

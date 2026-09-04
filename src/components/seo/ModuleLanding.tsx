@@ -25,15 +25,33 @@ import SubPageComparisonChart from "@/components/seo/SubPageComparisonChart";
 import SubPageGalleryShowcase from "@/components/seo/SubPageGalleryShowcase";
 import InteractiveCyberBackground from "@/components/ui/InteractiveCyberBackground";
 import ThreeDTiltCard from "@/components/ui/ThreeDTiltCard";
+import SubPageInteractiveWorkbench from "@/components/seo/SubPageInteractiveWorkbench";
+import SubPageWorkflowBeam from "@/components/seo/SubPageWorkflowBeam";
+import SubPageBentoShowcase from "@/components/seo/SubPageBentoShowcase";
 import type { ModuleData } from "@/content/modules-data";
 
 export default function ModuleLanding({ module }: { module: ModuleData }) {
   const accent = module.accentColor || "#10B981";
 
+  const workbenchCapabilities = module.coreCapabilities.map((cap, i) => ({
+    title: cap.title,
+    body: cap.description,
+    tag: `${module.name} Core 0${i + 1}`,
+    metric: "Native Execution",
+    actionText: "Run Simulation",
+  }));
+
+  const workflowSteps = module.workflows.map((wf) => ({
+    step: wf.step,
+    title: wf.title,
+    description: wf.description,
+    tag: `Stage ${wf.step}`,
+  }));
+
   return (
     <main className="min-h-screen pt-[100px] md:pt-[120px]">
-      <SectionWrapper className="relative overflow-hidden">
-        <InteractiveCyberBackground color={accent} particleCount={42} />
+      <SectionWrapper className="relative overflow-hidden pb-12">
+        <InteractiveCyberBackground color={accent} particleCount={45} />
         <Breadcrumbs
           trail={[
             { name: "Home", path: "/" },
@@ -135,130 +153,103 @@ export default function ModuleLanding({ module }: { module: ModuleData }) {
         </div>
 
         {/* PROBLEM SOLVED & TARGET AUDIENCE */}
-        <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2">
-          <GlassCard glowColor={accent} className="p-8">
-            <h2 className="flex items-center gap-2.5 font-display text-[22px] font-bold text-[var(--text-primary)]">
-              <ShieldCheck size={22} style={{ color: accent }} />
+        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
+          <ThreeDTiltCard glowColor={`${accent}30`} className="p-7">
+            <h2 className="flex items-center gap-2.5 font-display text-[20px] font-bold text-[var(--text-primary)]">
+              <ShieldCheck size={20} style={{ color: accent }} />
               Business Problems Solved
             </h2>
-            <ul className="mt-6 space-y-3.5">
+            <ul className="mt-5 space-y-3">
               {module.problemSolved.map((prob, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 size={18} className="mt-1 shrink-0" style={{ color: accent }} />
-                  <span className="font-body text-[14.5px] leading-relaxed text-[var(--text-secondary)]">
+                  <CheckCircle2 size={16} className="mt-0.5 shrink-0" style={{ color: accent }} />
+                  <span className="font-body text-[14px] leading-relaxed text-[var(--text-secondary)]">
                     {prob}
                   </span>
                 </li>
               ))}
             </ul>
-          </GlassCard>
+          </ThreeDTiltCard>
 
-          <GlassCard glowColor="#3B82F6" className="p-8">
-            <h2 className="flex items-center gap-2.5 font-display text-[22px] font-bold text-[var(--text-primary)]">
-              <TrendingUp size={22} color="#3B82F6" />
+          <ThreeDTiltCard glowColor="rgba(59,130,246,0.3)" className="p-7">
+            <h2 className="flex items-center gap-2.5 font-display text-[20px] font-bold text-[var(--text-primary)]">
+              <TrendingUp size={20} color="#3B82F6" />
               Who Is This Built For?
             </h2>
-            <ul className="mt-6 space-y-3.5">
+            <ul className="mt-5 space-y-3">
               {module.targetAudience.map((aud, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span
-                    className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full font-mono text-[11px] font-bold text-white"
+                    className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full font-mono text-[10px] font-bold text-white"
                     style={{ background: "#3B82F6" }}
                   >
                     {i + 1}
                   </span>
-                  <span className="font-body text-[14.5px] leading-relaxed text-[var(--text-secondary)]">
+                  <span className="font-body text-[14px] leading-relaxed text-[var(--text-secondary)]">
                     {aud}
                   </span>
                 </li>
               ))}
             </ul>
-          </GlassCard>
+          </ThreeDTiltCard>
         </div>
+      </SectionWrapper>
 
-        {/* INTERACTIVE SOFTWARE GALLERY SHOWCASE */}
+      {/* ── INTERACTIVE WORKBENCH (DYNAMIC SIMULATION) ──────── */}
+      <SectionWrapper className="py-14 md:py-20">
+        <SubPageInteractiveWorkbench
+          capabilities={workbenchCapabilities}
+          accentColor={accent}
+          moduleName={module.name}
+        />
+      </SectionWrapper>
+
+      {/* ── ASYMMETRICAL 4-CARD BENTO GRID ──────────────────── */}
+      <SectionWrapper className="bg-[var(--bg-surface)] py-14 md:py-20">
+        <SubPageBentoShowcase
+          moduleName={module.name}
+          accentColor={accent}
+        />
+      </SectionWrapper>
+
+      {/* ── INTERACTIVE SOFTWARE GALLERY SHOWCASE ───────────── */}
+      <SectionWrapper className="py-14 md:py-20">
         <SubPageGalleryShowcase
           slug={module.slug}
           title={`Live Software Interface: ${module.name}`}
           eyebrow="Interactive Screenshot Showcase"
           accentColor={accent}
         />
+      </SectionWrapper>
 
-        {/* CORE CAPABILITIES */}
-        <div className="mt-24">
-          <div className="text-center">
-            <EyebrowLabel text="Features & Intelligence" icon={Cpu} />
-            <h2 className="mt-3 font-display text-[28px] font-bold text-[var(--text-primary)] md:text-[38px]">
-              Key Capabilities of {module.name}
-            </h2>
-          </div>
+      {/* ── ANIMATED WORKFLOW BEAMS ─────────────────────────── */}
+      <SectionWrapper className="py-14 md:py-20">
+        <SubPageWorkflowBeam
+          title={`How ${module.name} Executes in DIGI BIZ OS`}
+          subtitle="End-to-end multi-step workflow automated entirely on your local PC."
+          steps={workflowSteps}
+          accentColor={accent}
+        />
+      </SectionWrapper>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {module.coreCapabilities.map((cap, i) => (
-              <ThreeDTiltCard key={i} glowColor={`${accent}35`} className="p-6">
-                <div
-                  className="flex h-10 w-10 items-center justify-center rounded-lg"
-                  style={{ background: `${accent}20`, color: accent }}
-                >
-                  <Zap size={20} />
-                </div>
-                <h3 className="mt-4 font-display text-[18px] font-bold text-[var(--text-primary)]">
-                  {cap.title}
-                </h3>
-                <p className="mt-2 font-body text-[14px] leading-relaxed text-[var(--text-secondary)]">
-                  {cap.description}
-                </p>
-              </ThreeDTiltCard>
-            ))}
-          </div>
-        </div>
-
-        {/* BUSINESS WORKFLOW */}
-        <div className="mt-24">
-          <div className="text-center">
-            <EyebrowLabel text="Step-by-Step Flow" icon={Workflow} />
-            <h2 className="mt-3 font-display text-[28px] font-bold text-[var(--text-primary)] md:text-[38px]">
-              How {module.name} Executes in DIGI BIZ OS
-            </h2>
-          </div>
-
-          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-            {module.workflows.map((wf) => (
-              <GlassCard key={wf.step} glowColor={accent} className="relative p-6">
-                <div
-                  className="font-mono text-[32px] font-black leading-none"
-                  style={{ color: `${accent}40` }}
-                >
-                  {wf.step}
-                </div>
-                <h3 className="mt-3 font-display text-[18px] font-bold text-[var(--text-primary)]">
-                  {wf.title}
-                </h3>
-                <p className="mt-2 font-body text-[14px] leading-relaxed text-[var(--text-secondary)]">
-                  {wf.description}
-                </p>
-              </GlassCard>
-            ))}
-          </div>
-        </div>
-
-        {/* SPECIFIC VALUE COMPARISON CHART */}
+      {/* ── SPECIFIC VALUE COMPARISON CHART ─────────────────── */}
+      <SectionWrapper className="py-14 md:py-20">
         <SubPageComparisonChart
           slug={module.slug}
           title={`How ${module.name} Compares to Expensive Paid Tools`}
           accentColor={accent}
         />
+      </SectionWrapper>
 
-        {/* FAQ SECTION */}
-        <div className="mt-24">
-          <div className="text-center">
-            <EyebrowLabel text="Frequently Asked Questions" icon={HelpCircle} />
-            <h2 className="mt-3 font-display text-[28px] font-bold text-[var(--text-primary)] md:text-[36px]">
-              Everything You Need to Know
-            </h2>
-          </div>
+      {/* ── FAQ SECTION ─────────────────────────────────────── */}
+      <SectionWrapper className="bg-[var(--bg-surface)] py-14 md:py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <EyebrowLabel text="Frequently Asked Questions" icon={HelpCircle} />
+          <h2 className="mt-3 font-display text-[28px] font-bold text-[var(--text-primary)] md:text-[36px]">
+            Everything You Need to Know
+          </h2>
 
-          <div className="mx-auto mt-10 max-w-3xl space-y-4">
+          <div className="mt-10 space-y-4 text-left">
             {module.faq.map((f, i) => (
               <GlassCard key={i} className="p-6">
                 <h3 className="font-display text-[16.5px] font-bold text-[var(--text-primary)]">
@@ -271,58 +262,35 @@ export default function ModuleLanding({ module }: { module: ModuleData }) {
             ))}
           </div>
         </div>
+      </SectionWrapper>
 
-        {/* RELATED MODULES (INTERNAL LINKING SILO) */}
-        <div className="mt-24 border-t border-[var(--border-subtle)] pt-16">
-          <div className="text-center">
-            <EyebrowLabel text="Connected Ecosystem" icon={Bot} />
-            <h2 className="mt-3 font-display text-[26px] font-bold text-[var(--text-primary)]">
-              Related Business Modules in DIGI BIZ OS
-            </h2>
-          </div>
-
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
+      {/* ── RELATED MODULES (INTERNAL LINKING SILO) ─────────── */}
+      <SectionWrapper className="border-t border-[var(--border-subtle)] py-14 md:py-20">
+        <div className="mx-auto max-w-[1100px] text-center">
+          <EyebrowLabel text="Connected Ecosystem" icon={Bot} />
+          <h2 className="mt-3 font-display text-[26px] font-bold text-[var(--text-primary)]">
+            Related Business Modules in DIGI BIZ OS
+          </h2>
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
             {module.relatedModules.map((rel) => (
-              <Link key={rel.slug} to={`/modules/${rel.slug}`} className="group block">
-                <GlassCard
-                  glowColor={accent}
-                  className="h-full p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/30"
-                >
-                  <h3 className="flex items-center justify-between font-display text-[17px] font-bold text-[var(--text-primary)] group-hover:text-[var(--cyan)]">
-                    <span>{rel.name}</span>
-                    <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                  </h3>
-                  <p className="mt-2 font-body text-[13.5px] leading-relaxed text-[var(--text-secondary)]">
-                    {rel.description}
-                  </p>
-                </GlassCard>
+              <Link
+                key={rel.slug}
+                to={`/modules/${rel.slug}`}
+                className="group block rounded-2xl border border-white/10 bg-white/[0.02] p-5 text-left transition hover:border-[var(--cyan)] hover:bg-white/[0.04]"
+              >
+                <h3 className="font-display text-[16px] font-bold text-[var(--text-primary)] group-hover:text-[var(--cyan)] transition-colors">
+                  {rel.name}
+                </h3>
+                <p className="mt-2 font-body text-[13px] leading-relaxed text-[var(--text-secondary)]">
+                  {rel.description}
+                </p>
+                <div className="mt-4 flex items-center gap-1.5 font-mono text-[11px] text-[var(--cyan)]">
+                  <span>Explore Module</span>
+                  <ArrowRight size={13} className="transition-transform group-hover:translate-x-1" />
+                </div>
               </Link>
             ))}
           </div>
-        </div>
-
-        {/* CONVERSION BOTTOM CTA */}
-        <div className="mt-24 text-center">
-          <GlassCard glowColor={accent} className="p-10 md:p-14">
-            <h2 className="font-display text-[28px] font-bold text-[var(--text-primary)] md:text-[38px]">
-              Deploy {module.name} on Your Desktop Today
-            </h2>
-            <p className="mx-auto mt-4 max-w-[620px] font-body text-[15px] leading-relaxed text-[var(--text-secondary)]">
-              Get full access to {module.name}, JARVIS voice control, multi-agent workflows, and 14 open-source tool integrations with a single £50 lifetime licence.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-              <Link to="/download">
-                <CyanButton size="lg" icon={<Zap size={18} />}>
-                  Download Windows Installer
-                </CyanButton>
-              </Link>
-              <Link to="/pricing">
-                <GhostButton size="lg" icon={<ShieldCheck size={18} />}>
-                  Get Lifetime Access (£50)
-                </GhostButton>
-              </Link>
-            </div>
-          </GlassCard>
         </div>
       </SectionWrapper>
     </main>
