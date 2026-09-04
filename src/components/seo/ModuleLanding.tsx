@@ -23,6 +23,8 @@ import MonoBadge from "@/components/MonoBadge";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import SubPageComparisonChart from "@/components/seo/SubPageComparisonChart";
 import SubPageGalleryShowcase from "@/components/seo/SubPageGalleryShowcase";
+import InteractiveCyberBackground from "@/components/ui/InteractiveCyberBackground";
+import ThreeDTiltCard from "@/components/ui/ThreeDTiltCard";
 import type { ModuleData } from "@/content/modules-data";
 
 export default function ModuleLanding({ module }: { module: ModuleData }) {
@@ -30,7 +32,8 @@ export default function ModuleLanding({ module }: { module: ModuleData }) {
 
   return (
     <main className="min-h-screen pt-[100px] md:pt-[120px]">
-      <SectionWrapper>
+      <SectionWrapper className="relative overflow-hidden">
+        <InteractiveCyberBackground color={accent} particleCount={42} />
         <Breadcrumbs
           trail={[
             { name: "Home", path: "/" },
@@ -86,7 +89,7 @@ export default function ModuleLanding({ module }: { module: ModuleData }) {
           </div>
 
           <div className="lg:col-span-5">
-            <GlassCard glowColor={accent} className="p-6">
+            <ThreeDTiltCard glowColor={`${accent}40`} className="p-6">
               <div className="flex items-center justify-between border-b border-[var(--border-subtle)] pb-4">
                 <span className="font-mono text-[12px] uppercase tracking-wider text-[var(--text-muted)]">
                   Module Specifications
@@ -127,7 +130,7 @@ export default function ModuleLanding({ module }: { module: ModuleData }) {
                   </p>
                 </div>
               </div>
-            </GlassCard>
+            </ThreeDTiltCard>
           </div>
         </div>
 
@@ -192,7 +195,7 @@ export default function ModuleLanding({ module }: { module: ModuleData }) {
 
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
             {module.coreCapabilities.map((cap, i) => (
-              <GlassCard key={i} glowColor={accent} className="p-6">
+              <ThreeDTiltCard key={i} glowColor={`${accent}35`} className="p-6">
                 <div
                   className="flex h-10 w-10 items-center justify-center rounded-lg"
                   style={{ background: `${accent}20`, color: accent }}
@@ -205,7 +208,7 @@ export default function ModuleLanding({ module }: { module: ModuleData }) {
                 <p className="mt-2 font-body text-[14px] leading-relaxed text-[var(--text-secondary)]">
                   {cap.description}
                 </p>
-              </GlassCard>
+              </ThreeDTiltCard>
             ))}
           </div>
         </div>

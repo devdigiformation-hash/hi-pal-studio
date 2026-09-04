@@ -1,3 +1,4 @@
+import OpenSourceValueComparisonChart from "@/components/seo/OpenSourceValueComparisonChart";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Globe,
@@ -243,49 +244,7 @@ function OpenSeoSpiderPage() {
       </SectionWrapper>
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[1080px]">
-          <h2 className="font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[32px]">
-            Open SEO Spider vs Screaming Frog & Semrush
-          </h2>
-          <div className="mt-8 overflow-x-auto">
-            <table className="w-full min-w-[620px] border-collapse text-left font-body text-[14px]">
-              <thead>
-                <tr className="text-[var(--text-primary)]">
-                  <th className="border-b border-[var(--border-glass)] py-3 pr-4 font-display text-[13px] uppercase tracking-[0.12em]">
-                    Feature
-                  </th>
-                  <th className="border-b border-[var(--border-glass)] py-3 pr-4 font-display text-[13px] uppercase tracking-[0.12em] text-[var(--cyan)]">
-                    Open SEO Spider (Open-Source)
-                  </th>
-                  <th className="border-b border-[var(--border-glass)] py-3 pr-4 font-display text-[13px] uppercase tracking-[0.12em]">
-                    Screaming Frog SEO Spider
-                  </th>
-                  <th className="border-b border-[var(--border-glass)] py-3 font-display text-[13px] uppercase tracking-[0.12em]">
-                    Semrush / Ahrefs
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {COMPARISON.map((row) => (
-                  <tr key={row.label}>
-                    <td className="border-b border-[var(--border-glass)] py-3 pr-4 text-[var(--text-primary)]">
-                      {row.label}
-                    </td>
-                    <td className="border-b border-[var(--border-glass)] py-3 pr-4 text-[var(--cyan)] font-semibold">
-                      {row.tool}
-                    </td>
-                    <td className="border-b border-[var(--border-glass)] py-3 pr-4 text-[var(--text-secondary)]">
-                      {row.other1}
-                    </td>
-                    <td className="border-b border-[var(--border-glass)] py-3 text-[var(--text-secondary)]">
-                      {row.other2}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
+        <OpenSourceValueComparisonChart toolId="seo-spider" downloadUrl={DOWNLOAD_URL} />
       </SectionWrapper>
 
       <SectionWrapper className="bg-[var(--bg-surface)]">

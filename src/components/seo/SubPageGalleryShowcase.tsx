@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import GlassCard from "@/components/GlassCard";
 import EyebrowLabel from "@/components/EyebrowLabel";
+import ThreeDTiltCard from "@/components/ui/ThreeDTiltCard";
 
 // Assets
 import osCrmDash from "@/assets/os-digi-crm-dashboard.png";
@@ -415,7 +416,11 @@ export default function SubPageGalleryShowcase({
           />
 
           {/* Desktop Window Frame */}
-          <div className="rounded-xl border border-white/10 bg-black/60 overflow-hidden shadow-2xl">
+          <ThreeDTiltCard
+            maxTilt={6}
+            glowColor={`${accentColor}35`}
+            className="rounded-xl border border-white/10 bg-black/60 overflow-hidden shadow-2xl"
+          >
             {/* Window Header Bar */}
             <div className="flex items-center justify-between border-b border-white/10 bg-white/[0.03] px-4 py-3">
               <div className="flex items-center gap-2">
@@ -433,19 +438,18 @@ export default function SubPageGalleryShowcase({
                 </span>
                 <button
                   onClick={() => setLightboxItem(activeItem)}
-                  className="flex items-center gap-1 rounded-lg border border-white/15 bg-white/5 px-2 py-1 text-[11px] font-medium text-slate-300 hover:bg-white/10 hover:text-white transition"
-                  title="Click to zoom screenshot"
+                  className="p-1 rounded-md text-white/50 hover:text-white hover:bg-white/10 transition-colors"
+                  title="Fullscreen zoom"
                 >
-                  <Maximize2 size={12} />
-                  <span className="hidden md:inline">Inspect Fullscreen</span>
+                  <Maximize2 size={14} />
                 </button>
               </div>
             </div>
 
-            {/* Screenshot Area */}
+            {/* Screenshot Container with Click to Zoom */}
             <div
-              className="relative cursor-pointer group bg-black/40 overflow-hidden"
               onClick={() => setLightboxItem(activeItem)}
+              className="relative cursor-pointer group bg-[#0A0D12] overflow-hidden"
             >
               <AnimatePresence mode="wait">
                 <motion.img
@@ -468,7 +472,7 @@ export default function SubPageGalleryShowcase({
                 </div>
               </div>
             </div>
-          </div>
+          </ThreeDTiltCard>
 
           {/* Deep Feature Analysis Area */}
           <div className="mt-8 rounded-xl border border-white/10 bg-white/[0.02] p-6 md:p-8">

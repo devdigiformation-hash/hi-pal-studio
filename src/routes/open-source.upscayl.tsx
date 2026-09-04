@@ -1,3 +1,4 @@
+import OpenSourceValueComparisonChart from "@/components/seo/OpenSourceValueComparisonChart";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Sparkles, ShieldCheck, Zap, Bot, Database, PiggyBank } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -206,6 +207,10 @@ function UpscaylPage() {
             </div>
           </GlassCard>
         </div>
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <OpenSourceValueComparisonChart toolId="upscayl" downloadUrl={DOWNLOAD_URL} />
       </SectionWrapper>
 
       <SectionWrapper>

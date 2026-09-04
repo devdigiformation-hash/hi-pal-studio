@@ -187,7 +187,7 @@ export default function HeroSection() {
               className="font-display text-[12px] font-semibold uppercase text-[var(--cyan)]"
               style={{ letterSpacing: "0.16em" }}
             >
-              Live — Voice-Powered Business OS
+              90%+ Modules AI-Integrated • Universal Voice Assistant Everywhere
             </span>
           </motion.div>
 
@@ -219,9 +219,7 @@ export default function HeroSection() {
             transition={{ delay: 0.6 }}
             className="mt-5 max-w-[580px] font-body text-[16px] leading-[1.75] text-[var(--text-secondary)] md:text-[18px]"
           >
-            DIGI BIZ OS turns your voice into a full business operating system — autonomous AI
-            CRM, offline media studio, workflow automation, and collaborative AI agents that research,
-            automate, and deliver work for your business.
+            DIGI BIZ OS embeds an active AI brain into 90%+ of its desktop modules — with universal voice assistance in every prompt box and background reasoning engine. Every task, CRM lead, media render, and workflow is orchestrated by intelligent autonomous reasoning.
           </motion.p>
 
           <motion.div

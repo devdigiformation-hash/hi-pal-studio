@@ -1,3 +1,4 @@
+import OpenSourceValueComparisonChart from "@/components/seo/OpenSourceValueComparisonChart";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Film,
@@ -243,49 +244,7 @@ function ShotcutPage() {
       </SectionWrapper>
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[1080px]">
-          <h2 className="font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[32px]">
-            Shotcut vs Commercial Paid Tools
-          </h2>
-          <div className="mt-8 overflow-x-auto">
-            <table className="w-full min-w-[620px] border-collapse text-left font-body text-[14px]">
-              <thead>
-                <tr className="text-[var(--text-primary)]">
-                  <th className="border-b border-[var(--border-glass)] py-3 pr-4 font-display text-[13px] uppercase tracking-[0.12em]">
-                    Feature
-                  </th>
-                  <th className="border-b border-[var(--border-glass)] py-3 pr-4 font-display text-[13px] uppercase tracking-[0.12em] text-[var(--cyan)]">
-                    Shotcut (Open-Source)
-                  </th>
-                  <th className="border-b border-[var(--border-glass)] py-3 pr-4 font-display text-[13px] uppercase tracking-[0.12em]">
-                    Wondershare Filmora
-                  </th>
-                  <th className="border-b border-[var(--border-glass)] py-3 font-display text-[13px] uppercase tracking-[0.12em]">
-                    Vegas Pro
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {COMPARISON.map((row) => (
-                  <tr key={row.label}>
-                    <td className="border-b border-[var(--border-glass)] py-3 pr-4 text-[var(--text-primary)]">
-                      {row.label}
-                    </td>
-                    <td className="border-b border-[var(--border-glass)] py-3 pr-4 text-[var(--cyan)] font-semibold">
-                      {row.tool}
-                    </td>
-                    <td className="border-b border-[var(--border-glass)] py-3 pr-4 text-[var(--text-secondary)]">
-                      {row.other1}
-                    </td>
-                    <td className="border-b border-[var(--border-glass)] py-3 text-[var(--text-secondary)]">
-                      {row.other2}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
+        <OpenSourceValueComparisonChart toolId="shotcut" downloadUrl={DOWNLOAD_URL} />
       </SectionWrapper>
 
       <SectionWrapper className="bg-[var(--bg-surface)]">

@@ -22,11 +22,15 @@ const FAQS = [
   },
   {
     q: "Is this really a one-time payment?",
-    a: "Yes. Every package is a single one-time payment — £50 lifetime access, £199 for the full source code licence, £299 for the branded custom build. No monthly software fees.",
+    a: "Yes. Every package is a single one-time payment — £50 lifetime access, £100 for done-for-you software setup with 5 custom business workflows, or £199 for the full source code licence. No monthly software seat fees.",
   },
   {
-    q: "What does the customised package include?",
-    a: "A fully white-labelled build with your logo, name and colours, plus 400+ automation workflows configured around your business, onboarding and 6 months of priority support.",
+    q: "What does the Software Setup & Business Customization package include?",
+    a: "Complete end-to-end installation of DIGI BIZ OS on your PC, full configuration of your AI API keys, WhatsApp AI sales agent setup, business knowledge base ingestion, and 5 custom automated business workflows built specifically for your business operations.",
+  },
+  {
+    q: "What is the maintenance policy after 1 month?",
+    a: "All packages include 1 month of complimentary setup support and updates. After month 1, ongoing maintenance and priority update support is completely optional at just £5/month, or you can continue using your lifetime license with zero recurring fees.",
   },
   {
     q: "What do I get with the source code licence?",
@@ -34,7 +38,7 @@ const FAQS = [
   },
   {
     q: "Am I charged for AI API usage?",
-    a: "No. You connect your own AI provider key and pay that provider directly, or run local models at zero cost.",
+    a: "No. You connect your own AI provider key and pay that provider directly at wholesale token rates, or run 100% free local offline models at zero cost.",
   },
 ];
 
@@ -73,6 +77,16 @@ const TIERS: {
     cta: "Get Lifetime Access",
   },
   {
+    id: "custom_build",
+    eyebrow: "Software Setup & Customization",
+    accent: "var(--amber)",
+    accentRgb: "245,166,35",
+    border: "var(--amber-border)",
+    glow: "var(--glow-amber)",
+    badge: "Most Popular",
+    cta: "Order Software Setup",
+  },
+  {
     id: "source_code",
     eyebrow: "Source Code",
     accent: "var(--purple)",
@@ -81,16 +95,6 @@ const TIERS: {
     glow: "var(--glow-purple)",
     badge: "Full Ownership",
     cta: "Buy Source Code",
-  },
-  {
-    id: "custom_build",
-    eyebrow: "Customised Build",
-    accent: "var(--amber)",
-    accentRgb: "245,166,35",
-    border: "var(--amber-border)",
-    glow: "var(--glow-amber)",
-    badge: "Most Popular",
-    cta: "Order Custom Build",
   },
 ];
 
@@ -108,7 +112,7 @@ export default function PricingPage() {
         eyebrow="Pricing"
         title="DIGI BIZ OS Pricing —"
         gradientTitle="Lifetime Licences"
-        subtitle="Three one-time packages — lifetime access, your own branded build, or the full source code."
+        subtitle="Three clear packages — £50 lifetime access, £100 done-for-you software setup with 5 custom business workflows, or £199 full source code."
         height="min-h-[50vh]"
       />
 

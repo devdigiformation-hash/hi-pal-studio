@@ -1,3 +1,4 @@
+import OpenSourceValueComparisonChart from "@/components/seo/OpenSourceValueComparisonChart";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Bot,
@@ -292,64 +293,7 @@ function OpenClawPage() {
       </SectionWrapper>
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[1080px]">
-          <h2 className="font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[32px]">
-            Cost & capability comparison
-          </h2>
-          <div className="mt-8 overflow-x-auto rounded-[var(--r-lg)] border border-[var(--border-glass)]">
-            <table className="w-full min-w-[720px] border-collapse text-left font-body text-[14px]">
-              <caption className="sr-only">
-                Comparison between OpenClaw, Devin AI, and Manus AI / paid agents
-              </caption>
-              <thead>
-                <tr className="bg-white/[0.04]">
-                  <th
-                    scope="col"
-                    className="p-4 font-display text-[13px] font-bold text-[var(--text-muted)]"
-                  >
-                    Feature / Metric
-                  </th>
-                  <th
-                    scope="col"
-                    className="p-4 font-display text-[13px] font-bold text-[var(--cyan)]"
-                  >
-                    OpenClaw (Digiformation)
-                  </th>
-                  <th
-                    scope="col"
-                    className="p-4 font-display text-[13px] font-bold text-[var(--text-secondary)]"
-                  >
-                    Devin AI ($500/mo)
-                  </th>
-                  <th
-                    scope="col"
-                    className="p-4 font-display text-[13px] font-bold text-[var(--text-secondary)]"
-                  >
-                    Manus AI / Paid Agents
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {COMPARISON.map((row) => (
-                  <tr key={row.label} className="border-t border-[var(--border-subtle)]">
-                    <td className="p-4 font-body text-[13.5px] font-medium text-[var(--text-primary)]">
-                      {row.label}
-                    </td>
-                    <td className="p-4 font-body text-[13.5px] leading-[1.7] text-[var(--cyan)]">
-                      {row.ours}
-                    </td>
-                    <td className="p-4 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-                      {row.devin}
-                    </td>
-                    <td className="p-4 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-                      {row.manus}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
+        <OpenSourceValueComparisonChart toolId="openclaw" downloadUrl={LOCAL_EXE_URL} />
       </SectionWrapper>
 
       <SectionWrapper className="bg-[var(--bg-surface)]">

@@ -1,3 +1,4 @@
+import OpenSourceValueComparisonChart from "@/components/seo/OpenSourceValueComparisonChart";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Brain,
@@ -336,103 +337,7 @@ function HermesPage() {
       </SectionWrapper>
 
       <SectionWrapper>
-        <div className="mx-auto max-w-[1080px]">
-          <h2 className="font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[32px]">
-            Download the right package for your machine
-          </h2>
-          <p className="mt-3 max-w-[720px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
-            Choose the Windows installer, macOS disk image, or the full GitHub source archive. The
-            source ZIP works on every platform and is ready for custom builds.
-          </p>
-
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
-            {DOWNLOAD_CARDS.map((card) => (
-              <GlassCard key={card.title} glowColor="#F59E0B" className="flex h-full flex-col p-5">
-                <div className="flex items-start justify-between gap-3">
-                  <div
-                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px]"
-                    style={{
-                      background: "rgba(245,158,11,0.12)",
-                      boxShadow: "0 0 24px rgba(245,158,11,0.18)",
-                    }}
-                  >
-                    <card.icon size={22} color="#F59E0B" strokeWidth={1.8} />
-                  </div>
-                  <MonoBadge>{card.badge}</MonoBadge>
-                </div>
-                <h3 className="mt-4 font-display text-[16px] font-bold text-[var(--text-primary)]">
-                  {card.title}
-                </h3>
-                <p className="mt-1 font-mono text-[12px] text-[var(--cyan)]">{card.filename}</p>
-                <p className="mt-3 flex-1 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-                  {card.specs}
-                </p>
-                <a
-                  href={card.url}
-                  {...(card.download ? { download: card.download } : { target: "_blank", rel: "noopener noreferrer" })}
-                  className="mt-5 inline-flex items-center justify-center gap-2 rounded-[10px] bg-[var(--cyan)] px-4 py-2.5 font-display text-[13px] font-bold text-[var(--bg-dark)] transition-transform hover:scale-[1.02]"
-                >
-                  <Download size={16} />
-                  Download
-                </a>
-              </GlassCard>
-            ))}
-          </div>
-        </div>
-      </SectionWrapper>
-
-      <SectionWrapper className="bg-[var(--bg-surface)]">
-        <div className="mx-auto max-w-[1080px]">
-          <h2 className="font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[32px]">
-            Hermes Agent vs closed proprietary AI
-          </h2>
-          <p className="mt-3 max-w-[720px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
-            Why rent cloud reasoning when you can own it? Hermes delivers GPT-4 class agentic power
-            with full privacy and zero recurring cost.
-          </p>
-
-          <div className="mt-8 overflow-hidden rounded-[16px] border border-[var(--border-subtle)] bg-[var(--bg-card)]">
-            <table className="w-full text-left">
-              <thead>
-                <tr className="border-b border-[var(--border-subtle)] bg-[rgba(245,158,11,0.08)]">
-                  <th className="px-5 py-4 font-display text-[13px] font-bold text-[var(--text-primary)] md:px-6">
-                    Feature / Metric
-                  </th>
-                  <th className="px-5 py-4 font-display text-[13px] font-bold text-[var(--cyan)] md:px-6">
-                    Hermes Agent (Digiformation)
-                  </th>
-                  <th className="px-5 py-4 font-display text-[13px] font-bold text-[var(--text-primary)] md:px-6">
-                    OpenAI ChatGPT Pro ($200/mo)
-                  </th>
-                  <th className="px-5 py-4 font-display text-[13px] font-bold text-[var(--text-primary)] md:px-6">
-                    Anthropic Claude Enterprise
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {COMPARISON.map((row, idx) => (
-                  <tr
-                    key={row.label}
-                    className={idx % 2 === 1 ? "bg-[rgba(255,255,255,0.02)]" : ""}
-                  >
-                    <td className="px-5 py-4 font-body text-[13.5px] font-semibold text-[var(--text-primary)] md:px-6">
-                      {row.label}
-                    </td>
-                    <td className="px-5 py-4 font-body text-[13.5px] font-semibold text-[var(--cyan)] md:px-6">
-                      {row.ours}
-                    </td>
-                    <td className="px-5 py-4 font-body text-[13.5px] text-[var(--text-secondary)] md:px-6">
-                      {row.chatgpt}
-                    </td>
-                    <td className="px-5 py-4 font-body text-[13.5px] text-[var(--text-secondary)] md:px-6">
-                      {row.claude}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
+        <OpenSourceValueComparisonChart toolId="hermes-agent" downloadUrl={DIRECT_EXE_URL} />
       </SectionWrapper>
 
       <SectionWrapper>
