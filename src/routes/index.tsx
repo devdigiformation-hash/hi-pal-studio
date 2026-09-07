@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import HeroSection from "@/components/home/HeroSection";
+import DirectAnswer from "@/components/home/DirectAnswer";
 import TelemetryTicker from "@/components/home/TelemetryTicker";
 import SoftwareShowcase from "@/components/home/SoftwareShowcase";
 import AiBrainArchitectureShowcase from "@/components/home/AiBrainArchitectureShowcase";
@@ -49,6 +50,7 @@ function HomePage() {
     <main className="min-h-screen pt-[60px] md:pt-[72px]">
       <HeroSection />
       <TelemetryTicker />
+      <DirectAnswer />
       <SoftwareShowcase />
       <AiBrainArchitectureShowcase />
       <ModulesGrid />
