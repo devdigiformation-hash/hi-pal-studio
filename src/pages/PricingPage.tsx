@@ -10,8 +10,11 @@ import MonoBadge from "@/components/MonoBadge";
 import MiniHero from "@/components/inner/MiniHero";
 import CurrencySelector from "@/components/CurrencySelector";
 
+import { useQuery } from "@tanstack/react-query";
+import { useServerFn } from "@tanstack/react-start";
 import { formatPrice, useCurrency } from "@/lib/currency";
-import { PLANS, type PlanId } from "@/lib/payment-config";
+import { PLANS, priceForRegion, comparePriceFor, type PlanId, type Region } from "@/lib/payment-config";
+import { getGeoRegion } from "@/lib/geo.functions";
 import SourceCodeSection from "@/components/home/SourceCodeSection";
 import ComparisonMatrix from "@/components/home/ComparisonMatrix";
 
@@ -22,7 +25,7 @@ const FAQS = [
   },
   {
     q: "Is this really a one-time payment?",
-    a: "Yes. Every package is a single one-time payment — £50 lifetime access, £50 for done-for-you software setup with 5 custom business workflows, or £199 for the full source code licence. No monthly software seat fees.",
+    a: "Yes. Every package is a single one-time payment — lifetime access, done-for-you software setup with 5 custom business workflows, or the full source code licence. Prices are shown for your region at checkout, with no monthly software seat fees.",
   },
   {
     q: "What does the Software Setup & Business Customization package include?",
@@ -99,6 +102,9 @@ const TIERS: {
 
 export default function PricingPage() {
   const { code } = useCurrency();
+  const geoFn = useServerFn(getGeoRegion);
+  const geo = useQuery({ queryKey: ["geo-region"], queryFn: () => geoFn(), staleTime: 600000 });
+  const region: Region = geo.data?.region ?? "intl";
 
   return (
     <motion.main
@@ -111,7 +117,7 @@ export default function PricingPage() {
         eyebrow="Pricing"
         title="DIGI BIZ OS Pricing —"
         gradientTitle="Lifetime Licences"
-        subtitle="Three clear packages — £50 lifetime access, £50 done-for-you software setup with 5 custom business workflows, or £199 full source code."
+        subtitle={`Three clear packages — ${formatPrice(priceForRegion("lifetime", region, "GBP"), code)} lifetime access, ${formatPrice(priceForRegion("custom_build", region, "GBP"), code)} done-for-you software setup with 5 custom business workflows, or ${formatPrice(priceForRegion("source_code", region, "GBP"), code)} full source code.`}
         height="min-h-[50vh]"
       />
 
@@ -126,6 +132,8 @@ export default function PricingPage() {
           <div className="mt-12 grid items-start gap-6 lg:grid-cols-3">
             {TIERS.map((tier, i) => {
               const plan = PLANS[tier.id];
+              const gbp = priceForRegion(tier.id, region, "GBP");
+              const compareGbp = comparePriceFor(plan, "GBP", region);
               return (
                 <GlassCard
                   key={tier.id}
@@ -142,25 +150,24 @@ export default function PricingPage() {
                       className="font-display text-[44px] font-extrabold leading-none"
                       style={{ color: tier.accent }}
                     >
-                      {formatPrice(plan.priceGbp, code)}
+                      {formatPrice(gbp, code)}
                     </span>
-                    {plan.compareGbp ? (
+                    {compareGbp ? (
                       <span className="pb-1 font-mono text-[14px] text-[var(--text-muted)] line-through">
-                        {formatPrice(plan.compareGbp, code)}
+                        {formatPrice(compareGbp, code)}
                       </span>
                     ) : null}
                   </div>
                   <div className="mt-2 flex flex-wrap items-center gap-2 font-mono text-[12px] text-[var(--text-muted)]">
                     <span>
-                      {formatPrice(plan.priceGbp, "PKR")} · {formatPrice(plan.priceGbp, "USD")}
+                      {formatPrice(gbp, "PKR")} · {formatPrice(gbp, "USD")}
                     </span>
-                    {plan.compareGbp ? (
+                    {compareGbp ? (
                       <span
                         className="rounded-full border px-2 py-0.5 text-[10.5px] uppercase tracking-[0.12em]"
                         style={{ color: tier.accent, borderColor: tier.border }}
                       >
-                        Save{" "}
-                        {Math.round(((plan.compareGbp - plan.priceGbp) / plan.compareGbp) * 100)}%
+                        Save {Math.round(((compareGbp - gbp) / compareGbp) * 100)}%
                       </span>
                     ) : null}
                   </div>

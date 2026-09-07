@@ -85,11 +85,15 @@ export const createOrder = createServerFn({ method: "POST" })
   .handler(async ({ data }) => {
     const { PLANS, PAYMENT_METHODS, amountForMethod } = await import("./payment-config");
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    const { getRequestHeader } = await import("@tanstack/react-start/server");
+    const { regionFromCountry } = await import("./geo.functions");
 
     const plan = PLANS[data.planId];
     const method = PAYMENT_METHODS.find((m) => m.id === data.method)!;
-    // Amount and currency are resolved server-side, never trusted from the client.
-    const amount = amountForMethod(plan, method);
+    // Region + amount are resolved server-side from the edge country header,
+    // never trusted from the client — so the price can't be spoofed.
+    const region = regionFromCountry(getRequestHeader("cf-ipcountry") || getRequestHeader("x-vercel-ip-country"));
+    const amount = amountForMethod(plan, method, region);
 
     const orderRef = makeRef();
 

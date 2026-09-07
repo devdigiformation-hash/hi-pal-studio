@@ -17,6 +17,10 @@ import {
   type PlanId,
 } from "@/lib/payment-config";
 import { createOrder } from "@/lib/orders.functions";
+import { useQuery } from "@tanstack/react-query";
+import { useServerFn } from "@tanstack/react-start";
+import { getGeoRegion } from "@/lib/geo.functions";
+import type { Region } from "@/lib/payment-config";
 
 function CopyValue({ value }: { value: string }) {
   const [done, setDone] = useState(false);
@@ -49,9 +53,13 @@ export default function CheckoutPage() {
     : "lifetime";
   const plan = PLANS[planId];
 
+  const geoFn = useServerFn(getGeoRegion);
+  const geo = useQuery({ queryKey: ["geo-region"], queryFn: () => geoFn(), staleTime: 600000 });
+  const region: Region = geo.data?.region ?? "intl";
+
   const [methodId, setMethodId] = useState<MethodId>("jazzcash");
   const method = useMemo(() => PAYMENT_METHODS.find((m) => m.id === methodId)!, [methodId]);
-  const amount = amountForMethod(plan, method);
+  const amount = amountForMethod(plan, method, region);
 
   const [form, setForm] = useState({
     customerName: "",
@@ -143,9 +151,9 @@ export default function CheckoutPage() {
               <span className="font-display text-[42px] font-extrabold leading-none text-[var(--text-primary)]">
                 {formatAmount(amount, method.currency)}
               </span>
-              {comparePriceFor(plan, method.currency) ? (
+              {comparePriceFor(plan, method.currency, region) ? (
                 <span className="pb-1.5 font-body text-[15px] text-[var(--text-muted)] line-through">
-                  {formatAmount(comparePriceFor(plan, method.currency)!, method.currency)}
+                  {formatAmount(comparePriceFor(plan, method.currency, region)!, method.currency)}
                 </span>
               ) : null}
             </div>

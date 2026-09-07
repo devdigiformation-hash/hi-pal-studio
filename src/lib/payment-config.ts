@@ -96,6 +96,46 @@ export const PLANS: Record<PlanId, Plan> = {
 
 export const PLAN_IDS = Object.keys(PLANS) as PlanId[];
 
+// ── Geo pricing ──────────────────────────────────────────────────────────
+// Pakistan (PK IP) sees a lower one-time price; everyone else sees the
+// international price. GBP is the source of truth; PKR/USD track it (~£1 = Rs360,
+// USD = GBP / GBP_PER_USD). Detected server-side from the Cloudflare country
+// header, so it can't be spoofed by the client form.
+export type Region = "pk" | "intl";
+
+type PriceSet = {
+  pkr: number;
+  gbp: number;
+  usd: number;
+  comparePkr?: number;
+  compareGbp?: number;
+  compareUsd?: number;
+};
+
+export const REGIONAL_PRICES: Record<PlanId, Record<Region, PriceSet>> = {
+  lifetime: {
+    intl: { gbp: 50, pkr: 18000, usd: 63, compareGbp: 69, comparePkr: 25000, compareUsd: 88 },
+    pk: { gbp: 30, pkr: 10800, usd: 38, compareGbp: 50, comparePkr: 18000, compareUsd: 63 },
+  },
+  custom_build: {
+    intl: { gbp: 100, pkr: 36000, usd: 125, compareGbp: 139, comparePkr: 50000, compareUsd: 174 },
+    pk: { gbp: 50, pkr: 18000, usd: 63, compareGbp: 79, comparePkr: 28000, compareUsd: 99 },
+  },
+  source_code: {
+    intl: { gbp: 200, pkr: 72000, usd: 250, compareGbp: 279, comparePkr: 100000, compareUsd: 349 },
+    pk: { gbp: 100, pkr: 36000, usd: 125, compareGbp: 159, comparePkr: 50000, compareUsd: 199 },
+  },
+};
+
+export function priceSet(planId: PlanId, region: Region): PriceSet {
+  return REGIONAL_PRICES[planId][region];
+}
+
+export function priceForRegion(planId: PlanId, region: Region, currency: Currency): number {
+  const p = priceSet(planId, region);
+  return currency === "PKR" ? p.pkr : currency === "GBP" ? p.gbp : p.usd;
+}
+
 export type MethodId = "jazzcash" | "easypaisa" | "sadapay" | "nayapay" | "ubl" | "gbp" | "usd";
 
 export type Currency = "PKR" | "GBP" | "USD";
@@ -204,16 +244,13 @@ export const PAYMENT_METHODS: PaymentMethod[] = [
 
 export const GBP_PER_USD = 0.8;
 
-export function amountForMethod(plan: Plan, method: PaymentMethod) {
-  if (method.currency === "PKR") return plan.pricePkr;
-  if (method.currency === "GBP") return plan.priceGbp;
-  return plan.priceUsd;
+export function amountForMethod(plan: Plan, method: PaymentMethod, region: Region = "intl") {
+  return priceForRegion(plan.id, region, method.currency);
 }
 
-export function comparePriceFor(plan: Plan, currency: Currency) {
-  if (currency === "PKR") return plan.comparePkr;
-  if (currency === "GBP") return plan.compareGbp;
-  return plan.compareUsd;
+export function comparePriceFor(plan: Plan, currency: Currency, region: Region = "intl") {
+  const p = priceSet(plan.id, region);
+  return currency === "PKR" ? p.comparePkr : currency === "GBP" ? p.compareGbp : p.compareUsd;
 }
 
 export function formatAmount(amount: number, currency: Currency) {

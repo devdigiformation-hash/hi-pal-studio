@@ -7,7 +7,11 @@ import CyanButton from "@/components/CyanButton";
 import GradientText from "@/components/GradientText";
 import CurrencySelector from "@/components/CurrencySelector";
 
+import { useQuery } from "@tanstack/react-query";
+import { useServerFn } from "@tanstack/react-start";
 import { formatPrice, useCurrency } from "@/lib/currency";
+import { PLANS, priceForRegion, comparePriceFor, type Region } from "@/lib/payment-config";
+import { getGeoRegion } from "@/lib/geo.functions";
 
 const TIERS = [
   {
@@ -79,6 +83,9 @@ const TIERS = [
 
 export default function PricingPreview() {
   const { code } = useCurrency();
+  const geoFn = useServerFn(getGeoRegion);
+  const geo = useQuery({ queryKey: ["geo-region"], queryFn: () => geoFn(), staleTime: 600000 });
+  const region: Region = geo.data?.region ?? "intl";
 
   return (
     <SectionWrapper id="pricing">
@@ -97,7 +104,10 @@ export default function PricingPreview() {
         </div>
 
         <div className="mt-14 grid grid-cols-1 items-start gap-6 lg:grid-cols-3">
-          {TIERS.map((plan, i) => (
+          {TIERS.map((plan, i) => {
+            const gbp = priceForRegion(plan.id, region, "GBP");
+            const compareGbp = comparePriceFor(PLANS[plan.id], "GBP", region) ?? plan.compareGbp;
+            return (
             <div key={plan.name} className={`reveal-item delay-${i + 1}`}>
               <GlassCard
                 glowColor={plan.accent}
@@ -117,24 +127,24 @@ export default function PricingPreview() {
                     className="font-display text-[44px] font-bold leading-none"
                     style={{ color: plan.accent }}
                   >
-                    {formatPrice(plan.gbp, code)}
+                    {formatPrice(gbp, code)}
                   </span>
                   <span className="font-body text-[13px] text-[var(--text-muted)]">one-time</span>
                 </div>
                 <div className="mt-2 flex items-center gap-2">
                   <span className="font-body text-[14px] text-[var(--text-muted)] line-through">
-                    {formatPrice(plan.compareGbp, code)}
+                    {formatPrice(compareGbp, code)}
                   </span>
                   <span
                     className="rounded-full border px-2 py-0.5 font-mono text-[10.5px] uppercase tracking-[0.12em]"
                     style={{ color: plan.accent, borderColor: plan.border }}
                   >
-                    Save {Math.round(((plan.compareGbp - plan.gbp) / plan.compareGbp) * 100)}%
+                    Save {Math.round(((compareGbp - gbp) / compareGbp) * 100)}%
                   </span>
                 </div>
                 {code !== "PKR" ? (
                   <div className="mt-1.5 font-mono text-[12px] text-[var(--text-muted)]">
-                    ≈ {formatPrice(plan.gbp, "PKR")} · ${formatPrice(plan.gbp, "USD").slice(1)}
+                    ≈ {formatPrice(gbp, "PKR")} · ${formatPrice(gbp, "USD").slice(1)}
                   </div>
                 ) : null}
                 <p className="mt-3 font-body text-[14px] text-[var(--text-secondary)]">
@@ -160,7 +170,8 @@ export default function PricingPreview() {
                 </div>
               </GlassCard>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </SectionWrapper>
