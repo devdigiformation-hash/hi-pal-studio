@@ -83,17 +83,18 @@ async function registerLicenseWithWorker(input: {
 export const createOrder = createServerFn({ method: "POST" })
   .inputValidator((data: unknown) => createOrderSchema.parse(data))
   .handler(async ({ data }) => {
-    const { PLANS, PAYMENT_METHODS, amountForMethod } = await import("./payment-config");
+    const { PLANS, PAYMENT_METHODS } = await import("./payment-config");
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { getRequestHeader } = await import("@tanstack/react-start/server");
     const { regionFromCountry } = await import("./geo.functions");
+    const { resolveAmount } = await import("./pricing.server");
 
     const plan = PLANS[data.planId];
     const method = PAYMENT_METHODS.find((m) => m.id === data.method)!;
     // Region + amount are resolved server-side from the edge country header,
     // never trusted from the client — so the price can't be spoofed.
     const region = regionFromCountry(getRequestHeader("cf-ipcountry") || getRequestHeader("x-vercel-ip-country"));
-    const amount = amountForMethod(plan, method, region);
+    const amount = resolveAmount(plan.id, region, method.currency);
 
     const orderRef = makeRef();
 

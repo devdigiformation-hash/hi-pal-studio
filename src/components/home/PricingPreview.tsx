@@ -10,8 +10,8 @@ import CurrencySelector from "@/components/CurrencySelector";
 import { useQuery } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
 import { formatPrice, useCurrency } from "@/lib/currency";
-import { PLANS, priceForRegion, comparePriceFor, type Region } from "@/lib/payment-config";
-import { getGeoRegion } from "@/lib/geo.functions";
+import { INTL_PRICES } from "@/lib/payment-config";
+import { getPricing } from "@/lib/geo.functions";
 
 const TIERS = [
   {
@@ -83,9 +83,9 @@ const TIERS = [
 
 export default function PricingPreview() {
   const { code } = useCurrency();
-  const geoFn = useServerFn(getGeoRegion);
-  const geo = useQuery({ queryKey: ["geo-region"], queryFn: () => geoFn(), staleTime: 600000 });
-  const region: Region = geo.data?.region ?? "intl";
+  const pricingFn = useServerFn(getPricing);
+  const pricing = useQuery({ queryKey: ["pricing"], queryFn: () => pricingFn(), staleTime: 600000 });
+  const plans = pricing.data?.plans ?? INTL_PRICES;
 
   return (
     <SectionWrapper id="pricing">
@@ -105,8 +105,8 @@ export default function PricingPreview() {
 
         <div className="mt-14 grid grid-cols-1 items-start gap-6 lg:grid-cols-3">
           {TIERS.map((plan, i) => {
-            const gbp = priceForRegion(plan.id, region, "GBP");
-            const compareGbp = comparePriceFor(PLANS[plan.id], "GBP", region) ?? plan.compareGbp;
+            const gbp = plans[plan.id].gbp;
+            const compareGbp = plans[plan.id].compareGbp ?? plan.compareGbp;
             return (
             <div key={plan.name} className={`reveal-item delay-${i + 1}`}>
               <GlassCard

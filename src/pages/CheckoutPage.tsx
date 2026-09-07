@@ -9,9 +9,10 @@ import MonoBadge from "@/components/MonoBadge";
 import {
   PLANS,
   PAYMENT_METHODS,
-  amountForMethod,
+  INTL_PRICES,
+  amountFromSet,
+  compareFromSet,
   formatAmount,
-  comparePriceFor,
   WHATSAPP_NUMBER,
   type MethodId,
   type PlanId,
@@ -19,8 +20,7 @@ import {
 import { createOrder } from "@/lib/orders.functions";
 import { useQuery } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
-import { getGeoRegion } from "@/lib/geo.functions";
-import type { Region } from "@/lib/payment-config";
+import { getPricing } from "@/lib/geo.functions";
 
 function CopyValue({ value }: { value: string }) {
   const [done, setDone] = useState(false);
@@ -53,13 +53,13 @@ export default function CheckoutPage() {
     : "lifetime";
   const plan = PLANS[planId];
 
-  const geoFn = useServerFn(getGeoRegion);
-  const geo = useQuery({ queryKey: ["geo-region"], queryFn: () => geoFn(), staleTime: 600000 });
-  const region: Region = geo.data?.region ?? "intl";
+  const pricingFn = useServerFn(getPricing);
+  const pricing = useQuery({ queryKey: ["pricing"], queryFn: () => pricingFn(), staleTime: 600000 });
+  const priceSet = (pricing.data?.plans ?? INTL_PRICES)[planId];
 
   const [methodId, setMethodId] = useState<MethodId>("jazzcash");
   const method = useMemo(() => PAYMENT_METHODS.find((m) => m.id === methodId)!, [methodId]);
-  const amount = amountForMethod(plan, method, region);
+  const amount = amountFromSet(priceSet, method.currency);
 
   const [form, setForm] = useState({
     customerName: "",
@@ -151,9 +151,9 @@ export default function CheckoutPage() {
               <span className="font-display text-[42px] font-extrabold leading-none text-[var(--text-primary)]">
                 {formatAmount(amount, method.currency)}
               </span>
-              {comparePriceFor(plan, method.currency, region) ? (
+              {compareFromSet(priceSet, method.currency) ? (
                 <span className="pb-1.5 font-body text-[15px] text-[var(--text-muted)] line-through">
-                  {formatAmount(comparePriceFor(plan, method.currency, region)!, method.currency)}
+                  {formatAmount(compareFromSet(priceSet, method.currency)!, method.currency)}
                 </span>
               ) : null}
             </div>

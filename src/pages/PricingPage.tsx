@@ -13,8 +13,8 @@ import CurrencySelector from "@/components/CurrencySelector";
 import { useQuery } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
 import { formatPrice, useCurrency } from "@/lib/currency";
-import { PLANS, priceForRegion, comparePriceFor, type PlanId, type Region } from "@/lib/payment-config";
-import { getGeoRegion } from "@/lib/geo.functions";
+import { PLANS, INTL_PRICES, type PlanId } from "@/lib/payment-config";
+import { getPricing } from "@/lib/geo.functions";
 import SourceCodeSection from "@/components/home/SourceCodeSection";
 import ComparisonMatrix from "@/components/home/ComparisonMatrix";
 
@@ -102,9 +102,9 @@ const TIERS: {
 
 export default function PricingPage() {
   const { code } = useCurrency();
-  const geoFn = useServerFn(getGeoRegion);
-  const geo = useQuery({ queryKey: ["geo-region"], queryFn: () => geoFn(), staleTime: 600000 });
-  const region: Region = geo.data?.region ?? "intl";
+  const pricingFn = useServerFn(getPricing);
+  const pricing = useQuery({ queryKey: ["pricing"], queryFn: () => pricingFn(), staleTime: 600000 });
+  const plans = pricing.data?.plans ?? INTL_PRICES;
 
   return (
     <motion.main
@@ -117,7 +117,7 @@ export default function PricingPage() {
         eyebrow="Pricing"
         title="DIGI BIZ OS Pricing —"
         gradientTitle="Lifetime Licences"
-        subtitle={`Three clear packages — ${formatPrice(priceForRegion("lifetime", region, "GBP"), code)} lifetime access, ${formatPrice(priceForRegion("custom_build", region, "GBP"), code)} done-for-you software setup with 5 custom business workflows, or ${formatPrice(priceForRegion("source_code", region, "GBP"), code)} full source code.`}
+        subtitle={`Three clear packages — ${formatPrice(plans.lifetime.gbp, code)} lifetime access, ${formatPrice(plans.custom_build.gbp, code)} done-for-you software setup with 5 custom business workflows, or ${formatPrice(plans.source_code.gbp, code)} full source code.`}
         height="min-h-[50vh]"
       />
 
@@ -132,8 +132,8 @@ export default function PricingPage() {
           <div className="mt-12 grid items-start gap-6 lg:grid-cols-3">
             {TIERS.map((tier, i) => {
               const plan = PLANS[tier.id];
-              const gbp = priceForRegion(tier.id, region, "GBP");
-              const compareGbp = comparePriceFor(plan, "GBP", region);
+              const gbp = plans[tier.id].gbp;
+              const compareGbp = plans[tier.id].compareGbp;
               return (
                 <GlassCard
                   key={tier.id}
