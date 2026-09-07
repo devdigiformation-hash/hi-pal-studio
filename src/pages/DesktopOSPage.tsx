@@ -198,7 +198,7 @@ export default function DesktopOSPage() {
       <PageCTA
         title="One Voice. Total Desktop Domination."
         badges={["Instant Desktop Control", "Desktop Tools", "Windows · macOS soon"]}
-        cta="Download for Windows"
+        cta="Get Now"
         trackSource="desktop_os_cta"
         icon={<WindowsIcon size={17} />}
       />

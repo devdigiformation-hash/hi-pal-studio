@@ -33,7 +33,7 @@ export default function PageCTA({
           </div>
         ) : null}
         <div className="reveal-item delay-2 mt-9">
-          <Link to="/download" onClick={() => trackDownload(trackSource ?? "page_cta_windows")}>
+          <Link to="/pricing" onClick={() => trackDownload(trackSource ?? "page_cta_get_now")}>
             <CyanButton size="lg" icon={icon}>
               {cta}
             </CyanButton>

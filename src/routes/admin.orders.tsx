@@ -291,7 +291,14 @@ function OrderCard({ order }: { order: OrderAdminRow }) {
       return approveFn({ data: { orderRef: order.order_ref, downloadUrl: url } });
     },
     onSuccess: (res) => {
-      toast.success(`Approved — licence ${res.licenseKey}`);
+      if (res.registered) {
+        toast.success(`Approved & licence registered — ${res.licenseKey}`);
+      } else {
+        toast.warning(
+          `Approved, but the licence was NOT registered in the app (${res.registerReason || "worker unreachable"}). Set LICENSE_ADMIN_API_KEY and re-approve, or the key won't activate.`,
+          { duration: 9000 },
+        );
+      }
       qc.invalidateQueries({ queryKey: ["admin-orders"] });
     },
     onError: (e) => toast.error(e instanceof Error ? e.message : "Approve failed"),

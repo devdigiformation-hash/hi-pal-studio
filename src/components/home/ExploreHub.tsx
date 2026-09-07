@@ -11,9 +11,9 @@ const HUB = [
     desc: "One-time payment, lifetime licence. Compare the Lifetime, Source Code and Customised Build plans.",
   },
   {
-    to: "/download",
-    title: "Download for Windows",
-    desc: "Get the DIGI BIZ OS installer for Windows 10 and 11, with step-by-step setup instructions.",
+    to: "/pricing",
+    title: "Get DIGI BIZ OS",
+    desc: "Choose your licence, complete secure checkout, and unlock the Windows 10 & 11 download after approval.",
   },
   {
     to: "/voice-ai",

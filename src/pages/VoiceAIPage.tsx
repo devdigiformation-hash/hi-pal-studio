@@ -327,7 +327,7 @@ export default function VoiceAIPage() {
       <PageCTA
         title="Command Your Desktop with JARVIS Voice AI"
         badges={["<200ms Latency", "Live Voice Streaming", "Windows 10/11"]}
-        cta="Download for Windows (£50 Lifetime)"
+        cta="Get Now (£50 Lifetime)"
         trackSource="voice_ai_cta"
         icon={<WindowsIcon size={17} />}
       />

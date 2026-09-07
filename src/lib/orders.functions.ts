@@ -32,6 +32,54 @@ function makeLicenseKey() {
   return `DBOS-${group()}-${group()}-${group()}-${group()}`;
 }
 
+// The desktop app's licences live in the Cloudflare licensing worker (the same one
+// the app's own admin panel writes to). Registering the key there is what makes it
+// actually activate inside the client app — the worker stores only the key's hash.
+const LICENSE_WORKER_URL = (
+  process.env.LICENSE_WORKER_URL || "https://digi-biz-license-api.digi-ede.workers.dev"
+).replace(/\/$/, "");
+
+// max_devices per plan; expires_at null = lifetime.
+function planEntitlement(planId: string) {
+  if (planId === "source_code") return { edition: "SOURCE", maxDevices: 5 };
+  if (planId === "custom_build") return { edition: "PRO", maxDevices: 3 };
+  return { edition: "PRO", maxDevices: 3 };
+}
+
+async function registerLicenseWithWorker(input: {
+  licenseKey: string;
+  customerId: string;
+  planId: string;
+}): Promise<{ registered: boolean; reason?: string }> {
+  const adminKey = process.env.LICENSE_ADMIN_API_KEY;
+  // Not configured yet → issue the key locally but flag it as not yet registered,
+  // so the owner knows to set LICENSE_ADMIN_API_KEY before it will activate.
+  if (!adminKey) return { registered: false, reason: "LICENSE_ADMIN_API_KEY not set" };
+
+  const { edition, maxDevices } = planEntitlement(input.planId);
+  try {
+    const res = await fetch(`${LICENSE_WORKER_URL}/admin/licenses`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-Admin-API-Key": adminKey },
+      body: JSON.stringify({
+        license_key: input.licenseKey,
+        customer_id: input.customerId,
+        product: "Digi Biz OS",
+        edition,
+        max_devices: maxDevices,
+        expires_at: null, // lifetime
+      }),
+    });
+    if (res.ok) return { registered: true };
+    const text = await res.text().catch(() => "");
+    // Re-approving the same order → the key is already registered, which is fine.
+    if (res.status === 400 && /LICENSE_EXISTS/i.test(text)) return { registered: true };
+    return { registered: false, reason: `worker ${res.status}: ${text.slice(0, 160)}` };
+  } catch (e) {
+    return { registered: false, reason: e instanceof Error ? e.message : "network error" };
+  }
+}
+
 export const createOrder = createServerFn({ method: "POST" })
   .inputValidator((data: unknown) => createOrderSchema.parse(data))
   .handler(async ({ data }) => {
@@ -189,12 +237,22 @@ export const approveOrder = createServerFn({ method: "POST" })
 
     // Reuse an already-issued key if the order was approved before; else mint one.
     const { data: existing } = await (supabaseAdmin.from("orders") as any)
-      .select("license_key")
+      .select("license_key, email, plan_id")
       .eq("order_ref", ref)
       .maybeSingle();
 
+    if (!existing) throw new Error("Order not found.");
+
     const licenseKey =
-      (data.licenseKey && data.licenseKey.trim()) || existing?.license_key || makeLicenseKey();
+      (data.licenseKey && data.licenseKey.trim()) || existing.license_key || makeLicenseKey();
+
+    // Register the key in the desktop app's licensing worker so it actually
+    // activates on the customer's machine (idempotent for re-approvals).
+    const reg = await registerLicenseWithWorker({
+      licenseKey,
+      customerId: existing.email || ref,
+      planId: existing.plan_id || "lifetime",
+    });
 
     const { data: updated, error } = await (supabaseAdmin.from("orders") as any)
       .update({
@@ -213,7 +271,7 @@ export const approveOrder = createServerFn({ method: "POST" })
       throw new Error("Could not approve this order.");
     }
     if (!updated) throw new Error("Order not found.");
-    return { ok: true as const, orderRef: ref, licenseKey };
+    return { ok: true as const, orderRef: ref, licenseKey, registered: reg.registered, registerReason: reg.reason };
   });
 
 export const rejectOrder = createServerFn({ method: "POST" })

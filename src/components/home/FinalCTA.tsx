@@ -65,9 +65,9 @@ export default function FinalCTA() {
             Download DIGI BIZ OS and experience autonomous desktop AI today.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <Link to="/download" onClick={() => trackDownload("final_cta_windows")}>
+            <Link to="/pricing" onClick={() => trackDownload("final_cta_get_now")}>
               <CyanButton size="lg" icon={<WindowsIcon size={17} />}>
-                Download for Windows
+                Get Now
               </CyanButton>
             </Link>
             <GhostButton size="lg" icon={<Play size={17} />}>

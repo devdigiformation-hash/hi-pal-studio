@@ -16,7 +16,7 @@ const OVERVIEW = [
   { label: "Multi-Agent Platform", to: "/agents" },
   { label: "Open Source Suite", to: "/open-source" },
   { label: "One-Time Pricing", to: "/pricing" },
-  { label: "Download for Windows", to: "/download" },
+  { label: "Get DIGI BIZ OS", to: "/download" },
   { label: "Blog & Guides", to: "/blog" },
   { label: "FAQ", to: "/faq" },
 ] as const;
