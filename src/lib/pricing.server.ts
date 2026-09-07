@@ -11,7 +11,7 @@ import type { PlanId, Region, Currency, PriceSet } from "./payment-config";
 const REGIONAL_PRICES: Record<PlanId, Record<Region, PriceSet>> = {
   lifetime: {
     intl: { gbp: 49, pkr: 17640, usd: 61, compareGbp: 69, comparePkr: 25000, compareUsd: 88 },
-    pk: { gbp: 29, pkr: 10440, usd: 36, compareGbp: 49, comparePkr: 18000, compareUsd: 61 },
+    pk: { gbp: 34, pkr: 12240, usd: 43, compareGbp: 49, comparePkr: 18000, compareUsd: 61 },
   },
   // Pakistan carries a discount on every plan; international keeps the higher price.
   custom_build: {
