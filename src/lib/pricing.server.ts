@@ -21,7 +21,7 @@ const REGIONAL_PRICES: Record<PlanId, Record<Region, PriceSet>> = {
   },
   source_code: {
     intl: { gbp: 200, pkr: 72000, usd: 250, compareGbp: 279, comparePkr: 100000, compareUsd: 349 },
-    pk: { gbp: 200, pkr: 72000, usd: 250, compareGbp: 279, comparePkr: 100000, compareUsd: 349 },
+    pk: { gbp: 150, pkr: 54000, usd: 188, compareGbp: 200, comparePkr: 72000, compareUsd: 250 },
   },
 };
 
