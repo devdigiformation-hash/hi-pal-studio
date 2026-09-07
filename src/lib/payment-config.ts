@@ -120,7 +120,7 @@ export type PriceSet = {
 // without) a server response. Never contains the Pakistan numbers.
 export const INTL_PRICES: Record<PlanId, PriceSet> = {
   lifetime: { gbp: 50, pkr: 18000, usd: 63, compareGbp: 69, comparePkr: 25000, compareUsd: 88 },
-  custom_build: { gbp: 50, pkr: 18000, usd: 63, compareGbp: 79, comparePkr: 28000, compareUsd: 99 },
+  custom_build: { gbp: 80, pkr: 28800, usd: 100, compareGbp: 119, comparePkr: 42000, compareUsd: 149 },
   source_code: { gbp: 200, pkr: 72000, usd: 250, compareGbp: 279, comparePkr: 100000, compareUsd: 349 },
 };
 

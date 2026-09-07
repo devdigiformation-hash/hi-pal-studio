@@ -16,7 +16,7 @@ const REGIONAL_PRICES: Record<PlanId, Record<Region, PriceSet>> = {
   // Setup and Source Code are the same price in every region — only Lifetime
   // carries the Pakistan discount.
   custom_build: {
-    intl: { gbp: 50, pkr: 18000, usd: 63, compareGbp: 79, comparePkr: 28000, compareUsd: 99 },
+    intl: { gbp: 80, pkr: 28800, usd: 100, compareGbp: 119, comparePkr: 42000, compareUsd: 149 },
     pk: { gbp: 50, pkr: 18000, usd: 63, compareGbp: 79, comparePkr: 28000, compareUsd: 99 },
   },
   source_code: {
