@@ -1,7 +1,7 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import ModelLanding from "@/components/seo/ModelLanding";
 import { MODELS_BY_SLUG } from "@/content/models-data";
-import { buildMeta, breadcrumbLd, faqLd, softwareLd } from "@/lib/seo";
+import { buildMeta, breadcrumbLd, faqLd } from "@/lib/seo";
 
 export const Route = createFileRoute("/models/$slug")({
   beforeLoad: ({ params }) => {
@@ -32,7 +32,29 @@ export const Route = createFileRoute("/models/$slug")({
         },
         {
           type: "application/ld+json",
-          children: JSON.stringify(softwareLd(mod.name, mod.metaDescription, path)),
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TechArticle",
+            headline: mod.metaTitle,
+            description: mod.metaDescription,
+            url: `https://digibizos.co.uk${path}`,
+            mainEntityOfPage: `https://digibizos.co.uk${path}`,
+            inLanguage: "en-GB",
+            about: {
+              "@type": "Thing",
+              name: mod.name,
+              description: mod.directAnswer,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "DIGI BIZ OS",
+              url: "https://digibizos.co.uk",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://digibizos.co.uk/logo-512.png",
+              },
+            },
+          }),
         },
         {
           type: "application/ld+json",

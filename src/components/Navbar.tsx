@@ -160,8 +160,12 @@ export default function Navbar() {
               </SmartLink>
             ))}
             <div className="mt-6 flex flex-col gap-3">
-              <GhostButton>Live Demo</GhostButton>
-              <CyanButton icon={<WindowsIcon size={17} />}>Download App</CyanButton>
+              <Link to="/features" onClick={() => setOpen(false)} className="block w-full">
+                <GhostButton className="w-full">Explore Features</GhostButton>
+              </Link>
+              <Link to="/download" onClick={() => setOpen(false)} className="block w-full">
+                <CyanButton icon={<WindowsIcon size={17} />} className="w-full">Download App</CyanButton>
+              </Link>
             </div>
           </div>
         </div>

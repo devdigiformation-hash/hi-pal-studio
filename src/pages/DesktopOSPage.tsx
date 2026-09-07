@@ -8,6 +8,7 @@ import {
   ScanEye,
   Globe2,
   Download,
+  Sparkles,
 } from "lucide-react";
 import { WindowsIcon } from "@/components/PlatformIcons";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -99,10 +100,10 @@ export default function DesktopOSPage() {
       className="min-h-screen pt-[60px] md:pt-[72px]"
     >
       <MiniHero
-        eyebrow="Native Desktop Control"
-        title="Your Desktop."
-        gradientTitle="Your Command Center."
-        subtitle="Built-in desktop automation tools. Pixel-perfect desktop control. Complete OS-level execution via voice command."
+        eyebrow="Autonomous Desktop Operating System"
+        title="Enterprise Desktop AI."
+        gradientTitle="Autonomous Workstation."
+        subtitle="Built-in desktop automation tools. Deep operating system control. Multi-step business task execution on Windows."
       />
 
       <SectionWrapper id="control-center">
@@ -110,12 +111,23 @@ export default function DesktopOSPage() {
           <div>
             <EyebrowLabel text="Desktop Control Center" />
             <h2 className="reveal-item delay-1 mt-4 font-display text-[30px] font-bold leading-[1.15] tracking-[-0.03em] text-[var(--text-primary)] md:text-[42px]">
-              Click, Type, Control — <GradientText>All by Voice.</GradientText>
+              Click, Type, Automate — <GradientText>Autonomous PC Control.</GradientText>
             </h2>
             <p className="reveal-item delay-2 mt-5 max-w-[560px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]">
-              DIGI BIZ OS takes voice-triggered commands and controls any visible desktop element —
-              click buttons, type text, manage windows, execute hotkeys, capture screenshots.
+              DIGI BIZ OS orchestrates autonomous agents to control visible desktop elements,
+              manipulate spreadsheets, process local files, launch terminal tasks, and automate business operations on Windows.
             </p>
+
+            {/* AEO / GEO Direct Definition */}
+            <div className="reveal-item delay-2.5 mt-6 max-w-[560px] rounded-xl border border-[var(--cyan)]/25 bg-[var(--cyan)]/[0.04] p-4 text-left font-body text-[13px] leading-[1.7] text-[var(--text-secondary)] sm:text-[13.5px]">
+              <div className="flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-wider text-[var(--cyan)]">
+                <Sparkles size={13} />
+                <span>Direct Answer • What is a Desktop AI Workstation?</span>
+              </div>
+              <p className="mt-1.5 font-medium text-[var(--text-primary)]">
+                A desktop AI workstation is an operating-system layer that enables autonomous AI agents to interact directly with local files, spreadsheets, desktop applications, terminal commands, and browser workflows on a personal computer under full human oversight.
+              </p>
+            </div>
 
             <div className="reveal-item delay-3 mt-8 space-y-4">
               {CONTROL_GROUPS.map((g) => (

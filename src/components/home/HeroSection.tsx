@@ -259,6 +259,22 @@ export default function HeroSection() {
             </GhostButton>
           </motion.div>
 
+          {/* AEO / GEO Direct Definition Block */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.0 }}
+            className="mt-7 max-w-[580px] rounded-xl border border-[var(--cyan)]/25 bg-[var(--cyan)]/[0.04] p-4 text-left font-body text-[13px] leading-[1.7] text-[var(--text-secondary)] sm:text-[13.5px]"
+          >
+            <div className="flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-wider text-[var(--cyan)]">
+              <Sparkles size={13} />
+              <span>Direct Answer • What is DIGI BIZ OS?</span>
+            </div>
+            <p className="mt-1.5 font-medium text-[var(--text-primary)]">
+              DIGI BIZ OS is an autonomous agentic AI business operating system for Windows 10 and 11. It unifies voice control, local neural models (DeepSeek, Llama), CRM pipelines, automated workflows, and desktop computer-use automation into a single sovereign desktop environment with zero recurring subscription fees.
+            </p>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}

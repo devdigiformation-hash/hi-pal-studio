@@ -23,9 +23,9 @@ import ExploreHub from "@/components/home/ExploreHub";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { buildMeta, softwareLd } from "@/lib/seo";
 
-const TITLE = "DIGI BIZ OS — JARVIS AI for PC | Sci-Fi Desktop Experience";
+const TITLE = "DIGI BIZ OS — AI Operating System & Autonomous Desktop AI for Windows";
 const DESC =
-  "The JARVIS AI for PC and business you've been searching for. DIGI BIZ OS turns Windows into a cinematic, voice-controlled sci-fi desktop — multi-agent automation, extensive skills library, local privacy, $0 subscription.";
+  "Autonomous AI operating system and business automation workstation for Windows 10 & 11. Multi-agent workflows, local neural models, voice control, and zero recurring SaaS subscriptions.";
 
 export const Route = createFileRoute("/")({
   head: () => {

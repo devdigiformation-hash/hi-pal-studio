@@ -109,7 +109,7 @@ function CompareHub() {
             {COMPARE_PAGES.map((p) => (
               <Link
                 key={p.slug}
-                to="/compare/$slug"
+                to="/blog/$slug"
                 params={{ slug: p.slug }}
                 className="group block h-full"
               >

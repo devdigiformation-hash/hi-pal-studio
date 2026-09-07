@@ -37,15 +37,15 @@ const MODULES = [
 ] as const;
 
 const SAAS_ALTERNATIVES = [
-  { label: "CapCut Pro Alternative", to: "/compare/opencut-vs-capcut" },
-  { label: "Premiere Pro Alternative", to: "/compare/kdenlive-vs-premiere-pro" },
+  { label: "CapCut Pro Alternative", to: "/blog/opencut-vs-capcut" },
+  { label: "Premiere Pro Alternative", to: "/blog/kdenlive-vs-premiere-pro" },
   { label: "ElevenLabs Voice Alternative", to: "/compare" },
   { label: "HeyGen Avatar Alternative", to: "/compare" },
   { label: "HubSpot CRM Alternative", to: "/compare" },
   { label: "Zapier Automation Alternative", to: "/compare" },
   { label: "Cursor AI Coding Alternative", to: "/compare" },
-  { label: "Screaming Frog SEO Alternative", to: "/compare/open-seo-spider-vs-screaming-frog" },
-  { label: "ChatGPT & Copilot Alternative", to: "/compare/digi-biz-os-vs-chatgpt" },
+  { label: "Screaming Frog SEO Alternative", to: "/blog/open-seo-spider-vs-screaming-frog" },
+  { label: "ChatGPT & Copilot Alternative", to: "/blog/digi-biz-os-vs-chatgpt" },
   { label: "All Paid vs Free Comparisons →", to: "/compare" },
 ] as const;
 

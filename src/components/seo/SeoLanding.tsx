@@ -65,6 +65,23 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
           <p className="reveal-item delay-2 mx-auto mt-6 max-w-[760px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[17px]">
             {page.intro}
           </p>
+          {page.answers && page.answers.length > 0 && page.answers[0] ? (
+            <div
+              className="reveal-item delay-2.5 mx-auto mt-7 max-w-[760px] rounded-xl border p-4 text-left font-body text-[14px] leading-[1.75] text-[var(--text-secondary)] md:text-[15px]"
+              style={{
+                borderColor: `${accent}35`,
+                background: `linear-gradient(180deg, ${accent}0D, transparent)`,
+              }}
+            >
+              <div className="flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-wider text-[var(--text-primary)]">
+                <Sparkles size={13} style={{ color: accent }} />
+                <span>Direct Answer • {page.answers[0].q}</span>
+              </div>
+              <p className="mt-1.5 font-medium text-[var(--text-primary)]">
+                {page.answers[0].a}
+              </p>
+            </div>
+          ) : null}
           <div className="reveal-item delay-3 mt-9 flex flex-wrap items-center justify-center gap-3">
             <Link to="/pricing">
               <CyanButton icon={<ArrowRight size={16} />}>Get DIGI BIZ OS — £50</CyanButton>

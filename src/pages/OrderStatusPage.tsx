@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
-import { CheckCircle2, Clock, MessageCircle, Mail, XCircle } from "lucide-react";
+import { CheckCircle2, Clock, Copy, Check, Download, MessageCircle, Mail, XCircle } from "lucide-react";
 import GlassCard from "@/components/GlassCard";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import MonoBadge from "@/components/MonoBadge";
@@ -22,7 +22,28 @@ type OrderRow = {
   payment_method: string;
   status: string;
   created_at: string;
+  verified_at?: string | null;
+  license_key?: string | null;
+  download_url?: string | null;
 };
+
+function CopyChip({ value }: { value: string }) {
+  const [done, setDone] = useState(false);
+  return (
+    <button
+      type="button"
+      onClick={() => {
+        navigator.clipboard?.writeText(value);
+        setDone(true);
+        setTimeout(() => setDone(false), 1600);
+      }}
+      className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border-glass)] px-3 py-1 font-code text-[11px] text-[var(--cyan)] transition-colors hover:border-[var(--cyan-border)]"
+    >
+      {done ? <Check size={12} /> : <Copy size={12} />}
+      {done ? "Copied" : "Copy"}
+    </button>
+  );
+}
 
 const STATUS_META: Record<string, { label: string; color: string; icon: typeof Clock }> = {
   pending: { label: "Awaiting verification", color: "var(--amber,#F5A623)", icon: Clock },
@@ -36,18 +57,36 @@ export default function OrderStatusPage({ orderRef }: { orderRef: string }) {
   const [loading, setLoading] = useState(true);
   const [missing, setMissing] = useState(false);
 
+  const timer = useRef<ReturnType<typeof setInterval> | null>(null);
+
   useEffect(() => {
     let alive = true;
-    getOrderStatus({ data: { orderRef } })
-      .then((res) => {
-        if (!alive) return;
-        if (res.found) setOrder(res.order as OrderRow);
-        else setMissing(true);
-      })
-      .catch(() => alive && setMissing(true))
-      .finally(() => alive && setLoading(false));
+    const load = () =>
+      getOrderStatus({ data: { orderRef } })
+        .then((res) => {
+          if (!alive) return;
+          if (res.found) {
+            const row = res.order as OrderRow;
+            setOrder(row);
+            // Stop polling once the payment is verified (download released) or rejected.
+            if (row.status !== "pending" && timer.current) {
+              clearInterval(timer.current);
+              timer.current = null;
+            }
+          } else {
+            setMissing(true);
+          }
+        })
+        .catch(() => alive && setMissing(true))
+        .finally(() => alive && setLoading(false));
+
+    load();
+    // While awaiting verification, re-check every 20s so the download appears
+    // automatically the moment the owner approves — no refresh needed.
+    timer.current = setInterval(load, 20000);
     return () => {
       alive = false;
+      if (timer.current) clearInterval(timer.current);
     };
   }, [orderRef]);
 
@@ -91,7 +130,11 @@ export default function OrderStatusPage({ orderRef }: { orderRef: string }) {
           ) : (
             <>
               <h1 className="mt-3 font-display text-[32px] font-extrabold leading-tight text-[var(--text-primary)] md:text-[40px]">
-                Thanks — we&apos;re verifying your payment.
+                {order.status === "verified"
+                  ? "Payment verified — your download is ready."
+                  : order.status === "rejected"
+                    ? "We couldn't verify this payment yet."
+                    : "Thanks — we're verifying your payment."}
               </h1>
               <div className="mt-5 flex flex-wrap items-center gap-3">
                 <MonoBadge>{order.order_ref}</MonoBadge>
@@ -132,25 +175,89 @@ export default function OrderStatusPage({ orderRef }: { orderRef: string }) {
                 ))}
               </dl>
 
-              <p className="mt-7 font-body text-[14px] leading-[1.7] text-[var(--text-secondary)]">
-                Send your payment screenshot on WhatsApp with the reference above. Once verified,
-                your licence is activated on the email you provided — usually within a few hours.
-              </p>
+              {order.status === "verified" && order.download_url ? (
+                <>
+                  {/* Released download + licence key — shown ONLY after approval. */}
+                  <div
+                    className="mt-8 rounded-[16px] border border-[var(--cyan-border)] p-5"
+                    style={{ background: "var(--bg-glass-light)" }}
+                  >
+                    <div className="font-body text-[11.5px] uppercase tracking-[0.14em] text-[var(--text-muted)]">
+                      Your licence key
+                    </div>
+                    <div className="mt-2 flex items-center justify-between gap-3">
+                      <span className="break-all font-code text-[16px] font-bold text-[var(--cyan)]">
+                        {order.license_key}
+                      </span>
+                      {order.license_key ? <CopyChip value={order.license_key} /> : null}
+                    </div>
+                    <p className="mt-3 font-body text-[13px] leading-[1.7] text-[var(--text-secondary)]">
+                      Download the installer, run it on Windows 10 or 11, and enter this key to
+                      activate. Keep it safe — it&apos;s tied to your order.
+                    </p>
+                  </div>
 
-              <div className="mt-7 flex flex-wrap items-center gap-3">
-                <a href={waHref} target="_blank" rel="noreferrer">
-                  <CyanButton size="md" icon={<MessageCircle size={15} />}>
-                    Send proof on WhatsApp
-                  </CyanButton>
-                </a>
-                <a
-                  href={`mailto:${SUPPORT_EMAIL}?subject=Order%20${order.order_ref}`}
-                  style={{ borderRadius: "var(--r-pill)" }}
-                  className="inline-flex items-center gap-2 border border-[var(--border-glass)] px-6 py-3 font-display text-[14px] font-semibold text-[var(--text-secondary)] transition-colors hover:border-[var(--cyan-border)] hover:text-[var(--cyan)]"
-                >
-                  <Mail size={15} /> {SUPPORT_EMAIL}
-                </a>
-              </div>
+                  <div className="mt-6 flex flex-wrap items-center gap-3">
+                    <a href={order.download_url} target="_blank" rel="noreferrer">
+                      <CyanButton size="lg" icon={<Download size={16} />}>
+                        Download DIGI BIZ OS
+                      </CyanButton>
+                    </a>
+                    <a
+                      href={`mailto:${SUPPORT_EMAIL}?subject=Order%20${order.order_ref}`}
+                      style={{ borderRadius: "var(--r-pill)" }}
+                      className="inline-flex items-center gap-2 border border-[var(--border-glass)] px-6 py-3 font-display text-[14px] font-semibold text-[var(--text-secondary)] transition-colors hover:border-[var(--cyan-border)] hover:text-[var(--cyan)]"
+                    >
+                      <Mail size={15} /> Need help?
+                    </a>
+                  </div>
+                </>
+              ) : order.status === "rejected" ? (
+                <>
+                  <p className="mt-7 font-body text-[14px] leading-[1.7] text-[var(--text-secondary)]">
+                    We couldn&apos;t confirm your payment against this reference. If you have already
+                    paid, send your proof on WhatsApp with the reference above and we&apos;ll sort it
+                    out.
+                  </p>
+                  <div className="mt-7 flex flex-wrap items-center gap-3">
+                    <a href={waHref} target="_blank" rel="noreferrer">
+                      <CyanButton size="md" icon={<MessageCircle size={15} />}>
+                        Send proof on WhatsApp
+                      </CyanButton>
+                    </a>
+                    <a
+                      href={`mailto:${SUPPORT_EMAIL}?subject=Order%20${order.order_ref}`}
+                      style={{ borderRadius: "var(--r-pill)" }}
+                      className="inline-flex items-center gap-2 border border-[var(--border-glass)] px-6 py-3 font-display text-[14px] font-semibold text-[var(--text-secondary)] transition-colors hover:border-[var(--cyan-border)] hover:text-[var(--cyan)]"
+                    >
+                      <Mail size={15} /> {SUPPORT_EMAIL}
+                    </a>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <p className="mt-7 font-body text-[14px] leading-[1.7] text-[var(--text-secondary)]">
+                    Send your payment screenshot on WhatsApp with the reference above. Once the
+                    transfer lands and we verify it, your licence key and download link appear right
+                    here on this page — it refreshes automatically, so you can leave it open.
+                  </p>
+
+                  <div className="mt-7 flex flex-wrap items-center gap-3">
+                    <a href={waHref} target="_blank" rel="noreferrer">
+                      <CyanButton size="md" icon={<MessageCircle size={15} />}>
+                        Send proof on WhatsApp
+                      </CyanButton>
+                    </a>
+                    <a
+                      href={`mailto:${SUPPORT_EMAIL}?subject=Order%20${order.order_ref}`}
+                      style={{ borderRadius: "var(--r-pill)" }}
+                      className="inline-flex items-center gap-2 border border-[var(--border-glass)] px-6 py-3 font-display text-[14px] font-semibold text-[var(--text-secondary)] transition-colors hover:border-[var(--cyan-border)] hover:text-[var(--cyan)]"
+                    >
+                      <Mail size={15} /> {SUPPORT_EMAIL}
+                    </a>
+                  </div>
+                </>
+              )}
             </>
           )}
         </GlassCard>

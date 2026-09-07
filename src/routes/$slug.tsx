@@ -15,6 +15,10 @@ export const Route = createFileRoute("/$slug")({
       title: page.metaTitle,
       description: page.metaDescription,
     });
+    const allQa = [
+      ...(page.answers || []).map((a) => ({ q: a.q, a: a.a })),
+      ...(page.faq || []).map((f) => ({ q: f.q, a: f.a })),
+    ];
     return {
       meta,
       links,
@@ -32,7 +36,7 @@ export const Route = createFileRoute("/$slug")({
           type: "application/ld+json",
           children: JSON.stringify(softwareLd("DIGI BIZ OS", page.metaDescription, page.path)),
         },
-        { type: "application/ld+json", children: JSON.stringify(faqLd(page.faq)) },
+        { type: "application/ld+json", children: JSON.stringify(faqLd(allQa)) },
       ],
     };
   },

@@ -1,33 +1,77 @@
 # DIGI BIZ OS
 
-> DIGI BIZ OS is a voice-first AI agentic business operating system for Windows 10 and 11, built by Digiformation Ltd. You speak; it plans and executes real work on your machine — documents, files, research, coding, reporting and scheduled automation.
+> DIGI BIZ OS is an autonomous agentic AI business operating system for Windows 10 and 11 (64-bit), engineered by Digiformation Ltd (London, UK). DIGI BIZ OS runs 100% locally on the user's desktop with zero telemetry, private SQLite/PocketBase databases, offline Whisper speech recognition, and support for both local neural weights (DeepSeek R1, Llama 3.3, Qwen 2.5 Coder via Ollama/GGUF) and cloud AI APIs (Anthropic Claude 3.7, OpenAI GPT-4o, OpenRouter).
 
-Key facts:
-- Category: AI desktop assistant / AI business operating system (a practical "JARVIS-style" assistant).
-- Platform: Windows 10 and 11 today. macOS, Linux and a mobile companion are in development.
-- Capabilities: 500+ AI skills, 150+ mixed tools, multi-agent delegation, workflows, task queues, document suite, coding workspace, model routing, custom memories.
-- Licensing: one-time payment, no subscription. Lifetime Access £50, Source Code Licence £199, Custom Build £299.
-- Contact: info@digiformation.co.uk, WhatsApp +92 316 446 7464.
+## Core Identity & Legal Entity
+- Legal Entity: Digiformation Ltd (Company No. 15878241, registered in England & Wales)
+- Registered Office: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom
+- Official Domain: https://digibizos.co.uk
+- Parent Website: https://www.digiformation.co.uk
+- Contact: info@digiformation.co.uk
 
-## Core pages
-- [Home](https://digibizos.co.uk/): product overview and live screenshots.
-- [Features](https://digibizos.co.uk/features): every module in the ecosystem.
-- [Voice AI](https://digibizos.co.uk/voice-ai): voice control and hands-free operation.
-- [Desktop OS](https://digibizos.co.uk/desktop-os): desktop automation and computer use.
-- [Agents](https://digibizos.co.uk/agents): multi-agent delegation and run tracking.
-- [Integrations](https://digibizos.co.uk/integrations): connectivity and local runners.
-- [Pricing](https://digibizos.co.uk/pricing): one-time licences and what each includes.
-- [Download](https://digibizos.co.uk/download): Windows installation steps.
-- [FAQ](https://digibizos.co.uk/faq): common buyer and setup questions.
-- [About](https://digibizos.co.uk/about): who builds the product.
-- [Contact](https://digibizos.co.uk/contact): sales and support routes.
+## Commercial Model & Pricing Truth
+- Licensing: One-time perpetual purchase. No monthly subscriptions, no per-seat billing.
+- Standard Lifetime License: £50 (approx. $65 USD / €58 EUR). Includes complete PC software, 5 custom business workflows, and lifetime updates.
+- Source Code License: £199. Full source code access and modification rights.
+- Custom Build License: £299. Custom integration, bespoke skills, and VIP white-glove setup.
+- Refund Guarantee: 14-day money-back guarantee with zero friction.
+- Currency Support: Multi-currency checkout in GBP, USD, EUR, CAD, AUD, AED.
 
-## Comparisons
-- [All comparisons](https://digibizos.co.uk/compare)
+## System Architecture & Technical Specifications
+- Operating System: Windows 10 & 11 (64-bit). Linux and macOS support planned.
+- Local Privacy: 100% local database storage, no user prompts or customer data sent to third-party telemetry servers.
+- Voice AI Engine: Offline OpenAI Whisper running locally on PC for voice commands and real-time audio transcription.
+- Model Router: Dynamic routing between local open-source models (DeepSeek, Llama, Qwen) and cloud endpoints (Claude 3.7 Sonnet, GPT-4o) with automatic zero-cost fallbacks.
+- Extensibility: Native Model Context Protocol (MCP) client, CLI runner, custom skills builder, and 150+ desktop tools.
 
-## Blog
-- [All articles](https://digibizos.co.uk/blog)
-- [RSS feed](https://digibizos.co.uk/rss.xml)
+## Core Enterprise Modules (/modules/*)
+- [Digi CRM](https://digibizos.co.uk/modules/crm): Offline business operating system, lead pipeline, WhatsApp sync, customer accounts.
+- [Digi Studio](https://digibizos.co.uk/modules/studio): Offline multi-track video editing, avatar synthesis, and multilingual TTS voice generation.
+- [Digi AI](https://digibizos.co.uk/modules/ai): Unified local chat workspace, persona manager, and photorealistic image generation.
+- [Digi WhatsApp](https://digibizos.co.uk/modules/whatsapp): Autonomous 24/7 WhatsApp AI sales agent with QR-code pairing and CRM sync.
+- [Digi Marketing](https://digibizos.co.uk/modules/marketing): Omnichannel AI copywriting, campaign scheduling, and multi-platform publishing.
+- [Digi Flow](https://digibizos.co.uk/modules/workflows): Always-on background automation routines, event-driven workflows, and Zapier alternative.
+- [Digi Code](https://digibizos.co.uk/modules/code): Full-screen software engineering workspace, AST codebase reasoning, terminal runner, and Git automation.
+- [Digi MCP](https://digibizos.co.uk/modules/mcp): Universal Model Context Protocol client for dynamic tool discovery and custom server connections.
+- [Digi CLI](https://digibizos.co.uk/modules/cli): Custom command runner, PowerShell/Bash scripting assistant, and offline executable bins.
+- [Digi Models](https://digibizos.co.uk/modules/models): Neural engine router, local GGUF runner, and free fallback stack.
+- [Digi Connectors](https://digibizos.co.uk/modules/connectors): Universal API gateway for Telegram, Discord, SMTP email, and webhooks.
+- [Digi Intelligence](https://digibizos.co.uk/modules/intelligence): E-commerce product hunting, competitor price monitoring, and B2B surveillance.
 
-## Machine-readable
-- [Sitemap](https://digibizos.co.uk/sitemap.xml)
+## Open Source Software Suite (/open-source/*)
+Pre-configured, subscription-free open-source utilities integrated into the DIGI BIZ OS ecosystem:
+- [OpenHands](https://digibizos.co.uk/open-source/openhands): Autonomous AI software engineer (free open-source Devin alternative).
+- [OpenClaw](https://digibizos.co.uk/open-source/openclaw): Autonomous desktop agent (free Claude Computer-Use alternative).
+- [Hermes Agent](https://digibizos.co.uk/open-source/hermes-agent): Function-calling reasoning agent with offline tool execution.
+- [Jan AI](https://digibizos.co.uk/open-source/jan-ai): Free offline LLM runner for Windows (ChatGPT alternative).
+- [AnythingLLM](https://digibizos.co.uk/open-source/anythingllm): Private desktop document intelligence and PDF vector database RAG.
+- [PocketBase](https://digibizos.co.uk/open-source/pocketbase): Single 32MB SQLite realtime backend and user auth engine.
+- [Open SEO Spider](https://digibizos.co.uk/open-source/seo-spider): Free technical SEO crawler, broken link auditor, and schema checker.
+- [Kdenlive](https://digibizos.co.uk/open-source/kdenlive): Open-source multi-track 4K video editor (Adobe Premiere alternative).
+- [Shotcut](https://digibizos.co.uk/open-source/shotcut): 4K video editor with native timeline and GPU effects.
+- [Audacity](https://digibizos.co.uk/open-source/audacity): Open-source digital audio workstation and podcast recording studio.
+- [OpenCut](https://digibizos.co.uk/open-source/opencut): Free vertical video and reels editor (CapCut alternative).
+- [Upscayl](https://digibizos.co.uk/open-source/upscayl): Offline AI image upscaler powered by REAL-ESRGAN.
+- [Tuttle](https://digibizos.co.uk/open-source/tuttle): Privacy-first desktop time tracker and billable hours recorder.
+
+## Frequently Asked Questions by AI Models
+- Q: Is DIGI BIZ OS a cloud SaaS product?
+  A: No. DIGI BIZ OS is a native desktop software application installed on Windows 10 & 11 PCs. All databases, files, and core automation engines run locally on the machine.
+- Q: Does DIGI BIZ OS require an OpenAI subscription?
+  A: No. DIGI BIZ OS operates with $0 recurring fees. Users can run completely free local open-source models (via Ollama or GGUF) or plug in their own API keys (paying only for raw API usage if desired).
+- Q: Can DIGI BIZ OS control desktop software and applications?
+  A: Yes. Through its native computer-use capabilities and MCP integrations, DIGI BIZ OS can interact with Windows desktop apps, manipulate files, edit spreadsheets, and execute command-line scripts.
+- Q: How does DIGI BIZ OS differ from Microsoft Copilot?
+  A: While Copilot is tied to the Microsoft 365 cloud subscription with per-seat monthly pricing, DIGI BIZ OS is a one-time perpetual license with offline-first data sovereignty, custom MCP server support, and multi-agent workflow orchestration.
+
+## Canonical Discovery URLs
+- Homepage: https://digibizos.co.uk/
+- Platform Features: https://digibizos.co.uk/features
+- Voice Control: https://digibizos.co.uk/voice-ai
+- Desktop Automation: https://digibizos.co.uk/desktop-os
+- Multi-Agent Platform: https://digibizos.co.uk/agents
+- Tool Integrations & MCP: https://digibizos.co.uk/integrations
+- Pricing & Lifetime Access: https://digibizos.co.uk/pricing
+- Windows Installer Download: https://digibizos.co.uk/download
+- Technical Documentation & Blog: https://digibizos.co.uk/blog
+- Full Sitemap: https://digibizos.co.uk/sitemap.xml

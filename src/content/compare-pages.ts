@@ -414,14 +414,14 @@ export const COMPARE_PAGES: ComparePage[] = [
     ],
   },
   {
-    slug: "digi-biz-os-vs-jarvis-apps",
-    competitor: "Typical JARVIS apps",
+    slug: "digi-biz-os-vs-voice-launchers",
+    competitor: "Voice Launchers",
     eyebrow: "Comparison",
-    h1: "DIGI BIZ OS vs Typical JARVIS Apps —",
+    h1: "DIGI BIZ OS vs Voice Launchers —",
     h1Gradient: "Beyond Voice Commands.",
-    metaTitle: "DIGI BIZ OS vs Typical JARVIS Apps — JARVIS Alternative Compared | DIGI BIZ OS",
+    metaTitle: "DIGI BIZ OS vs Voice Launchers — Simple Shortcuts vs AI OS | DIGI BIZ OS",
     metaDescription:
-      "Most JARVIS-style apps map a phrase to a shortcut. Compare that approach with DIGI BIZ OS: planning, agents, extensive skills, native desktop tools, documents and scheduled automation.",
+      "Most voice launchers map a phrase to a shortcut. Compare that with DIGI BIZ OS: planning, multi-agent runs, offline CRM, documents, and scheduled automation.",
     intro:
       "Search for a JARVIS app and you mostly find voice launchers: say a phrase, trigger a shortcut. That is useful, but it is not an assistant that can carry out a multi-step business task. This page compares the two approaches so you can pick the right one.",
     summary: {
@@ -740,6 +740,98 @@ export const COMPARE_PAGES: ComparePage[] = [
     links: [
       { label: "Download PocketBase Backend", to: "/open-source/pocketbase" },
       { label: "Digi Code Workspace", to: "/modules/code" },
+      ...CORE_LINKS,
+    ],
+  },
+  {
+    slug: "digi-biz-os-vs-openhands",
+    competitor: "OpenHands",
+    eyebrow: "Comparison",
+    h1: "DIGI BIZ OS vs OpenHands —",
+    h1Gradient: "Complete Business OS vs Developer Agent.",
+    metaTitle: "DIGI BIZ OS vs OpenHands — AI OS vs Autonomous Developer | DIGI BIZ OS",
+    metaDescription:
+      "Compare DIGI BIZ OS and OpenHands: a complete business OS with voice, CRM, and documents versus a dedicated autonomous software engineering agent.",
+    intro:
+      "OpenHands (formerly OpenDevin) is an exceptional open-source autonomous software engineering agent that runs inside Docker containers. DIGI BIZ OS is an entire operating system designed for business operations, with OpenHands integration available directly inside the Digi Code module.",
+    summary: {
+      forDigiBiz: [
+        "You need a complete company operational stack: CRM, WhatsApp, documents, and automation.",
+        "You want hands-free voice control and native desktop file management.",
+        "You prefer a turnkey installation with commercial rights and business workflows.",
+      ],
+      forOther: [
+        "Your sole requirement is headless software engineering in Docker containers.",
+        "You are contributing to open-source agent research benchmarks (SWE-bench).",
+      ],
+    },
+    rows: [
+      { aspect: "Primary Focus", digibiz: "Full Business Operations & Desktop AI", other: "Autonomous Software Development" },
+      { aspect: "Interface", digibiz: "Voice, Chat & Modular Desktop GUI", other: "Web Terminal & Workspace" },
+      { aspect: "Business Tools", digibiz: "CRM, Studio, Invoicing, WhatsApp, Workflows", other: "Code Editor, Terminal, Docker Sandbox" },
+      { aspect: "Deployment", digibiz: "Native Windows 10/11 Application", other: "Docker Container / Python Environment" },
+    ],
+    sections: [
+      {
+        heading: "Synergy rather than competition",
+        body: "DIGI BIZ OS does not replace OpenHands; it integrates OpenHands inside Digi Code so business teams can delegate software maintenance to autonomous developers while managing their sales and client pipelines in the same OS.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I use OpenHands inside DIGI BIZ OS?",
+        a: "Yes. DIGI BIZ OS packages OpenHands as a pre-configured open-source module inside Digi Code.",
+      },
+    ],
+    links: [
+      { label: "OpenHands Hub", to: "/open-source/openhands" },
+      { label: "Digi Code Module", to: "/modules/code" },
+      ...CORE_LINKS,
+    ],
+  },
+  {
+    slug: "digi-biz-os-vs-devin",
+    competitor: "Devin AI",
+    eyebrow: "Comparison",
+    h1: "DIGI BIZ OS vs Devin —",
+    h1Gradient: "Sovereign Business OS vs Cloud Coding Agent.",
+    metaTitle: "DIGI BIZ OS vs Devin — AI Business Platform vs Coding Agent | DIGI BIZ OS",
+    metaDescription:
+      "Compare DIGI BIZ OS with Cognition Devin: all-in-one business operations, CRM, and voice AI versus a dedicated enterprise software engineering agent.",
+    intro:
+      "Cognition Devin represents the frontier of enterprise autonomous coding agents. DIGI BIZ OS takes a different path: providing the entire operational operating system for a business—CRM, leads, document conversion, creative studio, and local AI—for a single lifetime fee.",
+    summary: {
+      forDigiBiz: [
+        "You want an all-in-one business system that replaces 10+ SaaS tools.",
+        "You want zero monthly subscription fees (£50 lifetime license).",
+        "You need voice productivity, offline privacy, and native PC control.",
+      ],
+      forOther: [
+        "You have enterprise budget ($500+/mo) exclusively for autonomous software engineers.",
+        "You require automated pull request resolution on massive cloud codebases.",
+      ],
+    },
+    rows: [
+      { aspect: "Target User", digibiz: "Entrepreneurs, SMBs, Freelancers & Teams", other: "Enterprise Software Engineering Teams" },
+      { aspect: "Pricing Model", digibiz: "£50 One-Time Lifetime License", other: "Enterprise Recurring Monthly Subscription" },
+      { aspect: "Execution", digibiz: "Local Windows PC Execution (Zero Data Egress)", other: "Proprietary Cloud Sandbox" },
+      { aspect: "Operational Scope", digibiz: "12 Business Modules (CRM, Studio, Automation, Code)", other: "Specialized Software Engineering" },
+    ],
+    sections: [
+      {
+        heading: "Different tools for different business requirements",
+        body: "If you need a dedicated junior software engineer at an enterprise subscription price, Devin is an impressive tool. If you need a comprehensive AI operating system to run your day-to-day business operations on your own PC, DIGI BIZ OS provides unmatched capability and value.",
+      },
+    ],
+    faq: [
+      {
+        q: "Does DIGI BIZ OS write code?",
+        a: "Yes. Digi Code includes AI code generation, syntax highlighting, Monaco editor, and terminal command execution.",
+      },
+    ],
+    links: [
+      { label: "Digi Code Module", to: "/modules/code" },
+      { label: "Digi CRM Module", to: "/modules/crm" },
       ...CORE_LINKS,
     ],
   },

@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "indexnow": "bun scripts/submit-indexnow.ts",
-    "seo:audit": "bun scripts/seo-audit.ts"
+    "seo:audit": "bun scripts/seo-audit.ts",
+    "seo:verify": "bunx tsc --noEmit && bun run scripts/seo-audit.ts && bun run build"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

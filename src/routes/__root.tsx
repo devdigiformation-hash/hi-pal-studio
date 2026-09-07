@@ -104,6 +104,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "Organization",
           "@id": "https://digibizos.co.uk/#organization",
           name: "DIGI BIZ OS",
+          legalName: "Digiformation Ltd",
           url: "https://digibizos.co.uk",
           logo: {
             "@type": "ImageObject",
@@ -112,10 +113,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             height: 512,
           },
           image: "https://digibizos.co.uk/logo-512.png",
-          sameAs: ["https://www.digiformation.co.uk/"],
-          areaServed: ["GB", "PK", "US"],
+          sameAs: [
+            "https://www.digiformation.co.uk/",
+            "https://find-and-update.company-information.service.gov.uk/company/15878241",
+          ],
+          areaServed: ["GB", "US", "CA", "AU", "EU"],
           description:
-            "DIGI BIZ OS is a JARVIS-style AI business operating system for Windows, combining voice control, AI agents, skills, tools, workflows and desktop automation.",
+            "DIGI BIZ OS is an agentic AI business operating system for Windows, combining voice control, AI agents, skills, tools, workflows and desktop automation.",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "71-75 Shelton Street, Covent Garden",
+            addressLocality: "London",
+            postalCode: "WC2H 9JQ",
+            addressCountry: "GB",
+          },
           parentOrganization: {
             "@type": "Organization",
             name: "Digiformation Ltd",
@@ -124,10 +135,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           contactPoint: [
             {
               "@type": "ContactPoint",
-              contactType: "sales",
+              contactType: "customer support",
               email: "info@digiformation.co.uk",
-              telephone: "+92-316-446-7464",
-              availableLanguage: ["en", "ur"],
+              availableLanguage: ["en"],
             },
           ],
         }),
@@ -143,20 +153,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           inLanguage: "en-GB",
           url: "https://digibizos.co.uk",
           publisher: { "@id": "https://digibizos.co.uk/#organization" },
-          potentialAction: {
-            "@type": "SearchAction",
-            target: {
-              "@type": "EntryPoint",
-              urlTemplate: "https://digibizos.co.uk/compare?q={search_term_string}",
-            },
-            "query-input": "required name=search_term_string",
-          },
         }),
       },
       {
         type: "application/ld+json",
         children: JSON.stringify(
           [
+            ["Platform Features Hub", "/features"],
             ["Enterprise Business Modules", "/modules"],
             ["AI Models Universe", "/models"],
             ["JARVIS Voice AI Control", "/voice-ai"],
@@ -166,7 +169,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             ["Multi-Agent Platform", "/agents"],
             ["Desktop Automation OS", "/desktop-os"],
             ["Blog & Knowledge Hub", "/blog"],
-            ["Terms & Conditions", "/terms"],
             ["About Digiformation", "/about"],
             ["Contact & Support", "/contact"],
           ].map(([name, path]) => ({

@@ -61,22 +61,29 @@ export function softwareLd(name: string, description: string, url: string) {
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
+    "@id": `${SITE_URL}/#software`,
     name,
     applicationCategory: "BusinessApplication",
-    operatingSystem: "Windows 10, Windows 11",
+    operatingSystem: "Windows 10 (64-bit), Windows 11 (64-bit)",
     url: abs(url),
     description,
     image: abs("/logo-512.png"),
     softwareVersion: "1.0",
     author: { "@id": `${SITE_URL}/#organization` },
     publisher: { "@id": `${SITE_URL}/#organization` },
-    brand: { "@type": "Brand", name: BRAND },
+    brand: {
+      "@type": "Brand",
+      name: BRAND,
+      url: SITE_URL,
+    },
     offers: {
       "@type": "Offer",
       price: "50",
       priceCurrency: "GBP",
       url: abs("/pricing"),
       availability: "https://schema.org/InStock",
+      priceValidUntil: "2027-12-31",
+      seller: { "@id": `${SITE_URL}/#organization` },
     },
   };
 }
@@ -98,11 +105,12 @@ export function articleLd(opts: {
   description: string;
   path: string;
   date: string;
+  cluster?: string;
 }) {
   const iso = /T/.test(opts.date) ? opts.date : `${opts.date}T09:00:00+00:00`;
   return {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
+    "@type": "TechArticle",
     headline: opts.title,
     description: opts.description,
     datePublished: iso,
@@ -111,12 +119,19 @@ export function articleLd(opts: {
     url: abs(opts.path),
     inLanguage: "en-GB",
     mainEntityOfPage: abs(opts.path),
-    author: { "@type": "Organization", name: BRAND, url: SITE_URL },
+    author: {
+      "@type": "Organization",
+      name: "DIGI BIZ OS Research Team",
+      url: abs("/about"),
+    },
     publisher: {
       "@type": "Organization",
-      name: BRAND,
+      "@id": `${SITE_URL}/#organization`,
+      name: "Digiformation Ltd",
       url: SITE_URL,
       logo: { "@type": "ImageObject", url: abs("/logo-512.png"), width: 512, height: 512 },
     },
+    copyrightHolder: { "@id": `${SITE_URL}/#organization` },
+    ...(opts.cluster ? { articleSection: opts.cluster } : {}),
   };
 }

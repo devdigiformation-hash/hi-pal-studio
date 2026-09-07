@@ -295,6 +295,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
     ],
     links: [
+      { label: "AI operating system architecture", to: "/ai-operating-system" },
       { label: "AI business assistant", to: "/ai-business-assistant" },
       { label: "AI workflow automation", to: "/ai-workflow-automation" },
       { label: "AI agents platform", to: "/agents" },
@@ -764,6 +765,7 @@ export const SEO_PAGES: SeoPage[] = [
     ],
     faq: [{ q: "Can I stop a run?", a: "Yes, runs can be stopped mid-execution." }],
     links: [
+      { label: "Live run tracking", to: "/features/live-tracking" },
       { label: "AI desktop automation", to: "/ai-desktop-automation" },
       { label: "AI browser agent", to: "/ai-browser-agent" },
       { label: "Multi-agent AI", to: "/multi-agent-ai" },
@@ -1760,7 +1762,7 @@ export const SEO_PAGES: SeoPage[] = [
     links: [
       { label: "Digi Marketing", to: "/modules/marketing" },
       { label: "Digi CRM", to: "/modules/crm" },
-      { label: "Digi AI Hub", to: "/features/digiai" },
+      { label: "Digi AI Hub", to: "/features/digi-ai" },
       ...CTA_CORE,
     ],
     image: img(
@@ -2091,6 +2093,7 @@ export const SEO_PAGES: SeoPage[] = [
       { q: "Can I see past runs?", a: "Yes — task history and results are retained for review." },
     ],
     links: [
+      { label: "Live tracking module", to: "/features/live-tracking" },
       { label: "DigiCode", to: "/features/digicode" },
       { label: "DigiFlow", to: "/features/digiflow" },
       { label: "Multi-agent AI", to: "/multi-agent-ai" },
@@ -2161,7 +2164,7 @@ export const SEO_PAGES: SeoPage[] = [
     links: [
       { label: "DigiTasks", to: "/features/digitasks" },
       { label: "DigiFlow", to: "/features/digiflow" },
-      { label: "Digi AI Hub", to: "/features/digiai" },
+      { label: "Digi AI Hub", to: "/features/digi-ai" },
       ...CTA_CORE,
     ],
     image: img(
@@ -2750,7 +2753,7 @@ export const SEO_PAGES: SeoPage[] = [
     links: [
       { label: "JARVIS AI overview", to: "/jarvis-ai" },
       { label: "JARVIS for Windows", to: "/jarvis-for-windows" },
-      { label: "Compare with typical JARVIS apps", to: "/compare/digi-biz-os-vs-jarvis-apps" },
+      { label: "Compare with typical voice launchers", to: "/blog/digi-biz-os-vs-voice-launchers" },
       { label: "Voice assistant", to: "/features/voice-assistant" },
       ...CTA_CORE,
     ],

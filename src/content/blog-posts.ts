@@ -87,6 +87,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     links: [
+      { label: "AI operating system overview", to: "/ai-operating-system" },
       { label: "AI business operating system", to: "/ai-business-operating-system" },
       { label: "AI workflow automation", to: "/ai-workflow-automation" },
     ],
@@ -327,7 +328,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     links: [
       { label: "JARVIS alternative", to: "/jarvis-alternative" },
-      { label: "Compare with typical JARVIS apps", to: "/compare/digi-biz-os-vs-jarvis-apps" },
+      { label: "Compare with voice launchers", to: "/blog/digi-biz-os-vs-voice-launchers" },
       { label: "JARVIS for Windows", to: "/jarvis-for-windows" },
     ],
   },
@@ -454,9 +455,9 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     links: [
-      { label: "AI workflow automation", to: "/modules/workflows" },
-      { label: "Business automation", to: "/modules/workflows" },
-      { label: "DigiFlow Workflows", to: "/modules/workflows" },
+      { label: "DigiFlow Workflow Module", to: "/modules/workflows" },
+      { label: "AI Workflow Automation Solutions", to: "/ai-workflow-automation" },
+      { label: "Business Automation Platform", to: "/features/business-automation" },
     ],
   },
   {
@@ -551,7 +552,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     links: [
       { label: "OpenCut Studio Page", to: "/open-source/opencut" },
-      { label: "OpenCut vs CapCut Comparison", to: "/compare/opencut-vs-capcut" },
+      { label: "OpenCut vs CapCut Comparison", to: "/blog/opencut-vs-capcut" },
       { label: "Kdenlive Video Editor", to: "/open-source/kdenlive" },
     ],
   },
@@ -580,8 +581,8 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     links: [
       { label: "Download Open SEO Spider", to: "/open-source/seo-spider" },
-      { label: "Open SEO Spider vs Screaming Frog", to: "/compare/open-seo-spider-vs-screaming-frog" },
-      { label: "Digi Tools Suite", to: "/modules/tools" },
+      { label: "Open SEO Spider vs Screaming Frog", to: "/blog/open-seo-spider-vs-screaming-frog" },
+      { label: "AI Tools Suite", to: "/features/ai-tools" },
     ],
   },
   {
@@ -727,6 +728,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Browse AI Models Universe", to: "/models" },
       { label: "DeepSeek R1 Specs", to: "/models/deepseek-r1" },
       { label: "Whisper Voice Engine", to: "/models/whisper" },
+      { label: "Model Router Architecture", to: "/features/model-router" },
     ],
   },
   {
@@ -995,7 +997,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     links: [
       { label: "Download Open SEO Spider", to: "/open-source/seo-spider" },
-      { label: "Digi Tools Suite", to: "/modules/tools" },
+      { label: "AI Tools Suite", to: "/features/ai-tools" },
     ],
   },
   {
@@ -1050,6 +1052,245 @@ export const BLOG_POSTS: BlogPost[] = [
     links: [
       { label: "Download PocketBase Backend", to: "/open-source/pocketbase" },
       { label: "Digi Code Workspace", to: "/modules/code" },
+    ],
+  },
+  {
+    slug: "hardware-requirements-for-local-ai",
+    title: "Hardware Requirements for Local AI on Windows: RAM, VRAM & GPU Guide (2026)",
+    metaTitle: "Hardware Requirements for Local AI on Windows (2026 Guide) | DIGI BIZ OS",
+    description:
+      "What hardware do you need to run local AI models and autonomous agents on Windows? A practical breakdown of RAM, VRAM, GPU compute, and model sizing.",
+    cluster: "AI Models",
+    date: "2026-09-02",
+    readingTime: "8 min read",
+    body: [
+      {
+        heading: "The true bottleneck: VRAM vs System RAM",
+        paragraphs: [
+          "Running local AI models on a Windows desktop requires understanding where model weights live during inference. The central processor (CPU) can execute neural weights using system DDR4/DDR5 RAM, but dedicated video memory (VRAM) on an NVIDIA GPU delivers 10x to 25x faster token generation.",
+          "When selecting models inside DIGI BIZ OS or local runners like Jan AI and Ollama, matching model parameter size to available memory ensures smooth real-time voice and automation performance.",
+        ],
+      },
+      {
+        heading: "Model sizing and hardware tiers for Windows",
+        paragraphs: [
+          "In 2026, 4-bit and 8-bit quantized models (GGUF / AWQ) make local inference accessible across common PC configurations:",
+        ],
+        bullets: [
+          "Entry Tier (8GB - 16GB System RAM, Integrated GPU): Capable of running 3B to 7B quantized models (e.g. Qwen 2.5 3B, Llama 3.2 3B, Whisper Base) for voice transcription and basic document summarization.",
+          "Mid Tier (16GB - 32GB RAM, 8GB - 12GB VRAM e.g. RTX 3060 / 4060): The sweet spot for desktop business automation. Comfortably runs 8B to 14B models (DeepSeek R1 Distill 8B, Qwen 2.5 Coder 14B) with fast 30-50 tokens/sec speeds.",
+          "Power Tier (32GB - 64GB RAM, 16GB - 24GB VRAM e.g. RTX 4080 / 4090): Runs 32B models fully in VRAM, or offloads 70B models for complex multi-agent coding and strategic reasoning.",
+        ],
+      },
+      {
+        heading: "Hybrid inference in DIGI BIZ OS",
+        paragraphs: [
+          "You do not need a $3,000 gaming rig to benefit from DIGI BIZ OS. The platform features an intelligent multi-model router: lightweight local models handle offline voice commands and repetitive file tasks, while complex reasoning can be routed to cloud endpoints (Claude 3.7 Sonnet, GPT-4o) using pay-as-you-go API keys with zero subscription overhead.",
+        ],
+      },
+    ],
+    links: [
+      { label: "AI Models Universe", to: "/models" },
+      { label: "Offline AI Capabilities", to: "/features/offline-ai" },
+      { label: "Jan AI Local Runner", to: "/open-source/jan-ai" },
+      { label: "One-Time Lifetime Pricing", to: "/pricing" },
+    ],
+  },
+  {
+    slug: "how-to-connect-mcp-servers-desktop-ai",
+    title: "How to Connect Model Context Protocol (MCP) Servers to Desktop AI",
+    metaTitle: "How to Connect MCP Servers to Desktop AI (Step-by-Step) | DIGI BIZ OS",
+    description:
+      "Learn how the Model Context Protocol (MCP) works on Windows: connecting local tools, filesystem runners, GitHub integrations, and custom agent servers.",
+    cluster: "Agents",
+    date: "2026-09-03",
+    readingTime: "9 min read",
+    body: [
+      {
+        heading: "Why Model Context Protocol (MCP) is the universal standard",
+        paragraphs: [
+          "Before the Model Context Protocol (MCP) introduced by Anthropic, connecting an AI agent to an external tool required writing proprietary integrations for every application. MCP standardizes tool discovery, schema inspection, and execution over standardized JSON-RPC communication.",
+          "With an MCP client built directly into the operating system, DIGI BIZ OS can discover and execute tools across local databases, file systems, GitHub repositories, and browser environments without vendor lock-in.",
+        ],
+      },
+      {
+        heading: "Connecting local stdio servers on Windows",
+        paragraphs: [
+          "Most desktop MCP servers communicate through standard input/output (stdio) streams launched as child processes. Connecting an MCP server in DIGI BIZ OS requires three basic parameters in your settings:",
+        ],
+        bullets: [
+          "Command & Executable: The local binary path (e.g., node.exe, python.exe, or npx).",
+          "Arguments: Target server packages (e.g., @modelcontextprotocol/server-filesystem, mcp-server-sqlite).",
+          "Environment Variables: Sandboxed paths and read-only directory boundaries to guarantee operating system security.",
+        ],
+      },
+      {
+        heading: "Security and human-in-the-loop oversight",
+        paragraphs: [
+          "Unlike cloud platforms that run remote scripts blindly, DIGI BIZ OS provides forensic live tracking for every MCP tool call. Users can inspect tool arguments, approve file writes, and revoke server permissions in real time from the desktop interface.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Digi MCP Universal Client", to: "/modules/mcp" },
+      { label: "Integrations & Tools Hub", to: "/integrations" },
+      { label: "Multi-Agent Platform", to: "/agents" },
+      { label: "Digi Code Workspace", to: "/modules/code" },
+    ],
+  },
+  {
+    slug: "digi-biz-os-vs-open-interpreter",
+    title: "DIGI BIZ OS vs Open Interpreter: Complete Desktop AI OS vs Developer Toolkit",
+    metaTitle: "DIGI BIZ OS vs Open Interpreter — Computer-Use AI Compared | DIGI BIZ OS",
+    description:
+      "A technical comparison of Open Interpreter and DIGI BIZ OS: developer CLI toolkits versus an enterprise desktop AI operating system with voice and CRM.",
+    cluster: "Software Comparisons",
+    date: "2026-08-30",
+    readingTime: "7 min read",
+    body: [
+      {
+        heading: "Packaged Product vs Extensible Developer Framework",
+        paragraphs: [
+          "Both Open Interpreter and DIGI BIZ OS operate on the core premise of computer-use AI: an artificial intelligence that interacts directly with local files, terminal shells, and desktop applications rather than living exclusively within a cloud browser sandbox.",
+          "The fundamental divergence lies in implementation architecture. Open Interpreter is a Python-based open-source CLI toolkit requiring manual virtual environment configuration, terminal execution, and continuous developer supervision. DIGI BIZ OS is an all-in-one desktop operating system engineered for commercial teams, featuring an offline CRM, background task queues, multi-agent coordination, and a full graphical workspace.",
+        ],
+      },
+      {
+        heading: "Capability Matrix and Operational Footprint",
+        paragraphs: [
+          "Open Interpreter excels at rapid exploratory data analysis, bash script execution, and ad-hoc programming automation for technical power users.",
+          "DIGI BIZ OS expands computer-use across the entire enterprise lifecycle: offline document processing, multi-track timeline video editing, WhatsApp customer engagement, persistent vector memory, and scheduled background cron jobs under full human-in-the-loop oversight.",
+        ],
+        bullets: [
+          "Deployment: Open Interpreter runs as a Python terminal utility; DIGI BIZ OS installs as a standalone Windows 10/11 application.",
+          "Interface: Open Interpreter is terminal-first; DIGI BIZ OS provides hands-free Whisper voice commands, full visual telemetry, and multi-monitor dashboards.",
+          "Commercial Scope: DIGI BIZ OS includes an enterprise Knowledge Base CRM, 12 business modules, and 13 packaged open-source tools with zero recurring seat fees.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Computer-Use AI Overview", to: "/computer-use-ai" },
+      { label: "AI Desktop Assistant Guide", to: "/ai-desktop-assistant" },
+      { label: "Digi Code Module", to: "/modules/code" },
+      { label: "One-Time Lifetime Pricing", to: "/pricing" },
+    ],
+  },
+  {
+    slug: "saas-consolidation-guide",
+    title: "SaaS Consolidation: How to Replace 10+ Subscriptions with a Local AI OS",
+    metaTitle: "SaaS Consolidation Guide: Save $4,800+/Year with a Local AI OS | DIGI BIZ OS",
+    description:
+      "Learn how modern businesses are eliminating $4,800+/year in fragmented SaaS subscriptions across video editing, CRM, voice synthesis, and workflow automation.",
+    cluster: "SaaS Replacement",
+    date: "2026-09-04",
+    readingTime: "9 min read",
+    body: [
+      {
+        heading: "The Fragmented SaaS Tax on Modern SMBs",
+        paragraphs: [
+          "A typical modern digital business pays between $350 and $600 each month across dozens of disconnected cloud services: $20/mo for CapCut Pro or Premiere, $22/mo for ElevenLabs voice generation, $29/mo for HeyGen avatar synthesis, $50/mo for HubSpot or Pipedrive CRM, $20/mo for Zapier automations, and $20/mo each for AI chatbots.",
+          "Beyond the direct financial drain of $4,800+ annually per seat, companies suffer from severe workflow fragmentation, data silos, fragile API webhooks that break silently, and third-party data privacy exposure.",
+        ],
+      },
+      {
+        heading: "Consolidation Through Local Desktop AI",
+        paragraphs: [
+          "By deploying an autonomous AI business operating system locally on Windows workstations, organizations run sovereign offline tools that leverage existing PC hardware:",
+        ],
+        bullets: [
+          "Creative Media: Native timeline video editing, offline Whisper transcription, and local voice generation eliminate creative cloud subscriptions.",
+          "Revenue Operations: Embedded SQLite databases and local CRM modules eliminate per-contact SaaS hosting fees.",
+          "Workflow Automation: Native background worker queues and MCP servers eliminate Zapier task consumption limits and payload markups.",
+          "Total Cost of Ownership: One single £50 lifetime license replaces recurring annual cloud bills while preserving 100% data sovereignty.",
+        ],
+      },
+      {
+        heading: "Three-Year TCO Comparison Model",
+        paragraphs: [
+          "Year 1: 14 SaaS tools = $4,824. DIGI BIZ OS = £50 (~$65 USD). Net savings: $4,759.",
+          "Year 2: 14 SaaS tools = $9,648 cumulative. DIGI BIZ OS = $65. Net savings: $9,583.",
+          "Year 3: 14 SaaS tools = $14,472 cumulative. DIGI BIZ OS = $65. Net savings: $14,407.",
+        ],
+      },
+    ],
+    links: [
+      { label: "SaaS Comparison Matrix", to: "/compare" },
+      { label: "AI Business Operating System", to: "/ai-business-operating-system" },
+      { label: "Digi CRM Module", to: "/modules/crm" },
+      { label: "One-Time Lifetime Pricing", to: "/pricing" },
+    ],
+  },
+  {
+    slug: "cloud-ai-vs-local-ai",
+    title: "Cloud AI vs Local AI for Business: Security, Latency, Cost, and Architecture Compared",
+    metaTitle: "Cloud AI vs Local AI for Business (2026 Comparison) | DIGI BIZ OS",
+    description:
+      "A balanced architectural comparison of Cloud AI vs Local AI: compare data confidentiality, inference latency, hardware requirements, and hybrid deployment.",
+    cluster: "Local AI",
+    date: "2026-09-04",
+    readingTime: "8 min read",
+    body: [
+      {
+        heading: "Architectural Trade-Offs in Enterprise AI",
+        paragraphs: [
+          "Deciding between Cloud AI (OpenAI GPT-4o, Anthropic Claude 3.7) and Local AI (DeepSeek R1, Meta Llama 3.3, Qwen 2.5 Coder) is the central infrastructure decision for businesses in 2026.",
+          "Cloud APIs provide instant access to massive frontier weights without local hardware investment, but require transmitting proprietary customer records over public networks, introduce network latency, and incur recurring per-token inference charges.",
+          "Local AI execution runs models directly on consumer workstation GPUs and unified RAM via GGUF/AWQ quantizations, guaranteeing zero external data egress, sub-millisecond local latency, and zero ongoing inference fees.",
+        ],
+      },
+      {
+        heading: "The Hybrid Desktop Advantage",
+        paragraphs: [
+          "Modern enterprise software does not force a binary choice. DIGI BIZ OS implements a smart Model Router that routes routine parsing, document classification, and confidential customer data through local offline weights, while allowing users to selectively call frontier cloud APIs for complex reasoning tasks using their own direct API keys with zero platform markup.",
+        ],
+        bullets: [
+          "Data Sovereignty: Local models comply with GDPR, HIPAA, and strict client NDA agreements by keeping files on-device.",
+          "Inference Cost: Local execution has a marginal cost of $0.00 per token regardless of batch size.",
+          "Reliability: Offline models remain 100% operational during cloud outages, internet disconnections, or travel.",
+        ],
+      },
+    ],
+    links: [
+      { label: "AI Models Universe", to: "/models" },
+      { label: "Hardware Requirements for Local AI", to: "/blog/hardware-requirements-for-local-ai" },
+      { label: "Model Router Architecture", to: "/features/model-router" },
+      { label: "Desktop OS Overview", to: "/desktop-os" },
+    ],
+  },
+  {
+    slug: "ai-agents-vs-traditional-automation",
+    title: "AI Agents vs Traditional Workflow Automation: Zapier & Make vs Autonomous Loops",
+    metaTitle: "AI Agents vs Traditional Automation (Zapier/Make Compared) | DIGI BIZ OS",
+    description:
+      "Compare deterministic rule-based automation with autonomous AI agents: error handling, schema resilience, natural language delegation, and cost.",
+    cluster: "Automation",
+    date: "2026-09-05",
+    readingTime: "8 min read",
+    body: [
+      {
+        heading: "Deterministic Rules vs Dynamic Agentic Reasoning",
+        paragraphs: [
+          "Traditional workflow automation platforms like Zapier, Make, and Workato rely on rigid 'If This Then That' (IFTTT) logic. When an API payload changes schema, a website updates its DOM structure, or an input document differs by one field, deterministic workflows immediately break and halt execution.",
+          "Autonomous AI agents introduce dynamic reasoning loops (Plan -> Act -> Observe -> Correct). When an agent encounters unexpected data, it inspects the schema, self-heals the query, alternative tools, or flags the specific exception with contextual diagnostic logs.",
+        ],
+      },
+      {
+        heading: "Key Architectural Differences",
+        paragraphs: [
+          "Rule-based tools require manual configuration for every possible branch. Agentic systems accept natural language goals ('Extract invoice line items from these PDFs and update the client pipeline in CRM') and decompose the goal into ordered tool invocations.",
+        ],
+        bullets: [
+          "Resilience: Traditional tools throw unhandled errors on edge cases; agents retry and adapt with fallback strategies.",
+          "Maintenance: Traditional workflows require hundreds of maintenance hours as third-party APIs update; agents adapt to new interfaces dynamically.",
+          "Execution Cost: Cloud automation vendors bill per task execution; desktop AI agents run unlimited steps on local hardware without metering.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Multi-Agent Platform", to: "/agents" },
+      { label: "AI Workflow Automation", to: "/ai-workflow-automation" },
+      { label: "DigiTasks Execution Engine", to: "/features/digitasks" },
+      { label: "One-Time Lifetime Pricing", to: "/pricing" },
     ],
   },
 ];

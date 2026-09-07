@@ -3,9 +3,9 @@ import DesktopOSPage from "@/pages/DesktopOSPage";
 import { buildMeta, breadcrumbLd, softwareLd } from "@/lib/seo";
 
 const PATH = "/desktop-os";
-const TITLE = "Desktop Automation — AI Desktop OS for Windows | DIGI BIZ OS";
+const TITLE = "Autonomous Desktop AI Workstation — Business Automation OS | DIGI BIZ OS";
 const DESC =
-  "The desktop layer of DIGI BIZ OS: work with files, applications, terminal and browser through AI agents, with live tracking of every action.";
+  "Transform Windows 10 & 11 into an autonomous business workstation. Run local models, orchestrate desktop apps, execute CLI scripts, and manage files hands-free.";
 
 export const Route = createFileRoute("/desktop-os")({
   head: () => {
