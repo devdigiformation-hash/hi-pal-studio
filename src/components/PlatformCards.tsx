@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import GlassCard from "@/components/GlassCard";
 import MonoBadge from "@/components/MonoBadge";
 import CyanButton from "@/components/CyanButton";
@@ -55,9 +56,11 @@ export default function PlatformCards() {
           agents, available today.
         </p>
         <div className="mt-auto">
-          <CyanButton className="w-full !px-4 text-[13px]" icon={<WindowsIcon size={15} />}>
-            Download
-          </CyanButton>
+          <Link to="/pricing" className="block">
+            <CyanButton className="w-full !px-4 text-[13px]" icon={<WindowsIcon size={15} />}>
+              Get Now
+            </CyanButton>
+          </Link>
         </div>
       </GlassCard>
 

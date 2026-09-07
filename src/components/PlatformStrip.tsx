@@ -28,8 +28,8 @@ export default function PlatformStrip() {
               onClick={(e) => e.preventDefault()}
               className="w-full min-w-0 cursor-not-allowed px-2 text-[11px] sm:w-auto sm:px-5 sm:text-[13px]"
             >
-              <span className="hidden sm:inline">Download for </span>
               {item.label}
+              <span className="hidden sm:inline"> version</span>
             </CyanButton>
             <span
               className="pointer-events-none absolute -top-1.5 right-0 rounded-full border px-1.5 py-[1px] font-mono text-[8px] uppercase tracking-[0.14em] backdrop-blur-md sm:-right-1.5"
