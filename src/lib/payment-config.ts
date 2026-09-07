@@ -119,9 +119,9 @@ export type PriceSet = {
 // Public international price set — the safe default the client renders before (or
 // without) a server response. Never contains the Pakistan numbers.
 export const INTL_PRICES: Record<PlanId, PriceSet> = {
-  lifetime: { gbp: 50, pkr: 18000, usd: 63, compareGbp: 69, comparePkr: 25000, compareUsd: 88 },
-  custom_build: { gbp: 80, pkr: 28800, usd: 100, compareGbp: 119, comparePkr: 42000, compareUsd: 149 },
-  source_code: { gbp: 200, pkr: 72000, usd: 250, compareGbp: 279, comparePkr: 100000, compareUsd: 349 },
+  lifetime: { gbp: 49, pkr: 17640, usd: 61, compareGbp: 69, comparePkr: 25000, compareUsd: 88 },
+  custom_build: { gbp: 79, pkr: 28440, usd: 99, compareGbp: 119, comparePkr: 42000, compareUsd: 149 },
+  source_code: { gbp: 199, pkr: 71640, usd: 249, compareGbp: 279, comparePkr: 100000, compareUsd: 349 },
 };
 
 export function amountFromSet(set: PriceSet, currency: Currency): number {

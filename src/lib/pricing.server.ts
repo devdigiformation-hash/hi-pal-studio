@@ -10,18 +10,17 @@ import type { PlanId, Region, Currency, PriceSet } from "./payment-config";
 
 const REGIONAL_PRICES: Record<PlanId, Record<Region, PriceSet>> = {
   lifetime: {
-    intl: { gbp: 50, pkr: 18000, usd: 63, compareGbp: 69, comparePkr: 25000, compareUsd: 88 },
-    pk: { gbp: 30, pkr: 10800, usd: 38, compareGbp: 50, comparePkr: 18000, compareUsd: 63 },
+    intl: { gbp: 49, pkr: 17640, usd: 61, compareGbp: 69, comparePkr: 25000, compareUsd: 88 },
+    pk: { gbp: 29, pkr: 10440, usd: 36, compareGbp: 49, comparePkr: 18000, compareUsd: 61 },
   },
-  // Setup and Source Code are the same price in every region — only Lifetime
-  // carries the Pakistan discount.
+  // Pakistan carries a discount on every plan; international keeps the higher price.
   custom_build: {
-    intl: { gbp: 80, pkr: 28800, usd: 100, compareGbp: 119, comparePkr: 42000, compareUsd: 149 },
-    pk: { gbp: 50, pkr: 18000, usd: 63, compareGbp: 79, comparePkr: 28000, compareUsd: 99 },
+    intl: { gbp: 79, pkr: 28440, usd: 99, compareGbp: 119, comparePkr: 42000, compareUsd: 149 },
+    pk: { gbp: 49, pkr: 17640, usd: 61, compareGbp: 79, comparePkr: 28000, compareUsd: 99 },
   },
   source_code: {
-    intl: { gbp: 200, pkr: 72000, usd: 250, compareGbp: 279, comparePkr: 100000, compareUsd: 349 },
-    pk: { gbp: 150, pkr: 54000, usd: 188, compareGbp: 200, comparePkr: 72000, compareUsd: 250 },
+    intl: { gbp: 199, pkr: 71640, usd: 249, compareGbp: 279, comparePkr: 100000, compareUsd: 349 },
+    pk: { gbp: 149, pkr: 53640, usd: 186, compareGbp: 199, comparePkr: 72000, compareUsd: 249 },
   },
 };
 
