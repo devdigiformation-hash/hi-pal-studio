@@ -1,14 +1,37 @@
 import OpenSourceValueComparisonChart from "@/components/seo/OpenSourceValueComparisonChart";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  Smile,
-  Sparkles,
-  Mic,
+  Code2,
+  Bug,
+  MonitorSmartphone,
+  RefreshCcw,
+  Wrench,
+  BadgeDollarSign,
+  Search,
   Zap,
   ShieldCheck,
   PiggyBank,
+  FileCode,
+  Layers,
+  Activity,
+  Smile,
+  Sparkles,
+  Mic,
+  Video,
+  Camera,
+  Sliders,
+  Scissors,
+  Music,
+  Radio,
+  FileText,
+  Bot,
+  Users,
+  Database,
+  Cpu,
+  Terminal,
+  ExternalLink,
+  GitFork,
   CheckCircle2,
-  Download,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
@@ -16,20 +39,24 @@ import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
 import CyanButton from "@/components/CyanButton";
-import GhostButton from "@/components/GhostButton";
-import MonoBadge from "@/components/MonoBadge";
-import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
-import exeFile from "@/assets/facefusion-studio.exe.asset.json";
-import zipFile from "@/assets/facefusion-master.zip.asset.json";
+import OpenSourceSubpageTrustSection from "@/components/seo/OpenSourceSubpageTrustSection";
+import OpenSourceSubpageFaq from "@/components/seo/OpenSourceSubpageFaq";
+import OpenSourceTechSpecs from "@/components/seo/OpenSourceTechSpecs";
+import OpenSourceRelatedTools from "@/components/seo/OpenSourceRelatedTools";
+import OpenSourceDigiBizBridge from "@/components/seo/OpenSourceDigiBizBridge";
+import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
 
-const TITLE = "FaceFusion AI Face Swap Studio — Free Next-Gen Face Swapper for Windows";
+const toolData = OPEN_SOURCE_SUBPAGES["facefusion"];
+
+const TITLE = "Next-Gen 4K Face Swapping & Facial Restoration for Windows — 100% Free — Free Open-Source Alternative";
 const DESC =
-  "Download FaceFusion free for Windows: swap faces in 4K videos & photos, built-in GFPGAN/CodeFormer AI facial restoration, lip-sync, and 100% local privacy.";
+  toolData.tagline + " Download 100% free with verified licensing, zero malware, and complete local privacy.";
 
-const EXE_URL = exeFile.url;
-const ZIP_URL = zipFile.url;
+const DOWNLOAD_URL = toolData.downloadUrl;
+const ZIP_URL = toolData.downloadUrl;
+const REPO_URL = toolData.repoUrl;
 
 const FEATURES = [
   {
@@ -70,53 +97,13 @@ const FEATURES = [
   },
 ];
 
-const COMPARISON = [
-  {
-    label: "Pricing Model",
-    tool: "$0 — Free Forever",
-    other1: "$300+/yr (Cloud Deepfake SaaS)",
-    other2: "$20–$50/mo (Remaker AI credits)",
-  },
-  {
-    label: "Face Swaps Limit",
-    tool: "Unlimited Free Swaps",
-    other1: "Strict monthly credit limits",
-    other2: "Pay per photo / video minute",
-  },
-  {
-    label: "Video Resolution",
-    tool: "Native 4K / 60FPS",
-    other1: "Often capped at 720p/1080p",
-    other2: "Credits multiplier for 4K",
-  },
-  {
-    label: "Data Privacy",
-    tool: "100% Offline Local PC",
-    other1: "Uploaded to cloud servers",
-    other2: "Photos stored on cloud",
-  },
-  {
-    label: "Lip-Sync & Enhancers",
-    tool: "Built-in GFPGAN & CodeFormer",
-    other1: "Extra paid add-on",
-    other2: "Not included",
-  },
-];
-
-const REQUIREMENTS = [
-  "Operating system: Windows 10 / Windows 11 (64-bit)",
-  "RAM: 8 GB minimum (16 GB recommended for video batch processing)",
-  "GPU: NVIDIA RTX GPU (CUDA) recommended for 10x speed, or Intel/AMD CPU with DirectML",
-  "Storage: 4 GB free disk space for AI neural weights",
-  "Python: Python 3.10+ (included in standalone bundles)",
-];
-
 export const Route = createFileRoute("/open-source/facefusion")({
   head: () => {
     const { meta, links } = buildMeta({
       path: "/open-source/facefusion",
       title: TITLE,
       description: DESC,
+      
     });
     return {
       meta,
@@ -128,7 +115,7 @@ export const Route = createFileRoute("/open-source/facefusion")({
             breadcrumbLd([
               { name: "Home", path: "/" },
               { name: "Open Source", path: "/open-source" },
-              { name: "FaceFusion", path: "/open-source/facefusion" },
+              { name: toolData.name, path: "/open-source/facefusion" },
             ]),
           ),
         },
@@ -137,12 +124,31 @@ export const Route = createFileRoute("/open-source/facefusion")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            name: "FaceFusion Next-Gen AI Face Swapper",
-            applicationCategory: "MultimediaApplication",
-            operatingSystem: "Windows 10, Windows 11 (64-bit)",
+            name: toolData.name,
+            applicationCategory: "DeveloperApplication",
+            operatingSystem: toolData.requirements.os,
             description: DESC,
             url: abs("/open-source/facefusion"),
+            
+            downloadUrl: abs(DOWNLOAD_URL),
+            license: toolData.license,
+            codeRepository: REPO_URL,
             offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: toolData.faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: f.a,
+              },
+            })),
           }),
         },
       ],
@@ -159,72 +165,87 @@ function FaceFusionPage() {
           trail={[
             { name: "Home", path: "/" },
             { name: "Open Source", path: "/open-source" },
-            { name: "FaceFusion", path: "/open-source/facefusion" },
+            { name: toolData.shortName, path: "/open-source/facefusion" },
           ]}
         />
         <div className="mx-auto grid max-w-[1180px] items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
           <div>
-            <EyebrowLabel
-              text="🎁 #1 OPEN-SOURCE AI FACE SWAP ENGINE • 25,000+ GITHUB STARS"
-              color="var(--cyan)"
-            />
+            <EyebrowLabel text={toolData.eyebrow} color="var(--cyan)" />
             <p className="reveal-item mt-5 font-display text-[15px] font-bold uppercase tracking-[0.18em] text-[var(--cyan)]">
-              FaceFusion Next-Gen AI Face Swapper
+              {toolData.shortName} • {toolData.category}
             </p>
             <h1 className="reveal-item delay-1 mt-3 font-display text-[32px] font-extrabold leading-[1.1] tracking-[-0.035em] text-[var(--text-primary)] md:text-[46px]">
-              Next-Gen AI Face Swapping & Lip-Sync for Videos & Photos —{" "}
-              <GradientText from="#2FE0C8" to="#EC4899">
+              Next-Gen 4K Face Swapping & Facial Restoration for Windows —{" "}
+              <GradientText from="#2FE0C8" to="#8B7CF6">
                 100% Free
               </GradientText>
             </h1>
             <p className="reveal-item delay-2 mt-6 max-w-[640px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[16.5px]">
-              The industry standard in open-source facial manipulation. Swap faces seamlessly in
-              high-definition videos, enhance resolution with built-in GFPGAN/CodeFormer, and generate
-              realistic lip-sync with zero monthly fees.
+              {toolData.tagline} Verified open-source alternative to {toolData.alternativeTo.join(", ")}. Enjoy full offline privacy, zero subscriptions, and complete ownership.
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
-              <a href={EXE_URL} download="FaceFusion-Studio.exe">
+              <a
+                href={DOWNLOAD_URL}
+                download="FaceFusion-Studio-Installer.exe"
+              >
                 <CyanButton size="lg" icon={<WindowsIcon />}>
-                  Download FaceFusion Studio (.EXE)
+                  Download FaceFusion Launcher (.EXE)
                 </CyanButton>
               </a>
-              <a href={ZIP_URL} download="facefusion-master.zip">
-                <GhostButton size="lg" icon={<Download size={18} />}>
-                  Source Code (.ZIP)
-                </GhostButton>
+
+              <a
+                href={REPO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-[var(--r-md)] border border-white/15 bg-white/[0.04] font-mono text-[13.5px] font-semibold text-zinc-200 hover:text-white hover:bg-white/[0.08] transition-all"
+              >
+                <GitFork size={16} className="text-blue-400" />
+                <span>Official GitHub ({toolData.stars})</span>
+                <ExternalLink size={13} className="text-zinc-400" />
               </a>
             </div>
-            <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
-              Direct File Trigger: FaceFusion-Studio.exe + facefusion-master.zip • Windows 10/11 & Web UI • MIT License
-            </p>
+
+            <div className="mt-4 flex flex-wrap items-center gap-3 font-mono text-[12px] text-zinc-400">
+              <span className="flex items-center gap-1 text-emerald-400">
+                <CheckCircle2 size={13} />
+                <span>{toolData.downloadTypeLabel}</span>
+              </span>
+              <span>•</span>
+              <span>{toolData.requirements.os}</span>
+              <span>•</span>
+              <span>{toolData.license}</span>
+            </div>
           </div>
 
           <OpenSourceHeroStage
             toolId="facefusion"
-            title="FaceFusion Next-Gen Neural Swapper"
-            category="AI Media"
-            color="#F43F5E"
-            downloadUrl={ZIP_URL}
-            downloadFilename="facefusion-master.zip"
-            license="MIT License (100% Free)"
-            stars="28.9k ★"
-            version="v3.1.1"
+            title="FaceFusion Next-Gen Face Swap"
+            category="AI Video & Media"
+            color="#8B7CF6"
+            downloadUrl={DOWNLOAD_URL}
+            downloadFilename="FaceFusion-Studio-Installer.exe"
+            license={toolData.license + " (100% Free)"}
+            stars={toolData.stars}
+            version="v2.6.1"
             
-            quickCommand={"python run.py --execution-providers cuda --face-swapper-model inswapper_128"}
-            badges={["Real-Time CUDA GPU","Lip Sync & Enhancer","Zero Cloud Fees"]}
-            annualSavings="Save $348 / year vs HeyGen"
+            quickCommand="python install.py --onnxruntime cuda"
+            badges={["GFPGAN / CodeFormer","Real-Time Lip Sync","CUDA / DirectML"]}
+            annualSavings="Save $120 / year vs Remaker AI"
+            repoUrl={REPO_URL}
+            downloadLabel="Download FaceFusion Launcher (.EXE)"
           />
         </div>
       </SectionWrapper>
 
+      {/* 6 CORE SUPERPOWERS */}
       <SectionWrapper className="bg-[var(--bg-surface)]">
         <div className="mx-auto max-w-[1080px]">
           <h2 className="font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[32px]">
-            6 Key Superpowers of FaceFusion
+            6 Core Superpowers of {toolData.shortName}
           </h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {FEATURES.map((f) => (
+            {FEATURES.map((f: any) => (
               <GlassCard key={f.title} glowColor={f.color} className="h-full p-5">
                 <f.icon size={22} color={f.color} strokeWidth={2} />
                 <h3 className="mt-3 font-display text-[15.5px] font-bold text-[var(--text-primary)]">
@@ -239,79 +260,69 @@ function FaceFusionPage() {
         </div>
       </SectionWrapper>
 
+      {/* VALUE COMPARISON CHART */}
       <SectionWrapper>
-        <OpenSourceValueComparisonChart toolId="facefusion" downloadUrl={EXE_URL} />
+        <OpenSourceValueComparisonChart toolId="facefusion" downloadUrl={DOWNLOAD_URL} />
       </SectionWrapper>
 
-      <SectionWrapper className="bg-[var(--bg-surface)]">
-        <div className="mx-auto grid max-w-[1080px] gap-10 lg:grid-cols-2">
-          <div>
-            <EyebrowLabel text="System Requirements" color="var(--cyan)" />
-            <h2 className="mt-4 font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[30px]">
-              What you need to run FaceFusion
-            </h2>
-            <TickList className="mt-6" items={REQUIREMENTS} />
-          </div>
-          <GlassCard glowColor="var(--purple)" className="p-6">
-            <EyebrowLabel text="Brought to you by" color="var(--purple)" />
-            <h3 className="mt-4 font-display text-[20px] font-bold text-[var(--text-primary)]">
-              Digiformation Ltd
-            </h3>
-            <p className="mt-1 font-body text-[14px] text-[var(--text-secondary)]">
-              Founder: Muhammad Haroon
-            </p>
-            <p className="mt-3 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-              UK Company Formation • Payment Solutions • Software & Web Development
-            </p>
-            <div className="mt-5 flex flex-wrap gap-3">
-              <MonoBadge>+92 316 446 7464</MonoBadge>
-            </div>
-            <div className="mt-5 flex flex-wrap gap-4 font-body text-[14px]">
-              <a
-                href="https://www.digiformation.co.uk/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--cyan)] hover:underline"
-              >
-                digiformation.co.uk
-              </a>
-              <a
-                href="https://linktr.ee/digiformationltd"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--cyan)] hover:underline"
-              >
-                Linktree
-              </a>
-            </div>
-          </GlassCard>
-        </div>
-      </SectionWrapper>
+      {/* TECHNICAL SYSTEM REQUIREMENTS */}
+      <OpenSourceTechSpecs
+        toolName={toolData.shortName}
+        requirements={toolData.requirements}
+        privacy={toolData.privacy}
+      />
 
+      {/* TRUST & PROVENANCE SECTION */}
+      <OpenSourceSubpageTrustSection tool={toolData} />
+
+      {/* FAQ ACCORDION SECTION (AEO / GEO) */}
+      <OpenSourceSubpageFaq toolName={toolData.shortName} faqs={toolData.faqs} />
+
+      {/* RELATED OPEN-SOURCE TOOLS */}
+      <OpenSourceRelatedTools currentToolId={toolData.id} relatedToolIds={toolData.relatedToolIds} />
+
+      {/* NATURAL DIGI BIZ OS BRIDGE */}
+      <OpenSourceDigiBizBridge
+        headline={toolData.bridge.headline}
+        description={toolData.bridge.description}
+        highlights={toolData.bridge.highlights}
+      />
+
+      {/* BOTTOM ACTION SECTION */}
       <SectionWrapper>
         <div className="mx-auto max-w-[860px] text-center">
           <h2 className="font-display text-[26px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[38px]">
-            Download FaceFusion Free for Windows
+            Get {toolData.shortName} Free, Then Connect to DIGI BIZ OS
           </h2>
-          <p className="mt-4 font-body text-[15px] text-[var(--text-secondary)]">
-            Enjoy full access with zero watermarks, zero subscription fees, and 100% offline privacy.
+          <p className="mt-4 font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]">
+            Enjoy full privacy, zero recurring subscriptions, and perpetual open-source freedom on your hardware.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href={EXE_URL} download="FaceFusion-Studio.exe">
+            <a
+              href={DOWNLOAD_URL}
+              download="FaceFusion-Studio-Installer.exe"
+            >
               <CyanButton size="lg" icon={<WindowsIcon />}>
-                Download FaceFusion Studio (.EXE)
+                Download FaceFusion Launcher (.EXE)
               </CyanButton>
             </a>
-            <a href={ZIP_URL} download="facefusion-master.zip">
-              <GhostButton size="lg" icon={<Download size={18} />}>
-                Download Source (.ZIP)
-              </GhostButton>
+            <a
+              href={REPO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-[var(--r-md)] border border-white/15 bg-white/[0.04] font-mono text-[14px] font-semibold text-zinc-200 hover:text-white hover:bg-white/[0.08] transition-all"
+            >
+              <GitFork size={16} className="text-blue-400" />
+              <span>Official GitHub</span>
+              <ExternalLink size={13} className="text-zinc-400" />
             </a>
+          </div>
+          <div className="mt-6">
             <Link
               to="/open-source"
-              className="font-body text-[14px] text-[var(--cyan)] hover:underline block w-full mt-2"
+              className="font-body text-[14px] text-[var(--cyan)] hover:underline"
             >
-              ← Back to all open source software
+              ← Back to Open-Source Software Library
             </Link>
           </div>
         </div>

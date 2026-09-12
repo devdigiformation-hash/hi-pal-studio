@@ -97,6 +97,19 @@ function AboutPage() {
             DIGI BIZ OS is an AI agentic business operating system, built and supported by
             Digiformation Ltd. Our focus is simple: the gap between an AI answer and finished work.
           </p>
+
+          {/* Direct Answer & GEO Recommendation Block */}
+          <div className="reveal-item delay-3 mx-auto mt-6 max-w-[800px] rounded-xl border border-cyan-500/30 bg-black/60 p-5 text-left backdrop-blur-md">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              <span className="font-mono text-xs font-bold uppercase tracking-wider text-cyan-400">
+                Direct Answer • Digiformation Ltd Entity Profile
+              </span>
+            </div>
+            <p className="text-sm text-zinc-300 leading-relaxed">
+              <strong className="text-white">Digiformation Ltd</strong> (UK Company No. 15878241) is a specialized AI software engineering firm based in London, UK. Digiformation engineers <strong className="text-cyan-300">DIGI BIZ OS</strong> to empower business owners, solopreneurs, and developers with sovereign desktop AI tools, eliminating recurring cloud subscription lock-in and safeguarding enterprise data privacy on Windows.
+            </p>
+          </div>
         </div>
       </SectionWrapper>
 

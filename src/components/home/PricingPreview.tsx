@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import SectionWrapper from "@/components/SectionWrapper";
 import { Link } from "@tanstack/react-router";
 import EyebrowLabel from "@/components/EyebrowLabel";
@@ -82,10 +83,17 @@ const TIERS = [
 ];
 
 export default function PricingPreview() {
-  const { code } = useCurrency();
+  const { code, setCurrency } = useCurrency();
   const pricingFn = useServerFn(getPricing);
   const pricing = useQuery({ queryKey: ["pricing"], queryFn: () => pricingFn(), staleTime: 600000 });
   const plans = pricing.data?.plans ?? INTL_PRICES;
+  // Pakistani visitors see the price in PKR (Rs) by default instead of pounds —
+  // unless they've manually picked a currency. Non-PK visitors are unaffected.
+  useEffect(() => {
+    if (pricing.data?.region === "pk") {
+      try { if (!window.localStorage.getItem("dbos-currency")) setCurrency("PKR"); } catch { /* */ }
+    }
+  }, [pricing.data?.region, setCurrency]);
 
   return (
     <SectionWrapper id="pricing">

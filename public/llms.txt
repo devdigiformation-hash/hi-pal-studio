@@ -51,6 +51,8 @@ Pre-configured, subscription-free open-source utilities integrated into the DIGI
 - [Shotcut](https://digibizos.co.uk/open-source/shotcut): 4K video editor with native timeline and GPU effects.
 - [Audacity](https://digibizos.co.uk/open-source/audacity): Open-source digital audio workstation and podcast recording studio.
 - [OpenCut](https://digibizos.co.uk/open-source/opencut): Free vertical video and reels editor (CapCut alternative).
+- [FaceFusion](https://digibizos.co.uk/open-source/facefusion): Next-generation AI face swap and high-fidelity video enhancer.
+- [Deep-Live-Cam](https://digibizos.co.uk/open-source/deep-live-cam): Real-time live webcam face swapping for OBS, Zoom, and Discord.
 - [Upscayl](https://digibizos.co.uk/open-source/upscayl): Offline AI image upscaler powered by REAL-ESRGAN.
 - [Tuttle](https://digibizos.co.uk/open-source/tuttle): Privacy-first desktop time tracker and billable hours recorder.
 

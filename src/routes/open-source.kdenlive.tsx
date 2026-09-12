@@ -1,14 +1,37 @@
 import OpenSourceValueComparisonChart from "@/components/seo/OpenSourceValueComparisonChart";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  Video,
-  Mic,
-  Layers,
-  Sparkles,
+  Code2,
+  Bug,
+  MonitorSmartphone,
+  RefreshCcw,
+  Wrench,
+  BadgeDollarSign,
+  Search,
   Zap,
-  PiggyBank,
-  CheckCircle2,
   ShieldCheck,
+  PiggyBank,
+  FileCode,
+  Layers,
+  Activity,
+  Smile,
+  Sparkles,
+  Mic,
+  Video,
+  Camera,
+  Sliders,
+  Scissors,
+  Music,
+  Radio,
+  FileText,
+  Bot,
+  Users,
+  Database,
+  Cpu,
+  Terminal,
+  ExternalLink,
+  GitFork,
+  CheckCircle2,
   Film,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -17,19 +40,23 @@ import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
 import CyanButton from "@/components/CyanButton";
-import GhostButton from "@/components/GhostButton";
-import MonoBadge from "@/components/MonoBadge";
-import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
-import setupFile from "@/assets/kdenlive-setup.exe.asset.json";
+import OpenSourceSubpageTrustSection from "@/components/seo/OpenSourceSubpageTrustSection";
+import OpenSourceSubpageFaq from "@/components/seo/OpenSourceSubpageFaq";
+import OpenSourceTechSpecs from "@/components/seo/OpenSourceTechSpecs";
+import OpenSourceRelatedTools from "@/components/seo/OpenSourceRelatedTools";
+import OpenSourceDigiBizBridge from "@/components/seo/OpenSourceDigiBizBridge";
+import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
 
-const TITLE = "Kdenlive Video Editor — Free Open-Source CapCut & Premiere Alternative";
+const toolData = OPEN_SOURCE_SUBPAGES["kdenlive"];
+
+const TITLE = "Professional Multi-Track 4K Video Editor for Windows — 100% Free & Open Source — Free Open-Source Alternative";
 const DESC =
-  "Download Kdenlive free for Windows: 4K multi-track video editing, OpenAI Whisper auto-subtitles, chroma key, motion tracking, and zero export watermarks.";
+  toolData.tagline + " Download 100% free with verified licensing, zero malware, and complete local privacy.";
 
-// Direct setup installer download
-const DOWNLOAD_URL = setupFile.url;
+const DOWNLOAD_URL = toolData.downloadUrl;
+const REPO_URL = toolData.repoUrl;
 
 const FEATURES = [
   {
@@ -70,53 +97,13 @@ const FEATURES = [
   },
 ];
 
-const COMPARISON = [
-  {
-    label: "Pricing & Licence",
-    tool: "$0 — 100% Free Forever",
-    other1: "$240 / year (Premiere Pro)",
-    other2: "$120 / year (CapCut Pro)",
-  },
-  {
-    label: "Export Watermarks",
-    tool: "0% Watermark — 100% Clean",
-    other1: "No watermark (paid only)",
-    other2: "Forced end-cards on free tier",
-  },
-  {
-    label: "AI Auto-Captions",
-    tool: "Built-in OpenAI Whisper",
-    other1: "Adobe Cloud Speech to Text",
-    other2: "Paid feature wall",
-  },
-  {
-    label: "Offline Privacy",
-    tool: "100% Local on your PC",
-    other1: "Requires Adobe cloud sign-in",
-    other2: "Cloud uploads & telemetry",
-  },
-  {
-    label: "Max Resolution",
-    tool: "Unlimited 4K / 8K 60FPS",
-    other1: "4K / 8K (paid only)",
-    other2: "Locked behind Pro plan",
-  },
-];
-
-const REQUIREMENTS = [
-  "Operating system: Windows 10 / Windows 11 (64-bit)",
-  "RAM: 8 GB minimum (16 GB recommended for smooth 4K editing)",
-  "Processor: Intel Core i5 / i7 / i9 or AMD Ryzen multi-core",
-  "GPU: Dedicated NVIDIA, AMD, or Intel Arc GPU recommended",
-  "Storage: 1 GB free disk space (SSD recommended for cache)",
-];
-
 export const Route = createFileRoute("/open-source/kdenlive")({
   head: () => {
     const { meta, links } = buildMeta({
       path: "/open-source/kdenlive",
       title: TITLE,
       description: DESC,
+      
     });
     return {
       meta,
@@ -128,7 +115,7 @@ export const Route = createFileRoute("/open-source/kdenlive")({
             breadcrumbLd([
               { name: "Home", path: "/" },
               { name: "Open Source", path: "/open-source" },
-              { name: "Kdenlive Video Editor", path: "/open-source/kdenlive" },
+              { name: toolData.name, path: "/open-source/kdenlive" },
             ]),
           ),
         },
@@ -137,12 +124,31 @@ export const Route = createFileRoute("/open-source/kdenlive")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            name: "Kdenlive Video Editor",
-            applicationCategory: "MultimediaApplication",
-            operatingSystem: "Windows 10, Windows 11 (64-bit)",
+            name: toolData.name,
+            applicationCategory: "DeveloperApplication",
+            operatingSystem: toolData.requirements.os,
             description: DESC,
             url: abs("/open-source/kdenlive"),
+            
+            downloadUrl: abs(DOWNLOAD_URL),
+            license: toolData.license,
+            codeRepository: REPO_URL,
             offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: toolData.faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: f.a,
+              },
+            })),
           }),
         },
       ],
@@ -159,68 +165,87 @@ function KdenlivePage() {
           trail={[
             { name: "Home", path: "/" },
             { name: "Open Source", path: "/open-source" },
-            { name: "Kdenlive", path: "/open-source/kdenlive" },
+            { name: toolData.shortName, path: "/open-source/kdenlive" },
           ]}
         />
         <div className="mx-auto grid max-w-[1180px] items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
           <div>
-            <EyebrowLabel
-              text="🎁 #1 OPEN-SOURCE CAPCUT & PREMIERE ALTERNATIVE • WHISPER AI AUTO-SUBTITLES"
-              color="var(--cyan)"
-            />
+            <EyebrowLabel text={toolData.eyebrow} color="var(--cyan)" />
             <p className="reveal-item mt-5 font-display text-[15px] font-bold uppercase tracking-[0.18em] text-[var(--cyan)]">
-              Kdenlive Professional Video Editor
+              {toolData.shortName} • {toolData.category}
             </p>
             <h1 className="reveal-item delay-1 mt-3 font-display text-[32px] font-extrabold leading-[1.1] tracking-[-0.035em] text-[var(--text-primary)] md:text-[46px]">
-              Edit 4K Videos, Generate AI Subtitles & Animate Like a Pro —{" "}
+              Professional Multi-Track 4K Video Editor for Windows —{" "}
               <GradientText from="#2FE0C8" to="#3B82F6">
-                100% Free
+                100% Free & Open Source
               </GradientText>
             </h1>
             <p className="reveal-item delay-2 mt-6 max-w-[640px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[16.5px]">
-              The professional non-linear video editor powered by the KDE community. Includes
-              built-in OpenAI Whisper speech-to-text auto-captions, multi-track timeline, color
-              grading, motion tracking, and zero export watermarks.
+              {toolData.tagline} Verified open-source alternative to {toolData.alternativeTo.join(", ")}. Enjoy full offline privacy, zero subscriptions, and complete ownership.
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
-              <a href={DOWNLOAD_URL} download="Kdenlive-Setup.exe">
+              <a
+                href={DOWNLOAD_URL}
+                download="kdenlive-windows-x86_64.exe"
+              >
                 <CyanButton size="lg" icon={<WindowsIcon />}>
                   Download Kdenlive for Windows (.EXE)
                 </CyanButton>
               </a>
+
+              <a
+                href={REPO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-[var(--r-md)] border border-white/15 bg-white/[0.04] font-mono text-[13.5px] font-semibold text-zinc-200 hover:text-white hover:bg-white/[0.08] transition-all"
+              >
+                <GitFork size={16} className="text-blue-400" />
+                <span>Official GitHub ({toolData.stars})</span>
+                <ExternalLink size={13} className="text-zinc-400" />
+              </a>
             </div>
-            <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
-              Direct File Trigger: Kdenlive-Setup.exe (~100 MB) • Windows 10/11 (64-bit) • 100% Free
-              (GPL-3.0)
-            </p>
+
+            <div className="mt-4 flex flex-wrap items-center gap-3 font-mono text-[12px] text-zinc-400">
+              <span className="flex items-center gap-1 text-emerald-400">
+                <CheckCircle2 size={13} />
+                <span>{toolData.downloadTypeLabel}</span>
+              </span>
+              <span>•</span>
+              <span>{toolData.requirements.os}</span>
+              <span>•</span>
+              <span>{toolData.license}</span>
+            </div>
           </div>
 
           <OpenSourceHeroStage
             toolId="kdenlive"
-            title="Kdenlive 4K Multi-Track Video Studio"
-            category="Video & Editing"
+            title="Kdenlive Video Editor Studio"
+            category="Video & Creative Media"
             color="#3B82F6"
             downloadUrl={DOWNLOAD_URL}
-            downloadFilename="kdenlive-setup.exe"
-            license="GPL-3.0 (100% Free)"
-            stars="15.4k ★"
-            version="v24.12.0"
+            downloadFilename="kdenlive-windows-x86_64.exe"
+            license={toolData.license + " (100% Free)"}
+            stars={toolData.stars}
+            version="v24.08.3"
             
-            quickCommand={"winget install KDE.Kdenlive"}
-            badges={["Whisper AI Subtitles","4K 60FPS Timeline","Zero Watermark"]}
-            annualSavings="Save $600 / year vs Premiere Pro"
+            quickCommand="winget install KDE.Kdenlive"
+            badges={["AI Auto-Subtitles","Multi-Track 4K/60fps","Zero Watermarks"]}
+            annualSavings="Save $240 / year vs Premiere Pro"
+            repoUrl={REPO_URL}
+            downloadLabel="Download Kdenlive for Windows (.EXE)"
           />
         </div>
       </SectionWrapper>
 
+      {/* 6 CORE SUPERPOWERS */}
       <SectionWrapper className="bg-[var(--bg-surface)]">
         <div className="mx-auto max-w-[1080px]">
           <h2 className="font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[32px]">
-            6 Key Superpowers of Kdenlive
+            6 Core Superpowers of {toolData.shortName}
           </h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {FEATURES.map((f) => (
+            {FEATURES.map((f: any) => (
               <GlassCard key={f.title} glowColor={f.color} className="h-full p-5">
                 <f.icon size={22} color={f.color} strokeWidth={2} />
                 <h3 className="mt-3 font-display text-[15.5px] font-bold text-[var(--text-primary)]">
@@ -235,74 +260,69 @@ function KdenlivePage() {
         </div>
       </SectionWrapper>
 
+      {/* VALUE COMPARISON CHART */}
       <SectionWrapper>
         <OpenSourceValueComparisonChart toolId="kdenlive" downloadUrl={DOWNLOAD_URL} />
       </SectionWrapper>
 
-      <SectionWrapper className="bg-[var(--bg-surface)]">
-        <div className="mx-auto grid max-w-[1080px] gap-10 lg:grid-cols-2">
-          <div>
-            <EyebrowLabel text="System Requirements" color="var(--cyan)" />
-            <h2 className="mt-4 font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[30px]">
-              What you need to run Kdenlive
-            </h2>
-            <TickList className="mt-6" items={REQUIREMENTS} />
-          </div>
-          <GlassCard glowColor="var(--purple)" className="p-6">
-            <EyebrowLabel text="Brought to you by" color="var(--purple)" />
-            <h3 className="mt-4 font-display text-[20px] font-bold text-[var(--text-primary)]">
-              Digiformation Ltd
-            </h3>
-            <p className="mt-1 font-body text-[14px] text-[var(--text-secondary)]">
-              Founder: Muhammad Haroon
-            </p>
-            <p className="mt-3 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-              UK Company Formation • Payment Solutions • Software & Web Development
-            </p>
-            <div className="mt-5 flex flex-wrap gap-3">
-              <MonoBadge>+92 316 446 7464</MonoBadge>
-            </div>
-            <div className="mt-5 flex flex-wrap gap-4 font-body text-[14px]">
-              <a
-                href="https://www.digiformation.co.uk/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--cyan)] hover:underline"
-              >
-                digiformation.co.uk
-              </a>
-              <a
-                href="https://linktr.ee/digiformationltd"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--cyan)] hover:underline"
-              >
-                Linktree
-              </a>
-            </div>
-          </GlassCard>
-        </div>
-      </SectionWrapper>
+      {/* TECHNICAL SYSTEM REQUIREMENTS */}
+      <OpenSourceTechSpecs
+        toolName={toolData.shortName}
+        requirements={toolData.requirements}
+        privacy={toolData.privacy}
+      />
 
+      {/* TRUST & PROVENANCE SECTION */}
+      <OpenSourceSubpageTrustSection tool={toolData} />
+
+      {/* FAQ ACCORDION SECTION (AEO / GEO) */}
+      <OpenSourceSubpageFaq toolName={toolData.shortName} faqs={toolData.faqs} />
+
+      {/* RELATED OPEN-SOURCE TOOLS */}
+      <OpenSourceRelatedTools currentToolId={toolData.id} relatedToolIds={toolData.relatedToolIds} />
+
+      {/* NATURAL DIGI BIZ OS BRIDGE */}
+      <OpenSourceDigiBizBridge
+        headline={toolData.bridge.headline}
+        description={toolData.bridge.description}
+        highlights={toolData.bridge.highlights}
+      />
+
+      {/* BOTTOM ACTION SECTION */}
       <SectionWrapper>
         <div className="mx-auto max-w-[860px] text-center">
           <h2 className="font-display text-[26px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[38px]">
-            Download Kdenlive Free for Windows
+            Get {toolData.shortName} Free, Then Connect to DIGI BIZ OS
           </h2>
-          <p className="mt-4 font-body text-[15px] text-[var(--text-secondary)]">
-            Enjoy full access with zero watermarks, zero subscription fees, and 100% offline privacy.
+          <p className="mt-4 font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]">
+            Enjoy full privacy, zero recurring subscriptions, and perpetual open-source freedom on your hardware.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href={DOWNLOAD_URL} download="Kdenlive-Setup.exe">
+            <a
+              href={DOWNLOAD_URL}
+              download="kdenlive-windows-x86_64.exe"
+            >
               <CyanButton size="lg" icon={<WindowsIcon />}>
                 Download Kdenlive for Windows (.EXE)
               </CyanButton>
             </a>
+            <a
+              href={REPO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-[var(--r-md)] border border-white/15 bg-white/[0.04] font-mono text-[14px] font-semibold text-zinc-200 hover:text-white hover:bg-white/[0.08] transition-all"
+            >
+              <GitFork size={16} className="text-blue-400" />
+              <span>Official GitHub</span>
+              <ExternalLink size={13} className="text-zinc-400" />
+            </a>
+          </div>
+          <div className="mt-6">
             <Link
               to="/open-source"
-              className="font-body text-[14px] text-[var(--cyan)] hover:underline block w-full mt-2"
+              className="font-body text-[14px] text-[var(--cyan)] hover:underline"
             >
-              ← Back to all open source software
+              ← Back to Open-Source Software Library
             </Link>
           </div>
         </div>

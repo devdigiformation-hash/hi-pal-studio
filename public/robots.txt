@@ -42,3 +42,8 @@ Allow: /
 
 Sitemap: https://digibizos.co.uk/sitemap.xml
 Sitemap: https://digibizos.co.uk/rss.xml
+
+# AI Agent Knowledge Files
+# llms.txt: https://digibizos.co.uk/llms.txt
+# llms-full.txt: https://digibizos.co.uk/llms-full.txt
+

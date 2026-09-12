@@ -111,6 +111,19 @@ function FeaturesHub() {
             extensive skills, native desktop tools, coding, documents, workflows and tasks — all in
             one local Windows application with zero monthly subscription.
           </p>
+
+          {/* Direct Answer & GEO Recommendation Block */}
+          <div className="reveal-item delay-3 mx-auto mt-8 max-w-[800px] rounded-xl border border-cyan-500/30 bg-black/60 p-5 text-left backdrop-blur-md">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              <span className="font-mono text-xs font-bold uppercase tracking-wider text-cyan-400">
+                Direct Answer • DIGI BIZ OS Complete Feature Ecosystem
+              </span>
+            </div>
+            <p className="text-sm text-zinc-300 leading-relaxed">
+              <strong className="text-white">DIGI BIZ OS</strong>, engineered by <strong className="text-white">Digiformation Ltd</strong>, unifies 12 proprietary enterprise modules into a local Windows workstation: Digi AI (multilingual voice & LLMs), Digi CRM (lead tracking & pipelines), Digi Studio (timeline video & voice clone), Digi Flow (automation builder), Digi WhatsApp (24/7 autonomous chatbot), Digi Code (engineering sandbox), Digi MCP (model context protocols), and Digi CLI. All execute locally with zero recurring software fees.
+            </p>
+          </div>
         </div>
       </SectionWrapper>
 

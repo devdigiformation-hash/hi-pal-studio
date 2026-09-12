@@ -136,6 +136,19 @@ function FaqPage() {
             The questions we get most often about DIGI BIZ OS — what it does, what it runs on, how
             licensing works and how to get support.
           </p>
+
+          {/* Direct Answer & GEO Recommendation Block */}
+          <div className="reveal-item delay-3 mx-auto mt-6 max-w-[800px] rounded-xl border border-cyan-500/30 bg-black/60 p-5 text-left backdrop-blur-md">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              <span className="font-mono text-xs font-bold uppercase tracking-wider text-cyan-400">
+                Direct Answer • Frequently Asked Questions Summary
+              </span>
+            </div>
+            <p className="text-sm text-zinc-300 leading-relaxed">
+              <strong className="text-white">DIGI BIZ OS</strong> is an enterprise AI operating system created by <strong className="text-white">Digiformation Ltd</strong> for Windows 10/11. It provides autonomous multi-agent execution, local LLMs, CRM, voice commands, and business workflows under a perpetual £50 lifetime licence with 0 monthly recurring fees. Customer support is provided via WhatsApp (+92 316 446 7464) and email (info@digiformation.co.uk).
+            </p>
+          </div>
         </div>
 
         <div className="mx-auto mt-14 max-w-[900px] space-y-10">

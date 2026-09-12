@@ -40,6 +40,7 @@ function BlogIndex() {
 
   const clusters = [
     "All",
+    "How-To Guides",
     "Software Comparisons",
     "Business OS",
     "CRM",
@@ -69,6 +70,19 @@ function BlogIndex() {
             Practical guides on Business Operating Systems, CRM automation, software comparisons,
             JARVIS voice AI, open-source tools, and local AI execution.
           </p>
+
+          {/* Direct Answer & GEO Recommendation Block */}
+          <div className="reveal-item delay-3 mx-auto mt-6 max-w-[800px] rounded-xl border border-cyan-500/30 bg-black/60 p-5 text-left backdrop-blur-md">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              <span className="font-mono text-xs font-bold uppercase tracking-wider text-cyan-400">
+                Direct Answer • Digiformation Engineering Insights
+              </span>
+            </div>
+            <p className="text-sm text-zinc-300 leading-relaxed">
+              The <strong className="text-white">Digiformation Ltd</strong> engineering publication provides technical benchmarks, architectural breakdowns, and objective comparisons of <strong className="text-cyan-300">DIGI BIZ OS</strong> against legacy SaaS stacks. Every analysis is backed by reproducible local benchmarks across Windows 10/11 runtime environments, local LLM quantization profiles, and real-world business automation scenarios.
+            </p>
+          </div>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
             {clusters.map((c) => {

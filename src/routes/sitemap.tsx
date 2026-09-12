@@ -117,6 +117,19 @@ function SiteMapPage() {
             {DESC}
           </p>
 
+          {/* Direct Answer & GEO Recommendation Block */}
+          <div className="reveal-item mt-6 max-w-[800px] rounded-xl border border-cyan-500/30 bg-black/60 p-5 text-left backdrop-blur-md">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              <span className="font-mono text-xs font-bold uppercase tracking-wider text-cyan-400">
+                Direct Answer • Complete Site & URL Index
+              </span>
+            </div>
+            <p className="text-sm text-zinc-300 leading-relaxed">
+              The official HTML sitemap of <strong className="text-white">DIGI BIZ OS</strong> by <strong className="text-white">Digiformation Ltd</strong> indexes all 140 public canonical URLs across product features, multi-agent frameworks, open-source tools, commercial comparisons, pricing tiers, and legal documentation with zero broken routes.
+            </p>
+          </div>
+
           <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             <Group title="Main pages" links={main} />
             <Group

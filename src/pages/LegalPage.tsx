@@ -35,6 +35,19 @@ export default function LegalPage({
           {intro}
         </p>
 
+        {/* Direct Answer & Legal Entity Verification (AEO / GEO) */}
+        <div className="mt-6 rounded-xl border border-cyan-500/30 bg-black/60 p-4 text-left backdrop-blur-md">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+            <span className="font-mono text-xs font-bold uppercase tracking-wider text-cyan-400">
+              Direct Answer • Legal Entity & Consumer Rights
+            </span>
+          </div>
+          <p className="text-xs text-zinc-300 leading-relaxed">
+            <strong className="text-white">DIGI BIZ OS</strong> is a proprietary software product owned, published, and maintained by <strong className="text-white">Digiformation Ltd</strong> (UK Registered Company No. 15878241). Purchases are governed by a 14-day refund policy, standard UK Consumer Contracts Regulations, local privacy protections with zero telemetry, and immediate digital delivery upon payment verification.
+          </p>
+        </div>
+
         <div className="mt-10 space-y-4">
           {sections.map((s, i) => (
             <GlassCard key={s.heading} className="p-7">

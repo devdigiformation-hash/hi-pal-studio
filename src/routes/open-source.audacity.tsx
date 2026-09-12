@@ -1,14 +1,39 @@
 import OpenSourceValueComparisonChart from "@/components/seo/OpenSourceValueComparisonChart";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  Mic,
-  Sparkles,
-  Volume2,
+  Code2,
+  Bug,
+  MonitorSmartphone,
+  RefreshCcw,
+  Wrench,
+  BadgeDollarSign,
+  Search,
   Zap,
-  FileAudio,
-  PiggyBank,
   ShieldCheck,
+  PiggyBank,
+  FileCode,
+  Layers,
+  Activity,
+  Smile,
+  Sparkles,
+  Mic,
+  Video,
+  Camera,
+  Sliders,
+  Scissors,
+  Music,
+  Radio,
+  FileText,
+  Bot,
+  Users,
+  Database,
+  Cpu,
+  Terminal,
+  ExternalLink,
+  GitFork,
   CheckCircle2,
+  Volume2,
+  FileAudio,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
@@ -16,19 +41,23 @@ import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
 import CyanButton from "@/components/CyanButton";
-import GhostButton from "@/components/GhostButton";
-import MonoBadge from "@/components/MonoBadge";
-import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
-import setupFile from "@/assets/audacity-setup.exe.asset.json";
+import OpenSourceSubpageTrustSection from "@/components/seo/OpenSourceSubpageTrustSection";
+import OpenSourceSubpageFaq from "@/components/seo/OpenSourceSubpageFaq";
+import OpenSourceTechSpecs from "@/components/seo/OpenSourceTechSpecs";
+import OpenSourceRelatedTools from "@/components/seo/OpenSourceRelatedTools";
+import OpenSourceDigiBizBridge from "@/components/seo/OpenSourceDigiBizBridge";
+import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
 
-const TITLE = "Audacity Audio Studio — Free Open-Source Adobe Audition Alternative";
+const toolData = OPEN_SOURCE_SUBPAGES["audacity"];
+
+const TITLE = "Multi-Track Audio Recording & Podcast Studio for Windows — 100% Free — Free Open-Source Alternative";
 const DESC =
-  "Download Audacity free for Windows: multi-track recording, 1-click background noise reduction, studio mastering, VST3 plugins, and lossless audio export.";
+  toolData.tagline + " Download 100% free with verified licensing, zero malware, and complete local privacy.";
 
-// Direct setup installer download
-const DOWNLOAD_URL = setupFile.url;
+const DOWNLOAD_URL = toolData.downloadUrl;
+const REPO_URL = toolData.repoUrl;
 
 const FEATURES = [
   {
@@ -69,53 +98,13 @@ const FEATURES = [
   },
 ];
 
-const COMPARISON = [
-  {
-    label: "Pricing & Licence",
-    tool: "$0 — Free Forever (GPL-3.0)",
-    other1: "$240 / year (Adobe Audition)",
-    other2: "$15–$30/mo (Paid Podcast Apps)",
-  },
-  {
-    label: "Noise Reduction",
-    tool: "Built-in 1-Click Spectral Cleaning",
-    other1: "Requires complex setup",
-    other2: "Paid cloud AI credits",
-  },
-  {
-    label: "Export Formats",
-    tool: "Lossless WAV, FLAC, MP3, OGG",
-    other1: "Standard formats",
-    other2: "Export limits on free tier",
-  },
-  {
-    label: "VST3 Plugins",
-    tool: "Full Real-Time VST3 Support",
-    other1: "Supported",
-    other2: "Not supported",
-  },
-  {
-    label: "Offline Privacy",
-    tool: "100% Local on your machine",
-    other1: "Adobe Cloud telemetry",
-    other2: "Cloud storage only",
-  },
-];
-
-const REQUIREMENTS = [
-  "Operating system: Windows 10 / Windows 11 (64-bit)",
-  "RAM: 4 GB minimum (8 GB recommended for multi-track sessions)",
-  "Processor: Intel / AMD 2 GHz or faster",
-  "Storage: 100 MB free disk space for application files",
-  "Audio: Any standard USB microphone or sound card",
-];
-
 export const Route = createFileRoute("/open-source/audacity")({
   head: () => {
     const { meta, links } = buildMeta({
       path: "/open-source/audacity",
       title: TITLE,
       description: DESC,
+      
     });
     return {
       meta,
@@ -127,7 +116,7 @@ export const Route = createFileRoute("/open-source/audacity")({
             breadcrumbLd([
               { name: "Home", path: "/" },
               { name: "Open Source", path: "/open-source" },
-              { name: "Audacity Audio Studio", path: "/open-source/audacity" },
+              { name: toolData.name, path: "/open-source/audacity" },
             ]),
           ),
         },
@@ -136,12 +125,31 @@ export const Route = createFileRoute("/open-source/audacity")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            name: "Audacity Multi-Track Audio Studio",
-            applicationCategory: "MultimediaApplication",
-            operatingSystem: "Windows 10, Windows 11 (64-bit)",
+            name: toolData.name,
+            applicationCategory: "DeveloperApplication",
+            operatingSystem: toolData.requirements.os,
             description: DESC,
             url: abs("/open-source/audacity"),
+            
+            downloadUrl: abs(DOWNLOAD_URL),
+            license: toolData.license,
+            codeRepository: REPO_URL,
             offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: toolData.faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: f.a,
+              },
+            })),
           }),
         },
       ],
@@ -158,68 +166,87 @@ function AudacityPage() {
           trail={[
             { name: "Home", path: "/" },
             { name: "Open Source", path: "/open-source" },
-            { name: "Audacity", path: "/open-source/audacity" },
+            { name: toolData.shortName, path: "/open-source/audacity" },
           ]}
         />
         <div className="mx-auto grid max-w-[1180px] items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
           <div>
-            <EyebrowLabel
-              text="🎁 DUNIYA KA #1 MULTI-TRACK AUDIO EDITOR • 100% FREE"
-              color="var(--cyan)"
-            />
+            <EyebrowLabel text={toolData.eyebrow} color="var(--cyan)" />
             <p className="reveal-item mt-5 font-display text-[15px] font-bold uppercase tracking-[0.18em] text-[var(--cyan)]">
-              Audacity Multi-Track Audio Studio
+              {toolData.shortName} • {toolData.category}
             </p>
             <h1 className="reveal-item delay-1 mt-3 font-display text-[32px] font-extrabold leading-[1.1] tracking-[-0.035em] text-[var(--text-primary)] md:text-[46px]">
-              Record, Clean & Master Studio-Quality Audio & Podcasts —{" "}
+              Multi-Track Audio Recording & Podcast Studio for Windows —{" "}
               <GradientText from="#2FE0C8" to="#3B82F6">
                 100% Free
               </GradientText>
             </h1>
             <p className="reveal-item delay-2 mt-6 max-w-[640px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[16.5px]">
-              The world's most popular multi-track audio workstation. Record live voiceovers, eliminate
-              background noise with 1-click AI noise reduction, adjust vocal pitch, and export
-              broadcast-ready MP3, WAV, and FLAC audio.
+              {toolData.tagline} Verified open-source alternative to {toolData.alternativeTo.join(", ")}. Enjoy full offline privacy, zero subscriptions, and complete ownership.
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
-              <a href={DOWNLOAD_URL} download="Audacity-Setup.exe">
+              <a
+                href={DOWNLOAD_URL}
+                download="audacity-win-64bit.exe"
+              >
                 <CyanButton size="lg" icon={<WindowsIcon />}>
                   Download Audacity for Windows (.EXE)
                 </CyanButton>
               </a>
+
+              <a
+                href={REPO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-[var(--r-md)] border border-white/15 bg-white/[0.04] font-mono text-[13.5px] font-semibold text-zinc-200 hover:text-white hover:bg-white/[0.08] transition-all"
+              >
+                <GitFork size={16} className="text-blue-400" />
+                <span>Official GitHub ({toolData.stars})</span>
+                <ExternalLink size={13} className="text-zinc-400" />
+              </a>
             </div>
-            <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
-              Direct File Trigger: Audacity-Setup.exe (~30 MB) • Windows 10/11 (64-bit Standalone) •
-              GPL-3.0
-            </p>
+
+            <div className="mt-4 flex flex-wrap items-center gap-3 font-mono text-[12px] text-zinc-400">
+              <span className="flex items-center gap-1 text-emerald-400">
+                <CheckCircle2 size={13} />
+                <span>{toolData.downloadTypeLabel}</span>
+              </span>
+              <span>•</span>
+              <span>{toolData.requirements.os}</span>
+              <span>•</span>
+              <span>{toolData.license}</span>
+            </div>
           </div>
 
           <OpenSourceHeroStage
             toolId="audacity"
-            title="Audacity Multi-Track Audio Studio"
+            title="Audacity Audio Studio"
             category="Audio & Podcast"
             color="#3B82F6"
             downloadUrl={DOWNLOAD_URL}
-            downloadFilename="audacity-win-x64.exe"
-            license="GPL-3.0 (100% Free)"
-            stars="14.2k ★"
-            version="v3.7.1"
+            downloadFilename="audacity-win-64bit.exe"
+            license={toolData.license + " (100% Free)"}
+            stars={toolData.stars}
+            version="v3.7.0"
             
-            quickCommand={"winget install Audacity.Audacity"}
-            badges={["AI Spectral Noise Gate","VST3 Plugin Engine","Lossless 32-Bit"]}
+            quickCommand="winget install Audacity.Audacity"
+            badges={["Spectral Editing","AI Noise Removal","VST3 Plugin Hub"]}
             annualSavings="Save $240 / year vs Adobe Audition"
+            repoUrl={REPO_URL}
+            downloadLabel="Download Audacity for Windows (.EXE)"
           />
         </div>
       </SectionWrapper>
 
+      {/* 6 CORE SUPERPOWERS */}
       <SectionWrapper className="bg-[var(--bg-surface)]">
         <div className="mx-auto max-w-[1080px]">
           <h2 className="font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[32px]">
-            6 Key Superpowers of Audacity
+            6 Core Superpowers of {toolData.shortName}
           </h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {FEATURES.map((f) => (
+            {FEATURES.map((f: any) => (
               <GlassCard key={f.title} glowColor={f.color} className="h-full p-5">
                 <f.icon size={22} color={f.color} strokeWidth={2} />
                 <h3 className="mt-3 font-display text-[15.5px] font-bold text-[var(--text-primary)]">
@@ -234,74 +261,69 @@ function AudacityPage() {
         </div>
       </SectionWrapper>
 
+      {/* VALUE COMPARISON CHART */}
       <SectionWrapper>
         <OpenSourceValueComparisonChart toolId="audacity" downloadUrl={DOWNLOAD_URL} />
       </SectionWrapper>
 
-      <SectionWrapper className="bg-[var(--bg-surface)]">
-        <div className="mx-auto grid max-w-[1080px] gap-10 lg:grid-cols-2">
-          <div>
-            <EyebrowLabel text="System Requirements" color="var(--cyan)" />
-            <h2 className="mt-4 font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[30px]">
-              What you need to run Audacity
-            </h2>
-            <TickList className="mt-6" items={REQUIREMENTS} />
-          </div>
-          <GlassCard glowColor="var(--purple)" className="p-6">
-            <EyebrowLabel text="Brought to you by" color="var(--purple)" />
-            <h3 className="mt-4 font-display text-[20px] font-bold text-[var(--text-primary)]">
-              Digiformation Ltd
-            </h3>
-            <p className="mt-1 font-body text-[14px] text-[var(--text-secondary)]">
-              Founder: Muhammad Haroon
-            </p>
-            <p className="mt-3 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-              UK Company Formation • Payment Solutions • Software & Web Development
-            </p>
-            <div className="mt-5 flex flex-wrap gap-3">
-              <MonoBadge>+92 316 446 7464</MonoBadge>
-            </div>
-            <div className="mt-5 flex flex-wrap gap-4 font-body text-[14px]">
-              <a
-                href="https://www.digiformation.co.uk/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--cyan)] hover:underline"
-              >
-                digiformation.co.uk
-              </a>
-              <a
-                href="https://linktr.ee/digiformationltd"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--cyan)] hover:underline"
-              >
-                Linktree
-              </a>
-            </div>
-          </GlassCard>
-        </div>
-      </SectionWrapper>
+      {/* TECHNICAL SYSTEM REQUIREMENTS */}
+      <OpenSourceTechSpecs
+        toolName={toolData.shortName}
+        requirements={toolData.requirements}
+        privacy={toolData.privacy}
+      />
 
+      {/* TRUST & PROVENANCE SECTION */}
+      <OpenSourceSubpageTrustSection tool={toolData} />
+
+      {/* FAQ ACCORDION SECTION (AEO / GEO) */}
+      <OpenSourceSubpageFaq toolName={toolData.shortName} faqs={toolData.faqs} />
+
+      {/* RELATED OPEN-SOURCE TOOLS */}
+      <OpenSourceRelatedTools currentToolId={toolData.id} relatedToolIds={toolData.relatedToolIds} />
+
+      {/* NATURAL DIGI BIZ OS BRIDGE */}
+      <OpenSourceDigiBizBridge
+        headline={toolData.bridge.headline}
+        description={toolData.bridge.description}
+        highlights={toolData.bridge.highlights}
+      />
+
+      {/* BOTTOM ACTION SECTION */}
       <SectionWrapper>
         <div className="mx-auto max-w-[860px] text-center">
           <h2 className="font-display text-[26px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[38px]">
-            Download Audacity Free for Windows
+            Get {toolData.shortName} Free, Then Connect to DIGI BIZ OS
           </h2>
-          <p className="mt-4 font-body text-[15px] text-[var(--text-secondary)]">
-            Enjoy full access with zero watermarks, zero subscription fees, and 100% offline privacy.
+          <p className="mt-4 font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]">
+            Enjoy full privacy, zero recurring subscriptions, and perpetual open-source freedom on your hardware.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href={DOWNLOAD_URL} download="Audacity-Setup.exe">
+            <a
+              href={DOWNLOAD_URL}
+              download="audacity-win-64bit.exe"
+            >
               <CyanButton size="lg" icon={<WindowsIcon />}>
                 Download Audacity for Windows (.EXE)
               </CyanButton>
             </a>
+            <a
+              href={REPO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-[var(--r-md)] border border-white/15 bg-white/[0.04] font-mono text-[14px] font-semibold text-zinc-200 hover:text-white hover:bg-white/[0.08] transition-all"
+            >
+              <GitFork size={16} className="text-blue-400" />
+              <span>Official GitHub</span>
+              <ExternalLink size={13} className="text-zinc-400" />
+            </a>
+          </div>
+          <div className="mt-6">
             <Link
               to="/open-source"
-              className="font-body text-[14px] text-[var(--cyan)] hover:underline block w-full mt-2"
+              className="font-body text-[14px] text-[var(--cyan)] hover:underline"
             >
-              ← Back to all open source software
+              ← Back to Open-Source Software Library
             </Link>
           </div>
         </div>

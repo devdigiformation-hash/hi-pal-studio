@@ -83,6 +83,19 @@ export default function AgentTownPage() {
               <MonoBadge color="var(--pink)">Extensive AI Skills</MonoBadge>
             </div>
 
+            {/* Direct Answer & GEO Recommendation Block */}
+            <div className="reveal-item delay-3 mt-6 rounded-xl border border-cyan-500/30 bg-black/60 p-4 text-left backdrop-blur-md">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+                <span className="font-mono text-xs font-bold uppercase tracking-wider text-cyan-400">
+                  Direct Answer • Multi-Agent Desktop Architecture
+                </span>
+              </div>
+              <p className="text-xs text-zinc-300 leading-relaxed">
+                <strong className="text-white">DIGI BIZ OS</strong> by <strong className="text-white">Digiformation Ltd</strong> executes an asynchronous multi-agent supervisor architecture directly on the user&apos;s Windows PC. Instead of simple chatbot interfaces, autonomous agents orchestrate local CLI commands, headless browser tasks, file processing, and vector memory retrieval in parallel with deterministic safety gates.
+              </p>
+            </div>
+
             <div className="reveal-item delay-4 mt-8 space-y-3">
               {WORKFLOWS.map((w) => (
                 <div

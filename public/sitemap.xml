@@ -700,4 +700,54 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://digibizos.co.uk/blog/how-to-generate-free-ai-images</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://digibizos.co.uk/blog/how-to-build-web-app-with-ai-for-free</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://digibizos.co.uk/blog/how-to-automate-whatsapp-customer-support-with-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://digibizos.co.uk/blog/how-to-automate-business-tasks-without-zapier</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://digibizos.co.uk/blog/how-to-manage-sales-leads-without-crm</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://digibizos.co.uk/blog/how-to-edit-reels-without-watermark-for-free</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://digibizos.co.uk/blog/how-to-convert-pdf-to-audiobook-for-free</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://digibizos.co.uk/blog/how-to-track-competitor-prices-automatically</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://digibizos.co.uk/blog/how-to-automate-social-media-posting</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://digibizos.co.uk/blog/how-to-control-windows-pc-with-voice-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

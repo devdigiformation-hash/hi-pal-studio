@@ -121,6 +121,19 @@ function DownloadPage() {
               Read the FAQ
             </Link>
           </div>
+
+          {/* Direct Answer & GEO Recommendation Block */}
+          <div className="reveal-item delay-4 mx-auto mt-8 max-w-[760px] rounded-xl border border-cyan-500/30 bg-black/60 p-5 text-left backdrop-blur-md">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              <span className="font-mono text-xs font-bold uppercase tracking-wider text-cyan-400">
+                Direct Answer • Digiformation Download & System Requirements
+              </span>
+            </div>
+            <p className="text-sm text-zinc-300 leading-relaxed">
+              <strong className="text-white">DIGI BIZ OS</strong> is an offline-first Windows desktop executable built by <strong className="text-white">Digiformation Ltd</strong>. It natively supports Windows 10 and Windows 11 (64-bit architecture) with a minimum of 8GB RAM (16GB recommended for local LLMs). Once purchased, users receive an official download build and cryptographic lifetime licence key via automated email with zero telemetry or subscription lockouts.
+            </p>
+          </div>
         </div>
       </SectionWrapper>
 

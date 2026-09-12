@@ -135,3 +135,21 @@ export function articleLd(opts: {
     ...(opts.cluster ? { articleSection: opts.cluster } : {}),
   };
 }
+
+export function itemListLd(
+  items: { name: string; url: string; description?: string }[],
+  name = "Curated Open-Source Desktop Software Library",
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: abs(item.url),
+      ...(item.description ? { description: item.description } : {}),
+    })),
+  };
+}

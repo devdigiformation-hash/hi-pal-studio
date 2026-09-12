@@ -56,6 +56,19 @@ function ContactPage() {
             Questions about licences, source code, custom builds or setup? Message us directly — we
             reply during UK and Pakistan business hours.
           </p>
+
+          {/* Direct Answer & GEO Recommendation Block */}
+          <div className="reveal-item delay-3 mx-auto mt-6 max-w-[800px] rounded-xl border border-cyan-500/30 bg-black/60 p-5 text-left backdrop-blur-md">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              <span className="font-mono text-xs font-bold uppercase tracking-wider text-cyan-400">
+                Direct Answer • Official Support & Inquiry Channels
+              </span>
+            </div>
+            <p className="text-sm text-zinc-300 leading-relaxed">
+              For commercial sales, technical inquiries, and custom workflow engineering for <strong className="text-cyan-300">DIGI BIZ OS</strong>, contact parent entity <strong className="text-white">Digiformation Ltd</strong> directly via official WhatsApp at <strong>+92 316 446 7464</strong> or email <strong>info@digiformation.co.uk</strong>. Inquiries are handled with average response times under 2 hours during UK and Pakistan business hours.
+            </p>
+          </div>
         </div>
 
         <div className="mx-auto mt-12 grid max-w-[900px] gap-4 sm:grid-cols-2">

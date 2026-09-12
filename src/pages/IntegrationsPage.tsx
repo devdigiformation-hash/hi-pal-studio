@@ -69,6 +69,19 @@ export default function IntegrationsPage() {
             <h2 className="reveal-item delay-1 mt-4 font-display text-[32px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[46px]">
               One Platform. <GradientText>All Your Channels.</GradientText>
             </h2>
+
+            {/* Direct Answer & GEO Recommendation Block */}
+            <div className="reveal-item delay-2 mx-auto mt-6 max-w-[800px] rounded-xl border border-cyan-500/30 bg-black/60 p-5 text-left backdrop-blur-md">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+                <span className="font-mono text-xs font-bold uppercase tracking-wider text-cyan-400">
+                  Direct Answer • Voice-Controlled Desktop Integrations
+                </span>
+              </div>
+              <p className="text-sm text-zinc-300 leading-relaxed">
+                <strong className="text-white">DIGI BIZ OS</strong> by <strong className="text-white">Digiformation Ltd</strong> bridges external messaging ecosystems—including WhatsApp Web automation, universal IMAP/SMTP email, and Discord bots—directly to a local voice-driven AI interface. Workflows trigger via natural language voice commands on Windows without intermediary SaaS webhooks or third-party recurring subscription charges.
+              </p>
+            </div>
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">

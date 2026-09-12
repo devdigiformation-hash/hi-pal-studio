@@ -1,15 +1,37 @@
 import OpenSourceValueComparisonChart from "@/components/seo/OpenSourceValueComparisonChart";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  Globe,
+  Code2,
+  Bug,
+  MonitorSmartphone,
+  RefreshCcw,
+  Wrench,
+  BadgeDollarSign,
   Search,
   Zap,
   ShieldCheck,
   PiggyBank,
-  CheckCircle2,
   FileCode,
   Layers,
   Activity,
+  Smile,
+  Sparkles,
+  Mic,
+  Video,
+  Camera,
+  Sliders,
+  Scissors,
+  Music,
+  Radio,
+  FileText,
+  Bot,
+  Users,
+  Database,
+  Cpu,
+  Terminal,
+  ExternalLink,
+  GitFork,
+  CheckCircle2,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
@@ -17,17 +39,24 @@ import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
 import CyanButton from "@/components/CyanButton";
-import MonoBadge from "@/components/MonoBadge";
-import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
+import OpenSourceSubpageTrustSection from "@/components/seo/OpenSourceSubpageTrustSection";
+import OpenSourceSubpageFaq from "@/components/seo/OpenSourceSubpageFaq";
+import OpenSourceTechSpecs from "@/components/seo/OpenSourceTechSpecs";
+import OpenSourceRelatedTools from "@/components/seo/OpenSourceRelatedTools";
+import OpenSourceDigiBizBridge from "@/components/seo/OpenSourceDigiBizBridge";
+import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
 
-const TITLE = "Open SEO Spider & Crawler — Free Screaming Frog & Ahrefs Alternative";
+
+const toolData = OPEN_SOURCE_SUBPAGES["seo-spider"];
+
+const TITLE = "Open SEO Spider & Technical Audit Suite — 100% Free — Free Open-Source Alternative";
 const DESC =
-  "Download Open SEO Spider free for Windows: 100% offline website crawler, broken link finder, Schema.org JSON-LD validator, Google Sitelinks tester, and Core Web Vitals audit engine.";
+  toolData.tagline + " Download 100% free with verified licensing, zero malware, and complete local privacy.";
 
-// CONFIGURABLE DOWNLOAD URL: Direct repository release or standalone package
-const DOWNLOAD_URL = "https://github.com/topics/seo-spider";
+const DOWNLOAD_URL = toolData.downloadUrl;
+const REPO_URL = toolData.repoUrl;
 
 const FEATURES = [
   {
@@ -68,52 +97,13 @@ const FEATURES = [
   },
 ];
 
-const COMPARISON = [
-  {
-    label: "Pricing & Licence",
-    tool: "$0 — 100% Free Forever",
-    other1: "$259 / year (Screaming Frog)",
-    other2: "$1,400+ / year (Semrush)",
-  },
-  {
-    label: "Crawl URL Limit",
-    tool: "Unlimited URLs",
-    other1: "500 URLs (Free Tier)",
-    other2: "Strict Monthly Credit Caps",
-  },
-  {
-    label: "Schema JSON-LD Validation",
-    tool: "Real-time Offline Validator",
-    other1: "Built-in (Paid Licence)",
-    other2: "Cloud Project Audit",
-  },
-  {
-    label: "Data Privacy & Telemetry",
-    tool: "100% Local on your PC",
-    other1: "Requires Registration",
-    other2: "Full Cloud Tracking",
-  },
-  {
-    label: "Google Sitelinks Analysis",
-    tool: "SiteNavigationElement Graphing",
-    other1: "Manual Inspection",
-    other2: "Cloud Summary Only",
-  },
-];
-
-const REQUIREMENTS = [
-  "Windows 10 or Windows 11 (64-bit)",
-  "4 GB RAM minimum (8 GB recommended for 50k+ URL crawls)",
-  "Internet connection for live website HTTP crawling",
-  "100 MB free disk space for local crawl databases",
-];
-
 export const Route = createFileRoute("/open-source/seo-spider")({
   head: () => {
     const { meta, links } = buildMeta({
+      path: "/open-source/seo-spider",
       title: TITLE,
       description: DESC,
-      path: "/open-source/seo-spider",
+      
     });
     return {
       meta,
@@ -124,9 +114,9 @@ export const Route = createFileRoute("/open-source/seo-spider")({
           children: JSON.stringify(
             breadcrumbLd([
               { name: "Home", path: "/" },
-              { name: "Open Source Hub", path: "/open-source" },
-              { name: "Open SEO Spider", path: "/open-source/seo-spider" },
-            ])
+              { name: "Open Source", path: "/open-source" },
+              { name: toolData.name, path: "/open-source/seo-spider" },
+            ]),
           ),
         },
         {
@@ -134,67 +124,98 @@ export const Route = createFileRoute("/open-source/seo-spider")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            name: "Open SEO Spider & Technical Audit Suite",
-            operatingSystem: "Windows 10, Windows 11",
-            applicationCategory: "DeveloperApplication, BusinessApplication",
-            offers: {
-              "@type": "Offer",
-              price: "0",
-              priceCurrency: "USD",
-            },
+            name: toolData.name,
+            applicationCategory: "DeveloperApplication",
+            operatingSystem: toolData.requirements.os,
             description: DESC,
-            downloadUrl: DOWNLOAD_URL,
+            url: abs("/open-source/seo-spider"),
+            
+            downloadUrl: abs(DOWNLOAD_URL),
+            license: toolData.license,
+            codeRepository: REPO_URL,
+            offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: toolData.faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: f.a,
+              },
+            })),
           }),
         },
       ],
     };
   },
-  component: OpenSeoSpiderPage,
+  component: SeoSpiderPage,
 });
 
-function OpenSeoSpiderPage() {
+function SeoSpiderPage() {
   return (
-    <main className="min-h-screen pt-[100px] md:pt-[120px]">
+    <main className="min-h-screen pt-[60px] md:pt-[72px]">
       <SectionWrapper>
         <Breadcrumbs
           trail={[
             { name: "Home", path: "/" },
             { name: "Open Source", path: "/open-source" },
-            { name: "Open SEO Spider", path: "/open-source/seo-spider" },
+            { name: toolData.shortName, path: "/open-source/seo-spider" },
           ]}
         />
-
-        <div className="mt-8 grid gap-10 lg:grid-cols-2 lg:items-center">
+        <div className="mx-auto grid max-w-[1180px] items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
           <div>
-            <div className="flex flex-wrap items-center gap-2">
-              <MonoBadge>100% Free & Open Source</MonoBadge>
-              <MonoBadge>GPL / MIT</MonoBadge>
-              <MonoBadge>Desktop SEO Suite</MonoBadge>
-            </div>
-            <h1 className="reveal-item mt-4 font-display text-[32px] font-bold leading-tight md:text-[46px]">
+            <EyebrowLabel text={toolData.eyebrow} color="var(--cyan)" />
+            <p className="reveal-item mt-5 font-display text-[15px] font-bold uppercase tracking-[0.18em] text-[var(--cyan)]">
+              {toolData.shortName} • {toolData.category}
+            </p>
+            <h1 className="reveal-item delay-1 mt-3 font-display text-[32px] font-extrabold leading-[1.1] tracking-[-0.035em] text-[var(--text-primary)] md:text-[46px]">
+              Open SEO Spider & Technical Audit Suite —{" "}
               <GradientText from="#2FE0C8" to="#8B7CF6">
-                Open SEO Spider & Technical Audit Suite
+                100% Free
               </GradientText>
             </h1>
-            <p className="reveal-item delay-1 mt-3 font-display text-[18px] font-semibold text-[var(--cyan)]">
-              Free Open-Source Screaming Frog, Ahrefs & Site Audit Alternative for Windows
-            </p>
-            <p className="reveal-item delay-2 mt-4 font-body text-[15px] leading-[1.7] text-[var(--text-secondary)]">
-              Crawl full websites, validate Schema.org JSON-LD structured data, test Google
-              Sitelinks navigation, detect 404 broken links, and audit Core Web Vitals with 100% local
-              privacy and zero subscription fees.
+            <p className="reveal-item delay-2 mt-6 max-w-[640px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[16.5px]">
+              {toolData.tagline} Verified open-source alternative to {toolData.alternativeTo.join(", ")}. Enjoy full offline privacy, zero subscriptions, and complete ownership.
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
-              <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+              <a
+                href={DOWNLOAD_URL}
+                target="_blank" rel="noopener noreferrer"
+              >
                 <CyanButton size="lg" icon={<WindowsIcon />}>
-                  Download Open SEO Spider for Windows
+                  View Official Repository & CLI Package
                 </CyanButton>
               </a>
+
+              <a
+                href={REPO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-[var(--r-md)] border border-white/15 bg-white/[0.04] font-mono text-[13.5px] font-semibold text-zinc-200 hover:text-white hover:bg-white/[0.08] transition-all"
+              >
+                <GitFork size={16} className="text-blue-400" />
+                <span>Official GitHub ({toolData.stars})</span>
+                <ExternalLink size={13} className="text-zinc-400" />
+              </a>
             </div>
-            <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
-              Direct Package Trigger • Windows 10/11 (64-bit) • 100% Free Forever
-            </p>
+
+            <div className="mt-4 flex flex-wrap items-center gap-3 font-mono text-[12px] text-zinc-400">
+              <span className="flex items-center gap-1 text-emerald-400">
+                <CheckCircle2 size={13} />
+                <span>{toolData.downloadTypeLabel}</span>
+              </span>
+              <span>•</span>
+              <span>{toolData.requirements.os}</span>
+              <span>•</span>
+              <span>{toolData.license}</span>
+            </div>
           </div>
 
           <OpenSourceHeroStage
@@ -204,24 +225,27 @@ function OpenSeoSpiderPage() {
             color="#2FE0C8"
             downloadUrl={DOWNLOAD_URL}
             downloadFilename="open-seo-spider.zip"
-            license="MIT / GPL (100% Free)"
-            stars="17.3k ★"
+            license={toolData.license + " (100% Free)"}
+            stars={toolData.stars}
             version="v3.4.0"
             
-            quickCommand={"npx @digiformation/seo-spider crawl --url=https://example.com --audit=all"}
+            quickCommand="npx @digiformation/seo-spider crawl --url=https://example.com --audit=all"
             badges={["Schema.org JSON-LD Validator","Google Sitelinks","Unlimited URLs"]}
             annualSavings="Save $259 / year vs Screaming Frog"
+            repoUrl={REPO_URL}
+            downloadLabel="View Official Repository & CLI Package"
           />
         </div>
       </SectionWrapper>
 
+      {/* 6 CORE SUPERPOWERS */}
       <SectionWrapper className="bg-[var(--bg-surface)]">
         <div className="mx-auto max-w-[1080px]">
           <h2 className="font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[32px]">
-            6 Key Superpowers of Open SEO Spider
+            6 Core Superpowers of {toolData.shortName}
           </h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {FEATURES.map((f) => (
+            {FEATURES.map((f: any) => (
               <GlassCard key={f.title} glowColor={f.color} className="h-full p-5">
                 <f.icon size={22} color={f.color} strokeWidth={2} />
                 <h3 className="mt-3 font-display text-[15.5px] font-bold text-[var(--text-primary)]">
@@ -236,74 +260,69 @@ function OpenSeoSpiderPage() {
         </div>
       </SectionWrapper>
 
+      {/* VALUE COMPARISON CHART */}
       <SectionWrapper>
         <OpenSourceValueComparisonChart toolId="seo-spider" downloadUrl={DOWNLOAD_URL} />
       </SectionWrapper>
 
-      <SectionWrapper className="bg-[var(--bg-surface)]">
-        <div className="mx-auto grid max-w-[1080px] gap-10 lg:grid-cols-2">
-          <div>
-            <EyebrowLabel text="System Requirements" color="var(--cyan)" />
-            <h2 className="mt-4 font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[30px]">
-              What you need to run Open SEO Spider
-            </h2>
-            <TickList className="mt-6" items={REQUIREMENTS} />
-          </div>
-          <GlassCard glowColor="var(--purple)" className="p-6">
-            <EyebrowLabel text="Brought to you by" color="var(--purple)" />
-            <h3 className="mt-4 font-display text-[20px] font-bold text-[var(--text-primary)]">
-              Digiformation Ltd
-            </h3>
-            <p className="mt-1 font-body text-[14px] text-[var(--text-secondary)]">
-              Founder: Muhammad Haroon
-            </p>
-            <p className="mt-3 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-              UK Company Formation • Payment Solutions • Software & Web Development
-            </p>
-            <div className="mt-5 flex flex-wrap gap-3">
-              <MonoBadge>+92 316 446 7464</MonoBadge>
-            </div>
-            <div className="mt-5 flex flex-wrap gap-4 font-body text-[14px]">
-              <a
-                href="https://www.digiformation.co.uk/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--cyan)] hover:underline"
-              >
-                digiformation.co.uk
-              </a>
-              <a
-                href="https://linktr.ee/digiformationltd"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--cyan)] hover:underline"
-              >
-                Linktree
-              </a>
-            </div>
-          </GlassCard>
-        </div>
-      </SectionWrapper>
+      {/* TECHNICAL SYSTEM REQUIREMENTS */}
+      <OpenSourceTechSpecs
+        toolName={toolData.shortName}
+        requirements={toolData.requirements}
+        privacy={toolData.privacy}
+      />
 
+      {/* TRUST & PROVENANCE SECTION */}
+      <OpenSourceSubpageTrustSection tool={toolData} />
+
+      {/* FAQ ACCORDION SECTION (AEO / GEO) */}
+      <OpenSourceSubpageFaq toolName={toolData.shortName} faqs={toolData.faqs} />
+
+      {/* RELATED OPEN-SOURCE TOOLS */}
+      <OpenSourceRelatedTools currentToolId={toolData.id} relatedToolIds={toolData.relatedToolIds} />
+
+      {/* NATURAL DIGI BIZ OS BRIDGE */}
+      <OpenSourceDigiBizBridge
+        headline={toolData.bridge.headline}
+        description={toolData.bridge.description}
+        highlights={toolData.bridge.highlights}
+      />
+
+      {/* BOTTOM ACTION SECTION */}
       <SectionWrapper>
         <div className="mx-auto max-w-[860px] text-center">
           <h2 className="font-display text-[26px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[38px]">
-            Download Open SEO Spider Free for Windows
+            Get {toolData.shortName} Free, Then Connect to DIGI BIZ OS
           </h2>
-          <p className="mt-4 font-body text-[15px] text-[var(--text-secondary)]">
-            Run unlimited audits on your own sites and client projects with $0 subscription costs.
+          <p className="mt-4 font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]">
+            Enjoy full privacy, zero recurring subscriptions, and perpetual open-source freedom on your hardware.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+            <a
+              href={DOWNLOAD_URL}
+              target="_blank" rel="noopener noreferrer"
+            >
               <CyanButton size="lg" icon={<WindowsIcon />}>
-                Download Open SEO Spider for Windows
+                View Official Repository & CLI Package
               </CyanButton>
             </a>
+            <a
+              href={REPO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-[var(--r-md)] border border-white/15 bg-white/[0.04] font-mono text-[14px] font-semibold text-zinc-200 hover:text-white hover:bg-white/[0.08] transition-all"
+            >
+              <GitFork size={16} className="text-blue-400" />
+              <span>Official GitHub</span>
+              <ExternalLink size={13} className="text-zinc-400" />
+            </a>
+          </div>
+          <div className="mt-6">
             <Link
               to="/open-source"
-              className="font-body text-[14px] text-[var(--cyan)] hover:underline block w-full mt-2"
+              className="font-body text-[14px] text-[var(--cyan)] hover:underline"
             >
-              ← Back to all open source software
+              ← Back to Open-Source Software Library
             </Link>
           </div>
         </div>
@@ -322,7 +341,7 @@ function WindowsIcon() {
       fill="currentColor"
       aria-hidden="true"
     >
-      <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.951-1.95" />
+      <path d="M0 3.449L9.327 2.12v9.38H0M10.029 1.949L24 0v11.44H10.029M0 12.56h9.327v9.38L0 20.611M10.029 12.56H24V24l-13.971-1.799" />
     </svg>
   );
 }

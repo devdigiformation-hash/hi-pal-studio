@@ -194,6 +194,7 @@ export const COMPARE_PAGES: ComparePage[] = [
       },
     ],
     links: [
+      { label: "Jan AI (Offline ChatGPT Alternative)", to: "/open-source/jan-ai" },
       { label: "AI desktop assistant", to: "/ai-desktop-assistant" },
       { label: "Computer-use AI", to: "/computer-use-ai" },
       ...CORE_LINKS,
@@ -341,6 +342,7 @@ export const COMPARE_PAGES: ComparePage[] = [
       },
     ],
     links: [
+      { label: "OpenClaw (Desktop Computer-Use)", to: "/open-source/openclaw" },
       { label: "AI models and routing", to: "/features/ai-models" },
       { label: "Memory", to: "/features/memory" },
       ...CORE_LINKS,
@@ -830,6 +832,7 @@ export const COMPARE_PAGES: ComparePage[] = [
       },
     ],
     links: [
+      { label: "OpenHands (Devin Alternative)", to: "/open-source/openhands" },
       { label: "Digi Code Module", to: "/modules/code" },
       { label: "Digi CRM Module", to: "/modules/crm" },
       ...CORE_LINKS,

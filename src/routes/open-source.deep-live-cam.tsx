@@ -1,14 +1,37 @@
 import OpenSourceValueComparisonChart from "@/components/seo/OpenSourceValueComparisonChart";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  Camera,
-  Video,
+  Code2,
+  Bug,
+  MonitorSmartphone,
+  RefreshCcw,
+  Wrench,
+  BadgeDollarSign,
+  Search,
   Zap,
-  Cpu,
   ShieldCheck,
   PiggyBank,
+  FileCode,
+  Layers,
+  Activity,
+  Smile,
+  Sparkles,
+  Mic,
+  Video,
+  Camera,
+  Sliders,
+  Scissors,
+  Music,
+  Radio,
+  FileText,
+  Bot,
+  Users,
+  Database,
+  Cpu,
+  Terminal,
+  ExternalLink,
+  GitFork,
   CheckCircle2,
-  Download,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
@@ -16,20 +39,24 @@ import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
 import CyanButton from "@/components/CyanButton";
-import GhostButton from "@/components/GhostButton";
-import MonoBadge from "@/components/MonoBadge";
-import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
-import exeFile from "@/assets/deep-live-cam-studio.exe.asset.json";
-import zipFile from "@/assets/deep-live-cam-main.zip.asset.json";
+import OpenSourceSubpageTrustSection from "@/components/seo/OpenSourceSubpageTrustSection";
+import OpenSourceSubpageFaq from "@/components/seo/OpenSourceSubpageFaq";
+import OpenSourceTechSpecs from "@/components/seo/OpenSourceTechSpecs";
+import OpenSourceRelatedTools from "@/components/seo/OpenSourceRelatedTools";
+import OpenSourceDigiBizBridge from "@/components/seo/OpenSourceDigiBizBridge";
+import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
 
-const TITLE = "Deep-Live-Cam — Free Real-Time Live Stream & Webcam Face Swapper";
+const toolData = OPEN_SOURCE_SUBPAGES["deep-live-cam"];
+
+const TITLE = "Real-Time Webcam & Live Stream Face Swapper for Windows — 100% Free — Free Open-Source Alternative";
 const DESC =
-  "Download Deep-Live-Cam free for Windows: real-time live webcam face swapping for OBS, Zoom, Google Meet & Discord with 1 single portrait photo.";
+  toolData.tagline + " Download 100% free with verified licensing, zero malware, and complete local privacy.";
 
-const EXE_URL = exeFile.url;
-const ZIP_URL = zipFile.url;
+const DOWNLOAD_URL = toolData.downloadUrl;
+const ZIP_URL = toolData.downloadUrl;
+const REPO_URL = toolData.repoUrl;
 
 const FEATURES = [
   {
@@ -70,53 +97,13 @@ const FEATURES = [
   },
 ];
 
-const COMPARISON = [
-  {
-    label: "Pricing Model",
-    tool: "$0 — Free & Open Source",
-    other1: "$200+/yr (Virtual Cam Plugins)",
-    other2: "$30/mo (Live Cloud Apps)",
-  },
-  {
-    label: "Latency & FPS",
-    tool: "30–60 FPS Local Real-Time",
-    other1: "High lag via cloud streaming",
-    other2: "Variable bitrate drops",
-  },
-  {
-    label: "Source Setup",
-    tool: "1 Single Photo Instant",
-    other1: "Requires complex video dataset",
-    other2: "Requires 100+ training photos",
-  },
-  {
-    label: "Software Integration",
-    tool: "OBS, Zoom, Discord, Meet",
-    other1: "OBS only",
-    other2: "Browser tab only",
-  },
-  {
-    label: "Privacy & Safety",
-    tool: "100% Local Execution",
-    other1: "Streams video to 3rd party",
-    other2: "Logs video calls on cloud",
-  },
-];
-
-const REQUIREMENTS = [
-  "Operating system: Windows 10 / Windows 11 (64-bit)",
-  "Webcam: Any standard 720p or 1080p USB or built-in webcam",
-  "RAM: 8 GB minimum (16 GB recommended)",
-  "GPU: NVIDIA GPU with CUDA recommended for 60 FPS live output (CPU fallback supported)",
-  "Storage: 2 GB free disk space",
-];
-
 export const Route = createFileRoute("/open-source/deep-live-cam")({
   head: () => {
     const { meta, links } = buildMeta({
       path: "/open-source/deep-live-cam",
       title: TITLE,
       description: DESC,
+      
     });
     return {
       meta,
@@ -128,7 +115,7 @@ export const Route = createFileRoute("/open-source/deep-live-cam")({
             breadcrumbLd([
               { name: "Home", path: "/" },
               { name: "Open Source", path: "/open-source" },
-              { name: "Deep-Live-Cam", path: "/open-source/deep-live-cam" },
+              { name: toolData.name, path: "/open-source/deep-live-cam" },
             ]),
           ),
         },
@@ -137,12 +124,31 @@ export const Route = createFileRoute("/open-source/deep-live-cam")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            name: "Deep-Live-Cam Real-Time Webcam Swapper",
-            applicationCategory: "MultimediaApplication",
-            operatingSystem: "Windows 10, Windows 11 (64-bit)",
+            name: toolData.name,
+            applicationCategory: "DeveloperApplication",
+            operatingSystem: toolData.requirements.os,
             description: DESC,
             url: abs("/open-source/deep-live-cam"),
+            
+            downloadUrl: abs(DOWNLOAD_URL),
+            license: toolData.license,
+            codeRepository: REPO_URL,
             offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: toolData.faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: f.a,
+              },
+            })),
           }),
         },
       ],
@@ -159,72 +165,87 @@ function DeepLiveCamPage() {
           trail={[
             { name: "Home", path: "/" },
             { name: "Open Source", path: "/open-source" },
-            { name: "Deep-Live-Cam", path: "/open-source/deep-live-cam" },
+            { name: toolData.shortName, path: "/open-source/deep-live-cam" },
           ]}
         />
         <div className="mx-auto grid max-w-[1180px] items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
           <div>
-            <EyebrowLabel
-              text="🎁 REAL-TIME LIVE WEBCAM FACE SWAP • 45,000+ GITHUB STARS"
-              color="var(--cyan)"
-            />
+            <EyebrowLabel text={toolData.eyebrow} color="var(--cyan)" />
             <p className="reveal-item mt-5 font-display text-[15px] font-bold uppercase tracking-[0.18em] text-[var(--cyan)]">
-              Deep-Live-Cam Real-Time Webcam Swapper
+              {toolData.shortName} • {toolData.category}
             </p>
             <h1 className="reveal-item delay-1 mt-3 font-display text-[32px] font-extrabold leading-[1.1] tracking-[-0.035em] text-[var(--text-primary)] md:text-[46px]">
-              Instant Live Face Swapping for Webcams & Streaming —{" "}
-              <GradientText from="#2FE0C8" to="#8B5CF6">
+              Real-Time Webcam & Live Stream Face Swapper for Windows —{" "}
+              <GradientText from="#2FE0C8" to="#3DDC84">
                 100% Free
               </GradientText>
             </h1>
             <p className="reveal-item delay-2 mt-6 max-w-[640px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[16.5px]">
-              The viral open-source live webcam face swapper. Upload a single portrait photo and
-              swap your face in real-time on live video calls, OBS streams, and recording software
-              with ultra-low latency.
+              {toolData.tagline} Verified open-source alternative to {toolData.alternativeTo.join(", ")}. Enjoy full offline privacy, zero subscriptions, and complete ownership.
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
-              <a href={EXE_URL} download="Deep-Live-Cam-Studio.exe">
+              <a
+                href={DOWNLOAD_URL}
+                download="Deep-Live-Cam-Windows-Installer.exe"
+              >
                 <CyanButton size="lg" icon={<WindowsIcon />}>
-                  Download Deep-Live-Cam (.EXE)
+                  Download Deep-Live-Cam Launcher (.EXE)
                 </CyanButton>
               </a>
-              <a href={ZIP_URL} download="deep-live-cam-main.zip">
-                <GhostButton size="lg" icon={<Download size={18} />}>
-                  Source Code (.ZIP)
-                </GhostButton>
+
+              <a
+                href={REPO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-[var(--r-md)] border border-white/15 bg-white/[0.04] font-mono text-[13.5px] font-semibold text-zinc-200 hover:text-white hover:bg-white/[0.08] transition-all"
+              >
+                <GitFork size={16} className="text-blue-400" />
+                <span>Official GitHub ({toolData.stars})</span>
+                <ExternalLink size={13} className="text-zinc-400" />
               </a>
             </div>
-            <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
-              Direct File Trigger: Deep-Live-Cam-Studio.exe + deep-live-cam-main.zip (67 MB) • Windows 10/11 • GPL-3.0
-            </p>
+
+            <div className="mt-4 flex flex-wrap items-center gap-3 font-mono text-[12px] text-zinc-400">
+              <span className="flex items-center gap-1 text-emerald-400">
+                <CheckCircle2 size={13} />
+                <span>{toolData.downloadTypeLabel}</span>
+              </span>
+              <span>•</span>
+              <span>{toolData.requirements.os}</span>
+              <span>•</span>
+              <span>{toolData.license}</span>
+            </div>
           </div>
 
           <OpenSourceHeroStage
             toolId="deep-live-cam"
-            title="Deep-Live-Cam Realtime Streamer"
-            category="AI Media"
-            color="#A855F7"
-            downloadUrl={ZIP_URL}
-            downloadFilename="Deep-Live-Cam-main.zip"
-            license="GPL-3.0 (100% Free)"
-            stars="41.5k ★"
-            version="v2.0.4"
+            title="Deep-Live-Cam Live Swapper"
+            category="AI Video & Media"
+            color="#3DDC84"
+            downloadUrl={DOWNLOAD_URL}
+            downloadFilename="Deep-Live-Cam-Windows-Installer.exe"
+            license={toolData.license + " (100% Free)"}
+            stars={toolData.stars}
+            version="v1.4.0"
             
-            quickCommand={"python run.py --target live --camera 0 --execution-provider directml"}
-            badges={["60 FPS Live Camera","OBS Virtual Cam Sync","Zero Telemetry"]}
-            annualSavings="Save $600 / year vs Avatars SaaS"
+            quickCommand="python run.py --execution-provider cuda"
+            badges={["Live Webcam Mode","OBS VirtualCam Output","Zero Cloud Telemetry"]}
+            annualSavings="Save $99 / year vs ManyCam"
+            repoUrl={REPO_URL}
+            downloadLabel="Download Deep-Live-Cam Launcher (.EXE)"
           />
         </div>
       </SectionWrapper>
 
+      {/* 6 CORE SUPERPOWERS */}
       <SectionWrapper className="bg-[var(--bg-surface)]">
         <div className="mx-auto max-w-[1080px]">
           <h2 className="font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[32px]">
-            6 Key Superpowers of Deep-Live-Cam
+            6 Core Superpowers of {toolData.shortName}
           </h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {FEATURES.map((f) => (
+            {FEATURES.map((f: any) => (
               <GlassCard key={f.title} glowColor={f.color} className="h-full p-5">
                 <f.icon size={22} color={f.color} strokeWidth={2} />
                 <h3 className="mt-3 font-display text-[15.5px] font-bold text-[var(--text-primary)]">
@@ -239,79 +260,69 @@ function DeepLiveCamPage() {
         </div>
       </SectionWrapper>
 
+      {/* VALUE COMPARISON CHART */}
       <SectionWrapper>
-        <OpenSourceValueComparisonChart toolId="deep-live-cam" downloadUrl={EXE_URL} />
+        <OpenSourceValueComparisonChart toolId="deep-live-cam" downloadUrl={DOWNLOAD_URL} />
       </SectionWrapper>
 
-      <SectionWrapper className="bg-[var(--bg-surface)]">
-        <div className="mx-auto grid max-w-[1080px] gap-10 lg:grid-cols-2">
-          <div>
-            <EyebrowLabel text="System Requirements" color="var(--cyan)" />
-            <h2 className="mt-4 font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[30px]">
-              What you need to run Deep-Live-Cam
-            </h2>
-            <TickList className="mt-6" items={REQUIREMENTS} />
-          </div>
-          <GlassCard glowColor="var(--purple)" className="p-6">
-            <EyebrowLabel text="Brought to you by" color="var(--purple)" />
-            <h3 className="mt-4 font-display text-[20px] font-bold text-[var(--text-primary)]">
-              Digiformation Ltd
-            </h3>
-            <p className="mt-1 font-body text-[14px] text-[var(--text-secondary)]">
-              Founder: Muhammad Haroon
-            </p>
-            <p className="mt-3 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-              UK Company Formation • Payment Solutions • Software & Web Development
-            </p>
-            <div className="mt-5 flex flex-wrap gap-3">
-              <MonoBadge>+92 316 446 7464</MonoBadge>
-            </div>
-            <div className="mt-5 flex flex-wrap gap-4 font-body text-[14px]">
-              <a
-                href="https://www.digiformation.co.uk/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--cyan)] hover:underline"
-              >
-                digiformation.co.uk
-              </a>
-              <a
-                href="https://linktr.ee/digiformationltd"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--cyan)] hover:underline"
-              >
-                Linktree
-              </a>
-            </div>
-          </GlassCard>
-        </div>
-      </SectionWrapper>
+      {/* TECHNICAL SYSTEM REQUIREMENTS */}
+      <OpenSourceTechSpecs
+        toolName={toolData.shortName}
+        requirements={toolData.requirements}
+        privacy={toolData.privacy}
+      />
 
+      {/* TRUST & PROVENANCE SECTION */}
+      <OpenSourceSubpageTrustSection tool={toolData} />
+
+      {/* FAQ ACCORDION SECTION (AEO / GEO) */}
+      <OpenSourceSubpageFaq toolName={toolData.shortName} faqs={toolData.faqs} />
+
+      {/* RELATED OPEN-SOURCE TOOLS */}
+      <OpenSourceRelatedTools currentToolId={toolData.id} relatedToolIds={toolData.relatedToolIds} />
+
+      {/* NATURAL DIGI BIZ OS BRIDGE */}
+      <OpenSourceDigiBizBridge
+        headline={toolData.bridge.headline}
+        description={toolData.bridge.description}
+        highlights={toolData.bridge.highlights}
+      />
+
+      {/* BOTTOM ACTION SECTION */}
       <SectionWrapper>
         <div className="mx-auto max-w-[860px] text-center">
           <h2 className="font-display text-[26px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[38px]">
-            Download Deep-Live-Cam Free for Windows
+            Get {toolData.shortName} Free, Then Connect to DIGI BIZ OS
           </h2>
-          <p className="mt-4 font-body text-[15px] text-[var(--text-secondary)]">
-            Enjoy full access with zero watermarks, zero subscription fees, and 100% offline privacy.
+          <p className="mt-4 font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]">
+            Enjoy full privacy, zero recurring subscriptions, and perpetual open-source freedom on your hardware.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href={EXE_URL} download="Deep-Live-Cam-Studio.exe">
+            <a
+              href={DOWNLOAD_URL}
+              download="Deep-Live-Cam-Windows-Installer.exe"
+            >
               <CyanButton size="lg" icon={<WindowsIcon />}>
-                Download Deep-Live-Cam (.EXE)
+                Download Deep-Live-Cam Launcher (.EXE)
               </CyanButton>
             </a>
-            <a href={ZIP_URL} download="deep-live-cam-main.zip">
-              <GhostButton size="lg" icon={<Download size={18} />}>
-                Download Source (.ZIP)
-              </GhostButton>
+            <a
+              href={REPO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-[var(--r-md)] border border-white/15 bg-white/[0.04] font-mono text-[14px] font-semibold text-zinc-200 hover:text-white hover:bg-white/[0.08] transition-all"
+            >
+              <GitFork size={16} className="text-blue-400" />
+              <span>Official GitHub</span>
+              <ExternalLink size={13} className="text-zinc-400" />
             </a>
+          </div>
+          <div className="mt-6">
             <Link
               to="/open-source"
-              className="font-body text-[14px] text-[var(--cyan)] hover:underline block w-full mt-2"
+              className="font-body text-[14px] text-[var(--cyan)] hover:underline"
             >
-              ← Back to all open source software
+              ← Back to Open-Source Software Library
             </Link>
           </div>
         </div>

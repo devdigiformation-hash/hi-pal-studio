@@ -1,24 +1,63 @@
 import OpenSourceValueComparisonChart from "@/components/seo/OpenSourceValueComparisonChart";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ShieldCheck, WifiOff, Bot, PiggyBank, Zap, Terminal, Key } from "lucide-react";
+import {
+  Code2,
+  Bug,
+  MonitorSmartphone,
+  RefreshCcw,
+  Wrench,
+  BadgeDollarSign,
+  Search,
+  Zap,
+  ShieldCheck,
+  PiggyBank,
+  FileCode,
+  Layers,
+  Activity,
+  Smile,
+  Sparkles,
+  Mic,
+  Video,
+  Camera,
+  Sliders,
+  Scissors,
+  Music,
+  Radio,
+  FileText,
+  Bot,
+  Users,
+  Database,
+  Cpu,
+  Terminal,
+  ExternalLink,
+  GitFork,
+  CheckCircle2,
+  WifiOff,
+} from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
 import CyanButton from "@/components/CyanButton";
-import MonoBadge from "@/components/MonoBadge";
-import TickList from "@/components/inner/TickList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { buildMeta, breadcrumbLd, abs } from "@/lib/seo";
+import OpenSourceSubpageTrustSection from "@/components/seo/OpenSourceSubpageTrustSection";
+import OpenSourceSubpageFaq from "@/components/seo/OpenSourceSubpageFaq";
+import OpenSourceTechSpecs from "@/components/seo/OpenSourceTechSpecs";
+import OpenSourceRelatedTools from "@/components/seo/OpenSourceRelatedTools";
+import OpenSourceDigiBizBridge from "@/components/seo/OpenSourceDigiBizBridge";
+import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
 import shot from "@/assets/jan-ai-screenshot.jpg.asset.json";
-import setupFile from "@/assets/jan-setup-x64.exe.asset.json";
 
-const TITLE = "Jan AI — Free Offline ChatGPT Alternative for Windows";
+const toolData = OPEN_SOURCE_SUBPAGES["jan-ai"];
+
+const TITLE = "Run Powerful AI on Your PC — 100% Private, Fast & Offline — Free Open-Source Alternative";
 const DESC =
-  "Download Jan AI free: run DeepSeek, Llama 3, Qwen and Mistral locally on Windows. 100% private, works offline, unlimited messages, no subscription.";
+  toolData.tagline + " Download 100% free with verified licensing, zero malware, and complete local privacy.";
 
-const DOWNLOAD_URL = setupFile.url;
+const DOWNLOAD_URL = toolData.downloadUrl;
+const REPO_URL = toolData.repoUrl;
 
 const FEATURES = [
   {
@@ -59,35 +98,6 @@ const FEATURES = [
   },
 ];
 
-const COMPARISON = [
-  { label: "Pricing", jan: "$0 — free forever", chatgpt: "$240 / year", claude: "$240 / year" },
-  {
-    label: "Data privacy",
-    jan: "100% local & private",
-    chatgpt: "Logged on cloud",
-    claude: "Logged on cloud",
-  },
-  {
-    label: "Offline access",
-    jan: "Yes — no internet",
-    chatgpt: "No — always needs Wi-Fi",
-    claude: "No — always needs Wi-Fi",
-  },
-  {
-    label: "Message limits",
-    jan: "Unlimited",
-    chatgpt: "Strict hourly rate caps",
-    claude: "Strict hourly rate caps",
-  },
-];
-
-const REQUIREMENTS = [
-  "Operating system: Windows 10 / Windows 11 (64-bit)",
-  "RAM: 8 GB minimum (16 GB recommended for 3B/8B models)",
-  "Processor: Intel Core i3 / i5 / i7 or AMD Ryzen",
-  "Storage: 2 GB free disk space",
-];
-
 export const Route = createFileRoute("/open-source/jan-ai")({
   head: () => {
     const { meta, links } = buildMeta({
@@ -106,7 +116,7 @@ export const Route = createFileRoute("/open-source/jan-ai")({
             breadcrumbLd([
               { name: "Home", path: "/" },
               { name: "Open Source", path: "/open-source" },
-              { name: "Jan AI", path: "/open-source/jan-ai" },
+              { name: toolData.name, path: "/open-source/jan-ai" },
             ]),
           ),
         },
@@ -115,13 +125,31 @@ export const Route = createFileRoute("/open-source/jan-ai")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            name: "Jan AI",
+            name: toolData.name,
             applicationCategory: "DeveloperApplication",
-            operatingSystem: "Windows 10, Windows 11 (64-bit)",
+            operatingSystem: toolData.requirements.os,
             description: DESC,
             url: abs("/open-source/jan-ai"),
             image: abs(shot.url),
+            downloadUrl: abs(DOWNLOAD_URL),
+            license: toolData.license,
+            codeRepository: REPO_URL,
             offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: toolData.faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: f.a,
+              },
+            })),
           }),
         },
       ],
@@ -138,73 +166,87 @@ function JanAiPage() {
           trail={[
             { name: "Home", path: "/" },
             { name: "Open Source", path: "/open-source" },
-            { name: "Jan AI", path: "/open-source/jan-ai" },
+            { name: toolData.shortName, path: "/open-source/jan-ai" },
           ]}
         />
         <div className="mx-auto grid max-w-[1180px] items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
           <div>
-            <EyebrowLabel
-              text="100% Free & Open-Source Desktop Suite — No Subscription"
-              color="var(--amber)"
-            />
+            <EyebrowLabel text={toolData.eyebrow} color="var(--cyan)" />
             <p className="reveal-item mt-5 font-display text-[15px] font-bold uppercase tracking-[0.18em] text-[var(--cyan)]">
-              Jan AI
+              {toolData.shortName} • {toolData.category}
             </p>
-            <h1 className="reveal-item delay-1 mt-3 font-display text-[32px] font-extrabold leading-[1.1] tracking-[-0.035em] text-[var(--text-primary)] md:text-[48px]">
+            <h1 className="reveal-item delay-1 mt-3 font-display text-[32px] font-extrabold leading-[1.1] tracking-[-0.035em] text-[var(--text-primary)] md:text-[46px]">
               Run Powerful AI on Your PC —{" "}
               <GradientText from="#2FE0C8" to="#8B7CF6">
                 100% Private, Fast & Offline
               </GradientText>
             </h1>
             <p className="reveal-item delay-2 mt-6 max-w-[640px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[16.5px]">
-              The ultimate free ChatGPT alternative. Chat with local AI models (DeepSeek, Llama 3,
-              Qwen, Mistral) directly on your laptop RAM with zero internet, zero tracking and
-              lifetime free access.
+              {toolData.tagline} Verified open-source alternative to {toolData.alternativeTo.join(", ")}. Enjoy full offline privacy, zero subscriptions, and complete ownership.
             </p>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
-              <a href={DOWNLOAD_URL} download="Jan-Setup-x64.exe">
+              <a
+                href={DOWNLOAD_URL}
+                download="Jan-Setup-x64.exe"
+              >
                 <CyanButton size="lg" icon={<WindowsIcon />}>
-                  Download Jan AI
+                  Download Jan AI for Windows (.EXE)
                 </CyanButton>
               </a>
-              <a href="https://opencode.ai/auth" target="_blank" rel="noopener noreferrer">
-                <CyanButton size="lg" icon={<Key size={18} />} tone="139,92,246">
-                  Get Free API Key
-                </CyanButton>
+
+              <a
+                href={REPO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-[var(--r-md)] border border-white/15 bg-white/[0.04] font-mono text-[13.5px] font-semibold text-zinc-200 hover:text-white hover:bg-white/[0.08] transition-all"
+              >
+                <GitFork size={16} className="text-blue-400" />
+                <span>Official GitHub ({toolData.stars})</span>
+                <ExternalLink size={13} className="text-zinc-400" />
               </a>
             </div>
-            <p className="mt-4 font-mono text-[12.5px] text-[var(--text-muted)]">
-              Version: Latest x64 • 57.7 MB • Windows 10 / 11 (64-bit) • 100% Verified •
-              Jan-Setup-x64.exe
-            </p>
+
+            <div className="mt-4 flex flex-wrap items-center gap-3 font-mono text-[12px] text-zinc-400">
+              <span className="flex items-center gap-1 text-emerald-400">
+                <CheckCircle2 size={13} />
+                <span>{toolData.downloadTypeLabel}</span>
+              </span>
+              <span>•</span>
+              <span>{toolData.requirements.os}</span>
+              <span>•</span>
+              <span>{toolData.license}</span>
+            </div>
           </div>
 
           <OpenSourceHeroStage
             toolId="jan-ai"
             title="Jan AI Local LLM Studio"
-            category="Local LLM"
+            category="Local AI & Chat"
             color="#2FE0C8"
             downloadUrl={DOWNLOAD_URL}
             downloadFilename="Jan-Setup-x64.exe"
-            license="AGPL-3.0 (100% Free)"
-            stars="32.5k ★"
+            license={toolData.license + " (100% Free)"}
+            stars={toolData.stars}
             version="v0.5.14"
             image={shot.url}
-            quickCommand={"winget install Jan.Jan"}
+            quickCommand="winget install Jan.Jan"
             badges={["100% Offline","DeepSeek & Llama 3","Local REST API"]}
             annualSavings="Save $240 / year vs ChatGPT Plus"
+            repoUrl={REPO_URL}
+            downloadLabel="Download Jan AI for Windows (.EXE)"
           />
         </div>
       </SectionWrapper>
 
+      {/* 6 CORE SUPERPOWERS */}
       <SectionWrapper className="bg-[var(--bg-surface)]">
         <div className="mx-auto max-w-[1080px]">
           <h2 className="font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[32px]">
-            Core features & highlights
+            6 Core Superpowers of {toolData.shortName}
           </h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {FEATURES.map((f) => (
+            {FEATURES.map((f: any) => (
               <GlassCard key={f.title} glowColor={f.color} className="h-full p-5">
                 <f.icon size={22} color={f.color} strokeWidth={2} />
                 <h3 className="mt-3 font-display text-[15.5px] font-bold text-[var(--text-primary)]">
@@ -219,76 +261,69 @@ function JanAiPage() {
         </div>
       </SectionWrapper>
 
+      {/* VALUE COMPARISON CHART */}
       <SectionWrapper>
         <OpenSourceValueComparisonChart toolId="jan-ai" downloadUrl={DOWNLOAD_URL} />
       </SectionWrapper>
 
-      <SectionWrapper className="bg-[var(--bg-surface)]">
-        <div className="mx-auto grid max-w-[1080px] gap-10 lg:grid-cols-2">
-          <div>
-            <EyebrowLabel text="System Requirements" color="var(--cyan)" />
-            <h2 className="mt-4 font-display text-[24px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[30px]">
-              What you need to run it
-            </h2>
-            <TickList className="mt-6" items={REQUIREMENTS} />
-          </div>
-          <GlassCard glowColor="var(--purple)" className="p-6">
-            <EyebrowLabel text="Brought to you by" color="var(--purple)" />
-            <h3 className="mt-4 font-display text-[20px] font-bold text-[var(--text-primary)]">
-              Digiformation Ltd
-            </h3>
-            <p className="mt-1 font-body text-[14px] text-[var(--text-secondary)]">
-              Founder: Muhammad Haroon
-            </p>
-            <p className="mt-3 font-body text-[13.5px] leading-[1.7] text-[var(--text-secondary)]">
-              UK Company Formation • Payment Solutions • Software & Web Development
-            </p>
-            <div className="mt-5 flex flex-wrap gap-3">
-              <MonoBadge>+92 316 446 7464</MonoBadge>
-            </div>
-            <div className="mt-5 flex flex-wrap gap-4 font-body text-[14px]">
-              <a
-                href="https://www.digiformation.co.uk/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--cyan)] hover:underline"
-              >
-                digiformation.co.uk
-              </a>
-              <a
-                href="https://linktr.ee/digiformationltd"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--cyan)] hover:underline"
-              >
-                Linktree
-              </a>
-            </div>
-          </GlassCard>
-        </div>
-      </SectionWrapper>
+      {/* TECHNICAL SYSTEM REQUIREMENTS */}
+      <OpenSourceTechSpecs
+        toolName={toolData.shortName}
+        requirements={toolData.requirements}
+        privacy={toolData.privacy}
+      />
 
+      {/* TRUST & PROVENANCE SECTION */}
+      <OpenSourceSubpageTrustSection tool={toolData} />
+
+      {/* FAQ ACCORDION SECTION (AEO / GEO) */}
+      <OpenSourceSubpageFaq toolName={toolData.shortName} faqs={toolData.faqs} />
+
+      {/* RELATED OPEN-SOURCE TOOLS */}
+      <OpenSourceRelatedTools currentToolId={toolData.id} relatedToolIds={toolData.relatedToolIds} />
+
+      {/* NATURAL DIGI BIZ OS BRIDGE */}
+      <OpenSourceDigiBizBridge
+        headline={toolData.bridge.headline}
+        description={toolData.bridge.description}
+        highlights={toolData.bridge.highlights}
+      />
+
+      {/* BOTTOM ACTION SECTION */}
       <SectionWrapper>
         <div className="mx-auto max-w-[860px] text-center">
           <h2 className="font-display text-[26px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[38px]">
-            Get Jan AI free, then automate everything with DIGI BIZ OS
+            Get {toolData.shortName} Free, Then Connect to DIGI BIZ OS
           </h2>
+          <p className="mt-4 font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]">
+            Enjoy full privacy, zero recurring subscriptions, and perpetual open-source freedom on your hardware.
+          </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href={DOWNLOAD_URL} download="Jan-Setup-x64.exe">
+            <a
+              href={DOWNLOAD_URL}
+              download="Jan-Setup-x64.exe"
+            >
               <CyanButton size="lg" icon={<WindowsIcon />}>
-                Download Jan AI
+                Download Jan AI for Windows (.EXE)
               </CyanButton>
             </a>
-            <a href="https://opencode.ai/auth" target="_blank" rel="noopener noreferrer">
-              <CyanButton size="lg" icon={<Key size={18} />} tone="139,92,246">
-                Get Free API Key
-              </CyanButton>
+            <a
+              href={REPO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-[var(--r-md)] border border-white/15 bg-white/[0.04] font-mono text-[14px] font-semibold text-zinc-200 hover:text-white hover:bg-white/[0.08] transition-all"
+            >
+              <GitFork size={16} className="text-blue-400" />
+              <span>Official GitHub</span>
+              <ExternalLink size={13} className="text-zinc-400" />
             </a>
+          </div>
+          <div className="mt-6">
             <Link
               to="/open-source"
               className="font-body text-[14px] text-[var(--cyan)] hover:underline"
             >
-              Back to open source software
+              ← Back to Open-Source Software Library
             </Link>
           </div>
         </div>

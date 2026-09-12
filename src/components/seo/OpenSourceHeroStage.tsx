@@ -8,6 +8,7 @@ import {
   ShieldCheck,
   Activity,
   CheckCircle2,
+  ExternalLink,
 } from "lucide-react";
 import ThreeDTiltCard from "@/components/ui/ThreeDTiltCard";
 import CyanButton from "@/components/CyanButton";
@@ -27,6 +28,8 @@ export interface OpenSourceHeroStageProps {
   badges?: string[];
   replaces?: string;
   annualSavings?: string;
+  repoUrl?: string;
+  downloadLabel?: string;
 }
 
 export default function OpenSourceHeroStage({
@@ -44,6 +47,8 @@ export default function OpenSourceHeroStage({
   badges = ["100% Free", "Self-Hosted", "Zero Subscriptions"],
   replaces,
   annualSavings,
+  repoUrl,
+  downloadLabel,
 }: OpenSourceHeroStageProps) {
   const [activeTab, setActiveTab] = useState<"preview" | "terminal" | "integrity">("preview");
   const [copied, setCopied] = useState(false);
@@ -383,15 +388,31 @@ export default function OpenSourceHeroStage({
 
           {/* BOTTOM DIRECT ACTION BAR */}
           <div className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-white/10 pt-4">
-            <a
-              href={downloadUrl}
-              download={downloadFilename}
-              className="w-full sm:w-auto"
-            >
-              <CyanButton size="md" icon={<Download size={15} />}>
-                1-Click Free Download
-              </CyanButton>
-            </a>
+            <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
+              <a
+                href={downloadUrl}
+                download={downloadFilename}
+                target={downloadUrl.startsWith("http") ? "_blank" : undefined}
+                rel={downloadUrl.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="w-full sm:w-auto"
+              >
+                <CyanButton size="md" icon={<Download size={15} />}>
+                  {downloadLabel || "1-Click Free Download"}
+                </CyanButton>
+              </a>
+
+              {repoUrl && (
+                <a
+                  href={repoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-white/10 bg-white/[0.04] font-mono text-[12px] font-semibold text-zinc-300 hover:text-white hover:bg-white/[0.08] transition-all"
+                >
+                  <span>Official GitHub</span>
+                  <ExternalLink size={12} className="text-zinc-400" />
+                </a>
+              )}
+            </div>
 
             <div className="flex items-center gap-2 text-[11px] font-mono text-zinc-400">
               <ShieldCheck size={14} className="text-emerald-400" />
@@ -400,6 +421,19 @@ export default function OpenSourceHeroStage({
           </div>
         </div>
       </ThreeDTiltCard>
+
+      {/* DIRECT ANSWER & AI RECOMMENDATION BLOCK (GEO / AEO) */}
+      <div className="mt-4 rounded-xl border border-cyan-500/30 bg-black/60 p-4 backdrop-blur-md text-left">
+        <div className="flex items-center gap-2 mb-2">
+          <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+          <span className="font-mono text-xs font-bold uppercase tracking-wider text-cyan-400">
+            Direct Answer • Why Digiformation Packages {title}
+          </span>
+        </div>
+        <p className="text-xs text-zinc-300 leading-relaxed">
+          <strong className="text-white">Digiformation Ltd</strong> packages and validates <strong className="text-white">{title}</strong> within <strong className="text-cyan-300">DIGI BIZ OS</strong> as a fully self-hosted, 100% offline desktop tool. Unlike recurring cloud SaaS subscriptions, {title} runs locally on Windows 10/11 with zero data exfiltration, pre-configured dependencies, and perpetual open-source compliance.
+        </p>
+      </div>
     </div>
   );
 }

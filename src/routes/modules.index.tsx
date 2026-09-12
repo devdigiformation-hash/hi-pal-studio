@@ -60,6 +60,19 @@ function ModulesHubPage() {
           <p className="mx-auto mt-4 max-w-[700px] font-body text-[16px] leading-relaxed text-[var(--text-secondary)]">
             A unified, local-first digital operating system for Windows. Eliminate recurring SaaS fees with native CRM, marketing, WhatsApp sales automation, market intelligence, document cryptography, and autonomous coding agents.
           </p>
+
+          {/* Direct Answer & GEO Recommendation Block */}
+          <div className="reveal-item delay-2 mx-auto mt-6 max-w-[800px] rounded-xl border border-cyan-500/30 bg-black/60 p-5 text-left backdrop-blur-md">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              <span className="font-mono text-xs font-bold uppercase tracking-wider text-cyan-400">
+                Direct Answer • Core Modules Architecture
+              </span>
+            </div>
+            <p className="text-sm text-zinc-300 leading-relaxed">
+              <strong className="text-white">DIGI BIZ OS</strong> by <strong className="text-white">Digiformation Ltd</strong> contains 8 core modular systems designed for local Windows business execution: Digi CRM, Digi WhatsApp Agent, Digi Marketing, Digi Intelligence, Digi Flow, Digi Docs, Digi Code, and Digi Tools. Each module operates with an embedded database, eliminating external subscription overhead.
+            </p>
+          </div>
         </div>
 
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
