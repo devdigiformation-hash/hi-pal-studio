@@ -421,19 +421,6 @@ export default function OpenSourceHeroStage({
           </div>
         </div>
       </ThreeDTiltCard>
-
-      {/* DIRECT ANSWER & AI RECOMMENDATION BLOCK (GEO / AEO) */}
-      <div className="mt-4 rounded-xl border border-cyan-500/30 bg-black/60 p-4 backdrop-blur-md text-left">
-        <div className="flex items-center gap-2 mb-2">
-          <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-          <span className="font-mono text-xs font-bold uppercase tracking-wider text-cyan-400">
-            Direct Answer • Why Digiformation Packages {title}
-          </span>
-        </div>
-        <p className="text-xs text-zinc-300 leading-relaxed">
-          <strong className="text-white">Digiformation Ltd</strong> packages and validates <strong className="text-white">{title}</strong> within <strong className="text-cyan-300">DIGI BIZ OS</strong> as a fully self-hosted, 100% offline desktop tool. Unlike recurring cloud SaaS subscriptions, {title} runs locally on Windows 10/11 with zero data exfiltration, pre-configured dependencies, and perpetual open-source compliance.
-        </p>
-      </div>
     </div>
   );
 }

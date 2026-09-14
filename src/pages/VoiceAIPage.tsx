@@ -144,17 +144,6 @@ export default function VoiceAIPage() {
           <p className="mx-auto mt-4 max-w-[720px] font-body text-[16px] leading-relaxed text-[var(--text-secondary)]">
             A native, low-latency conversational AI engine for Windows. Speak naturally to control applications, execute multi-step workflows, manage local databases, and coordinate business operations hands-free.
           </p>
-
-          {/* DIRECT ANSWER BLOCK */}
-          <div className="mx-auto mt-8 max-w-3xl rounded-[12px] border border-[var(--cyan)]/30 bg-[var(--cyan)]/5 p-6 text-left">
-            <div className="flex items-center gap-2 font-mono text-[12px] uppercase tracking-wider text-[var(--cyan)]">
-              <Sparkles size={15} />
-              <span>Direct Answer — What Is the DIGI BIZ OS Voice Assistant?</span>
-            </div>
-            <p className="mt-3 font-body text-[15px] leading-[1.8] text-[var(--text-primary)] font-medium">
-              The DIGI BIZ OS Voice Assistant is an installed, real-time desktop AI controller for Windows 10 and 11. Unlike cloud web chatbots, it combines offline neural speech recognition, screen awareness, terminal execution, and local database routing to plan and execute complex desktop tasks by voice with sub-200ms round-trip latency.
-            </p>
-          </div>
         </div>
       </SectionWrapper>
 

@@ -60,17 +60,6 @@ function ModelsDirectoryPage() {
           <p className="mx-auto mt-4 max-w-[740px] font-body text-[16px] leading-relaxed text-[var(--text-secondary)]">
             Explore the complete directory of free open-weights and frontier AI models supported inside DIGI BIZ OS. Run models 100% offline with zero cloud fees, or connect high-speed APIs for enterprise reasoning.
           </p>
-
-          {/* DIRECT ANSWER BLOCK */}
-          <div className="mx-auto mt-8 max-w-3xl rounded-[12px] border border-[var(--cyan)]/30 bg-[var(--cyan)]/5 p-6 text-left">
-            <div className="flex items-center gap-2 font-mono text-[12px] uppercase tracking-wider text-[var(--cyan)]">
-              <Sparkles size={15} />
-              <span>Direct Answer — How Does DIGI BIZ OS Run AI Models?</span>
-            </div>
-            <p className="mt-3 font-body text-[15px] leading-[1.8] text-[var(--text-primary)] font-medium">
-              DIGI BIZ OS features a unified model execution layer that connects directly to local runtimes (Ollama, Jan AI, LM Studio, llama.cpp) and cloud providers (Groq, Together, OpenRouter, Anthropic, OpenAI). You can switch models with one click, run 100% air-gapped without internet, and route specific business tasks (CRM, Code, Audio, OCR) to the optimal model.
-            </p>
-          </div>
         </div>
 
         {/* MODEL CARDS GRID */}

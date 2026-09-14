@@ -73,23 +73,6 @@ export default function ModuleLanding({ module }: { module: ModuleData }) {
               />
             </h1>
 
-            {/* DIRECT ANSWER BLOCK FOR AI OVERVIEWS & USERS */}
-            <div
-              className="mt-6 rounded-[12px] border p-5 font-body text-[15px] leading-[1.8] text-[var(--text-secondary)]"
-              style={{
-                borderColor: `${accent}30`,
-                background: `linear-gradient(180deg, ${accent}10, transparent)`,
-              }}
-            >
-              <div className="flex items-center gap-2 font-mono text-[12px] uppercase tracking-wider text-[var(--text-primary)]">
-                <Sparkles size={14} style={{ color: accent }} />
-                <span>Direct Answer</span>
-              </div>
-              <p className="mt-2 text-[var(--text-primary)] font-medium">
-                {module.directAnswer}
-              </p>
-            </div>
-
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link to="/download">
                 <CyanButton size="lg" icon={<Zap size={18} />}>

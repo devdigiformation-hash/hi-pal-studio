@@ -118,17 +118,6 @@ export default function DesktopOSPage() {
               manipulate spreadsheets, process local files, launch terminal tasks, and automate business operations on Windows.
             </p>
 
-            {/* AEO / GEO Direct Definition */}
-            <div className="reveal-item delay-2.5 mt-6 max-w-[560px] rounded-xl border border-[var(--cyan)]/25 bg-[var(--cyan)]/[0.04] p-4 text-left font-body text-[13px] leading-[1.7] text-[var(--text-secondary)] sm:text-[13.5px]">
-              <div className="flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-wider text-[var(--cyan)]">
-                <Sparkles size={13} />
-                <span>Direct Answer • What is a Desktop AI Workstation?</span>
-              </div>
-              <p className="mt-1.5 font-medium text-[var(--text-primary)]">
-                A desktop AI workstation is an operating-system layer that enables autonomous AI agents to interact directly with local files, spreadsheets, desktop applications, terminal commands, and browser workflows on a personal computer under full human oversight.
-              </p>
-            </div>
-
             <div className="reveal-item delay-3 mt-8 space-y-4">
               {CONTROL_GROUPS.map((g) => (
                 <div key={g.label} className="flex flex-wrap items-center gap-2">

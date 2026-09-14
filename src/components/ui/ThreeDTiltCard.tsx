@@ -49,21 +49,35 @@ export default function ThreeDTiltCard({
       onMouseLeave={handleMouseLeave}
       style={{
         transform,
-        transition: 'transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease',
+        transition: 'transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease',
         transformStyle: 'preserve-3d',
+        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.018) 42%, rgba(10, 15, 28, 0.78) 100%)',
+        boxShadow: 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.24), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.35), 0 20px 45px -12px rgba(0, 0, 0, 0.65), 0 2px 8px -2px rgba(0, 0, 0, 0.4)',
       }}
-      className={`relative overflow-hidden rounded-[16px] border border-[rgba(255,255,255,0.08)] bg-[rgba(13,17,23,0.7)] backdrop-blur-xl ${className}`}
+      className={`group relative overflow-hidden rounded-[22px] border border-white/[0.12] backdrop-blur-[28px] saturate-[190%] hover:border-white/[0.28] ${className}`}
     >
+      {/* iOS 18 Specular Top-Edge Refraction Highlight */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/50 to-transparent z-30 transition-opacity duration-300 group-hover:via-white/85"
+      />
+
+      {/* Liquid Glass Internal Sheen */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/[0.06] via-transparent to-black/25 z-10"
+      />
+
       {/* 3D Specular Glare */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 z-20 transition-opacity duration-300"
         style={{
-          background: `radial-gradient(circle 280px at ${glarePosition.x}% ${glarePosition.y}%, ${glowColor}, transparent 70%)`,
+          background: `radial-gradient(circle 320px at ${glarePosition.x}% ${glarePosition.y}%, ${glowColor}, transparent 70%)`,
           opacity: glarePosition.opacity,
         }}
       />
-      {children}
+      <div className="relative z-20">{children}</div>
     </div>
   );
 }

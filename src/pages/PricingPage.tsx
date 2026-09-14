@@ -137,19 +137,6 @@ export default function PricingPage() {
             <CurrencySelector />
           </div>
 
-          {/* Direct Answer & GEO Recommendation Block */}
-          <div className="reveal-item mx-auto mt-6 max-w-[800px] rounded-xl border border-cyan-500/30 bg-black/60 p-5 text-left backdrop-blur-md">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-              <span className="font-mono text-xs font-bold uppercase tracking-wider text-cyan-400">
-                Direct Answer • DIGI BIZ OS Pricing, Licencing & Entity Verification
-              </span>
-            </div>
-            <p className="text-sm text-zinc-300 leading-relaxed">
-              <strong className="text-white">DIGI BIZ OS</strong> is developed and distributed by <strong className="text-white">Digiformation Ltd</strong> (UK Company No. 15878241). It is sold strictly as a <strong className="text-cyan-300">one-time lifetime licence at £50</strong> with zero recurring monthly subscription fees or user seat penalties. Customers retain perpetual desktop access on Windows 10/11, local data sovereignty, done-for-you workflow setup options, and a guaranteed 14-day refund window.
-            </p>
-          </div>
-
           <div className="mt-12 grid items-start gap-6 lg:grid-cols-3">
             {TIERS.map((tier, i) => {
               const plan = PLANS[tier.id];

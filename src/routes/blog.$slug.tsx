@@ -93,16 +93,6 @@ function BlogPostPage() {
             {post.description}
           </p>
 
-          {/* Key Takeaway / Direct Answer for AEO & Quick Reading */}
-          <div className="mt-8 rounded-xl border border-[var(--cyan)]/25 bg-[var(--cyan)]/5 p-5 font-body">
-            <div className="flex items-center gap-2 font-mono text-[11.5px] font-semibold uppercase tracking-wider text-[var(--cyan)]">
-              <span>Key Takeaway & Direct Answer</span>
-            </div>
-            <p className="mt-2 text-[14.5px] font-medium leading-[1.8] text-[var(--text-primary)]">
-              {post.description}
-            </p>
-          </div>
-
           {post.body.map((section) => (
             <section key={section.heading} className="mt-12">
               <h2 className="font-display text-[22px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[28px]">
