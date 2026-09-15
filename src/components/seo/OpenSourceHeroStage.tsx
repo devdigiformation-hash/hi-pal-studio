@@ -335,7 +335,8 @@ export default function OpenSourceHeroStage({
                   </span>
                   <a
                     href={downloadUrl}
-                    download={downloadFilename}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="font-mono text-[11px] font-bold text-cyan-400 hover:underline flex items-center gap-1"
                   >
                     <Download size={13} />
@@ -391,9 +392,8 @@ export default function OpenSourceHeroStage({
             <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
               <a
                 href={downloadUrl}
-                download={downloadFilename}
-                target={downloadUrl.startsWith("http") ? "_blank" : undefined}
-                rel={downloadUrl.startsWith("http") ? "noopener noreferrer" : undefined}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto"
               >
                 <CyanButton size="md" icon={<Download size={15} />}>

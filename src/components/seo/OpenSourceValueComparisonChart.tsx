@@ -187,7 +187,11 @@ export default function OpenSourceValueComparisonChart({
               <span className="font-body text-[13.5px] text-[var(--text-muted)]">
                 Ready to replace expensive SaaS? Download the free installer directly:
               </span>
-              <a href={downloadUrl} download>
+              <a
+                href={downloadUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <CyanButton size="md" icon={<Download size={15} />}>
                   Download {data.name.split(' ')[0]} Now
                 </CyanButton>

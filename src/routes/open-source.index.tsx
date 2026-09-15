@@ -182,6 +182,7 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     alternativeTo: ["ChatGPT Pro", "Claude Enterprise", "AutoGPT"],
     downloadUrl: OPEN_SOURCE_SUBPAGES["hermes-agent"].downloadUrl,
     downloadFilename: "Hermes-Setup.exe",
+    repoUrl: OPEN_SOURCE_SUBPAGES["hermes-agent"].repoUrl,
   },
   {
     id: "jan-ai",
@@ -209,6 +210,7 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     alternativeTo: ["ChatGPT Plus", "Claude Pro", "Copilot Pro"],
     downloadUrl: OPEN_SOURCE_SUBPAGES["jan-ai"].downloadUrl,
     downloadFilename: "Jan-Setup-x64.exe",
+    repoUrl: OPEN_SOURCE_SUBPAGES["jan-ai"].repoUrl,
     featured: true,
   },
   {
@@ -235,6 +237,9 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     savingsValue: 400,
     platforms: ["Windows", "macOS", "Linux"],
     alternativeTo: ["Chatbase", "CustomGPT", "NotebookLM"],
+    downloadUrl: OPEN_SOURCE_SUBPAGES["anythingllm"].downloadUrl,
+    downloadFilename: "AnythingLLM-Setup.exe",
+    repoUrl: OPEN_SOURCE_SUBPAGES["anythingllm"].repoUrl,
   },
   {
     id: "pocketbase",
@@ -262,6 +267,7 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     alternativeTo: ["Supabase Pro", "Firebase Pro", "Backendless"],
     downloadUrl: OPEN_SOURCE_SUBPAGES["pocketbase"].downloadUrl,
     downloadFilename: "PocketBase-Setup.exe",
+    repoUrl: OPEN_SOURCE_SUBPAGES["pocketbase"].repoUrl,
     featured: true,
   },
   {
@@ -290,6 +296,7 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     alternativeTo: ["Toggl Track", "Harvest", "Hubstaff"],
     downloadUrl: OPEN_SOURCE_SUBPAGES["tuttle"].downloadUrl,
     downloadFilename: "Tuttle-Setup.exe",
+    repoUrl: OPEN_SOURCE_SUBPAGES["tuttle"].repoUrl,
   },
   {
     id: "upscayl",
@@ -317,6 +324,7 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     alternativeTo: ["Topaz Gigapixel AI", "Magnific AI"],
     downloadUrl: OPEN_SOURCE_SUBPAGES["upscayl"].downloadUrl,
     downloadFilename: "upscayl-setup.exe",
+    repoUrl: OPEN_SOURCE_SUBPAGES["upscayl"].repoUrl,
   },
   {
     id: "kdenlive",
@@ -343,6 +351,7 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     alternativeTo: ["Adobe Premiere Pro", "CapCut Pro", "DaVinci Resolve"],
     downloadUrl: OPEN_SOURCE_SUBPAGES["kdenlive"].downloadUrl,
     downloadFilename: "Kdenlive-Setup.exe",
+    repoUrl: OPEN_SOURCE_SUBPAGES["kdenlive"].repoUrl,
     featured: true,
   },
   {
@@ -370,6 +379,7 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     alternativeTo: ["HeyGen", "DeepBrain AI", "Synthesia"],
     downloadUrl: OPEN_SOURCE_SUBPAGES["facefusion"].downloadUrl,
     downloadFilename: "FaceFusion-Studio.exe",
+    repoUrl: OPEN_SOURCE_SUBPAGES["facefusion"].repoUrl,
   },
   {
     id: "deep-live-cam",
@@ -396,6 +406,7 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     alternativeTo: ["ManyCam", "Live3D"],
     downloadUrl: OPEN_SOURCE_SUBPAGES["deep-live-cam"].downloadUrl,
     downloadFilename: "Deep-Live-Cam-Studio.exe",
+    repoUrl: OPEN_SOURCE_SUBPAGES["deep-live-cam"].repoUrl,
   },
   {
     id: "shotcut",
@@ -422,6 +433,7 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     alternativeTo: ["Filmora", "Camtasia", "Vegas Pro"],
     downloadUrl: OPEN_SOURCE_SUBPAGES["shotcut"].downloadUrl,
     downloadFilename: "shotcut-setup.exe",
+    repoUrl: OPEN_SOURCE_SUBPAGES["shotcut"].repoUrl,
   },
   {
     id: "audacity",
@@ -448,6 +460,7 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     alternativeTo: ["Adobe Audition", "Reaper", "Logic Pro"],
     downloadUrl: OPEN_SOURCE_SUBPAGES["audacity"].downloadUrl,
     downloadFilename: "audacity-setup.exe",
+    repoUrl: OPEN_SOURCE_SUBPAGES["audacity"].repoUrl,
   },
   {
     id: "opencut",
@@ -474,6 +487,7 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     alternativeTo: ["CapCut Pro", "Canva Video"],
     downloadUrl: OPEN_SOURCE_SUBPAGES["opencut"].downloadUrl,
     downloadFilename: "OpenCut-Studio.exe",
+    repoUrl: OPEN_SOURCE_SUBPAGES["opencut"].repoUrl,
   },
   {
     id: "seo-spider",
@@ -498,6 +512,9 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     savingsValue: 259,
     platforms: ["Windows", "Linux"],
     alternativeTo: ["Screaming Frog SEO", "Sitebulb", "Ahrefs Audit"],
+    downloadUrl: OPEN_SOURCE_SUBPAGES["seo-spider"].downloadUrl,
+    downloadFilename: "SEO-Spider-Setup.exe",
+    repoUrl: OPEN_SOURCE_SUBPAGES["seo-spider"].repoUrl,
   },
 ];
 
@@ -923,7 +940,8 @@ function OpenSourcePage() {
                       {feat.downloadUrl ? (
                         <a
                           href={feat.downloadUrl}
-                          download={feat.downloadFilename || "download.exe"}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="flex items-center gap-1.5 rounded-lg border border-cyan-500/40 bg-cyan-500/15 px-3 py-1.5 font-mono text-[11px] font-bold text-cyan-300 transition hover:bg-cyan-500/25 hover:border-cyan-400"
                         >
                           <Download size={13} />
@@ -1203,7 +1221,8 @@ function OpenSourcePage() {
                         {s.downloadUrl ? (
                           <a
                             href={s.downloadUrl}
-                            download={s.downloadFilename || "download.exe"}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="flex items-center gap-1.5 rounded-lg border border-cyan-500/40 bg-cyan-500/15 px-3 py-1.5 font-mono text-[11px] font-bold text-cyan-300 transition-all hover:bg-cyan-500/25 hover:border-cyan-400 hover:shadow-[0_0_12px_rgba(47,224,200,0.3)]"
                           >
                             <Download size={13} />

@@ -284,7 +284,11 @@ export default function OpenSourceZigZagShowcase() {
 
                 {/* ACTION CTA BUTTONS */}
                 <div className="mt-7 flex flex-wrap items-center gap-3">
-                  <a href={item.downloadUrl} download>
+                  <a
+                    href={item.downloadUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <CyanButton size="md" icon={<Download size={15} />}>
                       Download Verified Package
                     </CyanButton>
