@@ -1,6 +1,27 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Mic, Brain, ArrowRight, Sparkles, CheckCircle2, Zap, ShieldCheck, HelpCircle, Layers, MessageSquare, Code2, Palette, Workflow, Megaphone } from "lucide-react";
+import {
+  Mic,
+  Brain,
+  ArrowRight,
+  Sparkles,
+  CheckCircle2,
+  Zap,
+  ShieldCheck,
+  HelpCircle,
+  Layers,
+  MessageSquare,
+  Code2,
+  Palette,
+  Workflow,
+  Megaphone,
+  Clock,
+  FileCheck,
+  Calendar,
+  Bell,
+  Check,
+  AlertTriangle,
+} from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { WindowsIcon } from "@/components/PlatformIcons";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -74,6 +95,75 @@ function Waveform() {
   );
 }
 
+const OPERATIONAL_PILLARS = [
+  {
+    icon: MessageSquare,
+    title: "WhatsApp Follow-Ups",
+    color: "#25D366",
+    tagline: "Never lose a high-value conversation",
+    desc: "Your assistant actively scans active WhatsApp customer chats, flags pending inquiries, surfaces unanswered client questions, and prompts you to respond or schedule follow-up touches.",
+  },
+  {
+    icon: FileCheck,
+    title: "Order & Formation Follow-Ups",
+    color: "#2FE0C8",
+    tagline: "Track UK LTD, US LLC & KYC verification",
+    desc: "Query pending client orders directly by voice: 'Was this UK LTD order completed?' The assistant checks identity verification statuses, registers missing documents, and updates deal states.",
+  },
+  {
+    icon: Clock,
+    title: "Daily Tasks & Morning Briefing",
+    color: "#8B5CF6",
+    tagline: "'What needs my attention today?'",
+    desc: "Receive an immediate voice summary of priority tasks, open invoices, overdue deliverables, and upcoming meetings without opening multiple cluttered browser tabs or spreadsheets.",
+  },
+  {
+    icon: Bell,
+    title: "Contextual Reminders & Triggers",
+    color: "#F59E0B",
+    tagline: "Hands-free calendar & task scheduling",
+    desc: "Speak naturally: 'Remind me tomorrow morning at 10 AM to check John's identity documents.' The assistant logs the reminder directly against the customer profile in your local database.",
+  },
+];
+
+const CAPABILITY_MATRIX = [
+  {
+    tier: "Live & Production Ready",
+    status: "live",
+    color: "#10B981",
+    badge: "100% Operational",
+    items: [
+      "Sub-200ms local Whisper speech transcription",
+      "CRM customer search, pipeline queries & contact status checks",
+      "WhatsApp chat transcript analysis & lead triage",
+      "Spoken intent parsing & multi-step business logic execution",
+      "Local desktop sandboxed terminal & file operations",
+    ],
+  },
+  {
+    tier: "Partially Implemented",
+    status: "partial",
+    color: "#F59E0B",
+    badge: "Active Development",
+    items: [
+      "Background cron reminder notifications (orchestrated via Digi Flow daemon scheduler)",
+      "Automated cross-device push notifications for scheduled customer follow-up alerts",
+      "Automated multi-contact WhatsApp sequence dispatch throttling",
+    ],
+  },
+  {
+    tier: "Planned (Roadmap)",
+    status: "planned",
+    color: "#6B7280",
+    badge: "Future Architecture",
+    items: [
+      "Direct API submission to UK Companies House & US State registries (currently requires manual human confirmation)",
+      "Autonomous client KYC biometric passport verification without human operator review",
+      "Automated bank merchant account webhook auto-reconciliation",
+    ],
+  },
+];
+
 const VOICE_MODULE_INTEGRATIONS = [
   {
     icon: Layers,
@@ -136,13 +226,13 @@ export default function VoiceAIPage() {
         />
 
         <div className="mt-8 text-center">
-          <EyebrowLabel text="JARVIS AI Voice Architecture" icon={Mic} />
+          <EyebrowLabel text="JARVIS AI Voice Architecture • Daily Business Assistant" icon={Mic} />
           <h1 className="mt-4 font-display text-[34px] font-bold leading-[1.12] text-[var(--text-primary)] md:text-[52px]">
-            JARVIS AI Voice Assistant for PC —{" "}
-            <GradientText text="Control Windows by Voice" gradient="linear-gradient(135deg, #2FE0C8, #8B5CF6)" />
+            Ask Your Business Assistant{" "}
+            <GradientText text="What Needs Your Attention." gradient="linear-gradient(135deg, #2FE0C8, #8B5CF6)" />
           </h1>
-          <p className="mx-auto mt-4 max-w-[720px] font-body text-[16px] leading-relaxed text-[var(--text-secondary)]">
-            A native, low-latency conversational AI engine for Windows. Speak naturally to control applications, execute multi-step workflows, manage local databases, and coordinate business operations hands-free.
+          <p className="mx-auto mt-4 max-w-[760px] font-body text-[16px] leading-relaxed text-[var(--text-secondary)]">
+            A native, low-latency conversational AI engine for Windows. Speak naturally to review WhatsApp follow-ups, verify pending UK LTD and US LLC formation orders, monitor identity verification bottlenecks, and prioritize your daily operational workflow hands-free.
           </p>
         </div>
       </SectionWrapper>
@@ -151,7 +241,7 @@ export default function VoiceAIPage() {
       <SectionWrapper id="voice-architecture">
         <div className="mx-auto grid max-w-[1200px] items-center gap-14 lg:grid-cols-2">
           <div>
-            <EyebrowLabel text="Live Voice Engine" />
+            <EyebrowLabel text="Live Operational Voice Engine" />
             <h2 className="reveal-item delay-1 mt-4 font-display text-[30px] font-bold leading-[1.15] tracking-[-0.03em] text-[var(--text-primary)] md:text-[42px]">
               Talk Like a Human. <GradientText>Execute Like a Machine.</GradientText>
             </h2>
@@ -165,7 +255,7 @@ export default function VoiceAIPage() {
               className="reveal-item delay-4 mt-8"
               items={[
                 'Wake phrase: "Hey Digi" or custom push-to-talk hotkey',
-                "Custom AI persona and tone calibration via Soul Engine",
+                "Triage WhatsApp chats, orders, and customer verification checkpoints by voice",
                 "Full screen awareness & OCR to see what you are working on",
                 "100% offline neural speech transcription option for air-gapped privacy",
               ]}
@@ -175,7 +265,7 @@ export default function VoiceAIPage() {
           <GlassCard className="reveal-item delay-3" glowColor="var(--cyan)">
             <div className="flex items-center justify-between">
               <span className="font-display text-[15px] font-semibold text-[var(--text-primary)]">
-                Active JARVIS Voice Session
+                Active Operational Voice Session
               </span>
               <span className="inline-flex items-center gap-2 font-code text-[11px] text-[var(--success)]">
                 <ActivePulse />
@@ -191,12 +281,21 @@ export default function VoiceAIPage() {
               className="mt-5"
               lines={[
                 {
-                  text: 'User: "Scrape top 5 competitor prices and log them in my CRM"',
+                  text: 'Owner: "What needs my attention today? Any pending WhatsApp follow-ups or orders?"',
                   color: "var(--text-primary)",
                 },
-                { text: "Agent: Launching Digi Intelligence browser crawler...", color: "var(--cyan)" },
-                { text: "Agent: Extracted 5 listings. Updating local customer database...", color: "var(--purple)" },
-                { text: "✓ Task Complete — 2.8s total execution time", color: "var(--success)" },
+                {
+                  text: 'JARVIS: "Sir, you have a pending WhatsApp follow-up regarding a UK LTD order. Was this order completed?"',
+                  color: "var(--cyan)",
+                },
+                {
+                  text: 'Owner: "No, they are still waiting on identity verification documents."',
+                  color: "var(--purple)",
+                },
+                {
+                  text: 'JARVIS: "Understood. The order status remains pending. Reminder scheduled for tomorrow at 10:00 AM."',
+                  color: "var(--success)",
+                },
               ]}
             />
 
@@ -208,6 +307,130 @@ export default function VoiceAIPage() {
               </Link>
             </div>
           </GlassCard>
+        </div>
+      </SectionWrapper>
+
+      {/* SECTION A.2 — 4 Operational Breakdown Cards */}
+      <SectionWrapper className="py-12 md:py-16">
+        <div className="mx-auto max-w-[1200px]">
+          <div className="text-center">
+            <EyebrowLabel text="Four Daily Operational Pillars" icon={Clock} />
+            <h2 className="mt-3 font-display text-[28px] font-bold text-[var(--text-primary)] md:text-[40px]">
+              Turn Conversational Voice Into Operational Momentum
+            </h2>
+            <p className="mx-auto mt-3 max-w-[650px] font-body text-[15px] text-[var(--text-secondary)]">
+              Your voice assistant is not an empty trivia bot. It is wired directly to your customer pipeline, communication channels, and daily order queues.
+            </p>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {OPERATIONAL_PILLARS.map((pillar, pIdx) => {
+              const Icon = pillar.icon;
+              return (
+                <GlassCard
+                  key={pIdx}
+                  glowColor={pillar.color}
+                  className="flex flex-col justify-between p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/30"
+                >
+                  <div>
+                    <div
+                      className="flex h-11 w-11 items-center justify-center rounded-xl"
+                      style={{ background: `${pillar.color}20`, color: pillar.color }}
+                    >
+                      <Icon size={22} />
+                    </div>
+                    <h3 className="mt-4 font-display text-[17px] font-bold text-[var(--text-primary)]">
+                      {pillar.title}
+                    </h3>
+                    <p className="mt-1 font-mono text-[11px] font-medium" style={{ color: pillar.color }}>
+                      {pillar.tagline}
+                    </p>
+                    <p className="mt-3 font-body text-[13px] leading-relaxed text-[var(--text-secondary)]">
+                      {pillar.desc}
+                    </p>
+                  </div>
+                  <div className="mt-4 border-t border-white/10 pt-3">
+                    <span className="font-mono text-[10.5px] uppercase tracking-wider text-[var(--text-muted)]">
+                      Voice Prompt Enabled
+                    </span>
+                  </div>
+                </GlassCard>
+              );
+            })}
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* SECTION A.3 — Product Truth: Live vs Partial vs Planned Capabilities */}
+      <SectionWrapper className="py-12 md:py-16 bg-[var(--bg-surface)]">
+        <div className="mx-auto max-w-[1200px]">
+          <div className="text-center">
+            <EyebrowLabel text="Product Truth & Engineering Transparency" icon={ShieldCheck} />
+            <h2 className="mt-3 font-display text-[28px] font-bold text-[var(--text-primary)] md:text-[38px]">
+              Capability Boundaries: Live vs. Partial vs. Planned
+            </h2>
+            <p className="mx-auto mt-3 max-w-[650px] font-body text-[15px] text-[var(--text-secondary)]">
+              We engineer with absolute architectural clarity. Know exactly which voice features are live in production, which are in active testing, and which require manual operator sign-off.
+            </p>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
+            {CAPABILITY_MATRIX.map((tier, tIdx) => (
+              <div
+                key={tIdx}
+                className="flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.02] p-6 backdrop-blur-xl"
+                style={{
+                  borderTop: `3px solid ${tier.color}`,
+                }}
+              >
+                <div>
+                  <div className="flex items-center justify-between">
+                    <span
+                      className="rounded-full px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider"
+                      style={{
+                        background: `${tier.color}18`,
+                        color: tier.color,
+                        border: `1px solid ${tier.color}40`,
+                      }}
+                    >
+                      {tier.badge}
+                    </span>
+                    <span className="font-mono text-[11px] text-[var(--text-muted)]">
+                      Tier {tIdx + 1}
+                    </span>
+                  </div>
+
+                  <h3 className="mt-4 font-display text-[18px] font-bold text-[var(--text-primary)]">
+                    {tier.tier}
+                  </h3>
+
+                  <ul className="mt-5 space-y-3 font-body text-[13.5px] leading-relaxed text-[var(--text-secondary)]">
+                    {tier.items.map((item, iIdx) => (
+                      <li key={iIdx} className="flex items-start gap-2.5">
+                        <span
+                          className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-black font-mono text-[9px] font-bold"
+                          style={{ background: tier.color }}
+                        >
+                          ✓
+                        </span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-6 border-t border-white/10 pt-4">
+                  <p className="font-mono text-[11px] text-[var(--text-muted)]">
+                    {tier.status === "live"
+                      ? "Ready out-of-the-box on Windows 10/11 desktop"
+                      : tier.status === "partial"
+                      ? "Requires local daemon runner configuration"
+                      : "Operator oversight required by policy"}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </SectionWrapper>
 

@@ -34,11 +34,55 @@ interface ModuleFlow {
   voicePrompt: string;
   brainAction: string;
   backendExecution: string[];
+  dialogue?: { speaker: string; text: string; role: "assistant" | "owner" }[];
   color: string;
   icon: any;
 }
 
 const FLOWS: ModuleFlow[] = [
+  {
+    id: "voice-assistant",
+    name: "JARVIS Business Assistant",
+    category: "Daily Operations & Follow-Ups",
+    voicePrompt: "What needs my attention today? Any pending WhatsApp follow-ups or orders?",
+    brainAction:
+      "The Voice Assistant queries active WhatsApp customer threads, surfaces pending UK LTD and US LLC formation follow-ups, checks identity verification statuses, and asks the owner whether to set follow-up reminders or prioritize specific customer tasks.",
+    backendExecution: [
+      "Transcribes spoken queries via local low-latency audio pipeline (<200ms)",
+      "Scans CRM for pending WhatsApp chats, UK LTD/LLC orders & KYC status",
+      "Engages in 2-way dialogue: 'Sir, you have a pending WhatsApp follow-up regarding a UK LTD order. Was this order completed?'",
+      "Schedules contextual reminders & prioritizes customer tasks without opening dashboards",
+    ],
+    dialogue: [
+      {
+        speaker: "JARVIS",
+        text: "Sir, you have a pending WhatsApp follow-up with this person. They were discussing a UK LTD order. Was this order completed?",
+        role: "assistant",
+      },
+      {
+        speaker: "Owner",
+        text: "No, they are still waiting on identity verification documents.",
+        role: "owner",
+      },
+      {
+        speaker: "JARVIS",
+        text: "Understood. The order status remains pending. Would you like me to set a reminder for this?",
+        role: "assistant",
+      },
+      {
+        speaker: "Owner",
+        text: "Remind me tomorrow morning at 10 AM.",
+        role: "owner",
+      },
+      {
+        speaker: "JARVIS",
+        text: "✓ Reminder scheduled for tomorrow at 10:00 AM. Next priority: 2 new WhatsApp enquiries waiting for qualification.",
+        role: "assistant",
+      },
+    ],
+    color: "#2FE0C8",
+    icon: Mic,
+  },
   {
     id: "crm",
     name: "Digi CRM & Lead Scoring",
@@ -84,7 +128,7 @@ const FLOWS: ModuleFlow[] = [
       "Enforces rate limits & WhatsApp anti-ban throttling",
       "Logs delivery metrics to real-time analytics table",
     ],
-    color: "#2FE0C8",
+    color: "#3B82F6",
     icon: Megaphone,
   },
   {
@@ -106,7 +150,7 @@ const FLOWS: ModuleFlow[] = [
 ];
 
 export default function AiBrainArchitectureShowcase() {
-  const [activeFlowId, setActiveFlowId] = useState("crm");
+  const [activeFlowId, setActiveFlowId] = useState("voice-assistant");
   const current = FLOWS.find((f) => f.id === activeFlowId) || FLOWS[0];
   const CurrentIcon = current.icon;
 
@@ -269,6 +313,41 @@ export default function AiBrainArchitectureShowcase() {
                       {current.brainAction}
                     </p>
                   </div>
+
+                  {/* 2-WAY OPERATIONAL DIALOGUE SIMULATION */}
+                  {current.dialogue && (
+                    <div className="rounded-xl border border-white/10 bg-[#060A12]/90 p-4 space-y-2.5">
+                      <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                        <span className="font-mono text-[10.5px] uppercase tracking-wider text-[var(--text-muted)]">
+                          Two-Way Operational Walkthrough
+                        </span>
+                        <span className="font-mono text-[10.5px] text-[#2FE0C8]">
+                          WhatsApp &amp; Orders
+                        </span>
+                      </div>
+                      <div className="space-y-2 text-[12.5px] font-body">
+                        {current.dialogue.map((item, dIdx) => (
+                          <div
+                            key={dIdx}
+                            className={`flex gap-2.5 p-2 rounded-lg ${
+                              item.role === "assistant"
+                                ? "bg-[#2FE0C8]/10 border border-[#2FE0C8]/25 text-[var(--text-primary)]"
+                                : "bg-white/[0.04] border border-white/10 text-[var(--text-secondary)]"
+                            }`}
+                          >
+                            <span
+                              className={`font-mono text-[11px] font-bold shrink-0 ${
+                                item.role === "assistant" ? "text-[#2FE0C8]" : "text-white"
+                              }`}
+                            >
+                              {item.speaker}:
+                            </span>
+                            <span className="leading-relaxed">{item.text}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 {/* RIGHT: MULTI-STEP BACKEND PIPELINE EXECUTION */}
@@ -306,7 +385,7 @@ export default function AiBrainArchitectureShowcase() {
                       Latency: ~180ms · Zero Manual Coding
                     </span>
                     <Link
-                      to={(current.id === "crm" ? "/modules/crm" : current.id === "studio" ? "/modules/studio" : current.id === "marketing" ? "/modules/marketing" : "/features") as any}
+                      to={(current.id === "voice-assistant" ? "/voice-ai" : current.id === "crm" ? "/modules/crm" : current.id === "studio" ? "/modules/studio" : current.id === "marketing" ? "/modules/marketing" : "/features") as any}
                       className="inline-flex items-center gap-1.5 font-display text-[12.5px] font-bold hover:underline"
                       style={{ color: current.color }}
                     >
