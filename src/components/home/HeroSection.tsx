@@ -9,12 +9,14 @@ import {
   Database,
   Megaphone,
   Monitor,
+  Play,
   Smartphone,
   Users,
   Wrench,
 } from "lucide-react";
 import CyanButton from "@/components/CyanButton";
 import { WindowsIcon } from "@/components/PlatformIcons";
+import GhostButton from "@/components/GhostButton";
 import PlatformStrip from "@/components/PlatformStrip";
 import MonoBadge from "@/components/MonoBadge";
 import ActivePulse from "@/components/ActivePulse";
@@ -232,10 +234,18 @@ export default function HeroSection() {
                   icon={<WindowsIcon size={15} />}
                   className="px-3.5 text-[12px] sm:px-6 sm:py-[11px] sm:text-[14px]"
                 >
-                  Get DIGI BIZ OS
+                  Get Now
                 </CyanButton>
               </Link>
             </div>
+            <GhostButton
+              size="sm"
+              tone="139,124,246"
+              icon={<Play size={15} />}
+              className="px-3.5 text-[12px] sm:px-6 sm:py-[11px] sm:text-[14px]"
+            >
+              Watch 60s Product Tour
+            </GhostButton>
           </motion.div>
 
           <motion.div
