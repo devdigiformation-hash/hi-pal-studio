@@ -58,7 +58,7 @@ export default function PlatformCards() {
         <div className="mt-auto">
           <Link to="/pricing" className="block">
             <CyanButton className="w-full !px-4 text-[13px]" icon={<WindowsIcon size={15} />}>
-              Get Now
+              Get DIGI BIZ OS
             </CyanButton>
           </Link>
         </div>
