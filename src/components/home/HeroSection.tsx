@@ -203,14 +203,14 @@ export default function HeroSection() {
             </motion.span>
           </h1>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
             className="mt-6 font-body text-[17px] text-[var(--text-secondary)] md:text-[18px]"
           >
             One Voice Command. <Typewriter />
-          </motion.p>
+          </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 24 }}
@@ -218,7 +218,7 @@ export default function HeroSection() {
             transition={{ delay: 0.6 }}
             className="mt-5 max-w-[580px] font-body text-[16px] leading-[1.75] text-[var(--text-secondary)] md:text-[18px]"
           >
-            DIGI BIZ OS embeds an active AI brain into 90%+ of its desktop modules — with universal voice assistance in every prompt box and background reasoning engine. Every task, CRM lead, media render, and workflow is orchestrated by intelligent autonomous reasoning.
+            DIGI BIZ OS is an autonomous agentic AI business operating system for Windows 10 and 11. It unifies voice control, local neural models, CRM pipelines, automated workflows, and desktop computer-use automation into a single sovereign desktop environment with zero recurring subscription fees.
           </motion.p>
 
           <motion.div

@@ -2069,6 +2069,144 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Download DIGI BIZ OS for Windows", to: "/download" },
     ],
   },
+  {
+    slug: "generative-engine-optimization-geo-guide",
+    title: "Generative Engine Optimization (GEO): How to Get Cited in AI Answers",
+    metaTitle: "Generative Engine Optimization (GEO): A Practical 2026 Guide | DIGI BIZ OS",
+    description:
+      "Generative Engine Optimization (GEO) is the practice of getting your content cited inside AI answers like Google AI Overviews, ChatGPT, Perplexity and Gemini. Here is how it works and how to do it.",
+    cluster: "AI SEO",
+    date: "2026-09-16",
+    readingTime: "8 min read",
+    body: [
+      {
+        heading: "What is Generative Engine Optimization (GEO)?",
+        paragraphs: [
+          "Generative Engine Optimization (GEO) is the practice of structuring your content so that AI answer engines quote it, cite it and recommend it when they generate a response. Where classic SEO tries to win a blue link on a results page, GEO tries to win a mention inside the synthesized answer that sits above those links.",
+          "The engines in scope are the ones people now ask directly: Google AI Overviews, Bing Copilot, ChatGPT search, Perplexity, Gemini and Claude. Each one reads source pages, extracts facts, and rewrites them into a single answer. GEO is about making your page the easiest, clearest, most quotable source in that process.",
+        ],
+      },
+      {
+        heading: "GEO vs SEO vs AEO: what is the difference?",
+        paragraphs: [
+          "These three overlap, but they optimize for different surfaces. Keeping them distinct helps you decide what to change on a page.",
+        ],
+        bullets: [
+          "SEO (Search Engine Optimization): earn a ranked link in a traditional results page. Signals: relevance, links, page experience.",
+          "AEO (Answer Engine Optimization): become the direct answer to a specific question, in featured snippets and voice results. Signals: clear question-and-answer structure, concise definitions.",
+          "GEO (Generative Engine Optimization): get quoted and cited inside an AI-generated answer. Signals: extractable facts, unique first-party data, clean structure, entity clarity and trustworthy attribution.",
+        ],
+      },
+      {
+        heading: "Why does GEO matter now?",
+        paragraphs: [
+          "AI answer engines increasingly resolve a question before the user ever clicks a link. If your page is not one of the sources the model pulls from, you are invisible in that answer — even if you rank well in the classic results below it.",
+          "The commercial consequence is simple: buyers research inside AI tools. Being the cited source at the research stage is how you enter the shortlist before a comparison or a purchase decision is made.",
+        ],
+      },
+      {
+        heading: "How do you optimize a page for AI answers?",
+        paragraphs: [
+          "GEO rewards pages that a model can read, trust and lift a clean sentence from. The tactics below are practical and do not require any special access to the engines.",
+        ],
+        bullets: [
+          "Answer the question in the first two sentences, in plain language, before any preamble.",
+          "Use question-shaped headings that mirror how people actually ask, then answer each one directly underneath.",
+          "Add unique first-party information — your own tests, numbers, screenshots or examples — because models prefer sources that are not just a rewrite of everyone else.",
+          "Make facts extractable: short definitions, comparison tables, ordered steps and labelled lists instead of long unbroken paragraphs.",
+          "Be explicit about entities: name the product, category, platform, price model and who it is for, so the model resolves them correctly.",
+          "Publish valid structured data (Article, FAQPage, BreadcrumbList, SoftwareApplication) so the meaning is machine-readable, not just implied.",
+          "Show trust signals: author, company, last-updated date and clear source attribution.",
+        ],
+      },
+      {
+        heading: "How do you measure GEO results?",
+        paragraphs: [
+          "GEO is harder to measure than rankings because there is no single scoreboard. A workable approach is to track, per priority question, whether your brand is named or cited across the major engines over time, and to watch for referral and branded-search lift as citations grow.",
+          "Treat it like a repeatable audit rather than a one-off: pick your highest-intent questions, check how each engine answers them today, improve the source pages, and re-check on a schedule.",
+        ],
+      },
+      {
+        heading: "Running GEO as an ongoing workflow",
+        paragraphs: [
+          "The work that moves the needle in GEO is recurring: research current questions, check how AI engines answer them, update source pages, and re-audit. That is exactly the kind of repeatable, rule-based process an agentic business system is built to run.",
+          "Inside DIGI BIZ OS, the marketing and intelligence modules are designed to support this loop — researching questions, drafting structured content and scheduling audits — while you keep editorial control. The engine helps execute the routine so your team spends its time on judgement, not on copy-paste chores.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Digi Marketing module", to: "/modules/marketing" },
+      { label: "Digi Intelligence module", to: "/modules/intelligence" },
+      { label: "AI business automation", to: "/ai-business-automation" },
+      { label: "Free AI SEO, AEO & Schema Checker", to: "/tools/ai-seo-checker" },
+      { label: "Download DIGI BIZ OS", to: "/download" },
+    ],
+  },
+  {
+    slug: "ollama-vs-lm-studio",
+    title: "Ollama vs LM Studio: Which Should You Use to Run Local LLMs?",
+    metaTitle: "Ollama vs LM Studio: How to Choose in 2026 | DIGI BIZ OS",
+    description:
+      "Ollama vs LM Studio compared: interface, model management, API compatibility, Windows support and which one fits developers versus non-technical users running local AI.",
+    cluster: "Local AI",
+    date: "2026-09-16",
+    readingTime: "7 min read",
+    body: [
+      {
+        heading: "Ollama vs LM Studio: the short answer",
+        paragraphs: [
+          "Both Ollama and LM Studio let you download and run open-weight large language models on your own computer, offline and private. The practical difference is the interface and the intended user: Ollama is a command-line and API-first tool that developers wire into apps, while LM Studio is a graphical desktop application that non-technical users can click through to chat with a model.",
+          "Many people end up using both — LM Studio to explore and test models visually, and Ollama to serve a chosen model to their own software through a local API.",
+        ],
+      },
+      {
+        heading: "What is Ollama?",
+        paragraphs: [
+          "Ollama is a lightweight runtime for local models. You pull a model by name and run it from the terminal, and it also exposes a local HTTP API that other programs can call. Because that API is OpenAI-compatible in common setups, developers use Ollama as a drop-in local backend for tools that expect an OpenAI-style endpoint.",
+          "Its strength is automation: it is easy to script, embed and run as a background service. Its trade-off is that the default experience is a command line rather than a polished chat window.",
+        ],
+      },
+      {
+        heading: "What is LM Studio?",
+        paragraphs: [
+          "LM Studio is a desktop application with a graphical model browser and a chat interface. You search for a model, download a quantized version that fits your hardware, and start chatting without touching a terminal. It can also run a local server so other apps can connect to the model it is hosting.",
+          "Its strength is approachability for people who do not live in a terminal. The trade-off is that a full GUI application is heavier than a small runtime if all you want is a background API.",
+        ],
+      },
+      {
+        heading: "How do you choose between them?",
+        paragraphs: [
+          "Pick based on who is using it and what it plugs into.",
+        ],
+        bullets: [
+          "Choose Ollama if you are a developer serving a model to your own scripts, agents or apps through a local API.",
+          "Choose LM Studio if you want a click-through way to discover, download and chat with models without command-line steps.",
+          "Use both if you want to test models visually in LM Studio, then serve the winner with Ollama in production.",
+          "On Windows, confirm your hardware first: available RAM and whether you have a supported GPU decide which model sizes and quantization levels run smoothly.",
+        ],
+      },
+      {
+        heading: "What about privacy and offline use?",
+        paragraphs: [
+          "The main reason to run either tool is that inference happens on your machine. Once a model is downloaded, you can run it with no internet connection, and your prompts do not leave the device. That is the core appeal of local AI for private documents, regulated data and offline work.",
+          "Local models are not a like-for-like replacement for the largest cloud models on every task, but for many drafting, extraction, classification and coding-assist jobs they are more than capable — and they are free to run after download.",
+        ],
+      },
+      {
+        heading: "From running a model to running your business on it",
+        paragraphs: [
+          "A local model on its own is an engine without a car around it. The value appears when that model is connected to your files, your CRM, your messages and your recurring tasks, with a way to route between local and cloud models depending on the job.",
+          "DIGI BIZ OS is built for that layer: it can use local models for private, offline work and route to cloud models when a task needs more power, then put that intelligence to work across documents, workflows and desktop control. Local AI is the foundation; the operating system around it is what turns it into finished work.",
+        ],
+      },
+    ],
+    links: [
+      { label: "Digi Models module", to: "/modules/models" },
+      { label: "AI models in DIGI BIZ OS", to: "/models" },
+      { label: "Open-source: Jan AI", to: "/open-source/jan-ai" },
+      { label: "Download DIGI BIZ OS", to: "/download" },
+    ],
+  },
 ];
 
 export const BLOG_BY_SLUG: Record<string, BlogPost> = Object.fromEntries(

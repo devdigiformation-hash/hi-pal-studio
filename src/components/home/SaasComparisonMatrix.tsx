@@ -28,11 +28,17 @@ const CATEGORIES: CategoryFilter[] = [
 
 export default function SaasComparisonMatrix() {
   const [activeCategory, setActiveCategory] = useState<CategoryFilter>("All");
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const filteredItems = useMemo(() => {
     if (activeCategory === "All") return SAAS_COMPARISONS;
     return SAAS_COMPARISONS.filter((item) => item.category === activeCategory);
   }, [activeCategory]);
+
+  const displayedItems = useMemo(() => {
+    if (activeCategory !== "All" || isExpanded) return filteredItems;
+    return filteredItems.slice(0, 5);
+  }, [activeCategory, isExpanded, filteredItems]);
 
   const filteredTotal = useMemo(() => {
     return filteredItems.reduce((acc, item) => acc + item.annualCost, 0);
@@ -142,7 +148,7 @@ export default function SaasComparisonMatrix() {
               </thead>
               <tbody className="divide-y divide-white/5">
                 <AnimatePresence mode="popLayout">
-                  {filteredItems.map((item, idx) => (
+                  {displayedItems.map((item, idx) => (
                     <motion.tr
                       key={item.id}
                       initial={{ opacity: 0, y: 10 }}
@@ -205,6 +211,17 @@ export default function SaasComparisonMatrix() {
                 </AnimatePresence>
               </tbody>
             </table>
+            {!isExpanded && activeCategory === "All" && (
+              <div className="border-t border-white/10 bg-white/[0.02] p-4 text-center">
+                <button
+                  type="button"
+                  onClick={() => setIsExpanded(true)}
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--cyan)]/40 bg-[var(--cyan)]/10 px-5 py-2 font-mono text-[13px] font-semibold text-[var(--cyan)] transition-all hover:bg-[var(--cyan)]/20"
+                >
+                  Show All {SAAS_COMPARISONS.length} SaaS Replacements ({SAAS_COMPARISONS.length - displayedItems.length} More)
+                </button>
+              </div>
+            )}
           </GlassCard>
         </div>
 

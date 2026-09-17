@@ -15,6 +15,7 @@ export interface MetaInput {
 
 export function buildMeta({ path, title, description, type = "website", image }: MetaInput) {
   const url = abs(path);
+  const resolvedImage = image || abs("/logo-512.png");
   const meta: Array<Record<string, string>> = [
     { title },
     { name: "description", content: description },
@@ -23,15 +24,20 @@ export function buildMeta({ path, title, description, type = "website", image }:
     { property: "og:type", content: type },
     { property: "og:url", content: url },
     { property: "og:site_name", content: BRAND },
+    { property: "og:image", content: resolvedImage },
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:title", content: title },
     { name: "twitter:description", content: description },
+    { name: "twitter:image", content: resolvedImage },
   ];
-  if (image) {
-    meta.push({ property: "og:image", content: image });
-    meta.push({ name: "twitter:image", content: image });
-  }
-  return { meta, links: [{ rel: "canonical", href: url }] };
+  return {
+    meta,
+    links: [
+      { rel: "canonical", href: url },
+      { rel: "alternate", href: url, hreflang: "en-GB" },
+      { rel: "alternate", href: url, hreflang: "x-default" },
+    ],
+  };
 }
 
 export function breadcrumbLd(trail: { name: string; path?: string; url?: string }[]) {
@@ -153,3 +159,30 @@ export function itemListLd(
     })),
   };
 }
+
+export function webPageLd({ title, description, path }: { title: string; description: string; path: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${abs(path)}#webpage`,
+    url: abs(path),
+    name: title,
+    description,
+    inLanguage: "en-GB",
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    author: {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: "Digiformation Ltd",
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: "Digiformation Ltd",
+      url: SITE_URL,
+    },
+    dateModified: "2026-09-17",
+  };
+}
+

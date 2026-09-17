@@ -14,7 +14,7 @@ interface AuditEntry {
 const BASE_URL = "https://digibizos.co.uk";
 
 const STATIC_ENTRIES: { path: string; title: string; description: string }[] = [
-  { path: "/", title: "DIGI BIZ OS — AI Operating System & Autonomous Desktop AI for Windows", description: "Autonomous AI operating system and business automation workstation for Windows 10 & 11. Multi-agent workflows, local neural models, voice control, and zero recurring SaaS subscriptions." },
+  { path: "/", title: "DIGI BIZ OS — AI Desktop Operating System for Windows", description: "Autonomous AI business operating system for Windows 10 & 11. Run local neural models, voice control, and multi-agent workflows with zero monthly fees." },
   { path: "/features", title: "All Features — DIGI BIZ OS AI Business Operating System", description: "Explore the full capabilities of DIGI BIZ OS: voice control, multi-agent runs, coding, documents, workflows, desktop automation and private local models." },
   { path: "/voice-ai", title: "Voice AI Control — Offline Whisper Speech Recognition | DIGI BIZ OS", description: "Control your entire PC and business operations with offline voice commands, real-time waveform visualization, and instant transcription with zero cloud latency." },
   { path: "/desktop-os", title: "Autonomous Desktop AI Workstation — Business Automation OS | DIGI BIZ OS", description: "Transform Windows 10 & 11 into an autonomous business workstation. Run local models, orchestrate desktop apps, execute CLI scripts, and manage files hands-free." },

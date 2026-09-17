@@ -4,7 +4,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GradientText from "@/components/GradientText";
 
-const FAQS = [
+export const FAQS = [
   {
     q: "What operating systems does DIGI BIZ OS support?",
     a: "Windows 10/11 and macOS 12+. Linux support is currently in beta.",

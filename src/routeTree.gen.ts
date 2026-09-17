@@ -32,6 +32,9 @@ import { Route as VoiceAiRouteImport } from './routes/voice-ai'
 import { Route as AdminDownloadsRouteImport } from './routes/admin.downloads'
 import { Route as AdminOrdersRouteImport } from './routes/admin.orders'
 import { Route as AdminSeoRouteImport } from './routes/admin.seo'
+import { Route as ApiAiAnalyzeRouteImport } from './routes/api.ai-analyze'
+import { Route as ApiSeoCheckRouteImport } from './routes/api.seo-check'
+import { Route as ApiSiteScanRouteImport } from './routes/api.site-scan'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as CompareIndexRouteImport } from './routes/compare.index'
@@ -45,6 +48,7 @@ import { Route as ModulesSlugRouteImport } from './routes/modules.$slug'
 import { Route as OpenSourceIndexRouteImport } from './routes/open-source.index'
 import { Route as OpenSourceAnythingllmRouteImport } from './routes/open-source.anythingllm'
 import { Route as OpenSourceAudacityRouteImport } from './routes/open-source.audacity'
+import { Route as OpenSourceCreditsRouteImport } from './routes/open-source.credits'
 import { Route as OpenSourceDeepLiveCamRouteImport } from './routes/open-source.deep-live-cam'
 import { Route as OpenSourceFacefusionRouteImport } from './routes/open-source.facefusion'
 import { Route as OpenSourceHermesAgentRouteImport } from './routes/open-source.hermes-agent'
@@ -59,6 +63,8 @@ import { Route as OpenSourceShotcutRouteImport } from './routes/open-source.shot
 import { Route as OpenSourceTuttleRouteImport } from './routes/open-source.tuttle'
 import { Route as OpenSourceUpscaylRouteImport } from './routes/open-source.upscayl'
 import { Route as OrderRefRouteImport } from './routes/order.$ref'
+import { Route as ToolsIndexRouteImport } from './routes/tools.index'
+import { Route as ToolsAiSeoCheckerRouteImport } from './routes/tools.ai-seo-checker'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -175,6 +181,21 @@ const AdminSeoRoute = AdminSeoRouteImport.update({
   path: '/admin/seo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiAiAnalyzeRoute = ApiAiAnalyzeRouteImport.update({
+  id: '/api/ai-analyze',
+  path: '/api/ai-analyze',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiSeoCheckRoute = ApiSeoCheckRouteImport.update({
+  id: '/api/seo-check',
+  path: '/api/seo-check',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiSiteScanRoute = ApiSiteScanRouteImport.update({
+  id: '/api/site-scan',
+  path: '/api/site-scan',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
@@ -238,6 +259,11 @@ const OpenSourceAnythingllmRoute = OpenSourceAnythingllmRouteImport.update({
 const OpenSourceAudacityRoute = OpenSourceAudacityRouteImport.update({
   id: '/audacity',
   path: '/audacity',
+  getParentRoute: () => OpenSourceRoute,
+} as any)
+const OpenSourceCreditsRoute = OpenSourceCreditsRouteImport.update({
+  id: '/credits',
+  path: '/credits',
   getParentRoute: () => OpenSourceRoute,
 } as any)
 const OpenSourceDeepLiveCamRoute = OpenSourceDeepLiveCamRouteImport.update({
@@ -310,6 +336,16 @@ const OrderRefRoute = OrderRefRouteImport.update({
   path: '/order/$ref',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsIndexRoute = ToolsIndexRouteImport.update({
+  id: '/tools/',
+  path: '/tools/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsAiSeoCheckerRoute = ToolsAiSeoCheckerRouteImport.update({
+  id: '/tools/ai-seo-checker',
+  path: '/tools/ai-seo-checker',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -335,6 +371,9 @@ export interface FileRoutesByFullPath {
   '/admin/downloads': typeof AdminDownloadsRoute
   '/admin/orders': typeof AdminOrdersRoute
   '/admin/seo': typeof AdminSeoRoute
+  '/api/ai-analyze': typeof ApiAiAnalyzeRoute
+  '/api/seo-check': typeof ApiSeoCheckRoute
+  '/api/site-scan': typeof ApiSiteScanRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
@@ -342,6 +381,7 @@ export interface FileRoutesByFullPath {
   '/modules/$slug': typeof ModulesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/audacity': typeof OpenSourceAudacityRoute
+  '/open-source/credits': typeof OpenSourceCreditsRoute
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
   '/open-source/facefusion': typeof OpenSourceFacefusionRoute
   '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
@@ -356,12 +396,14 @@ export interface FileRoutesByFullPath {
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
   '/open-source/upscayl': typeof OpenSourceUpscaylRoute
   '/order/$ref': typeof OrderRefRoute
+  '/tools/ai-seo-checker': typeof ToolsAiSeoCheckerRoute
   '/blog/': typeof BlogIndexRoute
   '/compare/': typeof CompareIndexRoute
   '/features/': typeof FeaturesIndexRoute
   '/models/': typeof ModelsIndexRoute
   '/modules/': typeof ModulesIndexRoute
   '/open-source/': typeof OpenSourceIndexRoute
+  '/tools/': typeof ToolsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -386,6 +428,9 @@ export interface FileRoutesByTo {
   '/admin/downloads': typeof AdminDownloadsRoute
   '/admin/orders': typeof AdminOrdersRoute
   '/admin/seo': typeof AdminSeoRoute
+  '/api/ai-analyze': typeof ApiAiAnalyzeRoute
+  '/api/seo-check': typeof ApiSeoCheckRoute
+  '/api/site-scan': typeof ApiSiteScanRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
@@ -393,6 +438,7 @@ export interface FileRoutesByTo {
   '/modules/$slug': typeof ModulesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/audacity': typeof OpenSourceAudacityRoute
+  '/open-source/credits': typeof OpenSourceCreditsRoute
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
   '/open-source/facefusion': typeof OpenSourceFacefusionRoute
   '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
@@ -407,12 +453,14 @@ export interface FileRoutesByTo {
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
   '/open-source/upscayl': typeof OpenSourceUpscaylRoute
   '/order/$ref': typeof OrderRefRoute
+  '/tools/ai-seo-checker': typeof ToolsAiSeoCheckerRoute
   '/blog': typeof BlogIndexRoute
   '/compare': typeof CompareIndexRoute
   '/features': typeof FeaturesIndexRoute
   '/models': typeof ModelsIndexRoute
   '/modules': typeof ModulesIndexRoute
   '/open-source': typeof OpenSourceIndexRoute
+  '/tools': typeof ToolsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -439,6 +487,9 @@ export interface FileRoutesById {
   '/admin/downloads': typeof AdminDownloadsRoute
   '/admin/orders': typeof AdminOrdersRoute
   '/admin/seo': typeof AdminSeoRoute
+  '/api/ai-analyze': typeof ApiAiAnalyzeRoute
+  '/api/seo-check': typeof ApiSeoCheckRoute
+  '/api/site-scan': typeof ApiSiteScanRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$slug': typeof CompareSlugRoute
   '/features/$slug': typeof FeaturesSlugRoute
@@ -446,6 +497,7 @@ export interface FileRoutesById {
   '/modules/$slug': typeof ModulesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
   '/open-source/audacity': typeof OpenSourceAudacityRoute
+  '/open-source/credits': typeof OpenSourceCreditsRoute
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
   '/open-source/facefusion': typeof OpenSourceFacefusionRoute
   '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
@@ -460,12 +512,14 @@ export interface FileRoutesById {
   '/open-source/tuttle': typeof OpenSourceTuttleRoute
   '/open-source/upscayl': typeof OpenSourceUpscaylRoute
   '/order/$ref': typeof OrderRefRoute
+  '/tools/ai-seo-checker': typeof ToolsAiSeoCheckerRoute
   '/blog/': typeof BlogIndexRoute
   '/compare/': typeof CompareIndexRoute
   '/features/': typeof FeaturesIndexRoute
   '/models/': typeof ModelsIndexRoute
   '/modules/': typeof ModulesIndexRoute
   '/open-source/': typeof OpenSourceIndexRoute
+  '/tools/': typeof ToolsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -493,6 +547,9 @@ export interface FileRouteTypes {
     | '/admin/downloads'
     | '/admin/orders'
     | '/admin/seo'
+    | '/api/ai-analyze'
+    | '/api/seo-check'
+    | '/api/site-scan'
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
@@ -500,6 +557,7 @@ export interface FileRouteTypes {
     | '/modules/$slug'
     | '/open-source/anythingllm'
     | '/open-source/audacity'
+    | '/open-source/credits'
     | '/open-source/deep-live-cam'
     | '/open-source/facefusion'
     | '/open-source/hermes-agent'
@@ -514,12 +572,14 @@ export interface FileRouteTypes {
     | '/open-source/tuttle'
     | '/open-source/upscayl'
     | '/order/$ref'
+    | '/tools/ai-seo-checker'
     | '/blog/'
     | '/compare/'
     | '/features/'
     | '/models/'
     | '/modules/'
     | '/open-source/'
+    | '/tools/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -544,6 +604,9 @@ export interface FileRouteTypes {
     | '/admin/downloads'
     | '/admin/orders'
     | '/admin/seo'
+    | '/api/ai-analyze'
+    | '/api/seo-check'
+    | '/api/site-scan'
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
@@ -551,6 +614,7 @@ export interface FileRouteTypes {
     | '/modules/$slug'
     | '/open-source/anythingllm'
     | '/open-source/audacity'
+    | '/open-source/credits'
     | '/open-source/deep-live-cam'
     | '/open-source/facefusion'
     | '/open-source/hermes-agent'
@@ -565,12 +629,14 @@ export interface FileRouteTypes {
     | '/open-source/tuttle'
     | '/open-source/upscayl'
     | '/order/$ref'
+    | '/tools/ai-seo-checker'
     | '/blog'
     | '/compare'
     | '/features'
     | '/models'
     | '/modules'
     | '/open-source'
+    | '/tools'
   id:
     | '__root__'
     | '/'
@@ -596,6 +662,9 @@ export interface FileRouteTypes {
     | '/admin/downloads'
     | '/admin/orders'
     | '/admin/seo'
+    | '/api/ai-analyze'
+    | '/api/seo-check'
+    | '/api/site-scan'
     | '/blog/$slug'
     | '/compare/$slug'
     | '/features/$slug'
@@ -603,6 +672,7 @@ export interface FileRouteTypes {
     | '/modules/$slug'
     | '/open-source/anythingllm'
     | '/open-source/audacity'
+    | '/open-source/credits'
     | '/open-source/deep-live-cam'
     | '/open-source/facefusion'
     | '/open-source/hermes-agent'
@@ -617,12 +687,14 @@ export interface FileRouteTypes {
     | '/open-source/tuttle'
     | '/open-source/upscayl'
     | '/order/$ref'
+    | '/tools/ai-seo-checker'
     | '/blog/'
     | '/compare/'
     | '/features/'
     | '/models/'
     | '/modules/'
     | '/open-source/'
+    | '/tools/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -649,17 +721,22 @@ export interface RootRouteChildren {
   AdminDownloadsRoute: typeof AdminDownloadsRoute
   AdminOrdersRoute: typeof AdminOrdersRoute
   AdminSeoRoute: typeof AdminSeoRoute
+  ApiAiAnalyzeRoute: typeof ApiAiAnalyzeRoute
+  ApiSeoCheckRoute: typeof ApiSeoCheckRoute
+  ApiSiteScanRoute: typeof ApiSiteScanRoute
   BlogSlugRoute: typeof BlogSlugRoute
   CompareSlugRoute: typeof CompareSlugRoute
   FeaturesSlugRoute: typeof FeaturesSlugRoute
   ModelsSlugRoute: typeof ModelsSlugRoute
   ModulesSlugRoute: typeof ModulesSlugRoute
   OrderRefRoute: typeof OrderRefRoute
+  ToolsAiSeoCheckerRoute: typeof ToolsAiSeoCheckerRoute
   BlogIndexRoute: typeof BlogIndexRoute
   CompareIndexRoute: typeof CompareIndexRoute
   FeaturesIndexRoute: typeof FeaturesIndexRoute
   ModelsIndexRoute: typeof ModelsIndexRoute
   ModulesIndexRoute: typeof ModulesIndexRoute
+  ToolsIndexRoute: typeof ToolsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -825,6 +902,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminSeoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/ai-analyze': {
+      id: '/api/ai-analyze'
+      path: '/api/ai-analyze'
+      fullPath: '/api/ai-analyze'
+      preLoaderRoute: typeof ApiAiAnalyzeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/seo-check': {
+      id: '/api/seo-check'
+      path: '/api/seo-check'
+      fullPath: '/api/seo-check'
+      preLoaderRoute: typeof ApiSeoCheckRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/site-scan': {
+      id: '/api/site-scan'
+      path: '/api/site-scan'
+      fullPath: '/api/site-scan'
+      preLoaderRoute: typeof ApiSiteScanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/': {
       id: '/blog/'
       path: '/blog'
@@ -914,6 +1012,13 @@ declare module '@tanstack/react-router' {
       path: '/audacity'
       fullPath: '/open-source/audacity'
       preLoaderRoute: typeof OpenSourceAudacityRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
+    '/open-source/credits': {
+      id: '/open-source/credits'
+      path: '/credits'
+      fullPath: '/open-source/credits'
+      preLoaderRoute: typeof OpenSourceCreditsRouteImport
       parentRoute: typeof OpenSourceRoute
     }
     '/open-source/deep-live-cam': {
@@ -1014,12 +1119,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OrderRefRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/': {
+      id: '/tools/'
+      path: '/tools'
+      fullPath: '/tools/'
+      preLoaderRoute: typeof ToolsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/ai-seo-checker': {
+      id: '/tools/ai-seo-checker'
+      path: '/tools/ai-seo-checker'
+      fullPath: '/tools/ai-seo-checker'
+      preLoaderRoute: typeof ToolsAiSeoCheckerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 interface OpenSourceRouteChildren {
   OpenSourceAnythingllmRoute: typeof OpenSourceAnythingllmRoute
   OpenSourceAudacityRoute: typeof OpenSourceAudacityRoute
+  OpenSourceCreditsRoute: typeof OpenSourceCreditsRoute
   OpenSourceDeepLiveCamRoute: typeof OpenSourceDeepLiveCamRoute
   OpenSourceFacefusionRoute: typeof OpenSourceFacefusionRoute
   OpenSourceHermesAgentRoute: typeof OpenSourceHermesAgentRoute
@@ -1039,6 +1159,7 @@ interface OpenSourceRouteChildren {
 const OpenSourceRouteChildren: OpenSourceRouteChildren = {
   OpenSourceAnythingllmRoute: OpenSourceAnythingllmRoute,
   OpenSourceAudacityRoute: OpenSourceAudacityRoute,
+  OpenSourceCreditsRoute: OpenSourceCreditsRoute,
   OpenSourceDeepLiveCamRoute: OpenSourceDeepLiveCamRoute,
   OpenSourceFacefusionRoute: OpenSourceFacefusionRoute,
   OpenSourceHermesAgentRoute: OpenSourceHermesAgentRoute,
@@ -1083,17 +1204,22 @@ const rootRouteChildren: RootRouteChildren = {
   AdminDownloadsRoute: AdminDownloadsRoute,
   AdminOrdersRoute: AdminOrdersRoute,
   AdminSeoRoute: AdminSeoRoute,
+  ApiAiAnalyzeRoute: ApiAiAnalyzeRoute,
+  ApiSeoCheckRoute: ApiSeoCheckRoute,
+  ApiSiteScanRoute: ApiSiteScanRoute,
   BlogSlugRoute: BlogSlugRoute,
   CompareSlugRoute: CompareSlugRoute,
   FeaturesSlugRoute: FeaturesSlugRoute,
   ModelsSlugRoute: ModelsSlugRoute,
   ModulesSlugRoute: ModulesSlugRoute,
   OrderRefRoute: OrderRefRoute,
+  ToolsAiSeoCheckerRoute: ToolsAiSeoCheckerRoute,
   BlogIndexRoute: BlogIndexRoute,
   CompareIndexRoute: CompareIndexRoute,
   FeaturesIndexRoute: FeaturesIndexRoute,
   ModelsIndexRoute: ModelsIndexRoute,
   ModulesIndexRoute: ModulesIndexRoute,
+  ToolsIndexRoute: ToolsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
