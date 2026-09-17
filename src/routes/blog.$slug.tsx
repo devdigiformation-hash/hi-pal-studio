@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import { BLOG_BY_SLUG } from "@/content/blog-posts";
-import { buildMeta, breadcrumbLd, articleLd } from "@/lib/seo";
+import { buildMeta, breadcrumbLd, articleLd, faqLd } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog/$slug")({
   beforeLoad: ({ params }) => {
@@ -19,33 +19,51 @@ export const Route = createFileRoute("/blog/$slug")({
       description: post.description,
       type: "article",
     });
+
+    const faqQuestions = post.body.filter((b) => b.heading.trim().endsWith("?"));
+    const scripts: Array<{ type: string; children: string }> = [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          breadcrumbLd([
+            { name: "Home", path: "/" },
+            { name: "Blog", path: "/blog" },
+            { name: post.title, path },
+          ]),
+        ),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          articleLd({
+            title: post.title,
+            description: post.description,
+            path,
+            date: post.date,
+            cluster: post.cluster,
+          }),
+        ),
+      },
+    ];
+
+    if (faqQuestions.length > 0) {
+      scripts.push({
+        type: "application/ld+json",
+        children: JSON.stringify(
+          faqLd(
+            faqQuestions.map((q) => ({
+              q: q.heading,
+              a: q.paragraphs.join(" "),
+            })),
+          ),
+        ),
+      });
+    }
+
     return {
       meta,
       links,
-      scripts: [
-        {
-          type: "application/ld+json",
-          children: JSON.stringify(
-            breadcrumbLd([
-              { name: "Home", path: "/" },
-              { name: "Blog", path: "/blog" },
-              { name: post.title, path },
-            ]),
-          ),
-        },
-        {
-          type: "application/ld+json",
-          children: JSON.stringify(
-            articleLd({
-              title: post.title,
-              description: post.description,
-              path,
-              date: post.date,
-              cluster: post.cluster,
-            }),
-          ),
-        },
-      ],
+      scripts,
     };
   },
   component: BlogPostPage,
