@@ -1243,78 +1243,83 @@ export const MODULES_LIST: ModuleData[] = [
   },
   {
     slug: "intelligence",
-    name: "Digi Intelligence & Market Surveillance",
-    eyebrow: "Market Surveillance & Registry Intelligence",
-    h1: "Digi Intelligence — E-Commerce Product Hunting &",
-    h1Gradient: "Corporate Registry Surveillance Suite",
-    metaTitle: "Digi Intelligence — E-Commerce Hunting & B2B Surveillance | DIGI BIZ OS",
+    name: "Digi Intelligence — Product Hunting, Lead Gen, SEO & AEO/GEO",
+    eyebrow: "Market Surveillance, Lead Discovery & Search Engine Intelligence",
+    h1: "Digi Intelligence — Product Hunting, Lead Gen, SEO &",
+    h1Gradient: "AEO/GEO Generative Search Intelligence Suite",
+    metaTitle: "Digi Intelligence — Product Hunting, Lead Gen, SEO & AEO/GEO | DIGI BIZ OS",
     metaDescription:
-      "E-commerce & corporate intelligence on Windows: 20-stage product hunting across Amazon, eBay, Etsy, Walmart, TikTok, Shopify, plus UK Companies House director audits.",
+      "Autonomous business intelligence on Windows: 20-stage E-Commerce Product Hunting (Amazon, TikTok, Shopify), B2B Lead Intelligence, Technical SEO Auditing, and AEO/GEO Generative Optimization.",
     accentColor: "#3B82F6",
     directAnswer:
-      "Digi Intelligence is an advanced market research, e-commerce product hunting, and corporate registry surveillance suite inside DIGI BIZ OS. It conducts automated 20-stage deep market analysis across major marketplaces (Amazon, eBay, Etsy, Walmart, TikTok, and Shopify) and verifies official UK Companies House filings, director appointments, and SIC industry trade codes directly on your Windows desktop.",
+      "Digi Intelligence is an autonomous business intelligence, market surveillance, and search engine optimization suite inside DIGI BIZ OS. It unifies four specialized local engines: (1) Product Hunting Intelligence across Amazon, eBay, TikTok, and Shopify; (2) Lead Intelligence for B2B discovery and UK Companies House director audits; (3) SEO Intelligence for technical website audits and keyword rankings; and (4) AEO & GEO Intelligence to engineer direct answers and win citations in Google AI Overviews, Perplexity, and ChatGPT.",
     problemSolved: [
-      "Eliminates expensive monthly subscriptions for e-commerce research software (e.g. Helium 10 or Jungle Scout) and B2B credit check tools.",
-      "Automates deep 20-stage product vetting to identify high-demand, low-competition, high-margin inventory opportunities.",
-      "Instantly verifies official corporate registration status, active directors, PSC filings, and accounts due dates.",
-      "Exports complete, downloadable product and business audit reports directly into your local CRM pipeline.",
+      "Eliminates monthly subscriptions for Helium 10 ($99/mo), Apollo.io ($79/mo), Ahrefs ($99/mo), and separate AI SEO tools with a single £50 lifetime OS licence.",
+      "Automates deep 20-stage e-commerce product vetting to uncover high-demand, low-competition, high-margin inventory opportunities with verified supplier links.",
+      "Scrapes and verifies official corporate registrations, active company directors, PSC shareholdings, SIC trade codes, and verified executive contact details.",
+      "Conducts full-site technical SEO audits, fixes indexability bottlenecks, and structures on-page content to win top citations in Google AI Overviews and answer engines.",
     ],
     targetAudience: [
-      "E-Commerce Brands and Amazon/Shopify Sellers searching for profitable, trending products and reliable supplier margins.",
-      "B2B Sales Teams and Agencies performing corporate due diligence, director verification, and prospect qualification.",
-      "Accountants, Legal Advisors, and Compliance Officers auditing corporate records and filing histories.",
+      "E-Commerce Brands & Amazon/Shopify Sellers hunting for high-margin winning products and verified supplier sourcing contacts.",
+      "B2B Sales Teams, Agencies & Consultancies needing verified corporate leads, director intelligence, and decision-maker contact details.",
+      "Website Owners, Marketers & SEO Professionals auditing technical website health, keyword rankings, and generative engine visibility.",
+      "Enterprises optimizing their digital footprint for Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO).",
     ],
     coreCapabilities: [
       {
-        title: "Multi-Marketplace E-Commerce Hunter",
+        title: "Product Hunting Intelligence",
         description:
-          "Conducts 20-stage algorithmic analysis across Amazon, eBay, Etsy, Walmart, TikTok Shop, and Shopify to uncover winning products with verified profit margins.",
+          "Automated 20-stage deep market analysis across Amazon, eBay, Etsy, Walmart, TikTok Shop, AliExpress, and Shopify. Evaluates consumer demand curves, historical price spreads, Best Seller Ranks (BSR), net profit margins, fulfillment fees, and supplier source links without recurring SaaS fees.",
       },
       {
-        title: "Live UK Companies House Auditing",
+        title: "Lead Intelligence & B2B Surveillance",
         description:
-          "Directly queries official UK registry records for active status, incorporation date, directors, PSCs, filing history, and accounts due dates.",
+          "Autonomous B2B prospect discovery and executive contact enrichment. Queries official UK Companies House APIs to audit incorporation records, active directors, PSC shareholdings, filing histories, and 700+ SIC trade codes, extracting verified decision-maker emails and phone numbers.",
       },
       {
-        title: "Standard Industrial Classification (SIC) Search",
+        title: "SEO Intelligence & Technical Auditing",
         description:
-          "Filters and analyzes businesses across 700+ SIC trade codes to uncover specialized B2B partnership and service opportunities.",
+          "High-speed desktop website crawler and technical SEO engine. Audits page indexing, broken links, redirect chains, canonical tags, heading hierarchies, keyword densities, internal link graphs, and automatically compiles production XML sitemaps.",
       },
       {
-        title: "Downloadable Product & Company Audit Reports",
+        title: "AEO & GEO Intelligence (AI Overviews & LLM Visibility)",
         description:
-          "Generates comprehensive, multi-page analytical audit documents in Word, PDF, or HTML format in one click.",
+          "Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) diagnostic suite. Analyzes content for direct-answer snippet readiness (<60 words), question-style headings, and structured JSON-LD schemas to win citations in Google AI Overviews, Perplexity, ChatGPT Search, and Claude.",
       },
     ],
     workflows: [
       {
         step: "01",
-        title: "Define Target Market or Company Query",
-        description: "Enter a product niche, competitor keyword, or company registration name/number.",
+        title: "Select Intelligence Mode & Target Query",
+        description: "Choose Product Hunting, Lead Discovery, Technical SEO Audit, or AEO/GEO Generative Optimization, and enter your target niche, company, or domain.",
       },
       {
         step: "02",
-        title: "Autonomous Deep Analysis",
-        description: "The engine runs multi-stage data gathering, evaluates competitive intensity, checks filings, and computes profit metrics.",
+        title: "Autonomous Multi-Stage Execution",
+        description: "The engine executes multi-source data extraction, verifies corporate registries, computes financial margins, or performs deep technical DOM audits in seconds.",
       },
       {
         step: "03",
-        title: "One-Click Export to CRM",
-        description: "Save verified companies, prospects, or vetted product opportunities directly into your Digi CRM pipeline.",
+        title: "Actionable Synthesis & CRM Ingestion",
+        description: "Export structured audit reports in Word, PDF, or HTML, and automatically sync discovered B2B leads, product opportunities, or SEO fix lists into your local CRM pipeline.",
       },
     ],
     faq: [
       {
-        q: "Does Digi Intelligence require third-party subscription accounts to search Companies House?",
-        a: "No. Digi Intelligence connects directly to official public registry APIs with zero third-party subscription charges.",
+        q: "What are the four core intelligence engines in Digi Intelligence?",
+        a: "Digi Intelligence integrates: (1) Product Hunting Intelligence for Amazon, eBay, TikTok, and Shopify; (2) Lead Intelligence for B2B discovery and UK Companies House audits; (3) SEO Intelligence for technical website crawling and keyword tracking; and (4) AEO & GEO Intelligence for ranking in Google AI Overviews and generative LLM citations.",
       },
       {
-        q: "Which e-commerce platforms can I analyze with Product Hunter?",
-        a: "You can research products across Amazon, eBay, Etsy, Walmart, TikTok Shop, and Shopify stores.",
+        q: "How does AEO and GEO Intelligence help my website rank in AI engines?",
+        a: "AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) evaluate your pages against the ranking criteria of Google Gemini, Perplexity, ChatGPT, and Claude. It ensures your content features direct answers under 60 words, conversational question headings, and valid JSON-LD schemas (FAQPage, TechArticle) so AI models can easily cite your business as an authoritative source.",
+      },
+      {
+        q: "Can I research winning e-commerce products and B2B leads without monthly SaaS fees?",
+        a: "Yes. All four intelligence engines run locally on your Windows PC with zero recurring subscription charges, eliminating the need for separate subscriptions like Helium 10, Jungle Scout, Apollo, or Ahrefs.",
       },
       {
         q: "Can I schedule intelligence searches to run overnight?",
-        a: "Yes. Combined with Digi Flow, you can schedule recurring intelligence scans to monitor competitor pricing and discover new leads automatically.",
+        a: "Yes. Combined with Digi Flow, you can schedule recurring intelligence scans to monitor competitor pricing, discover new leads, and audit site SEO automatically.",
       },
     ],
     relatedModules: [
@@ -1342,7 +1347,7 @@ export const MODULES_LIST: ModuleData[] = [
     image: {
       src: osCrmIntel,
       alt: "Digi Intelligence Market Research",
-      caption: "Digi Intelligence: 20-stage product research across Amazon, eBay, Walmart, TikTok & Shopify.",
+      caption: "Digi Intelligence: Product Hunting, Lead Gen, SEO & AEO/GEO Suite.",
     },
   },
 ];

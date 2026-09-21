@@ -1464,36 +1464,66 @@ export const SEO_PAGES: SeoPage[] = [
     {
       path: "/features/digi-intelligence",
       group: "feature",
-      eyebrow: "Digi Intelligence",
-      h1: "Digi Intelligence —",
-      h1Gradient: "E-Commerce & Lead Engines.",
-      metaTitle: "Digi Intelligence — E-Commerce Research & Lead Engines | DIGI BIZ OS",
+      eyebrow: "Digi Intelligence Suite",
+      h1: "Digi Intelligence — Product Hunting, Lead Gen, SEO &",
+      h1Gradient: "AEO/GEO Generative Search Intelligence.",
+      metaTitle: "Digi Intelligence Feature Suite — 4-in-1 Market & AI SEO Engines | DIGI BIZ OS",
       metaDescription:
-        "Automate 20-stage product research across Amazon, eBay, Walmart, TikTok, and Shopify, plus automated B2B lead hunting pipelines.",
+        "4-in-1 market intelligence on Windows: 20-stage E-Commerce Product Hunting, B2B Lead Prospecting, Technical SEO Auditing, and AEO/GEO Generative Engine Optimization.",
       intro:
-        "Digi Intelligence is your autonomous market analysis engine. Enter a product niche or search query and the 20-stage research pipeline pulls market depth, pricing, and opportunity metrics automatically.",
+        "Digi Intelligence is an autonomous four-pillar market intelligence and search optimization engine. It combines 20-stage multi-marketplace product hunting across Amazon, eBay, TikTok, and Shopify, B2B lead discovery with UK Companies House director audits, technical website SEO crawling, and AEO/GEO optimization to win citations in Google AI Overviews and answer engines.",
       answers: [
         {
           q: "What is Digi Intelligence?",
-          a: "An autonomous e-commerce and B2B lead generation engine supporting Amazon, eBay, Etsy, Walmart, TikTok, and Shopify marketplace research.",
+          a: "Digi Intelligence is a native Windows business intelligence suite unifying 4 core engines: Product Hunting Intelligence, B2B Lead Intelligence, Technical SEO Intelligence, and AEO/GEO Generative Optimization.",
+        },
+        {
+          q: "How does AEO and GEO Intelligence optimize for AI Overviews?",
+          a: "AEO & GEO Intelligence audits your web pages for direct-answer snippet readiness (<60 words), question-style headings, and structured JSON-LD schemas so Google AI Overviews, Perplexity, and ChatGPT cite your content.",
         },
       ],
       capabilities: [
-        { title: "20-stage pipeline", body: "Deep product research and market opportunity scoring." },
-        { title: "Multi-marketplace", body: "Scrapes and evaluates Amazon, eBay, Walmart, TikTok & Shopify." },
-        { title: "Lead intelligence", body: "Automated B2B prospective customer and contact discovery." },
-        { title: "Research history", body: "Score cards and audit logs saved for fast reference." },
+        {
+          title: "Product Hunting Intelligence",
+          body: "20-stage deep market analysis across Amazon, eBay, Etsy, Walmart, TikTok Shop, and Shopify with real-time margin calculations.",
+        },
+        {
+          title: "Lead Intelligence & B2B Prospecting",
+          body: "Autonomous B2B prospect discovery, verified decision-maker emails, phone numbers, and official UK Companies House director audits.",
+        },
+        {
+          title: "SEO Intelligence & Technical Auditing",
+          body: "High-speed desktop website crawler auditing indexability, broken links, canonicals, keyword rankings, and XML sitemaps.",
+        },
+        {
+          title: "AEO & GEO Intelligence (AI Overviews)",
+          body: "Generative Engine Optimization analyzing direct-answer snippets and schema graphs to secure citations in ChatGPT, Perplexity, and Gemini.",
+        },
       ],
       sections: [
         {
-          heading: "Autonomous Product Discovery & Analysis",
-          body: "Launch comprehensive market hunts in seconds. The intelligence pipeline queries multiple sources simultaneously and compiles structured research reports.",
+          heading: "Four Sovereign Intelligence Engines in One Desktop Workspace",
+          body: "Stop paying thousands every year for Helium 10, Apollo, Ahrefs, and emerging GEO optimization tools. Digi Intelligence runs all four intelligence disciplines natively on your Windows PC with zero recurring seat subscriptions.",
+          bullets: [
+            "20-stage product vetting evaluating demand volume, price elasticity, and verified supplier margins.",
+            "B2B corporate surveillance linking directly into official UK Companies House registry APIs and SIC trade codes.",
+            "Desktop website crawler discovering technical SEO bottlenecks, orphan URLs, and indexation flaws.",
+            "AEO/GEO scoring evaluating structured Q&A, entity grounding, and LLM citation readiness.",
+          ],
         },
       ],
       faq: [
         {
-          q: "Can I research multiple marketplaces simultaneously?",
-          a: "Yes — simply check the marketplaces you want to evaluate and start the hunt.",
+          q: "Can I research winning e-commerce products and suppliers across multiple marketplaces?",
+          a: "Yes. Product Hunting Intelligence evaluates Amazon, eBay, Etsy, Walmart, TikTok Shop, AliExpress, and Shopify simultaneously, computing net margins and supplier contacts.",
+        },
+        {
+          q: "Does Lead Intelligence search official corporate registries?",
+          a: "Yes. Lead Intelligence connects directly to official UK Companies House APIs to verify active company status, directors, PSC filings, and SIC trade classifications.",
+        },
+        {
+          q: "What is the difference between SEO Intelligence and AEO/GEO Intelligence?",
+          a: "SEO Intelligence focuses on traditional search engine crawlers, indexing, broken links, and keyword rankings. AEO and GEO Intelligence optimize your content for generative AI answer engines like Google AI Overviews, Perplexity, and ChatGPT Search.",
         },
       ],
       links: [
@@ -1502,24 +1532,24 @@ export const SEO_PAGES: SeoPage[] = [
         ...CTA_CORE,
       ],
       image: img(
-      osCrmIntel,
-      "Digi Intelligence e-commerce research and supplier comparison interface",
-      "Digi Intelligence: 20-stage product research across Amazon, eBay, Walmart, TikTok & Shopify.",
-    ),
-    screenshots: [
-      {
-        src: osCrmIntel,
-        title: "E-Commerce Supplier & Market Analysis Intelligence",
-        subtitle: "Multi-platform winning product hunter across Amazon, eBay, Shopify, TikTok",
-        caption: "20-stage deep market analysis scoring winning products and verified supplier contacts.",
-      },
-      {
-        src: osIntel,
-        title: "20-Stage Deep Market Intelligence Engine",
-        subtitle: "Market depth evaluation, historical margin calculations, and B2B leads",
-        caption: "Multi-marketplace scraping engine evaluating pricing spreads and consumer demand.",
-      },
-    ],
+        osCrmIntel,
+        "Digi Intelligence product hunting, lead generation, SEO, and AEO/GEO interface",
+        "Digi Intelligence: 4-in-1 Product Hunting, Lead Gen, SEO & AEO/GEO Suite.",
+      ),
+      screenshots: [
+        {
+          src: osCrmIntel,
+          title: "E-Commerce Supplier & Market Analysis Intelligence",
+          subtitle: "Multi-platform winning product hunter across Amazon, eBay, Shopify, TikTok",
+          caption: "20-stage deep market analysis scoring winning products and verified supplier contacts.",
+        },
+        {
+          src: osIntel,
+          title: "20-Stage Deep Market Intelligence Engine",
+          subtitle: "Market depth evaluation, historical margin calculations, and B2B leads",
+          caption: "Multi-marketplace scraping engine evaluating pricing spreads and consumer demand.",
+        },
+      ],
       accent: "#38BDF8",
     },
     {

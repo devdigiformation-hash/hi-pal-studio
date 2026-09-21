@@ -36,7 +36,7 @@
 - [Digi CLI](https://digibizos.co.uk/modules/cli): Custom command runner, PowerShell/Bash scripting assistant, and offline executable bins.
 - [Digi Models](https://digibizos.co.uk/modules/models): Neural engine router, local GGUF runner, and free fallback stack.
 - [Digi Connectors](https://digibizos.co.uk/modules/connectors): Universal API gateway for Telegram, Discord, SMTP email, and webhooks.
-- [Digi Intelligence](https://digibizos.co.uk/modules/intelligence): E-commerce product hunting, competitor price monitoring, and B2B surveillance.
+- [Digi Intelligence](https://digibizos.co.uk/modules/intelligence): Autonomous 4-in-1 market research suite: (1) Product Hunting Intelligence (Amazon, TikTok, Shopify, eBay, AliExpress, Walmart), (2) Lead Intelligence & B2B Surveillance (UK Companies House director audits, emails, phone numbers, SIC trade codes), (3) SEO Intelligence (technical website crawler, broken links, canonical audit, keyword tracking), and (4) AEO & GEO Intelligence (Answer Engine & Generative Engine Optimization for Google AI Overviews, Perplexity, and ChatGPT citations).
 
 ## Open Source Software Suite (/open-source/*)
 Pre-configured, subscription-free open-source utilities integrated into the DIGI BIZ OS ecosystem:

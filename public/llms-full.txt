@@ -82,7 +82,11 @@ DIGI BIZ OS explicitly rejects the fragmented SaaS subscription economy. Rather 
 9. **Digi Connectors (/modules/connectors & /features/digi-connectors)**:
    Universal gateway connecting local workflows to IMAP/SMTP email inboxes, Telegram bots, Discord servers, and external REST endpoints.
 10. **Digi Intelligence (/modules/intelligence & /features/digi-intelligence)**:
-    Market surveillance tool for e-commerce price monitoring, competitor content tracking, supplier scraping, and automated PDF intelligence reports.
+    Autonomous 4-in-1 market research and search engine optimization suite for Windows:
+    - **Product Hunting Intelligence**: 20-stage deep market analysis across Amazon, eBay, TikTok, Shopify, AliExpress, and Walmart with margin calculation.
+    - **Lead Intelligence & B2B Surveillance**: Scrapes verified decision-maker emails and phone numbers, audits UK Companies House official records, directors, and SIC trade codes.
+    - **SEO Intelligence & Technical Auditing**: High-speed desktop crawler diagnosing indexing, broken links, canonicals, keyword tracking, and XML sitemaps.
+    - **AEO & GEO Intelligence (AI Overviews & LLM Visibility)**: Generative Engine Optimization ensuring direct-answer snippets (<60 words) and schema.org JSON-LD graphs to win citations in Google AI Overviews, Perplexity, and ChatGPT.
 11. **Digi Tasks (/features/digitasks)**:
     Centralized asynchronous task delegation matrix with priority queues, human-in-the-loop validation checkpoints, and real-time execution logs.
 12. **Digi Models (/modules/models)**:
