@@ -11,7 +11,7 @@ interface AuditEntry {
   hasDirectAnswer?: boolean;
 }
 
-const BASE_URL = "https://digibizos.co.uk";
+const BASE_URL = "https://www.digibizos.co.uk";
 
 const STATIC_ENTRIES: { path: string; title: string; description: string }[] = [
   { path: "/", title: "DIGI BIZ OS — AI Desktop Operating System for Windows", description: "Autonomous AI business operating system for Windows 10 & 11. Run local neural models, voice control, and multi-agent workflows with zero monthly fees." },

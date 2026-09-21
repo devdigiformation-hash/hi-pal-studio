@@ -72,7 +72,7 @@ export default function MiniHero({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.28 }}
-          className="mt-6 max-w-[620px] font-body text-[15px] leading-[1.75] text-[var(--text-secondary)] md:text-[17px]"
+          className="answer mt-6 max-w-[620px] font-body text-[15px] leading-[1.75] text-[var(--text-secondary)] md:text-[17px]"
         >
           {subtitle}
         </motion.p>

@@ -57,9 +57,15 @@ function ModelsDirectoryPage() {
             Free & Open-Source AI Models for{" "}
             <GradientText text="Windows & Local PC" gradient="linear-gradient(135deg, #3B82F6, #2FE0C8)" />
           </h1>
-          <p className="mx-auto mt-4 max-w-[740px] font-body text-[16px] leading-relaxed text-[var(--text-secondary)]">
+          <p className="answer mx-auto mt-4 max-w-[740px] font-body text-[16px] leading-relaxed text-[var(--text-secondary)]">
             Explore the complete directory of free open-weights and frontier AI models supported inside DIGI BIZ OS. Run models 100% offline with zero cloud fees, or connect high-speed APIs for enterprise reasoning.
           </p>
+          <div id="tldr-summary" className="summary sr-only">
+            <h2>TL;DR</h2>
+            <p>
+              Run 50+ open-source AI models directly on your Windows PC with DIGI BIZ OS: DeepSeek R1, Llama 3.3, Qwen 2.5 Coder, Phi-4, Whisper, Gemma 2, and Hermes 3 with zero subscription fees.
+            </p>
+          </div>
         </div>
 
         {/* MODEL CARDS GRID */}

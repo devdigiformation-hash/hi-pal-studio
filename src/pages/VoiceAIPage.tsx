@@ -252,9 +252,20 @@ export default function VoiceAIPage() {
             Ask Your Business Assistant{" "}
             <GradientText text="What Needs Your Attention." gradient="linear-gradient(135deg, #2FE0C8, #8B5CF6)" />
           </h1>
-          <p className="mx-auto mt-4 max-w-[760px] font-body text-[16px] leading-relaxed text-[var(--text-secondary)]">
+          <p className="answer mx-auto mt-4 max-w-[760px] font-body text-[16px] leading-relaxed text-[var(--text-secondary)]">
             A native, low-latency conversational AI engine for Windows. Speak naturally to review WhatsApp follow-ups, verify pending UK LTD and US LLC formation orders, monitor identity verification bottlenecks, and prioritize your daily operational workflow hands-free.
           </p>
+          <div className="summary mx-auto mt-4 max-w-[760px] rounded-xl border border-white/10 bg-white/[0.03] p-3.5 backdrop-blur-sm text-left">
+            <div className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-[var(--cyan)] animate-pulse" />
+              <h2 className="font-display text-[12px] font-bold uppercase tracking-wider text-[var(--cyan)]">
+                TL;DR
+              </h2>
+            </div>
+            <p className="mt-1 font-body text-[13.5px] leading-relaxed text-zinc-300">
+              DIGI BIZ OS Voice AI gives Windows users offline, sub-200ms spoken automation to command CRM databases, review WhatsApp conversations, and run multi-step computer tasks hands-free.
+            </p>
+          </div>
         </div>
       </SectionWrapper>
 

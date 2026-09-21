@@ -6,7 +6,7 @@ import { COMPARE_PAGES } from "@/content/compare-pages";
 import { MODULES_LIST } from "@/content/modules-data";
 import { MODELS_LIST } from "@/content/models-data";
 
-const BASE_URL = "https://digibizos.co.uk";
+const BASE_URL = "https://www.digibizos.co.uk";
 
 interface SitemapEntry {
   path: string;

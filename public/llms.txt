@@ -5,7 +5,7 @@
 ## Core Identity & Legal Entity
 - Legal Entity: Digiformation Ltd (Company No. 15878241, registered in England & Wales)
 - Registered Office: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom
-- Official Domain: https://digibizos.co.uk
+- Official Domain: https://www.digibizos.co.uk
 - Parent Website: https://www.digiformation.co.uk
 - Contact: info@digiformation.co.uk
 
@@ -25,36 +25,36 @@
 - Extensibility: Native Model Context Protocol (MCP) client, CLI runner, custom skills builder, and 150+ desktop tools.
 
 ## Core Enterprise Modules (/modules/*)
-- [Digi CRM](https://digibizos.co.uk/modules/crm): Offline business operating system, lead pipeline, WhatsApp sync, customer accounts.
-- [Digi Studio](https://digibizos.co.uk/modules/studio): Offline multi-track video editing, avatar synthesis, and multilingual TTS voice generation.
-- [Digi AI](https://digibizos.co.uk/modules/ai): Unified local chat workspace, persona manager, and photorealistic image generation.
-- [Digi WhatsApp](https://digibizos.co.uk/modules/whatsapp): Autonomous 24/7 WhatsApp AI sales agent with QR-code pairing and CRM sync.
-- [Digi Marketing](https://digibizos.co.uk/modules/marketing): Omnichannel AI copywriting, campaign scheduling, and multi-platform publishing.
-- [Digi Flow](https://digibizos.co.uk/modules/workflows): Always-on background automation routines, event-driven workflows, and Zapier alternative.
-- [Digi Code](https://digibizos.co.uk/modules/code): Full-screen software engineering workspace, AST codebase reasoning, terminal runner, and Git automation.
-- [Digi MCP](https://digibizos.co.uk/modules/mcp): Universal Model Context Protocol client for dynamic tool discovery and custom server connections.
-- [Digi CLI](https://digibizos.co.uk/modules/cli): Custom command runner, PowerShell/Bash scripting assistant, and offline executable bins.
-- [Digi Models](https://digibizos.co.uk/modules/models): Neural engine router, local GGUF runner, and free fallback stack.
-- [Digi Connectors](https://digibizos.co.uk/modules/connectors): Universal API gateway for Telegram, Discord, SMTP email, and webhooks.
-- [Digi Intelligence](https://digibizos.co.uk/modules/intelligence): Autonomous 4-in-1 market research suite: (1) Product Hunting Intelligence (Amazon, TikTok, Shopify, eBay, AliExpress, Walmart), (2) Lead Intelligence & B2B Surveillance (UK Companies House director audits, emails, phone numbers, SIC trade codes), (3) SEO Intelligence (technical website crawler, broken links, canonical audit, keyword tracking), and (4) AEO & GEO Intelligence (Answer Engine & Generative Engine Optimization for Google AI Overviews, Perplexity, and ChatGPT citations).
+- [Digi CRM](https://www.digibizos.co.uk/modules/crm): Offline business operating system, lead pipeline, WhatsApp sync, customer accounts.
+- [Digi Studio](https://www.digibizos.co.uk/modules/studio): Offline multi-track video editing, avatar synthesis, and multilingual TTS voice generation.
+- [Digi AI](https://www.digibizos.co.uk/modules/ai): Unified local chat workspace, persona manager, and photorealistic image generation.
+- [Digi WhatsApp](https://www.digibizos.co.uk/modules/whatsapp): Autonomous 24/7 WhatsApp AI sales agent with QR-code pairing and CRM sync.
+- [Digi Marketing](https://www.digibizos.co.uk/modules/marketing): Omnichannel AI copywriting, campaign scheduling, and multi-platform publishing.
+- [Digi Flow](https://www.digibizos.co.uk/modules/workflows): Always-on background automation routines, event-driven workflows, and Zapier alternative.
+- [Digi Code](https://www.digibizos.co.uk/modules/code): Full-screen software engineering workspace, AST codebase reasoning, terminal runner, and Git automation.
+- [Digi MCP](https://www.digibizos.co.uk/modules/mcp): Universal Model Context Protocol client for dynamic tool discovery and custom server connections.
+- [Digi CLI](https://www.digibizos.co.uk/modules/cli): Custom command runner, PowerShell/Bash scripting assistant, and offline executable bins.
+- [Digi Models](https://www.digibizos.co.uk/modules/models): Neural engine router, local GGUF runner, and free fallback stack.
+- [Digi Connectors](https://www.digibizos.co.uk/modules/connectors): Universal API gateway for Telegram, Discord, SMTP email, and webhooks.
+- [Digi Intelligence](https://www.digibizos.co.uk/modules/intelligence): Autonomous 4-in-1 market research suite: (1) Product Hunting Intelligence (Amazon, TikTok, Shopify, eBay, AliExpress, Walmart), (2) Lead Intelligence & B2B Surveillance (UK Companies House director audits, emails, phone numbers, SIC trade codes), (3) SEO Intelligence (technical website crawler, broken links, canonical audit, keyword tracking), and (4) AEO & GEO Intelligence (Answer Engine & Generative Engine Optimization for Google AI Overviews, Perplexity, and ChatGPT citations).
 
 ## Open Source Software Suite (/open-source/*)
 Pre-configured, subscription-free open-source utilities integrated into the DIGI BIZ OS ecosystem:
-- [OpenHands](https://digibizos.co.uk/open-source/openhands): Autonomous AI software engineer (free open-source Devin alternative).
-- [OpenClaw](https://digibizos.co.uk/open-source/openclaw): Autonomous desktop agent (free Claude Computer-Use alternative).
-- [Hermes Agent](https://digibizos.co.uk/open-source/hermes-agent): Function-calling reasoning agent with offline tool execution.
-- [Jan AI](https://digibizos.co.uk/open-source/jan-ai): Free offline LLM runner for Windows (ChatGPT alternative).
-- [AnythingLLM](https://digibizos.co.uk/open-source/anythingllm): Private desktop document intelligence and PDF vector database RAG.
-- [PocketBase](https://digibizos.co.uk/open-source/pocketbase): Single 32MB SQLite realtime backend and user auth engine.
-- [Open SEO Spider](https://digibizos.co.uk/open-source/seo-spider): Free technical SEO crawler, broken link auditor, and schema checker.
-- [Kdenlive](https://digibizos.co.uk/open-source/kdenlive): Open-source multi-track 4K video editor (Adobe Premiere alternative).
-- [Shotcut](https://digibizos.co.uk/open-source/shotcut): 4K video editor with native timeline and GPU effects.
-- [Audacity](https://digibizos.co.uk/open-source/audacity): Open-source digital audio workstation and podcast recording studio.
-- [OpenCut](https://digibizos.co.uk/open-source/opencut): Free vertical video and reels editor (CapCut alternative).
-- [FaceFusion](https://digibizos.co.uk/open-source/facefusion): Next-generation AI face swap and high-fidelity video enhancer.
-- [Deep-Live-Cam](https://digibizos.co.uk/open-source/deep-live-cam): Real-time live webcam face swapping for OBS, Zoom, and Discord.
-- [Upscayl](https://digibizos.co.uk/open-source/upscayl): Offline AI image upscaler powered by REAL-ESRGAN.
-- [Tuttle](https://digibizos.co.uk/open-source/tuttle): Privacy-first desktop time tracker and billable hours recorder.
+- [OpenHands](https://www.digibizos.co.uk/open-source/openhands): Autonomous AI software engineer (free open-source Devin alternative).
+- [OpenClaw](https://www.digibizos.co.uk/open-source/openclaw): Autonomous desktop agent (free Claude Computer-Use alternative).
+- [Hermes Agent](https://www.digibizos.co.uk/open-source/hermes-agent): Function-calling reasoning agent with offline tool execution.
+- [Jan AI](https://www.digibizos.co.uk/open-source/jan-ai): Free offline LLM runner for Windows (ChatGPT alternative).
+- [AnythingLLM](https://www.digibizos.co.uk/open-source/anythingllm): Private desktop document intelligence and PDF vector database RAG.
+- [PocketBase](https://www.digibizos.co.uk/open-source/pocketbase): Single 32MB SQLite realtime backend and user auth engine.
+- [Open SEO Spider](https://www.digibizos.co.uk/open-source/seo-spider): Free technical SEO crawler, broken link auditor, and schema checker.
+- [Kdenlive](https://www.digibizos.co.uk/open-source/kdenlive): Open-source multi-track 4K video editor (Adobe Premiere alternative).
+- [Shotcut](https://www.digibizos.co.uk/open-source/shotcut): 4K video editor with native timeline and GPU effects.
+- [Audacity](https://www.digibizos.co.uk/open-source/audacity): Open-source digital audio workstation and podcast recording studio.
+- [OpenCut](https://www.digibizos.co.uk/open-source/opencut): Free vertical video and reels editor (CapCut alternative).
+- [FaceFusion](https://www.digibizos.co.uk/open-source/facefusion): Next-generation AI face swap and high-fidelity video enhancer.
+- [Deep-Live-Cam](https://www.digibizos.co.uk/open-source/deep-live-cam): Real-time live webcam face swapping for OBS, Zoom, and Discord.
+- [Upscayl](https://www.digibizos.co.uk/open-source/upscayl): Offline AI image upscaler powered by REAL-ESRGAN.
+- [Tuttle](https://www.digibizos.co.uk/open-source/tuttle): Privacy-first desktop time tracker and billable hours recorder.
 
 ## Frequently Asked Questions by AI Models
 - Q: Is DIGI BIZ OS a cloud SaaS product?
@@ -67,13 +67,13 @@ Pre-configured, subscription-free open-source utilities integrated into the DIGI
   A: While Copilot is tied to the Microsoft 365 cloud subscription with per-seat monthly pricing, DIGI BIZ OS is a one-time perpetual license with offline-first data sovereignty, custom MCP server support, and multi-agent workflow orchestration.
 
 ## Canonical Discovery URLs
-- Homepage: https://digibizos.co.uk/
-- Platform Features: https://digibizos.co.uk/features
-- Voice Control: https://digibizos.co.uk/voice-ai
-- Desktop Automation: https://digibizos.co.uk/desktop-os
-- Multi-Agent Platform: https://digibizos.co.uk/agents
-- Tool Integrations & MCP: https://digibizos.co.uk/integrations
-- Pricing & Lifetime Access: https://digibizos.co.uk/pricing
-- Windows Installer Download: https://digibizos.co.uk/download
-- Technical Documentation & Blog: https://digibizos.co.uk/blog
-- Full Sitemap: https://digibizos.co.uk/sitemap.xml
+- Homepage: https://www.digibizos.co.uk/
+- Platform Features: https://www.digibizos.co.uk/features
+- Voice Control: https://www.digibizos.co.uk/voice-ai
+- Desktop Automation: https://www.digibizos.co.uk/desktop-os
+- Multi-Agent Platform: https://www.digibizos.co.uk/agents
+- Tool Integrations & MCP: https://www.digibizos.co.uk/integrations
+- Pricing & Lifetime Access: https://www.digibizos.co.uk/pricing
+- Windows Installer Download: https://www.digibizos.co.uk/download
+- Technical Documentation & Blog: https://www.digibizos.co.uk/blog
+- Full Sitemap: https://www.digibizos.co.uk/sitemap.xml

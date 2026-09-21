@@ -34,7 +34,7 @@ export function runOpsHealthCheck() {
     issues.push({ severity: "P0", category: "Technical", message: "public/robots.txt is missing!" });
   } else {
     const robotsContent = fs.readFileSync(robotsPath, "utf8");
-    if (!robotsContent.includes("Sitemap: https://digibizos.co.uk/sitemap.xml")) {
+    if (!robotsContent.includes("Sitemap: https://www.digibizos.co.uk/sitemap.xml")) {
       issues.push({ severity: "P0", category: "Technical", message: "Sitemap declaration missing in robots.txt" });
     }
     const expectedCrawlers = ["Googlebot", "Bingbot", "GPTBot", "ClaudeBot", "PerplexityBot", "Applebot"];
@@ -57,12 +57,12 @@ export function runOpsHealthCheck() {
     metrics.sitemapUrlsCount = locMatches.length;
 
     // Check Open Source Hub and subpages in sitemap
-    if (!sitemapContent.includes("https://digibizos.co.uk/open-source")) {
+    if (!sitemapContent.includes("https://www.digibizos.co.uk/open-source")) {
       issues.push({ severity: "P0", category: "Technical", message: "Open source hub missing from sitemap.xml" });
     }
 
     for (const toolId of Object.keys(OPEN_SOURCE_SUBPAGES)) {
-      const toolUrl = `https://digibizos.co.uk/open-source/${toolId}`;
+      const toolUrl = `https://www.digibizos.co.uk/open-source/${toolId}`;
       if (!sitemapContent.includes(toolUrl)) {
         issues.push({ severity: "P1", category: "Technical", message: `Tool URL ${toolUrl} missing from sitemap.xml` });
       }

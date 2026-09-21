@@ -57,9 +57,15 @@ function ModulesHubPage() {
             The Core Enterprise Applications of{" "}
             <GradientText text="DIGI BIZ OS" gradient="linear-gradient(135deg, #2FE0C8, #10B981)" />
           </h1>
-          <p className="mx-auto mt-4 max-w-[700px] font-body text-[16px] leading-relaxed text-[var(--text-secondary)]">
+          <p className="answer mx-auto mt-4 max-w-[700px] font-body text-[16px] leading-relaxed text-[var(--text-secondary)]">
             A unified, local-first digital operating system for Windows. Eliminate recurring SaaS fees with native CRM, marketing, WhatsApp sales automation, market intelligence, document cryptography, and autonomous coding agents.
           </p>
+          <div id="tldr-summary" className="summary sr-only">
+            <h2>TL;DR</h2>
+            <p>
+              DIGI BIZ OS includes 12 modular business engines: CRM, Studio, AI Brain, Code, CLI, MCP Switchboard, Connectors, Models, Marketing, Live Tracking, Document Vault, and Operations Center.
+            </p>
+          </div>
         </div>
 
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
