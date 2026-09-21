@@ -8,13 +8,13 @@ import GradientText from "@/components/GradientText";
 import ActivePulse from "@/components/ActivePulse";
 
 const STREAM: { label: string; detail: string; color: string }[] = [
-  { label: "Task received", detail: "“Prepare this week’s client report”", color: "var(--cyan)" },
-  { label: "Plan created", detail: "6 steps · 3 agents assigned", color: "var(--purple)" },
-  { label: "Research agent", detail: "Gathering data · 4 sources", color: "var(--amber)" },
-  { label: "Writer agent", detail: "Drafting summary · 1,240 words", color: "#7DD3FC" },
-  { label: "Review agent", detail: "Fact-check passed · 0 issues", color: "#F472B6" },
-  { label: "File created", detail: "client-report.pdf saved", color: "#3DDC84" },
-  { label: "Delivered", detail: "Sent to the client inbox", color: "var(--cyan)" },
+  { label: "Voice / Text intent", detail: "“آخری رپورٹ اگین سے دے دو” (Fetch latest executive report)", color: "var(--cyan)" },
+  { label: "Agent Dispatch", detail: "● AGENT - PROCESSING · 1 running · 8s", color: "#3DDC84" },
+  { label: "Tool Execution", detail: ">_ Tool: businessSnapshot · Status: THINKING", color: "#7DD3FC" },
+  { label: "WhatsApp Bridge", detail: "💬 whatsapp: connected · Syncing active customer threads", color: "#10B981" },
+  { label: "Ledger Computation", detail: "Income £30 · Outstanding invoices £220 · 8 unpaid", color: "var(--amber)" },
+  { label: "Lead Scoring", detail: "Priority Lead: Elephynlabs (Score 77)", color: "#F472B6" },
+  { label: "Live Voice Synthesis", detail: "● Speaking.. Basit voice summary streamed to owner", color: "var(--cyan)" },
 ];
 
 const CAPS = [

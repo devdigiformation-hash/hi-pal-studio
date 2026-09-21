@@ -9,7 +9,7 @@ import { buildMeta, breadcrumbLd, softwareLd } from "@/lib/seo";
 
 const TITLE = "All Features — DIGI BIZ OS AI Business Operating System";
 const DESC =
-  "Every module of DIGI BIZ OS: Digi AI, Digi CRM, Digi Studio, Digi Flow, Digi Marketing, Digi WhatsApp, Digi Code, Digi MCP, Digi CLI, Digi Connectors, Digi Intelligence, plus voice control, agents, skills, and desktop automation.";
+  "Every core application of DIGI BIZ OS: Live Tracking, Digi AI, Digi Code, Digi CRM, Digi Intelligence, Digi WhatsApp, Digi Flow, Digi Studio, Digi Models, Digi Marketing, Digi Connectors, plus voice control, neural soul engine, and desktop automation.";
 
 export const Route = createFileRoute("/features/")({
   head: () => {

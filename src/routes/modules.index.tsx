@@ -10,9 +10,9 @@ import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { MODULES_LIST } from "@/content/modules-data";
 import { buildMeta, breadcrumbLd, softwareLd } from "@/lib/seo";
 
-const TITLE = "Enterprise Business Modules — DIGI BIZ OS AI Operating System";
+const TITLE = "Enterprise Business Modules — DIGI BIZ OS Architecture";
 const DESC =
-  "Explore the 8 core proprietary business modules of DIGI BIZ OS: Digi CRM, Digi WhatsApp Agent, Digi Marketing, Digi Intelligence, Digi Flow, Digi Docs, Digi Code, and Digi Tools on Windows.";
+  "Explore the 12 core operational modules of DIGI BIZ OS: CRM, Studio, AI Brain, Code, CLI, MCP switchboard, Connectors, Models, and Operations Center.";
 
 export const Route = createFileRoute("/modules/")({
   head: () => {
@@ -54,7 +54,7 @@ function ModulesHubPage() {
         <div className="mt-8 text-center">
           <EyebrowLabel text="Modular Business Intelligence" icon={Layers} />
           <h1 className="mt-4 font-display text-[34px] font-bold leading-[1.12] text-[var(--text-primary)] md:text-[50px]">
-            The 8 Core Enterprise Modules of{" "}
+            The Core Enterprise Applications of{" "}
             <GradientText text="DIGI BIZ OS" gradient="linear-gradient(135deg, #2FE0C8, #10B981)" />
           </h1>
           <p className="mx-auto mt-4 max-w-[700px] font-body text-[16px] leading-relaxed text-[var(--text-secondary)]">

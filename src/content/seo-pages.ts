@@ -190,7 +190,7 @@ export const SEO_PAGES: SeoPage[] = [
       {
         src: osMain,
         title: "Live OS Command Surface",
-        subtitle: "11 Core Business Apps, live particle visualizer, memory, skills, camera, voice",
+        subtitle: "11 Core Business Apps, live neural particle visualizer, memory, soul engine, skills, mobile, camera, screen share, agent, tools",
         caption: "Your entire command surface in one unified desktop workspace.",
       },
       {

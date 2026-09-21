@@ -207,6 +207,27 @@ const VOICE_MODULE_INTEGRATIONS = [
     desc: 'Speak: "Schedule an hourly price audit on competitor websites every night at 2 AM" — builds background cron automation.',
     link: "/modules/workflows",
   },
+  {
+    icon: Brain,
+    title: "JARVIS + Live Tracking",
+    color: "#3DDC84",
+    desc: 'Speak: "آخری رپورٹ اگین سے دے دو" (Fetch latest business report) — live agent synthesizes real-time ledger revenue, unpaid invoices, and lead scores.',
+    link: "/ai-business-operating-system",
+  },
+  {
+    icon: Layers,
+    title: "JARVIS + Digi Intelligence",
+    color: "#A78BFA",
+    desc: 'Speak: "Run a 20-stage competitor hunt for wireless electronics across Amazon and TikTok" — scrapes margins and supplier leads autonomously.',
+    link: "/modules/intelligence",
+  },
+  {
+    icon: Zap,
+    title: "JARVIS + Digi Connectors",
+    color: "#E879F9",
+    desc: 'Speak: "Connect local SQLite database and inspect active MCP tool servers" — hot-plugs universal protocol tools live.',
+    link: "/modules/connectors",
+  },
 ];
 
 export default function VoiceAIPage() {

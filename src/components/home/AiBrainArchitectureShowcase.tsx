@@ -55,28 +55,23 @@ const FLOWS: ModuleFlow[] = [
     ],
     dialogue: [
       {
-        speaker: "JARVIS",
-        text: "Sir, you have a pending WhatsApp follow-up with this person. They were discussing a UK LTD order. Was this order completed?",
+        speaker: "Owner",
+        text: "آخری رپورٹ اگین سے دے دو (Give me the latest business snapshot).",
+        role: "owner",
+      },
+      {
+        speaker: "Basit",
+        text: "Sir, yeh raha aap ka business summary: Finance mein income £30 hai aur outstanding invoices £220 ki hain. Important Leads mein Elephynlabs (Score 77).",
         role: "assistant",
       },
       {
         speaker: "Owner",
-        text: "No, they are still waiting on identity verification documents.",
+        text: "All tasks verified. Confirm machine shutdown.",
         role: "owner",
       },
       {
-        speaker: "JARVIS",
-        text: "Understood. The order status remains pending. Would you like me to set a reminder for this?",
-        role: "assistant",
-      },
-      {
-        speaker: "Owner",
-        text: "Remind me tomorrow morning at 10 AM.",
-        role: "owner",
-      },
-      {
-        speaker: "JARVIS",
-        text: "✓ Reminder scheduled for tomorrow at 10:00 AM. Next priority: 2 new WhatsApp enquiries waiting for qualification.",
+        speaker: "Basit",
+        text: "Okay sir. Main shutdown confirm kar raha hoon. Task completed, sir. Computer shut down ho raha hai.",
         role: "assistant",
       },
     ],

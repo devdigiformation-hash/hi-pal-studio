@@ -5,13 +5,12 @@ import { motion } from "framer-motion";
 import {
   Brain,
   Camera,
-  Cpu,
-  Database,
-  Megaphone,
+  Heart,
+  Zap,
   Monitor,
   Play,
   Smartphone,
-  Users,
+  Bot,
   Wrench,
 } from "lucide-react";
 import CyanButton from "@/components/CyanButton";
@@ -42,13 +41,13 @@ const PHRASES = ["With Voice.", "With AI.", "Hands-Free.", "At Light Speed.", "A
 
 const NODES = [
   { icon: Brain, label: "Memory", color: "#8B7CF6", angle: -135 },
-  { icon: Megaphone, label: "DIGI Marketing", color: "#2FE0C8", angle: -90 },
-  { icon: Cpu, label: "Skills", color: "#3B82F6", angle: -45 },
-  { icon: Database, label: "DIGI CRM", color: "#10B981", angle: 0 },
+  { icon: Heart, label: "Soul", color: "#EC4899", angle: -90 },
+  { icon: Zap, label: "Skills", color: "#3B82F6", angle: -45 },
+  { icon: Smartphone, label: "Mobile", color: "#A855F7", angle: 0 },
   { icon: Camera, label: "Camera", color: "#C4B5FD", angle: 45 },
-  { icon: Monitor, label: "Screen", color: "#F5A623", angle: 90 },
-  { icon: Users, label: "Agent", color: "#F472B6", angle: 135 },
-  { icon: Wrench, label: "Tools", color: "#7DD3FC", angle: 180 },
+  { icon: Monitor, label: "Screen Share", color: "#F5A623", angle: 90 },
+  { icon: Bot, label: "Agent", color: "#F472B6", angle: 135 },
+  { icon: Wrench, label: "Tools", color: "#2FE0C8", angle: 180 },
 ];
 
 const BADGES = ["AI Business OS", "Desktop Automation", "Multi-Agent Execution", "Universal MCP Ready"];
