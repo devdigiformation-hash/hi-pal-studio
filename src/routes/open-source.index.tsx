@@ -1163,7 +1163,10 @@ function OpenSourcePage() {
                             <img
                               src={s.image}
                               alt={`${s.name} interface preview`}
+                              width={640}
+                              height={360}
                               loading="lazy"
+                              decoding="async"
                               className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
                             />
                           ) : (

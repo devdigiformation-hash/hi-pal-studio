@@ -160,6 +160,17 @@ export function itemListLd(
   };
 }
 
+export function speakableLd(selectors: string[] = [".answer", ".summary"]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "SpeakableSpecification",
+    xpath: selectors.map((sel) =>
+      sel.startsWith(".") ? `//*[contains(concat(' ', normalize-space(@class), ' '), ' ${sel.slice(1)} ')]` : sel,
+    ),
+    cssSelector: selectors,
+  };
+}
+
 export function webPageLd({ title, description, path }: { title: string; description: string; path: string }) {
   return {
     "@context": "https://schema.org",
@@ -170,6 +181,11 @@ export function webPageLd({ title, description, path }: { title: string; descrip
     description,
     inLanguage: "en-GB",
     isPartOf: { "@id": `${SITE_URL}/#website` },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      xpath: ["//p[@class='answer']", "//div[@class='summary']"],
+      cssSelector: [".answer", ".summary"],
+    },
     author: {
       "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
@@ -185,4 +201,5 @@ export function webPageLd({ title, description, path }: { title: string; descrip
     dateModified: "2026-09-17",
   };
 }
+
 

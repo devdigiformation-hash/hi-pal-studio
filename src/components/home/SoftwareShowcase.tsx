@@ -257,7 +257,10 @@ export default function SoftwareShowcase() {
                     <img
                       src={s.src}
                       alt={`DIGI BIZ OS ${s.tag} screenshot — ${s.title}`}
+                      width={1920}
+                      height={1080}
                       loading="lazy"
+                      decoding="async"
                       draggable={false}
                       className="h-full w-full object-contain object-top"
                     />
@@ -395,6 +398,10 @@ export default function SoftwareShowcase() {
               <img
                 src={SLIDES[lightboxIndex].src}
                 alt={`DIGI BIZ OS ${SLIDES[lightboxIndex].tag} screenshot — ${SLIDES[lightboxIndex].title}`}
+                width={1920}
+                height={1080}
+                loading="lazy"
+                decoding="async"
                 className="mx-auto max-h-[85vh] w-auto rounded-[18px] border border-white/10 bg-[#05070B] shadow-[0_0_80px_rgba(47,224,200,0.15)] object-contain"
               />
               <div className="mt-4 text-center">

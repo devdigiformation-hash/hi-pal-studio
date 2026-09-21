@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import SmartLink from "./SmartLink";
 import { Github, Globe, Linkedin, Mail, MessageCircle, Phone, Twitter } from "lucide-react";
 import logoClean from "@/assets/logo-clean.png";
+import logoCleanWebp from "@/assets/logo-clean.webp";
 import ActivePulse from "./ActivePulse";
 import EyebrowLabel from "./EyebrowLabel";
 import MonoBadge from "./MonoBadge";
@@ -94,7 +95,16 @@ export default function Footer() {
       <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-6 py-16 sm:grid-cols-2 md:px-10 lg:grid-cols-3 xl:grid-cols-6">
         <div>
           <div className="flex items-center gap-2">
-            <img src={logoClean} alt="DIGI BIZ OS logo" className="h-9 w-9 rounded-full" />
+            <picture>
+              <source srcSet={logoCleanWebp} type="image/webp" />
+              <img
+                src={logoClean}
+                alt="DIGI BIZ OS logo"
+                width={36}
+                height={36}
+                className="h-9 w-9 rounded-full"
+              />
+            </picture>
             <span className="font-display text-[16px] font-bold text-[var(--text-primary)]">
               DIGI BIZ OS
             </span>

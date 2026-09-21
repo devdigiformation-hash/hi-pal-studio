@@ -50,6 +50,7 @@ const STATIC_ENTRIES: { path: string; title: string; description: string }[] = [
   { path: "/modules", title: "Enterprise Business Modules — DIGI BIZ OS Architecture", description: "Explore the 12 core operational modules of DIGI BIZ OS: CRM, Studio, AI Brain, Code, CLI, MCP switchboard, Connectors, Models, and Operations Center." },
   { path: "/models", title: "AI Models Universe — Local & Cloud Neural Engines | DIGI BIZ OS", description: "Discover the neural models supported by DIGI BIZ OS: DeepSeek R1, Qwen 2.5 Coder, Llama 3.3, Claude 3.7, GPT-4o, and private offline GGUF weights." },
   { path: "/compare", title: "Software Comparisons & Alternatives — DIGI BIZ OS", description: "In-depth, balanced architectural comparisons between DIGI BIZ OS and traditional SaaS platforms, cloud CRMs, automation tools, and AI assistants." },
+  { path: "/search", title: "Search DIGI BIZ OS — AI Modules, Tools, Guides & Features", description: "Search across DIGI BIZ OS business modules, AI models, open-source desktop software tools, and automation engineering guides." },
 ];
 
 function runFullAudit() {

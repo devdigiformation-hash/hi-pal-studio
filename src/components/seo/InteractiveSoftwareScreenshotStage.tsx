@@ -297,6 +297,8 @@ export default function InteractiveSoftwareScreenshotStage({
               <img
                 src={currentItem.src}
                 alt={currentItem.alt || currentItem.title}
+                width={1920}
+                height={1080}
                 loading="eager"
                 decoding="async"
                 className="block h-auto w-full object-contain cursor-zoom-in"
@@ -472,6 +474,10 @@ export default function InteractiveSoftwareScreenshotStage({
                 <img
                   src={currentItem.src}
                   alt={currentItem.alt || currentItem.title}
+                  width={1920}
+                  height={1080}
+                  loading="lazy"
+                  decoding="async"
                   className="mx-auto block max-h-[78vh] w-auto object-contain rounded-lg"
                 />
 

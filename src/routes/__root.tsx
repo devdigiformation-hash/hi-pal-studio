@@ -153,6 +153,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           inLanguage: "en-GB",
           url: "https://digibizos.co.uk",
           publisher: { "@id": "https://digibizos.co.uk/#organization" },
+          potentialAction: {
+            "@type": "SearchAction",
+            target: {
+              "@type": "EntryPoint",
+              urlTemplate: "https://digibizos.co.uk/search?q={search_term_string}",
+            },
+            "query-input": "required name=search_term_string",
+          },
         }),
       },
       {

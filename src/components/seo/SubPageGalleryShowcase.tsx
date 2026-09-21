@@ -544,6 +544,10 @@ export default function SubPageGalleryShowcase({
                       <img
                         src={item.src}
                         alt={item.title}
+                        width={240}
+                        height={64}
+                        loading="lazy"
+                        decoding="async"
                         className="h-16 w-full object-cover rounded opacity-80 group-hover:opacity-100 transition-opacity"
                       />
                       <div className="mt-1.5 px-1 truncate font-mono text-[10.5px] font-semibold text-slate-200">
@@ -599,6 +603,10 @@ export default function SubPageGalleryShowcase({
                 <img
                   src={lightboxItem.src}
                   alt={lightboxItem.title}
+                  width={1920}
+                  height={1080}
+                  loading="lazy"
+                  decoding="async"
                   className="max-h-[80vh] w-auto object-contain rounded-lg shadow-2xl"
                 />
               </div>

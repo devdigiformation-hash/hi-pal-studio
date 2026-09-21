@@ -157,7 +157,11 @@ export default function OpenSourceHeroStage({
                     <div className="relative h-full w-full">
                       <img
                         src={image}
-                        alt={title}
+                        alt={`${title} interface preview`}
+                        width={1200}
+                        height={750}
+                        loading="lazy"
+                        decoding="async"
                         className="h-full w-full object-cover object-top"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#03060C] via-transparent to-transparent opacity-80" />

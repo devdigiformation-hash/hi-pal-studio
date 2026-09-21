@@ -215,10 +215,27 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="mt-5 max-w-[580px] font-body text-[16px] leading-[1.75] text-[var(--text-secondary)] md:text-[18px]"
+            className="answer mt-5 max-w-[580px] font-body text-[16px] leading-[1.75] text-[var(--text-secondary)] md:text-[18px]"
           >
-            DIGI BIZ OS is an autonomous agentic AI business operating system for Windows 10 and 11. It unifies voice control, local neural models, CRM pipelines, automated workflows, and desktop computer-use automation into a single sovereign desktop environment with zero recurring subscription fees.
+            DigiBizOS is a cutting-edge business operating system designed to streamline operations and boost productivity. By leveraging AI-powered tools and automation, businesses can simplify complex tasks and make data-driven decisions.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="summary mt-4 max-w-[580px] rounded-xl border border-white/10 bg-white/[0.03] p-3.5 backdrop-blur-sm"
+          >
+            <div className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-[var(--cyan)] animate-pulse" />
+              <h2 className="font-display text-[12px] font-bold uppercase tracking-wider text-[var(--cyan)]">
+                TL;DR
+              </h2>
+            </div>
+            <p className="mt-1 font-body text-[13.5px] leading-relaxed text-zinc-300">
+              DigiBizOS simplifies business operations using AI-powered tools and automation, enabling data-driven decisions and increased productivity.
+            </p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.92 }}

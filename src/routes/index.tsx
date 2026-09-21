@@ -22,7 +22,7 @@ import PricingPreview from "@/components/home/PricingPreview";
 import FAQSection, { FAQS } from "@/components/home/FAQSection";
 import ExploreHub from "@/components/home/ExploreHub";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
-import { buildMeta, softwareLd, breadcrumbLd, faqLd, webPageLd } from "@/lib/seo";
+import { buildMeta, softwareLd, breadcrumbLd, faqLd, webPageLd, speakableLd } from "@/lib/seo";
 
 const TITLE = "DIGI BIZ OS — AI Desktop Operating System for Windows";
 const DESC =
@@ -50,6 +50,10 @@ export const Route = createFileRoute("/")({
         {
           type: "application/ld+json",
           children: JSON.stringify(webPageLd({ title: TITLE, description: DESC, path: "/" })),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(speakableLd([".answer", ".summary"])),
         },
       ],
     };
