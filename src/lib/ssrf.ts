@@ -61,7 +61,7 @@ export async function safeFetchText(
       redirect: "follow",
       signal: controller.signal,
       headers: {
-        "User-Agent": "Mozilla/5.0 (compatible; DigiWebIntelligence/1.0; +https://digibizos.co.uk/tools/ai-seo-checker)",
+        "User-Agent": "Mozilla/5.0 (compatible; DigiWebIntelligence/1.0; +https://www.digibizos.co.uk/tools/ai-seo-checker)",
         Accept: opts.accept ?? "text/html,application/xhtml+xml,text/plain,application/xml",
       },
     });

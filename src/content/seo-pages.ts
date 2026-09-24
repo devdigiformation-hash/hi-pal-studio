@@ -3161,6 +3161,595 @@ export const SEO_PAGES: SeoPage[] = [
     ],
     accent: "var(--amber)",
   },
+
+  /* ------------------------------------------------------------------ */
+  /* HIGH-INTENT COMMERCIAL DISCOVERY PAGES (2026 SEARCH CLUSTERS)      */
+  /* ------------------------------------------------------------------ */
+  {
+    path: "/ai-crm",
+    group: "intent",
+    eyebrow: "Enterprise AI CRM",
+    h1: "AI CRM Software & Autonomous Business Operations",
+    h1Gradient: "Without Monthly SaaS Fees.",
+    metaTitle: "AI CRM Software for Small Business & Founders | DIGI BIZ OS",
+    metaDescription:
+      "Native offline AI CRM for Windows. Replace HubSpot & Salesforce with a 1-second live dashboard, 1-click order fulfillment, multi-currency ledger, and zero monthly subscriptions.",
+    intro:
+      "Digi CRM is a native, local-first enterprise customer relationship management and business operating suite built into DIGI BIZ OS. It unifies your customer database, deals pipeline, 1-click order fulfillment, and multi-currency ledger on your Windows PC with zero recurring subscription fees.",
+    answers: [
+      {
+        q: "What makes an AI CRM different from traditional CRM software?",
+        a: "Unlike traditional CRMs that act merely as passive databases, an AI CRM actively executes tasks: qualifying inbound leads, drafting personalized quotations, sending WhatsApp payment reminders, and updating accounting ledgers with zero manual data entry.",
+      },
+      {
+        q: "How does DIGI BIZ OS eliminate monthly CRM seat costs?",
+        a: "DIGI BIZ OS is sold under a permanent one-time lifetime license. All customer databases, transaction records, and pipelines run locally in encrypted high-performance SQLite storage on your Windows PC, eliminating recurring per-seat fees entirely.",
+      },
+      {
+        q: "Can I manage multi-currency finances and invoices offline?",
+        a: "Yes. Digi CRM includes a multi-currency ledger with live P&L tracking, automated 1-click invoice generation, and downloadable all-in-one audit reports (Word, PDF, Excel) accessible 100% offline.",
+      },
+    ],
+    capabilities: [
+      {
+        title: "Single Knowledge Base Context",
+        body: "Input your business profile once. Every email, WhatsApp template, invoice, and agent action automatically reflects your brand tone and service details.",
+      },
+      {
+        title: "1-Second Live Executive Dashboard",
+        body: "Real-time command center refreshed every second. Displays today and month revenue, active orders, open tickets, pipeline value, and daily briefing reports.",
+      },
+      {
+        title: "1-Click Trigger Action Buttons",
+        body: "Execute full fulfillment workflows with zero typing. Click Order Received, Complete, Send Invoice, or Overdue Notice to generate tokenized client communications.",
+      },
+      {
+        title: "Multi-Currency Ledger & Analytics",
+        body: "Track accounts receivable, taxes collected, and six-month income vs. expense analytics with automated local database backups.",
+      },
+      {
+        title: "100% Offline Data Sovereignty",
+        body: "Your sensitive client contracts and contact records never upload to third-party cloud servers without your explicit permission.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Why Pay $300/Month Per Seat for Cloud CRMs?",
+        body: "Legacy cloud CRM platforms (Salesforce, HubSpot, Zoho) charge steep per-seat fees and lock essential features behind enterprise tiers. DIGI BIZ OS delivers full operational sovereignty for a single £50 lifetime payment.",
+        bullets: [
+          "Zero recurring monthly software seat fees or surprise price hikes.",
+          "Full local database encryption protecting client contact details.",
+          "Seamless hand-off to WhatsApp AI agents and autonomous lead generation engines.",
+        ],
+      },
+      {
+        heading: "Autonomous Lead-to-Fulfillment Pipeline",
+        body: "Capture leads from web forms, WhatsApp chats, or outbound lead hunting. Move deals through visual Kanban stages, score purchase intent, and trigger automatic follow-ups.",
+      },
+      {
+        heading: "Full Financial Command on Your Local Desktop",
+        body: "Manage client ledgers, track invoices, monitor gross margin, and generate exportable tax summaries in one unified desktop view.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I import existing contacts from Excel or CSV?",
+        a: "Yes. Digi CRM provides 1-click bulk CSV and Excel import tools to migrate existing customer records, pipeline deals, and contact tags seamlessly.",
+      },
+      {
+        q: "Does Digi CRM require an active internet connection?",
+        a: "No. Core customer management, invoicing, pipeline tracking, and ledger accounting function 100% offline on your Windows machine.",
+      },
+      {
+        q: "How does Digi CRM connect with WhatsApp?",
+        a: "Digi CRM links directly with the Digi WhatsApp module. Inbound WhatsApp customer chats automatically create or update client records in the CRM.",
+      },
+      {
+        q: "Can I customize invoice templates with my company logo?",
+        a: "Yes. Your business Knowledge Base stores your logo, VAT/tax ID, payment details, and custom terms, applying them automatically to every generated invoice.",
+      },
+    ],
+    links: [
+      { label: "Digi CRM module architecture", to: "/modules/crm" },
+      { label: "WhatsApp AI sales agent", to: "/whatsapp-ai-agent" },
+      { label: "B2B lead generation tool", to: "/ai-lead-generation" },
+      ...CTA_CORE,
+    ],
+    image: img(
+      osCrmDash,
+      "Digi CRM executive dashboard and pipeline manager in DIGI BIZ OS",
+      "Digi CRM: 1-second live dashboard, deal pipelines, and automated financial ledger.",
+    ),
+    accent: "#10B981",
+  },
+  {
+    path: "/whatsapp-ai-agent",
+    group: "intent",
+    eyebrow: "Autonomous WhatsApp Sales",
+    h1: "WhatsApp AI Agent & Customer Follow-Up Automation",
+    h1Gradient: "24/7 Sales On Autopilot.",
+    metaTitle: "WhatsApp AI Agent & Sales Automation for Business | DIGI BIZ OS",
+    metaDescription:
+      "Autonomous WhatsApp AI sales agent for Windows. Instant QR code pairing, 24/7 automated inquiry handling, multi-step customer follow-ups, and catalog sales with zero per-message cloud fees.",
+    intro:
+      "Digi WhatsApp transforms your business WhatsApp into an autonomous 24/7 sales representative. Connect in seconds via local desktop QR pairing to answer customer questions, qualify buying intent, send catalog links, and execute follow-ups around the clock with zero per-message cloud fees.",
+    answers: [
+      {
+        q: "What is a WhatsApp AI Agent?",
+        a: "A WhatsApp AI Agent is an autonomous conversational operator that connects to your WhatsApp account to answer inquiries, quote pricing, recommend products, and book appointments 24/7 in natural human-like language.",
+      },
+      {
+        q: "How does QR code pairing work in DIGI BIZ OS?",
+        a: "You scan an on-screen QR code from your mobile WhatsApp app just like WhatsApp Web. The agent runs directly from your Windows desktop with zero cloud API configuration or per-conversation message fees.",
+      },
+      {
+        q: "Can the agent qualify leads and update the CRM automatically?",
+        a: "Yes. When a new prospect messages, the agent analyzes their intent, logs their contact info into Digi CRM, tags their buying readiness, and notifies you when human intervention is needed.",
+      },
+    ],
+    capabilities: [
+      {
+        title: "Instant Web QR Code Pairing",
+        body: "Pair your business phone number in 5 seconds using standard WhatsApp Web protocols. No complicated Meta Cloud API approvals or verified business manager delays.",
+      },
+      {
+        title: "Intelligent Intent Classification",
+        body: "Distinguishes between casual inquiries, pricing requests, urgent support tickets, and high-value orders to trigger the appropriate automated workflow.",
+      },
+      {
+        title: "Autonomous Multi-Step Follow-Up Sequences",
+        body: "Automatically follows up with prospects who requested a quote or abandoned their order after 2 hours, 24 hours, or 3 days.",
+      },
+      {
+        title: "Product Catalog & Pricing Delivery",
+        body: "Pulls product specifications, images, and pricing directly from your Knowledge Base and delivers them instantly in the chat.",
+      },
+      {
+        title: "Zero Per-Message Fees",
+        body: "Because it runs locally via your paired desktop session, you pay zero recurring per-conversation fees to third-party message brokers.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Never Miss a High-Value Lead While You Sleep",
+        body: "Speed to lead determines conversion rates. Research shows responding within 5 minutes increases conversion odds by 9x. Digi WhatsApp ensures every prospective buyer receives an immediate, intelligent response 24 hours a day.",
+        bullets: [
+          "Instant sub-3-second responses to new incoming chats.",
+          "Full conversation context retained across returning customer visits.",
+          "Seamless one-click handover to human agents for final closing.",
+        ],
+      },
+      {
+        heading: "Zero Cloud API Lock-in or Recurring Costs",
+        body: "Unlike cloud chatbot platforms that bill $0.05 to $0.15 per conversation, DIGI BIZ OS leverages local Windows automation to keep messaging costs at absolute zero.",
+      },
+      {
+        heading: "Trained on Your Specific Business Knowledge Base",
+        body: "The agent answers customer questions using your exact price lists, shipping rules, warranty policies, and company FAQs stored in your master context profile.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will my WhatsApp number get banned for using this agent?",
+        a: "Digi WhatsApp uses natural human-like response cadences, randomized typing pauses, and personalized dynamic phrasing rather than rigid spam blasts, adhering to safe messaging practices.",
+      },
+      {
+        q: "Can I jump in and take over a conversation manually?",
+        a: "Yes. You can view the live chat on your phone or desktop at any time. Sending a manual message automatically pauses the AI agent for that customer.",
+      },
+      {
+        q: "Does it support multiple languages?",
+        a: "Yes. The AI agent understands and responds in over 50 languages, including English, Urdu, Arabic, Spanish, French, and German.",
+      },
+      {
+        q: "Can it send images, invoices, and PDF documents?",
+        a: "Yes. The agent can attach digital brochures, generated invoices, and product imagery directly into the WhatsApp thread.",
+      },
+    ],
+    links: [
+      { label: "Digi WhatsApp module details", to: "/modules/whatsapp" },
+      { label: "AI CRM software", to: "/ai-crm" },
+      { label: "Voice AI assistant", to: "/voice-ai" },
+      ...CTA_CORE,
+    ],
+    image: img(
+      osWa,
+      "Digi WhatsApp autonomous AI agent and QR pairing in DIGI BIZ OS",
+      "Digi WhatsApp: Automated 24/7 lead qualification, multi-step follow-ups, and catalog sales.",
+    ),
+    accent: "#25D366",
+  },
+  {
+    path: "/ai-lead-generation",
+    group: "intent",
+    eyebrow: "B2B Lead Hunting",
+    h1: "AI Lead Generation & Autonomous B2B Lead Hunting",
+    h1Gradient: "Find High-Value Clients Locally.",
+    metaTitle: "AI Lead Generation Software & Autonomous Lead Finder | DIGI BIZ OS",
+    metaDescription:
+      "Discover high-intent B2B leads autonomously on Windows. Scrape verified business contacts, email addresses, phone numbers, and company profiles with zero per-lead credit costs.",
+    intro:
+      "Digi Intelligence features an autonomous B2B Lead Hunting engine that discovers high-value business prospects on autopilot. Search by industry niche, city, or keyword to extract verified business names, decision-maker contacts, verified email addresses, phone numbers, and social links directly into your local CRM.",
+    answers: [
+      {
+        q: "How does AI lead hunting work in DIGI BIZ OS?",
+        a: "The Lead Hunting engine searches business directories, local maps, public registry records, and industry databases, extracting key decision-maker contact details, deduplicating records, and scoring buyer intent.",
+      },
+      {
+        q: "What sources does the lead generator search?",
+        a: "It extracts data from Google Maps, corporate directories, industry registries, LinkedIn public profiles, and website metadata across any targeted geographic region.",
+      },
+      {
+        q: "How are extracted leads transferred into the CRM?",
+        a: "With a single click, all verified leads are ingested into Digi CRM with custom pipeline tags, ready for automated WhatsApp or email outreach campaigns.",
+      },
+    ],
+    capabilities: [
+      {
+        title: "Multi-Source Niche Scraping",
+        body: "Target any vertical (e.g. real estate agencies, dentists, e-commerce brands, roofing contractors) across specific countries, states, or postcodes.",
+      },
+      {
+        title: "Contact Enrichment & Syntax Verification",
+        body: "Automatically validates email deliverability, parses WhatsApp-compatible phone numbers, and detects executive roles.",
+      },
+      {
+        title: "Predictive Buyer Intent Scoring",
+        body: "Analyzes digital footprint, website update recency, and technology stack signals to prioritize leads with the highest readiness to buy.",
+      },
+      {
+        title: "1-Click CRM Ingestion & Deduplication",
+        body: "Prevents duplicate outreach by cross-referencing existing client ledgers and populating custom deal stages instantly.",
+      },
+      {
+        title: "Zero Per-Lead Credit Costs",
+        body: "Eliminates monthly subscriptions to legacy databases (Apollo, ZoomInfo, Hunter.io) that charge $0.20 to $1.00 per exported contact.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Stop Paying Hundreds of Dollars for Expired Lead Databases",
+        body: "Static B2B databases are often outdated with 30%+ bounce rates. DIGI BIZ OS scrapes live, real-time public data directly from the web, ensuring freshly verified contact information.",
+        bullets: [
+          "Export unlimited leads without monthly credit caps or export limits.",
+          "Enrich profiles with social links, estimated company size, and CMS platform.",
+          "Direct pipeline bridge to WhatsApp auto-messaging and personalized email drafting.",
+        ],
+      },
+      {
+        heading: "Hyper-Targeted Geographic & Industry Filtering",
+        body: "Whether you need B2B service clients in London, wholesale distributors in California, or online retailers across Europe, configure your search filters in seconds.",
+      },
+      {
+        heading: "From Discovery to Outreach in One Workspace",
+        body: "No need to export CSVs and juggle spreadsheets. Leads flow directly into Digi CRM, where AI agents can initiate personalized multi-step follow-ups.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is web scraping for business leads legal?",
+        a: "Yes. DIGI BIZ OS extracts only publicly available business contact information (company phone numbers, public inquiry emails, and business addresses) in compliance with public web indexing regulations.",
+      },
+      {
+        q: "Can I export leads to CSV or Excel?",
+        a: "Yes. You can export complete lead lists to CSV, XLSX, or JSON for use in external email tools or cold calling software.",
+      },
+      {
+        q: "How fast does the lead hunting engine scrape?",
+        a: "Depending on your internet speed and query depth, the engine extracts between 100 to 500 verified business profiles in just a few minutes.",
+      },
+      {
+        q: "Does it work for international markets?",
+        a: "Yes. The lead finder operates globally across the UK, USA, Canada, Australia, UAE, Pakistan, India, Europe, and Latin America.",
+      },
+    ],
+    links: [
+      { label: "Digi Intelligence engine details", to: "/modules/intelligence" },
+      { label: "AI CRM and pipeline manager", to: "/ai-crm" },
+      { label: "WhatsApp AI sales agent", to: "/whatsapp-ai-agent" },
+      ...CTA_CORE,
+    ],
+    image: img(
+      osIntel,
+      "Digi Intelligence B2B lead hunting and company extraction engine",
+      "Digi Intelligence: Autonomous B2B lead generation, contact validation, and CRM ingestion.",
+    ),
+    accent: "#3B82F6",
+  },
+  {
+    path: "/ai-product-research",
+    group: "intent",
+    eyebrow: "eCommerce Intelligence",
+    h1: "AI Product Research & eCommerce Product Hunting",
+    h1Gradient: "Find Winning Products Faster.",
+    metaTitle: "AI Product Research & eCommerce Product Hunting Software | DIGI BIZ OS",
+    metaDescription:
+      "Autonomous product hunting software for Amazon, Shopify & AliExpress. Analyze sales velocity, calculate net profit margins, assess competitor saturation, and find high-margin inventory.",
+    intro:
+      "Digi Intelligence includes a dedicated eCommerce Product Hunting module that identifies breakout product trends before they become saturated. Scrape real-time sales velocity, calculate landed costs and net profit margins, analyze competitor customer reviews, and find reliable manufacturers on your Windows PC.",
+    answers: [
+      {
+        q: "What is AI product hunting software?",
+        a: "AI product hunting software continuously tracks marketplace sales signals, search volume velocity, and pricing dynamics to uncover profitable products with high demand and low competitor saturation.",
+      },
+      {
+        q: "Which eCommerce marketplaces can DIGI BIZ OS analyze?",
+        a: "It monitors product metrics across Amazon, Shopify stores, AliExpress, TikTok Shop, and Google Shopping trends.",
+      },
+      {
+        q: "How does the profit margin calculation engine work?",
+        a: "You enter wholesale pricing and estimated shipping fees. The software automatically models marketplace commissions, ad spend buffers, packaging costs, and net landed margins.",
+      },
+    ],
+    capabilities: [
+      {
+        title: "Multi-Marketplace Velocity Scraping",
+        body: "Track sales velocity, review growth rates, and bestseller rank changes across Amazon, AliExpress, and trending Shopify stores.",
+      },
+      {
+        title: "Competitor Review Sentiment Mining",
+        body: "Analyzes thousands of competitor customer reviews to pinpoint common product flaws, return reasons, and feature improvements you can exploit.",
+      },
+      {
+        title: "Net Landed Cost & Margin Calculator",
+        body: "Accurately calculates gross profit, ad expenditure allowances, shipping overhead, and net margin before you invest inventory capital.",
+      },
+      {
+        title: "Supplier Matching & RFQ Generation",
+        body: "Automatically drafts tailored Request for Quotation (RFQ) messages for suppliers and compares minimum order quantities (MOQs).",
+      },
+      {
+        title: "Zero Recurring Subscription Fees",
+        body: "Replaces $100+/mo tools like Helium 10, Jungle Scout, or Sell The Trend with a one-time desktop license.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Eliminate $1,500/Year in eCommerce Research Tool Fees",
+        body: "Most Amazon and Shopify sellers waste hundreds of dollars each month on software subscriptions before making their first sale. DIGI BIZ OS provides lifetime product discovery tools with zero recurring costs.",
+        bullets: [
+          "Uncover high-margin private label and dropshipping product opportunities.",
+          "Identify unaddressed consumer complaints in competitor product listings.",
+          "Model accurate return-on-ad-spend (ROAS) targets before sourcing.",
+        ],
+      },
+      {
+        heading: "Uncover High-Demand, Low-Competition Niches",
+        body: "Avoid race-to-the-bottom price wars. The intelligence engine identifies emerging product niches with strong review momentum and minimal established brand dominance.",
+      },
+      {
+        heading: "Autonomous Sourcing and Listing Creation",
+        body: "Once a winning product is identified, use built-in Studio and Marketing agents to generate high-converting product descriptions, ad copy, and video scripts.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I use this for Amazon FBA and dropshipping?",
+        a: "Yes. DIGI BIZ OS is engineered for Amazon FBA sellers, Shopify dropshippers, TikTok Shop merchants, and private label brand builders.",
+      },
+      {
+        q: "How does it detect fake reviews on competitor products?",
+        a: "The engine analyzes review submission velocity, language patterns, and unverified purchase ratios to estimate true listing sentiment.",
+      },
+      {
+        q: "Can I track price changes on competitor listings over time?",
+        a: "Yes. You can bookmark specific ASINs or URLs to monitor historical price fluctuations, stock levels, and promotional discounts.",
+      },
+      {
+        q: "Does it help find factory suppliers?",
+        a: "Yes. The system suggests potential factory suppliers and drafts professional sourcing RFQ messages with trade specifications.",
+      },
+    ],
+    links: [
+      { label: "Digi Intelligence overview", to: "/modules/intelligence" },
+      { label: "B2B lead generation", to: "/ai-lead-generation" },
+      { label: "AI SEO audit tool", to: "/ai-seo-audit" },
+      ...CTA_CORE,
+    ],
+    image: img(
+      osMain,
+      "Digi Intelligence eCommerce product research and profit margin calculator",
+      "Digi Intelligence: Marketplace velocity tracking, review sentiment mining, and margin calculation.",
+    ),
+    accent: "#F59E0B",
+  },
+  {
+    path: "/ai-seo-audit",
+    group: "intent",
+    eyebrow: "Technical SEO & AEO",
+    h1: "AI SEO Audit Tool & Technical Website Intelligence",
+    h1Gradient: "Rank in Google & AI Overviews.",
+    metaTitle: "AI SEO Audit Tool & Technical Website Crawler | DIGI BIZ OS",
+    metaDescription:
+      "Run unlimited technical SEO and AEO website audits locally on Windows. Detect broken canonicals, 404 links, schema defects, and Core Web Vitals issues with zero monthly crawler subscriptions.",
+    intro:
+      "Digi Intelligence includes a professional Technical SEO & AEO (Answer Engine Optimization) Audit Suite. Crawl entire domains locally, identify canonical conflicts, validate Schema.org JSON-LD structured data, inspect Core Web Vitals metrics, and optimize your pages to appear in Google AI Overviews and Perplexity search answers.",
+    answers: [
+      {
+        q: "What does an AI SEO audit check?",
+        a: "An AI SEO audit analyzes technical crawlability (HTTP status, robots.txt, sitemaps), indexing signals (canonical tags, meta robots, redirects), structured data (Schema.org JSON-LD), on-page semantics (H1-H3 hierarchy, image alt attributes), and AEO direct answer readiness.",
+      },
+      {
+        q: "How does DIGI BIZ OS optimize for Google AI Overviews (AEO)?",
+        a: "It verifies that key pages contain self-contained direct answer paragraphs (`.answer`), executive summaries (`.summary`), and matching SpeakableSpecification schema so AI answer engines can parse and cite your content.",
+      },
+      {
+        q: "Is there an audit crawl limit like Screaming Frog or Ahrefs?",
+        a: "No. The crawler runs locally on your Windows hardware. There are zero artificial URL crawl caps, monthly limits, or per-project fees.",
+      },
+    ],
+    capabilities: [
+      {
+        title: "Unlimited Local Domain Crawling",
+        body: "Crawl entire client websites locally at high speeds without paying for expensive cloud crawler seats or subscription renewals.",
+      },
+      {
+        title: "Canonical & Redirect Loop Inspector",
+        body: "Instantly flags canonical domain mismatches (apex vs. www), redirect chains (301/308 loops), and soft 404 response errors.",
+      },
+      {
+        title: "Schema.org JSON-LD Semantic Validator",
+        body: "Validates Organization, WebSite, SoftwareApplication, Product, BreadcrumbList, and FAQPage schemas against Google Rich Results standards.",
+      },
+      {
+        title: "AEO & Generative Search Readiness",
+        body: "Scans content for concise factual definition blocks, bulleted summaries, and speakable selectors optimized for Perplexity and ChatGPT search.",
+      },
+      {
+        title: "Core Web Vitals & DOM Weight Diagnostics",
+        body: "Audits image dimensions, layout shift risks (CLS), HTML payload weight, and render-blocking scripts across desktop and mobile viewports.",
+      },
+    ],
+    sections: [
+      {
+        heading: "A Full Screaming Frog Alternative with Local AI Remediation",
+        body: "Traditional desktop crawlers identify problems but leave the fixing to you. DIGI BIZ OS pairs its technical crawler with built-in Digi Code agents to generate the exact code fixes for your site.",
+        bullets: [
+          "Zero URL crawl limits or monthly license renewals.",
+          "Automated CSV and PDF audit reporting for client deliverables.",
+          "Continuous health monitoring scripts for ongoing website compliance.",
+        ],
+      },
+      {
+        heading: "Engineered for Modern AI Search (AEO & GEO)",
+        body: "Search is evolving from ten blue links to AI synthesis. DIGI BIZ OS checks your content structure to ensure search bots can easily extract direct answers and quote your brand as an authority.",
+      },
+      {
+        heading: "Full Technical Health Verification in Seconds",
+        body: "Identify missing meta descriptions, duplicate title tags, orphan URLs, broken external links, and uncompressed assets in one visual dashboard.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I audit client websites if I run an agency?",
+        a: "Yes. You can audit any public website, generate white-label audit reports, and provide technical remediation recommendations for client accounts.",
+      },
+      {
+        q: "Does it validate XML sitemaps and robots.txt?",
+        a: "Yes. It checks sitemap XML syntax, ensures all listed URLs return HTTP 200, and verifies robots.txt crawl permissions for Googlebot and Bingbot.",
+      },
+      {
+        q: "Can the crawler render JavaScript-heavy SPA applications?",
+        a: "Yes. The crawler includes full headless browser rendering capabilities to inspect React, Vue, Next.js, and TanStack Start applications.",
+      },
+      {
+        q: "How does it compare to cloud tools like Ahrefs and Semrush?",
+        a: "While Ahrefs and Semrush excel at external backlink databases, DIGI BIZ OS provides deeper, unlimited on-site technical crawling and AI answer optimization at zero monthly cost.",
+      },
+    ],
+    links: [
+      { label: "Free Open SEO Spider tool", to: "/open-source/seo-spider" },
+      { label: "Digi Intelligence suite", to: "/modules/intelligence" },
+      { label: "AI CRM software", to: "/ai-crm" },
+      ...CTA_CORE,
+    ],
+    image: img(
+      osIntel,
+      "Digi Intelligence technical SEO and AEO audit crawler dashboard",
+      "Digi Intelligence: Unlimited local crawling, schema validation, and AEO optimization.",
+    ),
+    accent: "#8B5CF6",
+  },
+  {
+    path: "/ai-tools-for-business",
+    group: "intent",
+    eyebrow: "Entrepreneur AI Workstation",
+    h1: "AI Tools for Small Business, Founders & Agencies",
+    h1Gradient: "One App. Zero Subscriptions.",
+    metaTitle: "AI Tools for Small Business, Founders & Agencies (2026) | DIGI BIZ OS",
+    metaDescription:
+      "Discover the essential AI business tools for entrepreneurs and agencies: voice assistant, offline CRM, WhatsApp sales agent, lead hunting, product research, and code workspaces in one desktop app.",
+    intro:
+      "DIGI BIZ OS is the all-in-one AI business operating system engineered specifically for founders, small business owners, agencies, and freelancers. Consolidate disconnected $50/month software subscriptions into a single unified Windows desktop workstation with zero recurring software fees.",
+    answers: [
+      {
+        q: "What AI tools do small businesses need most in 2026?",
+        a: "Small businesses need an integrated stack: a voice-controlled desktop assistant, an offline customer CRM, an automated WhatsApp sales agent, a B2B lead generator, and workflow automation tools that work together seamlessly.",
+      },
+      {
+        q: "How does DIGI BIZ OS replace a $5,000/year SaaS stack?",
+        a: "By combining CRM, marketing campaigns, WhatsApp automation, B2B lead generation, media editing, and coding workspaces into a single £50 lifetime purchase, businesses eliminate recurring monthly per-seat fees entirely.",
+      },
+      {
+        q: "Is coding or technical expertise required to use DIGI BIZ OS?",
+        a: "No. The system is voice-first and visual. Speak natural instructions to execute complex workflows, or use intuitive 1-click buttons to manage sales, leads, and orders.",
+      },
+    ],
+    capabilities: [
+      {
+        title: "11 Core Business Modules in One Window",
+        body: "CRM, Studio, AI Brain, Code, CLI, MCP Switchboard, Connectors, Models, Marketing, Live Tracking, and Document Vault all in one place.",
+      },
+      {
+        title: "100% Offline Local Model Execution",
+        body: "Run DeepSeek, Llama, and Mistral models on your own PC hardware with zero cloud API token fees and complete data privacy.",
+      },
+      {
+        title: "Autonomous Multi-Agent Task Delegation",
+        body: "Delegate complex multi-step workflows to specialized AI agents that write code, research markets, draft documents, and verify results.",
+      },
+      {
+        title: "Multi-Currency Financial Ledger",
+        body: "Track invoices, monitor cash flow, log expenses, and export professional accounting summaries with zero monthly bookkeeping fees.",
+      },
+      {
+        title: "Lifetime Ownership License",
+        body: "Pay once, own forever. Includes software installation, five custom business workflows, and 12 months of software updates.",
+      },
+    ],
+    sections: [
+      {
+        heading: "The $5,000/Year SaaS Stack vs. DIGI BIZ OS",
+        body: "A typical small business pays for Salesforce ($150/mo), Zapier ($60/mo), Apollo ($100/mo), ChatGPT Team ($60/mo), and video tools ($40/mo) — totaling over $5,000 every year. DIGI BIZ OS delivers these capabilities for a single £50 lifetime payment.",
+        bullets: [
+          "Eliminate 5+ separate monthly subscriptions and login portals.",
+          "Keep all client data, deal records, and financial books 100% private.",
+          "Single unified desktop window with instant local execution.",
+        ],
+      },
+      {
+        heading: "Tailored For High-Impact Business Roles",
+        body: "Whether you are a solo entrepreneur wearing every hat, an agency managing multiple client retainers, or an eCommerce store fulfilling daily orders, DIGI BIZ OS adapts to your business model.",
+      },
+      {
+        heading: "Total Data Privacy on Your Own Hardware",
+        body: "Cloud tools often train models on your uploaded files. DIGI BIZ OS guarantees total data sovereignty: your proprietary documents, client databases, and strategy notes remain strictly on your local PC.",
+      },
+    ],
+    faq: [
+      {
+        q: "What are the minimum PC hardware requirements?",
+        a: "Windows 10 or 11 (64-bit), 8 GB RAM (16 GB recommended), and 10 GB free disk space. A modern dedicated GPU enables faster local AI model execution.",
+      },
+      {
+        q: "Can I connect my own cloud AI API keys?",
+        a: "Yes. Connect OpenAI, Anthropic, DeepSeek, or OpenRouter keys to access frontier cloud reasoning models at direct wholesale token pricing.",
+      },
+      {
+        q: "What support is provided after purchase?",
+        a: "Every purchase includes setup documentation and direct engineer support via WhatsApp and email to configure your business knowledge base.",
+      },
+      {
+        q: "Is there a money-back guarantee?",
+        a: "Yes. DIGI BIZ OS is backed by a 14-day money-back guarantee if the software does not meet your business operational needs.",
+      },
+    ],
+    links: [
+      { label: "AI CRM software", to: "/ai-crm" },
+      { label: "WhatsApp AI agent", to: "/whatsapp-ai-agent" },
+      { label: "B2B lead generation", to: "/ai-lead-generation" },
+      { label: "AI SEO audit tool", to: "/ai-seo-audit" },
+      { label: "One-time lifetime pricing", to: "/pricing" },
+      ...CTA_CORE,
+    ],
+    image: img(
+      osMain,
+      "DIGI BIZ OS all-in-one AI business operating system and workstation",
+      "DIGI BIZ OS: Complete AI business workstation replacing disconnected monthly SaaS stacks.",
+    ),
+    accent: "#06B6D4",
+  },
+
 ];
 
 export const SEO_PAGE_BY_PATH: Record<string, SeoPage> = Object.fromEntries(

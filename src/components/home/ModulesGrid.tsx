@@ -20,6 +20,7 @@ import GlassCard from "@/components/GlassCard";
 import GradientText from "@/components/GradientText";
 import MonoBadge from "@/components/MonoBadge";
 import { Link } from "@tanstack/react-router";
+import SmartLink from "@/components/SmartLink";
 
 interface Module {
   icon: LucideIcon;
@@ -270,6 +271,40 @@ export default function ModulesGrid() {
               <div key={m.title}>{CardContent}</div>
             );
           })}
+        </div>
+
+        {/* HIGH-INTENT COMMERCIAL DISCOVERY SOLUTIONS */}
+        <div className="mt-12 rounded-2xl border border-white/10 bg-white/[0.02] p-6 backdrop-blur-xl">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-4">
+            <div>
+              <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-[var(--cyan)]">High-Intent Business Solutions</span>
+              <h4 className="mt-1 font-display text-[17px] font-bold text-white">Dedicated AI Workstations for Growing Businesses</h4>
+            </div>
+            <Link to="/features" className="inline-flex items-center gap-1.5 font-mono text-[12px] text-[var(--cyan)] hover:underline">
+              <span>View All 50+ Solutions</span>
+              <ArrowRight size={13} />
+            </Link>
+          </div>
+          <div className="mt-4 flex flex-wrap gap-2.5">
+            <SmartLink to="/ai-crm" className="rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1.5 font-body text-[12.5px] font-semibold text-emerald-300 hover:bg-emerald-500/20 transition-all">
+              AI CRM Software →
+            </SmartLink>
+            <SmartLink to="/whatsapp-ai-agent" className="rounded-lg border border-green-500/30 bg-green-500/10 px-3.5 py-1.5 font-body text-[12.5px] font-semibold text-green-300 hover:bg-green-500/20 transition-all">
+              WhatsApp AI Agent →
+            </SmartLink>
+            <SmartLink to="/ai-lead-generation" className="rounded-lg border border-blue-500/30 bg-blue-500/10 px-3.5 py-1.5 font-body text-[12.5px] font-semibold text-blue-300 hover:bg-blue-500/20 transition-all">
+              AI Lead Generation →
+            </SmartLink>
+            <SmartLink to="/ai-product-research" className="rounded-lg border border-amber-500/30 bg-amber-500/10 px-3.5 py-1.5 font-body text-[12.5px] font-semibold text-amber-300 hover:bg-amber-500/20 transition-all">
+              AI Product Research →
+            </SmartLink>
+            <SmartLink to="/ai-seo-audit" className="rounded-lg border border-purple-500/30 bg-purple-500/10 px-3.5 py-1.5 font-body text-[12.5px] font-semibold text-purple-300 hover:bg-purple-500/20 transition-all">
+              AI SEO Audit Tool →
+            </SmartLink>
+            <SmartLink to="/ai-tools-for-business" className="rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-3.5 py-1.5 font-body text-[12.5px] font-semibold text-cyan-300 hover:bg-cyan-500/20 transition-all">
+              AI Tools for Small Business →
+            </SmartLink>
+          </div>
         </div>
       </div>
     </SectionWrapper>

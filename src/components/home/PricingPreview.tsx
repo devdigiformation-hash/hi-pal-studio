@@ -113,8 +113,9 @@ export default function PricingPreview() {
 
         <div className="mt-14 grid grid-cols-1 items-start gap-6 lg:grid-cols-3">
           {TIERS.map((plan, i) => {
-            const gbp = plans[plan.id].gbp;
-            const compareGbp = plans[plan.id].compareGbp ?? plan.compareGbp;
+            const planPrices = plans[plan.id];
+            const gbp = planPrices.gbp;
+            const compareGbp = planPrices.compareGbp ?? plan.compareGbp;
             return (
             <div key={plan.name} className={`reveal-item delay-${i + 1}`}>
               <GlassCard
@@ -135,13 +136,13 @@ export default function PricingPreview() {
                     className="font-display text-[44px] font-bold leading-none"
                     style={{ color: plan.accent }}
                   >
-                    {formatPrice(gbp, code)}
+                    {formatPrice(gbp, code, planPrices.pkr)}
                   </span>
                   <span className="font-body text-[13px] text-[var(--text-muted)]">one-time</span>
                 </div>
                 <div className="mt-2 flex items-center gap-2">
                   <span className="font-body text-[14px] text-[var(--text-muted)] line-through">
-                    {formatPrice(compareGbp, code)}
+                    {formatPrice(compareGbp, code, planPrices.comparePkr)}
                   </span>
                   <span
                     className="rounded-full border px-2 py-0.5 font-mono text-[10.5px] uppercase tracking-[0.12em]"
@@ -152,7 +153,7 @@ export default function PricingPreview() {
                 </div>
                 {code !== "PKR" ? (
                   <div className="mt-1.5 font-mono text-[12px] text-[var(--text-muted)]">
-                    ≈ {formatPrice(gbp, "PKR")} · ${formatPrice(gbp, "USD").slice(1)}
+                    ≈ {formatPrice(gbp, "PKR", planPrices.pkr)} · ${formatPrice(gbp, "USD").slice(1)}
                   </div>
                 ) : null}
                 <p className="mt-3 font-body text-[14px] text-[var(--text-secondary)]">

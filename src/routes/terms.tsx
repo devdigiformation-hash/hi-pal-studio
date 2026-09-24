@@ -15,7 +15,7 @@ export const Route = createFileRoute("/terms")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://digibizos.co.uk/terms" }],
+    links: [{ rel: "canonical", href: "https://www.digibizos.co.uk/terms" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -23,8 +23,8 @@ export const Route = createFileRoute("/terms")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://digibizos.co.uk" },
-            { "@type": "ListItem", position: 2, name: "Terms & Conditions", item: "https://digibizos.co.uk/terms" },
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.digibizos.co.uk" },
+            { "@type": "ListItem", position: 2, name: "Terms & Conditions", item: "https://www.digibizos.co.uk/terms" },
           ],
         }),
       },

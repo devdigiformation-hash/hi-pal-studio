@@ -30,7 +30,10 @@ export function convertFromGbp(gbp: number, code: string) {
   return Math.round(raw / c.round) * c.round;
 }
 
-export function formatPrice(gbp: number, code: string) {
+export function formatPrice(gbp: number, code: string, pkrOverride?: number) {
+  if (code === "PKR" && typeof pkrOverride === "number") {
+    return `Rs ${pkrOverride.toLocaleString("en-US")}`;
+  }
   const c = getCurrency(code);
   return `${c.symbol}${convertFromGbp(gbp, code).toLocaleString("en-US")}`;
 }

@@ -37,8 +37,8 @@ export const Route = createFileRoute("/models/$slug")({
             "@type": "TechArticle",
             headline: mod.metaTitle,
             description: mod.metaDescription,
-            url: `https://digibizos.co.uk${path}`,
-            mainEntityOfPage: `https://digibizos.co.uk${path}`,
+            url: `https://www.digibizos.co.uk${path}`,
+            mainEntityOfPage: `https://www.digibizos.co.uk${path}`,
             inLanguage: "en-GB",
             about: {
               "@type": "Thing",
@@ -48,10 +48,10 @@ export const Route = createFileRoute("/models/$slug")({
             publisher: {
               "@type": "Organization",
               name: "DIGI BIZ OS",
-              url: "https://digibizos.co.uk",
+              url: "https://www.digibizos.co.uk",
               logo: {
                 "@type": "ImageObject",
-                url: "https://digibizos.co.uk/logo-512.png",
+                url: "https://www.digibizos.co.uk/logo-512.png",
               },
             },
           }),

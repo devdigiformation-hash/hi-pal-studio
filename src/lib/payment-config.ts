@@ -24,7 +24,7 @@ export const PLANS: Record<PlanId, Plan> = {
     name: "DIGI BIZ OS — Lifetime Access",
     badge: "Desktop App · Gen 2",
     blurb: "Pay once. Own DIGI BIZ OS for life. 100% offline sovereignty with zero monthly fees.",
-    pricePkr: 18000,
+    pricePkr: 14900,
     priceUsd: 64,
     priceGbp: 50,
     compareGbp: 69,
@@ -119,7 +119,7 @@ export type PriceSet = {
 // Public international price set — the safe default the client renders before (or
 // without) a server response. Never contains the Pakistan numbers.
 export const INTL_PRICES: Record<PlanId, PriceSet> = {
-  lifetime: { gbp: 49, pkr: 17640, usd: 61, compareGbp: 69, comparePkr: 25000, compareUsd: 88 },
+  lifetime: { gbp: 49, pkr: 14900, usd: 61, compareGbp: 69, comparePkr: 25000, compareUsd: 88 },
   custom_build: { gbp: 79, pkr: 28440, usd: 99, compareGbp: 119, comparePkr: 42000, compareUsd: 149 },
   source_code: { gbp: 199, pkr: 71640, usd: 249, compareGbp: 279, comparePkr: 100000, compareUsd: 349 },
 };

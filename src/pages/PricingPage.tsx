@@ -125,7 +125,7 @@ export default function PricingPage() {
         eyebrow="Pricing"
         title="DIGI BIZ OS Pricing —"
         gradientTitle="Lifetime Licences"
-        subtitle={`Three clear packages — ${formatPrice(plans.lifetime.gbp, code)} lifetime access, ${formatPrice(plans.custom_build.gbp, code)} done-for-you software setup with 5 custom business workflows, or ${formatPrice(plans.source_code.gbp, code)} full source code.`}
+        subtitle={`Three clear packages — ${formatPrice(plans.lifetime.gbp, code, plans.lifetime.pkr)} lifetime access, ${formatPrice(plans.custom_build.gbp, code, plans.custom_build.pkr)} done-for-you software setup with 5 custom business workflows, or ${formatPrice(plans.source_code.gbp, code, plans.source_code.pkr)} full source code.`}
         height="min-h-[50vh]"
       />
 
@@ -140,8 +140,9 @@ export default function PricingPage() {
           <div className="mt-12 grid items-start gap-6 lg:grid-cols-3">
             {TIERS.map((tier, i) => {
               const plan = PLANS[tier.id];
-              const gbp = plans[tier.id].gbp;
-              const compareGbp = plans[tier.id].compareGbp;
+              const planPrices = plans[tier.id];
+              const gbp = planPrices.gbp;
+              const compareGbp = planPrices.compareGbp;
               return (
                 <GlassCard
                   key={tier.id}
@@ -158,17 +159,17 @@ export default function PricingPage() {
                       className="font-display text-[44px] font-extrabold leading-none"
                       style={{ color: tier.accent }}
                     >
-                      {formatPrice(gbp, code)}
+                      {formatPrice(gbp, code, planPrices.pkr)}
                     </span>
                     {compareGbp ? (
                       <span className="pb-1 font-mono text-[14px] text-[var(--text-muted)] line-through">
-                        {formatPrice(compareGbp, code)}
+                        {formatPrice(compareGbp, code, planPrices.comparePkr)}
                       </span>
                     ) : null}
                   </div>
                   <div className="mt-2 flex flex-wrap items-center gap-2 font-mono text-[12px] text-[var(--text-muted)]">
                     <span>
-                      {formatPrice(gbp, "PKR")} · {formatPrice(gbp, "USD")}
+                      {formatPrice(gbp, "PKR", planPrices.pkr)} · {formatPrice(gbp, "USD")}
                     </span>
                     {compareGbp ? (
                       <span

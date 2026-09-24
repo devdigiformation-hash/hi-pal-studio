@@ -190,7 +190,7 @@ export default function HeroSection() {
           </motion.div>
 
           <h1 className="mt-5 font-display text-[36px] font-bold leading-[1.08] tracking-[-0.035em] text-[var(--text-primary)] sm:text-[44px] md:text-[54px] lg:text-[60px] xl:text-[66px]">
-            <RotatingPrefix />
+            DIGI BIZ OS — <RotatingPrefix />
             <motion.span
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -217,7 +217,7 @@ export default function HeroSection() {
             transition={{ delay: 0.6 }}
             className="answer mt-5 max-w-[580px] font-body text-[16px] leading-[1.75] text-[var(--text-secondary)] md:text-[18px]"
           >
-            DigiBizOS is a cutting-edge business operating system designed to streamline operations and boost productivity. By leveraging AI-powered tools and automation, businesses can simplify complex tasks and make data-driven decisions.
+            DIGI BIZ OS is an AI-powered business operating system designed to help businesses manage operations, automation, CRM, workflows, and productivity from one unified platform.
           </motion.p>
 
           <motion.div
@@ -233,7 +233,7 @@ export default function HeroSection() {
               </h2>
             </div>
             <p className="mt-1 font-body text-[13.5px] leading-relaxed text-zinc-300">
-              DigiBizOS simplifies business operations using AI-powered tools and automation, enabling data-driven decisions and increased productivity.
+              DIGI BIZ OS simplifies business operations using AI-powered tools and automation, enabling data-driven decisions and increased productivity.
             </p>
           </motion.div>
 

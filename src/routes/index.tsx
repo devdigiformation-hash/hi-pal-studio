@@ -24,9 +24,9 @@ import ExploreHub from "@/components/home/ExploreHub";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { buildMeta, softwareLd, breadcrumbLd, faqLd, webPageLd, speakableLd } from "@/lib/seo";
 
-const TITLE = "DIGI BIZ OS — AI Desktop Operating System for Windows";
+const TITLE = "DIGI BIZ OS — The Voice-Controlled Business Operating System";
 const DESC =
-  "Autonomous AI business operating system for Windows 10 & 11. Run local neural models, voice control, and multi-agent workflows with zero monthly fees.";
+  "DIGI BIZ OS is the autonomous AI business operating system for Windows. Control operations with voice, run local neural models, and automate workflows with zero monthly fees.";
 
 export const Route = createFileRoute("/")({
   head: () => {
@@ -76,7 +76,12 @@ function HomePage() {
       <HeroSection />
       <SoftwareShowcase />
       <ModulesGrid />
+      <CapabilityVault />
+      <FourPillars />
+      <WorkflowsSection />
+      <LiveTrackingSection />
       <SaasComparisonMatrix />
+      <SocialProof />
       <PricingPreview />
       <ExploreHub />
       <FAQSection />
@@ -85,18 +90,13 @@ function HomePage() {
       <ClientDeferred>
         <TelemetryTicker />
         <AiBrainArchitectureShowcase />
-        <CapabilityVault />
-        <FourPillars />
         <ProductWorkbench />
         <ModelsSection />
         <CodebaseIntelligence />
-        <WorkflowsSection />
-        <LiveTrackingSection />
         <BuildYourOwn />
         <VisionShowcase />
         <SourceCodeSection />
         <UseCases />
-        <SocialProof />
         <WhatsAppFloat />
       </ClientDeferred>
     </main>

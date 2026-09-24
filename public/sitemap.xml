@@ -41,6 +41,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.digibizos.co.uk/tools</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/tools/ai-seo-checker</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/open-source/credits</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://www.digibizos.co.uk/download</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -164,6 +179,11 @@
     <loc>https://www.digibizos.co.uk/delivery</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/search</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.digibizos.co.uk/modules</loc>
@@ -506,6 +526,36 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.digibizos.co.uk/ai-crm</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/whatsapp-ai-agent</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/ai-lead-generation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/ai-product-research</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/ai-seo-audit</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/ai-tools-for-business</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.digibizos.co.uk/compare</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -702,57 +752,127 @@
   </url>
   <url>
     <loc>https://www.digibizos.co.uk/blog/how-to-generate-free-ai-images</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.digibizos.co.uk/blog/how-to-build-web-app-with-ai-for-free</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.digibizos.co.uk/blog/how-to-automate-whatsapp-customer-support-with-ai</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.digibizos.co.uk/blog/how-to-automate-business-tasks-without-zapier</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.digibizos.co.uk/blog/how-to-manage-sales-leads-without-crm</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.digibizos.co.uk/blog/how-to-edit-reels-without-watermark-for-free</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.digibizos.co.uk/blog/how-to-convert-pdf-to-audiobook-for-free</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.digibizos.co.uk/blog/how-to-track-competitor-prices-automatically</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.digibizos.co.uk/blog/how-to-automate-social-media-posting</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.digibizos.co.uk/blog/how-to-control-windows-pc-with-voice-ai</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.digibizos.co.uk/blog/i-built-a-voice-assistant-that-manages-my-whatsapp-follow-ups-and-daily-tasks</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/blog/generative-engine-optimization-geo-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/blog/ollama-vs-lm-studio</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/blog/ai-business-automation-trends-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/blog/best-jarvis-alternative-for-windows-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/blog/no-code-ai-workflow-automation-small-business</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/blog/ai-agents-vs-traditional-automation-difference</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/blog/replace-5000-saas-stack-with-one-ai-tool</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/blog/voice-controlled-ai-assistant-for-business-owners</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/blog/multi-agent-ai-systems-explained-2026-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/blog/free-chatgpt-claude-alternative-offline-ai-business</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/blog/ai-crm-automation-for-small-business-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/blog/mcp-model-context-protocol-explained-non-developers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/blog/zapier-vs-ai-agent-automation-cost-comparison</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.digibizos.co.uk/blog/ai-whatsapp-business-assistant-setup-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

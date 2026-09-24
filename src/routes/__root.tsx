@@ -104,6 +104,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "Organization",
           "@id": "https://www.digibizos.co.uk/#organization",
           name: "DIGI BIZ OS",
+          alternateName: ["DigiBizOS", "Digi Biz OS"],
           legalName: "Digiformation Ltd",
           url: "https://www.digibizos.co.uk",
           logo: {

@@ -80,6 +80,7 @@ export function softwareLd(name: string, description: string, url: string) {
     brand: {
       "@type": "Brand",
       name: BRAND,
+      alternateName: ["DigiBizOS", "Digi Biz OS"],
       url: SITE_URL,
     },
     offers: {
