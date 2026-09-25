@@ -219,22 +219,6 @@ export default function HeroSection() {
             DIGI BIZ OS is an AI-powered business operating system designed to help businesses manage operations, automation, CRM, workflows, and productivity from one unified platform.
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
-            className="summary mt-4 hidden max-w-[580px] rounded-xl border border-white/10 bg-white/[0.03] p-3.5 backdrop-blur-sm sm:block"
-          >
-            <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[var(--cyan)] animate-pulse" />
-              <h2 className="font-display text-[12px] font-bold uppercase tracking-wider text-[var(--cyan)]">
-                TL;DR
-              </h2>
-            </div>
-            <p className="mt-1 font-body text-[13.5px] leading-relaxed text-zinc-300">
-              DIGI BIZ OS simplifies business operations using AI-powered tools and automation, enabling data-driven decisions and increased productivity.
-            </p>
-          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.92 }}

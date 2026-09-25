@@ -53,7 +53,7 @@ export const Route = createFileRoute("/")({
         },
         {
           type: "application/ld+json",
-          children: JSON.stringify(speakableLd([".answer", ".summary"])),
+          children: JSON.stringify(speakableLd([".answer"])),
         },
       ],
     };
