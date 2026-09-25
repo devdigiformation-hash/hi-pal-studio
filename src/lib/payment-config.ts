@@ -145,10 +145,10 @@ export interface PaymentMethod {
   steps: string[];
 }
 
-export const WHATSAPP_NUMBER = "923164467464";
+export const WHATSAPP_NUMBER = "923034226759";
 export const SUPPORT_EMAIL = "info@digiformation.co.uk";
 
-const MOBILE_ACCOUNT = "0316 4467464";
+const MOBILE_ACCOUNT = "0303 4226759";
 const ACCOUNT_TITLE = "Muhammad Haroon";
 
 function mobileWallet(id: MethodId, label: string): PaymentMethod {
