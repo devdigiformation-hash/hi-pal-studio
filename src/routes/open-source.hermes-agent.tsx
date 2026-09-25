@@ -271,6 +271,32 @@ function HermesAgentPage() {
         <OpenSourceValueComparisonChart toolId="hermes-agent" downloadUrl={DOWNLOAD_URL} />
       </SectionWrapper>
 
+      {/* OPENCLAW VS HERMES AGENT ARCHITECTURAL BENCHMARK CARD */}
+      <SectionWrapper className="py-2">
+        <div className="mx-auto max-w-[1080px]">
+          <div className="flex flex-col items-start justify-between gap-5 rounded-2xl border border-indigo-500/30 bg-gradient-to-r from-indigo-500/[0.08] via-white/[0.02] to-transparent p-6 sm:flex-row sm:items-center">
+            <div className="max-w-[720px]">
+              <span className="inline-flex items-center gap-1.5 rounded border border-indigo-400/40 bg-indigo-500/10 px-2.5 py-0.5 font-mono text-[11px] font-semibold uppercase tracking-wider text-indigo-400">
+                2026 ARCHITECTURAL BENCHMARK
+              </span>
+              <h3 className="mt-2.5 font-display text-[19px] font-bold text-white sm:text-[22px]">
+                OpenClaw vs Hermes Agent: Desktop GUI vs Structured Reasoning
+              </h3>
+              <p className="mt-1.5 font-body text-[13.5px] leading-relaxed text-zinc-300">
+                Compare visual screen automation with Nous Hermes JSON function-calling kernels, token costs, rate limits, and discover how DIGI BIZ OS bridges both for commercial businesses.
+              </p>
+            </div>
+            <Link
+              to="/blog/$slug"
+              params={{ slug: "openclaw-vs-hermes-agent" }}
+              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-indigo-500 px-5 py-3 font-display text-[13.5px] font-bold text-white transition-all hover:bg-indigo-400 hover:shadow-[0_0_24px_rgba(99,102,241,0.4)]"
+            >
+              Read Full Benchmark →
+            </Link>
+          </div>
+        </div>
+      </SectionWrapper>
+
       {/* TECHNICAL SYSTEM REQUIREMENTS */}
       <OpenSourceTechSpecs
         toolName={toolData.shortName}
