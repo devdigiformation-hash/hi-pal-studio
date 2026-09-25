@@ -6,7 +6,7 @@ import { MODELS_LIST } from "../src/content/models-data";
 // @ts-ignore
 import nitroHandler from "../.output/server/index.mjs";
 
-const BASE_URL = "https://digibizos.co.uk";
+const BASE_URL = "https://www.digibizos.co.uk";
 
 // 1. Gather all 140 canonical paths
 const paths: string[] = [

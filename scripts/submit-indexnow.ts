@@ -3,7 +3,7 @@ import { BLOG_POSTS } from "../src/content/blog-posts";
 import { MODULES_LIST } from "../src/content/modules-data";
 import { MODELS_LIST } from "../src/content/models-data";
 
-const BASE_URL = "https://digibizos.co.uk";
+const BASE_URL = "https://www.digibizos.co.uk";
 const INDEXNOW_KEY = "c0378ea5553e414fa8d0429f64bf5f28";
 const KEY_LOCATION = `${BASE_URL}/${INDEXNOW_KEY}.txt`;
 
@@ -62,7 +62,7 @@ async function submitIndexNow() {
   console.log(`[IndexNow] Prepared ${urlList.length} canonical URLs for submission.`);
 
   const payload = {
-    host: "digibizos.co.uk",
+    host: "www.digibizos.co.uk",
     key: INDEXNOW_KEY,
     keyLocation: KEY_LOCATION,
     urlList: urlList,
