@@ -8,11 +8,39 @@ import CyanButton from "@/components/CyanButton";
 import GhostButton from "@/components/GhostButton";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { MODELS_LIST } from "@/content/models-data";
-import { buildMeta, breadcrumbLd, softwareLd } from "@/lib/seo";
+import { buildMeta, breadcrumbLd, softwareLd, faqLd } from "@/lib/seo";
 
 const TITLE = "Free AI Models & Open Source LLMs for Windows | DIGI BIZ OS";
 const DESC =
-  "Discover and deploy 50+ free open-source AI models locally on Windows: DeepSeek R1, Llama 3.3, Qwen 2.5 Coder, Phi-4, Whisper, Gemma 2, and Hermes 3 with DIGI BIZ OS.";
+  "Deploy 50+ free open-source AI models locally on Windows — DeepSeek R1, Llama 3.3, Qwen 2.5 Coder, Phi-4, Whisper and Gemma 2.";
+
+// Answer-engine (AEO) questions for the model directory.
+const FAQS = [
+  {
+    q: "Are these AI models really free?",
+    a: "Yes. The models listed here are open-source and free to download and run on your own Windows PC. You pay nothing per token or per request when you run them locally — your only cost is the hardware you already own.",
+  },
+  {
+    q: "Can I run AI models offline on Windows?",
+    a: "Yes. DIGI BIZ OS downloads open-source models to your machine and runs them locally, so they keep working with no internet connection and your prompts and files never leave your PC.",
+  },
+  {
+    q: "Which open-source model should I start with?",
+    a: "For general business work a mid-size instruction model such as Llama 3.3 or Qwen 2.5 is a balanced starting point. Use DeepSeek R1 for step-by-step reasoning, Qwen 2.5 Coder for code, and Whisper for speech-to-text.",
+  },
+  {
+    q: "What hardware do I need to run local AI models?",
+    a: "Smaller models run on a normal laptop with 8–16 GB of RAM. Larger models are faster and more capable with a dedicated GPU. DIGI BIZ OS lets you pick a model size that matches your machine, and you can switch at any time.",
+  },
+  {
+    q: "Can I use cloud models instead of local ones?",
+    a: "Yes. You can connect cloud APIs alongside local models and let DIGI BIZ OS route each task to whichever is best — local for privacy and zero cost, cloud when you want maximum speed or reasoning depth.",
+  },
+  {
+    q: "Is running open-source models safe for business data?",
+    a: "Running a model locally keeps your business data on your own machine, which is why many owners prefer it for CRM records, documents and client information. Nothing is uploaded unless you deliberately choose a cloud model.",
+  },
+];
 
 export const Route = createFileRoute("/models/")({
   head: () => {
@@ -33,6 +61,10 @@ export const Route = createFileRoute("/models/")({
         {
           type: "application/ld+json",
           children: JSON.stringify(softwareLd("DIGI BIZ OS Model Universe", DESC, "/models")),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(faqLd(FAQS)),
         },
       ],
     };

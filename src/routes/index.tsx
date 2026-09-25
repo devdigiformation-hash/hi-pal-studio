@@ -26,7 +26,7 @@ import { buildMeta, softwareLd, breadcrumbLd, faqLd, webPageLd, speakableLd } fr
 
 const TITLE = "DIGI BIZ OS — The Voice-Controlled Business Operating System";
 const DESC =
-  "DIGI BIZ OS is the autonomous AI business operating system for Windows. Control operations with voice, run local neural models, and automate workflows with zero monthly fees.";
+  "The AI business operating system for Windows. Run your operations by voice, use local AI models, and automate work with zero monthly fees.";
 
 export const Route = createFileRoute("/")({
   head: () => {

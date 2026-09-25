@@ -1682,7 +1682,7 @@ export const SEO_PAGES: SeoPage[] = [
     eyebrow: "DigiCode",
     h1: "DigiCode —",
     h1Gradient: "AI Coding & Development.",
-    metaTitle: "DigiCode — AI Coding Workspace & Repository Intelligence | DIGI BIZ OS",
+    metaTitle: "DigiCode — AI Coding Workspace | DIGI BIZ OS",
     metaDescription:
       "DigiCode is the AI coding workspace in DIGI BIZ OS: repository intelligence, code generation, terminal execution and project automation for Python and Node.js.",
     intro:
@@ -2800,9 +2800,9 @@ export const SEO_PAGES: SeoPage[] = [
     eyebrow: "JARVIS for Windows",
     h1: "JARVIS for Windows —",
     h1Gradient: "Installed, Not Imagined.",
-    metaTitle: "JARVIS for Windows 10 & 11 — Voice AI Desktop Assistant | DIGI BIZ OS",
+    metaTitle: "JARVIS for Windows 10 & 11 | DIGI BIZ OS",
     metaDescription:
-      "A JARVIS-style AI assistant you can install on Windows 10 and 11. Voice control, desktop actions, agents, coding, documents and scheduled automation in one application.",
+      "A JARVIS-style AI assistant for Windows 10 and 11: voice control, desktop actions, agents, coding and scheduled automation in one app.",
     intro:
       "DIGI BIZ OS is a Windows application, not a browser tab. Install it on Windows 10 or 11, activate your licence and start giving spoken instructions that touch your real files, applications, terminal and documents.",
     answers: [
@@ -3173,7 +3173,7 @@ export const SEO_PAGES: SeoPage[] = [
     h1Gradient: "Without Monthly SaaS Fees.",
     metaTitle: "AI CRM Software for Small Business & Founders | DIGI BIZ OS",
     metaDescription:
-      "Native offline AI CRM for Windows. Replace HubSpot & Salesforce with a 1-second live dashboard, 1-click order fulfillment, multi-currency ledger, and zero monthly subscriptions.",
+      "Offline AI CRM for Windows. Replace HubSpot and Salesforce with a live dashboard, 1-click orders and zero monthly subscriptions.",
     intro:
       "Digi CRM is a native, local-first enterprise customer relationship management and business operating suite built into DIGI BIZ OS. It unifies your customer database, deals pipeline, 1-click order fulfillment, and multi-currency ledger on your Windows PC with zero recurring subscription fees.",
     answers: [
