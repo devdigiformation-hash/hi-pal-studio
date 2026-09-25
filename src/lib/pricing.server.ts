@@ -15,8 +15,8 @@ const REGIONAL_PRICES: Record<PlanId, Record<Region, PriceSet>> = {
   },
   // Pakistan carries a discount on every plan; international keeps the higher price.
   custom_build: {
-    intl: { gbp: 79, pkr: 28440, usd: 99, compareGbp: 119, comparePkr: 42000, compareUsd: 149 },
-    pk: { gbp: 49, pkr: 17640, usd: 61, compareGbp: 79, comparePkr: 28000, compareUsd: 99 },
+    intl: { gbp: 129, pkr: 46440, usd: 165, compareGbp: 179, comparePkr: 64000, compareUsd: 229 },
+    pk: { gbp: 99, pkr: 35640, usd: 125, compareGbp: 149, comparePkr: 54000, compareUsd: 189 },
   },
   source_code: {
     intl: { gbp: 199, pkr: 71640, usd: 249, compareGbp: 279, comparePkr: 100000, compareUsd: 349 },

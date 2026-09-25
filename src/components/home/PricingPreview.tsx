@@ -39,8 +39,8 @@ const TIERS = [
     id: "custom_build" as const,
     badge: "Done-For-You Setup",
     name: "Software Setup & Custom Workflows",
-    gbp: 50,
-    compareGbp: 79,
+    gbp: 99,
+    compareGbp: 149,
     note: "Done-for-you setup with 5 custom workflows.",
     features: [
       "Everything in Lifetime Access",

@@ -47,12 +47,12 @@ export const PLANS: Record<PlanId, Plan> = {
     badge: "Full Setup · 5 Custom Workflows",
     blurb:
       "Done-for-you software installation, API configuration, WhatsApp AI sales agent, and 5 custom automated business workflows custom-built for your business operations.",
-    pricePkr: 18000,
-    priceUsd: 64,
-    priceGbp: 50,
-    compareGbp: 79,
-    compareUsd: 99,
-    comparePkr: 28000,
+    pricePkr: 35640,
+    priceUsd: 125,
+    priceGbp: 99,
+    compareGbp: 149,
+    compareUsd: 189,
+    comparePkr: 54000,
     billingNote: "One-time payment · Complete done-for-you business setup · Zero recurring fees",
     includes: [
       "Everything in Lifetime Access",
@@ -120,7 +120,7 @@ export type PriceSet = {
 // without) a server response. Never contains the Pakistan numbers.
 export const INTL_PRICES: Record<PlanId, PriceSet> = {
   lifetime: { gbp: 49, pkr: 14900, usd: 61, compareGbp: 69, comparePkr: 25000, compareUsd: 88 },
-  custom_build: { gbp: 79, pkr: 28440, usd: 99, compareGbp: 119, comparePkr: 42000, compareUsd: 149 },
+  custom_build: { gbp: 129, pkr: 46440, usd: 165, compareGbp: 179, comparePkr: 64000, compareUsd: 229 },
   source_code: { gbp: 199, pkr: 71640, usd: 249, compareGbp: 279, comparePkr: 100000, compareUsd: 349 },
 };
 
