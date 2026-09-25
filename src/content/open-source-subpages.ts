@@ -149,6 +149,10 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
         q: "What operating systems are supported by OpenClaw?",
         a: "OpenClaw natively supports Windows 10/11 (64-bit) through its desktop companion installer, as well as Linux and macOS via the open-source CLI.",
       },
+      {
+        q: "How does OpenClaw compare to DIGI BIZ OS?",
+        a: "While OpenClaw is an experimental CLI agent for raw desktop navigation, DIGI BIZ OS is a complete enterprise AI Business Operating System. DIGI BIZ OS provides generous usage tiers that eliminate rate limits, batch high-resolution image generation, heavy multi-file coding capacity, and native business applications like CRM, automated billing, and Digi WhatsApp.",
+      },
     ],
     relatedToolIds: ["openhands", "hermes-agent", "jan-ai"],
     bridge: {
