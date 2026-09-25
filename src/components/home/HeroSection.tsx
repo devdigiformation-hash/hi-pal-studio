@@ -8,14 +8,12 @@ import {
   Heart,
   Zap,
   Monitor,
-  Play,
   Smartphone,
   Bot,
   Wrench,
 } from "lucide-react";
 import CyanButton from "@/components/CyanButton";
 import { WindowsIcon } from "@/components/PlatformIcons";
-import GhostButton from "@/components/GhostButton";
 import PlatformStrip from "@/components/PlatformStrip";
 import MonoBadge from "@/components/MonoBadge";
 import ActivePulse from "@/components/ActivePulse";
@@ -224,7 +222,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
-            className="summary mt-4 max-w-[580px] rounded-xl border border-white/10 bg-white/[0.03] p-3.5 backdrop-blur-sm"
+            className="summary mt-4 hidden max-w-[580px] rounded-xl border border-white/10 bg-white/[0.03] p-3.5 backdrop-blur-sm sm:block"
           >
             <div className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-[var(--cyan)] animate-pulse" />
@@ -254,14 +252,6 @@ export default function HeroSection() {
                 </CyanButton>
               </Link>
             </div>
-            <GhostButton
-              size="sm"
-              tone="139,124,246"
-              icon={<Play size={15} />}
-              className="px-3.5 text-[12px] sm:px-6 sm:py-[11px] sm:text-[14px]"
-            >
-              Watch 60s Product Tour
-            </GhostButton>
           </motion.div>
 
           <motion.div
