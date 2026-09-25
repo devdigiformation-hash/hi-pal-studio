@@ -136,6 +136,33 @@ function BlogPostPage() {
                   ))}
                 </ul>
               ) : null}
+
+              {section.table ? (
+                <div className="mt-6 overflow-x-auto rounded-xl border border-white/10 bg-white/[0.02]">
+                  <table className="w-full text-left font-body text-[14px]">
+                    <thead className="border-b border-white/10 bg-white/[0.04] text-[12px] font-semibold uppercase tracking-wider text-[var(--cyan)]">
+                      <tr>
+                        {section.table.headers.map((h, idx) => (
+                          <th key={idx} className="px-4 py-3 sm:px-5">
+                            {h}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-white/5 text-[var(--text-secondary)]">
+                      {section.table.rows.map((row, rIdx) => (
+                        <tr key={rIdx} className="hover:bg-white/[0.02] transition-colors">
+                          {row.map((cell, cIdx) => (
+                            <td key={cIdx} className="px-4 py-3.5 sm:px-5">
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ) : null}
             </section>
           ))}
 
