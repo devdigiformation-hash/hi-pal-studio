@@ -55,19 +55,6 @@ export default function ModelLanding({ model }: { model: ModelEntity }) {
               </p>
             )}
 
-            {model.metaDescription && (
-              <div className="summary mt-4 rounded-xl border border-white/10 bg-white/[0.03] p-3.5 backdrop-blur-sm">
-                <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-[var(--cyan)] animate-pulse" />
-                  <h2 className="font-display text-[12px] font-bold uppercase tracking-wider text-[var(--cyan)]">
-                    TL;DR
-                  </h2>
-                </div>
-                <p className="mt-1 font-body text-[13.5px] leading-relaxed text-zinc-300">
-                  {model.metaDescription}
-                </p>
-              </div>
-            )}
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link to="/download">

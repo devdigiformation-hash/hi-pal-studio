@@ -65,19 +65,7 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
           <p className="answer reveal-item delay-2 mx-auto mt-6 max-w-[760px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[17px]">
             {page.intro}
           </p>
-          {page.metaDescription && (
-            <div className="summary mx-auto mt-4 max-w-[760px] rounded-xl border border-white/10 bg-white/[0.03] p-3.5 backdrop-blur-sm text-left">
-              <div className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-[var(--cyan)] animate-pulse" />
-                <h2 className="font-display text-[12px] font-bold uppercase tracking-wider text-[var(--cyan)]">
-                  TL;DR
-                </h2>
-              </div>
-              <p className="mt-1 font-body text-[13.5px] leading-relaxed text-zinc-300">
-                {page.metaDescription}
-              </p>
-            </div>
-          )}
+
           <div className="reveal-item delay-3 mt-9 flex flex-wrap items-center justify-center gap-3">
             <Link to="/pricing">
               <CyanButton icon={<ArrowRight size={16} />}>Get DIGI BIZ OS — £50</CyanButton>

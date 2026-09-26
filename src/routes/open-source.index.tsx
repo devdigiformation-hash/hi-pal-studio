@@ -800,12 +800,6 @@ function OpenSourcePage() {
             Discover, search, and download production-grade autonomous AI agents, 4K video editors, local offline LLMs, and high-speed backends. No recurring SaaS subscriptions.
           </p>
 
-          <div id="tldr-summary" className="summary sr-only">
-            <h2>TL;DR</h2>
-            <p>
-              Free curated open-source desktop software library for Windows featuring OpenHands, OpenClaw, AnythingLLM, Jan AI, PocketBase, Shotcut, Audacity, and Upscayl with one-click offline execution.
-            </p>
-          </div>
 
           {/* Quick Metrics Badges */}
           <div className="reveal-item delay-3 mt-7 flex flex-wrap items-center justify-center gap-2 sm:gap-3">

@@ -184,10 +184,6 @@ function AudacityPage() {
             <p className="answer reveal-item delay-2 mt-6 max-w-[640px] font-body text-[15px] leading-[1.85] text-[var(--text-secondary)] md:text-[16.5px]">
               {toolData.tagline} Verified open-source alternative to {toolData.alternativeTo.join(", ")}. Enjoy full offline privacy, zero subscriptions, and complete ownership.
             </p>
-            <div id="tldr-summary" className="summary sr-only">
-              <h2>TL;DR</h2>
-              <p>{toolData.tagline}</p>
-            </div>
 
             <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
               <a

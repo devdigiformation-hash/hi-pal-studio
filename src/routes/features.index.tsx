@@ -111,12 +111,6 @@ function FeaturesHub() {
             extensive skills, native desktop tools, coding, documents, workflows and tasks — all in
             one local Windows application with zero monthly subscription.
           </p>
-          <div id="tldr-summary" className="summary sr-only">
-            <h2>TL;DR</h2>
-            <p>
-              DIGI BIZ OS is a Windows AI business operating system unifying live tracking, AI agents, CRM, WhatsApp automation, documents, and workflows into a single offline-capable desktop platform with no monthly fees.
-            </p>
-          </div>
         </div>
       </SectionWrapper>
 
