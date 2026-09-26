@@ -265,10 +265,10 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="tel:+923034226759"
+                href="tel:+923164467464"
                 className="inline-flex items-center gap-2 font-body text-[14px] text-[var(--text-secondary)] transition-colors hover:text-[var(--cyan)]"
               >
-                <Phone size={15} /> +92 303 422 6759
+                <Phone size={15} /> +92 316 446 7464
               </a>
             </li>
             <li>
