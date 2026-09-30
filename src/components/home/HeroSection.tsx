@@ -228,11 +228,11 @@ export default function HeroSection() {
             <div className="relative w-auto">
               <Link to="/pricing" onClick={() => trackDownload("hero_get_now")}>
                 <CyanButton
-                  size="sm"
-                  icon={<WindowsIcon size={15} />}
-                  className="px-3.5 text-[12px] sm:px-6 sm:py-[11px] sm:text-[14px]"
+                  size="md"
+                  icon={<WindowsIcon size={17} />}
+                  className="px-7 py-3 text-[13.5px] sm:min-w-[270px] sm:px-10 sm:py-3.5 sm:text-[15px] tracking-wide"
                 >
-                  Get Now
+                  Get DIGI BIZ OS Now
                 </CyanButton>
               </Link>
             </div>
