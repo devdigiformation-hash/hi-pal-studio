@@ -13,8 +13,7 @@ import {
   Wrench,
 } from "lucide-react";
 import CyanButton from "@/components/CyanButton";
-import { WindowsIcon, AppleIcon } from "@/components/PlatformIcons";
-import GhostButton from "@/components/GhostButton";
+import { WindowsIcon } from "@/components/PlatformIcons";
 import PlatformStrip from "@/components/PlatformStrip";
 import MonoBadge from "@/components/MonoBadge";
 import ActivePulse from "@/components/ActivePulse";
@@ -237,16 +236,6 @@ export default function HeroSection() {
                 </CyanButton>
               </Link>
             </div>
-            <Link to="/download" onClick={() => trackDownload("hero_mac")}>
-              <GhostButton
-                size="sm"
-                tone="216,220,228"
-                icon={<AppleIcon size={15} />}
-                className="px-3.5 text-[12px] sm:px-6 sm:py-[11px] sm:text-[14px]"
-              >
-                For Mac
-              </GhostButton>
-            </Link>
           </motion.div>
 
           <motion.div
