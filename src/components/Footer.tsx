@@ -41,7 +41,7 @@ const COMPARISONS = [
   { label: "Screaming Frog Alternative", to: "/blog/open-seo-spider-vs-screaming-frog" },
   { label: "ChatGPT & Copilot Alternative", to: "/blog/digi-biz-os-vs-chatgpt" },
   { label: "Cursor AI Coding Alternative", to: "/compare" },
-  { label: "HubSpot CRM Alternative", to: "/compare" },
+  { label: "Muse AI vs DIGI BIZ OS", to: "/blog/muse-ai-vs-digi-biz-os" },
   { label: "Zapier Automation Alternative", to: "/compare" },
   { label: "All Comparisons & Blog →", to: "/blog" },
 ] as const;
