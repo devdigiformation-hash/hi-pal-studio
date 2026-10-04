@@ -114,7 +114,7 @@ export default function SaasComparisonMatrix() {
                 key={cat}
                 type="button"
                 onClick={() => setActiveCategory(cat)}
-                className={`rounded-full px-4 py-2 font-mono text-[12px] font-medium transition-all duration-200 ${
+                className={`inline-flex min-h-[44px] items-center justify-center rounded-full px-4 py-2 font-mono text-[12px] font-medium transition-all duration-200 ${
                   isActive
                     ? "bg-[var(--cyan)] text-black shadow-[0_0_20px_rgba(47,224,200,0.4)]"
                     : "border border-white/10 bg-white/5 text-[var(--text-secondary)] hover:border-white/20 hover:text-white"
@@ -216,7 +216,7 @@ export default function SaasComparisonMatrix() {
                 <button
                   type="button"
                   onClick={() => setIsExpanded(true)}
-                  className="inline-flex items-center gap-2 rounded-full border border-[var(--cyan)]/40 bg-[var(--cyan)]/10 px-5 py-2 font-mono text-[13px] font-semibold text-[var(--cyan)] transition-all hover:bg-[var(--cyan)]/20"
+                  className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-[var(--cyan)]/40 bg-[var(--cyan)]/10 px-5 py-2 font-mono text-[13px] font-semibold text-[var(--cyan)] transition-all hover:bg-[var(--cyan)]/20"
                 >
                   Show All {SAAS_COMPARISONS.length} SaaS Replacements ({SAAS_COMPARISONS.length - displayedItems.length} More)
                 </button>

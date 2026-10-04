@@ -188,8 +188,8 @@
 
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --text-mono: #5c616b;
+  --text-muted: #94a3b8;
+  --text-mono: #8e9ab0;
 
   --border-glass: rgba(255, 255, 255, 0.12);
   --border-glass-bright: rgba(255, 255, 255, 0.26);
@@ -262,12 +262,12 @@ body {
 @keyframes glowPulse {
   0%,
   100% {
-    opacity: 0.75;
-    box-shadow: 0 0 18px rgba(47, 224, 200, 0.25);
+    opacity: 0.65;
+    transform: scale(0.95);
   }
   50% {
     opacity: 1;
-    box-shadow: 0 0 32px rgba(47, 224, 200, 0.5);
+    transform: scale(1.05);
   }
 }
 @keyframes logoBlink {
@@ -467,7 +467,9 @@ body {
   animation: float 9s ease-in-out infinite;
 }
 @utility animate-glow-pulse {
-  animation: glowPulse 3.5s ease-in-out infinite;
+  box-shadow: 0 0 14px rgba(47, 224, 200, 0.4);
+  animation: glowPulse 2.8s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 @utility animate-logo-blink {
   animation: logoBlink 2.8s ease-in-out infinite;

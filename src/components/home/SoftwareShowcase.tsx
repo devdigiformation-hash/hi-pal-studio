@@ -4,26 +4,26 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GradientText from "@/components/GradientText";
-import digiMain from "@/assets/os-main-dashboard.png";
-import digiActiveAgent from "@/assets/os-active-agent-search.png";
-import digiLiveTracking from "@/assets/os-live-tracking-modal.png";
-import digiAiChat from "@/assets/os-digi-ai-chat.png";
-import digiAiImage from "@/assets/os-digi-ai-image.png";
-import digiCrmDash from "@/assets/os-digi-crm-dashboard.png";
-import digiCrmNav from "@/assets/os-digi-crm-navigation.png";
-import digiCrmAccounts from "@/assets/os-digi-crm-accounts.png";
-import digiFlow from "@/assets/os-digi-flow.png";
-import digiIntelligence from "@/assets/os-digi-crm-intelligence.png";
-import digiWhatsapp from "@/assets/os-digi-crm-whatsapp.png";
-import digiMarketing from "@/assets/os-digi-marketing.png";
-import digiStudioVideo from "@/assets/os-digi-studio-video-editor.png";
-import digiStudioAvatar from "@/assets/os-digi-studio-avatar.png";
-import digiStudioTranscript from "@/assets/os-digi-studio-transcript.png";
-import digiStudioImage from "@/assets/os-digi-studio-image.png";
-import digiStudioVoice from "@/assets/os-digi-studio-voice.png";
-import digiCode from "@/assets/os-digi-code.png";
-import digiSkills from "@/assets/os-skills.png";
-import digiDesktopTools from "@/assets/os-desktop-tools.png";
+import digiMain from "@/assets/os-main-dashboard.webp";
+import digiActiveAgent from "@/assets/os-active-agent-search.webp";
+import digiLiveTracking from "@/assets/os-live-tracking-modal.webp";
+import digiAiChat from "@/assets/os-digi-ai-chat.webp";
+import digiAiImage from "@/assets/os-digi-ai-image.webp";
+import digiCrmDash from "@/assets/os-digi-crm-dashboard.webp";
+import digiCrmNav from "@/assets/os-digi-crm-navigation.webp";
+import digiCrmAccounts from "@/assets/os-digi-crm-accounts.webp";
+import digiFlow from "@/assets/os-digi-flow.webp";
+import digiIntelligence from "@/assets/os-digi-crm-intelligence.webp";
+import digiWhatsapp from "@/assets/os-digi-crm-whatsapp.webp";
+import digiMarketing from "@/assets/os-digi-marketing.webp";
+import digiStudioVideo from "@/assets/os-digi-studio-video-editor.webp";
+import digiStudioAvatar from "@/assets/os-digi-studio-avatar.webp";
+import digiStudioTranscript from "@/assets/os-digi-studio-transcript.webp";
+import digiStudioImage from "@/assets/os-digi-studio-image.webp";
+import digiStudioVoice from "@/assets/os-digi-studio-voice.webp";
+import digiCode from "@/assets/os-digi-code.webp";
+import digiSkills from "@/assets/os-skills.webp";
+import digiDesktopTools from "@/assets/os-desktop-tools.webp";
 
 const SLIDES = [
   {
@@ -254,16 +254,20 @@ export default function SoftwareShowcase() {
                   onClick={() => openLightbox(i)}
                 >
                   <div className="relative flex h-full w-full items-start justify-center overflow-hidden rounded-[14px] bg-[#05070B] md:rounded-[20px]">
-                    <img
-                      src={s.src}
-                      alt={`DIGI BIZ OS ${s.tag} screenshot — ${s.title}`}
-                      width={1920}
-                      height={1080}
-                      loading="lazy"
-                      decoding="async"
-                      draggable={false}
-                      className="h-full w-full object-contain object-top"
-                    />
+                    {abs <= 2 ? (
+                      <img
+                        src={s.src}
+                        alt={`DIGI BIZ OS ${s.tag} screenshot — ${s.title}`}
+                        width={1920}
+                        height={1080}
+                        loading={abs === 0 ? "eager" : "lazy"}
+                        decoding="async"
+                        draggable={false}
+                        className="h-full w-full object-contain object-top"
+                      />
+                    ) : (
+                      <div className="h-full w-full bg-[#05070B]" />
+                    )}
                     {/* curved bottom mask hides OS taskbar while keeping screenshot un-zoomed */}
                     <div
                       className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[10%]"
@@ -301,35 +305,39 @@ export default function SoftwareShowcase() {
             </AnimatePresence>
           </div>
 
-          <div className="mt-6 flex items-center justify-center gap-3 md:gap-4">
+          <div className="mt-6 flex items-center justify-center gap-2 md:gap-4">
             <button
               type="button"
               aria-label="Previous slide"
               onClick={() => go(-1)}
-              className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[var(--border-glass)] bg-[var(--bg-glass-light)] text-[var(--text-secondary)] backdrop-blur-xl transition hover:border-[var(--cyan-border)] hover:text-[var(--cyan)] md:h-10 md:w-10"
+              className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-[var(--border-glass)] bg-[var(--bg-glass-light)] text-[var(--text-secondary)] backdrop-blur-xl transition hover:border-[var(--cyan-border)] hover:text-[var(--cyan)]"
             >
               <ChevronLeft size={18} />
             </button>
-            <div className="flex max-w-[60vw] flex-wrap items-center justify-center gap-1.5 md:max-w-none md:gap-2">
+            <div className="flex max-w-[65vw] flex-wrap items-center justify-center gap-0.5 md:max-w-none md:gap-1">
               {SLIDES.map((s, i) => (
                 <button
                   key={s.tag}
                   type="button"
-                  aria-label={`Go to ${s.tag}`}
+                  aria-label={`Go to slide ${i + 1}: ${s.tag}`}
                   onClick={() => setIndex(i)}
-                  className="h-1.5 rounded-full transition-all"
-                  style={{
-                    width: i === index ? 22 : 8,
-                    background: i === index ? "var(--cyan)" : "rgba(148,163,184,0.3)",
-                  }}
-                />
+                  className="flex h-11 min-w-[20px] items-center justify-center px-1"
+                >
+                  <span
+                    className="h-1.5 rounded-full transition-all"
+                    style={{
+                      width: i === index ? 22 : 8,
+                      background: i === index ? "var(--cyan)" : "rgba(148,163,184,0.3)",
+                    }}
+                  />
+                </button>
               ))}
             </div>
             <button
               type="button"
               aria-label="Next slide"
               onClick={() => go(1)}
-              className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[var(--border-glass)] bg-[var(--bg-glass-light)] text-[var(--text-secondary)] backdrop-blur-xl transition hover:border-[var(--cyan-border)] hover:text-[var(--cyan)] md:h-10 md:w-10"
+              className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-[var(--border-glass)] bg-[var(--bg-glass-light)] text-[var(--text-secondary)] backdrop-blur-xl transition hover:border-[var(--cyan-border)] hover:text-[var(--cyan)]"
             >
               <ChevronRight size={18} />
             </button>
@@ -354,7 +362,7 @@ export default function SoftwareShowcase() {
               type="button"
               onClick={closeLightbox}
               aria-label="Close gallery"
-              className="absolute right-4 top-4 z-10 grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/5 text-[var(--text-primary)] transition hover:bg-white/10"
+              className="absolute right-4 top-4 z-10 grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-white/5 text-[var(--text-primary)] transition hover:bg-white/10"
             >
               <X size={20} />
             </button>
@@ -366,7 +374,7 @@ export default function SoftwareShowcase() {
                 goLightbox(-1);
               }}
               aria-label="Previous screenshot"
-              className="absolute left-2 top-1/2 z-10 -translate-y-1/2 grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/5 text-[var(--text-primary)] transition hover:bg-white/10 md:left-6 md:h-12 md:w-12"
+              className="absolute left-2 top-1/2 z-10 -translate-y-1/2 grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-white/5 text-[var(--text-primary)] transition hover:bg-white/10 md:left-6 md:h-12 md:w-12"
             >
               <ChevronLeft size={22} />
             </button>
@@ -378,7 +386,7 @@ export default function SoftwareShowcase() {
                 goLightbox(1);
               }}
               aria-label="Next screenshot"
-              className="absolute right-2 top-1/2 z-10 -translate-y-1/2 grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/5 text-[var(--text-primary)] transition hover:bg-white/10 md:right-6 md:h-12 md:w-12"
+              className="absolute right-2 top-1/2 z-10 -translate-y-1/2 grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-white/5 text-[var(--text-primary)] transition hover:bg-white/10 md:right-6 md:h-12 md:w-12"
             >
               <ChevronRight size={22} />
             </button>
@@ -414,22 +422,26 @@ export default function SoftwareShowcase() {
               </div>
             </motion.div>
 
-            <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2">
+            <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 items-center gap-1">
               {SLIDES.map((s, i) => (
                 <button
                   key={s.tag}
                   type="button"
-                  aria-label={`Go to ${s.tag}`}
+                  aria-label={`Go to slide ${i + 1}: ${s.tag}`}
                   onClick={(e) => {
                     e.stopPropagation();
                     setLightboxIndex(i);
                   }}
-                  className="h-1.5 rounded-full transition-all"
-                  style={{
-                    width: i === lightboxIndex ? 22 : 8,
-                    background: i === lightboxIndex ? "var(--cyan)" : "rgba(148,163,184,0.4)",
-                  }}
-                />
+                  className="flex h-11 min-w-[20px] items-center justify-center px-1"
+                >
+                  <span
+                    className="h-1.5 rounded-full transition-all"
+                    style={{
+                      width: i === lightboxIndex ? 22 : 8,
+                      background: i === lightboxIndex ? "var(--cyan)" : "rgba(148,163,184,0.4)",
+                    }}
+                  />
+                </button>
               ))}
             </div>
           </motion.div>

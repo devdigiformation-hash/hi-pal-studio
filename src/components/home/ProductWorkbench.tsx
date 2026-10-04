@@ -184,7 +184,7 @@ export default function ProductWorkbench() {
               <button
                 key={t}
                 onClick={() => setTab(t)}
-                className={`rounded-full px-5 py-2 font-display text-[13px] font-semibold transition-all duration-300 ${
+                className={`inline-flex min-h-[44px] items-center justify-center rounded-full px-5 py-2 font-display text-[13px] font-semibold transition-all duration-300 ${
                   tab === t
                     ? "bg-[var(--cyan)] text-[#090D16]"
                     : "text-[var(--text-secondary)] hover:text-[var(--cyan)]"

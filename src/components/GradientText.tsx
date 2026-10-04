@@ -26,7 +26,7 @@ export default function GradientText({
 
   return (
     <span
-      className={cn("animate-gradient-shift bg-clip-text text-transparent", className)}
+      className={cn("bg-clip-text text-transparent", className)}
       style={{ backgroundImage: bg }}
     >
       {children || text}

@@ -278,7 +278,7 @@ export default function ModulesGrid() {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-4">
             <div>
               <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-[var(--cyan)]">High-Intent Business Solutions</span>
-              <h4 className="mt-1 font-display text-[17px] font-bold text-white">Dedicated AI Workstations for Growing Businesses</h4>
+              <h3 className="mt-1 font-display text-[17px] font-bold text-white">Dedicated AI Workstations for Growing Businesses</h3>
             </div>
             <Link to="/features" className="inline-flex items-center gap-1.5 font-mono text-[12px] text-[var(--cyan)] hover:underline">
               <span>View All 50+ Solutions</span>

@@ -66,7 +66,7 @@ import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
 // Screenshots
 import anythingllmScreenshot from "@/assets/anythingllm-screenshot.jpg";
 import janScreenshot from "@/assets/jan-ai-screenshot.jpg";
-import pocketbaseScreenshot from "@/assets/pocketbase-screenshot.png";
+import pocketbaseScreenshot from "@/assets/pocketbase-screenshot.webp";
 import tuttleScreenshot from "@/assets/tuttle-screenshot.jpg";
 import upscaylScreenshot from "@/assets/upscayl-screenshot.jpg";
 

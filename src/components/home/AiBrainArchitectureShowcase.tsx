@@ -245,7 +245,7 @@ export default function AiBrainArchitectureShowcase() {
                 <button
                   key={flow.id}
                   onClick={() => setActiveFlowId(flow.id)}
-                  className="flex items-center gap-2.5 rounded-xl border px-4 py-2.5 font-display text-[13.5px] font-semibold transition-all duration-300"
+                  className="flex min-h-[44px] items-center gap-2.5 rounded-xl border px-4 py-2.5 font-display text-[13.5px] font-semibold transition-all duration-300"
                   style={{
                     borderColor: isSelected ? flow.color : "rgba(255,255,255,0.08)",
                     background: isSelected ? `${flow.color}18` : "rgba(255,255,255,0.02)",
@@ -300,10 +300,10 @@ export default function AiBrainArchitectureShowcase() {
 
                   {/* REASONING EXPLANATION */}
                   <div>
-                    <h4 className="flex items-center gap-2 font-display text-[15px] font-bold text-[var(--text-primary)]">
+                    <h3 className="flex items-center gap-2 font-display text-[15px] font-bold text-[var(--text-primary)]">
                       <Brain size={16} style={{ color: current.color }} />
                       Background Brain Orchestration:
-                    </h4>
+                    </h3>
                     <p className="mt-2 font-body text-[14px] leading-[1.75] text-[var(--text-secondary)]">
                       {current.brainAction}
                     </p>

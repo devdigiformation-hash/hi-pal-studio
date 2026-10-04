@@ -257,7 +257,7 @@ export default function Footer() {
               href="https://www.digiformation.co.uk/"
               target="_blank"
               rel="noreferrer"
-              className="text-[var(--cyan)] transition-opacity hover:opacity-80"
+              className="text-[var(--cyan)] underline underline-offset-2 transition-opacity hover:opacity-80"
             >
               Digiformation Ltd
             </a>{" "}

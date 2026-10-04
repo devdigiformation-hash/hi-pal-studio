@@ -90,6 +90,9 @@ function RotatingPhrase() {
   );
 }
 
+const longestPrefix = PREFIXES.reduce((a, b) => (b.length > a.length ? b : a), PREFIXES[0]);
+const longestCycle = CYCLE.reduce((a, b) => (b.length > a.length ? b : a), CYCLE[0]);
+
 function RotatingPrefix() {
   const [i, setI] = useState(0);
   const [out, setOut] = useState(false);
@@ -107,16 +110,22 @@ function RotatingPrefix() {
   }, [i]);
 
   return (
-    <motion.span
-      key={i}
-      aria-live="polite"
-      className="inline-block whitespace-pre"
-      initial={{ opacity: 0, y: "0.3em" }}
-      animate={out ? { opacity: 0, y: "-0.25em" } : { opacity: 1, y: 0 }}
-      transition={{ duration: out ? 0.3 : 0.45, ease: [0.22, 1, 0.36, 1] }}
-    >
-      {PREFIXES[i]}{" "}
-    </motion.span>
+    <span className="relative inline-grid align-bottom">
+      {/* invisible sizer keeps layout stable — no reflow across prefix changes */}
+      <span aria-hidden className="invisible col-start-1 row-start-1 whitespace-pre">
+        {longestPrefix}{" "}
+      </span>
+      <motion.span
+        key={i}
+        aria-live="polite"
+        className="col-start-1 row-start-1 inline-block whitespace-pre"
+        initial={{ opacity: 0, y: "0.3em" }}
+        animate={out ? { opacity: 0, y: "-0.25em" } : { opacity: 1, y: 0 }}
+        transition={{ duration: out ? 0.3 : 0.45, ease: [0.22, 1, 0.36, 1] }}
+      >
+        {PREFIXES[i]}{" "}
+      </motion.span>
+    </span>
   );
 }
 
@@ -138,9 +147,16 @@ function Typewriter() {
   }, [chars, index]);
 
   return (
-    <span className="font-display text-[17px] font-bold text-[var(--cyan)] md:text-[18px]">
-      {CYCLE[index].slice(0, chars)}
-      <span className="animate-caret">|</span>
+    <span className="relative inline-grid align-bottom">
+      {/* Invisible sizer guarantees full layout space is reserved so typing never shifts following elements */}
+      <span aria-hidden className="invisible col-start-1 row-start-1 font-display text-[17px] font-bold md:text-[18px]">
+        {longestCycle}
+        <span className="inline-block w-[1ch]">|</span>
+      </span>
+      <span className="col-start-1 row-start-1 font-display text-[17px] font-bold text-[var(--cyan)] md:text-[18px]">
+        {CYCLE[index].slice(0, chars)}
+        <span className="inline-block w-[1ch] animate-caret">|</span>
+      </span>
     </span>
   );
 }
@@ -201,18 +217,18 @@ export default function HeroSection() {
           </h1>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="mt-6 font-body text-[17px] text-[var(--text-secondary)] md:text-[18px]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.4 }}
+            className="mt-6 min-h-[56px] sm:min-h-[32px] font-body text-[17px] text-[var(--text-secondary)] md:text-[18px]"
           >
             One Voice Command. <Typewriter />
           </motion.div>
 
           <motion.p
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
             className="answer mt-5 max-w-[580px] font-body text-[16px] leading-[1.75] text-[var(--text-secondary)] md:text-[18px]"
           >
             DIGI BIZ OS is an AI-powered business operating system designed to help businesses manage operations, automation, CRM, workflows, and productivity from one unified platform.

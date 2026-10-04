@@ -28,10 +28,11 @@ export default function JupiterGlobe({ size = 300, className }: JupiterGlobeProp
     canvas.height = h * dpr;
     ctx.scale(dpr, dpr);
 
+    const pointsCount = size < 200 ? 650 : size < 260 ? 1200 : 1800;
     const pts: { x: number; y: number; z: number }[] = [];
     const golden = Math.PI * (3 - Math.sqrt(5));
-    for (let i = 0; i < POINTS; i++) {
-      const y = 1 - (i / (POINTS - 1)) * 2;
+    for (let i = 0; i < pointsCount; i++) {
+      const y = 1 - (i / (pointsCount - 1)) * 2;
       const r = Math.sqrt(Math.max(0, 1 - y * y));
       const theta = golden * i;
       pts.push({ x: Math.cos(theta) * r, y, z: Math.sin(theta) * r });
