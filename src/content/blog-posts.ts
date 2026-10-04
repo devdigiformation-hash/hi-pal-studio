@@ -3661,6 +3661,144 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Get DIGI BIZ OS Lifetime (£50)", to: "/pricing" }
     ]
   },
+  {
+    slug: "stop-searching-google-maps-digi-lead-hunter-antigravity",
+    title: "Stop Searching Google Maps Manually: How DIGI LEAD HUNTER & Antigravity Automate B2B Client Acquisition",
+    metaTitle: "Stop Searching Google Maps: DIGI LEAD HUNTER & Antigravity Lead Engine | DIGI BIZ OS",
+    description: "Tired of manual Google Maps prospecting? DIGI LEAD HUNTER is a 100% free open-source AI platform built by DIGIFORMATION LTD that discovers local businesses, validates WhatsApp numbers, categorizes 3 lead tiers, and builds complete website blueprints in 1 click.",
+    cluster: "Open Source & Lead Gen",
+    date: "2026-10-04",
+    readingTime: "8 min read",
+    body: [
+      {
+        heading: "The Manual Google Maps Prospecting Nightmare: Why Agency Outreach Is Broken",
+        paragraphs: [
+          "Every web designer, software agency, and digital marketer knows the soul-crushing grind of manual lead prospecting. You open Google Maps, type 'restaurants in Lahore' or 'plumbers in Manchester', click on each pin one by one, check if they have a website link, copy down phone numbers into a spreadsheet, and try to guess if the number actually has WhatsApp.",
+          "After four hours of manual clicking, you end up with 30 raw contacts—half of which turn out to be disconnected landlines, and the other half already have existing websites. It is slow, demoralizing, and completely unscalable.",
+          "Meanwhile, commercial SaaS scrapers charge $150 to $250 every single month just to spit out unverified, dirty CSV lists with zero context, leaving you to write cold proposals from scratch."
+        ]
+      },
+      {
+        heading: "Introducing DIGI LEAD HUNTER: Built & Open-Sourced by DIGIFORMATION LTD",
+        paragraphs: [
+          "To solve this systemic client acquisition bottleneck once and for all, DIGIFORMATION LTD has built and publicly open-sourced DIGI LEAD HUNTER (official GitHub: https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER.git).",
+          "Sponsored by the Digi Biz OS ecosystem, DIGI LEAD HUNTER is not just another dumb web scraper. It is an autonomous intelligence, verification, and evidence-packaging platform designed specifically for agencies, freelance developers, and sales professionals.",
+          "Instead of dumping raw phone numbers, DIGI LEAD HUNTER discovers local businesses that have high customer ratings and strong foot traffic but lack an official website, validates their direct mobile WhatsApp channels, categorizes the opportunity into 3 strategic tiers, and automatically compiles full website plans and deliverable ZIP archives."
+        ],
+        bullets: [
+          "100% Open-Source & Sovereign: No monthly subscriptions, no seat licenses, and zero cloud lock-in.",
+          "Autonomous Maps Discovery: Queries Google Maps and OpenStreetMap data across any category and city worldwide.",
+          "Direct WhatsApp Carrier Validation: Formats and verifies mobile carriers across Pakistan (+92), UK (+44), US (+1), and international prefixes.",
+          "Automated Website Blueprints: Produces strategic WEBSITE_PLAN.md architecture and printable HTML presentations for every qualified lead.",
+          "Complete Evidence Bundling: Packages proposals, audit proofs, and spreadsheets into standalone 1-click ZIP archives."
+        ]
+      },
+      {
+        heading: "The 3 Types of Leads DIGI LEAD HUNTER Extracts for Every Business",
+        paragraphs: [
+          "A major innovation of DIGI LEAD HUNTER is that it doesn't treat all leads the same. The engine analyzes digital gaps and automatically categorizes every business into one of three actionable priority tiers:"
+        ],
+        bullets: [
+          "Priority 1 (Build-Ready High-Intent): The holy grail for web developers. These are established businesses with great customer reviews, high foot traffic, and verified WhatsApp mobile numbers, but ZERO official website. The engine flags these as immediate money-in-the-bank prospects and generates a complete, customized website proposal plan ready for instant closing.",
+          "Priority 2 (Consultation Required): Businesses with verified WhatsApp mobile numbers but lacking an existing website and having limited public visual assets (such as missing opening hours or photo galleries). For these, DIGI LEAD HUNTER generates a structured client questionnaire (MISSING_INFORMATION.md) so you can conduct a high-value paid discovery audit.",
+          "Priority 3 (Modernization & Redesign): Businesses that have an existing website, but the site is outdated, slow, non-responsive on mobile devices, or lacks direct WhatsApp conversion funnels. The engine flags specific design defects, equipping you with an objective audit pitch to sell a modern redesign."
+        ]
+      },
+      {
+        heading: "1-Click Antigravity AI Agent Prompt Execution (Zero Manual UI Needed)",
+        paragraphs: [
+          "While DIGI LEAD HUNTER comes with a modern FastAPI backend and glassmorphic React control dashboard, its most powerful superpower is direct prompt execution inside the Antigravity AI Agent environment.",
+          "Because DIGI LEAD HUNTER was engineered from the ground up for agentic workflows, you never have to click around in a browser. Inside your Antigravity workspace, you can simply type a single English command:",
+          "\"Extract 100 restaurant leads in Lahore with complete website opportunity packs\"",
+          "Antigravity immediately triggers the 5-phase pipeline directly inside your project workspace:"
+        ],
+        bullets: [
+          "Phase 1 — Automated Batch Directory Creation: Creates dedicated folders (e.g., 'Restaurant_Lahore_Batch_1') directly on your local disk.",
+          "Phase 2 — Master Excel Spreadsheet (.xlsx): Generates a polished Microsoft Excel workbook complete with verified phone numbers, 1-click wa.me chat links, Google Maps coordinates, star ratings, and build-readiness badges.",
+          "Phase 3 — Interactive Opportunity Web Portal (.html): Creates a responsive, searchable HTML dashboard with live category filters, contact buttons, and opportunity summaries.",
+          "Phase 4 — Website Architectural Blueprints: For every Priority-1 business, writes a customized WEBSITE_PLAN.md containing information architecture, hero copy, direct WhatsApp CTAs, and localized SEO keywords.",
+          "Phase 5 — Standalone Client ZIP Archive: Packages the master spreadsheet, evidence reports, developer build brief, and HTML portal into a clean, distributable ZIP file ready for client delivery or team distribution."
+        ]
+      },
+      {
+        heading: "Terminal & CLI Quickstart: Running in 60 Seconds",
+        paragraphs: [
+          "You can also run DIGI LEAD HUNTER directly from your Windows PowerShell or Linux/macOS terminal with a single command:"
+        ],
+        bullets: [
+          "Clone Repository: git clone https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER.git",
+          "Automated Setup (PowerShell): ./scripts/setup.ps1",
+          "Automated Setup (Linux/macOS): chmod +x scripts/*.sh && ./scripts/setup.sh",
+          "Single-Command Lead Hunt: python batch_hunter.py --category \"Restaurant\" --location \"Lahore\" --count 100",
+          "Start Visual Control Center: python run.py (Opens http://localhost:8000)"
+        ]
+      },
+      {
+        heading: "Feature Comparison: Manual Prospecting vs. Cloud Scrapers vs. DIGI LEAD HUNTER",
+        paragraphs: [
+          "Here is how DIGI LEAD HUNTER stacks up against manual Google Maps searches and traditional paid cloud scrapers:"
+        ],
+        table: {
+          headers: ["Capability", "Manual Google Maps Search", "Paid SaaS Scrapers ($150-$250/mo)", "DIGI LEAD HUNTER (Open Source)"],
+          rows: [
+            ["Cost", "Free (but costs 20+ hours/week)", "$1,800 - $3,000 / year recurring", "$0 Free Forever (Source-Available)"],
+            ["Search Speed", "15-20 leads per hour", "Fast (but credit-capped)", "Hundreds of leads in minutes"],
+            ["WhatsApp Validation", "Manual dialing on phone", "Raw phone numbers (unverified)", "Native carrier format verification + 1-click links"],
+            ["Opportunity Tiers", "None (manual guesswork)", "Flat CSV data dump", "3-Tier Qualification (P1 Build-Ready / P2 / P3)"],
+            ["Website Blueprints", "None (write from scratch)", "None", "Automated WEBSITE_PLAN.md & HTML proposals"],
+            ["Deliverable Packaging", "Manual folder creation", "None", "1-Click ZIP archives with master Excel and portal"],
+            ["Antigravity AI Agent Support", "Impossible", "No native agent integration", "Native 1-click prompt-driven execution"]
+          ]
+        }
+      },
+      {
+        heading: "Connecting DIGI LEAD HUNTER to the DIGI BIZ OS Offline CRM",
+        paragraphs: [
+          "The true magic happens when you pair DIGI LEAD HUNTER with DIGI BIZ OS. Once DIGI LEAD HUNTER extracts a batch of verified WhatsApp leads:",
+          "1. Ingest Directly into Digi CRM: The generated Excel sheets and JSON manifests import seamlessly into DIGI BIZ OS's embedded SQLite database.",
+          "2. Autonomous WhatsApp Outreach: The DIGI BIZ OS WhatsApp AI Sales Agent can initiate warm, personalized introductory notes to Priority-1 leads referencing their business name, location, and customized website proposal.",
+          "3. Pipeline & Revenue Tracking: Track deals as they move from 'Contacted' to 'Proposal Sent' to 'Deal Closed', generating invoices and recording payments with zero third-party software subscriptions."
+        ]
+      },
+      {
+        heading: "Frequently Asked Questions (FAQ)",
+        paragraphs: [
+          "Common questions about DIGI LEAD HUNTER and Antigravity lead automation."
+        ]
+      },
+      {
+        heading: "Is DIGI LEAD HUNTER truly free to download and use?",
+        paragraphs: [
+          "Yes. DIGI LEAD HUNTER is published under the DIGIFORMATION LTD Source-Available License. You can download, inspect, run, and modify the code locally for personal use and internal agency client acquisition completely free of charge. Commercial resale or hosting it as a paid SaaS is prohibited."
+        ]
+      },
+      {
+        heading: "Where is the official GitHub repository?",
+        paragraphs: [
+          "You can view, star, fork, and clone the full repository at: https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER.git"
+        ]
+      },
+      {
+        heading: "Does DIGI LEAD HUNTER work in countries outside Pakistan?",
+        paragraphs: [
+          "Yes. DIGI LEAD HUNTER supports global locations including Pakistan (+92), the United Kingdom (+44), the United States (+1), Canada, Australia, and international territories. It automatically detects and formats regional mobile numbers into direct WhatsApp chat URLs."
+        ]
+      },
+      {
+        heading: "How can I get started right now?",
+        paragraphs: [
+          "Visit the dedicated open-source product page at /open-source/digi-lead-hunter or clone the repository directly from GitHub. If you are using DIGI BIZ OS and Antigravity, simply load the project and ask Antigravity to extract your first batch of 100 leads today!"
+        ]
+      }
+    ],
+    links: [
+      { label: "View DIGI LEAD HUNTER Open Source Page", to: "/open-source/digi-lead-hunter" },
+      { label: "Official DIGI LEAD HUNTER GitHub Repository", to: "https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER.git" },
+      { label: "Explore Open Source Suite", to: "/open-source" },
+      { label: "Digi CRM & WhatsApp Agent", to: "/modules/crm" },
+      { label: "Get DIGI BIZ OS Lifetime (£50)", to: "/pricing" }
+    ]
+  },
 ];
 
 export const BLOG_BY_SLUG: Record<string, BlogPost> = Object.fromEntries(

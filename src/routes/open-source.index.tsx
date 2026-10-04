@@ -69,11 +69,12 @@ import janScreenshot from "@/assets/jan-ai-screenshot.jpg";
 import pocketbaseScreenshot from "@/assets/pocketbase-screenshot.webp";
 import tuttleScreenshot from "@/assets/tuttle-screenshot.jpg";
 import upscaylScreenshot from "@/assets/upscayl-screenshot.jpg";
+import leadHunterBanner from "@/assets/digi-lead-hunter-banner.webp";
 
 
 const TITLE = "Free Open Source Software Library & Hub — AI Agents, Media & Tools | DIGI BIZ OS";
 const DESC =
-  "Discover 15+ curated open-source desktop software tools for Windows: Kdenlive, Jan AI, OpenHands, PocketBase, Shotcut, Audacity, Upscayl & more. 100% free, offline, and subscription-free.";
+  "Discover 15+ curated open-source desktop software tools for Windows: DIGI Lead Hunter, Kdenlive, Jan AI, OpenHands, PocketBase, Shotcut, Audacity, Upscayl & more. 100% free, offline, and subscription-free.";
 
 export interface SoftwareItem {
   id: string;
@@ -102,6 +103,36 @@ export interface SoftwareItem {
 }
 
 export const SOFTWARE_LIST: SoftwareItem[] = [
+  {
+    id: "digi-lead-hunter",
+    name: "DIGI LEAD HUNTER — Autonomous AI B2B Lead Engine",
+    category: "Autonomous Agents",
+    tagline: "Autonomous AI opportunity hunter. Stops manual Google Maps searching, validates WhatsApp numbers, and generates complete website blueprints.",
+    license: "Source-Available License",
+    color: "#2FE0C8",
+    icon: Search,
+    image: leadHunterBanner,
+    badge: "Official DIGIFORMATION Product",
+    bundle: "Lead Intelligence & Client Acquisition",
+    bullets: [
+      "No more manual Google Maps hunting — scans local businesses autonomously",
+      "Validates WhatsApp mobile carriers (+92, +44, +1, Global) with 1-click chat links",
+      "3-tier lead classification (P1 Build-Ready / P2 Consultation / P3 Modernization)",
+      "Generates strategic WEBSITE_PLAN.md blueprints, HTML portals & client ZIP packs",
+    ],
+    features: ["1-Click Antigravity Prompt", "Verified WhatsApp", "Zero Scraping Fees"],
+    to: "/open-source/digi-lead-hunter",
+    stars: "Open Source ★",
+    starCount: 50000,
+    savings: "Save $2,500+ / yr",
+    savingsValue: 2500,
+    platforms: ["Windows", "macOS", "Linux"],
+    alternativeTo: ["Outscraper", "D7 Lead Finder", "Manual Maps Scraping"],
+    downloadUrl: OPEN_SOURCE_SUBPAGES["digi-lead-hunter"].downloadUrl,
+    downloadFilename: "DIGI-LEAD-HUNTER-main.zip",
+    repoUrl: OPEN_SOURCE_SUBPAGES["digi-lead-hunter"].repoUrl,
+    featured: true,
+  },
   {
     id: "openhands",
     name: "OpenHands Autonomous AI Engineer",

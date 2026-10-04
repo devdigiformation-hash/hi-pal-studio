@@ -959,4 +959,68 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       ],
     },
   },
+  "digi-lead-hunter": {
+    id: "digi-lead-hunter",
+    name: "DIGI LEAD HUNTER — Autonomous AI B2B Lead & Website Opportunity Platform",
+    shortName: "DIGI Lead Hunter",
+    route: "/open-source/digi-lead-hunter",
+    category: "Lead Intelligence & B2B Automation",
+    tagline: "Autonomous AI agent that stops manual Google Maps searching, extracts verified WhatsApp leads, classifies opportunities into 3 actionable tiers, and generates full website blueprints.",
+    eyebrow: "100% OPEN SOURCE B2B LEAD ENGINE • BUILT BY DIGIFORMATION LTD • ONE-CLICK ANTIGRAVITY EXECUTION",
+    alternativeTo: ["Outscraper ($150/mo)", "D7 Lead Finder ($199/mo)", "Manual Google Maps Scraping"],
+    license: "Source-Available License",
+    licenseDetails: "100% Free for personal use, agency client acquisition, and internal workflows. Sponsored by DIGIFORMATION LTD & DIGI BIZ OS.",
+    stars: "Open Source ★",
+    repoUrl: "https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER.git",
+    downloadUrl: "https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER/archive/refs/heads/main.zip",
+    downloadType: "archive",
+    downloadTypeLabel: "Complete Source Package (.ZIP) & CLI",
+    privacy: "100% Local (Offline)",
+    provenance: "Official open-source lead intelligence product developed and maintained by DIGIFORMATION LTD.",
+    requirements: {
+      os: "Windows 10/11, macOS, Linux, or Antigravity AI Agent",
+      cpu: "Any modern Multi-Core CPU",
+      ram: "4 GB RAM minimum",
+      gpu: "Not required (Lightweight Python/FastAPI/Node engine)",
+      storage: "500 MB free disk space",
+      runtime: "Python 3.10+ & Node.js / React 18 / Antigravity AI Agent",
+    },
+    faqs: [
+      {
+        q: "What is DIGI LEAD HUNTER?",
+        a: "DIGI LEAD HUNTER is an autonomous B2B intelligence and client acquisition platform built by DIGIFORMATION LTD. It eliminates the manual drudgery of hunting businesses on Google Maps by autonomously discovering businesses with high customer ratings and real operational presence but missing or outdated websites.",
+      },
+      {
+        q: "What are the 3 types of leads DIGI LEAD HUNTER extracts?",
+        a: "It classifies every business into 3 actionable tiers: 1) Priority 1 (Build-Ready) — No website, verified WhatsApp carrier number, rich public assets, and ready for immediate proposal; 2) Priority 2 (Consultation) — No website, verified WhatsApp, but limited public assets (generates an onboarding questionnaire checklist); 3) Priority 3 (Modernization) — Has an outdated, broken, or mobile-unfriendly website (generates a targeted redesign pitch).",
+      },
+      {
+        q: "How does 1-click execution with Antigravity work?",
+        a: "In your Antigravity workspace, you can simply type a natural-language prompt like 'Extract 100 restaurant leads in Lahore with complete website opportunity packs'. The agent runs the full 5-phase pipeline, validates WhatsApp numbers, creates master Excel spreadsheets, and bundles opportunity ZIP packs without touching a browser.",
+      },
+      {
+        q: "Does it verify WhatsApp numbers?",
+        a: "Yes. DIGI LEAD HUNTER has a built-in carrier and format validation engine that validates mobile channels for Pakistan (+92), UK (+44), US (+1), and global international carriers, providing one-click direct WhatsApp chat links.",
+      },
+      {
+        q: "What deliverables are included in the generated ZIP package?",
+        a: "For every qualified lead, it generates a complete client-ready pack containing a strategic website blueprint (WEBSITE_PLAN.md & WEBSITE_PLAN.html), developer build brief, evidence report, client question checklist, public asset manifest, and master Excel sheet.",
+      },
+      {
+        q: "Is DIGI LEAD HUNTER really free and open source?",
+        a: "Yes! The full source code is published on GitHub by DIGIFORMATION LTD. You can clone the repository, run it locally on your PC, or integrate it directly into your Digi Biz OS and Antigravity workflow with zero subscription fees.",
+      },
+    ],
+    relatedToolIds: ["pocketbase", "anythingllm", "seo-spider", "openhands"],
+    bridge: {
+      headline: "Connect DIGI LEAD HUNTER Directly to DIGI BIZ OS & Antigravity",
+      description: "DIGI LEAD HUNTER extracts high-converting B2B leads. DIGI BIZ OS and Antigravity automatically ingest these leads into your offline CRM, trigger autonomous WhatsApp outreach, and track your closed deals without monthly SaaS fees.",
+      highlights: [
+        "1-click prompt-driven lead hunting inside Antigravity AI agent",
+        "Direct export into DIGI BIZ OS offline CRM and WhatsApp marketing pipelines",
+        "Automated client opportunity ZIP packaging with website blueprints and proposals",
+        "Zero API costs or scraping subscriptions — 100% sovereign ownership",
+      ],
+    },
+  },
 };

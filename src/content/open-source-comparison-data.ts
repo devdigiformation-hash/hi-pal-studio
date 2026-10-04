@@ -827,5 +827,63 @@ export const OPEN_SOURCE_COMPARISONS: Record<string, OpenSourceComparisonItem> =
         "openSourceWins": true
       }
     ]
+  },
+  "digi-lead-hunter": {
+    "id": "digi-lead-hunter",
+    "name": "DIGI LEAD HUNTER",
+    "category": "Autonomous Lead Intelligence & B2B Opportunity Engine",
+    "paidAlternatives": [
+      "Outscraper B2B ($150/mo = $1,800/yr)",
+      "D7 Lead Finder ($199/mo = $2,388/yr)",
+      "Manual Google Maps & Upwork Scraping ($500+/mo)"
+    ],
+    "marketAnnualCost": "$1,800 - $3,500 / yr",
+    "openSourceCost": "$0 Free Forever (Source-Available License)",
+    "annualSavings": "$2,500+ / year",
+    "license": "Source-Available Open Code (DIGIFORMATION LTD)",
+    "tagline": "Stop manual Google Maps searching and expensive per-lead scraper fees. Run autonomous 3-tier lead qualification with 1-click Antigravity execution.",
+    "pathwayGuide": {
+      "howToRun": "Clone the repository from GitHub or run inside Antigravity agent: 'python batch_hunter.py --category \"Restaurant\" --location \"Lahore\" --count 100'.",
+      "whyFree": "Built, open-sourced, and sponsored by DIGIFORMATION LTD to empower independent developers, agencies, and businesses with sovereign client acquisition.",
+      "osIntegration": "Feeds verified WhatsApp numbers and client opportunities directly into DIGI BIZ OS offline CRM, WhatsApp sales pipelines, and proposal builders."
+    },
+    "matrix": [
+      {
+        "feature": "Annual Software Cost",
+        "openSourceValue": "$0 (Free Forever)",
+        "commercialPaidValue": "$1,800 - $3,500/year (Scraping SaaS)",
+        "openSourceWins": true
+      },
+      {
+        "feature": "Discovery & Scraping Method",
+        "openSourceValue": "Autonomous OSM & Maps API Intelligence",
+        "commercialPaidValue": "Rate-limited cloud scrapers with paid credits",
+        "openSourceWins": true
+      },
+      {
+        "feature": "WhatsApp Number Verification",
+        "openSourceValue": "Native Carrier & Mobile Validation (+92, +44, +1, Global)",
+        "commercialPaidValue": "Unverified raw landlines with dirty data",
+        "openSourceWins": true
+      },
+      {
+        "feature": "3-Tier Lead Categorization",
+        "openSourceValue": "P1 (Build-Ready) / P2 (Consultation) / P3 (Redesign)",
+        "commercialPaidValue": "Flat unsegmented CSV spreadsheet dump",
+        "openSourceWins": true
+      },
+      {
+        "feature": "Automated Deliverable Packs",
+        "openSourceValue": "WEBSITE_PLAN.md, HTML portal, developer briefs & ZIPs",
+        "commercialPaidValue": "None (agency must manually write proposals)",
+        "openSourceWins": true
+      },
+      {
+        "feature": "Antigravity AI Agent 1-Click Execution",
+        "openSourceValue": "1 prompt command in Antigravity generates 100 packs",
+        "commercialPaidValue": "Complex manual dashboard filters",
+        "openSourceWins": true
+      }
+    ]
   }
 };
