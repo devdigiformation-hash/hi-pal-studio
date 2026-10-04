@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -15,6 +16,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import GlobalBackground from "../components/GlobalBackground";
 import { Toaster } from "../components/ui/sonner";
+import { GA_MEASUREMENT_ID, trackPageView } from "../lib/analytics";
 
 function NotFoundComponent() {
   return (
@@ -105,6 +107,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
     ],
     scripts: [
+      {
+        src: `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`,
+        async: true,
+      },
+      {
+        children: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_MEASUREMENT_ID}');`,
+      },
       {
         type: "application/ld+json",
         children: JSON.stringify({
@@ -244,11 +253,22 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+function AnalyticsTracker() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+
+  useEffect(() => {
+    trackPageView(pathname);
+  }, [pathname]);
+
+  return null;
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
+      <AnalyticsTracker />
       <GlobalBackground />
       <Navbar />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}

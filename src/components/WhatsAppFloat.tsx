@@ -1,4 +1,5 @@
 import { WHATSAPP_NUMBER } from "@/lib/payment-config";
+import { trackEvent } from "@/lib/analytics";
 
 export default function WhatsAppFloat() {
   const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
@@ -11,6 +12,12 @@ export default function WhatsAppFloat() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with DIGI BIZ OS on WhatsApp"
+      onClick={() => {
+        trackEvent("whatsapp_click", {
+          source: "floating_button",
+          phone: WHATSAPP_NUMBER,
+        });
+      }}
       className="group fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full shadow-[0_10px_40px_-8px_rgba(37,211,102,0.7)] transition-transform duration-300 hover:scale-110"
       style={{ background: "#25D366" }}
     >
