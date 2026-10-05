@@ -15,6 +15,7 @@ import {
   FileText,
   Globe,
   HardDrive,
+  Github,
   ImageIcon,
   Key,
   Layers,
@@ -894,6 +895,117 @@ function OpenSourcePage() {
         </div>
       </SectionWrapper>
 
+      {/* ── 1.5 OFFICIAL FLAGSHIP SPOTLIGHT: DIGI LEAD HUNTER ──── */}
+      {!hasActiveFilters && (
+        <SectionWrapper className="pt-2 pb-8">
+          <div className="mx-auto max-w-[1240px]">
+            <div className="relative overflow-hidden rounded-3xl border border-cyan-500/40 bg-gradient-to-b from-[#0B1528] via-[#060D1E] to-[#030712] p-6 shadow-[0_0_50px_rgba(47,224,200,0.15)] md:p-10">
+              {/* Subtle ambient glow */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute -right-20 -top-20 h-96 w-96 rounded-full bg-cyan-500/20 blur-[100px]"
+              />
+
+              <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+                <div className="relative z-10">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-400/40 bg-cyan-500/10 px-3 py-1 font-mono text-[11px] font-bold uppercase tracking-wider text-cyan-300">
+                      <ActivePulse size={6} />
+                      Official Open-Source Flagship
+                    </span>
+                    <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[11px] font-semibold text-emerald-400">
+                      100% Free Forever
+                    </span>
+                    <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 font-mono text-[11px] text-zinc-400">
+                      Source-Available
+                    </span>
+                  </div>
+
+                  <h2 className="mt-4 font-display text-[26px] font-extrabold leading-[1.15] tracking-[-0.03em] text-white sm:text-[34px] md:text-[40px]">
+                    DIGI LEAD HUNTER{" "}
+                    <span className="block text-[var(--cyan)]">
+                      Autonomous AI B2B Lead &amp; Website Opportunity Engine
+                    </span>
+                  </h2>
+
+                  <p className="mt-4 max-w-[620px] font-body text-[14.5px] leading-[1.75] text-zinc-300 md:text-[16px]">
+                    Developed &amp; open-sourced by <strong>DIGIFORMATION LTD</strong>. Eliminates manual Google Maps searches by autonomously scanning businesses, verifying WhatsApp numbers across global carriers (+92, +44, +1), classifying leads into 3 opportunity tiers, and generating turn-key website blueprints in seconds.
+                  </p>
+
+                  {/* Feature Checklist */}
+                  <div className="mt-5 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+                    <div className="flex items-center gap-2 font-mono text-[12px] text-zinc-200">
+                      <CheckCircle2 size={15} className="text-cyan-400 shrink-0" />
+                      <span>Zero monthly scraper subscriptions</span>
+                    </div>
+                    <div className="flex items-center gap-2 font-mono text-[12px] text-zinc-200">
+                      <CheckCircle2 size={15} className="text-cyan-400 shrink-0" />
+                      <span>Verified WhatsApp carrier routing</span>
+                    </div>
+                    <div className="flex items-center gap-2 font-mono text-[12px] text-zinc-200">
+                      <CheckCircle2 size={15} className="text-cyan-400 shrink-0" />
+                      <span>P1 Build-Ready, P2 &amp; P3 Lead Tiers</span>
+                    </div>
+                    <div className="flex items-center gap-2 font-mono text-[12px] text-zinc-200">
+                      <CheckCircle2 size={15} className="text-cyan-400 shrink-0" />
+                      <span>1-Click Antigravity prompt execution</span>
+                    </div>
+                  </div>
+
+                  {/* Action buttons */}
+                  <div className="mt-7 flex flex-wrap items-center gap-3">
+                    <a
+                      href="https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2.5 rounded-xl border border-cyan-400 bg-cyan-400 px-5 py-3 font-mono text-[13px] font-bold text-black shadow-[0_0_25px_rgba(47,224,200,0.35)] transition-all hover:bg-cyan-300 hover:shadow-[0_0_35px_rgba(47,224,200,0.5)]"
+                    >
+                      <Github size={17} />
+                      <span>Get on GitHub (Direct Repo)</span>
+                      <ExternalLink size={13} className="opacity-70" />
+                    </a>
+
+                    <Link
+                      to="/open-source/digi-lead-hunter"
+                      className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3 font-mono text-[13px] font-semibold text-white transition hover:border-cyan-400 hover:bg-white/10"
+                    >
+                      <span>Read Full Specifications &amp; Blueprints</span>
+                      <ArrowRight size={14} className="text-cyan-400" />
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Visual Showcase (Screenshots Preview) */}
+                <div className="relative">
+                  <div className="overflow-hidden rounded-2xl border border-white/15 bg-black/60 shadow-2xl backdrop-blur-md">
+                    <img
+                      src={leadHunterBanner}
+                      alt="DIGI LEAD HUNTER interface and pipeline preview"
+                      width={800}
+                      height={450}
+                      className="h-auto w-full object-cover"
+                      loading="eager"
+                    />
+                    <div className="border-t border-white/10 bg-[#060B16] p-4">
+                      <div className="flex items-center justify-between text-xs font-mono text-zinc-400">
+                        <span className="flex items-center gap-1.5 text-cyan-300">
+                          <Terminal size={13} />
+                          <span>Antigravity CLI &amp; Prompt Runner</span>
+                        </span>
+                        <span className="text-emerald-400 font-semibold">Live on GitHub</span>
+                      </div>
+                      <div className="mt-2.5 rounded-lg border border-white/10 bg-black/80 px-3 py-2 font-mono text-[12px] text-zinc-300 overflow-x-auto">
+                        <span className="text-cyan-400">$</span> python batch_hunter.py --category &quot;Restaurant&quot; --location &quot;Lahore&quot; --count 100
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SectionWrapper>
+      )}
+
       {/* ── 2. FEATURED FLAGSHIP SPOTLIGHT (3 Top Community Leaders) ──── */}
       {!hasActiveFilters && (
         <SectionWrapper className="py-6 md:py-10 bg-gradient-to-b from-transparent via-[#060A14]/40 to-transparent">
@@ -969,7 +1081,17 @@ function OpenSourcePage() {
                     </div>
 
                     <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
-                      {feat.downloadUrl ? (
+                      {feat.id === "digi-lead-hunter" ? (
+                        <a
+                          href="https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5 rounded-lg border border-cyan-500/40 bg-cyan-500/15 px-3 py-1.5 font-mono text-[11px] font-bold text-cyan-300 transition hover:bg-cyan-500/25 hover:border-cyan-400"
+                        >
+                          <Github size={13} />
+                          <span>GitHub Repo</span>
+                        </a>
+                      ) : feat.downloadUrl ? (
                         <a
                           href={feat.downloadUrl}
                           target="_blank"
@@ -1253,7 +1375,17 @@ function OpenSourcePage() {
 
                       {/* Dual Action Footer */}
                       <div className="mt-6 border-t border-white/10 pt-4 flex items-center justify-between gap-3">
-                        {s.downloadUrl ? (
+                        {s.id === "digi-lead-hunter" ? (
+                          <a
+                            href="https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1.5 rounded-lg border border-cyan-500/40 bg-cyan-500/15 px-3 py-1.5 font-mono text-[11px] font-bold text-cyan-300 transition-all hover:bg-cyan-500/25 hover:border-cyan-400 hover:shadow-[0_0_12px_rgba(47,224,200,0.3)]"
+                          >
+                            <Github size={13} />
+                            <span>GitHub Repo</span>
+                          </a>
+                        ) : s.downloadUrl ? (
                           <a
                             href={s.downloadUrl}
                             target="_blank"
