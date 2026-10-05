@@ -1,8 +1,7 @@
 {
-  "framework": "vite",
-  "bunVersion": "1.x",
-  "buildCommand": "bun run build",
-  "outputDirectory": ".vercel/output/static",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "tanstack-start",
+  "buildCommand": "vite build",
   "env": {
     "NITRO_PRESET": "vercel"
   }
