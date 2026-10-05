@@ -40,6 +40,7 @@
 
 ## Open Source Software Suite (/open-source/*)
 Pre-configured, subscription-free open-source utilities integrated into the DIGI BIZ OS ecosystem:
+- [DIGI LEAD HUNTER](https://www.digibizos.co.uk/open-source/digi-lead-hunter): Autonomous Google Maps B2B lead generation pipeline and client qualification engine.
 - [OpenHands](https://www.digibizos.co.uk/open-source/openhands): Autonomous AI software engineer (free open-source Devin alternative).
 - [OpenClaw](https://www.digibizos.co.uk/open-source/openclaw): Autonomous desktop agent (free Claude Computer-Use alternative).
 - [Hermes Agent](https://www.digibizos.co.uk/open-source/hermes-agent): Function-calling reasoning agent with offline tool execution.

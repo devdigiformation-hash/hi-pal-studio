@@ -66,6 +66,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.digibizos.co.uk/open-source/digi-lead-hunter</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.digibizos.co.uk/open-source/openhands</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

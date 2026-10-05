@@ -266,10 +266,10 @@ function DigiLeadHunterPage() {
   return (
     <main className="min-h-screen pt-[60px] md:pt-[72px]">
       <Breadcrumbs
-        items={[
-          { label: "Home", href: "/" },
-          { label: "Open-Source Suite", href: "/open-source" },
-          { label: "DIGI LEAD HUNTER", href: "/open-source/digi-lead-hunter" },
+        trail={[
+          { name: "Home", path: "/" },
+          { name: "Open-Source Suite", path: "/open-source" },
+          { name: "DIGI LEAD HUNTER", path: "/open-source/digi-lead-hunter" },
         ]}
       />
 
