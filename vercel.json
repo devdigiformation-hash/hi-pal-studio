@@ -1,5 +1,6 @@
 {
   "framework": "vite",
+  "bunVersion": "1.x",
   "buildCommand": "bun run build",
   "outputDirectory": ".vercel/output/static",
   "env": {
