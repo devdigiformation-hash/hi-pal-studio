@@ -43,6 +43,7 @@ import OpenSourceSubpageFaq from "@/components/seo/OpenSourceSubpageFaq";
 import OpenSourceTechSpecs from "@/components/seo/OpenSourceTechSpecs";
 import OpenSourceRelatedTools from "@/components/seo/OpenSourceRelatedTools";
 import OpenSourceDigiBizBridge from "@/components/seo/OpenSourceDigiBizBridge";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
 import bannerWebp from "@/assets/digi-lead-hunter-banner.webp";
 import dashboardScreen from "@/assets/digi-lead-hunter-dashboard.png";
@@ -256,6 +257,7 @@ export const Route = createFileRoute("/open-source/digi-lead-hunter")({
 function DigiLeadHunterPage() {
   const [copied, setCopied] = useState(false);
   const [activeTab, setActiveTab] = useState<"dashboard" | "find">("dashboard");
+  useScrollReveal();
 
   const copyCloneCommand = () => {
     navigator.clipboard.writeText("git clone https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER.git");
@@ -289,19 +291,19 @@ function DigiLeadHunterPage() {
               </span>
             </div>
 
-            <h1 className="reveal-item delay-1 mt-4 font-display text-[26px] xs:text-[30px] font-extrabold leading-[1.15] tracking-[-0.035em] text-[var(--text-primary)] sm:text-[40px] md:text-[50px] break-words">
+            <h1 className="mt-4 font-display text-[26px] xs:text-[30px] font-extrabold leading-[1.15] tracking-[-0.035em] text-[var(--text-primary)] sm:text-[40px] md:text-[50px] break-words">
               DIGI LEAD HUNTER —{" "}
               <GradientText from="#2FE0C8" to="#38BDF8">
                 Autonomous B2B Lead &amp; Website Opportunity Engine
               </GradientText>
             </h1>
 
-            <p className="answer reveal-item delay-2 mt-4 sm:mt-5 max-w-[640px] font-body text-[14px] leading-[1.75] text-[var(--text-secondary)] sm:text-[15px] md:text-[17px]">
+            <p className="answer mt-4 sm:mt-5 max-w-[640px] font-body text-[14px] leading-[1.75] text-[var(--text-secondary)] sm:text-[15px] md:text-[17px]">
               Say goodbye to manual Google Maps copy-pasting. DIGI LEAD HUNTER autonomously scans local businesses, verifies direct WhatsApp mobile numbers, classifies leads into 3 opportunity tiers, and generates full website blueprints and client opportunity ZIPs in seconds.
             </p>
 
             {/* Direct GitHub Redirect Action Buttons */}
-            <div className="reveal-item delay-3 mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full">
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full">
               <a
                 href={GITHUB_REPO_URL}
                 target="_blank"

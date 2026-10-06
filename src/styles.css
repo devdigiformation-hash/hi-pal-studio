@@ -526,6 +526,12 @@ body {
   opacity: 1;
   transform: none;
 }
+@media (max-width: 640px) {
+  .reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
 .delay-1 {
   transition-delay: 0.1s;
 }
