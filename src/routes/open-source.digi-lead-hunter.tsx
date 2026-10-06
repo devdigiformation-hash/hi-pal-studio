@@ -274,74 +274,74 @@ function DigiLeadHunterPage() {
       />
 
       {/* ── 1. HERO SECTION ─────────────────────────────────── */}
-      <SectionWrapper className="relative overflow-hidden py-12 md:py-16">
-        <div className="mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-          <div>
+      <SectionWrapper className="relative overflow-hidden py-8 sm:py-12 md:py-16">
+        <div className="mx-auto grid max-w-[1240px] items-center gap-8 sm:gap-12 lg:grid-cols-[1.1fr_0.9fr] w-full min-w-0">
+          <div className="w-full min-w-0">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-400/40 bg-cyan-500/10 px-3 py-1 font-mono text-[11px] font-bold uppercase tracking-wider text-cyan-300">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-400/40 bg-cyan-500/10 px-3 py-1 font-mono text-[10.5px] sm:text-[11px] font-bold uppercase tracking-wider text-cyan-300">
                 Official DIGIFORMATION LTD Release
               </span>
-              <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[11px] font-semibold text-emerald-400">
+              <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[10.5px] sm:text-[11px] font-semibold text-emerald-400">
                 100% Free Forever
               </span>
-              <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 font-mono text-[11px] text-zinc-400">
+              <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 font-mono text-[10.5px] sm:text-[11px] text-zinc-400">
                 Source-Available
               </span>
             </div>
 
-            <h1 className="reveal-item delay-1 mt-4 font-display text-[32px] font-extrabold leading-[1.1] tracking-[-0.035em] text-[var(--text-primary)] sm:text-[42px] md:text-[50px]">
+            <h1 className="reveal-item delay-1 mt-4 font-display text-[26px] xs:text-[30px] font-extrabold leading-[1.15] tracking-[-0.035em] text-[var(--text-primary)] sm:text-[40px] md:text-[50px] break-words">
               DIGI LEAD HUNTER —{" "}
               <GradientText from="#2FE0C8" to="#38BDF8">
                 Autonomous B2B Lead &amp; Website Opportunity Engine
               </GradientText>
             </h1>
 
-            <p className="answer reveal-item delay-2 mt-5 max-w-[640px] font-body text-[15px] leading-[1.8] text-[var(--text-secondary)] md:text-[17px]">
+            <p className="answer reveal-item delay-2 mt-4 sm:mt-5 max-w-[640px] font-body text-[14px] leading-[1.75] text-[var(--text-secondary)] sm:text-[15px] md:text-[17px]">
               Say goodbye to manual Google Maps copy-pasting. DIGI LEAD HUNTER autonomously scans local businesses, verifies direct WhatsApp mobile numbers, classifies leads into 3 opportunity tiers, and generates full website blueprints and client opportunity ZIPs in seconds.
             </p>
 
             {/* Direct GitHub Redirect Action Buttons */}
-            <div className="reveal-item delay-3 mt-8 flex flex-wrap items-center gap-4">
+            <div className="reveal-item delay-3 mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full">
               <a
                 href={GITHUB_REPO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 rounded-xl border border-cyan-400 bg-cyan-400 px-6 py-3.5 font-mono text-[14px] font-bold text-black shadow-[0_0_25px_rgba(47,224,200,0.35)] transition-all hover:bg-cyan-300 hover:shadow-[0_0_35px_rgba(47,224,200,0.5)]"
+                className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-cyan-400 bg-cyan-400 px-5 sm:px-6 py-3.5 font-mono text-[13.5px] sm:text-[14px] font-bold text-black shadow-[0_0_25px_rgba(47,224,200,0.35)] transition-all hover:bg-cyan-300 hover:shadow-[0_0_35px_rgba(47,224,200,0.5)]"
               >
-                <Github size={19} />
+                <Github size={19} className="shrink-0" />
                 <span>View &amp; Clone on GitHub</span>
-                <ExternalLink size={14} className="opacity-70" />
+                <ExternalLink size={14} className="opacity-70 shrink-0" />
               </a>
 
               <a
                 href={DOWNLOAD_ZIP_URL}
                 download="DIGI-LEAD-HUNTER-main.zip"
-                className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3.5 font-mono text-[13.5px] font-semibold text-white transition hover:border-cyan-400 hover:bg-white/10"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 sm:px-5 py-3.5 font-mono text-[13px] sm:text-[13.5px] font-semibold text-white transition hover:border-cyan-400 hover:bg-white/10"
               >
-                <Download size={16} className="text-cyan-400" />
+                <Download size={16} className="text-cyan-400 shrink-0" />
                 <span>Download Source ZIP</span>
               </a>
             </div>
 
             {/* Quick Clone Snippet */}
-            <div className="mt-5 flex items-center gap-2 max-w-[540px]">
-              <div className="flex-1 rounded-lg border border-white/10 bg-black/60 px-3 py-2 font-mono text-[12px] text-zinc-300 truncate">
+            <div className="mt-5 flex items-center gap-2 w-full max-w-[540px] min-w-0">
+              <div className="flex-1 min-w-0 rounded-lg border border-white/10 bg-black/60 px-3 py-2 font-mono text-[11px] sm:text-[12px] text-zinc-300 truncate">
                 <span className="text-cyan-400">$</span> git clone https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER.git
               </div>
               <button
                 type="button"
                 onClick={copyCloneCommand}
                 aria-label="Copy git clone command"
-                className="flex items-center gap-1 rounded-lg border border-white/15 bg-white/5 px-3 py-2 font-mono text-[11px] text-zinc-300 hover:text-white hover:bg-white/10 transition"
+                className="shrink-0 flex items-center gap-1 rounded-lg border border-white/15 bg-white/5 px-2.5 sm:px-3 py-2 font-mono text-[11px] text-zinc-300 hover:text-white hover:bg-white/10 transition"
               >
                 {copied ? <Check size={14} className="text-emerald-400" /> : <Copy size={14} />}
                 <span>{copied ? "Copied" : "Copy"}</span>
               </button>
             </div>
 
-            <div className="mt-4 flex flex-wrap items-center gap-3 font-mono text-[12px] text-zinc-400">
+            <div className="mt-4 flex flex-wrap items-center gap-2 sm:gap-3 font-mono text-[11px] sm:text-[12px] text-zinc-400">
               <span className="flex items-center gap-1 text-emerald-400">
-                <CheckCircle2 size={13} />
+                <CheckCircle2 size={13} className="shrink-0" />
                 <span>Verified Clean Source Code</span>
               </span>
               <span>•</span>
@@ -397,11 +397,11 @@ function DigiLeadHunterPage() {
             </p>
 
             {/* Tab switchers */}
-            <div className="mt-6 flex items-center justify-center gap-3">
+            <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-3 w-full max-w-[500px] mx-auto">
               <button
                 type="button"
                 onClick={() => setActiveTab("dashboard")}
-                className={`rounded-xl px-4 py-2 font-mono text-[13px] font-semibold transition ${
+                className={`rounded-xl px-4 py-2.5 font-mono text-[12.5px] sm:text-[13px] font-semibold transition ${
                   activeTab === "dashboard"
                     ? "bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 shadow-[0_0_15px_rgba(47,224,200,0.2)]"
                     : "bg-white/5 text-zinc-400 border border-white/10 hover:text-white"
@@ -412,7 +412,7 @@ function DigiLeadHunterPage() {
               <button
                 type="button"
                 onClick={() => setActiveTab("find")}
-                className={`rounded-xl px-4 py-2 font-mono text-[13px] font-semibold transition ${
+                className={`rounded-xl px-4 py-2.5 font-mono text-[12.5px] sm:text-[13px] font-semibold transition ${
                   activeTab === "find"
                     ? "bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 shadow-[0_0_15px_rgba(47,224,200,0.2)]"
                     : "bg-white/5 text-zinc-400 border border-white/10 hover:text-white"
@@ -424,7 +424,7 @@ function DigiLeadHunterPage() {
           </div>
 
           {/* Screenshot container */}
-          <div className="mt-8 overflow-hidden rounded-2xl border border-white/15 bg-black/80 p-2 shadow-2xl">
+          <div className="mt-8 overflow-hidden rounded-2xl border border-white/15 bg-black/80 p-1.5 sm:p-2 shadow-2xl w-full">
             {activeTab === "dashboard" ? (
               <div>
                 <img
@@ -434,9 +434,9 @@ function DigiLeadHunterPage() {
                   height={800}
                   className="rounded-xl w-full h-auto object-cover border border-white/10"
                 />
-                <div className="p-4 flex items-center justify-between text-xs font-mono text-zinc-400">
-                  <span>Dashboard View: Shows total leads, build-ready opportunities, verified WhatsApp rates, and active batch packages.</span>
-                  <a href={GITHUB_REPO_URL} target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:underline flex items-center gap-1">
+                <div className="p-3 sm:p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs font-mono text-zinc-400">
+                  <span className="leading-relaxed">Dashboard View: Shows total leads, build-ready opportunities, verified WhatsApp rates, and active batch packages.</span>
+                  <a href={GITHUB_REPO_URL} target="_blank" rel="noopener noreferrer" className="shrink-0 text-cyan-300 hover:underline flex items-center gap-1 font-semibold">
                     <span>View Repository</span>
                     <ExternalLink size={12} />
                   </a>
@@ -451,9 +451,9 @@ function DigiLeadHunterPage() {
                   height={800}
                   className="rounded-xl w-full h-auto object-cover border border-white/10"
                 />
-                <div className="p-4 flex items-center justify-between text-xs font-mono text-zinc-400">
-                  <span>Lead Finder View: Filter by industry category, city, search radius, verified WhatsApp numbers, and no-website criteria.</span>
-                  <a href={GITHUB_REPO_URL} target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:underline flex items-center gap-1">
+                <div className="p-3 sm:p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs font-mono text-zinc-400">
+                  <span className="leading-relaxed">Lead Finder View: Filter by industry category, city, search radius, verified WhatsApp numbers, and no-website criteria.</span>
+                  <a href={GITHUB_REPO_URL} target="_blank" rel="noopener noreferrer" className="shrink-0 text-cyan-300 hover:underline flex items-center gap-1 font-semibold">
                     <span>View Repository</span>
                     <ExternalLink size={12} />
                   </a>
@@ -771,24 +771,24 @@ function DigiLeadHunterPage() {
             DIGI LEAD HUNTER is 100% free and open-source. Clone the repository directly from GitHub, run it locally on your PC, or execute it seamlessly with Antigravity AI Agent inside DIGI BIZ OS.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full max-w-[560px] mx-auto">
             <a
               href={GITHUB_REPO_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 rounded-xl border border-cyan-400 bg-cyan-400 px-7 py-4 font-mono text-[14.5px] font-bold text-black shadow-[0_0_30px_rgba(47,224,200,0.4)] transition-all hover:bg-cyan-300 hover:shadow-[0_0_40px_rgba(47,224,200,0.6)]"
+              className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-cyan-400 bg-cyan-400 px-6 sm:px-7 py-3.5 sm:py-4 font-mono text-[13.5px] sm:text-[14.5px] font-bold text-black shadow-[0_0_30px_rgba(47,224,200,0.4)] transition-all hover:bg-cyan-300 hover:shadow-[0_0_40px_rgba(47,224,200,0.6)]"
             >
-              <Github size={20} />
+              <Github size={19} className="shrink-0" />
               <span>Get on GitHub (Direct Repo)</span>
-              <ExternalLink size={15} className="opacity-75" />
+              <ExternalLink size={15} className="opacity-75 shrink-0" />
             </a>
 
             <a
               href={DOWNLOAD_ZIP_URL}
               download="DIGI-LEAD-HUNTER-main.zip"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-4 font-mono text-[14px] font-semibold text-white transition hover:border-cyan-400 hover:bg-white/10"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 sm:px-6 py-3.5 sm:py-4 font-mono text-[13px] sm:text-[14px] font-semibold text-white transition hover:border-cyan-400 hover:bg-white/10"
             >
-              <Download size={17} className="text-cyan-400" />
+              <Download size={17} className="text-cyan-400 shrink-0" />
               <span>Download Source Package (.ZIP)</span>
             </a>
           </div>

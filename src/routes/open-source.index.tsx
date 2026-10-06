@@ -899,36 +899,36 @@ function OpenSourcePage() {
       {!hasActiveFilters && (
         <SectionWrapper className="pt-2 pb-8">
           <div className="mx-auto max-w-[1240px]">
-            <div className="relative overflow-hidden rounded-3xl border border-cyan-500/40 bg-gradient-to-b from-[#0B1528] via-[#060D1E] to-[#030712] p-6 shadow-[0_0_50px_rgba(47,224,200,0.15)] md:p-10">
+            <div className="relative overflow-hidden rounded-3xl border border-cyan-500/40 bg-gradient-to-b from-[#0B1528] via-[#060D1E] to-[#030712] p-4 sm:p-6 md:p-10 shadow-[0_0_50px_rgba(47,224,200,0.15)] w-full">
               {/* Subtle ambient glow */}
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute -right-20 -top-20 h-96 w-96 rounded-full bg-cyan-500/20 blur-[100px]"
               />
 
-              <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-                <div className="relative z-10">
+              <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] w-full min-w-0">
+                <div className="relative z-10 w-full min-w-0">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-400/40 bg-cyan-500/10 px-3 py-1 font-mono text-[11px] font-bold uppercase tracking-wider text-cyan-300">
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-400/40 bg-cyan-500/10 px-3 py-1 font-mono text-[10.5px] sm:text-[11px] font-bold uppercase tracking-wider text-cyan-300">
                       <ActivePulse size={6} />
                       Official Open-Source Flagship
                     </span>
-                    <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[11px] font-semibold text-emerald-400">
+                    <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[10.5px] sm:text-[11px] font-semibold text-emerald-400">
                       100% Free Forever
                     </span>
-                    <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 font-mono text-[11px] text-zinc-400">
+                    <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 font-mono text-[10.5px] sm:text-[11px] text-zinc-400">
                       Source-Available
                     </span>
                   </div>
 
-                  <h2 className="mt-4 font-display text-[26px] font-extrabold leading-[1.15] tracking-[-0.03em] text-white sm:text-[34px] md:text-[40px]">
+                  <h2 className="mt-4 font-display text-[24px] xs:text-[26px] font-extrabold leading-[1.15] tracking-[-0.03em] text-white sm:text-[34px] md:text-[40px] break-words">
                     DIGI LEAD HUNTER{" "}
                     <span className="block text-[var(--cyan)]">
                       Autonomous AI B2B Lead &amp; Website Opportunity Engine
                     </span>
                   </h2>
 
-                  <p className="mt-4 max-w-[620px] font-body text-[14.5px] leading-[1.75] text-zinc-300 md:text-[16px]">
+                  <p className="mt-4 max-w-[620px] font-body text-[14px] leading-[1.75] text-zinc-300 sm:text-[14.5px] md:text-[16px]">
                     Developed &amp; open-sourced by <strong>DIGIFORMATION LTD</strong>. Eliminates manual Google Maps searches by autonomously scanning businesses, verifying WhatsApp numbers across global carriers (+92, +44, +1), classifying leads into 3 opportunity tiers, and generating turn-key website blueprints in seconds.
                   </p>
 
@@ -953,24 +953,24 @@ function OpenSourcePage() {
                   </div>
 
                   {/* Action buttons */}
-                  <div className="mt-7 flex flex-wrap items-center gap-3">
+                  <div className="mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full">
                     <a
                       href="https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2.5 rounded-xl border border-cyan-400 bg-cyan-400 px-5 py-3 font-mono text-[13px] font-bold text-black shadow-[0_0_25px_rgba(47,224,200,0.35)] transition-all hover:bg-cyan-300 hover:shadow-[0_0_35px_rgba(47,224,200,0.5)]"
+                      className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-cyan-400 bg-cyan-400 px-5 py-3.5 font-mono text-[13px] font-bold text-black shadow-[0_0_25px_rgba(47,224,200,0.35)] transition-all hover:bg-cyan-300 hover:shadow-[0_0_35px_rgba(47,224,200,0.5)]"
                     >
-                      <Github size={17} />
+                      <Github size={17} className="shrink-0" />
                       <span>Get on GitHub (Direct Repo)</span>
-                      <ExternalLink size={13} className="opacity-70" />
+                      <ExternalLink size={13} className="opacity-70 shrink-0" />
                     </a>
 
                     <Link
                       to="/open-source/digi-lead-hunter"
-                      className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3 font-mono text-[13px] font-semibold text-white transition hover:border-cyan-400 hover:bg-white/10"
+                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3.5 font-mono text-[13px] font-semibold text-white transition hover:border-cyan-400 hover:bg-white/10"
                     >
                       <span>Read Full Specifications &amp; Blueprints</span>
-                      <ArrowRight size={14} className="text-cyan-400" />
+                      <ArrowRight size={14} className="text-cyan-400 shrink-0" />
                     </Link>
                   </div>
                 </div>

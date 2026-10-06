@@ -364,8 +364,8 @@ export default function SubPageComparisonChart({
         </div>
       </div>
 
-      <div className="mt-8">
-        <GlassCard className="overflow-x-auto p-0 border-white/10 shadow-xl">
+      <div className="mt-8 w-full max-w-full overflow-hidden">
+        <GlassCard className="w-full max-w-full overflow-x-auto p-0 border-white/10 shadow-xl">
           <table className="w-full min-w-[720px] border-collapse text-left">
             <thead>
               <tr className="border-b border-white/10 bg-white/[0.02]">

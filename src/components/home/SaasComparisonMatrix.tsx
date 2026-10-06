@@ -127,8 +127,8 @@ export default function SaasComparisonMatrix() {
         </div>
 
         {/* Comparison Table */}
-        <div className="mt-8">
-          <GlassCard className="overflow-x-auto p-0 border-white/10 shadow-2xl">
+        <div className="mt-8 w-full max-w-full overflow-hidden">
+          <GlassCard className="w-full max-w-full overflow-x-auto p-0 border-white/10 shadow-2xl">
             <table className="w-full min-w-[760px] border-collapse text-left">
               <thead>
                 <tr className="border-b border-white/10 bg-white/[0.03]">

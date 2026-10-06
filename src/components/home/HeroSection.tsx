@@ -112,13 +112,13 @@ function RotatingPrefix() {
   return (
     <span className="relative inline-grid align-bottom">
       {/* invisible sizer keeps layout stable — no reflow across prefix changes */}
-      <span aria-hidden className="invisible col-start-1 row-start-1 whitespace-pre">
+      <span aria-hidden className="invisible col-start-1 row-start-1 whitespace-normal sm:whitespace-pre">
         {longestPrefix}{" "}
       </span>
       <motion.span
         key={i}
         aria-live="polite"
-        className="col-start-1 row-start-1 inline-block whitespace-pre"
+        className="col-start-1 row-start-1 inline-block whitespace-normal sm:whitespace-pre"
         initial={{ opacity: 0, y: "0.3em" }}
         animate={out ? { opacity: 0, y: "-0.25em" } : { opacity: 1, y: 0 }}
         transition={{ duration: out ? 0.3 : 0.45, ease: [0.22, 1, 0.36, 1] }}
@@ -181,12 +181,13 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-10 md:gap-12 lg:grid-cols-[55%_45%] lg:gap-16">
+      <div className="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-10 md:gap-12 lg:grid-cols-[55%_45%] lg:gap-16 min-w-0">
         {/* LEFT */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          className="w-full min-w-0"
         >
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -196,14 +197,14 @@ export default function HeroSection() {
           >
             <ActivePulse />
             <span
-              className="font-display text-[12px] font-semibold uppercase text-[var(--cyan)]"
-              style={{ letterSpacing: "0.16em" }}
+              className="font-display text-[11px] sm:text-[12px] font-semibold uppercase text-[var(--cyan)]"
+              style={{ letterSpacing: "0.14em" }}
             >
               90%+ Modules AI-Integrated • Universal Voice Assistant Everywhere
             </span>
           </motion.div>
 
-          <h1 className="mt-5 font-display text-[36px] font-bold leading-[1.08] tracking-[-0.035em] text-[var(--text-primary)] sm:text-[44px] md:text-[54px] lg:text-[60px] xl:text-[66px]">
+          <h1 className="mt-4 sm:mt-5 font-display text-[26px] xs:text-[30px] font-bold leading-[1.12] tracking-[-0.035em] text-[var(--text-primary)] sm:text-[44px] md:text-[54px] lg:text-[60px] xl:text-[66px] break-words">
             DIGI BIZ OS — <RotatingPrefix />
             <motion.span
               initial={{ opacity: 0, y: 30 }}

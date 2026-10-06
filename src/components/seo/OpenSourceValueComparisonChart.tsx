@@ -25,7 +25,7 @@ export default function OpenSourceValueComparisonChart({
   if (!data) return null;
 
   return (
-    <section className="relative my-16 overflow-hidden rounded-[20px] border border-[rgba(47,224,200,0.18)] bg-[rgba(13,17,23,0.85)] p-6 backdrop-blur-xl md:p-10">
+    <section className="relative my-8 sm:my-16 overflow-hidden rounded-[20px] border border-[rgba(47,224,200,0.18)] bg-[rgba(13,17,23,0.85)] p-4 sm:p-6 md:p-10 backdrop-blur-xl w-full max-w-full">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full opacity-20 blur-3xl"
@@ -109,15 +109,15 @@ export default function OpenSourceValueComparisonChart({
         </div>
 
         {/* Feature-by-Feature Value Table */}
-        <div className="mt-10 overflow-x-auto rounded-[14px] border border-[var(--border-subtle)] bg-[rgba(15,20,30,0.6)]">
+        <div className="mt-8 sm:mt-10 overflow-x-auto rounded-[14px] border border-[var(--border-subtle)] bg-[rgba(15,20,30,0.6)] w-full max-w-full">
           <table className="w-full min-w-[640px] border-collapse text-left font-body text-[13.5px]">
             <thead>
               <tr className="border-b border-[var(--border-subtle)] bg-[rgba(255,255,255,0.03)] text-[12.5px] uppercase tracking-wider text-[var(--text-muted)]">
-                <th className="py-3.5 px-5 font-display">Key Capability</th>
-                <th className="py-3.5 px-5 font-display text-[var(--cyan)]">
+                <th className="py-3.5 px-4 sm:px-5 font-display">Key Capability</th>
+                <th className="py-3.5 px-4 sm:px-5 font-display text-[var(--cyan)]">
                   {data.name} (Open-Source)
                 </th>
-                <th className="py-3.5 px-5 font-display text-[#F5A623]">
+                <th className="py-3.5 px-4 sm:px-5 font-display text-[#F5A623]">
                   Commercial Paid Competitors
                 </th>
               </tr>
@@ -125,16 +125,16 @@ export default function OpenSourceValueComparisonChart({
             <tbody className="divide-y divide-[rgba(255,255,255,0.05)]">
               {data.matrix.map((row) => (
                 <tr key={row.feature} className="transition-colors hover:bg-[rgba(255,255,255,0.02)]">
-                  <td className="py-3.5 px-5 font-medium text-[var(--text-primary)]">
+                  <td className="py-3.5 px-4 sm:px-5 font-medium text-[var(--text-primary)]">
                     {row.feature}
                   </td>
-                  <td className="py-3.5 px-5 text-[var(--cyan)] font-semibold">
+                  <td className="py-3.5 px-4 sm:px-5 text-[var(--cyan)] font-semibold">
                     <div className="flex items-center gap-2">
                       <Check size={16} className="text-[#3DDC84] shrink-0" />
                       <span>{row.openSourceValue}</span>
                     </div>
                   </td>
-                  <td className="py-3.5 px-5 text-[var(--text-secondary)]">
+                  <td className="py-3.5 px-4 sm:px-5 text-[var(--text-secondary)]">
                     <div className="flex items-center gap-2">
                       <span className="text-[var(--text-muted)]">•</span>
                       <span>{row.commercialPaidValue}</span>
@@ -147,13 +147,13 @@ export default function OpenSourceValueComparisonChart({
         </div>
 
         {/* The Pathway Box ("راستہ دکھا رہے ہیں") */}
-        <div className="mt-8 rounded-[16px] border border-[rgba(139,124,246,0.3)] bg-[radial-gradient(ellipse_at_top,rgba(139,124,246,0.12),transparent)] p-6 md:p-8">
-          <div className="flex items-center gap-2.5 font-display text-[16px] font-bold text-[var(--text-primary)] md:text-[18px]">
-            <Sparkles size={18} className="text-[var(--cyan)]" />
+        <div className="mt-8 rounded-[16px] border border-[rgba(139,124,246,0.3)] bg-[radial-gradient(ellipse_at_top,rgba(139,124,246,0.12),transparent)] p-4 sm:p-6 md:p-8 w-full">
+          <div className="flex items-center gap-2.5 font-display text-[15px] sm:text-[16px] font-bold text-[var(--text-primary)] md:text-[18px]">
+            <Sparkles size={18} className="text-[var(--cyan)] shrink-0" />
             <span>How You Can Use This Tool Right Now (The Free Pathway)</span>
           </div>
 
-          <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-3">
+          <div className="mt-5 grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-3">
             <div className="flex flex-col gap-2 rounded-xl border border-[rgba(255,255,255,0.06)] bg-[rgba(255,255,255,0.02)] p-4">
               <div className="flex items-center gap-2 font-mono text-[12px] font-bold uppercase text-[var(--cyan)]">
                 <Laptop size={14} /> Step 1: Download & Run Free
@@ -183,16 +183,17 @@ export default function OpenSourceValueComparisonChart({
           </div>
 
           {downloadUrl && (
-            <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-[rgba(255,255,255,0.08)] pt-5">
-              <span className="font-body text-[13.5px] text-[var(--text-muted)]">
+            <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4 border-t border-[rgba(255,255,255,0.08)] pt-5 w-full">
+              <span className="font-body text-[13px] sm:text-[13.5px] text-[var(--text-muted)]">
                 Ready to replace expensive SaaS? Download the free installer directly:
               </span>
               <a
                 href={downloadUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="shrink-0"
               >
-                <CyanButton size="md" icon={<Download size={15} />}>
+                <CyanButton size="md" icon={<Download size={15} />} className="w-full sm:w-auto justify-center">
                   Download {data.name.split(' ')[0]} Now
                 </CyanButton>
               </a>

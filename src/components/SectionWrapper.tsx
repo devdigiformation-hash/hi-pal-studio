@@ -16,7 +16,7 @@ export default function SectionWrapper({ children, id, className }: SectionWrapp
     <section
       id={id}
       ref={ref}
-      className={cn("relative px-6 py-[60px] md:px-12 lg:px-20 lg:py-[120px]", className)}
+      className={cn("relative w-full max-w-full overflow-hidden px-4 py-[50px] sm:px-6 md:px-12 lg:px-20 lg:py-[120px]", className)}
     >
       {children}
     </section>
