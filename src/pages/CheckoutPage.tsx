@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useSearch, useNavigate } from "@tanstack/react-router";
 import { ArrowLeft, Check, Copy, Loader2, Lock, MessageCircle, ShieldCheck } from "lucide-react";
@@ -58,6 +58,15 @@ export default function CheckoutPage() {
   const priceSet = (pricing.data?.plans ?? INTL_PRICES)[planId];
 
   const [methodId, setMethodId] = useState<MethodId>("jazzcash");
+
+  useEffect(() => {
+    if (pricing.data?.region && pricing.data.region !== "pk") {
+      setMethodId("gbp");
+    } else if (pricing.data?.region === "pk") {
+      setMethodId("jazzcash");
+    }
+  }, [pricing.data?.region]);
+
   const method = useMemo(() => PAYMENT_METHODS.find((m) => m.id === methodId)!, [methodId]);
   const amount = amountFromSet(priceSet, method.currency);
 

@@ -1254,7 +1254,7 @@ export const MODULES_LIST: ModuleData[] = [
     directAnswer:
       "Digi Intelligence is an autonomous business intelligence, market surveillance, and search engine optimization suite inside DIGI BIZ OS. It unifies four specialized local engines: (1) Product Hunting Intelligence across Amazon, eBay, TikTok, and Shopify; (2) Lead Intelligence for B2B discovery and UK Companies House director audits; (3) SEO Intelligence for technical website audits and keyword rankings; and (4) AEO & GEO Intelligence to engineer direct answers and win citations in Google AI Overviews, Perplexity, and ChatGPT.",
     problemSolved: [
-      "Eliminates monthly subscriptions for Helium 10 ($99/mo), Apollo.io ($79/mo), Ahrefs ($99/mo), and separate AI SEO tools with a single £50 lifetime OS licence.",
+      "Eliminates monthly subscriptions for Helium 10 ($99/mo), Apollo.io ($79/mo), Ahrefs ($99/mo), and separate AI SEO tools with a single £29 lifetime OS licence.",
       "Automates deep 20-stage e-commerce product vetting to uncover high-demand, low-competition, high-margin inventory opportunities with verified supplier links.",
       "Scrapes and verifies official corporate registrations, active company directors, PSC shareholdings, SIC trade codes, and verified executive contact details.",
       "Conducts full-site technical SEO audits, fixes indexability bottlenecks, and structures on-page content to win top citations in Google AI Overviews and answer engines.",

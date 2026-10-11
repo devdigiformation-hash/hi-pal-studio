@@ -88,7 +88,7 @@ export default function ModuleLanding({ module }: { module: ModuleData }) {
               </Link>
               <Link to="/pricing">
                 <GhostButton size="lg" icon={<ShieldCheck size={18} />}>
-                  View £50 Lifetime Licence
+                  View £29 Lifetime Licence
                 </GhostButton>
               </Link>
             </div>
@@ -127,7 +127,7 @@ export default function ModuleLanding({ module }: { module: ModuleData }) {
                     Licensing & Pricing
                   </p>
                   <p className="font-body text-[14px] font-semibold text-[var(--text-primary)]">
-                    One-Time Lifetime (£50) — $0 Monthly Fees
+                    One-Time Lifetime (£29) — $0 Monthly Fees
                   </p>
                 </div>
                 <div>

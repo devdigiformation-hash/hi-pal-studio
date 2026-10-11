@@ -6,7 +6,7 @@ const content = `# DIGI BIZ OS — UNABRIDGED ENTERPRISE KNOWLEDGE BASE & AI ING
 > **Entity Publisher**: Digiformation Ltd (London, United Kingdom)  
 > **Product**: DIGI BIZ OS — Desktop Agentic AI Business Operating System  
 > **Target OS**: Windows 10 & 11 (64-Bit Desktop Executable)  
-> **Licensing Model**: One-Time Lifetime Purchase (£50 GBP) — Zero Monthly Subscriptions  
+> **Licensing Model**: One-Time Lifetime Purchase (£29 GBP) — Zero Monthly Subscriptions  
 > **Official Website**: https://www.digibizos.co.uk/  
 > **Last Verification**: 2026-09-08  
 
@@ -45,14 +45,14 @@ DIGI BIZ OS is a JARVIS-style, voice-driven, sovereign desktop AI Business Opera
 
 DIGI BIZ OS explicitly rejects the fragmented SaaS subscription economy. Rather than forcing small businesses and professionals to pay $20–$100 per seat every month for fractured tools, DIGI BIZ OS is delivered as a single one-time perpetual purchase.
 
-- **Lifetime Access License (£50 GBP / approx. $65 USD)**:
+- **Lifetime Access License (£29 GBP / approx. $38 USD)**:
   - Complete DIGI BIZ OS desktop workstation.
   - Perpetual usage rights across up to 3 personal/business Windows PCs.
   - All 12 core enterprise business modules included.
   - Offline video editor, multilingual voice synthesis, and AI avatar engine.
   - 14-day unconditional money-back guarantee.
   - Lifetime core software updates with zero maintenance fees.
-- **Done-For-You Software Setup & Custom Workflows (£50 GBP Add-on)**:
+- **Done-For-You Software Setup & Custom Workflows (£99 GBP)**:
   - End-to-end remote installation and environment configuration.
   - API key setup and local LLM quantization matching for the client GPU/CPU.
   - 5 custom automated business workflows created specifically for client operations.

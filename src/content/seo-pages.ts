@@ -3215,7 +3215,7 @@ export const SEO_PAGES: SeoPage[] = [
     sections: [
       {
         heading: "Why Pay $300/Month Per Seat for Cloud CRMs?",
-        body: "Legacy cloud CRM platforms (Salesforce, HubSpot, Zoho) charge steep per-seat fees and lock essential features behind enterprise tiers. DIGI BIZ OS delivers full operational sovereignty for a single £50 lifetime payment.",
+        body: "Legacy cloud CRM platforms (Salesforce, HubSpot, Zoho) charge steep per-seat fees and lock essential features behind enterprise tiers. DIGI BIZ OS delivers full operational sovereignty for a single £29 lifetime payment.",
         bullets: [
           "Zero recurring monthly software seat fees or surprise price hikes.",
           "Full local database encryption protecting client contact details.",
@@ -3668,7 +3668,7 @@ export const SEO_PAGES: SeoPage[] = [
       },
       {
         q: "How does DIGI BIZ OS replace a $5,000/year SaaS stack?",
-        a: "By combining CRM, marketing campaigns, WhatsApp automation, B2B lead generation, media editing, and coding workspaces into a single £50 lifetime purchase, businesses eliminate recurring monthly per-seat fees entirely.",
+        a: "By combining CRM, marketing campaigns, WhatsApp automation, B2B lead generation, media editing, and coding workspaces into a single £29 lifetime purchase, businesses eliminate recurring monthly per-seat fees entirely.",
       },
       {
         q: "Is coding or technical expertise required to use DIGI BIZ OS?",
@@ -3700,7 +3700,7 @@ export const SEO_PAGES: SeoPage[] = [
     sections: [
       {
         heading: "The $5,000/Year SaaS Stack vs. DIGI BIZ OS",
-        body: "A typical small business pays for Salesforce ($150/mo), Zapier ($60/mo), Apollo ($100/mo), ChatGPT Team ($60/mo), and video tools ($40/mo) — totaling over $5,000 every year. DIGI BIZ OS delivers these capabilities for a single £50 lifetime payment.",
+        body: "A typical small business pays for Salesforce ($150/mo), Zapier ($60/mo), Apollo ($100/mo), ChatGPT Team ($60/mo), and video tools ($40/mo) — totaling over $5,000 every year. DIGI BIZ OS delivers these capabilities for a single £29 lifetime payment.",
         bullets: [
           "Eliminate 5+ separate monthly subscriptions and login portals.",
           "Keep all client data, deal records, and financial books 100% private.",

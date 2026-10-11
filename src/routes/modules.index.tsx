@@ -110,7 +110,7 @@ function ModulesHubPage() {
               All 8 Modules Included in Your One-Time Licence
             </h2>
             <p className="mx-auto mt-4 max-w-[620px] font-body text-[15px] leading-relaxed text-[var(--text-secondary)]">
-              No monthly per-seat invoices, no cloud locks, and 100% offline data privacy. Deploy DIGI BIZ OS on Windows for £50 lifetime.
+              No monthly per-seat invoices, no cloud locks, and 100% offline data privacy. Deploy DIGI BIZ OS on Windows for £29 lifetime.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link to="/download">
@@ -120,7 +120,7 @@ function ModulesHubPage() {
               </Link>
               <Link to="/pricing">
                 <GhostButton size="lg" icon={<ShieldCheck size={18} />}>
-                  View £50 Pricing
+                  View £29 Pricing
                 </GhostButton>
               </Link>
             </div>

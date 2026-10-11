@@ -517,7 +517,7 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: "The true cost of cloud SaaS subscriptions",
         paragraphs: [
           "Modern small businesses often spend over £300 to £1,000 per month across CRM, email marketing, and document automation tools. As teams grow, per-seat licensing fees compound aggressively.",
-          "Local-first AI operating systems like DIGI BIZ OS reverse this trend by packaging full CRM functionality into a one-time £50 licence.",
+          "Local-first AI operating systems like DIGI BIZ OS reverse this trend by packaging full CRM functionality into a one-time £29 licence.",
         ],
       },
       {
@@ -790,7 +790,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Where DIGI BIZ OS is deliberately different",
         paragraphs: [
-          "DIGI BIZ OS is built as an operating layer for a business, not only a personal assistant: native CRM pipelines, WhatsApp sales bots, scheduled cron workflows, document cryptography, and an offline utility suite with a one-time £50 lifetime licence.",
+          "DIGI BIZ OS is built as an operating layer for a business, not only a personal assistant: native CRM pipelines, WhatsApp sales bots, scheduled cron workflows, document cryptography, and an offline utility suite with a one-time £29 lifetime licence.",
         ],
         bullets: [
           "DIGI BIZ OS: Complete Business OS with CRM, WhatsApp, Docs, and Code workspaces.",
@@ -829,7 +829,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
         bullets: [
           "Execution: DIGI BIZ OS operates native Windows files, terminal, and local sovereign CRM.",
-          "Pricing: DIGI BIZ OS is a £50 one-time licence ($0 monthly subscriptions).",
+          "Pricing: DIGI BIZ OS is a £29 one-time licence ($0 monthly subscriptions).",
           "Privacy: 100% local processing option with air-gapped data sovereignty.",
         ],
       },
@@ -925,7 +925,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Enterprise Scope Comparison",
         paragraphs: [
-          "Devin is engineered exclusively for software development teams with steep enterprise pricing. DIGI BIZ OS covers the complete operational footprint of a small business — sales, support, marketing, documents, and code — for a single £50 lifetime price.",
+          "Devin is engineered exclusively for software development teams with steep enterprise pricing. DIGI BIZ OS covers the complete operational footprint of a small business — sales, support, marketing, documents, and code — for a single £29 lifetime price.",
         ],
       },
     ],
@@ -1211,13 +1211,13 @@ export const BLOG_POSTS: BlogPost[] = [
           "Creative Media: Native timeline video editing, offline Whisper transcription, and local voice generation eliminate creative cloud subscriptions.",
           "Revenue Operations: Embedded SQLite databases and local CRM modules eliminate per-contact SaaS hosting fees.",
           "Workflow Automation: Native background worker queues and MCP servers eliminate Zapier task consumption limits and payload markups.",
-          "Total Cost of Ownership: One single £50 lifetime license replaces recurring annual cloud bills while preserving 100% data sovereignty.",
+          "Total Cost of Ownership: One single £29 lifetime license replaces recurring annual cloud bills while preserving 100% data sovereignty.",
         ],
       },
       {
         heading: "Three-Year TCO Comparison Model",
         paragraphs: [
-          "Year 1: 14 SaaS tools = $4,824. DIGI BIZ OS = £50 (~$65 USD). Net savings: $4,759.",
+          "Year 1: 14 SaaS tools = $4,824. DIGI BIZ OS = £29 (~$65 USD). Net savings: $4,759.",
           "Year 2: 14 SaaS tools = $9,648 cumulative. DIGI BIZ OS = $65. Net savings: $9,583.",
           "Year 3: 14 SaaS tools = $14,472 cumulative. DIGI BIZ OS = $65. Net savings: $14,407.",
         ],
@@ -2070,7 +2070,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "WhatsApp Autonomous Agent", to: "/modules/whatsapp" },
       { label: "Background Workflows & Flow Engine", to: "/modules/workflows" },
       { label: "Digi Code & Sandbox Terminal", to: "/modules/code" },
-      { label: "Pricing & Lifetime License (£50)", to: "/pricing" },
+      { label: "Pricing & Lifetime License (£29)", to: "/pricing" },
       { label: "Download DIGI BIZ OS for Windows", to: "/download" },
     ],
   },
@@ -2258,7 +2258,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "Why choose a sovereign desktop operating system over fragmented SaaS?",
         "paragraphs": [
           "The culmination of these trends is the emergence of sovereign AI operating systems designed specifically for enterprise desktop environments. Leading this shift is DIGI BIZ OS for Windows 10 & 11, which unites 12 core operational modules—including local neural reasoning, 20-module offline CRM, timeline video editing, multilingual voice TTS, and always-on workflows—into a single workstation with zero recurring monthly subscription fees.",
-          "By replacing fragmented $300+/month SaaS bundles with a one-time £50 lifetime license, forward-thinking businesses retain their capital while upgrading to genuine private AI automation."
+          "By replacing fragmented $300+/month SaaS bundles with a one-time £29 lifetime license, forward-thinking businesses retain their capital while upgrading to genuine private AI automation."
         ]
       }
     ],
@@ -2272,7 +2272,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "to": "/features"
       },
       {
-        "label": "One-Time Lifetime Pricing (£50)",
+        "label": "One-Time Lifetime Pricing (£29)",
         "to": "/pricing"
       },
       {
@@ -2322,7 +2322,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "Why is DIGI BIZ OS considered the leading Windows JARVIS alternative?",
         "paragraphs": [
           "DIGI BIZ OS delivers the closest real-world implementation of JARVIS available today. Running natively on Windows 10 and 11, it embeds an offline voice engine into 90%+ of its modules. Users speak naturally to trigger autonomous research runs, generate marketing assets, query CRM accounts, and control system tools hands-free.",
-          "Best of all, DIGI BIZ OS operates with complete local privacy: your microphone stream is processed on your PC, your business data remains sovereign, and the entire workstation is available for a one-time £50 lifetime license with zero ongoing subscriptions."
+          "Best of all, DIGI BIZ OS operates with complete local privacy: your microphone stream is processed on your PC, your business data remains sovereign, and the entire workstation is available for a one-time £29 lifetime license with zero ongoing subscriptions."
         ]
       }
     ],
@@ -2385,7 +2385,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "How does DIGI BIZ OS Digi Flow enable 24/7 sovereign automation?",
         "paragraphs": [
           "DIGI BIZ OS solves this dilemma with Digi Flow—a native desktop visual workflow engine built directly into the operating system. You connect triggers (such as a new customer WhatsApp message or incoming file) directly to AI reasoning blocks and actions with zero code.",
-          "Because workflows execute locally on your PC, there are zero task limits, zero per-run fees, and complete data privacy. You own the automation engine forever for a single £50 lifetime payment."
+          "Because workflows execute locally on your PC, there are zero task limits, zero per-run fees, and complete data privacy. You own the automation engine forever for a single £29 lifetime payment."
         ]
       }
     ],
@@ -2512,10 +2512,10 @@ export const BLOG_POSTS: BlogPost[] = [
         ]
       },
       {
-        "heading": "How does a single £50 DIGI BIZ OS license eliminate recurring SaaS bills?",
+        "heading": "How does a single £29 DIGI BIZ OS license eliminate recurring SaaS bills?",
         "paragraphs": [
           "DIGI BIZ OS replaces the entire commercial software stack with native desktop engines designed specifically for Windows 10 & 11. It delivers 12 comprehensive operational modules—Digi AI, Digi CRM, Digi Studio, Digi Flow, Digi WhatsApp, Digi Marketing, Digi Code, and universal voice control—all in one unified desktop environment.",
-          "There are no monthly subscription fees, no seat licensing charges, and no token usage meters. You purchase a lifetime license for £50 once, own the software forever, and retain over $15,000 in saved capital over your first 3 years in business."
+          "There are no monthly subscription fees, no seat licensing charges, and no token usage meters. You purchase a lifetime license for £29 once, own the software forever, and retain over $15,000 in saved capital over your first 3 years in business."
         ]
       }
     ],
@@ -2525,7 +2525,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "to": "/compare"
       },
       {
-        "label": "One-Time £50 Lifetime License",
+        "label": "One-Time £29 Lifetime License",
         "to": "/pricing"
       },
       {
@@ -2591,7 +2591,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "to": "/desktop-os"
       },
       {
-        "label": "View Lifetime Pricing (£50)",
+        "label": "View Lifetime Pricing (£29)",
         "to": "/pricing"
       },
       {
@@ -2657,7 +2657,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "to": "/features"
       },
       {
-        "label": "Lifetime License (£50)",
+        "label": "Lifetime License (£29)",
         "to": "/pricing"
       }
     ]
@@ -2702,7 +2702,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "How does DIGI BIZ OS deliver private local neural execution out of the box?",
         "paragraphs": [
           "DIGI BIZ OS integrates native support for local neural models through its built-in Digi AI and Digi Models modules. You can download and run models with a single click, chat with private documents, and generate high-resolution marketing imagery offline.",
-          "Furthermore, DIGI BIZ OS provides hybrid intelligent routing: run 90% of routine daily work for free on local models, and optionally route rare heavy reasoning tasks to cloud endpoints only when you choose. Enjoy complete freedom from subscriptions with a single £50 lifetime license."
+          "Furthermore, DIGI BIZ OS provides hybrid intelligent routing: run 90% of routine daily work for free on local models, and optionally route rare heavy reasoning tasks to cloud endpoints only when you choose. Enjoy complete freedom from subscriptions with a single £29 lifetime license."
         ]
       }
     ],
@@ -2716,7 +2716,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "to": "/open-source/jan-ai"
       },
       {
-        "label": "One-Time Lifetime Pricing (£50)",
+        "label": "One-Time Lifetime Pricing (£29)",
         "to": "/pricing"
       },
       {
@@ -2764,7 +2764,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ]
       },
       {
-        "heading": "How does DIGI CRM deliver enterprise intelligence for a £50 lifetime fee?",
+        "heading": "How does DIGI CRM deliver enterprise intelligence for a £29 lifetime fee?",
         "paragraphs": [
           "DIGI BIZ OS includes Digi CRM—a comprehensive 20-module enterprise customer relationship and business operations suite running locally on Windows. From company formation and banking accounting to automated WhatsApp outreach and lead intelligence, it replaces thousands of dollars in cloud software bills.",
           "Experience the power of an autonomous, private CRM with zero monthly subscriptions inside DIGI BIZ OS."
@@ -2785,7 +2785,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "to": "/compare"
       },
       {
-        "label": "Get Lifetime Access (£50)",
+        "label": "Get Lifetime Access (£29)",
         "to": "/pricing"
       }
     ]
@@ -2866,7 +2866,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "Does Zapier or AI agent automation save more money for businesses?",
         "paragraphs": [
           "AI agent automation saves significantly more money for businesses with moderate to high operational volume. While Zapier charges compounding fees based on monthly task tiers and premium app connections, local AI agents execute unlimited multi-step workflows directly on desktop hardware with zero per-task charges and zero recurring cloud subscriptions.",
-          "Choosing the right automation architecture can be the difference between spending $3,000+ a year on cloud task allowances or running an infinite number of operational routines for a one-time £50 lifetime investment."
+          "Choosing the right automation architecture can be the difference between spending $3,000+ a year on cloud task allowances or running an infinite number of operational routines for a one-time £29 lifetime investment."
         ]
       },
       {
@@ -2892,7 +2892,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "What is the 3-year ROI of DIGI BIZ OS compared to Zapier Enterprise?",
         "paragraphs": [
           "Over a 3-year operating horizon, a company using Zapier Pro or Team will expend between $3,600 and $12,000 in recurring fees for task allowances.",
-          "In contrast, DIGI BIZ OS delivers unlimited desktop workflow automation, multi-agent runs, offline CRM sync, and voice command for a single £50 one-time lifetime license. That is more than $3,500 returned directly to your profit margins in year one alone."
+          "In contrast, DIGI BIZ OS delivers unlimited desktop workflow automation, multi-agent runs, offline CRM sync, and voice command for a single £29 one-time lifetime license. That is more than $3,500 returned directly to your profit margins in year one alone."
         ]
       }
     ],
@@ -2906,7 +2906,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "to": "/modules"
       },
       {
-        "label": "Lifetime Pricing (£50)",
+        "label": "Lifetime Pricing (£29)",
         "to": "/pricing"
       },
       {
@@ -2957,7 +2957,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "How does Digi WhatsApp connect to local CRM pipelines in DIGI BIZ OS?",
         "paragraphs": [
           "DIGI BIZ OS features Digi WhatsApp—a native module that connects WhatsApp directly into your local CRM and multi-agent desk. Because it runs on your desktop workstation, your customer conversations remain 100% private, with zero monthly per-conversation subscription charges.",
-          "Transform your customer communication into an automated 24/7 revenue channel with DIGI BIZ OS for a one-time £50 lifetime payment."
+          "Transform your customer communication into an automated 24/7 revenue channel with DIGI BIZ OS for a one-time £29 lifetime payment."
         ]
       }
     ],
@@ -2971,7 +2971,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "to": "/desktop-os"
       },
       {
-        "label": "Lifetime Pricing (£50)",
+        "label": "Lifetime Pricing (£29)",
         "to": "/pricing"
       },
       {
@@ -3022,7 +3022,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Customer Communication", "Manual setup required via third-party webhooks", "Digi WhatsApp & Multi-Channel customer desks integrated", "DIGI BIZ OS: Automated 24/7 lead capture and support"],
             ["Data Privacy & Local Running", "Sends continuous screen captures to external vision APIs", "100% Local Inference option (Llama 3, DeepSeek, Mistral)", "DIGI BIZ OS: Complete data sovereignty and zero leaks"],
             ["Failure Recovery & Healing", "Script stalls upon unexpected popups or UI shifts", "Self-healing state machines with human approval gates", "DIGI BIZ OS: Production resilience for unattended runs"],
-            ["12-Month Total Cost (TCO)", "$1,800 – $3,600 in recurring cloud API vision tokens", "One-time £50 lifetime payment (Zero recurring SaaS fees)", "DIGI BIZ OS: Massive predictable savings with zero token tax"]
+            ["12-Month Total Cost (TCO)", "$1,800 – $3,600 in recurring cloud API vision tokens", "One-time £29 lifetime payment (Zero recurring SaaS fees)", "DIGI BIZ OS: Massive predictable savings with zero token tax"]
           ]
         }
       },
@@ -3079,12 +3079,12 @@ export const BLOG_POSTS: BlogPost[] = [
         table: {
           headers: ["Cost Category", "OpenClaw Deployment", "DIGI BIZ OS Lifetime", "Financial Impact"],
           rows: [
-            ["Software License Fee", "$0 (Open-Source GitHub)", "£50 (One-time Lifetime License)", "Predictable, transparent entry"],
+            ["Software License Fee", "$0 (Open-Source GitHub)", "£29 (One-time Lifetime License)", "Predictable, transparent entry"],
             ["API Vision Tokens (Screenshots)", "$150 – $300 / month ($1,800 – $3,600 / yr)", "$0 for local runs; smart cached cloud tiers", "Save $1,800+ annually on token drain"],
             ["CRM & Lead Software", "$50 / month ($600 / yr for HubSpot/Pipedrive)", "$0 (Built-in Native Digi CRM)", "Save $600 annually on SaaS licenses"],
             ["Invoicing & Accounting Tool", "$30 / month ($360 / yr for QuickBooks/Xero)", "$0 (Built-in Invoicing & Billing Module)", "Save $360 annually on accounting tools"],
             ["WhatsApp Business Gateway", "$40 / month ($480 / yr for third-party bots)", "$0 (Built-in Digi WhatsApp Desk)", "Save $480 annually on messaging fees"],
-            ["Estimated 12-Month Total", "$3,240 – $5,040 USD", "£50 (~$65 USD total)", "Over 98% Total Cost Reduction with DIGI BIZ OS"]
+            ["Estimated 12-Month Total", "$3,240 – $5,040 USD", "£29 (~$65 USD total)", "Over 98% Total Cost Reduction with DIGI BIZ OS"]
           ]
         }
       },
@@ -3123,7 +3123,7 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           "For technical researchers, AI enthusiasts, and roboticists exploring experimental mouse-and-keyboard computer control, OpenClaw is an admirable and educational open-source repository.",
           "However, for commercial businesses, solo entrepreneurs, marketing agencies, and software developers who depend on artificial intelligence to generate revenue and streamline operations, DIGI BIZ OS is decisively the superior solution.",
-          "With DIGI BIZ OS, you eliminate the constant anxiety of 429 rate limit errors and runaway token bills. You gain the freedom to create dozens of visual assets on demand, engage in exhaustive coding marathons, manage client pipelines in a native CRM, and maintain 100% data sovereignty on your local PC—all for a single, transparent lifetime fee of £50.",
+          "With DIGI BIZ OS, you eliminate the constant anxiety of 429 rate limit errors and runaway token bills. You gain the freedom to create dozens of visual assets on demand, engage in exhaustive coding marathons, manage client pipelines in a native CRM, and maintain 100% data sovereignty on your local PC—all for a single, transparent lifetime fee of £29.",
           "Transform your workstation into an autonomous operational headquarters today with DIGI BIZ OS."
         ],
         bullets: [
@@ -3131,7 +3131,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Dozens of Batch Visual Assets: Professional image generation built directly into your creative workflows.",
           "Deep Context Coding & Architecture: Multi-file software engineering without context amnesia.",
           "Complete Business Suite: Native CRM, ERP, Invoicing, and WhatsApp customer desks out of the box.",
-          "Single £50 Lifetime Investment: Full operational ownership with zero monthly subscription traps."
+          "Single £29 Lifetime Investment: Full operational ownership with zero monthly subscription traps."
         ]
       }
     ],
@@ -3139,7 +3139,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Open-Source OpenClaw Deep Dive", to: "/open-source/openclaw" },
       { label: "Compare AI Platforms", to: "/compare" },
       { label: "Explore Business Modules", to: "/modules" },
-      { label: "Get DIGI BIZ OS Lifetime (£50)", to: "/pricing" }
+      { label: "Get DIGI BIZ OS Lifetime (£29)", to: "/pricing" }
     ]
   },
   {
@@ -3234,7 +3234,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "1. Hybrid Execution Architecture: DIGI BIZ OS utilizes structured reasoning (similar to Hermes) for lightning-fast database updates, financial accounting, and CRM management, while deploying visual OS control when interacting with external software.",
           "2. Generous High-Capacity Usage Tiers: Say goodbye to 429 rate limit exceptions. DIGI BIZ OS offers expansive operational capacity, enabling users to generate dozens of high-res branding images, engage in marathon coding sprints, and run continuous automations without throttling.",
           "3. Native Business Modules: Includes complete out-of-the-box suites for Digi CRM, Digi WhatsApp automation, automated invoicing, tax calculation, client portals, and document generation.",
-          "4. 100% Local Privacy & £50 Lifetime License: Run local models (DeepSeek, Llama 3, Mistral) on your own PC with zero monthly SaaS subscriptions, total data confidentiality, and complete cost predictability."
+          "4. 100% Local Privacy & £29 Lifetime License: Run local models (DeepSeek, Llama 3, Mistral) on your own PC with zero monthly SaaS subscriptions, total data confidentiality, and complete cost predictability."
         ]
       },
       {
@@ -3245,12 +3245,12 @@ export const BLOG_POSTS: BlogPost[] = [
         table: {
           headers: ["Investment Metric", "OpenClaw Deployment", "Hermes Agent Custom Build", "DIGI BIZ OS Lifetime"],
           rows: [
-            ["Software License Cost", "$0 (Open-Source MIT)", "$0 (Open-Source Apache 2.0)", "£50 (One-Time Lifetime License)"],
+            ["Software License Cost", "$0 (Open-Source MIT)", "$0 (Open-Source Apache 2.0)", "£29 (One-Time Lifetime License)"],
             ["API / Model Inference Cost", "$1,800 – $3,600 / yr (VLM token burn)", "$120 – $400 / yr (Text token API or local GPU)", "$0 for local runs; smart cached cloud tiers"],
             ["Developer Engineering Time", "80+ hours configuring UI loops & error handlers", "120+ hours building glue code, APIs, and UI", "0 hours (Turnkey native desktop OS out of the box)"],
             ["Third-Party CRM / Billing SaaS", "$1,200 / yr (HubSpot, QuickBooks, etc.)", "$1,200 / yr (External business software)", "$0 (Built-in Digi CRM, ERP & Invoicing)"],
             ["Rate Limit / Downtime Risk", "Extremely High (frequent 429 stalls)", "Low to Moderate", "Zero (High-capacity tier buffer + local models)"],
-            ["Estimated 12-Month Total", "$3,000 – $4,800 + 80h Dev Time", "$1,320 – $1,600 + 120h Dev Time", "£50 (~$65 USD total) with zero dev time"]
+            ["Estimated 12-Month Total", "$3,000 – $4,800 + 80h Dev Time", "$1,320 – $1,600 + 120h Dev Time", "£29 (~$65 USD total) with zero dev time"]
           ]
         }
       },
@@ -3281,7 +3281,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Which agent architecture is best for commercial enterprise automation?",
         paragraphs: [
-          "For commercial businesses, a pure script or bare reasoning kernel is rarely sufficient. Commercial automation requires data persistence, client records, audit trails, and multi-channel communication. DIGI BIZ OS is the recommended commercial solution because it packages agentic execution into a hardened, user-friendly business platform for a single £50 lifetime license."
+          "For commercial businesses, a pure script or bare reasoning kernel is rarely sufficient. Commercial automation requires data persistence, client records, audit trails, and multi-channel communication. DIGI BIZ OS is the recommended commercial solution because it packages agentic execution into a hardened, user-friendly business platform for a single £29 lifetime license."
         ]
       },
       {
@@ -3297,7 +3297,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Zero Rate-Limit Headaches: Expansive high-capacity tiers prevent 429 operational stalls.",
           "Complete Business Suite: Native CRM, automated billing, and Digi WhatsApp integrated out of the box.",
           "Creative Power: Batch-generate dozens of images and conduct marathon coding sessions without throttling.",
-          "Unbeatable ROI: A single £50 lifetime payment replaces thousands of dollars in annual SaaS subscriptions."
+          "Unbeatable ROI: A single £29 lifetime payment replaces thousands of dollars in annual SaaS subscriptions."
         ]
       }
     ],
@@ -3306,7 +3306,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Open-Source Hermes Agent Overview", to: "/open-source/hermes-agent" },
       { label: "Compare All AI Platforms", to: "/compare" },
       { label: "Explore Business Modules", to: "/modules" },
-      { label: "Get DIGI BIZ OS Lifetime (£50)", to: "/pricing" }
+      { label: "Get DIGI BIZ OS Lifetime (£29)", to: "/pricing" }
     ]
   },
   {
@@ -3345,7 +3345,7 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           "DIGI BIZ OS approaches enterprise automation from the opposite architectural paradigm: local-first sovereignty, deterministic execution, and unified business operations. Rather than running an ephemeral consumer agent in a remote cloud datacenter, DIGI BIZ OS turns the operator's Windows workstation into an autonomous digital headquarters.",
           "At its technical foundation, DIGI BIZ OS is not merely a conversational wrapper or a single specialized script. A forensic audit of the platform's codebase reveals a multi-tiered architecture that tightly synchronizes 12 core enterprise engines: an embedded SQLite CRM and ERP database (digi_crm.db), a dedicated WhatsApp conversation intelligence store (wa-crm.ts), a deterministic voice review engine, 43 registered Model Context Protocol (MCP) servers, 510 audited agent skills, and an indexed library of 774 specialist agent profiles.",
-          "Instead of forcing a business owner to juggle six disjointed SaaS subscriptions—a standalone CRM like HubSpot, an automation tool like Zapier, a video editor, a voice transcription service, an e-commerce scraper, and a WhatsApp inbox—DIGI BIZ OS provides an integrated environment where every action, communication, and financial metric connects to a single unified brain. Crucially, it ships with a permanent one-time £50 license, offering complete data privacy and unlimited local execution."
+          "Instead of forcing a business owner to juggle six disjointed SaaS subscriptions—a standalone CRM like HubSpot, an automation tool like Zapier, a video editor, a voice transcription service, an e-commerce scraper, and a WhatsApp inbox—DIGI BIZ OS provides an integrated environment where every action, communication, and financial metric connects to a single unified brain. Crucially, it ships with a permanent one-time £29 license, offering complete data privacy and unlimited local execution."
         ]
       },
       {
@@ -3457,7 +3457,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Document & File Handling", "Cloud uploads to Google Drive / Dropbox", "Local Cryptographic Document Vault & PDF Processing", "DIGI BIZ OS: Local file management with complete confidentiality"],
             ["Human-in-the-Loop Controls", "Popup approval prompts for purchases/emails", "Granular Approval Gates on CRM Actions & WhatsApp Messages", "Both: Safe execution with user confirmation protocols"],
             ["Data Privacy & Security", "Data processed across Meta's cloud servers", "100% Local PC Storage; Encrypted Hardware Key Vault", "DIGI BIZ OS: Proprietary business data never leaves your machine"],
-            ["Pricing & Total Cost (TCO)", "Monthly recurring subscription ($20 – $30+/month)", "£50 One-Time Lifetime License (Zero recurring fees)", "DIGI BIZ OS: Massive predictable savings; zero token markup"]
+            ["Pricing & Total Cost (TCO)", "Monthly recurring subscription ($20 – $30+/month)", "£29 One-Time Lifetime License (Zero recurring fees)", "DIGI BIZ OS: Massive predictable savings; zero token markup"]
           ]
         }
       },
@@ -3469,7 +3469,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "1. Single Pane of Glass: Instead of paying $50/mo for a Shopify inventory app, $100/mo for a multi-channel order manager, $49/mo for an e-commerce CRM, and $30/mo for an AI writing tool, DIGI BIZ OS unifies these capabilities into a single desktop application.",
           "2. Voice-Powered Agility: In the fast-paced world of retail arbitrage, private label, and multi-channel fulfillment, speed is everything. Being able to audit stockouts, review customer follow-ups, and pull daily revenue figures through spoken voice saves hours of daily administrative drudgery.",
           "3. Bulletproof Customer Retention: The combination of automated WhatsApp sales reps, deterministic lead follow-ups, and native audio voice note replies turns abandoned customer inquiries into high-converting revenue streams around the clock.",
-          "4. Guaranteed Predictable Costs: SaaS subscription fatigue is a primary killer of e-commerce margins. By eliminating monthly platform subscriptions in favor of a single £50 lifetime purchase, DIGI BIZ OS immediately adds hundreds of pounds back to your bottom line every single month."
+          "4. Guaranteed Predictable Costs: SaaS subscription fatigue is a primary killer of e-commerce margins. By eliminating monthly platform subscriptions in favor of a single £29 lifetime purchase, DIGI BIZ OS immediately adds hundreds of pounds back to your bottom line every single month."
         ]
       },
       {
@@ -3487,7 +3487,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "What is DIGI BIZ OS?",
         paragraphs: [
-          "DIGI BIZ OS is an autonomous, voice-controlled Business Operating System designed for Windows workstations. It combines an embedded SQLite CRM and ERP system, automated WhatsApp customer intelligence, multi-channel e-commerce connectors (Shopify, Amazon SP-API, eBay, Etsy), an omniscient voice control layer, 43 MCP server integrations, and 510 agent skills into a single, offline-capable application with a £50 lifetime license."
+          "DIGI BIZ OS is an autonomous, voice-controlled Business Operating System designed for Windows workstations. It combines an embedded SQLite CRM and ERP system, automated WhatsApp customer intelligence, multi-channel e-commerce connectors (Shopify, Amazon SP-API, eBay, Etsy), an omniscient voice control layer, 43 MCP server integrations, and 510 agent skills into a single, offline-capable application with a £29 lifetime license."
         ]
       },
       {
@@ -3544,7 +3544,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Omniscient Voice Command: Ask your operating system what is happening inside your business in real time.",
           "Deterministic WhatsApp Verification: Eliminate hallucinations with FACT vs INFERENCE customer evaluation.",
           "Multi-Marketplace Ready: Native OAuth 2.0 connectors for Shopify, Amazon SP-API, eBay, and Etsy.",
-          "Permanent Lifetime Value: A single £50 one-time license replaces thousands in recurring monthly SaaS subscriptions."
+          "Permanent Lifetime Value: A single £29 one-time license replaces thousands in recurring monthly SaaS subscriptions."
         ]
       }
     ],
@@ -3553,7 +3553,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Discover Digi WhatsApp Voice Agent", to: "/modules/whatsapp" },
       { label: "Voice AI & JARVIS Controller Hub", to: "/voice-ai" },
       { label: "Compare All AI Platforms & SaaS Alternatives", to: "/compare" },
-      { label: "Get DIGI BIZ OS Lifetime (£50)", to: "/pricing" }
+      { label: "Get DIGI BIZ OS Lifetime (£29)", to: "/pricing" }
     ]
   },
   {
@@ -3593,7 +3593,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "- Omniscient Voice Control Layer: Direct voice integration powered by Whisper STT and multi-key reasoning, allowing founders to speak naturally to audit daily revenue, unreplied WhatsApp leads, and overdue client balances.",
           "- Autonomous WhatsApp Agent & CRM: A dedicated sales representative (wa-crm.ts and wa-followups.ts) that handles customer inquiries 24/7, cross-checks payment claims against invoices, and sends bidirectional voice notes in native audio codecs.",
           "- Multi-Marketplace E-Commerce Connectors: Hardened OAuth 2.0 connectors for Shopify, Amazon SP-API, eBay, and Etsy, unifying orders, inventory levels, and stockout warnings in one interface.",
-          "- Zero Subscription Overhead: Runs 100% private on your own PC for a single £50 lifetime purchase, completely eliminating recurring cloud monthly fees."
+          "- Zero Subscription Overhead: Runs 100% private on your own PC for a single £29 lifetime purchase, completely eliminating recurring cloud monthly fees."
         ]
       },
       {
@@ -3611,7 +3611,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Relational CRM & ERP", "None (unstructured sandbox outputs only)", "Embedded SQLite database with 12 core business tables", "DIGI BIZ OS: Complete persistent customer & order history"],
             ["E-Commerce Seller APIs", "Brittle web scraping via cloud browser", "Native OAuth 2.0 for Shopify, Amazon SP-API, eBay, Etsy", "DIGI BIZ OS: Reliable, secure enterprise token synchronization"],
             ["Offline Operation", "Impossible (100% cloud dependent)", "Supported (Local Whisper, DeepSeek R1, Llama 3.3)", "DIGI BIZ OS: Operates air-gapped without internet or cloud fees"],
-            ["Pricing Structure", "Recurring monthly cloud subscription or credits", "£50 One-Time Lifetime License (Zero recurring SaaS)", "DIGI BIZ OS: Massive predictable savings; zero token markup"]
+            ["Pricing Structure", "Recurring monthly cloud subscription or credits", "£29 One-Time Lifetime License (Zero recurring SaaS)", "DIGI BIZ OS: Massive predictable savings; zero token markup"]
           ]
         }
       },
@@ -3630,7 +3630,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "How does DIGI BIZ OS differ from Manus AI?",
         paragraphs: [
-          "While Manus AI is an ephemeral web browsing assistant, DIGI BIZ OS is an on-premise business operating system. DIGI BIZ OS provides persistent CRM databases, official e-commerce marketplace APIs (Amazon, Shopify, eBay), autonomous WhatsApp sales reps, and voice-controlled business intelligence for a one-time £50 license."
+          "While Manus AI is an ephemeral web browsing assistant, DIGI BIZ OS is an on-premise business operating system. DIGI BIZ OS provides persistent CRM databases, official e-commerce marketplace APIs (Amazon, Shopify, eBay), autonomous WhatsApp sales reps, and voice-controlled business intelligence for a one-time £29 license."
         ]
       },
       {
@@ -3649,7 +3649,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Persistent Commercial Architecture: Native CRM, billing, and order management that never resets.",
           "Voice Operational Command: Speak to audit revenue, orders, and customer messages instantly.",
           "Automated WhatsApp Sales: 24/7 lead conversion with deterministic verification.",
-          "Unbeatable Lifetime Value: Single £50 payment replaces expensive recurring subscriptions."
+          "Unbeatable Lifetime Value: Single £29 payment replaces expensive recurring subscriptions."
         ]
       }
     ],
@@ -3658,7 +3658,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Explore Business Modules", to: "/modules" },
       { label: "Voice AI & JARVIS Controller", to: "/voice-ai" },
       { label: "Compare All Platforms", to: "/compare" },
-      { label: "Get DIGI BIZ OS Lifetime (£50)", to: "/pricing" }
+      { label: "Get DIGI BIZ OS Lifetime (£29)", to: "/pricing" }
     ]
   },
   {
@@ -3796,7 +3796,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Official DIGI LEAD HUNTER GitHub Repository", to: "https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER.git" },
       { label: "Explore Open Source Suite", to: "/open-source" },
       { label: "Digi CRM & WhatsApp Agent", to: "/modules/crm" },
-      { label: "Get DIGI BIZ OS Lifetime (£50)", to: "/pricing" }
+      { label: "Get DIGI BIZ OS Lifetime (£29)", to: "/pricing" }
     ]
   },
   {

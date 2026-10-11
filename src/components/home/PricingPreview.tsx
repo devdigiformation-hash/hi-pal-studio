@@ -87,11 +87,12 @@ export default function PricingPreview() {
   const pricingFn = useServerFn(getPricing);
   const pricing = useQuery({ queryKey: ["pricing"], queryFn: () => pricingFn(), staleTime: 600000 });
   const plans = pricing.data?.plans ?? INTL_PRICES;
-  // Pakistani visitors see the price in PKR (Rs) by default instead of pounds —
-  // unless they've manually picked a currency. Non-PK visitors are unaffected.
+  // Pakistani visitors see the price in PKR (Rs) and international visitors see GBP (£)
   useEffect(() => {
     if (pricing.data?.region === "pk") {
-      try { if (!window.localStorage.getItem("dbos-currency")) setCurrency("PKR"); } catch { /* */ }
+      setCurrency("PKR");
+    } else if (pricing.data?.region) {
+      setCurrency("GBP");
     }
   }, [pricing.data?.region, setCurrency]);
 
@@ -151,11 +152,6 @@ export default function PricingPreview() {
                     Save {Math.round(((compareGbp - gbp) / compareGbp) * 100)}%
                   </span>
                 </div>
-                {code !== "PKR" ? (
-                  <div className="mt-1.5 font-mono text-[12px] text-[var(--text-muted)]">
-                    ≈ {formatPrice(gbp, "PKR", planPrices.pkr)} · ${formatPrice(gbp, "USD").slice(1)}
-                  </div>
-                ) : null}
                 <p className="mt-3 font-body text-[14px] text-[var(--text-secondary)]">
                   {plan.note}
                 </p>

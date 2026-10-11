@@ -169,7 +169,7 @@ export const COMPARE_PAGES: ComparePage[] = [
       },
       {
         aspect: "Pricing model",
-        digibiz: "One-time lifetime licence from £50",
+        digibiz: "One-time lifetime licence from £29",
         other: "Free tier plus monthly subscription plans",
       },
     ],
@@ -805,7 +805,7 @@ export const COMPARE_PAGES: ComparePage[] = [
     summary: {
       forDigiBiz: [
         "You want an all-in-one business system that replaces 10+ SaaS tools.",
-        "You want zero monthly subscription fees (£50 lifetime license).",
+        "You want zero monthly subscription fees (£29 lifetime license).",
         "You need voice productivity, offline privacy, and native PC control.",
       ],
       forOther: [
@@ -815,7 +815,7 @@ export const COMPARE_PAGES: ComparePage[] = [
     },
     rows: [
       { aspect: "Target User", digibiz: "Entrepreneurs, SMBs, Freelancers & Teams", other: "Enterprise Software Engineering Teams" },
-      { aspect: "Pricing Model", digibiz: "£50 One-Time Lifetime License", other: "Enterprise Recurring Monthly Subscription" },
+      { aspect: "Pricing Model", digibiz: "£29 One-Time Lifetime License", other: "Enterprise Recurring Monthly Subscription" },
       { aspect: "Execution", digibiz: "Local Windows PC Execution (Zero Data Egress)", other: "Proprietary Cloud Sandbox" },
       { aspect: "Operational Scope", digibiz: "12 Business Modules (CRM, Studio, Automation, Code)", other: "Specialized Software Engineering" },
     ],

@@ -1,3 +1,8 @@
+# Secrets — never commit (holds Supabase URL + keys)
+.env
+.env.*
+!.env.example
+
 # Logs
 logs
 *.log
@@ -37,6 +42,13 @@ public/downloads/*.exe
 .DS_Store
 *.suo
 *.ntvs*
-*.njsproj
-*.sln
 *.sw?
+
+# Local audits & temporary test runs
+audit-screenshots/
+supabase/.temp/
+scripts/check-deployment.cjs
+scripts/find-pricing-occurrences.mjs
+scripts/full-site-mobile-audit.mjs
+scripts/verify-lead-hunter-mobile.mjs
+scripts/mobile-audit.ts

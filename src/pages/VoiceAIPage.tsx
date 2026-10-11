@@ -540,7 +540,7 @@ export default function VoiceAIPage() {
                 </tr>
                 <tr>
                   <td className="p-4 font-semibold text-[var(--text-primary)]">Pricing Model</td>
-                  <td className="p-4 text-[var(--cyan)]">£50 One-Time Lifetime Access</td>
+                  <td className="p-4 text-[var(--cyan)]">£29 One-Time Lifetime Access</td>
                   <td className="p-4">$20/month ($240/year recurring per user)</td>
                 </tr>
               </tbody>
@@ -561,7 +561,7 @@ export default function VoiceAIPage() {
       <PageCTA
         title="Command Your Desktop with JARVIS Voice AI"
         badges={["<200ms Latency", "Live Voice Streaming", "Windows 10/11"]}
-        cta="Get Now (£50 Lifetime)"
+        cta="Get Now (£29 Lifetime)"
         trackSource="voice_ai_cta"
         icon={<WindowsIcon size={17} />}
       />

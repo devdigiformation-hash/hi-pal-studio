@@ -177,7 +177,7 @@ export default function SubPageBentoShowcase({
                   <div className="space-y-3 rounded-xl border border-emerald-500/20 bg-emerald-500/[0.04] p-4 font-body text-[13.5px]">
                     <div className="flex items-center justify-between border-b border-white/10 pb-2">
                       <span className="font-display font-bold text-white">DIGI BIZ OS Architecture</span>
-                      <span className="font-mono text-[12px] font-bold text-[#3DDC84]">£50 Lifetime</span>
+                      <span className="font-mono text-[12px] font-bold text-[#3DDC84]">£29 Lifetime</span>
                     </div>
                     <p className="text-[var(--text-secondary)]">✔ 100% Offline native execution on your PC.</p>
                     <p className="text-[var(--text-secondary)]">✔ No per-seat fees or recurring subscription traps.</p>

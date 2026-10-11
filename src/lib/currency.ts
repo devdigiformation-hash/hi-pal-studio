@@ -10,14 +10,7 @@ export interface CurrencyDef {
 
 export const CURRENCIES: CurrencyDef[] = [
   { code: "GBP", symbol: "£", perGbp: 1, flag: "🇬🇧", round: 1 },
-  { code: "USD", symbol: "$", perGbp: 1.28, flag: "🇺🇸", round: 1 },
   { code: "PKR", symbol: "Rs ", perGbp: 360, flag: "🇵🇰", round: 100 },
-  { code: "EUR", symbol: "€", perGbp: 1.17, flag: "🇪🇺", round: 1 },
-  { code: "AED", symbol: "AED ", perGbp: 4.7, flag: "🇦🇪", round: 1 },
-  { code: "SAR", symbol: "SAR ", perGbp: 4.8, flag: "🇸🇦", round: 1 },
-  { code: "INR", symbol: "₹", perGbp: 107, flag: "🇮🇳", round: 10 },
-  { code: "CAD", symbol: "C$", perGbp: 1.74, flag: "🇨🇦", round: 1 },
-  { code: "AUD", symbol: "A$", perGbp: 1.93, flag: "🇦🇺", round: 1 },
 ];
 
 export function getCurrency(code: string): CurrencyDef {
@@ -47,9 +40,12 @@ export function useCurrency() {
 
   useEffect(() => {
     const stored = typeof window !== "undefined" ? window.localStorage.getItem(KEY) : null;
-    if (stored && stored !== current) {
+    if (stored && (stored === "GBP" || stored === "PKR")) {
       current = stored;
       setCode(stored);
+    } else {
+      current = "GBP";
+      setCode("GBP");
     }
     listeners.add(setCode);
     return () => {

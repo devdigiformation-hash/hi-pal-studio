@@ -106,11 +106,12 @@ export default function PricingPage() {
   const pricingFn = useServerFn(getPricing);
   const pricing = useQuery({ queryKey: ["pricing"], queryFn: () => pricingFn(), staleTime: 600000 });
   const plans = pricing.data?.plans ?? INTL_PRICES;
-  // Pakistani visitors default to PKR (Rs) instead of pounds, unless they picked
-  // a currency themselves. Non-PK visitors are unaffected.
+  // Pakistani visitors default to PKR (Rs) and international visitors default to GBP (£)
   useEffect(() => {
     if (pricing.data?.region === "pk") {
-      try { if (!window.localStorage.getItem("dbos-currency")) setCurrency("PKR"); } catch { /* */ }
+      setCurrency("PKR");
+    } else if (pricing.data?.region) {
+      setCurrency("GBP");
     }
   }, [pricing.data?.region, setCurrency]);
 
@@ -168,9 +169,6 @@ export default function PricingPage() {
                     ) : null}
                   </div>
                   <div className="mt-2 flex flex-wrap items-center gap-2 font-mono text-[12px] text-[var(--text-muted)]">
-                    <span>
-                      {formatPrice(gbp, "PKR", planPrices.pkr)} · {formatPrice(gbp, "USD")}
-                    </span>
                     {compareGbp ? (
                       <span
                         className="rounded-full border px-2 py-0.5 text-[10.5px] uppercase tracking-[0.12em]"

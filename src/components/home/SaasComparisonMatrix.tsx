@@ -83,7 +83,7 @@ export default function SaasComparisonMatrix() {
               DIGI BIZ OS All-In-One
             </span>
             <div className="mt-2 font-display text-[36px] font-extrabold text-[var(--cyan)]">
-              £50
+              £29
               <span className="text-[16px] font-normal text-[var(--text-muted)]"> one-time</span>
             </div>
             <p className="mt-1 font-body text-[13px] text-[var(--text-secondary)]">
@@ -233,11 +233,11 @@ export default function SaasComparisonMatrix() {
             </h3>
             <p className="mt-3 font-body text-[15px] leading-relaxed text-[var(--text-secondary)]">
               Get full lifetime access to all 12 modules, timeline video editing, multilingual voice TTS, 20-module CRM,
-              always-on workflows, and JARVIS voice control for a single £50 lifetime license.
+              always-on workflows, and JARVIS voice control for a single £29 lifetime license.
             </p>
               <Link to="/pricing">
                 <CyanButton>
-                  Get Lifetime Licence (£50) <ArrowRight size={16} className="ml-2" />
+                  Get Lifetime Licence (£29) <ArrowRight size={16} className="ml-2" />
                 </CyanButton>
               </Link>
               <Link to="/compare">

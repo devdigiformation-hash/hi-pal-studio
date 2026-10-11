@@ -68,7 +68,7 @@ export default function SeoLanding({ page }: { page: SeoPage }) {
 
           <div className="reveal-item delay-3 mt-9 flex flex-wrap items-center justify-center gap-3">
             <Link to="/pricing">
-              <CyanButton icon={<ArrowRight size={16} />}>Get DIGI BIZ OS — £50</CyanButton>
+              <CyanButton icon={<ArrowRight size={16} />}>Get DIGI BIZ OS — £29</CyanButton>
             </Link>
             <Link
               to="/features"

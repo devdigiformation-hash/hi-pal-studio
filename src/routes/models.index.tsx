@@ -161,7 +161,7 @@ function ModelsDirectoryPage() {
               Deploy Any AI Model on Your PC with DIGI BIZ OS
             </h2>
             <p className="mx-auto mt-4 max-w-[620px] font-body text-[15px] leading-relaxed text-[var(--text-secondary)]">
-              Get full offline model management, Whisper voice transcription, JARVIS control, and 8 business modules for £50 lifetime.
+              Get full offline model management, Whisper voice transcription, JARVIS control, and 8 business modules for £29 lifetime.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link to="/download">
@@ -171,7 +171,7 @@ function ModelsDirectoryPage() {
               </Link>
               <Link to="/pricing">
                 <GhostButton size="lg" icon={<ShieldCheck size={18} />}>
-                  Get Lifetime Access (£50)
+                  Get Lifetime Access (£29)
                 </GhostButton>
               </Link>
             </div>
