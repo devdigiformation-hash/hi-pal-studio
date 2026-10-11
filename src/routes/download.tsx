@@ -227,13 +227,16 @@ function DownloadPage() {
             {/* Breathing radial glow */}
             <div className="absolute h-36 w-36 rounded-full bg-cyan-400/20 blur-2xl animate-pulse" />
 
-            <div className="relative z-10 flex h-24 w-24 items-center justify-center rounded-2xl border border-white/20 bg-black/60 p-3 shadow-[0_12px_40px_rgba(0,0,0,0.8)] backdrop-blur-xl md:h-28 md:w-28">
-              <img
-                src="/logo-512.webp"
-                alt="DIGI BIZ OS"
-                className="h-full w-full object-contain drop-shadow-[0_0_18px_rgba(47,224,200,0.6)]"
-                loading="eager"
-              />
+            <div className="relative z-10">
+              {/* Only Square Curved Logo (No Glass Frame/Padding) */}
+              <div className="h-24 w-24 overflow-hidden rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.8)] md:h-28 md:w-28">
+                <img
+                  src="/logo-512.webp"
+                  alt="DIGI BIZ OS"
+                  className="h-full w-full object-cover"
+                  loading="eager"
+                />
+              </div>
 
               {/* Gen 2.4 Tag */}
               <div className="absolute -top-3 -right-6 inline-flex items-center gap-1.5 rounded-full border border-cyan-400/40 bg-slate-950/90 px-2.5 py-0.5 font-mono text-[10px] font-bold tracking-widest text-cyan-300 shadow-[0_4px_12px_rgba(0,0,0,0.6)]">
