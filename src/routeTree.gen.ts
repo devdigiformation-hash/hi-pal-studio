@@ -53,6 +53,7 @@ import { Route as OpenSourceArtcraftRouteImport } from './routes/open-source.art
 import { Route as OpenSourceAudacityRouteImport } from './routes/open-source.audacity'
 import { Route as OpenSourceCreditsRouteImport } from './routes/open-source.credits'
 import { Route as OpenSourceDeepLiveCamRouteImport } from './routes/open-source.deep-live-cam'
+import { Route as OpenSourceDigiLabsRouteImport } from './routes/open-source.digi-labs'
 import { Route as OpenSourceDigiLeadHunterRouteImport } from './routes/open-source.digi-lead-hunter'
 import { Route as OpenSourceFacefusionRouteImport } from './routes/open-source.facefusion'
 import { Route as OpenSourceHermesAgentRouteImport } from './routes/open-source.hermes-agent'
@@ -290,6 +291,11 @@ const OpenSourceDeepLiveCamRoute = OpenSourceDeepLiveCamRouteImport.update({
   path: '/deep-live-cam',
   getParentRoute: () => OpenSourceRoute,
 } as any)
+const OpenSourceDigiLabsRoute = OpenSourceDigiLabsRouteImport.update({
+  id: '/digi-labs',
+  path: '/digi-labs',
+  getParentRoute: () => OpenSourceRoute,
+} as any)
 const OpenSourceDigiLeadHunterRoute =
   OpenSourceDigiLeadHunterRouteImport.update({
     id: '/digi-lead-hunter',
@@ -411,6 +417,7 @@ export interface FileRoutesByFullPath {
   '/open-source/audacity': typeof OpenSourceAudacityRoute
   '/open-source/credits': typeof OpenSourceCreditsRoute
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
+  '/open-source/digi-labs': typeof OpenSourceDigiLabsRoute
   '/open-source/digi-lead-hunter': typeof OpenSourceDigiLeadHunterRoute
   '/open-source/facefusion': typeof OpenSourceFacefusionRoute
   '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
@@ -472,6 +479,7 @@ export interface FileRoutesByTo {
   '/open-source/audacity': typeof OpenSourceAudacityRoute
   '/open-source/credits': typeof OpenSourceCreditsRoute
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
+  '/open-source/digi-labs': typeof OpenSourceDigiLabsRoute
   '/open-source/digi-lead-hunter': typeof OpenSourceDigiLeadHunterRoute
   '/open-source/facefusion': typeof OpenSourceFacefusionRoute
   '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
@@ -535,6 +543,7 @@ export interface FileRoutesById {
   '/open-source/audacity': typeof OpenSourceAudacityRoute
   '/open-source/credits': typeof OpenSourceCreditsRoute
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
+  '/open-source/digi-labs': typeof OpenSourceDigiLabsRoute
   '/open-source/digi-lead-hunter': typeof OpenSourceDigiLeadHunterRoute
   '/open-source/facefusion': typeof OpenSourceFacefusionRoute
   '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
@@ -599,6 +608,7 @@ export interface FileRouteTypes {
     | '/open-source/audacity'
     | '/open-source/credits'
     | '/open-source/deep-live-cam'
+    | '/open-source/digi-labs'
     | '/open-source/digi-lead-hunter'
     | '/open-source/facefusion'
     | '/open-source/hermes-agent'
@@ -660,6 +670,7 @@ export interface FileRouteTypes {
     | '/open-source/audacity'
     | '/open-source/credits'
     | '/open-source/deep-live-cam'
+    | '/open-source/digi-labs'
     | '/open-source/digi-lead-hunter'
     | '/open-source/facefusion'
     | '/open-source/hermes-agent'
@@ -722,6 +733,7 @@ export interface FileRouteTypes {
     | '/open-source/audacity'
     | '/open-source/credits'
     | '/open-source/deep-live-cam'
+    | '/open-source/digi-labs'
     | '/open-source/digi-lead-hunter'
     | '/open-source/facefusion'
     | '/open-source/hermes-agent'
@@ -1100,6 +1112,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OpenSourceDeepLiveCamRouteImport
       parentRoute: typeof OpenSourceRoute
     }
+    '/open-source/digi-labs': {
+      id: '/open-source/digi-labs'
+      path: '/digi-labs'
+      fullPath: '/open-source/digi-labs'
+      preLoaderRoute: typeof OpenSourceDigiLabsRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
     '/open-source/digi-lead-hunter': {
       id: '/open-source/digi-lead-hunter'
       path: '/digi-lead-hunter'
@@ -1221,6 +1240,7 @@ interface OpenSourceRouteChildren {
   OpenSourceAudacityRoute: typeof OpenSourceAudacityRoute
   OpenSourceCreditsRoute: typeof OpenSourceCreditsRoute
   OpenSourceDeepLiveCamRoute: typeof OpenSourceDeepLiveCamRoute
+  OpenSourceDigiLabsRoute: typeof OpenSourceDigiLabsRoute
   OpenSourceDigiLeadHunterRoute: typeof OpenSourceDigiLeadHunterRoute
   OpenSourceFacefusionRoute: typeof OpenSourceFacefusionRoute
   OpenSourceHermesAgentRoute: typeof OpenSourceHermesAgentRoute
@@ -1243,6 +1263,7 @@ const OpenSourceRouteChildren: OpenSourceRouteChildren = {
   OpenSourceAudacityRoute: OpenSourceAudacityRoute,
   OpenSourceCreditsRoute: OpenSourceCreditsRoute,
   OpenSourceDeepLiveCamRoute: OpenSourceDeepLiveCamRoute,
+  OpenSourceDigiLabsRoute: OpenSourceDigiLabsRoute,
   OpenSourceDigiLeadHunterRoute: OpenSourceDigiLeadHunterRoute,
   OpenSourceFacefusionRoute: OpenSourceFacefusionRoute,
   OpenSourceHermesAgentRoute: OpenSourceHermesAgentRoute,

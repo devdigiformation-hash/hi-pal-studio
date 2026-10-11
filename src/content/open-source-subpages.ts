@@ -1087,4 +1087,68 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       ],
     },
   },
+  "digi-labs": {
+    id: "digi-labs",
+    name: "DIGI LABS — Free Human TTS & Video-to-Prompt Studio",
+    shortName: "DIGI LABS",
+    route: "/open-source/digi-labs",
+    category: "Speech & Media AI",
+    tagline: "Unlimited free human TTS like Gemini voice & ElevenLabs alternative with video-to-prompt, course & notes reverse engineering.",
+    eyebrow: "UNLIMITED FREE HUMAN TTS • ELEVENLABS ALTERNATIVE • VIDEO-TO-PROMPT & COURSE ENGINE",
+    alternativeTo: ["ElevenLabs ($22-$99/mo)", "Murf AI", "Descript", "Speechify"],
+    license: "MIT / Apache 2.0",
+    licenseDetails: "100% Free & Open-Source desktop workstation for commercial and personal narration.",
+    stars: "100% Open Source",
+    repoUrl: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-",
+    downloadUrl: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe",
+    downloadType: "installer",
+    downloadTypeLabel: "Windows Installer (.exe) 240MB",
+    privacy: "100% Local (Offline)",
+    provenance: "Engineered by DigiFormation Ltd as a sovereign desktop TTS studio and media reverse-engineering engine.",
+    requirements: {
+      os: "Windows 10 / 11 (64-bit), macOS, or Linux",
+      cpu: "Intel Core i5 / AMD Ryzen 5 or higher",
+      ram: "4 GB RAM minimum (8 GB recommended for local Whisper transcription)",
+      gpu: "Optional hardware acceleration for Whisper STT",
+      storage: "500 MB free SSD storage",
+      runtime: "Standalone Windows Desktop Installer (.exe) or Node.js 18+ & Python",
+    },
+    faqs: [
+      {
+        q: "What is DIGI LABS?",
+        a: "DIGI LABS is a standalone open-source desktop voice and media intelligence workstation created by DigiFormation Ltd. It delivers human-grade voice synthesis (Gemini 2.5 Flash Voice & Edge-TTS) with zero monthly fees, alongside a video-to-prompt, course, notes, and transcription reverse-engineering engine.",
+      },
+      {
+        q: "How does DIGI LABS replace ElevenLabs for free?",
+        a: "ElevenLabs charges between $22 and $99 every month with restrictive character credits. DIGI LABS provides two engines: Studio Voice (powered by Gemini 2.5 Flash Preview TTS for hyper-realistic human voice with emotional nuance and multi-key auto-rotation) and Free Voice (Edge-TTS) for 100% unlimited long-form narrations, audiobooks, and chapters with zero subscription costs.",
+      },
+      {
+        q: "What is the Video-to-Prompt & Course Engine?",
+        a: "DIGI LABS allows you to paste any video link (YouTube, MP4) and automatically reverse-engineer it. It extracts the exact cinematic visual prompts (for regeneration in Sora, Runway Gen-3, Kling, or Midjourney), converts long lectures into structured courses, generates executive notes and study guides, and produces word-for-word timestamped transcripts.",
+      },
+      {
+        q: "Which languages and voices are supported?",
+        a: "DIGI LABS includes native English, Urdu (with an instant RTL Nastaliq editor toggle), Hindi, and Arabic voices, alongside dozens of international dialects with pitch, rate, and audio FX controls.",
+      },
+      {
+        q: "How does the multi-key rotation system work?",
+        a: "You can enter multiple free Gemini API keys in Settings. DIGI LABS automatically balances and rotates through up to 9 key slots. When one key reaches its daily rate limit, DIGI LABS seamlessly shifts to the next key without failing your audio generation.",
+      },
+      {
+        q: "Does DIGI LABS work offline?",
+        a: "Yes. The Free Voice engine, audio FX tools, and local Whisper transcription work on your desktop workstation without sending telemetry to cloud servers.",
+      },
+    ],
+    relatedToolIds: ["audacity", "artcraft", "opencut", "kdenlive", "shotcut"],
+    bridge: {
+      headline: "Pair DIGI LABS With DIGI BIZ OS Autonomous Workflows",
+      description: "While DIGI LABS delivers world-class voice synthesis and video prompt extraction, DIGI BIZ OS automates your client pipeline: scheduling social media video releases, issuing automated client invoices, and delegating video tasks through JARVIS voice control.",
+      highlights: [
+        "Direct audio integration into marketing campaigns and YouTube syndication",
+        "JARVIS voice control to delegate text-to-speech rendering jobs in the background",
+        "Automated PDF client invoicing for voiceover and localization projects",
+        "Eliminates ElevenLabs ($264-$1,188/yr) and course transcription tools forever",
+      ],
+    },
+  },
 };

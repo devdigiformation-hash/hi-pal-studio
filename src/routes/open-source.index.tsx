@@ -73,6 +73,7 @@ import tuttleScreenshot from "@/assets/tuttle-screenshot.jpg";
 import upscaylScreenshot from "@/assets/upscayl-screenshot.jpg";
 import leadHunterBanner from "@/assets/digi-lead-hunter-banner.webp";
 import artcraftScreenshot from "@/assets/artcraft-screenshot.jpg";
+import digiLabsLogo from "@/assets/digi-labs-logo.png";
 
 
 const TITLE = "Free Open Source Software Library & Hub — AI Agents, Media & Tools | DIGI BIZ OS";
@@ -134,6 +135,36 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     downloadUrl: OPEN_SOURCE_SUBPAGES["digi-lead-hunter"].downloadUrl,
     downloadFilename: "DIGI-LEAD-HUNTER-main.zip",
     repoUrl: OPEN_SOURCE_SUBPAGES["digi-lead-hunter"].repoUrl,
+    featured: true,
+  },
+  {
+    id: "digi-labs",
+    name: "DIGI LABS — Free Human TTS & Video-to-Prompt Studio",
+    category: "Speech & Media AI",
+    tagline: "Unlimited free human TTS like Gemini voice & ElevenLabs alternative with video-to-prompt, course & notes reverse engineering.",
+    license: "MIT / Apache 2.0",
+    color: "#EC4899",
+    icon: Mic,
+    image: digiLabsLogo,
+    badge: "Official DIGIFORMATION Product",
+    bundle: "Audio Synthesis & Video Reverse-Engineering",
+    bullets: [
+      "Zero-cost ElevenLabs alternative with Gemini 2.5 Flash Studio Voice & Edge-TTS",
+      "Unlimited free speech generation for audiobooks, chapters, podcasts & YouTube",
+      "Video-to-Prompt: Paste any video link to extract AI prompts, courses & study notes",
+      "Multi-key auto-rotation across 9 slots + 1-click Nastaliq Urdu toggle",
+    ],
+    features: ["Gemini 2.5 TTS", "Video to Prompt", "Zero Credit Limits"],
+    to: "/open-source/digi-labs",
+    stars: "Open Source ★",
+    starCount: 50000,
+    savings: "Save $1,200+ / yr",
+    savingsValue: 1200,
+    platforms: ["Windows", "macOS", "Linux"],
+    alternativeTo: ["ElevenLabs ($22-$99/mo)", "Murf AI", "Descript", "Speechify"],
+    downloadUrl: OPEN_SOURCE_SUBPAGES["digi-labs"].downloadUrl,
+    downloadFilename: "DIGI-LABS-Setup-1.0.0.exe",
+    repoUrl: OPEN_SOURCE_SUBPAGES["digi-labs"].repoUrl,
     featured: true,
   },
   {

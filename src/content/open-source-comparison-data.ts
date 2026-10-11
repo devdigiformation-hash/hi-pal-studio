@@ -944,5 +944,63 @@ export const OPEN_SOURCE_COMPARISONS: Record<string, OpenSourceComparisonItem> =
         "openSourceWins": true
       }
     ]
+  },
+  "digi-labs": {
+    "id": "digi-labs",
+    "name": "DIGI LABS — Free Human TTS & Video-to-Prompt Studio",
+    "category": "Speech & Media AI",
+    "paidAlternatives": [
+      "ElevenLabs ($264 - $1,188/yr)",
+      "Murf AI ($348/yr)",
+      "Speechify ($139/yr)",
+      "Descript ($288/yr)"
+    ],
+    "openSourceCost": "$0 Free Forever (MIT / Apache 2.0)",
+    "annualSavings": "$264 - $1,188 / year",
+    "license": "MIT / Apache 2.0 Open Source",
+    "tagline": "Stop paying monthly subscription taxes for limited TTS characters. Run ultra-realistic Gemini 2.5 human voice, unlimited Edge-TTS, and video-to-prompt reverse-engineering locally on your desktop.",
+    "pathwayGuide": {
+      "howToRun": "Download the verified DIGI-LABS-Setup-1.0.0.exe Windows installer from GitHub releases, or clone the repository and run npm start for immediate desktop studio access.",
+      "whyFree": "Engineered by DigiFormation Ltd to give creators, podcasters, and agency owners sovereign, credit-free human speech synthesis.",
+      "osIntegration": "Connects natively into DIGI BIZ OS autonomous marketing workflows, automated YouTube syndication, and JARVIS voice delegation."
+    },
+    "matrix": [
+      {
+        "feature": "Annual Software Subscription",
+        "openSourceValue": "$0 (Free Forever)",
+        "commercialPaidValue": "$264 - $1,188/year (ElevenLabs Creator / Pro)",
+        "openSourceWins": true
+      },
+      {
+        "feature": "Character Limits & Overages",
+        "openSourceValue": "Unlimited Free Speech (Edge-TTS) + Multi-Key Gemini Rotation",
+        "commercialPaidValue": "Strict Monthly Credit Caps + Expensive Overage Bills",
+        "openSourceWins": true
+      },
+      {
+        "feature": "Video-to-Prompt & Course Engine",
+        "openSourceValue": "Built-in: Paste Video URL → Reverse-Engineer Prompts & Courses",
+        "commercialPaidValue": "Not Available (Requires 3 Separate Paid SaaS Subscriptions)",
+        "openSourceWins": true
+      },
+      {
+        "feature": "Urdu & Nastaliq RTL Support",
+        "openSourceValue": "1-Click Nastaliq Toggle with Native Urdu Voices",
+        "commercialPaidValue": "Broken Arabic/Urdu phonemes & robotic tone",
+        "openSourceWins": true
+      },
+      {
+        "feature": "Desktop Privacy & Local Storage",
+        "openSourceValue": "100% Local SSD Audio Files (Zero Cloud Tracking)",
+        "commercialPaidValue": "All voice data logged on external servers",
+        "openSourceWins": true
+      },
+      {
+        "feature": "Audio FX & Pitch Tools",
+        "openSourceValue": "Integrated Local FFmpeg Effects & Job Tracking",
+        "commercialPaidValue": "Separate Audio Mastering Software Required",
+        "openSourceWins": true
+      }
+    ]
   }
 };
