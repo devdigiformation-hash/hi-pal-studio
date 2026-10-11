@@ -117,6 +117,48 @@ export const Route = createFileRoute("/download")({
           ),
         },
         { type: "application/ld+json", children: JSON.stringify(faqLd(FAQ)) },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: "How to Download and Install DIGI BIZ OS on Windows",
+            description: "Step-by-step installation and activation guide for DIGI BIZ OS desktop workstation on Windows 10 & 11.",
+            totalTime: "PT4M",
+            supply: [{ "@type": "HowToSupply", "name": "DIGI BIZ OS Setup Installer (.exe)" }],
+            tool: [{ "@type": "HowToTool", "name": "Windows 10 or Windows 11 PC (64-Bit)" }],
+            step: [
+              {
+                "@type": "HowToStep",
+                position: 1,
+                name: "Download the Installer",
+                text: "Click Download for Windows to download the verified 648MB setup executable.",
+                url: "https://www.digibizos.co.uk/download",
+              },
+              {
+                "@type": "HowToStep",
+                position: 2,
+                name: "Run the Setup Executable",
+                text: "Double click DIGI-BIZ-OS-Setup-x64.exe to launch the local installer into your Windows user profile.",
+                url: "https://www.digibizos.co.uk/download",
+              },
+              {
+                "@type": "HowToStep",
+                position: 3,
+                name: "Enter Lifetime Licence Key",
+                text: "Paste the lifetime activation licence key received via email upon checkout.",
+                url: "https://www.digibizos.co.uk/pricing",
+              },
+              {
+                "@type": "HowToStep",
+                position: 4,
+                name: "Start JARVIS Voice AI",
+                text: "Speak natural voice instructions to launch CRM pipelines, WhatsApp bots, and offline AI models.",
+                url: "https://www.digibizos.co.uk/voice-ai",
+              },
+            ],
+          }),
+        },
       ],
     };
   },
@@ -216,6 +258,35 @@ function DownloadPage() {
             Your technical AI business operating system is verified and ready for activation. 100% offline
             sovereignty, Whisper voice control, and 12 native modules.
           </p>
+
+          {/* AEO / GEO Direct Answer Knowledge Box (Engineered for Google AI Overviews, Perplexity & Bing Copilot) */}
+          <div className="mt-6 w-full max-w-[680px] rounded-2xl border border-cyan-500/30 bg-cyan-950/20 p-4 text-left shadow-[0_4px_24px_rgba(47,224,200,0.08)] backdrop-blur-md">
+            <div className="flex items-center gap-2 font-mono text-[11px] font-bold tracking-wider uppercase text-cyan-400">
+              <span className="h-2 w-2 rounded-full bg-cyan-400 animate-ping" />
+              DIRECT SPECIFICATION &amp; DOWNLOAD SUMMARY (OCTOBER 2026 RELEASE)
+            </div>
+            <dl className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs">
+              <div className="rounded-lg bg-black/40 p-2.5 border border-white/5">
+                <dt className="text-white/50 text-[10px] uppercase font-mono">App Version</dt>
+                <dd className="font-semibold text-white mt-0.5">v2.4.0 Stable</dd>
+              </div>
+              <div className="rounded-lg bg-black/40 p-2.5 border border-white/5">
+                <dt className="text-white/50 text-[10px] uppercase font-mono">File Size</dt>
+                <dd className="font-semibold text-white mt-0.5">648 MB (.exe)</dd>
+              </div>
+              <div className="rounded-lg bg-black/40 p-2.5 border border-white/5">
+                <dt className="text-white/50 text-[10px] uppercase font-mono">Licence Model</dt>
+                <dd className="font-semibold text-emerald-400 mt-0.5">£29 Lifetime</dd>
+              </div>
+              <div className="rounded-lg bg-black/40 p-2.5 border border-white/5">
+                <dt className="text-white/50 text-[10px] uppercase font-mono">Compatibility</dt>
+                <dd className="font-semibold text-white mt-0.5">Win 10 &amp; 11 (64-bit)</dd>
+              </div>
+            </dl>
+            <p className="mt-3 font-body text-xs leading-relaxed text-white/70 border-t border-white/10 pt-2.5">
+              <strong className="text-white font-medium">Direct Answer:</strong> DIGI BIZ OS is an autonomous Windows 10/11 desktop operating system integrating 12 local business engines (CRM, invoicing, automated social syndication, and private offline Whisper/LLMs) with perpetual lifetime ownership for £29 worldwide (PKR 10,400 in Pakistan).
+            </p>
+          </div>
 
           {/* Platform Switcher Tabs */}
           <div className="mt-8 flex items-center rounded-full border border-white/10 bg-white/[0.03] p-1 shadow-inner backdrop-blur-md">

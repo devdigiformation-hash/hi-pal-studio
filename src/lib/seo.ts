@@ -74,7 +74,7 @@ export function softwareLd(name: string, description: string, url: string) {
     url: abs(url),
     description,
     image: abs("/logo-512.png"),
-    softwareVersion: "1.0",
+    softwareVersion: "2.4.0",
     author: { "@id": `${SITE_URL}/#organization` },
     publisher: { "@id": `${SITE_URL}/#organization` },
     brand: {
@@ -85,7 +85,7 @@ export function softwareLd(name: string, description: string, url: string) {
     },
     offers: {
       "@type": "Offer",
-      price: "50",
+      price: "29",
       priceCurrency: "GBP",
       url: abs("/pricing"),
       availability: "https://schema.org/InStock",
