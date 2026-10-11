@@ -15,6 +15,7 @@ const NAV_LINKS = [
   { label: "Features", to: "/features" },
   { label: "Voice AI", to: "/voice-ai" },
   { label: "Open Source", to: "/open-source" },
+  { label: "Download", to: "/download" },
   { label: "Agents", to: "/agents" },
   { label: "Blog", to: "/blog" },
   { label: "Pricing", to: "/pricing" },
@@ -75,7 +76,7 @@ export default function Navbar() {
             <ActivePulse />
           </Link>
 
-          <div className="hidden items-center gap-5 lg:flex xl:gap-7">
+          <div className="hidden items-center gap-4 lg:flex xl:gap-6">
             {NAV_LINKS.map((link) => {
               const active = pathname === link.to;
               return (
