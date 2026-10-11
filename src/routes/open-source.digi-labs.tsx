@@ -17,6 +17,14 @@ import {
   BookOpen,
   Sliders,
   Download,
+  ArrowRight,
+  Check,
+  Github,
+  Globe,
+  Mail,
+  MessageSquare,
+  Phone,
+  Building2,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
@@ -35,6 +43,34 @@ import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
 import digiLabsLogo from "@/assets/digi-labs-logo.png";
 
 const toolData = OPEN_SOURCE_SUBPAGES["digi-labs"];
+
+const RELATED_BLOGS = [
+  {
+    slug: "digi-labs-vs-elevenlabs-free-human-tts-alternative-2026",
+    title: "DIGI LABS vs ElevenLabs: Why Unlimited Free Human TTS is Replacing $330/Year Voice Subscriptions",
+    desc: "A deep architectural and pricing comparison between ElevenLabs cloud quotas and DIGI LABS sovereign local desktop speech synthesis.",
+  },
+  {
+    slug: "turn-any-video-link-into-ai-prompts-and-courses-digi-labs",
+    title: "How to Turn Any Video Link into Cinematic AI Prompts, Courses & Executive Notes",
+    desc: "The complete tutorial on reverse-engineering visual style, director cues, camera movement, and lesson notes from any web video.",
+  },
+  {
+    slug: "gemini-voice-tts-free-local-desktop-setup-guide",
+    title: "Gemini 2.5 Flash Voice & Edge-TTS: Free Local Desktop Setup Guide",
+    desc: "Step-by-step setup guide for running emotional expressive human TTS locally on Windows with zero monthly character fees.",
+  },
+  {
+    slug: "convert-youtube-transcripts-into-viral-threads-and-articles",
+    title: "Convert Video Transcripts into Viral Social Threads, Blog Posts & Newsletters",
+    desc: "How content creators and agencies repurpose long-form multimedia into multi-channel written revenue engines in 60 seconds.",
+  },
+  {
+    slug: "zero-cost-ai-media-production-studio-stack-2026",
+    title: "The Zero-Cost AI Media Production Stack for 2026: Audio, Video & Prompts",
+    desc: "How independent founders and creative agencies build full production studios without paying SaaS tolls or subscriptions.",
+  },
+];
 
 const TITLE = "DIGI LABS — Free Human TTS & Video-to-Prompt Studio (ElevenLabs Alternative) | DIGI BIZ OS";
 const DESC =
@@ -248,6 +284,52 @@ function DigiLabsSubpage() {
           </div>
         </div>
 
+        {/* ── 5 IN-DEPTH STRATEGY GUIDES (BLOGS) ─────────────────── */}
+        <div className="mt-16">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 border-b border-white/10 pb-4">
+            <div>
+              <EyebrowLabel text="Knowledge Base &amp; Tutorials" color="#EC4899" />
+              <h2 className="mt-1 font-display text-[26px] font-bold text-white md:text-[34px]">
+                5 In-Depth Guides on DIGI LABS &amp; Voice Synthesis
+              </h2>
+            </div>
+            <Link
+              to="/blog"
+              className="inline-flex items-center gap-1.5 font-mono text-[12.5px] text-pink-400 hover:underline"
+            >
+              <span>Explore All Articles</span>
+              <ArrowRight size={14} />
+            </Link>
+          </div>
+
+          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {RELATED_BLOGS.map((blog) => (
+              <Link
+                key={blog.slug}
+                to={`/blog/${blog.slug}` as any}
+                className="group flex flex-col justify-between rounded-2xl border border-white/10 bg-[#090514] p-5 transition hover:border-pink-500/40 hover:bg-[#120826]"
+              >
+                <div>
+                  <div className="flex items-center gap-1.5 text-xs font-mono text-pink-400">
+                    <BookOpen size={13} />
+                    <span>In-Depth Production Guide</span>
+                  </div>
+                  <h3 className="mt-3 font-display text-[15.5px] font-bold leading-snug text-white group-hover:text-pink-300 transition">
+                    {blog.title}
+                  </h3>
+                  <p className="mt-2 font-body text-[13px] leading-[1.65] text-zinc-400">
+                    {blog.desc}
+                  </p>
+                </div>
+                <div className="mt-4 flex items-center gap-1 font-mono text-[11.5px] font-semibold text-pink-400 group-hover:translate-x-1 transition">
+                  <span>Read Article</span>
+                  <ArrowRight size={13} />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
         {/* ── COMPARISON MATRIX ────────────────────────────────────── */}
         <div className="mt-16">
           <OpenSourceValueComparisonChart toolId="digi-labs" />
@@ -255,27 +337,251 @@ function DigiLabsSubpage() {
 
         {/* ── TRUST & PROVENANCE ───────────────────────────────────── */}
         <div className="mt-16">
-          <OpenSourceSubpageTrustSection toolId="digi-labs" />
+          <OpenSourceSubpageTrustSection tool={toolData} />
         </div>
 
         {/* ── TECHNICAL SPECIFICATIONS ─────────────────────────────── */}
         <div className="mt-16">
-          <OpenSourceTechSpecs toolId="digi-labs" />
+          <OpenSourceTechSpecs
+            toolName={toolData.shortName}
+            requirements={toolData.requirements}
+            privacy={toolData.privacy}
+          />
         </div>
 
         {/* ── FAQ ─────────────────────────────────────────────────── */}
         <div className="mt-16">
-          <OpenSourceSubpageFaq toolId="digi-labs" />
+          <OpenSourceSubpageFaq toolName={toolData.shortName} faqs={toolData.faqs} />
         </div>
 
         {/* ── DIGI BIZ OS BRIDGE ──────────────────────────────────── */}
         <div className="mt-16">
-          <OpenSourceDigiBizBridge toolId="digi-labs" />
+          <OpenSourceDigiBizBridge
+            headline={toolData.bridge.headline}
+            description={toolData.bridge.description}
+            highlights={toolData.bridge.highlights}
+          />
+        </div>
+
+        {/* ── OFFICIAL COMPANY DIRECTORY & ABOUT SECTION ───────────── */}
+        <div className="mt-20 rounded-3xl border border-purple-500/30 bg-gradient-to-b from-[#140B28]/90 via-[#0E061E]/80 to-[#030712] p-6 sm:p-8 md:p-10 shadow-[0_0_50px_rgba(168,85,247,0.15)]">
+          {/* Brand Header Banner */}
+          <div className="flex flex-col sm:flex-row sm:items-center gap-5 border-b border-white/10 pb-6">
+            <img
+              src={digiLabsLogo}
+              alt="DIGIFORMATION LTD & DIGI LABS"
+              className="h-16 w-16 rounded-2xl border border-purple-400/40 bg-black/60 p-1.5 object-contain shadow-xl shadow-purple-500/20"
+            />
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-purple-400/40 bg-purple-500/10 px-3 py-0.5 text-xs font-semibold text-purple-300">
+                <Sparkles size={12} />
+                <span>Official Product of DIGIFORMATION LTD</span>
+              </div>
+              <h2 className="mt-2 font-display text-2xl sm:text-3xl font-extrabold text-white">
+                DIGI LABS Company Provenance &amp; Support Directory
+              </h2>
+              <p className="mt-1 text-xs sm:text-sm text-zinc-300">
+                by <strong className="text-white">DIGIFORMATION LTD</strong> • Sponsored by <span className="text-cyan-300">Digi Biz OS Ecosystem</span>
+              </p>
+            </div>
+          </div>
+
+          {/* Contact Directory Cards */}
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/* WhatsApp Card */}
+            <div className="rounded-2xl border border-emerald-500/30 bg-emerald-950/20 p-5 sm:p-6 space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-xs font-bold uppercase tracking-wider text-emerald-400">
+                  Primary WhatsApp Hotline
+                </span>
+                <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 animate-pulse" />
+              </div>
+              <div className="font-mono text-2xl font-extrabold text-white">
+                +92 316 4467464
+              </div>
+              <p className="text-xs text-zinc-300 leading-relaxed">
+                Direct technical assistance, custom enterprise voice model integration, and high-volume studio consulting.
+              </p>
+              <a
+                href="https://wa.me/923164467464?text=Hello%20DIGIFORMATION%20LTD%2C%20I%20am%20inquiring%20about%20DIGI%20LABS"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 px-4 py-2.5 font-mono text-xs font-bold text-black transition shadow-lg shadow-emerald-500/20"
+              >
+                <MessageSquare size={15} />
+                <span>Open WhatsApp Chat</span>
+              </a>
+            </div>
+
+            {/* Email Card */}
+            <div className="rounded-2xl border border-blue-500/30 bg-blue-950/20 p-5 sm:p-6 space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-xs font-bold uppercase tracking-wider text-blue-400">
+                  Official Email Communications
+                </span>
+                <Mail size={16} className="text-blue-400" />
+              </div>
+              <div className="space-y-1.5 font-mono text-xs text-white">
+                <div className="flex items-center gap-2">
+                  <span className="text-zinc-400">Corporate:</span>
+                  <a href="mailto:info@digiformation.co.uk" className="text-blue-300 hover:underline">
+                    info@digiformation.co.uk
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-zinc-400">Digi Biz:</span>
+                  <a href="mailto:info@digibizos.co.uk" className="text-indigo-300 hover:underline">
+                    info@digibizos.co.uk
+                  </a>
+                </div>
+              </div>
+              <p className="text-xs text-zinc-300 leading-relaxed">
+                Corporate licensing queries, enterprise developer partnerships, and custom media intelligence deployments.
+              </p>
+            </div>
+          </div>
+
+          {/* Web Portals & Company Registry */}
+          <div className="mt-6">
+            <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-zinc-300 flex items-center gap-2">
+              <Globe size={14} className="text-cyan-400" />
+              <span>Official Portals &amp; UK Registry</span>
+            </h3>
+
+            <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+              <a
+                href="https://find-and-update.company-information.service.gov.uk/company/16994903"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-blue-500/30 bg-blue-950/30 p-4 hover:border-blue-400 hover:bg-blue-900/30 transition group"
+              >
+                <div className="font-bold text-white group-hover:text-blue-300 transition">Companies House UK</div>
+                <div className="font-mono text-[11px] text-blue-300 mt-0.5">Company # 16994903</div>
+                <div className="text-[10px] text-zinc-400 mt-1">Official UK Registry ↗</div>
+              </a>
+
+              <a
+                href="https://www.digiformation.co.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-white/20 hover:bg-white/10 transition group"
+              >
+                <div className="font-bold text-white group-hover:text-cyan-300 transition">DIGIFORMATION LTD</div>
+                <div className="font-mono text-[11px] text-zinc-400 mt-0.5">www.digiformation.co.uk</div>
+                <div className="text-[10px] text-zinc-500 mt-1">Corporate Website ↗</div>
+              </a>
+
+              <a
+                href="https://www.digibizos.co.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-white/20 hover:bg-white/10 transition group"
+              >
+                <div className="font-bold text-white group-hover:text-indigo-300 transition">Digi Biz OS Platform</div>
+                <div className="font-mono text-[11px] text-zinc-400 mt-0.5">www.digibizos.co.uk</div>
+                <div className="text-[10px] text-zinc-500 mt-1">Business OS Suite ↗</div>
+              </a>
+
+              <a
+                href="https://linktr.ee/digiformationltd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-white/20 hover:bg-white/10 transition group"
+              >
+                <div className="font-bold text-white group-hover:text-emerald-300 transition">Official Linktree</div>
+                <div className="font-mono text-[11px] text-zinc-400 mt-0.5">linktr.ee/digiformationltd</div>
+                <div className="text-[10px] text-zinc-500 mt-1">All Verified Links ↗</div>
+              </a>
+            </div>
+          </div>
+
+          {/* License & Brand Notice */}
+          <div className="mt-6 rounded-2xl border border-white/10 bg-black/40 p-5 space-y-3">
+            <div className="flex items-center gap-2 text-white font-bold text-xs">
+              <ShieldCheck size={16} className="text-purple-400" />
+              <span>Open-Source License &amp; Brand Protection Notice</span>
+            </div>
+            <p className="text-xs text-zinc-300 leading-relaxed">
+              <strong>DIGI LABS</strong> is published under the Apache 2.0 / MIT Open-Source Engine License. You have complete freedom to generate unlimited commercial audiobooks, videos, and media without subscription fees. Standalone binary resale and unauthorized white-labeling are strictly prohibited.
+            </p>
+            <p className="text-[11px] text-zinc-500 border-t border-white/10 pt-2">
+              © 2026 DIGIFORMATION LTD. All Rights Reserved. Registered in England &amp; Wales (Company # 16994903).
+            </p>
+          </div>
         </div>
 
         {/* ── RELATED OPEN SOURCE TOOLS ───────────────────────────── */}
         <div className="mt-16">
           <OpenSourceRelatedTools currentToolId="digi-labs" />
+        </div>
+
+        {/* ── BOTTOM ACTION SECTION ────────────────────────────────── */}
+        <div className="mt-20 py-12 border-t border-white/10 text-center">
+          <div className="mx-auto max-w-[800px]">
+            <div className="inline-flex items-center gap-2 rounded-full border border-purple-400/40 bg-purple-500/10 px-4 py-1.5 font-mono text-xs font-bold uppercase tracking-wider text-purple-300">
+              <Github size={15} />
+              <span>Official DIGIFORMATION LTD GitHub Repository</span>
+            </div>
+
+            <h2 className="mt-5 font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">
+              Ready to Replace ElevenLabs with Unlimited Free Voice?
+            </h2>
+
+            <p className="mt-4 text-sm sm:text-base text-zinc-300 leading-relaxed">
+              Download the official standalone Windows setup installer (.exe 240MB) or clone the repository directly from GitHub to build custom voice and prompt pipelines.
+            </p>
+
+            <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-[560px] mx-auto">
+              <a
+                href={DOWNLOAD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-purple-400 bg-purple-500 px-6 py-3.5 font-mono text-sm font-bold text-white shadow-[0_0_30px_rgba(168,85,247,0.4)] transition hover:bg-purple-400 hover:shadow-[0_0_40px_rgba(168,85,247,0.6)]"
+              >
+                <Download size={18} />
+                <span>Download Windows Setup (.exe 240MB)</span>
+              </a>
+
+              <a
+                href={REPO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3.5 font-mono text-sm font-semibold text-white transition hover:border-purple-400 hover:bg-white/10"
+              >
+                <Github size={17} />
+                <span>GitHub Repository</span>
+                <ExternalLink size={13} className="opacity-70" />
+              </a>
+            </div>
+
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs font-mono text-zinc-400">
+              <a
+                href="https://wa.me/923164467464"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 hover:text-emerald-400 transition"
+              >
+                <Phone size={13} className="text-emerald-400" />
+                <span>WhatsApp Hotline: +92 316 4467464</span>
+              </a>
+              <a
+                href="mailto:info@digiformation.co.uk"
+                className="flex items-center gap-1.5 hover:text-purple-300 transition"
+              >
+                <Mail size={13} className="text-purple-400" />
+                <span>Email: info@digiformation.co.uk</span>
+              </a>
+            </div>
+
+            <div className="mt-8">
+              <Link
+                to="/open-source"
+                className="font-body text-sm text-purple-400 hover:underline"
+              >
+                ← Back to Open-Source Software Hub
+              </Link>
+            </div>
+          </div>
         </div>
       </SectionWrapper>
     </main>
