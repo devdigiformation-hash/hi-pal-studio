@@ -885,5 +885,64 @@ export const OPEN_SOURCE_COMPARISONS: Record<string, OpenSourceComparisonItem> =
         "openSourceWins": true
       }
     ]
+  },
+  "artcraft": {
+    "id": "artcraft",
+    "name": "Storytold ArtCraft Creative Suite",
+    "category": "Creative, Video & Media Suite",
+    "paidAlternatives": [
+      "Adobe Creative Cloud ($600 - $900/yr)",
+      "Adobe Photoshop ($240/yr)",
+      "Adobe Premiere Pro ($240/yr)",
+      "Figma Pro ($180/yr)"
+    ],
+    "marketAnnualCost": "$600 - $900 / yr",
+    "openSourceCost": "$0 Free Forever (Fair-Source / MIT)",
+    "annualSavings": "$600+ / year",
+    "license": "Fair-Source / MIT Open Source",
+    "tagline": "Stop paying Adobe $60/month just to open your creative files. Deploy a native Rust creative suite with PhotoCraft, FilmCraft, and SoundCraft on your PC.",
+    "pathwayGuide": {
+      "howToRun": "Download the pre-compiled binary package or clone from GitHub (storytold/artcraft), then run cargo build --release for instantaneous native desktop performance.",
+      "whyFree": "Built in pure Rust by the Storytold collective to give creators sovereign, subscription-free desktop creative tools.",
+      "osIntegration": "Connects seamlessly with DIGI BIZ OS creative workspaces, automated client proofing, and offline asset vaults."
+    },
+    "matrix": [
+      {
+        "feature": "Annual Software Subscription",
+        "openSourceValue": "$0 (Free Forever)",
+        "commercialPaidValue": "$600 - $900/year (Adobe Creative Cloud)",
+        "openSourceWins": true
+      },
+      {
+        "feature": "Architecture Engine",
+        "openSourceValue": "Pure Native Rust (Vulkan, Metal, DirectX 12)",
+        "commercialPaidValue": "Heavy C++ / Electron Web Hybrid",
+        "openSourceWins": true
+      },
+      {
+        "feature": "Memory Footprint (RAM)",
+        "openSourceValue": "Ultra-Lean Deterministic (~200MB baseline)",
+        "commercialPaidValue": "4GB - 12GB+ RAM Consumption",
+        "openSourceWins": true
+      },
+      {
+        "feature": "Included Creative Apps",
+        "openSourceValue": "PhotoCraft, FilmCraft, SoundCraft, VectorCraft & CADCraft",
+        "commercialPaidValue": "Fragmented, per-app upcharges",
+        "openSourceWins": true
+      },
+      {
+        "feature": "Offline Privacy & Data Sovereignty",
+        "openSourceValue": "100% Local SSD (Zero Telemetry)",
+        "commercialPaidValue": "Cloud Forced Sync & Telemetry",
+        "openSourceWins": true
+      },
+      {
+        "feature": "AI Integration Method",
+        "openSourceValue": "Intentional Spatial Staging + Local BYO Models",
+        "commercialPaidValue": "Closed Cloud Credit Packs & Content Credentials",
+        "openSourceWins": true
+      }
+    ]
   }
 };

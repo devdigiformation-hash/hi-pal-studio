@@ -1023,4 +1023,68 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       ],
     },
   },
+  artcraft: {
+    id: "artcraft",
+    name: "Storytold ArtCraft — Rust-Native Creative Suite",
+    shortName: "ArtCraft",
+    route: "/open-source/artcraft",
+    category: "Creative, Video & Media Suite",
+    tagline: "Open-source Rust alternative to Adobe Creative Cloud. Zero-Electron PhotoCraft, FilmCraft, SoundCraft, VectorCraft & CADCraft.",
+    eyebrow: "RUST-POWERED INTENTIONAL CRAFTING SUITE • ZERO ELECTRON BLOAT • FAIR-SOURCE / MIT",
+    alternativeTo: ["Adobe Creative Cloud ($600-$900/yr)", "Photoshop", "Premiere Pro", "Figma Pro"],
+    license: "Fair-Source / MIT",
+    licenseDetails: "100% Open-source, free for personal and commercial creative production.",
+    stars: "Trending ★",
+    repoUrl: "https://github.com/storytold/artcraft",
+    downloadUrl: "https://github.com/storytold/artcraft",
+    downloadType: "archive",
+    downloadTypeLabel: "GitHub Source & Binaries",
+    privacy: "100% Local (Offline)",
+    provenance: "Curated & benchmarked by Digiformation Ltd from official Storytold ArtCraft repository.",
+    requirements: {
+      os: "Windows 10/11 (64-bit), macOS 12+ (Apple Silicon / Intel), or Linux",
+      cpu: "Modern 64-bit multi-core CPU (Intel Core i5 / AMD Ryzen 5 or Apple M-series)",
+      ram: "8 GB RAM minimum (16 GB recommended for high-resolution 4K compositing)",
+      gpu: "Vulkan 1.2+, Metal 2+, or DirectX 12 compatible graphics card",
+      storage: "1.5 GB free disk space for binaries and creative asset cache",
+      runtime: "Native Rust binary (Zero Node.js or Electron runtime required)",
+    },
+    faqs: [
+      {
+        q: "What is Storytold ArtCraft?",
+        a: "ArtCraft is an open-source creative suite and intentional crafting engine created in Rust. It re-architects creative tools from the ground up, delivering clean-room desktop alternatives to Photoshop (PhotoCraft), Premiere Pro (FilmCraft), SoundCraft (DAW), VectorCraft (Illustrator), and CADCraft without Electron overhead.",
+      },
+      {
+        q: "How does ArtCraft achieve zero Electron bloat?",
+        a: "Unlike web-based creative tools wrapped in Chromium, ArtCraft is written entirely in native Rust. It communicates directly with the GPU through Vulkan, Metal, and DirectX 12, achieving microsecond startup speeds, 80% lower RAM utilization, and fluid 60FPS timeline scrolling.",
+      },
+      {
+        q: "What is the 'Intentional Crafting' engine?",
+        a: "Intentional Crafting gives artists surgical spatial control. Rather than relying on unpredictable text prompts, creators block 3D stages, arrange 2D vector primitives, and route local AI models (such as SDXL or Flux) non-destructively through dedicated layers and masks.",
+      },
+      {
+        q: "Does ArtCraft work completely offline?",
+        a: "Yes. ArtCraft executes 100% locally on your computer with zero telemetry and zero cloud dependencies. Your artwork, audio recordings, video sequences, and proprietary design files never leave your local SSD.",
+      },
+      {
+        q: "How can I install or build ArtCraft from GitHub?",
+        a: "You can download the pre-compiled binary packages from the official GitHub repository (https://github.com/storytold/artcraft), or compile from source using Rust: 'cargo build --release'.",
+      },
+      {
+        q: "Can I use ArtCraft for commercial projects?",
+        a: "Yes. ArtCraft is licensed under permissive fair-source and MIT open-source terms, granting creators complete freedom to produce commercial artwork, client videos, audio mixes, and games with zero royalties or subscription fees.",
+      },
+    ],
+    relatedToolIds: ["kdenlive", "shotcut", "audacity", "upscayl", "opencut"],
+    bridge: {
+      headline: "Unify ArtCraft With DIGI BIZ OS Creative Workspaces",
+      description: "While ArtCraft delivers ultra-fast native photo, video, and audio creation, DIGI BIZ OS orchestrates your entire creative business: automated client proofing, WhatsApp marketing campaigns, offline invoice management, and voice-guided project delegation.",
+      highlights: [
+        "Direct media export into DIGI BIZ OS client delivery vaults and portfolio galleries",
+        "JARVIS voice commands to launch and automate rendering workflows",
+        "Autonomous WhatsApp sales agents to capture design and video production leads",
+        "Eliminates Adobe Creative Cloud ($600+/yr) while maintaining enterprise studio capabilities",
+      ],
+    },
+  },
 };

@@ -49,6 +49,7 @@ import { Route as ModulesIndexRouteImport } from './routes/modules.index'
 import { Route as ModulesSlugRouteImport } from './routes/modules.$slug'
 import { Route as OpenSourceIndexRouteImport } from './routes/open-source.index'
 import { Route as OpenSourceAnythingllmRouteImport } from './routes/open-source.anythingllm'
+import { Route as OpenSourceArtcraftRouteImport } from './routes/open-source.artcraft'
 import { Route as OpenSourceAudacityRouteImport } from './routes/open-source.audacity'
 import { Route as OpenSourceCreditsRouteImport } from './routes/open-source.credits'
 import { Route as OpenSourceDeepLiveCamRouteImport } from './routes/open-source.deep-live-cam'
@@ -269,6 +270,11 @@ const OpenSourceAnythingllmRoute = OpenSourceAnythingllmRouteImport.update({
   path: '/anythingllm',
   getParentRoute: () => OpenSourceRoute,
 } as any)
+const OpenSourceArtcraftRoute = OpenSourceArtcraftRouteImport.update({
+  id: '/artcraft',
+  path: '/artcraft',
+  getParentRoute: () => OpenSourceRoute,
+} as any)
 const OpenSourceAudacityRoute = OpenSourceAudacityRouteImport.update({
   id: '/audacity',
   path: '/audacity',
@@ -401,6 +407,7 @@ export interface FileRoutesByFullPath {
   '/models/$slug': typeof ModelsSlugRoute
   '/modules/$slug': typeof ModulesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
+  '/open-source/artcraft': typeof OpenSourceArtcraftRoute
   '/open-source/audacity': typeof OpenSourceAudacityRoute
   '/open-source/credits': typeof OpenSourceCreditsRoute
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
@@ -461,6 +468,7 @@ export interface FileRoutesByTo {
   '/models/$slug': typeof ModelsSlugRoute
   '/modules/$slug': typeof ModulesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
+  '/open-source/artcraft': typeof OpenSourceArtcraftRoute
   '/open-source/audacity': typeof OpenSourceAudacityRoute
   '/open-source/credits': typeof OpenSourceCreditsRoute
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
@@ -523,6 +531,7 @@ export interface FileRoutesById {
   '/models/$slug': typeof ModelsSlugRoute
   '/modules/$slug': typeof ModulesSlugRoute
   '/open-source/anythingllm': typeof OpenSourceAnythingllmRoute
+  '/open-source/artcraft': typeof OpenSourceArtcraftRoute
   '/open-source/audacity': typeof OpenSourceAudacityRoute
   '/open-source/credits': typeof OpenSourceCreditsRoute
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
@@ -586,6 +595,7 @@ export interface FileRouteTypes {
     | '/models/$slug'
     | '/modules/$slug'
     | '/open-source/anythingllm'
+    | '/open-source/artcraft'
     | '/open-source/audacity'
     | '/open-source/credits'
     | '/open-source/deep-live-cam'
@@ -646,6 +656,7 @@ export interface FileRouteTypes {
     | '/models/$slug'
     | '/modules/$slug'
     | '/open-source/anythingllm'
+    | '/open-source/artcraft'
     | '/open-source/audacity'
     | '/open-source/credits'
     | '/open-source/deep-live-cam'
@@ -707,6 +718,7 @@ export interface FileRouteTypes {
     | '/models/$slug'
     | '/modules/$slug'
     | '/open-source/anythingllm'
+    | '/open-source/artcraft'
     | '/open-source/audacity'
     | '/open-source/credits'
     | '/open-source/deep-live-cam'
@@ -1060,6 +1072,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OpenSourceAnythingllmRouteImport
       parentRoute: typeof OpenSourceRoute
     }
+    '/open-source/artcraft': {
+      id: '/open-source/artcraft'
+      path: '/artcraft'
+      fullPath: '/open-source/artcraft'
+      preLoaderRoute: typeof OpenSourceArtcraftRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
     '/open-source/audacity': {
       id: '/open-source/audacity'
       path: '/audacity'
@@ -1198,6 +1217,7 @@ declare module '@tanstack/react-router' {
 
 interface OpenSourceRouteChildren {
   OpenSourceAnythingllmRoute: typeof OpenSourceAnythingllmRoute
+  OpenSourceArtcraftRoute: typeof OpenSourceArtcraftRoute
   OpenSourceAudacityRoute: typeof OpenSourceAudacityRoute
   OpenSourceCreditsRoute: typeof OpenSourceCreditsRoute
   OpenSourceDeepLiveCamRoute: typeof OpenSourceDeepLiveCamRoute
@@ -1219,6 +1239,7 @@ interface OpenSourceRouteChildren {
 
 const OpenSourceRouteChildren: OpenSourceRouteChildren = {
   OpenSourceAnythingllmRoute: OpenSourceAnythingllmRoute,
+  OpenSourceArtcraftRoute: OpenSourceArtcraftRoute,
   OpenSourceAudacityRoute: OpenSourceAudacityRoute,
   OpenSourceCreditsRoute: OpenSourceCreditsRoute,
   OpenSourceDeepLiveCamRoute: OpenSourceDeepLiveCamRoute,

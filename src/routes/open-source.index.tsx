@@ -23,6 +23,7 @@ import {
   Megaphone,
   MessageSquare,
   Package,
+  Palette,
   PackageCheck,
   Shield,
   ShieldCheck,
@@ -71,6 +72,7 @@ import pocketbaseScreenshot from "@/assets/pocketbase-screenshot.webp";
 import tuttleScreenshot from "@/assets/tuttle-screenshot.jpg";
 import upscaylScreenshot from "@/assets/upscayl-screenshot.jpg";
 import leadHunterBanner from "@/assets/digi-lead-hunter-banner.webp";
+import artcraftScreenshot from "@/assets/artcraft-screenshot.jpg";
 
 
 const TITLE = "Free Open Source Software Library & Hub — AI Agents, Media & Tools | DIGI BIZ OS";
@@ -329,6 +331,35 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     downloadUrl: OPEN_SOURCE_SUBPAGES["tuttle"].downloadUrl,
     downloadFilename: "Tuttle-Setup.exe",
     repoUrl: OPEN_SOURCE_SUBPAGES["tuttle"].repoUrl,
+  },
+  {
+    id: "artcraft",
+    name: "Storytold ArtCraft — Rust-Native Creative Suite",
+    category: "Video & Creative Media",
+    tagline: "Open-source Rust alternative to Adobe Creative Cloud. Zero-Electron PhotoCraft, FilmCraft & SoundCraft.",
+    license: "Fair-Source / MIT",
+    color: "#F43F5E",
+    icon: Palette,
+    image: artcraftScreenshot,
+    badge: "Rust Creative Suite",
+    bundle: "Creative, Video & Media Suite",
+    bullets: [
+      "Clean-room creative suite: PhotoCraft, FilmCraft, SoundCraft, VectorCraft & CADCraft",
+      "Pure native Rust engine with Vulkan/Metal acceleration — 80% lower RAM than Electron",
+      "Intentional spatial crafting engine with non-destructive local AI model staging",
+    ],
+    features: ["Pure Rust Engine", "Zero Electron Bloat", "Adobe Alternative"],
+    to: "/open-source/artcraft",
+    stars: "Trending ★",
+    starCount: 16800,
+    savings: "Save $650+ / yr",
+    savingsValue: 650,
+    platforms: ["Windows", "macOS", "Linux"],
+    alternativeTo: ["Adobe Creative Cloud", "Photoshop", "Premiere Pro", "Figma"],
+    downloadUrl: OPEN_SOURCE_SUBPAGES["artcraft"].downloadUrl,
+    downloadFilename: "artcraft-main.zip",
+    repoUrl: OPEN_SOURCE_SUBPAGES["artcraft"].repoUrl,
+    featured: true,
   },
   {
     id: "upscayl",
