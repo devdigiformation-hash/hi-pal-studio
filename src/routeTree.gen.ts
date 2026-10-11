@@ -26,6 +26,7 @@ import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as RefundRouteImport } from './routes/refund'
 import { Route as RssDotxmlRouteImport } from './routes/rss[.]xml'
 import { Route as SearchRouteImport } from './routes/search'
+import { Route as SetupGuideRouteImport } from './routes/setup-guide'
 import { Route as SitemapRouteImport } from './routes/sitemap'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TermsRouteImport } from './routes/terms'
@@ -151,6 +152,11 @@ const RssDotxmlRoute = RssDotxmlRouteImport.update({
 const SearchRoute = SearchRouteImport.update({
   id: '/search',
   path: '/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SetupGuideRoute = SetupGuideRouteImport.update({
+  id: '/setup-guide',
+  path: '/setup-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapRoute = SitemapRouteImport.update({
@@ -378,6 +384,7 @@ export interface FileRoutesByFullPath {
   '/refund': typeof RefundRoute
   '/rss.xml': typeof RssDotxmlRoute
   '/search': typeof SearchRoute
+  '/setup-guide': typeof SetupGuideRoute
   '/sitemap': typeof SitemapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
@@ -437,6 +444,7 @@ export interface FileRoutesByTo {
   '/refund': typeof RefundRoute
   '/rss.xml': typeof RssDotxmlRoute
   '/search': typeof SearchRoute
+  '/setup-guide': typeof SetupGuideRoute
   '/sitemap': typeof SitemapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
@@ -498,6 +506,7 @@ export interface FileRoutesById {
   '/refund': typeof RefundRoute
   '/rss.xml': typeof RssDotxmlRoute
   '/search': typeof SearchRoute
+  '/setup-guide': typeof SetupGuideRoute
   '/sitemap': typeof SitemapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
@@ -560,6 +569,7 @@ export interface FileRouteTypes {
     | '/refund'
     | '/rss.xml'
     | '/search'
+    | '/setup-guide'
     | '/sitemap'
     | '/sitemap.xml'
     | '/terms'
@@ -619,6 +629,7 @@ export interface FileRouteTypes {
     | '/refund'
     | '/rss.xml'
     | '/search'
+    | '/setup-guide'
     | '/sitemap'
     | '/sitemap.xml'
     | '/terms'
@@ -679,6 +690,7 @@ export interface FileRouteTypes {
     | '/refund'
     | '/rss.xml'
     | '/search'
+    | '/setup-guide'
     | '/sitemap'
     | '/sitemap.xml'
     | '/terms'
@@ -740,6 +752,7 @@ export interface RootRouteChildren {
   RefundRoute: typeof RefundRoute
   RssDotxmlRoute: typeof RssDotxmlRoute
   SearchRoute: typeof SearchRoute
+  SetupGuideRoute: typeof SetupGuideRoute
   SitemapRoute: typeof SitemapRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
@@ -884,6 +897,13 @@ declare module '@tanstack/react-router' {
       path: '/search'
       fullPath: '/search'
       preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/setup-guide': {
+      id: '/setup-guide'
+      path: '/setup-guide'
+      fullPath: '/setup-guide'
+      preLoaderRoute: typeof SetupGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap': {
@@ -1240,6 +1260,7 @@ const rootRouteChildren: RootRouteChildren = {
   RefundRoute: RefundRoute,
   RssDotxmlRoute: RssDotxmlRoute,
   SearchRoute: SearchRoute,
+  SetupGuideRoute: SetupGuideRoute,
   SitemapRoute: SitemapRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,

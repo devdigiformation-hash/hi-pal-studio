@@ -43,7 +43,7 @@ const LICENSE_WORKER_URL = (
 function planEntitlement(planId: string) {
   if (planId === "source_code") return { edition: "SOURCE", maxDevices: 5 };
   if (planId === "custom_build") return { edition: "PRO", maxDevices: 3 };
-  return { edition: "PRO", maxDevices: 3 };
+  return { edition: "PRO", maxDevices: 1 }; // Lifetime = single PC only
 }
 
 async function registerLicenseWithWorker(input: {

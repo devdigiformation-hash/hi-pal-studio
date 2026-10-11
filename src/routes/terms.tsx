@@ -45,7 +45,7 @@ export const Route = createFileRoute("/terms")({
         {
           heading: "Activation and devices",
           body: [
-            "A lifetime licence can be activated on up to 3 computers. Activation is linked to the email address you provide at checkout, so you can reinstall at any time.",
+            "A lifetime licence is a single-PC licence — it activates on 1 computer. Activation is linked to the email address you provide at checkout, so you can reinstall on that same PC at any time.",
           ],
         },
         {

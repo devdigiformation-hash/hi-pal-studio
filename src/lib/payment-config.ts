@@ -34,7 +34,7 @@ export const PLANS: Record<PlanId, Plan> = {
     includes: [
       "One-time payment — no monthly software lock-in",
       "Lifetime access to DIGI BIZ OS Gen 2",
-      "Activate on up to 3 PCs",
+      "Single-PC licence — activates on 1 PC",
       "Connect your own AI API keys (OpenAI, Groq, DeepSeek, Claude)",
       "90%+ modules with integrated AI brain & voice assistant",
       "Windows 10 & 11 native desktop app",

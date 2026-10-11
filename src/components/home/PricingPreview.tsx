@@ -25,7 +25,7 @@ const TIERS = [
     features: [
       "One-time payment — no monthly lock-in",
       "Lifetime access to Gen 2",
-      "Activate on up to 3 PCs",
+      "Single-PC licence — activates on 1 PC",
       "90%+ modules with integrated AI brain",
       "Bring your own AI keys or local models",
     ],
