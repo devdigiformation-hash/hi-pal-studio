@@ -1086,11 +1086,11 @@ function OpenSourcePage() {
                       <ActivePulse size={6} />
                       Official Open-Source Flagship #2
                     </span>
-                    <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[10.5px] sm:text-[11px] font-semibold text-emerald-400">
-                      100% Free Forever
+                    <span className="rounded-full border border-amber-500/30 bg-amber-500/10 px-2.5 py-0.5 font-mono text-[10.5px] sm:text-[11px] font-semibold text-amber-300">
+                      Strictly No Resale • Own PC Only
                     </span>
                     <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 font-mono text-[10.5px] sm:text-[11px] text-zinc-400">
-                      MIT License • ElevenLabs Alternative
+                      Source-Available
                     </span>
                   </div>
 
@@ -1102,7 +1102,7 @@ function OpenSourcePage() {
                   </h2>
 
                   <p className="mt-4 max-w-[620px] font-body text-[14px] leading-[1.75] text-zinc-300 sm:text-[14.5px] md:text-[16px]">
-                    Open-source desktop AI media studio by <strong>DIGIFORMATION LTD</strong>. Free unlimited human-like Text-to-Speech powered by Gemini 2.5 Flash Voice &amp; Edge-TTS. Plus, reverse-engineer any video URL into complete AI prompts, study guides, and structured courses in one click.
+                    Open-source desktop AI media studio by <strong>DIGIFORMATION LTD</strong>. Free unlimited human-like Text-to-Speech powered by Gemini 2.5 Flash Voice &amp; Edge-TTS. 100% free for your personal PC and agency system usage (reselling standalone binaries or SaaS re-hosting is strictly prohibited).
                   </p>
 
                   {/* Feature Checklist */}

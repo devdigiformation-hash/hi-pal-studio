@@ -47,27 +47,27 @@ const toolData = OPEN_SOURCE_SUBPAGES["digi-labs"];
 const RELATED_BLOGS = [
   {
     slug: "digi-labs-vs-elevenlabs-free-human-tts-alternative-2026",
-    title: "DIGI LABS vs ElevenLabs: Why Unlimited Free Human TTS is Replacing $330/Year Voice Subscriptions",
+    title: "Why 100,000+ Creators Are Ditching ElevenLabs in 2026: The Free Human TTS Studio with Zero Character Taxes (Strictly No Resale)",
     desc: "A deep architectural and pricing comparison between ElevenLabs cloud quotas and DIGI LABS sovereign local desktop speech synthesis.",
   },
   {
     slug: "turn-any-video-link-into-ai-prompts-and-courses-digi-labs",
-    title: "How to Turn Any Video Link into Cinematic AI Prompts, Courses & Executive Notes",
+    title: "The Viral Video-to-Prompt Hack: How to Steal Any Video's Exact AI Prompts, Lighting & Turn It Into a Course in 60 Seconds",
     desc: "The complete tutorial on reverse-engineering visual style, director cues, camera movement, and lesson notes from any web video.",
   },
   {
     slug: "gemini-voice-tts-free-local-desktop-setup-guide",
-    title: "Gemini 2.5 Flash Voice & Edge-TTS: Free Local Desktop Setup Guide",
+    title: "The 9-Key Secret: How to Run Gemini 2.5 Flash Emotional Voice on Desktop for $0 with Zero Rate Limits (Free Setup Guide)",
     desc: "Step-by-step setup guide for running emotional expressive human TTS locally on Windows with zero monthly character fees.",
   },
   {
     slug: "convert-youtube-transcripts-into-viral-threads-and-articles",
-    title: "Convert Video Transcripts into Viral Social Threads, Blog Posts & Newsletters",
+    title: "The 60-Second Cashflow Machine: How Creators Turn 10-Minute YouTube Videos into 5 Viral Revenue Streams for $0",
     desc: "How content creators and agencies repurpose long-form multimedia into multi-channel written revenue engines in 60 seconds.",
   },
   {
     slug: "zero-cost-ai-media-production-studio-stack-2026",
-    title: "The Zero-Cost AI Media Production Stack for 2026: Audio, Video & Prompts",
+    title: "How to Build a $0 Production Studio and Save $3,743/Year: The Open-Source Trifecta (DIGI LABS + ArtCraft + DIGI BIZ OS)",
     desc: "How independent founders and creative agencies build full production studios without paying SaaS tolls or subscriptions.",
   },
 ];
