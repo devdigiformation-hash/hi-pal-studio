@@ -1068,6 +1068,129 @@ function OpenSourcePage() {
         </SectionWrapper>
       )}
 
+      {/* ── 1.6 OFFICIAL FLAGSHIP SPOTLIGHT: DIGI LABS ──── */}
+      {!hasActiveFilters && (
+        <SectionWrapper className="pt-0 pb-8">
+          <div className="mx-auto max-w-[1240px]">
+            <div className="relative overflow-hidden rounded-3xl border border-purple-500/40 bg-gradient-to-b from-[#140B28] via-[#0E061E] to-[#030712] p-4 sm:p-6 md:p-10 shadow-[0_0_50px_rgba(168,85,247,0.15)] w-full">
+              {/* Subtle ambient glow */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute -right-20 -top-20 h-96 w-96 rounded-full bg-purple-500/20 blur-[100px]"
+              />
+
+              <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] w-full min-w-0">
+                <div className="relative z-10 w-full min-w-0">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-purple-400/40 bg-purple-500/10 px-3 py-1 font-mono text-[10.5px] sm:text-[11px] font-bold uppercase tracking-wider text-purple-300">
+                      <ActivePulse size={6} />
+                      Official Open-Source Flagship #2
+                    </span>
+                    <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[10.5px] sm:text-[11px] font-semibold text-emerald-400">
+                      100% Free Forever
+                    </span>
+                    <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 font-mono text-[10.5px] sm:text-[11px] text-zinc-400">
+                      MIT License • ElevenLabs Alternative
+                    </span>
+                  </div>
+
+                  <h2 className="mt-4 font-display text-[24px] xs:text-[26px] font-extrabold leading-[1.15] tracking-[-0.03em] text-white sm:text-[34px] md:text-[40px] break-words">
+                    DIGI LABS{" "}
+                    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-cyan-300">
+                      Unlimited Free Human TTS &amp; Video-to-Prompt Studio
+                    </span>
+                  </h2>
+
+                  <p className="mt-4 max-w-[620px] font-body text-[14px] leading-[1.75] text-zinc-300 sm:text-[14.5px] md:text-[16px]">
+                    Open-source desktop AI media studio by <strong>DIGIFORMATION LTD</strong>. Free unlimited human-like Text-to-Speech powered by Gemini 2.5 Flash Voice &amp; Edge-TTS. Plus, reverse-engineer any video URL into complete AI prompts, study guides, and structured courses in one click.
+                  </p>
+
+                  {/* Feature Checklist */}
+                  <div className="mt-5 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+                    <div className="flex items-center gap-2 font-mono text-[12px] text-zinc-200">
+                      <CheckCircle2 size={15} className="text-purple-400 shrink-0" />
+                      <span>Zero character limits &amp; zero subscriptions</span>
+                    </div>
+                    <div className="flex items-center gap-2 font-mono text-[12px] text-zinc-200">
+                      <CheckCircle2 size={15} className="text-purple-400 shrink-0" />
+                      <span>Gemini 2.5 Flash emotional voice engine</span>
+                    </div>
+                    <div className="flex items-center gap-2 font-mono text-[12px] text-zinc-200">
+                      <CheckCircle2 size={15} className="text-purple-400 shrink-0" />
+                      <span>Turn any video link into courses &amp; prompts</span>
+                    </div>
+                    <div className="flex items-center gap-2 font-mono text-[12px] text-zinc-200">
+                      <CheckCircle2 size={15} className="text-purple-400 shrink-0" />
+                      <span>Local Windows Electron installer (.exe 240MB)</span>
+                    </div>
+                  </div>
+
+                  {/* Action buttons */}
+                  <div className="mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full">
+                    <a
+                      href="https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-purple-400 bg-purple-500 px-5 py-3.5 font-mono text-[13px] font-bold text-white shadow-[0_0_25px_rgba(168,85,247,0.35)] transition-all hover:bg-purple-400 hover:shadow-[0_0_35px_rgba(168,85,247,0.5)]"
+                    >
+                      <Download size={17} className="shrink-0" />
+                      <span>Download Windows Setup (.exe 240MB)</span>
+                    </a>
+
+                    <Link
+                      to="/open-source/digi-labs"
+                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3.5 font-mono text-[13px] font-semibold text-white transition hover:border-purple-400 hover:bg-white/10"
+                    >
+                      <span>Specifications &amp; Benchmarks</span>
+                      <ArrowRight size={14} className="text-purple-400 shrink-0" />
+                    </Link>
+
+                    <a
+                      href="https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 font-mono text-[13px] text-zinc-300 transition hover:bg-white/10 hover:text-white"
+                    >
+                      <Github size={16} className="shrink-0" />
+                      <span>GitHub</span>
+                      <ExternalLink size={12} className="opacity-70 shrink-0" />
+                    </a>
+                  </div>
+                </div>
+
+                {/* Visual Showcase (Screenshots Preview) */}
+                <div className="relative">
+                  <div className="overflow-hidden rounded-2xl border border-purple-500/20 bg-black/70 shadow-2xl backdrop-blur-md">
+                    <div className="flex items-center justify-center p-8 bg-gradient-to-b from-[#1E1138]/60 to-black/80">
+                      <img
+                        src={digiLabsLogo}
+                        alt="DIGI LABS Studio interface preview"
+                        width={280}
+                        height={280}
+                        className="h-44 w-auto object-contain drop-shadow-[0_0_35px_rgba(168,85,247,0.45)]"
+                        loading="eager"
+                      />
+                    </div>
+                    <div className="border-t border-white/10 bg-[#0B0616] p-4">
+                      <div className="flex items-center justify-between text-xs font-mono text-zinc-400">
+                        <span className="flex items-center gap-1.5 text-purple-300">
+                          <Terminal size={13} />
+                          <span>Electron Desktop App + Local Engine</span>
+                        </span>
+                        <span className="text-emerald-400 font-semibold">v1.0.0 Stable</span>
+                      </div>
+                      <div className="mt-2.5 rounded-lg border border-white/10 bg-black/80 px-3 py-2 font-mono text-[12px] text-zinc-300 overflow-x-auto">
+                        <span className="text-purple-400">$</span> digi-labs-engine --voice &quot;gemini-flash-expressive&quot; --output ./output.wav
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SectionWrapper>
+      )}
+
       {/* ── 2. FEATURED FLAGSHIP SPOTLIGHT (3 Top Community Leaders) ──── */}
       {!hasActiveFilters && (
         <SectionWrapper className="py-6 md:py-10 bg-gradient-to-b from-transparent via-[#060A14]/40 to-transparent">
