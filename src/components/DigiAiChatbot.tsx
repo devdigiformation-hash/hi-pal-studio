@@ -431,6 +431,17 @@ Ask me anything about setup steps, free Gemini API keys, pricing, or payment met
     }
   }, [messages, isOpen, isTyping]);
 
+  // Pressing Escape closes the chatbot
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && isOpen) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen]);
+
   const handleSend = (textToSend?: string) => {
     const query = (textToSend || input).trim();
     if (!query) return;
@@ -477,7 +488,8 @@ Ask me anything about setup steps, free Gemini API keys, pricing, or payment met
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="Open DIGI AI Chatbot"
+          aria-label={isOpen ? "Close DIGI AI Assistant" : "Open DIGI AI Assistant"}
+          title={isOpen ? "Close Chat (Esc)" : "Ask DIGI AI"}
           className="group relative flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-tr from-[#0F172A] via-[#1E1B4B] to-[#7C3AED] border border-cyan-400/50 text-white shadow-[0_0_30px_rgba(47,224,200,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_rgba(124,58,237,0.6)] active:scale-95 cursor-pointer"
         >
           {/* Pulsing Glow */}
@@ -490,7 +502,7 @@ Ask me anything about setup steps, free Gemini API keys, pricing, or payment met
           </span>
 
           {isOpen ? (
-            <X size={24} className="relative z-10 text-cyan-300 transition-transform group-hover:rotate-90" />
+            <X size={24} className="relative z-10 text-rose-300 transition-transform group-hover:rotate-90" />
           ) : (
             <Sparkles size={24} className="relative z-10 text-cyan-300 transition-transform group-hover:scale-110" />
           )}
@@ -501,44 +513,48 @@ Ask me anything about setup steps, free Gemini API keys, pricing, or payment met
       {isOpen && (
         <aside
           aria-label="DIGI AI Assistant Window"
-          className="fixed bottom-24 right-4 sm:right-6 z-50 flex h-[580px] max-h-[85vh] w-[92vw] sm:w-[430px] flex-col overflow-hidden rounded-3xl border border-cyan-500/40 bg-[#0B0914]/98 shadow-[0_20px_60px_rgba(0,0,0,0.85),0_0_50px_rgba(47,224,200,0.25)] backdrop-blur-2xl animate-in slide-in-from-bottom-5 duration-300"
+          className="fixed bottom-[88px] sm:bottom-[92px] right-3 sm:right-6 z-50 flex h-[min(540px,calc(100dvh-115px))] max-h-[calc(100dvh-115px)] w-[94vw] sm:w-[480px] md:w-[520px] max-w-[calc(100vw-24px)] flex-col overflow-hidden rounded-3xl border border-cyan-500/40 bg-[#0B0914]/98 shadow-[0_20px_60px_rgba(0,0,0,0.85),0_0_50px_rgba(47,224,200,0.25)] backdrop-blur-2xl animate-in slide-in-from-bottom-5 duration-300"
         >
           {/* Header */}
-          <div className="flex items-center justify-between border-b border-white/10 bg-gradient-to-r from-purple-950/60 via-slate-900/60 to-black/80 px-4 py-3.5">
+          <div className="flex items-center justify-between border-b border-white/10 bg-gradient-to-r from-purple-950/70 via-slate-900/70 to-black/90 px-4 py-3">
             <div className="flex items-center gap-3">
-              <div className="relative flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-tr from-cyan-500/20 to-purple-600/30 border border-cyan-400/40 text-cyan-300 shadow-[0_0_15px_rgba(47,224,200,0.3)]">
+              <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-tr from-cyan-500/20 to-purple-600/30 border border-cyan-400/40 text-cyan-300 shadow-[0_0_15px_rgba(47,224,200,0.3)]">
                 <Bot size={22} />
                 <span className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-emerald-400 border border-black" />
               </div>
-              <div>
+              <div className="min-w-0">
                 <div className="flex items-center gap-2">
-                  <h3 className="font-display text-sm font-bold text-white tracking-wide">DIGI AI Assistant</h3>
-                  <span className="rounded-full bg-cyan-500/20 border border-cyan-500/40 px-2 py-0.2 text-[9px] font-mono font-bold text-cyan-300">
+                  <h3 className="font-display text-sm font-bold text-white tracking-wide truncate">DIGI AI Assistant</h3>
+                  <span className="shrink-0 rounded-full bg-cyan-500/20 border border-cyan-500/40 px-2 py-0.2 text-[9px] font-mono font-bold text-cyan-300">
                     KNOWLEDGE ENGINE
                   </span>
                 </div>
-                <p className="text-[11px] font-mono text-zinc-400">
+                <p className="text-[11px] font-mono text-zinc-400 truncate">
                   Full Website Knowledge • 24/7 Instant Answers
                 </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-2 shrink-0">
               <a
                 href="https://wa.me/923164467464"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Chat on WhatsApp"
-                className="flex h-8 w-8 items-center justify-center rounded-xl text-emerald-400 hover:bg-emerald-500/20 transition"
+                className="flex items-center gap-1.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-xs font-mono font-medium text-emerald-400 hover:bg-emerald-500/20 transition"
               >
-                <Phone size={15} />
+                <Phone size={13} />
+                <span className="hidden sm:inline text-[11px]">WhatsApp</span>
               </a>
               <button
                 type="button"
                 onClick={() => setIsOpen(false)}
-                className="flex h-8 w-8 items-center justify-center rounded-xl text-zinc-400 hover:bg-white/10 hover:text-white transition"
+                title="Close Chat (Esc)"
+                aria-label="Close Chat"
+                className="flex items-center gap-1.5 rounded-xl border border-white/15 bg-white/10 px-2.5 py-1 text-xs font-mono font-semibold text-zinc-300 hover:bg-rose-500/25 hover:border-rose-400/50 hover:text-white transition cursor-pointer shadow-sm"
               >
-                <X size={17} />
+                <X size={15} />
+                <span className="text-[11px]">Close</span>
               </button>
             </div>
           </div>
