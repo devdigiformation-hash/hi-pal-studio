@@ -220,10 +220,13 @@ function DownloadPage() {
               {/* Only Square Curved Logo (No Glass Frame/Padding) */}
               <div className="h-24 w-24 overflow-hidden rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.8)] md:h-28 md:w-28">
                 <img
-                  src="/logo-512.webp"
+                  src="/logo-4k.png"
                   alt="DIGI BIZ OS"
+                  width={112}
+                  height={112}
                   className="h-full w-full object-cover"
                   loading="eager"
+                  decoding="sync"
                 />
               </div>
 
