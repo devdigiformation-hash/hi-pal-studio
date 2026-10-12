@@ -9,6 +9,7 @@ interface SubscribeToDownloadModalProps {
   downloadLabel?: string;
   channelUrl: string;
   channelName?: string;
+  toolName?: string;
 }
 
 export default function SubscribeToDownloadModal({
@@ -18,6 +19,7 @@ export default function SubscribeToDownloadModal({
   downloadLabel = "DIGI LABS Setup (.exe 253MB)",
   channelUrl,
   channelName = "DigiFormation Official",
+  toolName = "DIGI LABS",
 }: SubscribeToDownloadModalProps) {
   const [hasVisitedChannel, setHasVisitedChannel] = useState(false);
   const [isUnlocked, setIsUnlocked] = useState(false);
@@ -61,7 +63,7 @@ export default function SubscribeToDownloadModal({
           Subscribe to Unlock Download
         </h3>
         <p className="mt-2 font-body text-sm leading-relaxed text-zinc-300">
-          DIGI LABS is 100% free forever! To support our open-source projects, please subscribe to our YouTube channel to unlock the download.
+          {toolName} is 100% free forever! To support our open-source projects, please subscribe to our YouTube channel to unlock the download.
         </p>
 
         {/* Step Indicator */}

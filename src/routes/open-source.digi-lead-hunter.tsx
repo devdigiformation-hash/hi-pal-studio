@@ -29,6 +29,7 @@ import {
   FileSpreadsheet,
   Globe,
   Sliders,
+  Youtube,
 } from "lucide-react";
 import { useState } from "react";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -43,6 +44,7 @@ import OpenSourceSubpageFaq from "@/components/seo/OpenSourceSubpageFaq";
 import OpenSourceTechSpecs from "@/components/seo/OpenSourceTechSpecs";
 import OpenSourceRelatedTools from "@/components/seo/OpenSourceRelatedTools";
 import OpenSourceDigiBizBridge from "@/components/seo/OpenSourceDigiBizBridge";
+import SubscribeToDownloadModal from "@/components/seo/SubscribeToDownloadModal";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
 import bannerWebp from "@/assets/digi-lead-hunter-banner.webp";
@@ -257,7 +259,16 @@ export const Route = createFileRoute("/open-source/digi-lead-hunter")({
 function DigiLeadHunterPage() {
   const [copied, setCopied] = useState(false);
   const [activeTab, setActiveTab] = useState<"dashboard" | "find">("dashboard");
+  const [modalOpen, setModalOpen] = useState(false);
+  const [activeDownloadUrl, setActiveDownloadUrl] = useState(DOWNLOAD_ZIP_URL);
+  const [activeDownloadLabel, setActiveDownloadLabel] = useState("DIGI LEAD HUNTER Source ZIP");
   useScrollReveal();
+
+  const openSubscribeModal = (url: string, label: string) => {
+    setActiveDownloadUrl(url);
+    setActiveDownloadLabel(label);
+    setModalOpen(true);
+  };
 
   const copyCloneCommand = () => {
     navigator.clipboard.writeText("git clone https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER.git");
@@ -267,6 +278,15 @@ function DigiLeadHunterPage() {
 
   return (
     <main className="min-h-screen pt-[60px] md:pt-[72px]">
+      <SubscribeToDownloadModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        downloadUrl={activeDownloadUrl}
+        downloadLabel={activeDownloadLabel}
+        channelUrl="https://www.youtube.com/@digibizos"
+        channelName="Digi Biz Os Official"
+        toolName="DIGI LEAD HUNTER"
+      />
       <Breadcrumbs
         trail={[
           { name: "Home", path: "/" },
@@ -302,26 +322,38 @@ function DigiLeadHunterPage() {
               Say goodbye to manual Google Maps copy-pasting. DIGI LEAD HUNTER autonomously scans local businesses, verifies direct WhatsApp mobile numbers, classifies leads into 3 opportunity tiers, and generates full website blueprints and client opportunity ZIPs in seconds.
             </p>
 
-            {/* Direct GitHub Redirect Action Buttons */}
-            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full">
+            {/* Direct Download with Subscription Modal, YouTube Subscribe & GitHub Actions */}
+            <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3 sm:gap-4 w-full">
+              <button
+                type="button"
+                onClick={() => openSubscribeModal(DOWNLOAD_ZIP_URL, "DIGI LEAD HUNTER Source ZIP")}
+                className="cursor-pointer"
+              >
+                <CyanButton icon={<Download size={16} />}>
+                  Download Source ZIP (.zip)
+                </CyanButton>
+              </button>
+
+              <a
+                href="https://www.youtube.com/@digibizos?sub_confirmation=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-red-500/40 bg-red-500/10 px-5 py-3 font-display text-sm font-bold text-red-400 shadow-[0_0_20px_rgba(239,68,68,0.2)] transition hover:border-red-500 hover:bg-red-500/20 hover:text-white"
+              >
+                <Youtube size={16} className="text-red-500" />
+                <span>Subscribe on YouTube</span>
+                <ExternalLink size={13} className="text-red-400/70" />
+              </a>
+
               <a
                 href={GITHUB_REPO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-cyan-400 bg-cyan-400 px-5 sm:px-6 py-3.5 font-mono text-[13.5px] sm:text-[14px] font-bold text-black shadow-[0_0_25px_rgba(47,224,200,0.35)] transition-all hover:bg-cyan-300 hover:shadow-[0_0_35px_rgba(47,224,200,0.5)]"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 sm:px-5 py-3 font-mono text-[13px] sm:text-[13.5px] font-semibold text-white transition hover:border-cyan-400 hover:bg-white/10"
               >
-                <Github size={19} className="shrink-0" />
-                <span>View &amp; Clone on GitHub</span>
-                <ExternalLink size={14} className="opacity-70 shrink-0" />
-              </a>
-
-              <a
-                href={DOWNLOAD_ZIP_URL}
-                download="DIGI-LEAD-HUNTER-main.zip"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 sm:px-5 py-3.5 font-mono text-[13px] sm:text-[13.5px] font-semibold text-white transition hover:border-cyan-400 hover:bg-white/10"
-              >
-                <Download size={16} className="text-cyan-400 shrink-0" />
-                <span>Download Source ZIP</span>
+                <Github size={17} />
+                <span>GitHub Repository</span>
+                <ExternalLink size={13} className="opacity-70" />
               </a>
             </div>
 
@@ -773,25 +805,36 @@ function DigiLeadHunterPage() {
             DIGI LEAD HUNTER is 100% free and open-source. Clone the repository directly from GitHub, run it locally on your PC, or execute it seamlessly with Antigravity AI Agent inside DIGI BIZ OS.
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full max-w-[560px] mx-auto">
+          <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full max-w-[720px] mx-auto">
+            <button
+              type="button"
+              onClick={() => openSubscribeModal(DOWNLOAD_ZIP_URL, "DIGI LEAD HUNTER Source ZIP")}
+              className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-cyan-400 bg-cyan-400 px-6 sm:px-7 py-3.5 sm:py-4 font-mono text-[13.5px] sm:text-[14.5px] font-bold text-black shadow-[0_0_30px_rgba(47,224,200,0.4)] transition-all hover:bg-cyan-300 hover:shadow-[0_0_40px_rgba(47,224,200,0.6)] cursor-pointer"
+            >
+              <Download size={18} className="shrink-0" />
+              <span>Download Source Package (.ZIP)</span>
+            </button>
+
+            <a
+              href="https://www.youtube.com/@digibizos?sub_confirmation=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-red-500/40 bg-red-500/10 px-5 sm:px-6 py-3.5 sm:py-4 font-mono text-[13px] sm:text-[14px] font-bold text-red-400 shadow-[0_0_20px_rgba(239,68,68,0.2)] transition hover:border-red-500 hover:bg-red-500/20 hover:text-white"
+            >
+              <Youtube size={17} className="text-red-500" />
+              <span>Subscribe Channel</span>
+              <ExternalLink size={13} className="opacity-70" />
+            </a>
+
             <a
               href={GITHUB_REPO_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-cyan-400 bg-cyan-400 px-6 sm:px-7 py-3.5 sm:py-4 font-mono text-[13.5px] sm:text-[14.5px] font-bold text-black shadow-[0_0_30px_rgba(47,224,200,0.4)] transition-all hover:bg-cyan-300 hover:shadow-[0_0_40px_rgba(47,224,200,0.6)]"
-            >
-              <Github size={19} className="shrink-0" />
-              <span>Get on GitHub (Direct Repo)</span>
-              <ExternalLink size={15} className="opacity-75 shrink-0" />
-            </a>
-
-            <a
-              href={DOWNLOAD_ZIP_URL}
-              download="DIGI-LEAD-HUNTER-main.zip"
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 sm:px-6 py-3.5 sm:py-4 font-mono text-[13px] sm:text-[14px] font-semibold text-white transition hover:border-cyan-400 hover:bg-white/10"
             >
-              <Download size={17} className="text-cyan-400 shrink-0" />
-              <span>Download Source Package (.ZIP)</span>
+              <Github size={17} />
+              <span>GitHub</span>
+              <ExternalLink size={13} className="opacity-70" />
             </a>
           </div>
 
