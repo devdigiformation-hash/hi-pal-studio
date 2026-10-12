@@ -2,20 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useCallback } from "react";
 import {
   Download,
-  Check,
-  ShieldCheck,
-  Cpu,
-  HardDrive,
-  Terminal,
   ArrowRight,
   Sparkles,
-  Copy,
   CheckCircle2,
   AlertTriangle,
-  Info,
   ChevronDown,
-  Layers,
-  Zap,
   X,
 } from "lucide-react";
 import { useTrackDownload } from "@/lib/use-download-tracking";
@@ -34,7 +25,6 @@ const DESC =
   "Download DIGI BIZ OS for Windows 10 & 11 (64-bit). The sovereign, voice-controlled AI business operating system. 12 integrated modules, offline Whisper speech recognition, and zero subscription fees.";
 
 const INSTALLER_URL = "https://digi-updates.digi-ede.workers.dev/Digi%20Biz%20OS-Setup-1.1.8.exe";
-const SHA512_HASH = "cGmfteBUICipSTA+ao6p9ueKGNCaQ69zYi13hVWhN2Umj6W4ZHR/Ls/xydwmc8FdMQ6Hqy98ZFaT02unexj9vw==";
 
 const STEPS = [
   {
@@ -170,7 +160,6 @@ function DownloadPage() {
   const trackDownload = useTrackDownload();
   const [downloadStarted, setDownloadStarted] = useState(false);
   const [showDownloadModal, setShowDownloadModal] = useState(false);
-  const [copiedHash, setCopiedHash] = useState(false);
   const [showSmartScreenGuide, setShowSmartScreenGuide] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -193,14 +182,6 @@ function DownloadPage() {
       window.location.assign(INSTALLER_URL);
     }
   }, [trackDownload]);
-
-  const copyHash = useCallback(() => {
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(SHA512_HASH);
-      setCopiedHash(true);
-      setTimeout(() => setCopiedHash(false), 2500);
-    }
-  }, []);
 
   return (
     <main className="relative min-h-screen overflow-hidden pt-[70px] md:pt-[84px]">
@@ -278,33 +259,33 @@ function DownloadPage() {
           </div>
 
           {/* ── PRIMARY DOWNLOAD BUTTON ZONE (STONIC AI STYLE) ─────────── */}
-          <div className="mt-8 w-full max-w-[540px]">
+          <div className="mt-8 w-full max-w-[460px]">
             <div>
               {/* High-Impact Windows 11 Download Button Styled with Signature Cyan/Emerald Theme */}
               <button
                 type="button"
                 onClick={handleDownload}
-                className="group relative flex w-full items-center justify-between overflow-hidden rounded-2xl border-2 border-[var(--cyan)] bg-[var(--cyan)] px-6 sm:px-8 py-5 sm:py-6 text-slate-950 shadow-[0_12px_45px_rgba(47,224,200,0.45),0_0_35px_rgba(47,224,200,0.35)] transition-all duration-300 hover:scale-[1.02] hover:brightness-110 hover:shadow-[0_20px_60px_rgba(47,224,200,0.7),0_0_50px_rgba(47,224,200,0.55)] active:scale-[0.98] cursor-pointer"
+                className="group relative flex w-full items-center justify-between overflow-hidden rounded-2xl border-2 border-[var(--cyan)] bg-[var(--cyan)] px-5 sm:px-6 py-3.5 sm:py-4 text-slate-950 shadow-[0_8px_25px_rgba(47,224,200,0.22)] transition-all duration-300 hover:scale-[1.01] hover:brightness-105 hover:shadow-[0_12px_35px_rgba(47,224,200,0.35)] active:scale-[0.98] cursor-pointer"
               >
-                {/* Hover Shimmer Sweep */}
-                <div className="pointer-events-none absolute -inset-full top-0 block -rotate-45 bg-gradient-to-r from-transparent via-white/50 to-transparent transition-all duration-1000 group-hover:left-full" />
+                {/* Hover Shimmer Sweep - subtle flash */}
+                <div className="pointer-events-none absolute -inset-full top-0 block -rotate-45 bg-gradient-to-r from-transparent via-white/15 to-transparent transition-all duration-1000 group-hover:left-full" />
 
-                <div className="flex items-center gap-4 text-left">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-slate-950 text-[var(--cyan)] shadow-md transition-transform duration-300 group-hover:scale-110">
-                    <WindowsIcon size={24} />
+                <div className="flex items-center gap-3.5 text-left">
+                  <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-xl bg-slate-950 text-[var(--cyan)] shadow-md transition-transform duration-300 group-hover:scale-105">
+                    <WindowsIcon size={20} />
                   </div>
                   <div>
-                    <div className="font-display text-[16px] sm:text-[18px] font-black tracking-wider uppercase text-slate-950 leading-tight">
+                    <div className="font-display text-[15px] sm:text-[16px] font-black tracking-wider uppercase text-slate-950 leading-tight">
                       DOWNLOAD FOR WINDOWS 11 &amp; 10
                     </div>
-                    <div className="mt-0.5 font-mono text-[11.5px] sm:text-[12.5px] font-bold text-slate-900/90">
+                    <div className="mt-0.5 font-mono text-[11px] sm:text-[12px] font-bold text-slate-900/90">
                       Direct Setup Installer (.exe 419 MB) · v1.1.8 Stable
                     </div>
                   </div>
                 </div>
 
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-950 text-white shadow-md transition-transform duration-300 group-hover:translate-y-0.5 group-hover:bg-slate-900">
-                  <Download size={22} className="text-[var(--cyan)]" />
+                <div className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-slate-950 text-white shadow-md transition-transform duration-300 group-hover:translate-y-0.5 group-hover:bg-slate-900">
+                  <Download size={18} className="text-[var(--cyan)]" />
                 </div>
               </button>
 
@@ -313,7 +294,6 @@ function DownloadPage() {
                 <span className="text-cyan-400">●</span> 419 MB
                 <span>·</span> VERSION 1.1.8 STABLE
                 <span>·</span> WIN 11 / WIN 10 x64
-                <span>·</span> SHA-512 VERIFIED
               </div>
 
               {/* Download feedback banner */}
@@ -348,63 +328,6 @@ function DownloadPage() {
                 <ArrowRight size={14} className="transition-transform group-hover:translate-x-1 text-cyan-400" />
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── SECURITY STRIP WITH SCI-FI HUD BRACKETS ────────────────── */}
-      <section className="px-4 py-4">
-        <div className="relative mx-auto max-w-[840px] rounded-2xl border border-white/10 bg-white/[0.02] p-5 shadow-[0_15px_35px_rgba(0,0,0,0.5)] backdrop-blur-xl sm:p-6">
-          {/* HUD Corner Accents */}
-          <div className="pointer-events-none absolute -top-1 -left-1 h-3 w-3 border-t-2 border-l-2 border-cyan-400" />
-          <div className="pointer-events-none absolute -bottom-1 -right-1 h-3 w-3 border-b-2 border-r-2 border-cyan-400" />
-
-          <div className="grid grid-cols-2 gap-4 text-center sm:grid-cols-4">
-            <div className="flex flex-col items-center">
-              <ShieldCheck size={20} className="text-cyan-400" />
-              <span className="mt-2 font-display text-[12px] font-bold text-white">SHA-512 Verified</span>
-              <span className="font-mono text-[11px] text-[var(--text-muted)]">Cryptographic hash</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <CheckCircle2 size={20} className="text-emerald-400" />
-              <span className="mt-2 font-display text-[12px] font-bold text-white">Defender Cleared</span>
-              <span className="font-mono text-[11px] text-[var(--text-muted)]">Zero malware/adware</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <HardDrive size={20} className="text-violet-400" />
-              <span className="mt-2 font-display text-[12px] font-bold text-white">100% Offline Capable</span>
-              <span className="font-mono text-[11px] text-[var(--text-muted)]">Local SSD storage</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Terminal size={20} className="text-amber-400" />
-              <span className="mt-2 font-display text-[12px] font-bold text-white">Zero Telemetry</span>
-              <span className="font-mono text-[11px] text-[var(--text-muted)]">No data egress</span>
-            </div>
-          </div>
-
-          {/* Copy SHA-512 Hash button */}
-          <div className="mt-5 border-t border-white/5 pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-left">
-            <div className="flex items-center gap-2 overflow-hidden">
-              <span className="font-mono text-[11px] uppercase text-[var(--text-muted)]">Checksum:</span>
-              <code className="truncate font-mono text-[11px] text-cyan-300 max-w-[280px] sm:max-w-[420px]">
-                {SHA512_HASH}
-              </code>
-            </div>
-            <button
-              type="button"
-              onClick={copyHash}
-              className="inline-flex items-center gap-1.5 shrink-0 rounded-lg border border-white/10 bg-white/5 px-3 py-1 font-mono text-[11px] font-medium text-white transition-colors hover:bg-white/10"
-            >
-              {copiedHash ? (
-                <>
-                  <Check size={12} className="text-emerald-400" /> Copied Hash
-                </>
-              ) : (
-                <>
-                  <Copy size={12} /> Copy SHA-512
-                </>
-              )}
-            </button>
           </div>
         </div>
       </section>
