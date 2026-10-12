@@ -18,6 +18,7 @@ import { PLANS, INTL_PRICES, type PlanId } from "@/lib/payment-config";
 import { getPricing } from "@/lib/geo.functions";
 import SourceCodeSection from "@/components/home/SourceCodeSection";
 import ComparisonMatrix from "@/components/home/ComparisonMatrix";
+import TrialSection from "@/components/home/TrialSection";
 
 const FAQS = [
   {
@@ -129,6 +130,10 @@ export default function PricingPage() {
         subtitle={`Three clear packages — ${formatPrice(plans.lifetime.gbp, code, plans.lifetime.pkr)} lifetime access, ${formatPrice(plans.custom_build.gbp, code, plans.custom_build.pkr)} done-for-you software setup with 5 custom business workflows, or ${formatPrice(plans.source_code.gbp, code, plans.source_code.pkr)} full source code.`}
         height="min-h-[50vh]"
       />
+
+      <SectionWrapper id="free-trial-section">
+        <TrialSection />
+      </SectionWrapper>
 
       <SectionWrapper id="plans">
         <div className="mx-auto max-w-[1200px]">

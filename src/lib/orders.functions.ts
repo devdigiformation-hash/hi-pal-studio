@@ -50,13 +50,21 @@ async function registerLicenseWithWorker(input: {
   licenseKey: string;
   customerId: string;
   planId: string;
+  // Trial overrides: a free trial is the same mechanism as a paid licence, just
+  // with a TRIAL edition and an expiry instead of a lifetime key.
+  editionOverride?: string;
+  maxDevicesOverride?: number;
+  expiresAt?: number | null;
 }): Promise<{ registered: boolean; reason?: string }> {
   const adminKey = process.env.LICENSE_ADMIN_API_KEY;
   // Not configured yet → issue the key locally but flag it as not yet registered,
   // so the owner knows to set LICENSE_ADMIN_API_KEY before it will activate.
   if (!adminKey) return { registered: false, reason: "LICENSE_ADMIN_API_KEY not set" };
 
-  const { edition, maxDevices } = planEntitlement(input.planId);
+  const base = planEntitlement(input.planId);
+  const edition = input.editionOverride ?? base.edition;
+  const maxDevices = input.maxDevicesOverride ?? base.maxDevices;
+  const expiresAt = input.expiresAt === undefined ? null : input.expiresAt;
   try {
     const res = await fetch(`${LICENSE_WORKER_URL}/admin/licenses`, {
       method: "POST",
@@ -67,7 +75,7 @@ async function registerLicenseWithWorker(input: {
         product: "Digi Biz OS",
         edition,
         max_devices: maxDevices,
-        expires_at: null, // lifetime
+        expires_at: expiresAt,
       }),
     });
     if (res.ok) return { registered: true };
@@ -164,6 +172,100 @@ export const getOrderStatus = createServerFn({ method: "POST" })
         license_key: released ? row.license_key : null,
         download_url: released ? row.download_url : null,
       },
+    };
+  });
+
+// ───────────────────────── Free 48-hour trial ─────────────────────────
+// Signup → (subscribe to our YouTube channel) → instant trial key → download.
+// The key is a real licence registered in the worker with a TRIAL edition and a
+// +48h expiry, single device. The signup is also recorded as a lead (orders row,
+// plan_id "trial") so it shows up in the owner's admin panel.
+
+const TRIAL_SECONDS = 172800; // 48 hours
+const TRIAL_INSTALLER_URL =
+  process.env.INSTALLER_URL ||
+  "https://digi-updates.digi-ede.workers.dev/Digi%20Biz%20OS-Setup-1.1.8.exe";
+const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@Digiformationltd";
+
+const createTrialSchema = z.object({
+  customerName: z.string().trim().min(2).max(80),
+  email: z.string().trim().email().max(160),
+  whatsapp: z.string().trim().max(32).optional().or(z.literal("")),
+  // Subscribe gate: the user attests they subscribed to the YouTube channel.
+  // (A real subscription check can replace this flag later without changing the flow.)
+  subscribed: z.literal(true),
+});
+
+export const createTrial = createServerFn({ method: "POST" })
+  .inputValidator((data: unknown) => createTrialSchema.parse(data))
+  .handler(async ({ data }) => {
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+
+    const now = Math.floor(Date.now() / 1000);
+    const expiresAt = now + TRIAL_SECONDS;
+    const licenseKey = makeLicenseKey();
+    const orderRef = makeRef();
+
+    // One trial per email: if this email already took a trial, return the same key.
+    const { data: prior } = await (supabaseAdmin.from("orders") as any)
+      .select("order_ref, license_key, download_url, created_at")
+      .eq("email", data.email)
+      .eq("plan_id", "trial")
+      .order("created_at", { ascending: false })
+      .maybeSingle();
+
+    if (prior?.license_key) {
+      return {
+        trial: true as const,
+        reused: true as const,
+        licenseKey: prior.license_key,
+        downloadUrl: prior.download_url || TRIAL_INSTALLER_URL,
+        expiresInHours: 48,
+        youtube: YOUTUBE_CHANNEL_URL,
+      };
+    }
+
+    const reg = await registerLicenseWithWorker({
+      licenseKey,
+      customerId: data.email,
+      planId: "trial",
+      editionOverride: "TRIAL",
+      maxDevicesOverride: 1,
+      expiresAt,
+    });
+
+    const { error } = await (supabaseAdmin.from("orders") as any).insert({
+      order_ref: orderRef,
+      customer_name: data.customerName,
+      email: data.email,
+      whatsapp: data.whatsapp || null,
+      plan_id: "trial",
+      plan_name: "48-Hour Free Trial",
+      amount: 0,
+      currency: "USD",
+      payment_method: "trial",
+      txn_reference: null,
+      notes: "YouTube subscribe-gate attested",
+      status: "verified", // trial key is released immediately
+      verified_at: new Date().toISOString(),
+      license_key: licenseKey,
+      download_url: TRIAL_INSTALLER_URL,
+    });
+
+    if (error) {
+      console.error("[trial] insert failed", error.message);
+      throw new Error("Could not start your trial. Please try again.");
+    }
+
+    return {
+      trial: true as const,
+      reused: false as const,
+      licenseKey,
+      downloadUrl: TRIAL_INSTALLER_URL,
+      expiresInHours: 48,
+      registered: reg.registered,
+      registerReason: reg.reason,
+      youtube: YOUTUBE_CHANNEL_URL,
     };
   });
 
