@@ -32,14 +32,14 @@ const TITLE = "Download DIGI BIZ OS for Windows 10 & 11 | JARVIS AI Desktop Work
 const DESC =
   "Download DIGI BIZ OS for Windows 10 & 11 (64-bit). The sovereign, voice-controlled AI business operating system. 12 integrated modules, offline Whisper speech recognition, and zero subscription fees.";
 
-const INSTALLER_URL = "https://updates.digibizos.co.uk/DIGI-BIZ-OS-Setup-x64.exe";
-const SHA256_HASH = "8f4e2b9c7a1d5e3f6092b45138a7c29014df35e619c08ba562137e0fa82bc194";
+const INSTALLER_URL = "https://digi-updates.digi-ede.workers.dev/Digi%20Biz%20OS-Setup-1.1.7.exe";
+const SHA512_HASH = "xcHpsOhWvw9aSX6AG9hA79jf5ETAY+zP3ap42dkg9MIpqXrxkPRdKHYsbHlW0HV/S+mGY3CwE980ezJe1R5SJQ==";
 
 const STEPS = [
   {
     num: "01",
     title: "Download Installer",
-    body: "Fetch the standalone 64-bit Windows setup executable (~648 MB) containing all 12 modules and offline models runtime.",
+    body: "Fetch the standalone 64-bit Windows setup executable (~418 MB) containing all 12 modules and offline models runtime.",
   },
   {
     num: "02",
@@ -132,7 +132,7 @@ export const Route = createFileRoute("/download")({
                 "@type": "HowToStep",
                 position: 1,
                 name: "Download the Installer",
-                text: "Click Download for Windows to download the verified 648MB setup executable.",
+                text: "Click Download for Windows to download the verified 418 MB setup executable.",
                 url: "https://www.digibizos.co.uk/download",
               },
               {
@@ -188,7 +188,7 @@ function DownloadPage() {
 
   const copyHash = useCallback(() => {
     if (navigator.clipboard) {
-      navigator.clipboard.writeText(SHA256_HASH);
+      navigator.clipboard.writeText(SHA512_HASH);
       setCopiedHash(true);
       setTimeout(() => setCopiedHash(false), 2500);
     }
@@ -275,7 +275,7 @@ function DownloadPage() {
               </div>
               <div className="rounded-lg bg-black/40 p-2.5 border border-white/5">
                 <dt className="text-white/50 text-[10px] uppercase font-mono">File Size</dt>
-                <dd className="font-semibold text-white mt-0.5">648 MB (.exe)</dd>
+                <dd className="font-semibold text-white mt-0.5">418 MB (.exe)</dd>
               </div>
               <div className="rounded-lg bg-black/40 p-2.5 border border-white/5">
                 <dt className="text-white/50 text-[10px] uppercase font-mono">Licence Model</dt>
@@ -364,10 +364,10 @@ function DownloadPage() {
 
                 {/* Metadata Line */}
                 <div className="mt-3 flex flex-wrap items-center justify-center gap-2 font-mono text-[12px] text-[var(--text-muted)]">
-                  <span className="text-cyan-400">●</span> 648 MB
+                  <span className="text-cyan-400">●</span> 418 MB
                   <span>·</span> VERSION 2.4.0
                   <span>·</span> WIN 10/11 x64
-                  <span>·</span> SHA-256 VERIFIED
+                  <span>·</span> SHA-512 VERIFIED
                 </div>
 
                 {/* Download feedback banner */}
@@ -434,7 +434,7 @@ function DownloadPage() {
           <div className="grid grid-cols-2 gap-4 text-center sm:grid-cols-4">
             <div className="flex flex-col items-center">
               <ShieldCheck size={20} className="text-cyan-400" />
-              <span className="mt-2 font-display text-[12px] font-bold text-white">SHA-256 Verified</span>
+              <span className="mt-2 font-display text-[12px] font-bold text-white">SHA-512 Verified</span>
               <span className="font-mono text-[11px] text-[var(--text-muted)]">Cryptographic hash</span>
             </div>
             <div className="flex flex-col items-center">
@@ -454,12 +454,12 @@ function DownloadPage() {
             </div>
           </div>
 
-          {/* Copy SHA-256 Hash button */}
+          {/* Copy SHA-512 Hash button */}
           <div className="mt-5 border-t border-white/5 pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-left">
             <div className="flex items-center gap-2 overflow-hidden">
               <span className="font-mono text-[11px] uppercase text-[var(--text-muted)]">Checksum:</span>
               <code className="truncate font-mono text-[11px] text-cyan-300 max-w-[280px] sm:max-w-[420px]">
-                {SHA256_HASH}
+                {SHA512_HASH}
               </code>
             </div>
             <button
@@ -473,7 +473,7 @@ function DownloadPage() {
                 </>
               ) : (
                 <>
-                  <Copy size={12} /> Copy SHA-256
+                  <Copy size={12} /> Copy SHA-512
                 </>
               )}
             </button>
