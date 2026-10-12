@@ -17,6 +17,8 @@ import Footer from "../components/Footer";
 import GlobalBackground from "../components/GlobalBackground";
 import { Toaster } from "../components/ui/sonner";
 import { GA_MEASUREMENT_ID, trackPageView } from "../lib/analytics";
+import FloatingWhatsAppButton from "../components/FloatingWhatsAppButton";
+import DigiAiChatbot from "../components/DigiAiChatbot";
 
 function NotFoundComponent() {
   return (
@@ -275,6 +277,8 @@ function RootComponent() {
       <Outlet />
       <Footer />
       <Toaster />
+      <DigiAiChatbot />
+      <FloatingWhatsAppButton />
     </QueryClientProvider>
   );
 }
