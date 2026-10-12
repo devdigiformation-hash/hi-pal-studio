@@ -132,7 +132,7 @@ export function compareFromSet(set: PriceSet, currency: Currency): number | unde
   return currency === "PKR" ? set.comparePkr : currency === "GBP" ? set.compareGbp : set.compareUsd;
 }
 
-export type MethodId = "jazzcash" | "easypaisa" | "sadapay" | "nayapay" | "ubl" | "gbp" | "usd";
+export type MethodId = "jazzcash" | "easypaisa" | "ubl" | "gbp" | "usd";
 
 export type Currency = "PKR" | "GBP" | "USD";
 
@@ -174,8 +174,6 @@ function mobileWallet(id: MethodId, label: string): PaymentMethod {
 export const PAYMENT_METHODS: PaymentMethod[] = [
   mobileWallet("jazzcash", "JazzCash"),
   mobileWallet("easypaisa", "EasyPaisa"),
-  mobileWallet("sadapay", "SadaPay"),
-  mobileWallet("nayapay", "NayaPay"),
   {
     id: "ubl",
     label: "UBL Bank",

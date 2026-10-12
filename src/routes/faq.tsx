@@ -66,7 +66,7 @@ const GROUPS: { heading: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "Which payment methods do you accept?",
-        a: "Mobile accounts (JazzCash, EasyPaisa, SadaPay, NayaPay) and bank transfer in PKR, GBP and USD. Payment details are shown at checkout.",
+        a: "Mobile accounts (JazzCash, EasyPaisa) and bank transfer in PKR, GBP and USD. Payment details are shown at checkout.",
       },
       {
         q: "How is the licence delivered?",

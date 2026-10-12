@@ -22,7 +22,7 @@ import ComparisonMatrix from "@/components/home/ComparisonMatrix";
 const FAQS = [
   {
     q: "What payment methods do you accept?",
-    a: "JazzCash, EasyPaisa, SadaPay, NayaPay, UBL bank transfer, plus GBP (UK) and USD bank accounts for international buyers. Pick a method at checkout, send the exact amount and submit your transaction reference.",
+    a: "JazzCash, EasyPaisa, UBL bank transfer, plus GBP (UK) and USD bank accounts for international buyers. Pick a method at checkout, send the exact amount and submit your transaction reference.",
   },
   {
     q: "Is this really a one-time payment?",
@@ -190,7 +190,7 @@ export default function PricingPage() {
                     </Link>
                   </div>
                   <div className="mt-4 text-center font-body text-[12.5px] text-[var(--text-muted)]">
-                    JazzCash · EasyPaisa · SadaPay · NayaPay · UBL · GBP · USD
+                    JazzCash · EasyPaisa · UBL · GBP · USD
                   </div>
                 </GlassCard>
               );

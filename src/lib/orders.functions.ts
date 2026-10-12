@@ -4,7 +4,7 @@ import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 
 const createOrderSchema = z.object({
   planId: z.enum(["lifetime", "custom_build", "source_code"]),
-  method: z.enum(["jazzcash", "easypaisa", "sadapay", "nayapay", "ubl", "gbp", "usd"]),
+  method: z.enum(["jazzcash", "easypaisa", "ubl", "gbp", "usd"]),
   customerName: z.string().trim().min(2).max(80),
   email: z.string().trim().email().max(160),
   whatsapp: z.string().trim().max(32).optional().or(z.literal("")),

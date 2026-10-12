@@ -271,7 +271,7 @@ function DownloadPage() {
             <dl className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs">
               <div className="rounded-lg bg-black/40 p-2.5 border border-white/5">
                 <dt className="text-white/50 text-[10px] uppercase font-mono">App Version</dt>
-                <dd className="font-semibold text-white mt-0.5">v2.4.0 Stable</dd>
+                <dd className="font-semibold text-white mt-0.5">v1.1.7 Stable</dd>
               </div>
               <div className="rounded-lg bg-black/40 p-2.5 border border-white/5">
                 <dt className="text-white/50 text-[10px] uppercase font-mono">File Size</dt>
@@ -288,6 +288,32 @@ function DownloadPage() {
             </dl>
             <p className="mt-3 font-body text-xs leading-relaxed text-white/70 border-t border-white/10 pt-2.5">
               <strong className="text-white font-medium">Direct Answer:</strong> DIGI BIZ OS is an autonomous Windows 10/11 desktop operating system integrating 12 local business engines (CRM, invoicing, automated social syndication, and private offline Whisper/LLMs) with perpetual lifetime ownership for £29 worldwide (PKR 10,400 in Pakistan).
+            </p>
+          </div>
+
+          {/* Official publisher details — real DIGIFORMATION LTD identity & support. */}
+          <div className="mt-5 rounded-xl border border-white/10 bg-white/[0.02] p-4">
+            <div className="flex items-center gap-2 mb-2.5">
+              <span className="text-[10px] font-mono uppercase tracking-wider text-emerald-400">Published by</span>
+              <span className="text-sm font-semibold text-white">DIGIFORMATION LTD</span>
+              <span className="text-[10px] text-white/40">· Registered in England &amp; Wales · Company No. 16994903</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              <a href="https://wa.me/923164467464" target="_blank" rel="noreferrer" className="flex items-center gap-2 rounded-lg bg-black/40 p-2.5 border border-white/5 text-white/80 hover:border-emerald-500/40">
+                <span className="text-emerald-400">WhatsApp</span> +92 316 4467464
+              </a>
+              <a href="mailto:info@digibizos.co.uk" className="flex items-center gap-2 rounded-lg bg-black/40 p-2.5 border border-white/5 text-white/80 hover:border-cyan-500/40">
+                <span className="text-cyan-400">Email</span> info@digibizos.co.uk
+              </a>
+              <a href="mailto:info@digiformation.co.uk" className="flex items-center gap-2 rounded-lg bg-black/40 p-2.5 border border-white/5 text-white/80 hover:border-cyan-500/40">
+                <span className="text-cyan-400">Email</span> info@digiformation.co.uk
+              </a>
+              <a href="https://www.digiformation.co.uk/" target="_blank" rel="noreferrer" className="flex items-center gap-2 rounded-lg bg-black/40 p-2.5 border border-white/5 text-white/80 hover:border-cyan-500/40">
+                <span className="text-cyan-400">Web</span> www.digiformation.co.uk
+              </a>
+            </div>
+            <p className="mt-2.5 text-[11px] text-white/50">
+              For the full setup &amp; API-key guide, message us on WhatsApp — our team will send it to you.
             </p>
           </div>
 
