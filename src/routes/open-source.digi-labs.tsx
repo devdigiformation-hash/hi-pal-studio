@@ -38,7 +38,9 @@ import OpenSourceSubpageTrustSection from "@/components/seo/OpenSourceSubpageTru
 import OpenSourceSubpageFaq from "@/components/seo/OpenSourceSubpageFaq";
 import OpenSourceTechSpecs from "@/components/seo/OpenSourceTechSpecs";
 import OpenSourceRelatedTools from "@/components/seo/OpenSourceRelatedTools";
+import { useState } from "react";
 import OpenSourceDigiBizBridge from "@/components/seo/OpenSourceDigiBizBridge";
+import SubscribeToDownloadModal from "@/components/seo/SubscribeToDownloadModal";
 import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
 import digiLabsLogo from "@/assets/digi-labs-logo.png";
 import digiLabsBanner from "@/assets/digi-labs-banner.png";
@@ -163,8 +165,26 @@ export const Route = createFileRoute("/open-source/digi-labs")({
 });
 
 function DigiLabsSubpage() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [activeDownloadUrl, setActiveDownloadUrl] = useState(DOWNLOAD_URL);
+  const [activeDownloadLabel, setActiveDownloadLabel] = useState("DIGI LABS Setup (.exe 253MB)");
+
+  const openSubscribeModal = (url: string, label: string) => {
+    setActiveDownloadUrl(url);
+    setActiveDownloadLabel(label);
+    setModalOpen(true);
+  };
+
   return (
     <main className="min-h-screen pt-[60px] md:pt-[72px]">
+      <SubscribeToDownloadModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        downloadUrl={activeDownloadUrl}
+        downloadLabel={activeDownloadLabel}
+        channelUrl="https://www.youtube.com/@digiformation"
+        channelName="DigiFormation Official"
+      />
       <SectionWrapper>
         {/* ── BREADCRUMBS ─────────────────────────────────────────── */}
         <div className="mb-6">
@@ -192,20 +212,27 @@ function DigiLabsSubpage() {
                 The zero-cost ElevenLabs alternative engineered by DigiFormation Ltd. Experience studio-quality human voice synthesis powered by Gemini 2.5 Flash, unlimited Edge-TTS audiobooks, and reverse-engineer any video URL into cinematic AI prompts, courses, and executive notes.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+                <button
+                  type="button"
+                  onClick={() => openSubscribeModal(DOWNLOAD_URL, "DIGI LABS Windows Setup (.exe 253MB)")}
+                >
                   <CyanButton icon={<Download size={16} />}>
                     Download Windows Setup (.exe 253MB)
                   </CyanButton>
-                </a>
-                <a
-                  href="https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-v1.0.0-win-unpacked.zip"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                </button>
+                <button
+                  type="button"
+                  onClick={() =>
+                    openSubscribeModal(
+                      "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-v1.0.0-win-unpacked.zip",
+                      "DIGI LABS Portable Unpack (.zip 357MB)"
+                    )
+                  }
                   className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-5 py-2.5 font-display text-sm font-semibold text-emerald-300 transition hover:border-emerald-400 hover:bg-emerald-500/20"
                 >
                   <Download size={15} />
                   <span>Portable Unpack (.zip 357MB)</span>
-                </a>
+                </button>
                 <a
                   href={REPO_URL}
                   target="_blank"

@@ -62,6 +62,7 @@ import ActivePulse from "@/components/ActivePulse";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import MasterOpenSourceValueTable from "@/components/seo/MasterOpenSourceValueTable";
 import ThreeDTiltCard from "@/components/ui/ThreeDTiltCard";
+import SubscribeToDownloadModal from "@/components/seo/SubscribeToDownloadModal";
 import { buildMeta, breadcrumbLd, itemListLd } from "@/lib/seo";
 import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
 
@@ -858,8 +859,26 @@ function OpenSourcePage() {
 
   const hasActiveFilters = searchQuery.trim() !== "" || selectedCategory !== "All Tools" || selectedPlatform !== "All OS" || selectedSort !== "featured";
 
+  const [modalOpen, setModalOpen] = useState(false);
+  const [activeDownloadUrl, setActiveDownloadUrl] = useState("https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe");
+  const [activeDownloadLabel, setActiveDownloadLabel] = useState("DIGI LABS Setup (.exe 253MB)");
+
+  const openSubscribeModal = (url: string, label: string) => {
+    setActiveDownloadUrl(url);
+    setActiveDownloadLabel(label);
+    setModalOpen(true);
+  };
+
   return (
     <main className="min-h-screen pt-[60px] md:pt-[72px]">
+      <SubscribeToDownloadModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        downloadUrl={activeDownloadUrl}
+        downloadLabel={activeDownloadLabel}
+        channelUrl="https://www.youtube.com/@digiformation"
+        channelName="DigiFormation Official"
+      />
       {/* ── 1. HERO & INSTANT DISCOVERY STAGE ─────────────────── */}
       <SectionWrapper className="relative overflow-hidden pb-8 pt-8 md:pb-14 md:pt-12">
         {/* Subtle Ambient Glow */}
@@ -1128,25 +1147,33 @@ function OpenSourcePage() {
 
                   {/* Action buttons */}
                   <div className="mt-7 flex flex-wrap items-center gap-3 w-full">
-                    <a
-                      href="https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-purple-400 bg-purple-500 px-5 py-3.5 font-mono text-[13px] font-bold text-white shadow-[0_0_25px_rgba(168,85,247,0.35)] transition-all hover:bg-purple-400 hover:shadow-[0_0_35px_rgba(168,85,247,0.5)]"
+                    <button
+                      type="button"
+                      onClick={() =>
+                        openSubscribeModal(
+                          "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe",
+                          "DIGI LABS Setup (.exe 253MB)"
+                        )
+                      }
+                      className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-purple-400 bg-purple-500 px-5 py-3.5 font-mono text-[13px] font-bold text-white shadow-[0_0_25px_rgba(168,85,247,0.35)] transition-all hover:bg-purple-400 hover:shadow-[0_0_35px_rgba(168,85,247,0.5)] cursor-pointer"
                     >
                       <Download size={17} className="shrink-0" />
                       <span>Download Setup (.exe 253MB)</span>
-                    </a>
+                    </button>
 
-                    <a
-                      href="https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-v1.0.0-win-unpacked.zip"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-emerald-400/40 bg-emerald-500/10 px-4 py-3.5 font-mono text-[13px] font-semibold text-emerald-300 transition hover:bg-emerald-500/20 hover:border-emerald-400"
+                    <button
+                      type="button"
+                      onClick={() =>
+                        openSubscribeModal(
+                          "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-v1.0.0-win-unpacked.zip",
+                          "DIGI LABS Portable Unpack (.zip 357MB)"
+                        )
+                      }
+                      className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-emerald-400/40 bg-emerald-500/10 px-4 py-3.5 font-mono text-[13px] font-semibold text-emerald-300 transition hover:bg-emerald-500/20 hover:border-emerald-400 cursor-pointer"
                     >
                       <Download size={16} className="shrink-0" />
                       <span>Portable Unpack (.zip 357MB)</span>
-                    </a>
+                    </button>
 
                     <Link
                       to="/open-source/digi-labs"
