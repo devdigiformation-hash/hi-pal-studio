@@ -14,7 +14,6 @@ import {
 } from "lucide-react";
 import CyanButton from "@/components/CyanButton";
 import { WindowsIcon } from "@/components/PlatformIcons";
-import PlatformStrip from "@/components/PlatformStrip";
 import MonoBadge from "@/components/MonoBadge";
 import ActivePulse from "@/components/ActivePulse";
 import GradientText from "@/components/GradientText";
@@ -255,14 +254,6 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.3 }}
-            className="mt-6"
-          >
-            <PlatformStrip />
-          </motion.div>
 
           <div className="mt-6 flex flex-wrap gap-2 sm:gap-3">
             {BADGES.map((badge, i) => (
