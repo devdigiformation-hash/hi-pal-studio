@@ -1141,7 +1141,7 @@ function OpenSourcePage() {
                     </div>
                     <div className="flex items-center gap-2 font-mono text-[12px] text-zinc-200">
                       <CheckCircle2 size={15} className="text-purple-400 shrink-0" />
-                      <span>Windows Setup (.exe 253MB) &amp; Portable Unpack (.zip)</span>
+                      <span>Windows Setup (.exe 253MB)</span>
                     </div>
                   </div>
 
@@ -1155,24 +1155,10 @@ function OpenSourcePage() {
                           "DIGI LABS Setup (.exe 253MB)"
                         )
                       }
-                      className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-purple-400 bg-purple-500 px-5 py-3.5 font-mono text-[13px] font-bold text-white shadow-[0_0_25px_rgba(168,85,247,0.35)] transition-all hover:bg-purple-400 hover:shadow-[0_0_35px_rgba(168,85,247,0.5)] cursor-pointer"
+                      className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-purple-400 bg-purple-500 px-6 py-3.5 font-mono text-[13.5px] font-bold text-white shadow-[0_0_25px_rgba(168,85,247,0.35)] transition-all hover:bg-purple-400 hover:shadow-[0_0_35px_rgba(168,85,247,0.5)] cursor-pointer"
                     >
                       <Download size={17} className="shrink-0" />
                       <span>Download Setup (.exe 253MB)</span>
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={() =>
-                        openSubscribeModal(
-                          "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-v1.0.0-win-unpacked.zip",
-                          "DIGI LABS Portable Unpack (.zip 357MB)"
-                        )
-                      }
-                      className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-emerald-400/40 bg-emerald-500/10 px-4 py-3.5 font-mono text-[13px] font-semibold text-emerald-300 transition hover:bg-emerald-500/20 hover:border-emerald-400 cursor-pointer"
-                    >
-                      <Download size={16} className="shrink-0" />
-                      <span>Portable Unpack (.zip 357MB)</span>
                     </button>
 
                     <Link

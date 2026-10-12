@@ -16,6 +16,7 @@ import {
   ChevronDown,
   Layers,
   Zap,
+  X,
 } from "lucide-react";
 import { useTrackDownload } from "@/lib/use-download-tracking";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -25,7 +26,7 @@ import GradientText from "@/components/GradientText";
 import CyanButton from "@/components/CyanButton";
 import GhostButton from "@/components/GhostButton";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
-import { WindowsIcon, AppleIcon, LinuxIcon } from "@/components/PlatformIcons";
+import { WindowsIcon } from "@/components/PlatformIcons";
 import { buildMeta, breadcrumbLd, faqLd, softwareLd } from "@/lib/seo";
 
 const TITLE = "Download DIGI BIZ OS for Windows 10 & 11 | JARVIS AI Desktop Workstation";
@@ -167,8 +168,8 @@ export const Route = createFileRoute("/download")({
 
 function DownloadPage() {
   const trackDownload = useTrackDownload();
-  const [selectedPlatform, setSelectedPlatform] = useState<"windows" | "mac" | "linux">("windows");
   const [downloadStarted, setDownloadStarted] = useState(false);
+  const [showDownloadModal, setShowDownloadModal] = useState(false);
   const [copiedHash, setCopiedHash] = useState(false);
   const [showSmartScreenGuide, setShowSmartScreenGuide] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -176,11 +177,12 @@ function DownloadPage() {
   const handleDownload = useCallback(() => {
     trackDownload("download_page_primary_hero_btn", "windows");
     setDownloadStarted(true);
+    setShowDownloadModal(true);
 
-    // Trigger download
+    // Trigger direct installer download
     const link = document.createElement("a");
     link.href = INSTALLER_URL;
-    link.setAttribute("download", "DIGI-BIZ-OS-Setup-x64.exe");
+    link.setAttribute("download", "Digi-Biz-OS-Setup-1.1.7.exe");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -317,124 +319,72 @@ function DownloadPage() {
             </p>
           </div>
 
-          {/* Platform Switcher Tabs */}
-          <div className="mt-8 flex items-center rounded-full border border-white/10 bg-white/[0.03] p-1 shadow-inner backdrop-blur-md">
-            <button
-              type="button"
-              onClick={() => setSelectedPlatform("windows")}
-              className={`flex items-center gap-2 rounded-full px-5 py-2 font-display text-[12px] font-bold tracking-wider uppercase transition-all duration-300 ${
-                selectedPlatform === "windows"
-                  ? "bg-white text-slate-950 shadow-[0_4px_16px_rgba(255,255,255,0.3)]"
-                  : "text-white/60 hover:text-white"
-              }`}
-            >
-              <WindowsIcon size={14} />
-              Windows
-            </button>
-            <button
-              type="button"
-              onClick={() => setSelectedPlatform("mac")}
-              className={`flex items-center gap-2 rounded-full px-5 py-2 font-display text-[12px] font-bold tracking-wider uppercase transition-all duration-300 ${
-                selectedPlatform === "mac"
-                  ? "bg-white text-slate-950 shadow-[0_4px_16px_rgba(255,255,255,0.3)]"
-                  : "text-white/60 hover:text-white"
-              }`}
-            >
-              <AppleIcon size={14} />
-              macOS
-              <span className="rounded-full bg-amber-500/20 px-1.5 py-0.2 font-mono text-[9px] font-bold text-amber-400">
-                Soon
-              </span>
-            </button>
-            <button
-              type="button"
-              onClick={() => setSelectedPlatform("linux")}
-              className={`hidden sm:flex items-center gap-2 rounded-full px-5 py-2 font-display text-[12px] font-bold tracking-wider uppercase transition-all duration-300 ${
-                selectedPlatform === "linux"
-                  ? "bg-white text-slate-950 shadow-[0_4px_16px_rgba(255,255,255,0.3)]"
-                  : "text-white/60 hover:text-white"
-              }`}
-            >
-              <LinuxIcon size={14} />
-              Linux
-              <span className="rounded-full bg-amber-500/20 px-1.5 py-0.2 font-mono text-[9px] font-bold text-amber-400">
-                Soon
-              </span>
-            </button>
+          {/* Windows 11 & 10 Exclusivity Badge */}
+          <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-500/10 px-5 py-2 font-mono text-[12px] font-bold uppercase tracking-wider text-cyan-300 shadow-[0_0_20px_rgba(47,224,200,0.18)] backdrop-blur-md">
+            <WindowsIcon size={15} />
+            <span>Engineered for Windows 11 &amp; Windows 10 (64-Bit Native)</span>
           </div>
 
           {/* ── PRIMARY DOWNLOAD BUTTON ZONE (STONIC AI STYLE) ─────────── */}
-          <div className="mt-8 w-full max-w-[480px]">
-            {selectedPlatform === "windows" ? (
-              <div>
-                {/* Futuristic Download Button */}
-                <button
-                  type="button"
-                  onClick={handleDownload}
-                  className="group relative flex w-full items-center justify-center gap-4 overflow-hidden rounded-xl border border-white/20 bg-gradient-to-r from-white via-slate-100 to-white px-8 py-5 text-slate-950 shadow-[0_10px_35px_-5px_rgba(255,255,255,0.35),0_0_20px_rgba(47,224,200,0.25)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_16px_45px_-5px_rgba(255,255,255,0.5),0_0_30px_rgba(47,224,200,0.4)] active:scale-[0.98]"
-                >
-                  {/* Hover Shimmer Sweep */}
-                  <div className="pointer-events-none absolute -inset-full top-0 block -rotate-45 bg-gradient-to-r from-transparent via-white/70 to-transparent transition-all duration-1000 group-hover:left-full" />
+          <div className="mt-8 w-full max-w-[540px]">
+            <div>
+              {/* Futuristic High-Impact Windows 11 Download Button */}
+              <button
+                type="button"
+                onClick={handleDownload}
+                className="group relative flex w-full items-center justify-between overflow-hidden rounded-2xl border-2 border-cyan-300 bg-gradient-to-r from-cyan-400 via-white to-cyan-300 px-6 sm:px-8 py-5 sm:py-6 text-slate-950 shadow-[0_12px_45px_rgba(47,224,200,0.4),0_0_30px_rgba(255,255,255,0.45)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_20px_60px_rgba(47,224,200,0.65),0_0_40px_rgba(255,255,255,0.65)] active:scale-[0.98] cursor-pointer"
+              >
+                {/* Hover Shimmer Sweep */}
+                <div className="pointer-events-none absolute -inset-full top-0 block -rotate-45 bg-gradient-to-r from-transparent via-white/80 to-transparent transition-all duration-1000 group-hover:left-full" />
 
-                  <WindowsIcon size={22} className="shrink-0 text-slate-900 transition-transform duration-300 group-hover:scale-110" />
-
-                  <span className="font-display text-[15px] font-black tracking-wider uppercase sm:text-[16px]">
-                    DOWNLOAD FOR WINDOWS
-                  </span>
-
-                  <Download
-                    size={20}
-                    className="shrink-0 text-slate-900 transition-transform duration-300 group-hover:translate-y-1"
-                  />
-                </button>
-
-                {/* Metadata Line */}
-                <div className="mt-3 flex flex-wrap items-center justify-center gap-2 font-mono text-[12px] text-[var(--text-muted)]">
-                  <span className="text-cyan-400">●</span> 418 MB
-                  <span>·</span> VERSION 2.4.0
-                  <span>·</span> WIN 10/11 x64
-                  <span>·</span> SHA-512 VERIFIED
-                </div>
-
-                {/* Download feedback banner */}
-                {downloadStarted && (
-                  <div className="mt-4 animate-in fade-in slide-in-from-top-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-3.5 text-left backdrop-blur-md">
-                    <div className="flex items-start gap-2.5">
-                      <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-emerald-400" />
-                      <div>
-                        <p className="font-display text-[13.5px] font-bold text-white">
-                          Download initiated!
-                        </p>
-                        <p className="mt-1 font-body text-[12.5px] leading-relaxed text-slate-300">
-                          Check your browser downloads bar. Once finished, run{" "}
-                          <code className="rounded bg-black/40 px-1.5 py-0.5 font-mono text-cyan-300">
-                            DIGI-BIZ-OS-Setup-x64.exe
-                          </code>{" "}
-                          to begin.
-                        </p>
-                      </div>
+                <div className="flex items-center gap-4 text-left">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-slate-950 text-cyan-300 shadow-md transition-transform duration-300 group-hover:scale-110">
+                    <WindowsIcon size={24} />
+                  </div>
+                  <div>
+                    <div className="font-display text-[16px] sm:text-[18px] font-black tracking-wider uppercase text-slate-950 leading-tight">
+                      DOWNLOAD FOR WINDOWS 11 &amp; 10
+                    </div>
+                    <div className="mt-0.5 font-mono text-[11.5px] sm:text-[12.5px] font-bold text-slate-800">
+                      Direct Setup Installer (.exe 418 MB) · v1.1.7 Stable
                     </div>
                   </div>
-                )}
+                </div>
+
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-950 text-white shadow-md transition-transform duration-300 group-hover:translate-y-0.5 group-hover:bg-cyan-900">
+                  <Download size={22} className="text-cyan-300" />
+                </div>
+              </button>
+
+              {/* Metadata Line */}
+              <div className="mt-3 flex flex-wrap items-center justify-center gap-2 font-mono text-[12px] text-[var(--text-muted)]">
+                <span className="text-cyan-400">●</span> 418 MB
+                <span>·</span> VERSION 1.1.7 STABLE
+                <span>·</span> WIN 11 / WIN 10 x64
+                <span>·</span> SHA-512 VERIFIED
               </div>
-            ) : (
-              <div className="rounded-xl border border-white/10 bg-white/[0.02] p-6 text-center backdrop-blur-md">
-                <p className="font-display text-[15px] font-bold text-white">
-                  {selectedPlatform === "mac" ? "macOS Build in Development" : "Linux Build in Development"}
-                </p>
-                <p className="mt-2 font-body text-[13px] text-[var(--text-secondary)]">
-                  The native {selectedPlatform === "mac" ? "Apple Silicon (M1/M2/M3/M4)" : "Linux (.deb / AppImage)"}{" "}
-                  desktop distribution is currently undergoing internal beta testing.
-                </p>
-                <button
-                  type="button"
-                  onClick={() => setSelectedPlatform("windows")}
-                  className="mt-4 inline-flex items-center gap-2 font-mono text-[12px] font-semibold text-cyan-400 hover:underline"
-                >
-                  <WindowsIcon size={14} /> Switch back to Windows Download
-                </button>
-              </div>
-            )}
+
+              {/* Download feedback banner */}
+              {downloadStarted && (
+                <div className="mt-4 animate-in fade-in slide-in-from-top-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-3.5 text-left backdrop-blur-md">
+                  <div className="flex items-start gap-2.5">
+                    <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-emerald-400" />
+                    <div>
+                      <p className="font-display text-[13.5px] font-bold text-white">
+                        Download in progress!
+                      </p>
+                      <p className="mt-1 font-body text-[12.5px] leading-relaxed text-slate-300">
+                        Check your browser downloads tray. Once finished, run{" "}
+                        <code className="rounded bg-black/40 px-1.5 py-0.5 font-mono text-cyan-300">
+                          Digi Biz OS-Setup-1.1.7.exe
+                        </code>{" "}
+                        to begin.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* Need a licence button / link */}
             <div className="mt-6">
@@ -729,6 +679,108 @@ function DownloadPage() {
           </div>
         </div>
       </section>
+
+      {/* ── WINDOWS 11 STONIC AI STYLE DOWNLOAD MODAL ──────────────── */}
+      {showDownloadModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-xl animate-in fade-in duration-200">
+          <div className="relative w-full max-w-[620px] rounded-3xl border border-cyan-400/40 bg-slate-950/95 p-6 sm:p-8 text-left shadow-[0_25px_70px_rgba(0,0,0,0.9),0_0_50px_rgba(47,224,200,0.2)] backdrop-blur-2xl">
+            {/* Close button */}
+            <button
+              type="button"
+              onClick={() => setShowDownloadModal(false)}
+              className="absolute right-5 top-5 rounded-full p-2 text-white/60 hover:bg-white/10 hover:text-white transition cursor-pointer"
+            >
+              <X size={20} />
+            </button>
+
+            {/* Header */}
+            <div className="flex items-center gap-3.5">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-400/30 bg-cyan-500/10 text-cyan-400 shadow-[0_0_20px_rgba(47,224,200,0.2)]">
+                <WindowsIcon size={24} />
+              </div>
+              <div>
+                <h3 className="font-display text-[20px] sm:text-[22px] font-extrabold text-white">
+                  Windows 11 Setup Guide
+                </h3>
+                <p className="font-mono text-xs text-cyan-300">
+                  DIGI BIZ OS v1.1.7 Setup (.exe 418 MB)
+                </p>
+              </div>
+            </div>
+
+            {/* Download status banner */}
+            <div className="mt-5 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 size={20} className="mt-0.5 shrink-0 text-emerald-400" />
+                <div className="text-xs sm:text-[13px] leading-relaxed text-slate-200">
+                  <strong className="text-white block font-semibold">Download Initiated!</strong>
+                  Your browser is downloading <code className="text-cyan-300 font-mono font-bold">Digi Biz OS-Setup-1.1.7.exe</code>. Check your browser downloads bar.
+                  <div className="mt-2 text-[12px]">
+                    Did not start?{" "}
+                    <a
+                      href={INSTALLER_URL}
+                      download="Digi-Biz-OS-Setup-1.1.7.exe"
+                      className="font-bold text-emerald-300 underline hover:text-emerald-200"
+                    >
+                      Click here to download directly
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Windows 11 SmartScreen 3-Step Visual Guide */}
+            <div className="mt-5">
+              <div className="flex items-center gap-2 font-mono text-[11px] font-bold uppercase tracking-wider text-amber-400">
+                <AlertTriangle size={15} />
+                <span>Windows 11 / 10 First-Time Setup Instructions</span>
+              </div>
+
+              <div className="mt-3 grid gap-2.5 sm:grid-cols-3">
+                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-3 text-xs">
+                  <span className="font-mono text-[10px] font-black text-amber-400">STEP 1</span>
+                  <p className="mt-1 font-bold text-white">Open .exe File</p>
+                  <p className="mt-0.5 text-[11px] text-slate-400">Launch the installer from your browser downloads.</p>
+                </div>
+                <div className="rounded-xl border border-amber-500/30 bg-amber-500/10 p-3 text-xs">
+                  <span className="font-mono text-[10px] font-black text-amber-400">STEP 2</span>
+                  <p className="mt-1 font-bold text-white">Click "More info"</p>
+                  <p className="mt-0.5 text-[11px] text-slate-300">If SmartScreen shows "Windows protected your PC".</p>
+                </div>
+                <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-3 text-xs">
+                  <span className="font-mono text-[10px] font-black text-emerald-400">STEP 3</span>
+                  <p className="mt-1 font-bold text-white">Click "Run anyway"</p>
+                  <p className="mt-0.5 text-[11px] text-slate-300">Clean 1-click install with zero admin restrictions.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Verified publisher & hotline footer */}
+            <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-4 text-xs font-mono">
+              <div className="text-zinc-400 text-[11px]">
+                Publisher: <strong className="text-white">DIGIFORMATION LTD</strong> (UK # 16994903)
+              </div>
+              <div className="flex items-center gap-2">
+                <a
+                  href="https://wa.me/923164467464"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-400/40 bg-emerald-500/10 px-3 py-1.5 text-[12px] font-bold text-emerald-300 hover:bg-emerald-500/20 transition"
+                >
+                  WhatsApp: +92 316 4467464
+                </a>
+                <button
+                  type="button"
+                  onClick={() => setShowDownloadModal(false)}
+                  className="rounded-lg border border-white/20 bg-white/10 px-3.5 py-1.5 text-[12px] font-semibold text-white hover:bg-white/20 transition cursor-pointer"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

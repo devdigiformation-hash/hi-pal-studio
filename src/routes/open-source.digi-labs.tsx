@@ -220,19 +220,6 @@ function DigiLabsSubpage() {
                     Download Windows Setup (.exe 253MB)
                   </CyanButton>
                 </button>
-                <button
-                  type="button"
-                  onClick={() =>
-                    openSubscribeModal(
-                      "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-v1.0.0-win-unpacked.zip",
-                      "DIGI LABS Portable Unpack (.zip 357MB)"
-                    )
-                  }
-                  className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-5 py-2.5 font-display text-sm font-semibold text-emerald-300 transition hover:border-emerald-400 hover:bg-emerald-500/20"
-                >
-                  <Download size={15} />
-                  <span>Portable Unpack (.zip 357MB)</span>
-                </button>
                 <a
                   href={REPO_URL}
                   target="_blank"
@@ -413,38 +400,24 @@ function DigiLabsSubpage() {
             </h2>
 
             <p className="mt-4 font-body text-[15px] leading-[1.8] text-[var(--text-secondary)] md:text-[17px]">
-              DIGI LABS is 100% free and open-source for your personal and agency systems. Download the standalone Windows installer, get the portable unpacked build, or clone the repository directly from GitHub. Resale and paid cloud re-hosting are strictly prohibited.
+              DIGI LABS is 100% free and open-source for your personal and agency systems. Download the standalone Windows installer (.exe) or clone the repository directly from GitHub. Resale and paid cloud re-hosting are strictly prohibited.
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-[620px] mx-auto">
+            <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-[540px] mx-auto">
               <button
                 type="button"
                 onClick={() => openSubscribeModal(DOWNLOAD_URL, "DIGI LABS Setup (.exe 253MB)")}
-                className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-purple-400 bg-purple-500 px-6 sm:px-7 py-3.5 sm:py-4 font-mono text-[13.5px] sm:text-[14.5px] font-bold text-white shadow-[0_0_30px_rgba(168,85,247,0.4)] transition-all hover:bg-purple-400 hover:shadow-[0_0_40px_rgba(168,85,247,0.6)] cursor-pointer"
+                className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-purple-400 bg-purple-500 px-7 py-3.5 sm:py-4 font-mono text-[14px] sm:text-[15px] font-bold text-white shadow-[0_0_30px_rgba(168,85,247,0.4)] transition-all hover:bg-purple-400 hover:shadow-[0_0_40px_rgba(168,85,247,0.6)] cursor-pointer"
               >
                 <Download size={18} className="shrink-0" />
-                <span>Download Setup (.exe 253MB)</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() =>
-                  openSubscribeModal(
-                    "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-v1.0.0-win-unpacked.zip",
-                    "DIGI LABS Portable Unpack (.zip 357MB)"
-                  )
-                }
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-emerald-400/40 bg-emerald-500/10 px-5 sm:px-6 py-3.5 sm:py-4 font-mono text-[13px] sm:text-[14px] font-semibold text-emerald-300 transition hover:bg-emerald-500/20 hover:border-emerald-400 cursor-pointer"
-              >
-                <Download size={16} className="shrink-0" />
-                <span>Portable Unpack (.zip)</span>
+                <span>Download Windows Setup (.exe 253MB)</span>
               </button>
 
               <a
                 href={REPO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 sm:px-5 py-3.5 sm:py-4 font-mono text-[13px] font-semibold text-white transition hover:border-purple-400 hover:bg-white/10"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3.5 sm:py-4 font-mono text-[13px] font-semibold text-white transition hover:border-purple-400 hover:bg-white/10"
               >
                 <Github size={17} />
                 <span>GitHub</span>
