@@ -270,60 +270,6 @@ function DownloadPage() {
             sovereignty, Whisper voice control, and 12 native modules.
           </p>
 
-          {/* AEO / GEO Direct Answer Knowledge Box (Engineered for Google AI Overviews, Perplexity & Bing Copilot) */}
-          <div className="mt-6 w-full max-w-[680px] rounded-2xl border border-cyan-500/30 bg-cyan-950/20 p-4 text-left shadow-[0_4px_24px_rgba(47,224,200,0.08)] backdrop-blur-md">
-            <div className="flex items-center gap-2 font-mono text-[11px] font-bold tracking-wider uppercase text-cyan-400">
-              <span className="h-2 w-2 rounded-full bg-cyan-400 animate-ping" />
-              DIRECT SPECIFICATION &amp; DOWNLOAD SUMMARY (OCTOBER 2026 RELEASE)
-            </div>
-            <dl className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs">
-              <div className="rounded-lg bg-black/40 p-2.5 border border-white/5">
-                <dt className="text-white/50 text-[10px] uppercase font-mono">App Version</dt>
-                <dd className="font-semibold text-white mt-0.5">v1.1.8 Stable</dd>
-              </div>
-              <div className="rounded-lg bg-black/40 p-2.5 border border-white/5">
-                <dt className="text-white/50 text-[10px] uppercase font-mono">File Size</dt>
-                <dd className="font-semibold text-white mt-0.5">419 MB (.exe)</dd>
-              </div>
-              <div className="rounded-lg bg-black/40 p-2.5 border border-white/5">
-                <dt className="text-white/50 text-[10px] uppercase font-mono">Licence Model</dt>
-                <dd className="font-semibold text-emerald-400 mt-0.5">£29 Lifetime</dd>
-              </div>
-              <div className="rounded-lg bg-black/40 p-2.5 border border-white/5">
-                <dt className="text-white/50 text-[10px] uppercase font-mono">Compatibility</dt>
-                <dd className="font-semibold text-white mt-0.5">Win 10 &amp; 11 (64-bit)</dd>
-              </div>
-            </dl>
-            <p className="mt-3 font-body text-xs leading-relaxed text-white/70 border-t border-white/10 pt-2.5">
-              <strong className="text-white font-medium">Direct Answer:</strong> DIGI BIZ OS is an autonomous Windows 10/11 desktop operating system integrating 12 local business engines (CRM, invoicing, automated social syndication, and private offline Whisper/LLMs) with perpetual lifetime ownership for £29 worldwide (PKR 10,400 in Pakistan).
-            </p>
-          </div>
-
-          {/* Official publisher details — real DIGIFORMATION LTD identity & support. */}
-          <div className="mt-5 rounded-xl border border-white/10 bg-white/[0.02] p-4">
-            <div className="flex items-center gap-2 mb-2.5">
-              <span className="text-[10px] font-mono uppercase tracking-wider text-emerald-400">Published by</span>
-              <span className="text-sm font-semibold text-white">DIGIFORMATION LTD</span>
-              <span className="text-[10px] text-white/40">· Registered in England &amp; Wales · Company No. 16994903</span>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-              <a href="https://wa.me/923164467464" target="_blank" rel="noreferrer" className="flex items-center gap-2 rounded-lg bg-black/40 p-2.5 border border-white/5 text-white/80 hover:border-emerald-500/40">
-                <span className="text-emerald-400">WhatsApp</span> +92 316 4467464
-              </a>
-              <a href="mailto:info@digibizos.co.uk" className="flex items-center gap-2 rounded-lg bg-black/40 p-2.5 border border-white/5 text-white/80 hover:border-cyan-500/40">
-                <span className="text-cyan-400">Email</span> info@digibizos.co.uk
-              </a>
-              <a href="mailto:info@digiformation.co.uk" className="flex items-center gap-2 rounded-lg bg-black/40 p-2.5 border border-white/5 text-white/80 hover:border-cyan-500/40">
-                <span className="text-cyan-400">Email</span> info@digiformation.co.uk
-              </a>
-              <a href="https://www.digiformation.co.uk/" target="_blank" rel="noreferrer" className="flex items-center gap-2 rounded-lg bg-black/40 p-2.5 border border-white/5 text-white/80 hover:border-cyan-500/40">
-                <span className="text-cyan-400">Web</span> www.digiformation.co.uk
-              </a>
-            </div>
-            <p className="mt-2.5 text-[11px] text-white/50">
-              For the full setup &amp; API-key guide, message us on WhatsApp — our team will send it to you.
-            </p>
-          </div>
 
           {/* Windows 11 & 10 Exclusivity Badge */}
           <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-500/10 px-5 py-2 font-mono text-[12px] font-bold uppercase tracking-wider text-cyan-300 shadow-[0_0_20px_rgba(47,224,200,0.18)] backdrop-blur-md">
