@@ -28,6 +28,7 @@ export interface SubpageToolData {
   downloadUrl: string;
   downloadType: "installer" | "bootstrap" | "archive" | "github-release" | "external" | "cli";
   downloadTypeLabel: string;
+  portableDownloadUrl?: string;
   privacy: "100% Local (Offline)" | "Self-Hosted / Local" | "Offline Capable" | "Local LLM Inference";
   provenance: string;
   requirements: SystemRequirements;
@@ -1102,7 +1103,8 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
     repoUrl: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-",
     downloadUrl: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe",
     downloadType: "installer",
-    downloadTypeLabel: "Windows Installer (.exe) 240MB",
+    downloadTypeLabel: "Windows Installer (.exe) 253MB",
+    portableDownloadUrl: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-v1.0.0-win-unpacked.zip",
     privacy: "100% Local (Offline)",
     provenance: "Engineered by DigiFormation Ltd as a sovereign desktop TTS studio and media reverse-engineering engine.",
     requirements: {

@@ -74,6 +74,7 @@ import upscaylScreenshot from "@/assets/upscayl-screenshot.jpg";
 import leadHunterBanner from "@/assets/digi-lead-hunter-banner.webp";
 import artcraftScreenshot from "@/assets/artcraft-screenshot.jpg";
 import digiLabsLogo from "@/assets/digi-labs-logo.png";
+import digiLabsBanner from "@/assets/digi-labs-banner.png";
 
 
 const TITLE = "Free Open Source Software Library & Hub — AI Agents, Media & Tools | DIGI BIZ OS";
@@ -1121,12 +1122,12 @@ function OpenSourcePage() {
                     </div>
                     <div className="flex items-center gap-2 font-mono text-[12px] text-zinc-200">
                       <CheckCircle2 size={15} className="text-purple-400 shrink-0" />
-                      <span>Local Windows Electron installer (.exe 240MB)</span>
+                      <span>Windows Setup (.exe 253MB) &amp; Portable Unpack (.zip)</span>
                     </div>
                   </div>
 
                   {/* Action buttons */}
-                  <div className="mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full">
+                  <div className="mt-7 flex flex-wrap items-center gap-3 w-full">
                     <a
                       href="https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe"
                       target="_blank"
@@ -1134,14 +1135,24 @@ function OpenSourcePage() {
                       className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-purple-400 bg-purple-500 px-5 py-3.5 font-mono text-[13px] font-bold text-white shadow-[0_0_25px_rgba(168,85,247,0.35)] transition-all hover:bg-purple-400 hover:shadow-[0_0_35px_rgba(168,85,247,0.5)]"
                     >
                       <Download size={17} className="shrink-0" />
-                      <span>Download Windows Setup (.exe 240MB)</span>
+                      <span>Download Setup (.exe 253MB)</span>
+                    </a>
+
+                    <a
+                      href="https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-v1.0.0-win-unpacked.zip"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-emerald-400/40 bg-emerald-500/10 px-4 py-3.5 font-mono text-[13px] font-semibold text-emerald-300 transition hover:bg-emerald-500/20 hover:border-emerald-400"
+                    >
+                      <Download size={16} className="shrink-0" />
+                      <span>Portable Unpack (.zip 357MB)</span>
                     </a>
 
                     <Link
                       to="/open-source/digi-labs"
-                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3.5 font-mono text-[13px] font-semibold text-white transition hover:border-purple-400 hover:bg-white/10"
+                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 py-3.5 font-mono text-[13px] font-semibold text-white transition hover:border-purple-400 hover:bg-white/10"
                     >
-                      <span>Specifications &amp; Benchmarks</span>
+                      <span>Specifications</span>
                       <ArrowRight size={14} className="text-purple-400 shrink-0" />
                     </Link>
 
@@ -1149,7 +1160,7 @@ function OpenSourcePage() {
                       href="https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 font-mono text-[13px] text-zinc-300 transition hover:bg-white/10 hover:text-white"
+                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3.5 py-3.5 font-mono text-[13px] text-zinc-300 transition hover:bg-white/10 hover:text-white"
                     >
                       <Github size={16} className="shrink-0" />
                       <span>GitHub</span>
@@ -1158,24 +1169,22 @@ function OpenSourcePage() {
                   </div>
                 </div>
 
-                {/* Visual Showcase (Screenshots Preview) */}
+                {/* Visual Showcase (Screenshots & Banner Preview) */}
                 <div className="relative">
-                  <div className="overflow-hidden rounded-2xl border border-purple-500/20 bg-black/70 shadow-2xl backdrop-blur-md">
-                    <div className="flex items-center justify-center p-8 bg-gradient-to-b from-[#1E1138]/60 to-black/80">
-                      <img
-                        src={digiLabsLogo}
-                        alt="DIGI LABS Studio interface preview"
-                        width={280}
-                        height={280}
-                        className="h-44 w-auto object-contain drop-shadow-[0_0_35px_rgba(168,85,247,0.45)]"
-                        loading="eager"
-                      />
-                    </div>
+                  <div className="overflow-hidden rounded-2xl border border-purple-500/30 bg-black/70 shadow-2xl backdrop-blur-md">
+                    <img
+                      src={digiLabsBanner}
+                      alt="DIGI LABS vs ElevenLabs - Sovereign Open Source Voice Studio"
+                      width={800}
+                      height={450}
+                      className="h-auto w-full object-cover"
+                      loading="eager"
+                    />
                     <div className="border-t border-white/10 bg-[#0B0616] p-4">
                       <div className="flex items-center justify-between text-xs font-mono text-zinc-400">
                         <span className="flex items-center gap-1.5 text-purple-300">
                           <Terminal size={13} />
-                          <span>Electron Desktop App + Local Engine</span>
+                          <span>Electron Desktop App + Local Whisper &amp; TTS Engine</span>
                         </span>
                         <span className="text-emerald-400 font-semibold">v1.0.0 Stable</span>
                       </div>

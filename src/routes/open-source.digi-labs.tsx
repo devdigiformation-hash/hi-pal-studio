@@ -41,6 +41,7 @@ import OpenSourceRelatedTools from "@/components/seo/OpenSourceRelatedTools";
 import OpenSourceDigiBizBridge from "@/components/seo/OpenSourceDigiBizBridge";
 import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
 import digiLabsLogo from "@/assets/digi-labs-logo.png";
+import digiLabsBanner from "@/assets/digi-labs-banner.png";
 
 const toolData = OPEN_SOURCE_SUBPAGES["digi-labs"];
 
@@ -193,8 +194,17 @@ function DigiLabsSubpage() {
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
                   <CyanButton icon={<Download size={16} />}>
-                    Download Windows Setup (.exe 240MB)
+                    Download Windows Setup (.exe 253MB)
                   </CyanButton>
+                </a>
+                <a
+                  href="https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-v1.0.0-win-unpacked.zip"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-5 py-2.5 font-display text-sm font-semibold text-emerald-300 transition hover:border-emerald-400 hover:bg-emerald-500/20"
+                >
+                  <Download size={15} />
+                  <span>Portable Unpack (.zip 357MB)</span>
                 </a>
                 <a
                   href={REPO_URL}
@@ -209,14 +219,14 @@ function DigiLabsSubpage() {
               </div>
             </div>
 
-            <div className="w-full max-w-md lg:w-auto">
-              <div className="relative mx-auto flex h-64 w-64 items-center justify-center rounded-3xl border border-pink-500/30 bg-black/60 p-6 shadow-[0_0_50px_rgba(236,72,153,0.2)] backdrop-blur-xl">
+            <div className="w-full max-w-lg lg:w-auto">
+              <div className="relative overflow-hidden rounded-3xl border border-pink-500/30 bg-black/60 shadow-[0_0_50px_rgba(236,72,153,0.25)] backdrop-blur-xl">
                 <img
-                  src={digiLabsLogo}
-                  alt="DIGI LABS Workspace"
-                  className="h-full w-full object-contain drop-shadow-[0_0_20px_rgba(236,72,153,0.5)]"
+                  src={digiLabsBanner}
+                  alt="DIGI LABS vs ElevenLabs - Sovereign Open Source Voice Studio"
+                  className="h-auto w-full object-cover"
                 />
-                <div className="absolute -bottom-3 -right-3 rounded-full border border-emerald-500/40 bg-slate-950/90 px-3 py-1 font-mono text-xs font-bold text-emerald-400 shadow-lg">
+                <div className="absolute top-3 right-3 rounded-full border border-emerald-500/40 bg-slate-950/90 px-3 py-1 font-mono text-xs font-bold text-emerald-400 shadow-lg">
                   v1.0.0 STABLE
                 </div>
               </div>
