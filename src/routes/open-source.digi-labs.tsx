@@ -182,8 +182,8 @@ function DigiLabsSubpage() {
         onClose={() => setModalOpen(false)}
         downloadUrl={activeDownloadUrl}
         downloadLabel={activeDownloadLabel}
-        channelUrl="https://www.youtube.com/@digiformation"
-        channelName="DigiFormation Official"
+        channelUrl="https://www.youtube.com/@Digiformationltd"
+        channelName="Digiformation Ltd Official"
       />
       <SectionWrapper>
         {/* ── BREADCRUMBS ─────────────────────────────────────────── */}

@@ -876,8 +876,8 @@ function OpenSourcePage() {
         onClose={() => setModalOpen(false)}
         downloadUrl={activeDownloadUrl}
         downloadLabel={activeDownloadLabel}
-        channelUrl="https://www.youtube.com/@digiformation"
-        channelName="DigiFormation Official"
+        channelUrl="https://www.youtube.com/@Digiformationltd"
+        channelName="Digiformation Ltd Official"
       />
       {/* ── 1. HERO & INSTANT DISCOVERY STAGE ─────────────────── */}
       <SectionWrapper className="relative overflow-hidden pb-8 pt-8 md:pb-14 md:pt-12">
