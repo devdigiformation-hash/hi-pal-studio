@@ -190,10 +190,8 @@ const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@Digiformationltd";
 const createTrialSchema = z.object({
   customerName: z.string().trim().min(2).max(80),
   email: z.string().trim().email().max(160),
-  whatsapp: z.string().trim().max(32).optional().or(z.literal("")),
-  // Subscribe gate: the user attests they subscribed to the YouTube channel.
-  // (A real subscription check can replace this flag later without changing the flow.)
-  subscribed: z.literal(true),
+  whatsapp: z.string().trim().min(7, "WhatsApp number is required").max(32),
+  subscribed: z.boolean().optional().default(true),
 });
 
 export const createTrial = createServerFn({ method: "POST" })

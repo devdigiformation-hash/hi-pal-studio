@@ -2,16 +2,14 @@ import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
 import { motion, AnimatePresence } from "framer-motion";
-import { Youtube, Download, Copy, Check, Gift, ArrowRight } from "lucide-react";
+import { Download, Copy, Check, Gift, ArrowRight, MessageCircle } from "lucide-react";
 import GlassCard from "@/components/GlassCard";
 import CyanButton from "@/components/CyanButton";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import MonoBadge from "@/components/MonoBadge";
 import { createTrial } from "@/lib/orders.functions";
 
-const YT = "https://www.youtube.com/@Digiformationltd";
-
-type Step = "cta" | "form" | "subscribe" | "done";
+type Step = "cta" | "form" | "done";
 
 export default function TrialSection() {
   const trialFn = useServerFn(createTrial);
@@ -19,8 +17,6 @@ export default function TrialSection() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
-  const [opened, setOpened] = useState(false); // did they open the channel?
-  const [confirmed, setConfirmed] = useState(false); // did they tick "I subscribed"?
   const [copied, setCopied] = useState(false);
 
   const m = useMutation({
@@ -31,10 +27,31 @@ export default function TrialSection() {
 
   const result = m.data;
 
-  const validForm = name.trim().length >= 2 && /\S+@\S+\.\S+/.test(email);
+  // WhatsApp is strictly mandatory (must have at least 7 digits)
+  const validPhone = whatsapp.trim().replace(/\D/g, "").length >= 7;
+  const validForm = name.trim().length >= 2 && /\S+@\S+\.\S+/.test(email) && validPhone;
 
-  const startTrial = () => {
-    m.mutate({ customerName: name.trim(), email: email.trim(), whatsapp: whatsapp.trim(), subscribed: true });
+  // Prepare prefilled WhatsApp message to our number 0316 4467464 (+923164467464)
+  const waMessage = `Hi DIGIFORMATION team! I want to use your free trial.\n\n👤 Name: ${name.trim()}\n📧 Email: ${email.trim()}\n📱 WhatsApp: ${whatsapp.trim()}\n\nPlease issue my 48-hour free trial key.`;
+  const waUrl = `https://wa.me/923164467464?text=${encodeURIComponent(waMessage)}`;
+
+  const handleSubmitLead = () => {
+    if (!validForm) return;
+
+    // Immediately open WhatsApp so the lead and message arrives directly to our chat
+    try {
+      window.open(waUrl, "_blank");
+    } catch {
+      // fallback in case of popup blockers
+    }
+
+    // Record lead into database and generate license key
+    m.mutate({
+      customerName: name.trim(),
+      email: email.trim(),
+      whatsapp: whatsapp.trim(),
+      subscribed: true,
+    });
   };
 
   const copyKey = () => {
@@ -91,7 +108,7 @@ export default function TrialSection() {
             </motion.div>
           )}
 
-          {/* STEP 1 — signup form */}
+          {/* STEP 1 — signup form with mandatory WhatsApp */}
           {step === "form" && (
             <motion.div
               key="form"
@@ -105,34 +122,71 @@ export default function TrialSection() {
                   <MonoBadge color="var(--success)">
                     <Gift size={12} className="mr-1 inline" /> Free · 48 Hours
                   </MonoBadge>
-                  <MonoBadge color="var(--text-secondary)">Step 1 of 2</MonoBadge>
+                  <MonoBadge color="var(--text-secondary)">Instant WhatsApp Connect</MonoBadge>
                 </div>
                 <h3 className="font-display text-[20px] font-bold text-[var(--text-primary)]">
                   Claim Your 48-Hour Free Trial
                 </h3>
                 <p className="mt-1 font-body text-[13.5px] text-[var(--text-secondary)]">
-                  Enter your details below to generate your trial activation key.
+                  Enter your details below to receive your 48-hour trial license key directly on WhatsApp.
                 </p>
               </div>
 
               <Field label="Your name">
-                <input value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g. Ali Khan" className={inputCls} />
+                <input
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="e.g. Ali Khan"
+                  className={inputCls}
+                />
               </Field>
+
               <Field label="Email">
-                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="you@example.com" className={inputCls} />
+                <input
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  type="email"
+                  placeholder="you@example.com"
+                  className={inputCls}
+                />
               </Field>
-              <Field label="WhatsApp (optional)">
-                <input value={whatsapp} onChange={(e) => setWhatsapp(e.target.value)} placeholder="+92 3xx xxxxxxx" className={inputCls} />
+
+              <Field label="WhatsApp number">
+                <input
+                  value={whatsapp}
+                  onChange={(e) => setWhatsapp(e.target.value)}
+                  placeholder="e.g. 0316 4467464 or +92 316 4467464"
+                  className={inputCls}
+                />
+                {!validPhone && whatsapp.length > 0 && (
+                  <p className="mt-1.5 font-mono text-[11.5px] text-[var(--amber)]">
+                    Please enter a valid WhatsApp number (minimum 7 digits).
+                  </p>
+                )}
               </Field>
+
+              {m.isError && (
+                <p className="font-body text-[12.5px] text-[var(--danger,#f87171)]">
+                  {(m.error as Error)?.message || "Something went wrong. Please try again."}
+                </p>
+              )}
+
               <CyanButton
                 size="lg"
-                tone="52,211,153"
+                tone="34,197,94"
                 className="mt-2 w-full disabled:opacity-40"
-                onClick={() => validForm && setStep("subscribe")}
-                disabled={!validForm}
+                onClick={handleSubmitLead}
+                disabled={!validForm || m.isPending}
               >
-                Continue to License <ArrowRight size={16} className="ml-1 inline" />
+                {m.isPending ? (
+                  "Connecting to WhatsApp…"
+                ) : (
+                  <>
+                    <MessageCircle size={18} className="mr-2 inline" /> Get Free Trial on WhatsApp
+                  </>
+                )}
               </CyanButton>
+
               <button
                 type="button"
                 onClick={() => setStep("cta")}
@@ -143,125 +197,79 @@ export default function TrialSection() {
             </motion.div>
           )}
 
-        {/* STEP 2 — subscribe gate */}
-        {step === "subscribe" && (
-          <motion.div
-            key="subscribe"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="grid gap-5"
-          >
-            <div className="rounded-[var(--r-lg)] border border-[var(--border-glass)] bg-[var(--bg-glass)] p-5">
-              <div className="flex items-center gap-3">
-                <Youtube size={26} className="shrink-0 text-[#FF0033]" />
-                <div>
-                  <p className="font-display text-[15px] font-semibold text-[var(--text-primary)]">
-                    Subscribe to unlock your trial
-                  </p>
-                  <p className="font-body text-[12.5px] text-[var(--text-secondary)]">
-                    One tap — it keeps the free trial free for everyone.
-                  </p>
-                </div>
+          {/* STEP 2 — lead received, WhatsApp direct connection & instant key */}
+          {step === "done" && (
+            <motion.div
+              key="done"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="grid gap-5 text-center"
+            >
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[var(--success)]/15">
+                <Check size={28} className="text-[var(--success)]" />
               </div>
-              <a
-                href={YT}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setOpened(true)}
-                className="mt-4 flex w-full items-center justify-center gap-2 rounded-[var(--r-md)] bg-[#FF0033] px-4 py-3 font-display text-[14px] font-bold text-white transition hover:brightness-110"
-              >
-                <Youtube size={18} /> Subscribe on YouTube
-              </a>
-              <label className="mt-4 flex cursor-pointer items-start gap-2.5">
-                <input
-                  type="checkbox"
-                  checked={confirmed}
-                  onChange={(e) => setConfirmed(e.target.checked)}
-                  className="mt-[3px] h-4 w-4 accent-[var(--success)]"
-                />
-                <span className="font-body text-[13px] text-[var(--text-secondary)]">
-                  I have subscribed to the DIGIFORMATION LTD channel.
-                </span>
-              </label>
-              {!opened && confirmed && (
-                <p className="mt-2 font-body text-[11.5px] text-[var(--amber)]">
-                  Tip: tap “Subscribe on YouTube” above first.
+              <div>
+                <p className="font-display text-[22px] font-bold text-[var(--text-primary)]">
+                  {result?.reused ? "Welcome Back!" : "Trial Request Submitted!"}
                 </p>
+                <p className="mt-1 font-body text-[13.5px] text-[var(--text-secondary)]">
+                  We've forwarded your details to our official WhatsApp team (+92 316 4467464).
+                </p>
+              </div>
+
+              {/* Direct WhatsApp button in case popup was blocked */}
+              <div className="mx-auto w-full max-w-[420px]">
+                <a
+                  href={waUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <CyanButton size="lg" tone="34,197,94" className="w-full">
+                    <MessageCircle size={18} className="mr-2 inline" /> Chat on WhatsApp (0316 4467464)
+                  </CyanButton>
+                </a>
+                <p className="mt-2 text-[11px] font-mono text-[var(--text-muted)]">
+                  Pre-filled message: "I want to use your free trial."
+                </p>
+              </div>
+
+              {/* Instant License Key Box */}
+              {result?.licenseKey && (
+                <div className="mx-auto w-full max-w-[420px] rounded-[var(--r-lg)] border border-[var(--border-glass)] bg-[var(--bg-glass)] p-4 text-left">
+                  <p className="mb-2 font-mono text-[11px] uppercase tracking-wider text-[var(--text-muted)]">
+                    Your Instant 48-Hour Trial Key:
+                  </p>
+                  <div className="flex items-center gap-2 rounded-[var(--r-md)] border border-[var(--success-border,rgba(52,211,153,0.4))] bg-black/40 px-3.5 py-2.5">
+                    <code className="flex-1 truncate font-mono text-[14px] text-[var(--success)]">
+                      {result.licenseKey}
+                    </code>
+                    <button
+                      onClick={copyKey}
+                      title="Copy Key"
+                      className="shrink-0 rounded p-1 text-[var(--text-secondary)] transition hover:text-[var(--success)]"
+                    >
+                      {copied ? <Check size={16} className="text-[var(--success)]" /> : <Copy size={16} />}
+                    </button>
+                  </div>
+
+                  <a href={result.downloadUrl} className="mt-3 block">
+                    <CyanButton size="md" tone="52,211,153" className="w-full text-[13px]">
+                      <Download size={15} className="mr-1.5 inline" /> Download DIGI BIZ OS (.exe)
+                    </CyanButton>
+                  </a>
+                </div>
               )}
-            </div>
 
-            {m.isError && (
-              <p className="font-body text-[12.5px] text-[var(--danger,#f87171)]">
-                {(m.error as Error)?.message || "Something went wrong. Please try again."}
+              <p className="mx-auto max-w-[460px] font-body text-[12px] leading-[1.7] text-[var(--text-muted)]">
+                Our support team at WhatsApp +92 316 4467464 will also assist you with setup, modules, and any questions during your 48-hour evaluation.
               </p>
-            )}
-
-            <CyanButton
-              size="lg"
-              tone="52,211,153"
-              className="w-full disabled:opacity-40"
-              onClick={startTrial}
-              disabled={!confirmed || m.isPending}
-            >
-              {m.isPending ? "Generating your key…" : "Get my 48-hour trial key"}
-            </CyanButton>
-            <button
-              type="button"
-              onClick={() => setStep("form")}
-              className="mx-auto font-body text-[12.5px] text-[var(--text-muted)] underline-offset-2 hover:underline"
-            >
-              ← Back
-            </button>
-          </motion.div>
-        )}
-
-        {/* STEP 3 — key + download */}
-        {step === "done" && result && (
-          <motion.div
-            key="done"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="grid gap-5 text-center"
-          >
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[var(--success)]/15">
-              <Check size={28} className="text-[var(--success)]" />
-            </div>
-            <div>
-              <p className="font-display text-[20px] font-bold text-[var(--text-primary)]">
-                {result.reused ? "Welcome back — here’s your key" : "Your trial is ready!"}
-              </p>
-              <p className="mt-1 font-body text-[13px] text-[var(--text-secondary)]">
-                Valid for {result.expiresInHours} hours on one device. Install the app, then paste this key.
-              </p>
-            </div>
-
-            <div className="mx-auto flex w-full max-w-[420px] items-center gap-2 rounded-[var(--r-md)] border border-[var(--success-border,rgba(52,211,153,0.4))] bg-[var(--bg-glass)] px-4 py-3">
-              <code className="flex-1 truncate font-mono text-[15px] tracking-wide text-[var(--success)]">
-                {result.licenseKey}
-              </code>
-              <button onClick={copyKey} className="shrink-0 rounded-md p-1.5 text-[var(--text-secondary)] transition hover:text-[var(--success)]">
-                {copied ? <Check size={16} className="text-[var(--success)]" /> : <Copy size={16} />}
-              </button>
-            </div>
-
-            <a href={result.downloadUrl} className="mx-auto w-full max-w-[420px]">
-              <CyanButton size="lg" tone="52,211,153" className="w-full">
-                <Download size={16} className="mr-1 inline" /> Download DIGI BIZ OS
-              </CyanButton>
-            </a>
-
-            <p className="mx-auto max-w-[460px] font-body text-[12px] leading-[1.7] text-[var(--text-muted)]">
-              First launch sets up its engines automatically — leave it running; Settings shows the
-              progress. Need help? WhatsApp us at{" "}
-              <span className="font-mono text-[var(--text-secondary)]">+92 316 4467464</span>.
-            </p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </GlassCard>
-  </section>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </GlassCard>
+    </section>
   );
 }
 
