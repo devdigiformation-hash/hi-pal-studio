@@ -4532,6 +4532,305 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Explore Open Source Production Library", to: "/open-source" },
       { label: "Get Lifetime Licence (£29)", to: "/pricing" }
     ]
+  },
+  {
+    slug: "best-free-elevenlabs-alternatives-october-2026-no-credit-card",
+    title: "Top Free ElevenLabs Alternatives in October 2026: Zero Credit Cards, Unlimited Audiobooks, and Studio Emotion",
+    metaTitle: "Best Free ElevenLabs Alternative (October 2026) | DIGI LABS",
+    description: "Searching for a real free alternative to ElevenLabs in October 2026? Learn how DIGI LABS gives creators Gemini 2.5 Flash emotional speech and unlimited Edge-TTS audiobooks for $0.",
+    cluster: "Voice AI",
+    date: "2026-10-12",
+    readingTime: "9 min read",
+    body: [
+      {
+        heading: "The October 2026 Voice AI search surge: Why creators are abandoning paid TTS subscriptions",
+        paragraphs: [
+          "In October 2026, search queries for 'free ElevenLabs alternative without credit card', 'unlimited AI voice generator free', and 'Gemini flash voice download' hit an all-time high. The reason is simple: creators, video editors, and agency owners are tired of aggressive paywalls and punitive character caps.",
+          "Most commercial TTS tools advertise a 'free plan', but the moment you paste a 500-word YouTube script, you hit an instant character ceiling and are forced to enter credit card details for a $22 to $99 per month recurring subscription. When you multiply that across an entire year, creators are paying upwards of $1,000 just for voice narration.",
+          "DIGI LABS represents the turning point. Built by DIGIFORMATION LTD and released as an open sovereign desktop application, DIGI LABS gives content creators complete freedom from SaaS bills by combining Google's latest Gemini 2.5 Flash Preview speech engine with Microsoft Edge-TTS."
+        ],
+        bullets: [
+          "Zero Credit Card Required: You never enter payment credentials or sign up for recurring subscriptions.",
+          "Dual-Engine Flexibility: Studio Voice for hyper-realistic human emotion and Free Voice for unlimited long-form narrations.",
+          "Multi-Functional Workstation: Generates voice, extracts cinematic video prompts from YouTube URLs, and turns tutorials into structured courses.",
+          "100% Sovereign Privacy: Everything runs locally on your Windows 10/11 PC with no cloud audio logging."
+        ]
+      },
+      {
+        heading: "Why DIGI LABS is vastly superior to browser-based TTS tools",
+        paragraphs: [
+          "Most free voice tools on the web are nothing more than freemium traps hosted inside clunky web browsers. They throttle your audio bitrate, watermark your output, or artificially delay render times to force you into paid tiers.",
+          "DIGI LABS is fundamentally different because it is a native Windows desktop workstation. Packaged as a 253MB installer, it harnesses your PC's hardware, integrates directly with local FFmpeg audio codecs, and lets you queue multiple audio generation jobs effortlessly."
+        ],
+        table: {
+          headers: ["Feature Comparison", "DIGI LABS Workstation", "ElevenLabs Starter/Creator", "Typical Online Freemium TTS"],
+          rows: [
+            ["Monthly Cost", "$0.00 Free Forever", "$22 - $99 / Month", "Free for 300 words, then $19/mo"],
+            ["Credit Card Required", "Never (Zero Billing)", "Mandatory", "Mandatory after trial"],
+            ["Character Limit", "Unlimited (Edge-TTS) + 9-Key Gemini", "100k - 500k characters", "Strict 2,000 chars / month"],
+            ["Video-to-Prompt AI", "Built-in (Sora / Runway / Midjourney)", "Not Available", "Not Available"],
+            ["Course & Notes Extraction", "Built-in (Automated Syllabi)", "Not Available", "Not Available"],
+            ["Multi-Key Auto-Rotation", "Built-in 9-Key Round Robin", "Single API Pool", "None"],
+            ["Offline Desktop Binary", "Yes (Windows 10/11 Native)", "No (Cloud Browser Only)", "No (Browser Only)"]
+          ]
+        }
+      },
+      {
+        heading: "Why DIGI LABS is a multi-purpose powerhouse, not just a simple TTS app",
+        paragraphs: [
+          "What makes DIGI LABS truly indispensable for modern creators is that it does not stop at voice synthesis. In 2026, video creators and digital entrepreneurs do not just need an audio file — they need an entire multimedia production workflow.",
+          "DIGI LABS solves three massive production bottlenecks in a single unified dashboard:",
+          "1. Voice Synthesis & Audio Mastering: Generate emotional voices with realistic breathing pauses, pitch control, and instant WAV/MP3 export with normalized decibel levels.",
+          "2. Video-to-Prompt Engineering: Paste any viral YouTube, TikTok, or MP4 link to reverse-engineer its cinematic visual style, camera angle, lighting setup, and generate ready-to-use prompts for video generators like Sora, Runway Gen-3, Kling, and Midjourney.",
+          "3. Video-to-Course Extraction: Turn long-form lectures, masterclasses, and interviews into modular course syllabi, executive summaries, and actionable study notes ready for digital product publishing."
+        ]
+      },
+      {
+        heading: "Simple 3-step setup guide: How to get your free Gemini API key",
+        paragraphs: [
+          "Setting up DIGI LABS takes less than 60 seconds and requires zero programming knowledge. Here is the exact step-by-step process:",
+          "Step 1: Install the DIGI LABS application on your Windows 10 or 11 PC using the official installer (DIGI-LABS-Setup-1.0.0.exe).",
+          "Step 2: Visit Google AI Studio at aistudio.google.com/app/apikey (or click the Get API Key button directly on our website) and sign in with any standard Google account. Click Create API Key to generate your free key.",
+          "Step 3: Open DIGI LABS on your PC, navigate to the Settings section, paste your Gemini API key into the designated field, and click Save. You are now ready to generate studio-quality audio and reverse-engineer videos immediately."
+        ]
+      },
+      {
+        heading: "Important Licensing Notice: Personal and Agency use permitted, Strict No-Resale Rule",
+        paragraphs: [
+          "DIGI LABS is provided completely free of charge by DIGIFORMATION LTD to empower creators worldwide. However, it is published under strict source-available terms:",
+          "You are 100% permitted to use DIGI LABS on your local computers to create commercial voiceovers, YouTube videos, client projects, and audiobooks. You keep all the profit from your work.",
+          "You are strictly prohibited from reselling the DIGI LABS software, re-packaging its code, white-labeling it, or charging subscription fees as a cloud SaaS. Respect the open-source license so the creator community continues to benefit."
+        ]
+      }
+    ],
+    links: [
+      { label: "Download DIGI LABS (Windows Setup .exe)", to: "/open-source/digi-labs" },
+      { label: "Get Free Gemini API Key (Google AI Studio)", to: "https://aistudio.google.com/app/apikey" },
+      { label: "DIGI LABS GitHub Repository", to: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-" },
+      { label: "Explore DIGI BIZ OS Lifetime License", to: "/pricing" }
+    ]
+  },
+  {
+    slug: "faceless-youtube-channel-automation-complete-voice-and-prompt-stack-2026",
+    title: "The Complete Faceless YouTube Automation Blueprint (October 2026): Realistic Voice, Video-to-Prompt, and Zero Monthly SaaS Fees",
+    metaTitle: "Faceless YouTube Automation Stack 2026: Voice & Prompts | DIGI LABS",
+    description: "Building a faceless YouTube or TikTok channel in late 2026? Discover how creators use DIGI LABS to generate viral human voiceovers, reverse-engineer cinematic prompts, and automate video production with zero monthly fees.",
+    cluster: "Content Automation",
+    date: "2026-10-12",
+    readingTime: "10 min read",
+    body: [
+      {
+        heading: "The faceless YouTube boom in late 2026: Why high production value wins",
+        paragraphs: [
+          "Faceless YouTube channels, documentary channels, and TikTok narrative accounts have become one of the most lucrative digital business models of 2026. Channels producing Vox-style visual explainers, historical breakdowns, and business case studies are pulling millions of views and lucrative AdSense payouts.",
+          "However, the barrier to entry has shifted dramatically. In earlier years, low-quality robotic voices and generic stock footage could scrape by. Today, YouTube's algorithms and viewers immediately bounce from robotic monotone narrations. To build a sustainable, monetized channel, you need two critical assets: a voice that sounds authentically human, and cinematic, highly styled visual B-roll.",
+          "Historically, achieving this required paying $50/month for voice tools, $60/month for prompt engineering assistants, and $30/month for transcription services. DIGI LABS replaces that entire fragmented stack inside a single sovereign Windows app for zero dollars."
+        ]
+      },
+      {
+        heading: "How Gemini 2.5 Flash Studio Voice passes YouTube monetization review",
+        paragraphs: [
+          "A major fear among faceless channel operators is demonetization under YouTube's 'repetitive or low-effort content' policies. YouTube's reviewer guidelines penalize synthetic voices that lack natural phrasing, breathing, and emotional inflection.",
+          "DIGI LABS addresses this directly with its Gemini 2.5 Flash Studio Voice engine. Unlike legacy TTS models that read text linearly, Gemini 2.5 Flash understands narrative context. It automatically introduces subtle micro-pauses at commas, lowers its pitch during somber sentences, and elevates cadence during moments of high excitement.",
+          "The result is audio that sounds indistinguishable from a seasoned documentary voice actor in a sound booth, ensuring your channel passes human monetization reviews with flying colors."
+        ]
+      },
+      {
+        heading: "The secret growth weapon: Video-to-Prompt reverse engineering",
+        paragraphs: [
+          "Generating consistent visual B-roll using AI video tools like Sora, Runway Gen-3, Kling, or Midjourney is notoriously difficult. Creators often waste hours guessing prompt syntax, lighting terms, and camera movements.",
+          "DIGI LABS features an integrated Video-to-Prompt engine that changes the game:",
+          "1. Paste a link to any viral YouTube video, documentary excerpt, or cinema trailer.",
+          "2. DIGI LABS analyzes the video's composition, color grading, focal length, motion dynamics, and art style.",
+          "3. It generates optimized, production-ready prompts specifically formatted for modern text-to-image and text-to-video AI generators.",
+          "Instead of guessing, you replicate the visual excellence of top-performing channels while maintaining your own unique narrative."
+        ]
+      },
+      {
+        heading: "Multilingual scaling: Capture massive audiences in English, Urdu, Hindi, and Arabic",
+        paragraphs: [
+          "The biggest untapped opportunity in 2026 video creation is regional language audiences. Emerging markets in South Asia and the Middle East represent hundreds of millions of highly engaged viewers with skyrocketing mobile video consumption.",
+          "DIGI LABS comes equipped with built-in native support for Urdu, complete with a 1-Click RTL Nastaliq editor toggle, alongside flawless Hindi, Arabic, and international English accents. You can take a successful English documentary script, translate it, and produce localized voiceovers in minutes, multiplying your channel reach across multiple international channels."
+        ]
+      },
+      {
+        heading: "The complete 4-step production workflow with DIGI LABS",
+        paragraphs: [
+          "Here is how high-output creator studios produce daily videos using DIGI LABS:",
+          "Step 1: Write your script and paste it into DIGI LABS Studio Voice. Select your desired voice tone and generate crystal-clear 48kHz audio in seconds.",
+          "Step 2: Paste reference videos into the Video-to-Prompt tab to extract high-yield prompts for your video generator.",
+          "Step 3: Import your generated voice track and AI visual clips into your editing software (or open-source suites like Shotcut and Kdenlive).",
+          "Step 4: Publish your finished video to YouTube, Shorts, and TikTok with zero licensing royalties or copyright strikes."
+        ]
+      }
+    ],
+    links: [
+      { label: "Download DIGI LABS Desktop Workstation", to: "/open-source/digi-labs" },
+      { label: "Get Free Gemini API Key", to: "https://aistudio.google.com/app/apikey" },
+      { label: "Explore Open Source Video Tools", to: "/open-source" },
+      { label: "DIGI BIZ OS Business Operating System", to: "/download" }
+    ]
+  },
+  {
+    slug: "how-to-bypass-gemini-api-rate-limits-9-key-rotation-guide",
+    title: "How to Never Hit Gemini API Daily Limits: The 9-Key Auto-Rotation Engine for Heavy AI Video & Voice Creators",
+    metaTitle: "Bypass Gemini API Rate Limits: 9-Key Auto-Rotation | DIGI LABS",
+    description: "Frustrated by Google AI Studio daily request caps when generating voice or video prompts? Here is how DIGI LABS uses intelligent 9-key round-robin rotation to keep your AI generations running 24/7 without paying Google a single cent.",
+    cluster: "AI Infrastructure",
+    date: "2026-10-12",
+    readingTime: "8 min read",
+    body: [
+      {
+        heading: "The problem with free AI tiers: The dreaded 429 Resource Exhausted error",
+        paragraphs: [
+          "Google AI Studio's Gemini 2.5 Flash model is arguably the most capable, cost-effective multimodal AI architecture available in 2026. For individual creators, Google provides generous free tier quotas without requiring a credit card.",
+          "However, when you scale your production — batch-generating voiceovers for a 20-episode video series, extracting prompt packs from dozens of reference videos, or transcribing entire webinars — you inevitably encounter the dreaded HTTP 429 status code: 'RESOURCE_EXHAUSTED: Rate limit exceeded for requests per day'.",
+          "On standard web interfaces, this error halts your workflow entirely, forcing you to wait 24 hours or pull out a credit card to pay metered cloud charges. DIGI LABS solves this problem once and for all with its built-in 9-Key Auto-Rotation Engine."
+        ]
+      },
+      {
+        heading: "How DIGI LABS 9-key round robin balancing works under the hood",
+        paragraphs: [
+          "Rather than forcing you to rely on a single API key, DIGI LABS allows you to store up to 9 distinct Gemini API keys in your local settings (GEMINI_API_KEY_1 through GEMINI_API_KEY_9).",
+          "When you initiate a generation batch, DIGI LABS monitors the HTTP response headers in real time. If Key #1 approaches its rate limit or triggers a 429 warning, the application's internal dispatcher automatically fails over to Key #2 in less than 50 milliseconds.",
+          "This round-robin switching happens completely behind the scenes. Your audio synthesis job does not crash, your video prompt analysis does not drop frames, and your queue continues rendering seamlessly until all tasks are finished."
+        ],
+        bullets: [
+          "Zero Downtime: Seamless failover without restarting your app or re-entering text.",
+          "100% Free Legitimate Access: All 9 keys are generated legitimately under separate Google AI Studio projects.",
+          "No Paid Tier Required: Multiplies your daily free generation capacity by up to 900%.",
+          "Secure Local Storage: All keys are encrypted and stored strictly on your local PC, never uploaded to third-party proxy servers."
+        ]
+      },
+      {
+        heading: "How to generate 9 free Gemini API keys in under 3 minutes",
+        paragraphs: [
+          "Creating multiple free API keys in Google AI Studio is simple, legitimate, and takes just a few clicks:",
+          "1. Go to Google AI Studio at aistudio.google.com/app/apikey and sign in with your Google account.",
+          "2. Click the '+ Create API key' button in the top right corner.",
+          "3. Select 'Create key in new project' and give the project a quick label (e.g., 'Project Alpha'). Copy the generated string.",
+          "4. Repeat this process by creating new projects inside Google AI Studio (e.g., 'Project Beta', 'Project Gamma'). Each project receives its own distinct free tier quota allocation.",
+          "5. Open DIGI LABS Settings on your desktop, paste each key into slots 1 through 9, and click Save. Your multi-key redundancy system is immediately active!"
+        ]
+      },
+      {
+        heading: "Agency-grade scalability without enterprise cloud bills",
+        paragraphs: [
+          "For digital marketing agencies and creative studios managing dozens of client deliverables, API redundancy is the difference between profit and overhead.",
+          "By utilizing DIGI LABS with 9-key auto-rotation alongside unlimited Edge-TTS, an agency can produce hundreds of commercial audio assets every week without spending thousands of dollars on enterprise cloud accounts. Combine this with DIGI BIZ OS for automated invoicing and CRM tracking, and you have an unbeatable sovereign agency cockpit."
+        ]
+      }
+    ],
+    links: [
+      { label: "Download DIGI LABS (Windows Setup .exe)", to: "/open-source/digi-labs" },
+      { label: "Get Free Gemini API Key at Google AI Studio", to: "https://aistudio.google.com/app/apikey" },
+      { label: "View DIGI BIZ OS Pricing (£29 Lifetime)", to: "/pricing" },
+      { label: "Explore DIGI LEAD HUNTER", to: "/open-source/digi-lead-hunter" }
+    ]
+  },
+  {
+    slug: "turn-youtube-videos-into-comprehensive-courses-and-prompts-guide",
+    title: "How to Turn Any YouTube Video into AI Prompts and Structured Course Syllabi: The Modern Creator & Educator Playbook",
+    metaTitle: "Turn YouTube Videos into Courses & Prompts | DIGI LABS Guide",
+    description: "Stop taking manual notes or guessing video AI prompts. Discover how DIGI LABS reverse-engineers any YouTube URL into cinematic Midjourney/Sora prompts and multi-module course curriculum in seconds.",
+    cluster: "Content Strategy",
+    date: "2026-10-12",
+    readingTime: "9 min read",
+    body: [
+      {
+        heading: "The content repurposing revolution: From passive viewing to automated asset extraction",
+        paragraphs: [
+          "The internet is overflowing with extraordinary video content. Every day, leading thinkers, technical founders, and master filmmakers publish hours of high-value tutorials, conference keynotes, and documentary case studies on YouTube.",
+          "Yet, the majority of people consume this information passively. For creators, educators, and agency strategists, extracting the core value from a 90-minute technical lecture or an aesthetically stunning travel film has historically taken hours of tedious manual scrubbing, note-taking, and prompt drafting.",
+          "DIGI LABS revolutionizes this workflow through its dual Video-to-Prompt and Video-to-Course intelligence engine, transforming any public video link into actionable creative and educational assets in seconds."
+        ]
+      },
+      {
+        heading: "How the Video-to-Prompt engine deconstructs cinematography for Sora and Midjourney",
+        paragraphs: [
+          "When you see a viral video with breathtaking cinematography, how do you recreate that aesthetic in modern AI generators? Trying to guess whether the creator used 'anamorphic lens 35mm f/1.8 golden hour chiaroscuro' or 'kodachrome 64 grain retro-futuristic' is slow and unreliable.",
+          "With DIGI LABS, you simply paste the video's URL into the Prompt Extraction tab. The system analyzes key video frames, breaking down:",
+          "• Camera motion: Panning, dolly zooms, orbital tilts, and handheld tracking dynamics.",
+          "• Lighting & Color Palette: Directional key lighting, rim highlights, color grading lut profiles, and volumetric haze.",
+          "• Subject & Texture: Detailed descriptions of actors, architectural backdrops, materials, and atmospheric dust.",
+          "The engine outputs clean, ready-to-paste prompts tailored specifically for Midjourney, FLUX, Sora, Runway Gen-3, and Kling, letting you produce matching cinematic assets effortlessly."
+        ]
+      },
+      {
+        heading: "Transforming raw tutorials into monetizable courses and executive study guides",
+        paragraphs: [
+          "Beyond visual prompts, DIGI LABS is an educator's dream tool. By ingesting video audio transcripts and visual cues, it automatically synthesizes complex content into comprehensive, beautifully formatted learning packs:",
+          "1. Modular Course Syllabi: Breaks long videos into logical Chapter Modules with clear learning objectives and prerequisites.",
+          "2. Executive Bullet Summaries: Condenses core technical insights into high-impact takeaways that respect the reader's time.",
+          "3. Assessment Quizzes & Action Steps: Generates multiple-choice comprehension questions and real-world implementation exercises for students.",
+          "Digital creators use this capability to turn free YouTube interviews and public domain lectures into premium Notion course templates, agency training manuals, and digital downloads that sell on Gumroad or Skool."
+        ]
+      },
+      {
+        heading: "Close the loop: Voice narration for your new course in the same app",
+        paragraphs: [
+          "The true genius of DIGI LABS is that you never leave the application. Once you extract a structured course or video script, you can immediately jump to the Studio Voice or Free Voice tab to narrate the lesson slides or module summaries.",
+          "With dual-engine TTS (Gemini 2.5 Flash for emotional masterclass intros and Edge-TTS for multi-hour deep-dive lessons), you can produce, voice, and package an entire online training curriculum in a single afternoon without spending a single dollar on software subscriptions."
+        ]
+      }
+    ],
+    links: [
+      { label: "Download DIGI LABS Desktop Workstation", to: "/open-source/digi-labs" },
+      { label: "Get Free Gemini API Key (3-Step Setup)", to: "https://aistudio.google.com/app/apikey" },
+      { label: "Explore Open Source Suite", to: "/open-source" },
+      { label: "DIGI BIZ OS £29 Lifetime License", to: "/pricing" }
+    ]
+  },
+  {
+    slug: "how-to-produce-unlimited-audiobooks-free-edge-tts-and-gemini-guide",
+    title: "How to Produce Full-Length Audiobooks for Free in 2026: The Complete Author & Indie Publisher Guide",
+    metaTitle: "Produce Unlimited Audiobooks for Free: Edge-TTS & Gemini | DIGI LABS",
+    description: "Traditional audiobook narration costs $2,000+ per title and SaaS platforms enforce strict character caps. Learn how authors use DIGI LABS' dual-engine Edge-TTS and Gemini 2.5 Flash to publish 80,000-word audiobooks for zero dollars.",
+    cluster: "Audio Engineering",
+    date: "2026-10-12",
+    readingTime: "10 min read",
+    body: [
+      {
+        heading: "The economics of indie publishing in late 2026: The audiobook imperative",
+        paragraphs: [
+          "Audiobooks are no longer an optional format for authors and digital publishers — they represent over 40% of digital book consumption across Audible, Apple Books, Spotify, and Findaway Voices. Readers who do not have time to sit down with a paperback listen during commutes, workouts, and work hours.",
+          "Yet for independent authors and self-publishers, the production costs of traditional audiobooks are brutal. Hiring a professional voice narrator through ACX or voice agencies typically costs between $150 and $350 per finished hour, pushing the budget of a standard 80,000-word book well over $2,000.",
+          "Even turning to cloud AI voice platforms like ElevenLabs quickly hits prohibitive paywalls. An 80,000-word novel contains roughly 450,000 characters. On commercial subscription plans, rendering that single book consumes over 4 months worth of character credits or incurs severe overage penalties."
+        ]
+      },
+      {
+        heading: "How DIGI LABS makes 100% free, unlimited audiobook narration possible",
+        paragraphs: [
+          "DIGI LABS eliminates this cost barrier by providing a specialized dual-engine architecture designed specifically for long-form literature:",
+          "1. Free Voice Engine (Microsoft Edge-TTS): 100% Unlimited character generation with zero API keys required. You can paste 50,000 words, 100,000 words, or an entire trilogy without ever seeing a credit warning, rate limit, or billing invoice.",
+          "2. Studio Voice Engine (Gemini 2.5 Flash): Perfect for character dialogue, dramatic prologues, and emotional chapter climaxes where realistic human breath, emotional weight, and subtle intonation make the story come alive.",
+          "By orchestrating both engines on your local PC, you produce complete, broadcast-ready audiobooks for $0 out-of-pocket expenses."
+        ]
+      },
+      {
+        heading: "Audio mastering and batch chapter exporting directly inside DIGI LABS",
+        paragraphs: [
+          "Audiobook publishing platforms like ACX and Findaway enforce rigorous technical audio standards: consistent RMS volume levels (-23dB to -18dB RMS), peak levels not exceeding -3dB, and clean 44.1kHz or 48kHz audio files separated by individual chapter tracks.",
+          "DIGI LABS simplifies compliance through automated post-processing:",
+          "• Chapter-by-Chapter Batching: Paste your manuscript chapter by chapter into the queue for organized file naming.",
+          "• Audio Normalization & Mastering: Automatically balances decibel levels to ensure clear, fatigue-free listening across smartphone speakers, earbuds, and car audio systems.",
+          "• Direct WAV and MP3 Output: High-fidelity export ready for immediate upload to distributor distribution portals."
+        ]
+      },
+      {
+        heading: "Strict Licensing Terms: Authors retain 100% royalty ownership, No Resale of Software",
+        paragraphs: [
+          "Authors often ask about commercial royalties: When you produce an audiobook using DIGI LABS, you retain 100% copyright, commercial rights, and royalty earnings from the audio you create. DIGIFORMATION LTD claims 0% royalties on your books.",
+          "The only restriction is that you cannot resell DIGI LABS itself, sell cracked or modified installers, or re-host the software as a paid cloud subscription service. Download the free Windows installer (DIGI-LABS-Setup-1.0.0.exe), run it on your PC, and build your publishing empire with total creative sovereignty."
+        ]
+      }
+    ],
+    links: [
+      { label: "Download DIGI LABS Free Workstation", to: "/open-source/digi-labs" },
+      { label: "Get Free Gemini API Key (3 Simple Steps)", to: "https://aistudio.google.com/app/apikey" },
+      { label: "Official GitHub Repository", to: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-" },
+      { label: "Explore DIGI BIZ OS Lifetime License", to: "/pricing" }
+    ]
   }
 ];
 
