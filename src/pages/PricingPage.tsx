@@ -1,8 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import * as Accordion from "@radix-ui/react-accordion";
-import { Plus, Check } from "lucide-react";
+import { Plus, Check, Gift } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import EyebrowLabel from "@/components/EyebrowLabel";
 import GlassCard from "@/components/GlassCard";
@@ -103,6 +103,7 @@ const TIERS: {
 ];
 
 export default function PricingPage() {
+  const [trialModalOpen, setTrialModalOpen] = useState(false);
   const { code, setCurrency } = useCurrency();
   const pricingFn = useServerFn(getPricing);
   const pricing = useQuery({ queryKey: ["pricing"], queryFn: () => pricingFn(), staleTime: 600000 });
@@ -127,23 +128,71 @@ export default function PricingPage() {
         eyebrow="Pricing"
         title="DIGI BIZ OS Pricing —"
         gradientTitle="Lifetime Licences"
-        subtitle={`Three clear packages — ${formatPrice(plans.lifetime.gbp, code, plans.lifetime.pkr)} lifetime access, ${formatPrice(plans.custom_build.gbp, code, plans.custom_build.pkr)} done-for-you software setup with 5 custom business workflows, or ${formatPrice(plans.source_code.gbp, code, plans.source_code.pkr)} full source code.`}
+        subtitle={`Four clear packages — 48-hour free trial, ${formatPrice(plans.lifetime.gbp, code, plans.lifetime.pkr)} lifetime access, ${formatPrice(plans.custom_build.gbp, code, plans.custom_build.pkr)} done-for-you software setup with 5 custom business workflows, or ${formatPrice(plans.source_code.gbp, code, plans.source_code.pkr)} full source code.`}
         height="min-h-[50vh]"
       />
 
-      <SectionWrapper id="free-trial-section">
-        <TrialSection />
-      </SectionWrapper>
-
       <SectionWrapper id="plans">
-        <div className="mx-auto max-w-[1200px]">
+        <div className="mx-auto max-w-[1400px]">
           <div className="reveal-item flex flex-wrap items-center justify-center gap-3">
             <MonoBadge color="var(--success)">One-Time Payment</MonoBadge>
             <MonoBadge color="var(--text-secondary)">No Monthly Software Fees</MonoBadge>
             <CurrencySelector />
           </div>
 
-          <div className="mt-12 grid items-start gap-6 lg:grid-cols-3">
+          <div className="mt-12 grid items-stretch gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {/* ── PACKAGE 1: 48-HOUR FREE TRIAL ── */}
+            <GlassCard
+              className="reveal-item flex h-full flex-col p-8 border-[rgba(52,211,153,0.35)]"
+              glowColor="var(--success)"
+            >
+              <div className="flex items-center justify-between gap-3">
+                <EyebrowLabel text="48-Hour Free Trial" color="var(--success)" reveal={false} />
+                <MonoBadge color="var(--success)">Risk Free</MonoBadge>
+              </div>
+              <div className="mt-4 flex items-end gap-2">
+                <span className="font-display text-[44px] font-extrabold leading-none text-[var(--success)]">
+                  Free
+                </span>
+                <span className="pb-1 font-mono text-[13px] text-[var(--text-muted)]">
+                  / 48 Hours
+                </span>
+              </div>
+              <div className="mt-2 flex flex-wrap items-center gap-2 font-mono text-[12px] text-[var(--text-muted)]">
+                <span className="rounded-full border border-[rgba(52,211,153,0.35)] px-2 py-0.5 text-[10.5px] uppercase tracking-[0.12em] text-[var(--success)]">
+                  Zero Payment Required
+                </span>
+              </div>
+              <p className="mt-3 font-body text-[14px] leading-[1.7] text-[var(--text-secondary)]">
+                Full desktop access to test-drive all 12 local engines, voice AI assistant, and business automation workflows risk-free on your PC.
+              </p>
+              <FeatureList
+                items={[
+                  "48 Hours full desktop software access",
+                  "All 12 local AI engines included",
+                  "Voice AI & JARVIS navigation active",
+                  "Direct WhatsApp verification key",
+                  "Windows 10 & 11 native deployment",
+                  "No credit card or payment required",
+                ]}
+                color="var(--success)"
+              />
+              <div className="mt-auto pt-8">
+                <CyanButton
+                  size="lg"
+                  tone="52,211,153"
+                  className="w-full font-bold shadow-lg shadow-emerald-500/20"
+                  onClick={() => setTrialModalOpen(true)}
+                >
+                  <Gift size={16} className="mr-1.5 inline" /> Get Free Trial →
+                </CyanButton>
+              </div>
+              <div className="mt-4 text-center font-body text-[12.5px] text-[var(--text-muted)]">
+                Instant WhatsApp Connect · No Card
+              </div>
+            </GlassCard>
+
+            {/* ── PACKAGES 2, 3, 4: LIFETIME, SETUP, SOURCE CODE ── */}
             {TIERS.map((tier, i) => {
               const plan = PLANS[tier.id];
               const planPrices = plans[tier.id];
@@ -152,7 +201,7 @@ export default function PricingPage() {
               return (
                 <GlassCard
                   key={tier.id}
-                  className={`reveal-item delay-${i} p-8`}
+                  className={`reveal-item delay-${i + 1} flex h-full flex-col p-8`}
                   style={{ borderColor: tier.border }}
                   glowColor={tier.accent}
                 >
@@ -187,7 +236,7 @@ export default function PricingPage() {
                     {plan.blurb}
                   </p>
                   <FeatureList items={plan.includes} color={tier.accent} />
-                  <div className="mt-8">
+                  <div className="mt-auto pt-8">
                     <Link to="/checkout" search={{ plan: tier.id }} className="block">
                       <CyanButton size="lg" tone={tier.accentRgb} className="w-full">
                         {tier.cta} →
@@ -203,6 +252,8 @@ export default function PricingPage() {
           </div>
         </div>
       </SectionWrapper>
+
+      <TrialSection isOpen={trialModalOpen} onClose={() => setTrialModalOpen(false)} />
 
       <SourceCodeSection />
       <ComparisonMatrix />
