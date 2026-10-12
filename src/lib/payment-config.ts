@@ -194,29 +194,8 @@ export const PAYMENT_METHODS: PaymentMethod[] = [
     ],
   },
   {
-    id: "gbp",
-    label: "UK Bank (GBP)",
-    currency: "GBP",
-    region: "United Kingdom",
-    fields: [
-      { label: "Account Title", value: ACCOUNT_TITLE },
-      { label: "Bank", value: "Clear Bank" },
-      { label: "Account Number", value: "12863656", copy: true },
-      { label: "Sort Code", value: "04-28-12", copy: true },
-      { label: "IBAN", value: "GB20CLRB04281286365680", copy: true },
-      { label: "SWIFT / BIC", value: "CLRBGB22XXX", copy: true },
-    ],
-    steps: [
-      "Open your UK banking app",
-      "Add the Clear Bank details above as a payee",
-      "Send the exact GBP amount shown",
-      "Use your order reference as the payment reference",
-      "Submit this form, then confirm on WhatsApp",
-    ],
-  },
-  {
     id: "usd",
-    label: "US Bank (USD)",
+    label: "USA Bank (USD)",
     currency: "USD",
     region: "United States / International",
     fields: [

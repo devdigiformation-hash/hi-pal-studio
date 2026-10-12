@@ -61,7 +61,7 @@ export default function CheckoutPage() {
 
   useEffect(() => {
     if (pricing.data?.region && pricing.data.region !== "pk") {
-      setMethodId("gbp");
+      setMethodId("usd");
     } else if (pricing.data?.region === "pk") {
       setMethodId("jazzcash");
     }

@@ -23,7 +23,7 @@ import TrialSection from "@/components/home/TrialSection";
 const FAQS = [
   {
     q: "What payment methods do you accept?",
-    a: "JazzCash, EasyPaisa, UBL bank transfer, plus GBP (UK) and USD bank accounts for international buyers. Pick a method at checkout, send the exact amount and submit your transaction reference.",
+    a: "JazzCash, EasyPaisa, UBL bank transfer, and USA Bank (USD) transfer for international buyers. Pick a method at checkout, send the exact amount and submit your transaction reference.",
   },
   {
     q: "Is this really a one-time payment?",
@@ -195,7 +195,7 @@ export default function PricingPage() {
                     </Link>
                   </div>
                   <div className="mt-4 text-center font-body text-[12.5px] text-[var(--text-muted)]">
-                    JazzCash · EasyPaisa · UBL · GBP · USD
+                    JazzCash · EasyPaisa · UBL · USA Banks (USD)
                   </div>
                 </GlassCard>
               );
