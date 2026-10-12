@@ -203,4 +203,61 @@ export function webPageLd({ title, description, path }: { title: string; descrip
   };
 }
 
+export function howToLd(opts: {
+  name: string;
+  description: string;
+  steps: { name: string; text: string; url?: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: opts.name,
+    description: opts.description,
+    step: opts.steps.map((s, idx) => ({
+      "@type": "HowToStep",
+      position: idx + 1,
+      name: s.name,
+      text: s.text,
+      ...(s.url ? { url: s.url.startsWith("http") ? s.url : abs(s.url) } : {}),
+    })),
+  };
+}
+
+export function digiLabsSoftwareLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": `${SITE_URL}/open-source/digi-labs#software`,
+    name: "DIGI LABS",
+    alternateName: ["DIGI LABS TTS", "DIGI-LABS", "DIGI LABS Voice Studio"],
+    applicationCategory: "MultimediaApplication",
+    applicationSubCategory: "Text-to-Speech & Video AI Studio",
+    operatingSystem: "Windows 10 (64-bit), Windows 11 (64-bit)",
+    url: `${SITE_URL}/open-source/digi-labs`,
+    downloadUrl: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe",
+    description: "Free ElevenLabs alternative powered by Gemini 2.5 Flash emotional voice and Microsoft Edge-TTS with Video-to-Prompt and Course extraction.",
+    softwareVersion: "1.0.0",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      priceValidUntil: "2027-12-31",
+    },
+    author: {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: "Digiformation Ltd",
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: "Digiformation Ltd",
+      url: SITE_URL,
+    },
+    license: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-#readme",
+  };
+}
+
 
