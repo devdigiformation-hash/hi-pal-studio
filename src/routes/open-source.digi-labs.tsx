@@ -25,6 +25,7 @@ import {
   MessageSquare,
   Phone,
   Building2,
+  Key,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
@@ -221,6 +222,16 @@ function DigiLabsSubpage() {
                   </CyanButton>
                 </button>
                 <a
+                  href="https://aistudio.google.com/app/apikey"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-500/10 px-5 py-2.5 font-display text-sm font-semibold text-amber-300 shadow-[0_0_20px_rgba(245,158,11,0.2)] transition hover:border-amber-400 hover:bg-amber-500/20 hover:text-white"
+                >
+                  <Key size={15} className="text-amber-400" />
+                  <span>Get Free Gemini API Key</span>
+                  <ExternalLink size={13} className="text-amber-400/70" />
+                </a>
+                <a
                   href={REPO_URL}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -275,6 +286,140 @@ function DigiLabsSubpage() {
                 </GlassCard>
               );
             })}
+          </div>
+        </div>
+
+        {/* ── 3-STEP GEMINI API KEY SETUP GUIDE ─────────────────────── */}
+        <div className="mt-16 rounded-3xl border border-amber-500/30 bg-gradient-to-b from-amber-950/20 via-black/50 to-black/80 p-6 md:p-10 shadow-[0_0_50px_rgba(245,158,11,0.08)]">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 border-b border-amber-500/20 pb-6">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-500/10 px-3.5 py-1 text-xs font-semibold text-amber-300">
+                <Key size={13} className="text-amber-400" />
+                <span>100% FREE AI STUDIO CREDENTIALS • 60-SECOND SETUP</span>
+              </div>
+              <h2 className="mt-3 font-display text-2xl font-extrabold text-white md:text-3xl">
+                How to Get Your Free Gemini API Key in 3 Simple Steps
+              </h2>
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--text-secondary)]">
+                Gemini 2.5 Flash powers studio-quality human voice in DIGI LABS. Google provides 100% free API access with zero subscription fees, no credit card required, and generous daily generation limits.
+              </p>
+            </div>
+            <a
+              href="https://aistudio.google.com/app/apikey"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-amber-400 bg-amber-500 px-6 py-3.5 font-display text-sm font-bold text-black shadow-[0_0_30px_rgba(245,158,11,0.35)] transition hover:bg-amber-400 hover:shadow-[0_0_40px_rgba(245,158,11,0.5)] shrink-0"
+            >
+              <Key size={16} />
+              <span>Get Free Gemini API Key</span>
+              <ExternalLink size={14} />
+            </a>
+          </div>
+
+          {/* Steps Grid */}
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {/* Step 1 */}
+            <div className="relative rounded-2xl border border-amber-500/20 bg-black/60 p-6 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500/10 border border-amber-500/30 font-mono text-base font-bold text-amber-400">
+                    01
+                  </span>
+                  <span className="font-mono text-[11px] text-amber-400/70 uppercase tracking-wider">Step 1</span>
+                </div>
+                <h3 className="mt-4 font-display text-lg font-bold text-white">Open Google AI Studio</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
+                  Click the direct button or visit <code className="text-amber-300 font-mono text-xs">aistudio.google.com/app/apikey</code> and sign in with any standard Google or Gmail account.
+                </p>
+                <div className="mt-4 rounded-lg border border-white/5 bg-white/[0.02] p-3 text-xs text-zinc-400">
+                  <span className="font-semibold text-emerald-400">✓ No card or billing needed</span> — Google AI Studio free tier is 100% free with zero payment requirements.
+                </div>
+              </div>
+              <div className="mt-6 pt-4 border-t border-white/5">
+                <a
+                  href="https://aistudio.google.com/app/apikey"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-400 hover:text-amber-300 transition"
+                >
+                  <span>Open aistudio.google.com</span>
+                  <ExternalLink size={12} />
+                </a>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="relative rounded-2xl border border-amber-500/20 bg-black/60 p-6 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500/10 border border-amber-500/30 font-mono text-base font-bold text-amber-400">
+                    02
+                  </span>
+                  <span className="font-mono text-[11px] text-amber-400/70 uppercase tracking-wider">Step 2</span>
+                </div>
+                <h3 className="mt-4 font-display text-lg font-bold text-white">Click "+ Create API key"</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
+                  Click the blue <strong className="text-white">"+ Create API key"</strong> button in the top right. Select <strong className="text-white">"Create key in new project"</strong>.
+                </p>
+                <div className="mt-4 rounded-lg border border-white/5 bg-white/[0.02] p-3 text-xs text-zinc-400">
+                  <span className="font-semibold text-cyan-400">Key format:</span> Starts with <code className="text-cyan-300 font-mono">AIzaSy...</code>. Click the Copy icon to copy your secret key string.
+                </div>
+              </div>
+              <div className="mt-6 pt-4 border-t border-white/5 flex items-center gap-1.5 text-xs text-zinc-400">
+                <CheckCircle2 size={13} className="text-emerald-400" />
+                <span>Generated in under 2 seconds</span>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="relative rounded-2xl border border-amber-500/20 bg-black/60 p-6 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500/10 border border-amber-500/30 font-mono text-base font-bold text-amber-400">
+                    03
+                  </span>
+                  <span className="font-mono text-[11px] text-amber-400/70 uppercase tracking-wider">Step 3</span>
+                </div>
+                <h3 className="mt-4 font-display text-lg font-bold text-white">Paste into DIGI LABS</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
+                  Launch DIGI LABS desktop, click <strong className="text-white">Settings (⚙️ Gear Icon)</strong>, paste your key into the <strong className="text-white">Gemini API Key</strong> box, and click <strong className="text-white">Save</strong>.
+                </p>
+                <div className="mt-4 rounded-lg border border-white/5 bg-white/[0.02] p-3 text-xs text-zinc-400">
+                  <span className="font-semibold text-emerald-400">✓ Instant activation:</span> Studio human voice is now active for unlimited video-to-prompts &amp; vocal generation!
+                </div>
+              </div>
+              <div className="mt-6 pt-4 border-t border-white/5 flex items-center gap-1.5 text-xs text-zinc-400">
+                <Sparkles size={13} className="text-pink-400" />
+                <span>Emotion &amp; breathing voice ready</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Pro Tip: Multi-Key Auto Rotation */}
+          <div className="mt-8 rounded-2xl border border-cyan-500/30 bg-gradient-to-r from-cyan-950/30 via-black/40 to-black/60 p-5 md:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="flex items-start gap-3.5">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 shrink-0">
+                <Zap size={20} />
+              </div>
+              <div>
+                <h4 className="font-display text-base font-bold text-white flex items-center gap-2">
+                  <span>Pro Secret: Multi-Key Auto Rotation (9 Key Slots)</span>
+                  <span className="rounded-full bg-cyan-500/20 border border-cyan-500/40 px-2 py-0.5 text-[10px] font-mono font-bold text-cyan-300">UNLIMITED QUOTA</span>
+                </h4>
+                <p className="mt-1 text-xs md:text-sm text-[var(--text-secondary)] leading-relaxed">
+                  Generate multiple free Gemini API keys across different Google accounts/projects and enter them into DIGI LABS (<code className="text-cyan-300 font-mono">GEMINI_API_KEY_1</code> ... <code className="text-cyan-300 font-mono">GEMINI_API_KEY_9</code>). When one key hits its daily request quota, DIGI LABS automatically rotates to the next key without failing your audio generations!
+                </p>
+              </div>
+            </div>
+            <a
+              href="https://aistudio.google.com/app/apikey"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2.5 font-mono text-xs font-bold text-cyan-300 hover:bg-cyan-500/20 hover:text-white transition shrink-0"
+            >
+              <span>Get Free Key</span>
+              <ExternalLink size={13} />
+            </a>
           </div>
         </div>
 
@@ -403,15 +548,26 @@ function DigiLabsSubpage() {
               DIGI LABS is 100% free and open-source for your personal and agency systems. Download the standalone Windows installer (.exe) or clone the repository directly from GitHub. Resale and paid cloud re-hosting are strictly prohibited.
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-[540px] mx-auto">
+            <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-[720px] mx-auto">
               <button
                 type="button"
                 onClick={() => openSubscribeModal(DOWNLOAD_URL, "DIGI LABS Setup (.exe 253MB)")}
-                className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-purple-400 bg-purple-500 px-7 py-3.5 sm:py-4 font-mono text-[14px] sm:text-[15px] font-bold text-white shadow-[0_0_30px_rgba(168,85,247,0.4)] transition-all hover:bg-purple-400 hover:shadow-[0_0_40px_rgba(168,85,247,0.6)] cursor-pointer"
+                className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-purple-400 bg-purple-500 px-6 py-3.5 sm:py-4 font-mono text-[14px] sm:text-[15px] font-bold text-white shadow-[0_0_30px_rgba(168,85,247,0.4)] transition-all hover:bg-purple-400 hover:shadow-[0_0_40px_rgba(168,85,247,0.6)] cursor-pointer"
               >
                 <Download size={18} className="shrink-0" />
                 <span>Download Windows Setup (.exe 253MB)</span>
               </button>
+
+              <a
+                href="https://aistudio.google.com/app/apikey"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-amber-400/50 bg-amber-500/10 px-5 py-3.5 sm:py-4 font-mono text-[13px] sm:text-[14px] font-bold text-amber-300 shadow-[0_0_25px_rgba(245,158,11,0.2)] transition hover:border-amber-400 hover:bg-amber-500/20 hover:text-white"
+              >
+                <Key size={17} className="text-amber-400" />
+                <span>Get Free Gemini API Key</span>
+                <ExternalLink size={13} className="opacity-70" />
+              </a>
 
               <a
                 href={REPO_URL}

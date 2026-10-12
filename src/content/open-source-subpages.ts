@@ -1131,6 +1131,10 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
         a: "DIGI LABS includes native English, Urdu (with an instant RTL Nastaliq editor toggle), Hindi, and Arabic voices, alongside dozens of international dialects with pitch, rate, and audio FX controls.",
       },
       {
+        q: "How do I get a free Gemini API key for DIGI LABS?",
+        a: "Getting a Gemini API key is 100% free with zero credit card or billing required. Simply visit Google AI Studio (aistudio.google.com/app/apikey), sign in with your regular Google account, click '+ Create API key', select 'Create key in new project', copy the key (starts with AIzaSy...), and paste it into DIGI LABS desktop Settings.",
+      },
+      {
         q: "How does the multi-key rotation system work?",
         a: "You can enter multiple free Gemini API keys in Settings. DIGI LABS automatically balances and rotates through up to 9 key slots. When one key reaches its daily rate limit, DIGI LABS seamlessly shifts to the next key without failing your audio generation.",
       },
