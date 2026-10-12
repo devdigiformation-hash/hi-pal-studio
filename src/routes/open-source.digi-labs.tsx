@@ -26,6 +26,7 @@ import {
   Phone,
   Building2,
   Key,
+  Settings,
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import OpenSourceHeroStage from "@/components/seo/OpenSourceHeroStage";
@@ -295,13 +296,13 @@ function DigiLabsSubpage() {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-500/10 px-3.5 py-1 text-xs font-semibold text-amber-300">
                 <Key size={13} className="text-amber-400" />
-                <span>100% FREE AI STUDIO CREDENTIALS • 60-SECOND SETUP</span>
+                <span>SUPER SIMPLE SETUP • 100% FREE • 60 SECONDS</span>
               </div>
               <h2 className="mt-3 font-display text-2xl font-extrabold text-white md:text-3xl">
-                How to Get Your Free Gemini API Key in 3 Simple Steps
+                Super Simple Setup: 3 Easy Steps
               </h2>
               <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--text-secondary)]">
-                Gemini 2.5 Flash powers studio-quality human voice in DIGI LABS. Google provides 100% free API access with zero subscription fees, no credit card required, and generous daily generation limits.
+                Install the app and go to the settings section. Press the <strong className="text-amber-300">Get API Key</strong> button, generate your free key, paste it, and start using DIGI LABS immediately!
               </p>
             </div>
             <a
@@ -311,12 +312,12 @@ function DigiLabsSubpage() {
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-amber-400 bg-amber-500 px-6 py-3.5 font-display text-sm font-bold text-black shadow-[0_0_30px_rgba(245,158,11,0.35)] transition hover:bg-amber-400 hover:shadow-[0_0_40px_rgba(245,158,11,0.5)] shrink-0"
             >
               <Key size={16} />
-              <span>Get Free Gemini API Key</span>
+              <span>Get API Key</span>
               <ExternalLink size={14} />
             </a>
           </div>
 
-          {/* Steps Grid */}
+          {/* Simple Steps Grid */}
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
             {/* Step 1 */}
             <div className="relative rounded-2xl border border-amber-500/20 bg-black/60 p-6 flex flex-col justify-between">
@@ -325,26 +326,18 @@ function DigiLabsSubpage() {
                   <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500/10 border border-amber-500/30 font-mono text-base font-bold text-amber-400">
                     01
                   </span>
-                  <span className="font-mono text-[11px] text-amber-400/70 uppercase tracking-wider">Step 1</span>
+                  <span className="font-mono text-[11px] text-amber-400/70 uppercase tracking-wider font-semibold">Step 1</span>
                 </div>
-                <h3 className="mt-4 font-display text-lg font-bold text-white">Open Google AI Studio</h3>
+                <h3 className="mt-4 font-display text-lg font-bold text-white">
+                  Install App &amp; Go to Settings
+                </h3>
                 <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-                  Click the direct button or visit <code className="text-amber-300 font-mono text-xs">aistudio.google.com/app/apikey</code> and sign in with any standard Google or Gmail account.
+                  Install the app and go to the settings section. Open DIGI LABS on your PC and click on the <strong className="text-white">Settings (⚙️)</strong> section in the top bar.
                 </p>
-                <div className="mt-4 rounded-lg border border-white/5 bg-white/[0.02] p-3 text-xs text-zinc-400">
-                  <span className="font-semibold text-emerald-400">✓ No card or billing needed</span> — Google AI Studio free tier is 100% free with zero payment requirements.
-                </div>
               </div>
-              <div className="mt-6 pt-4 border-t border-white/5">
-                <a
-                  href="https://aistudio.google.com/app/apikey"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-400 hover:text-amber-300 transition"
-                >
-                  <span>Open aistudio.google.com</span>
-                  <ExternalLink size={12} />
-                </a>
+              <div className="mt-6 pt-4 border-t border-white/5 flex items-center gap-2 text-xs font-mono text-amber-300">
+                <Settings size={14} className="text-amber-400 shrink-0" />
+                <span>Install App → Go to Settings</span>
               </div>
             </div>
 
@@ -355,19 +348,26 @@ function DigiLabsSubpage() {
                   <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500/10 border border-amber-500/30 font-mono text-base font-bold text-amber-400">
                     02
                   </span>
-                  <span className="font-mono text-[11px] text-amber-400/70 uppercase tracking-wider">Step 2</span>
+                  <span className="font-mono text-[11px] text-amber-400/70 uppercase tracking-wider font-semibold">Step 2</span>
                 </div>
-                <h3 className="mt-4 font-display text-lg font-bold text-white">Click "+ Create API key"</h3>
+                <h3 className="mt-4 font-display text-lg font-bold text-white">
+                  Press 'Get API Key' &amp; Generate Key
+                </h3>
                 <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-                  Click the blue <strong className="text-white">"+ Create API key"</strong> button in the top right. Select <strong className="text-white">"Create key in new project"</strong>.
+                  Press the <strong className="text-white">Get API Key</strong> button and generate your free API Key on Google AI Studio in 1 click (no credit card required).
                 </p>
-                <div className="mt-4 rounded-lg border border-white/5 bg-white/[0.02] p-3 text-xs text-zinc-400">
-                  <span className="font-semibold text-cyan-400">Key format:</span> Starts with <code className="text-cyan-300 font-mono">AIzaSy...</code>. Click the Copy icon to copy your secret key string.
-                </div>
               </div>
-              <div className="mt-6 pt-4 border-t border-white/5 flex items-center gap-1.5 text-xs text-zinc-400">
-                <CheckCircle2 size={13} className="text-emerald-400" />
-                <span>Generated in under 2 seconds</span>
+              <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
+                <a
+                  href="https://aistudio.google.com/app/apikey"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-400 hover:text-amber-300 transition"
+                >
+                  <Key size={13} />
+                  <span>Press Get API Key Button ↗</span>
+                </a>
+                <span className="text-[11px] font-mono text-emerald-400">100% Free</span>
               </div>
             </div>
 
@@ -378,19 +378,18 @@ function DigiLabsSubpage() {
                   <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500/10 border border-amber-500/30 font-mono text-base font-bold text-amber-400">
                     03
                   </span>
-                  <span className="font-mono text-[11px] text-amber-400/70 uppercase tracking-wider">Step 3</span>
+                  <span className="font-mono text-[11px] text-amber-400/70 uppercase tracking-wider font-semibold">Step 3</span>
                 </div>
-                <h3 className="mt-4 font-display text-lg font-bold text-white">Paste into DIGI LABS</h3>
+                <h3 className="mt-4 font-display text-lg font-bold text-white">
+                  Paste Key &amp; Start Using!
+                </h3>
                 <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-                  Launch DIGI LABS desktop, click <strong className="text-white">Settings (⚙️ Gear Icon)</strong>, paste your key into the <strong className="text-white">Gemini API Key</strong> box, and click <strong className="text-white">Save</strong>.
+                  Paste your API Key into the Gemini API Key field, click Save, and start using DIGI LABS immediately to generate human voices and video prompts!
                 </p>
-                <div className="mt-4 rounded-lg border border-white/5 bg-white/[0.02] p-3 text-xs text-zinc-400">
-                  <span className="font-semibold text-emerald-400">✓ Instant activation:</span> Studio human voice is now active for unlimited video-to-prompts &amp; vocal generation!
-                </div>
               </div>
-              <div className="mt-6 pt-4 border-t border-white/5 flex items-center gap-1.5 text-xs text-zinc-400">
-                <Sparkles size={13} className="text-pink-400" />
-                <span>Emotion &amp; breathing voice ready</span>
+              <div className="mt-6 pt-4 border-t border-white/5 flex items-center gap-2 text-xs font-mono text-emerald-400">
+                <CheckCircle2 size={14} className="shrink-0" />
+                <span>Paste Key → Save → Start Using!</span>
               </div>
             </div>
           </div>
@@ -403,11 +402,11 @@ function DigiLabsSubpage() {
               </div>
               <div>
                 <h4 className="font-display text-base font-bold text-white flex items-center gap-2">
-                  <span>Pro Secret: Multi-Key Auto Rotation (9 Key Slots)</span>
-                  <span className="rounded-full bg-cyan-500/20 border border-cyan-500/40 px-2 py-0.5 text-[10px] font-mono font-bold text-cyan-300">UNLIMITED QUOTA</span>
+                  <span>Pro Tip: Add Multiple Keys for Unlimited Generations</span>
+                  <span className="rounded-full bg-cyan-500/20 border border-cyan-500/40 px-2 py-0.5 text-[10px] font-mono font-bold text-cyan-300">AUTO-ROTATION</span>
                 </h4>
                 <p className="mt-1 text-xs md:text-sm text-[var(--text-secondary)] leading-relaxed">
-                  Generate multiple free Gemini API keys across different Google accounts/projects and enter them into DIGI LABS (<code className="text-cyan-300 font-mono">GEMINI_API_KEY_1</code> ... <code className="text-cyan-300 font-mono">GEMINI_API_KEY_9</code>). When one key hits its daily request quota, DIGI LABS automatically rotates to the next key without failing your audio generations!
+                  DIGI LABS supports up to 9 API key slots. You can add multiple free keys from different Google accounts so the app automatically switches keys and never hits rate limits.
                 </p>
               </div>
             </div>
@@ -417,7 +416,7 @@ function DigiLabsSubpage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2.5 font-mono text-xs font-bold text-cyan-300 hover:bg-cyan-500/20 hover:text-white transition shrink-0"
             >
-              <span>Get Free Key</span>
+              <span>Get API Key</span>
               <ExternalLink size={13} />
             </a>
           </div>
