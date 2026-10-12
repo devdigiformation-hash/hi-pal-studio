@@ -33,14 +33,14 @@ const TITLE = "Download DIGI BIZ OS for Windows 10 & 11 | JARVIS AI Desktop Work
 const DESC =
   "Download DIGI BIZ OS for Windows 10 & 11 (64-bit). The sovereign, voice-controlled AI business operating system. 12 integrated modules, offline Whisper speech recognition, and zero subscription fees.";
 
-const INSTALLER_URL = "https://digi-updates.digi-ede.workers.dev/Digi%20Biz%20OS-Setup-1.1.7.exe";
-const SHA512_HASH = "xcHpsOhWvw9aSX6AG9hA79jf5ETAY+zP3ap42dkg9MIpqXrxkPRdKHYsbHlW0HV/S+mGY3CwE980ezJe1R5SJQ==";
+const INSTALLER_URL = "https://digi-updates.digi-ede.workers.dev/Digi%20Biz%20OS-Setup-1.1.8.exe";
+const SHA512_HASH = "cGmfteBUICipSTA+ao6p9ueKGNCaQ69zYi13hVWhN2Umj6W4ZHR/Ls/xydwmc8FdMQ6Hqy98ZFaT02unexj9vw==";
 
 const STEPS = [
   {
     num: "01",
     title: "Download Installer",
-    body: "Fetch the standalone 64-bit Windows setup executable (~418 MB) containing all 12 modules and offline models runtime.",
+    body: "Fetch the standalone 64-bit Windows setup executable (~419 MB) containing all 12 modules and offline models runtime.",
   },
   {
     num: "02",
@@ -179,13 +179,19 @@ function DownloadPage() {
     setDownloadStarted(true);
     setShowDownloadModal(true);
 
-    // Trigger direct installer download
-    const link = document.createElement("a");
-    link.href = INSTALLER_URL;
-    link.setAttribute("download", "Digi-Biz-OS-Setup-1.1.7.exe");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Trigger direct installer download cleanly without unloading current page or hitting error screens
+    try {
+      let iframe = document.getElementById("digi-dl-iframe") as HTMLIFrameElement | null;
+      if (!iframe) {
+        iframe = document.createElement("iframe");
+        iframe.id = "digi-dl-iframe";
+        iframe.style.display = "none";
+        document.body.appendChild(iframe);
+      }
+      iframe.src = INSTALLER_URL;
+    } catch {
+      window.location.assign(INSTALLER_URL);
+    }
   }, [trackDownload]);
 
   const copyHash = useCallback(() => {
@@ -273,11 +279,11 @@ function DownloadPage() {
             <dl className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs">
               <div className="rounded-lg bg-black/40 p-2.5 border border-white/5">
                 <dt className="text-white/50 text-[10px] uppercase font-mono">App Version</dt>
-                <dd className="font-semibold text-white mt-0.5">v1.1.7 Stable</dd>
+                <dd className="font-semibold text-white mt-0.5">v1.1.8 Stable</dd>
               </div>
               <div className="rounded-lg bg-black/40 p-2.5 border border-white/5">
                 <dt className="text-white/50 text-[10px] uppercase font-mono">File Size</dt>
-                <dd className="font-semibold text-white mt-0.5">418 MB (.exe)</dd>
+                <dd className="font-semibold text-white mt-0.5">419 MB (.exe)</dd>
               </div>
               <div className="rounded-lg bg-black/40 p-2.5 border border-white/5">
                 <dt className="text-white/50 text-[10px] uppercase font-mono">Licence Model</dt>
@@ -328,38 +334,38 @@ function DownloadPage() {
           {/* ── PRIMARY DOWNLOAD BUTTON ZONE (STONIC AI STYLE) ─────────── */}
           <div className="mt-8 w-full max-w-[540px]">
             <div>
-              {/* Futuristic High-Impact Windows 11 Download Button */}
+              {/* High-Impact Windows 11 Download Button Styled with Signature Cyan/Emerald Theme */}
               <button
                 type="button"
                 onClick={handleDownload}
-                className="group relative flex w-full items-center justify-between overflow-hidden rounded-2xl border-2 border-cyan-300 bg-gradient-to-r from-cyan-400 via-white to-cyan-300 px-6 sm:px-8 py-5 sm:py-6 text-slate-950 shadow-[0_12px_45px_rgba(47,224,200,0.4),0_0_30px_rgba(255,255,255,0.45)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_20px_60px_rgba(47,224,200,0.65),0_0_40px_rgba(255,255,255,0.65)] active:scale-[0.98] cursor-pointer"
+                className="group relative flex w-full items-center justify-between overflow-hidden rounded-2xl border-2 border-[var(--cyan)] bg-[var(--cyan)] px-6 sm:px-8 py-5 sm:py-6 text-slate-950 shadow-[0_12px_45px_rgba(47,224,200,0.45),0_0_35px_rgba(47,224,200,0.35)] transition-all duration-300 hover:scale-[1.02] hover:brightness-110 hover:shadow-[0_20px_60px_rgba(47,224,200,0.7),0_0_50px_rgba(47,224,200,0.55)] active:scale-[0.98] cursor-pointer"
               >
                 {/* Hover Shimmer Sweep */}
-                <div className="pointer-events-none absolute -inset-full top-0 block -rotate-45 bg-gradient-to-r from-transparent via-white/80 to-transparent transition-all duration-1000 group-hover:left-full" />
+                <div className="pointer-events-none absolute -inset-full top-0 block -rotate-45 bg-gradient-to-r from-transparent via-white/50 to-transparent transition-all duration-1000 group-hover:left-full" />
 
                 <div className="flex items-center gap-4 text-left">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-slate-950 text-cyan-300 shadow-md transition-transform duration-300 group-hover:scale-110">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-slate-950 text-[var(--cyan)] shadow-md transition-transform duration-300 group-hover:scale-110">
                     <WindowsIcon size={24} />
                   </div>
                   <div>
                     <div className="font-display text-[16px] sm:text-[18px] font-black tracking-wider uppercase text-slate-950 leading-tight">
                       DOWNLOAD FOR WINDOWS 11 &amp; 10
                     </div>
-                    <div className="mt-0.5 font-mono text-[11.5px] sm:text-[12.5px] font-bold text-slate-800">
-                      Direct Setup Installer (.exe 418 MB) · v1.1.7 Stable
+                    <div className="mt-0.5 font-mono text-[11.5px] sm:text-[12.5px] font-bold text-slate-900/90">
+                      Direct Setup Installer (.exe 419 MB) · v1.1.8 Stable
                     </div>
                   </div>
                 </div>
 
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-950 text-white shadow-md transition-transform duration-300 group-hover:translate-y-0.5 group-hover:bg-cyan-900">
-                  <Download size={22} className="text-cyan-300" />
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-950 text-white shadow-md transition-transform duration-300 group-hover:translate-y-0.5 group-hover:bg-slate-900">
+                  <Download size={22} className="text-[var(--cyan)]" />
                 </div>
               </button>
 
               {/* Metadata Line */}
               <div className="mt-3 flex flex-wrap items-center justify-center gap-2 font-mono text-[12px] text-[var(--text-muted)]">
-                <span className="text-cyan-400">●</span> 418 MB
-                <span>·</span> VERSION 1.1.7 STABLE
+                <span className="text-cyan-400">●</span> 419 MB
+                <span>·</span> VERSION 1.1.8 STABLE
                 <span>·</span> WIN 11 / WIN 10 x64
                 <span>·</span> SHA-512 VERIFIED
               </div>
@@ -376,7 +382,7 @@ function DownloadPage() {
                       <p className="mt-1 font-body text-[12.5px] leading-relaxed text-slate-300">
                         Check your browser downloads tray. Once finished, run{" "}
                         <code className="rounded bg-black/40 px-1.5 py-0.5 font-mono text-cyan-300">
-                          Digi Biz OS-Setup-1.1.7.exe
+                          Digi Biz OS-Setup-1.1.8.exe
                         </code>{" "}
                         to begin.
                       </p>
@@ -703,7 +709,7 @@ function DownloadPage() {
                   Windows 11 Setup Guide
                 </h3>
                 <p className="font-mono text-xs text-cyan-300">
-                  DIGI BIZ OS v1.1.7 Setup (.exe 418 MB)
+                  DIGI BIZ OS v1.1.8 Setup (.exe 419 MB)
                 </p>
               </div>
             </div>
@@ -714,15 +720,17 @@ function DownloadPage() {
                 <CheckCircle2 size={20} className="mt-0.5 shrink-0 text-emerald-400" />
                 <div className="text-xs sm:text-[13px] leading-relaxed text-slate-200">
                   <strong className="text-white block font-semibold">Download Initiated!</strong>
-                  Your browser is downloading <code className="text-cyan-300 font-mono font-bold">Digi Biz OS-Setup-1.1.7.exe</code>. Check your browser downloads bar.
+                  Your browser is downloading <code className="text-cyan-300 font-mono font-bold">Digi Biz OS-Setup-1.1.8.exe</code>. Check your browser downloads bar.
                   <div className="mt-2 text-[12px]">
                     Did not start?{" "}
                     <a
                       href={INSTALLER_URL}
-                      download="Digi-Biz-OS-Setup-1.1.7.exe"
+                      download="Digi-Biz-OS-Setup-1.1.8.exe"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="font-bold text-emerald-300 underline hover:text-emerald-200"
                     >
-                      Click here to download directly
+                      Click here to download directly (.exe 419 MB)
                     </a>
                   </div>
                 </div>
