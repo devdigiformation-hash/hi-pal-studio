@@ -26,6 +26,38 @@ interface Message {
   pills?: string[];
 }
 
+export function cleanAiText(raw: string): string {
+  if (!raw) return "";
+  let text = raw;
+
+  // 1. Remove markdown links [Label](url) -> Label
+  text = text.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+
+  // 2. Remove all asterisks and stars (* or **)
+  text = text.replace(/\*+/g, "");
+
+  // 3. Remove hashtags (#)
+  text = text.replace(/#+/g, "");
+
+  // 4. Remove bullet dots and square/diamond bullets
+  text = text.replace(/[•●▪▫■□◆◇]/g, "");
+
+  // 5. Remove bullet dashes/hyphens at the beginning of lines
+  text = text.replace(/^[ \t]*[-–—]\s*/gm, "");
+
+  // 6. Remove backticks
+  text = text.replace(/`+/g, "");
+
+  // 7. Strip leading emoji symbols from headlines
+  text = text.replace(/^[💻🔑💰🎙️🎯💳📞🌐🛡️🤖👋💡⚠️❌]\s*/gm, "");
+
+  // 8. Clean redundant spacing and empty lines
+  text = text.replace(/[ \t]+/g, " ");
+  text = text.replace(/\n{3,}/g, "\n\n");
+
+  return text.trim();
+}
+
 const KNOWLEDGE_BASE = [
   {
     triggers: [
@@ -40,13 +72,15 @@ const KNOWLEDGE_BASE = [
       "key free",
       "studio voice key",
     ],
-    answer: `🔑 **How to Get Your Free Gemini API Key in 3 Simple Steps:**
+    answer: `How to Get Your Free Gemini API Key in 3 Simple Steps:
 
-1. **Open Google AI Studio:** Click the direct button on our site or visit [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey) and sign in with any standard Google/Gmail account. *(100% Free — No credit card or billing ever required!)*
-2. **Click "+ Create API key":** In the top-right corner, click the blue button and choose **"Create key in new project"**. Your key string (starting with \`AIzaSy...\`) is generated in 1 second. Click Copy.
-3. **Paste into DIGI LABS & Start Using:** Launch DIGI LABS on your PC, click **Settings (⚙️ Gear Icon)**, paste into **Gemini API Key**, and click Save!
+Step 1: Open Google AI Studio at aistudio.google.com/app/apikey and sign in with any standard Google or Gmail account. It is 100% free with no credit card or billing ever required.
 
-💡 **Pro Tip (9-Key Auto-Rotation):** You can create multiple keys across different Google projects and add them into DIGI LABS slots (\`GEMINI_API_KEY_1\` to \`GEMINI_API_KEY_9\`). When one key reaches its daily request quota, DIGI LABS rotates automatically so you never hit rate limits!`,
+Step 2: In the top right corner, click Create API key and choose Create key in new project. Your key string starting with AIzaSy will be generated immediately. Click Copy.
+
+Step 3: Launch DIGI LABS on your PC, open Settings, paste your key into Gemini API Key, and click Save.
+
+Tip on 9-Key Auto-Rotation: You can create multiple keys across different Google projects and add them into DIGI LABS slots from key 1 to key 9. When one key reaches its daily request limit, DIGI LABS automatically switches to the next key so your generation never stops.`,
     links: [
       { label: "Get Free Gemini API Key (Google AI Studio)", url: "https://aistudio.google.com/app/apikey" },
       { label: "DIGI LABS Overview & Download", url: "/open-source/digi-labs" },
@@ -68,15 +102,16 @@ const KNOWLEDGE_BASE = [
       "fee",
       "subscription",
     ],
-    answer: `💰 **DIGI BIZ OS Official Pricing & Lifetime License:**
+    answer: `DIGI BIZ OS Official Pricing and Lifetime License:
 
-• **One-Time Lifetime Price:** **£29 Worldwide** *(or **PKR 10,400** in Pakistan)*.
-• **Zero Monthly Taxes:** You own it perpetually. No recurring SaaS seat taxes or renewal fees.
-• **Includes 12 Local Engines:** CRM, Invoicing (PDF), Social Media Auto-Syndication, Private Offline Whisper STT, Local LLM Orchestrator, JARVIS Voice Navigation, WhatsApp Business Automation, and more.
-• **Supported Payment Methods:**
-  - 🇵🇰 Pakistan: **JazzCash**, **EasyPaisa**, **UBL Bank**.
-  - 🌍 International: **USA & UK Bank Transfer**, **Direct Wire / Card**.
-  - *(Note: SadaPay and NayaPay are not supported).*`,
+One-Time Lifetime Price: 29 Pounds Worldwide (or PKR 10,400 in Pakistan).
+Zero Monthly Fees: You own the software perpetually. There are no recurring monthly subscription fees or renewals.
+Includes 12 Local Engines: CRM, Invoicing, Social Media Auto-Syndication, Private Offline Whisper, Local LLM Orchestrator, JARVIS Voice Navigation, and WhatsApp Business Automation.
+
+Supported Payment Methods:
+Pakistan: JazzCash, EasyPaisa, and UBL Bank Limited.
+International: USA and UK Corporate Bank Transfer, Direct Wire or Card.
+Important Note: SadaPay and NayaPay are not supported.`,
     links: [
       { label: "View Lifetime Pricing Page", url: "/pricing" },
       { label: "Chat on WhatsApp (0316 4467464)", url: "https://wa.me/923164467464" },
@@ -96,16 +131,21 @@ const KNOWLEDGE_BASE = [
       "edge tts",
       "video prompt",
     ],
-    answer: `🎙️ **DIGI LABS — Sovereign Free Voice & Media Workstation:**
+    answer: `DIGI LABS Sovereign Free Voice and Media Workstation:
 
-DIGI LABS is the 100% free ElevenLabs alternative developed by DIGIFORMATION LTD:
-1. **Dual Synthesis Engines:**
-   - **Studio Voice (Gemini 2.5 Flash):** Nuanced emotional human voice with breathing and inflection ($0 cost).
-   - **Free Voice (Edge-TTS):** 100% unlimited long-form audiobook narrations with zero API keys and zero limits.
-2. **Video-to-Prompt & Course Engine:** Paste any YouTube or MP4 video link to reverse-engineer its visual style, cinematic prompt (for Sora/Runway/Midjourney), structured courses, and executive study notes.
-3. **Multilingual:** English, Urdu (with RTL Nastaliq toggle), Hindi, Arabic, and international dialects.
-4. **Standalone Windows Installer:** Download \`DIGI-LABS-Setup-1.0.0.exe\` (253MB) directly from our site!
-5. **Strict No-Resale Rule:** 100% Free for your own personal and agency systems. Reselling or cloud re-hosting is strictly prohibited.`,
+DIGI LABS is the 100% free ElevenLabs alternative developed by DIGIFORMATION LTD.
+
+Dual Voice Engines:
+1. Studio Voice (Gemini 2.5 Flash): Realistic emotional human voice with breathing and natural inflection at zero cost.
+2. Free Voice (Edge-TTS): Unlimited long-form audiobook narrations with zero API keys and no limits.
+
+Video to Prompt and Course Engine: Paste any YouTube or MP4 video link to reverse-engineer visual styles, cinematic prompts, structured courses, and study notes.
+
+Multilingual: English, Urdu with Nastaliq support, Hindi, Arabic, and international dialects.
+
+Standalone Windows Installer: Download DIGI-LABS-Setup-1.0.0.exe (253MB) directly from our website.
+
+Strict No-Resale Rule: 100% free for your personal use and client agency work. Reselling or cloud re-hosting is strictly prohibited.`,
     links: [
       { label: "Download DIGI LABS (.exe 253MB)", url: "/open-source/digi-labs" },
       { label: "DIGI LABS GitHub Repository", url: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-" },
@@ -124,14 +164,15 @@ DIGI LABS is the 100% free ElevenLabs alternative developed by DIGIFORMATION LTD
       "finding leads",
       "opportunity pack",
     ],
-    answer: `🎯 **DIGI LEAD HUNTER — Autonomous B2B Opportunity Engine:**
+    answer: `DIGI LEAD HUNTER Autonomous B2B Opportunity Engine:
 
-DIGI LEAD HUNTER scans local businesses and extracts qualified agency clients in seconds:
-• **Autonomous Scanning:** Scans Google Maps locally without expensive third-party scraper fees.
-• **Direct WhatsApp Verification:** Checks mobile numbers via Baileys microservice and carrier line detection.
-• **3-Tier Qualification:** Sorts leads into Tier 1 (Build-Ready), Tier 2 (Consultation), and Tier 3 (Modernization).
-• **Automated Opportunity Packs:** Generates pre-audited client blueprints and proposal ZIP packs ready for outreach.
-• **Download & Source:** 100% Free & Open-Source on GitHub and downloadable as a Source ZIP from our portal!`,
+DIGI LEAD HUNTER finds local businesses and extracts qualified agency clients in seconds.
+
+Autonomous Scanning: Scans Google Maps locally without third-party scraping charges.
+Direct WhatsApp Verification: Validates mobile numbers using Baileys microservice and carrier line detection.
+3-Tier Qualification: Automatically sorts leads into Tier 1 (Build-Ready), Tier 2 (Consultation), and Tier 3 (Modernization).
+Automated Opportunity Packs: Generates pre-audited client blueprints and proposal ZIP packs ready for outreach.
+Free and Open Source: Complete source code is available on GitHub and as a Source ZIP on our website.`,
     links: [
       { label: "DIGI LEAD HUNTER Portal", url: "/open-source/digi-lead-hunter" },
       { label: "DIGI LEAD HUNTER GitHub", url: "https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER" },
@@ -151,15 +192,15 @@ DIGI LEAD HUNTER scans local businesses and extracts qualified agency clients in
       "account number",
       "kaise pay karein",
     ],
-    answer: `💳 **Official Accepted Payment Methods:**
+    answer: `Official Accepted Payment Methods:
 
-We accept the following verified payment channels for DIGI BIZ OS (£29 / PKR 10,400):
-1. **JazzCash** (Direct Mobile Account)
-2. **EasyPaisa** (Direct Mobile Account)
-3. **UBL Bank Limited** (Pakistan Bank Transfer)
-4. **USA & UK Corporate Bank Accounts** (Direct Wire / International Wire)
+We accept the following verified payment channels for DIGI BIZ OS (29 Pounds or PKR 10,400):
+1. JazzCash (Direct Mobile Account)
+2. EasyPaisa (Direct Mobile Account)
+3. UBL Bank Limited (Pakistan Bank Transfer)
+4. USA and UK Corporate Bank Accounts (Direct Wire)
 
-⚠️ **Notice:** SadaPay and NayaPay are **NOT** accepted. To receive official account details and invoice confirmation, please message our official WhatsApp hotline: **+92 316 4467464 (03164467464)**.`,
+Important: SadaPay and NayaPay are NOT accepted. To receive official account details and invoice verification, please message our official WhatsApp hotline at +92 316 4467464 (03164467464).`,
     links: [
       { label: "Chat on WhatsApp for Payment Details", url: "https://wa.me/923164467464" },
       { label: "View Pricing Page", url: "/pricing" },
@@ -179,17 +220,13 @@ We accept the following verified payment channels for DIGI BIZ OS (£29 / PKR 10
       "helpline",
       "0316",
     ],
-    answer: `📞 **Official DIGIFORMATION & DIGI BIZ OS Support Channels:**
+    answer: `Official DIGIFORMATION and DIGI BIZ OS Support Channels:
 
-• **WhatsApp Hotline:** **+92 316 4467464 (03164467464)**
-• **Official Emails:** 
-  - \`info@digiformation.co.uk\` (Corporate)
-  - \`info@digibizos.co.uk\` (DIGI BIZ OS Support)
-• **Company Registry:** Registered in England & Wales (Company # 16994903)
-• **Headquarters:** 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, UK
-• **YouTube Channels:** 
-  - Digi Biz Os: [youtube.com/@digibizos](https://www.youtube.com/@digibizos)
-  - Digiformation Ltd: [youtube.com/@Digiformationltd](https://www.youtube.com/@Digiformationltd)`,
+WhatsApp Hotline: +92 316 4467464 (0316 4467464)
+Official Emails: info@digiformation.co.uk and info@digibizos.co.uk
+Company Registry: Registered in England and Wales (Company Number 16994903)
+Headquarters: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom
+YouTube Channels: Digi Biz Os (@digibizos) and Digiformation Ltd (@Digiformationltd)`,
     links: [
       { label: "Open WhatsApp Chat Now (0316 4467464)", url: "https://wa.me/923164467464" },
       { label: "Digiformation Corporate Website", url: "https://www.digiformation.co.uk/" },
@@ -210,20 +247,20 @@ We accept the following verified payment channels for DIGI BIZ OS (£29 / PKR 10
       "upscayl",
       "facefusion",
     ],
-    answer: `🌐 **DIGIFORMATION Open-Source Software Suite:**
+    answer: `DIGIFORMATION Open-Source Software Suite:
 
 We curate and maintain 18+ sovereign, local-first open source workstations:
-1. **DIGI LABS:** Unlimited Free Human TTS & Video-to-Prompt Studio.
-2. **DIGI LEAD HUNTER:** Autonomous B2B Google Maps lead finder & WhatsApp validator.
-3. **OpenHands:** Autonomous software engineering agent.
-4. **OpenClaw:** Autonomous computer desktop and web research operator.
-5. **Jan AI:** 100% Offline private LLM desktop workstation (Llama 3, Mistral).
-6. **AnythingLLM:** Private enterprise document RAG knowledgebase.
-7. **Upscayl:** AI image upscaler (2x, 4x, 8x).
-8. **FaceFusion & Deep-Live-Cam:** Sovereign real-time visual media processors.
-9. **Audacity, Shotcut, Kdenlive, OpenCut:** Sovereign media creation suites.
+1. DIGI LABS: Unlimited Free Human TTS and Video to Prompt Studio.
+2. DIGI LEAD HUNTER: Autonomous B2B Google Maps lead finder and WhatsApp validator.
+3. OpenHands: Autonomous software engineering agent.
+4. OpenClaw: Autonomous computer desktop and web research operator.
+5. Jan AI: Offline private LLM desktop workstation for Llama 3 and Mistral.
+6. AnythingLLM: Private enterprise document RAG knowledge base.
+7. Upscayl: AI image upscaler for 2x, 4x, and 8x resolutions.
+8. FaceFusion and Deep-Live-Cam: Sovereign real-time visual media processors.
+9. Audacity, Shotcut, Kdenlive, OpenCut: Sovereign media creation suites.
 
-All tools are 100% free with verified source code on GitHub and standalone Windows companion installers!`,
+All tools are 100% free with verified source code on GitHub and standalone Windows companion installers.`,
     links: [
       { label: "Explore Full Open-Source Suite", url: "/open-source" },
       { label: "DIGI LABS", url: "/open-source/digi-labs" },
@@ -241,10 +278,11 @@ All tools are 100% free with verified source code on GitHub and standalone Windo
       "white label",
       "saas",
     ],
-    answer: `🛡️ **License & Resale Terms (Strict Prohibition):**
+    answer: `License and Resale Terms:
 
-• **Personal & Agency Usage:** 100% FREE forever! You can use DIGI LABS and DIGI LEAD HUNTER on your local PCs and laptops to create unlimited voiceovers, audiobooks, client websites, and commercial content. You keep 100% of your earnings.
-• ❌ **Strict Resale Prohibition:** You are **STRICTLY NOT ALLOWED** to resell our software binaries, white-label them, or host them as a paid cloud subscription SaaS. Our tools are source-available for local sovereign operation only.`,
+Personal and Agency Usage: 100% free forever. You can use DIGI LABS and DIGI LEAD HUNTER on your local computers to create unlimited voiceovers, audiobooks, client websites, and commercial content. You keep 100% of your earnings.
+
+Strict Resale Prohibition: You are strictly NOT allowed to resell our software binaries, white-label them, or host them as a paid cloud subscription SaaS. Our tools are source-available for local sovereign operation only.`,
     links: [
       { label: "Read License on GitHub", url: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-#readme" },
     ],
@@ -262,13 +300,14 @@ All tools are 100% free with verified source code on GitHub and standalone Windo
       "windows 10",
       "exe",
     ],
-    answer: `💻 **Installation & System Requirements:**
+    answer: `Installation and System Requirements:
 
-• **OS Support:** Windows 10 & 11 (64-bit native).
-• **Hardware:** 8GB RAM minimum (16GB recommended for heavy local AI), Intel Core i5 / AMD Ryzen 5 or higher, 10GB SSD storage.
-• **Fast Install:**
-  - **DIGI LABS:** Download \`DIGI-LABS-Setup-1.0.0.exe\` (253MB) from our portal, run installer, go to Settings, paste your free Gemini API key, and click Save.
-  - **DIGI BIZ OS:** One-time £29 setup with automated desktop deployment and JARVIS voice intelligence.`,
+OS Support: Windows 10 and Windows 11 (64-bit native).
+Hardware: 8GB RAM minimum (16GB recommended for heavy local AI), Intel Core i5 or AMD Ryzen 5 or higher, 10GB SSD storage.
+
+Fast Install Steps:
+1. DIGI LABS: Download DIGI-LABS-Setup-1.0.0.exe (253MB) from our portal, run installer, go to Settings, paste your free Gemini API key, and click Save.
+2. DIGI BIZ OS: One-time 29 Pounds setup with automated desktop deployment and JARVIS voice intelligence.`,
     links: [
       { label: "Download DIGI LABS (.exe 253MB)", url: "/open-source/digi-labs" },
       { label: "Download DIGI BIZ OS", url: "/download" },
@@ -303,7 +342,7 @@ function findBestAnswer(query: string): {
 
   if (bestMatch && maxScore > 0) {
     return {
-      text: bestMatch.answer,
+      text: cleanAiText(bestMatch.answer),
       links: bestMatch.links,
       pills: bestMatch.pills,
     };
@@ -312,16 +351,17 @@ function findBestAnswer(query: string): {
   // Friendly conversational fallbacks
   if (lower.includes("hi") || lower.includes("hello") || lower.includes("salam") || lower.includes("hey")) {
     return {
-      text: `👋 **Hello! Welcome to DIGI BIZ OS & DIGIFORMATION LTD!**
+      text: cleanAiText(`Hello! Welcome to DIGI BIZ OS and DIGIFORMATION LTD.
 
-I am **DIGI AI**, your 24/7 intelligent platform advisor. How can I assist you today?
+I am DIGI AI, your 24/7 intelligent platform advisor. How can I assist you today?
 
-• Need help getting your **Free Gemini API Key**?
-• Want to explore **DIGI LABS** (ElevenLabs alternative)?
-• Looking for **DIGI LEAD HUNTER** (Google Maps lead generator)?
-• Inquiring about **DIGI BIZ OS** (£29 lifetime license)?
+You can ask me about:
+1. How to get your Free Gemini API Key
+2. DIGI LABS (ElevenLabs alternative)
+3. DIGI LEAD HUNTER (Google Maps lead generator)
+4. DIGI BIZ OS (29 Pounds lifetime license)
 
-Choose a topic below or type your question!`,
+Choose a topic below or type your question.`),
       pills: [
         "How to get free Gemini API key?",
         "DIGI BIZ OS Pricing (£29)",
@@ -332,15 +372,17 @@ Choose a topic below or type your question!`,
   }
 
   return {
-    text: `🤖 **DIGI AI Intelligence Response:**
+    text: cleanAiText(`DIGI AI Intelligence Response:
 
-Regarding **"${query}"**:
+Regarding your query:
 
-• **DIGI BIZ OS** is our complete autonomous Windows desktop operating system featuring 12 local engines (CRM, invoicing, social syndication, private Whisper, local LLMs) for a **one-time £29 / PKR 10,400 lifetime license** with zero subscriptions.
-• **DIGI LABS** is our sovereign free ElevenLabs alternative powered by Gemini 2.5 Flash Voice and Edge-TTS audiobooks with video-to-prompt extraction.
-• **DIGI LEAD HUNTER** autonomously extracts and verifies local B2B leads from Google Maps.
+DIGI BIZ OS is our complete autonomous Windows desktop operating system featuring 12 local engines (CRM, invoicing, social syndication, private Whisper, local LLMs) for a one-time 29 Pounds or PKR 10,400 lifetime license with zero subscriptions.
 
-Would you like specific details on pricing, setup steps, or contacting our team?`,
+DIGI LABS is our sovereign free ElevenLabs alternative powered by Gemini 2.5 Flash Voice and Edge-TTS audiobooks with video-to-prompt extraction.
+
+DIGI LEAD HUNTER autonomously extracts and verifies local B2B leads from Google Maps.
+
+Would you like specific details on pricing, setup steps, or contacting our team?`),
     links: [
       { label: "Chat with Human Support on WhatsApp", url: "https://wa.me/923164467464" },
       { label: "Explore Open Source Tools", url: "/open-source" },
@@ -362,11 +404,11 @@ export default function DigiAiChatbot() {
     {
       id: "welcome",
       sender: "bot",
-      text: `👋 **Welcome to DIGI AI Assistant!**
+      text: cleanAiText(`Welcome to DIGI AI Assistant.
 
-I am equipped with complete knowledge of **DIGI BIZ OS (£29 lifetime)**, **DIGI LABS (Free ElevenLabs alternative)**, **DIGI LEAD HUNTER**, and our entire 18+ open-source suite.
+I am equipped with complete knowledge of DIGI BIZ OS (29 Pounds lifetime), DIGI LABS (Free ElevenLabs alternative), DIGI LEAD HUNTER, and our entire 18+ open-source suite.
 
-Ask me anything about setup steps, free Gemini API keys, pricing, or payment methods!`,
+Ask me anything about setup steps, free Gemini API keys, pricing, or payment methods.`),
       timestamp: "Just now",
       pills: [
         "How to get free Gemini API key?",
@@ -529,9 +571,9 @@ Ask me anything about setup steps, free Gemini API keys, pricing, or payment met
                   }`}
                 >
                   <div className="whitespace-pre-wrap space-y-2">
-                    {m.text.split("\n\n").map((para, idx) => (
+                    {cleanAiText(m.text).split("\n\n").map((para, idx) => (
                       <p key={idx} className="leading-[1.65]">
-                        {para}
+                        {cleanAiText(para)}
                       </p>
                     ))}
                   </div>
