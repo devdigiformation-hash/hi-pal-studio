@@ -860,6 +860,7 @@ function OpenSourcePage() {
   const hasActiveFilters = searchQuery.trim() !== "" || selectedCategory !== "All Tools" || selectedPlatform !== "All OS" || selectedSort !== "featured";
 
   const [modalOpen, setModalOpen] = useState(false);
+  const [digiLabsSetupOpen, setDigiLabsSetupOpen] = useState(false);
   const [activeDownloadUrl, setActiveDownloadUrl] = useState("https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe");
   const [activeDownloadLabel, setActiveDownloadLabel] = useState("DIGI LABS Setup (.exe 253MB)");
 
@@ -879,6 +880,144 @@ function OpenSourcePage() {
         channelUrl="https://www.youtube.com/@Digiformationltd"
         channelName="Digiformation Ltd Official"
       />
+
+      {/* ── DIGI LABS 3-STEP SETUP GUIDE MODAL ─────────────────── */}
+      {digiLabsSetupOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
+          <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl border border-purple-500/40 bg-[#0B0818] p-6 sm:p-8 shadow-[0_0_60px_rgba(168,85,247,0.35)]">
+            {/* Close button */}
+            <button
+              type="button"
+              onClick={() => setDigiLabsSetupOpen(false)}
+              className="absolute top-5 right-5 flex h-9 w-9 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-zinc-400 hover:text-white hover:bg-white/10 transition cursor-pointer"
+            >
+              <X size={18} />
+            </button>
+
+            {/* Header */}
+            <div className="flex items-center gap-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-tr from-purple-500/20 to-pink-500/30 border border-purple-400/50 text-purple-300 shadow-[0_0_20px_rgba(168,85,247,0.3)]">
+                <Sparkles size={24} />
+              </div>
+              <div>
+                <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-amber-400">
+                  SUPER SIMPLE SETUP • 100% FREE • 60 SECONDS
+                </span>
+                <h3 className="font-display text-xl sm:text-2xl font-bold text-white">
+                  DIGI LABS: 3-Step Setup Guide
+                </h3>
+              </div>
+            </div>
+
+            <p className="mt-3 text-sm text-zinc-300 font-body leading-relaxed">
+              Install the app and go to the settings section. Press the <strong className="text-amber-300">Get API Key</strong> button, generate your API key, paste it into DIGI LABS, and start using!
+            </p>
+
+            {/* Steps Container */}
+            <div className="mt-6 space-y-4">
+              {/* Step 1 */}
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5 flex flex-col sm:flex-row gap-4 items-start">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-purple-500/20 border border-purple-400/40 font-mono text-sm font-bold text-purple-300">
+                  01
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-display text-base font-bold text-white">
+                    Step 1: Install the App on Windows 10/11
+                  </h4>
+                  <p className="mt-1 text-xs sm:text-sm text-zinc-300 leading-relaxed font-body">
+                    Download <span className="font-mono text-purple-300">DIGI-LABS-Setup-1.0.0.exe</span> (253MB) and launch the installer on your PC. It runs natively on Windows 10 &amp; 11 with zero Python or developer setup required.
+                  </p>
+                  <div className="mt-3">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setDigiLabsSetupOpen(false);
+                        openSubscribeModal(
+                          "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe",
+                          "DIGI LABS Setup (.exe 253MB)"
+                        );
+                      }}
+                      className="inline-flex items-center gap-2 rounded-xl bg-purple-500 px-4 py-2 font-mono text-xs font-bold text-white hover:bg-purple-400 transition cursor-pointer shadow-[0_0_20px_rgba(168,85,247,0.3)]"
+                    >
+                      <Download size={14} />
+                      <span>Download Setup (.exe 253MB)</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="rounded-2xl border border-amber-500/30 bg-amber-500/5 p-4 sm:p-5 flex flex-col sm:flex-row gap-4 items-start">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-amber-500/20 border border-amber-400/40 font-mono text-sm font-bold text-amber-300">
+                  02
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2">
+                    <h4 className="font-display text-base font-bold text-white">
+                      Step 2: Go to Settings &amp; Press &quot;Get API Key&quot;
+                    </h4>
+                    <span className="rounded-full bg-emerald-500/20 border border-emerald-500/40 px-2 py-0.5 text-[10px] font-mono text-emerald-300">
+                      100% Free
+                    </span>
+                  </div>
+                  <p className="mt-1 text-xs sm:text-sm text-zinc-300 leading-relaxed font-body">
+                    Launch DIGI LABS, open the <strong>Settings (⚙️ Gear Icon)</strong> section, and press the <strong>Get API Key</strong> button (or click the button below to visit Google AI Studio). Click <strong>&quot;Create key in new project&quot;</strong>. Your free key is generated in 1 second without any credit card or billing.
+                  </p>
+                  <div className="mt-3">
+                    <a
+                      href="https://aistudio.google.com/app/apikey"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-xl border border-amber-400 bg-amber-400/20 px-4 py-2.5 font-mono text-xs font-bold text-amber-300 hover:bg-amber-400/30 transition shadow-[0_0_20px_rgba(245,158,11,0.25)]"
+                    >
+                      <Key size={14} />
+                      <span>Press Here to Get Free Gemini API Key</span>
+                      <ExternalLink size={12} className="opacity-80" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-4 sm:p-5 flex flex-col sm:flex-row gap-4 items-start">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-500/20 border border-emerald-400/40 font-mono text-sm font-bold text-emerald-300">
+                  03
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-display text-base font-bold text-white">
+                    Step 3: Paste Key &amp; Start Using DIGI LABS
+                  </h4>
+                  <p className="mt-1 text-xs sm:text-sm text-zinc-300 leading-relaxed font-body">
+                    Paste your generated key into the <strong>Gemini API Key</strong> field inside DIGI LABS Settings, click <strong>Save</strong>, and start generating hyper-realistic voiceovers, extracting video prompts, and producing unlimited audiobooks immediately!
+                  </p>
+                  <div className="mt-3 rounded-lg border border-white/10 bg-black/60 p-2.5 font-mono text-[11px] text-zinc-300">
+                    <span className="text-purple-400 font-bold">Pro Tip (9-Key Rotation):</span> DIGI LABS supports up to 9 keys with auto-rotation. If one hits daily quota, DIGI LABS switches automatically so generation never stops.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer Navigation */}
+            <div className="mt-6 flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-white/10">
+              <Link
+                to="/open-source/digi-labs"
+                onClick={() => setDigiLabsSetupOpen(false)}
+                className="inline-flex items-center gap-1.5 font-mono text-xs text-purple-300 hover:text-purple-200 hover:underline"
+              >
+                <span>Read Full Technical Specifications</span>
+                <ArrowRight size={13} />
+              </Link>
+              <button
+                type="button"
+                onClick={() => setDigiLabsSetupOpen(false)}
+                className="rounded-xl border border-white/20 bg-white/10 px-4 py-2 font-mono text-xs text-white hover:bg-white/15 transition cursor-pointer"
+              >
+                Close Guide
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       {/* ── 1. HERO & INSTANT DISCOVERY STAGE ─────────────────── */}
       <SectionWrapper className="relative overflow-hidden pb-8 pt-8 md:pb-14 md:pt-12">
         {/* Subtle Ambient Glow */}
@@ -1155,11 +1294,33 @@ function OpenSourcePage() {
                           "DIGI LABS Setup (.exe 253MB)"
                         )
                       }
-                      className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-purple-400 bg-purple-500 px-6 py-3.5 font-mono text-[13.5px] font-bold text-white shadow-[0_0_25px_rgba(168,85,247,0.35)] transition-all hover:bg-purple-400 hover:shadow-[0_0_35px_rgba(168,85,247,0.5)] cursor-pointer"
+                      className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-purple-400 bg-purple-500 px-5 py-3.5 font-mono text-[13.5px] font-bold text-white shadow-[0_0_25px_rgba(168,85,247,0.35)] transition-all hover:bg-purple-400 hover:shadow-[0_0_35px_rgba(168,85,247,0.5)] cursor-pointer"
                     >
                       <Download size={17} className="shrink-0" />
                       <span>Download Setup (.exe 253MB)</span>
                     </button>
+
+                    {/* Setup Guide CTA Button */}
+                    <button
+                      type="button"
+                      onClick={() => setDigiLabsSetupOpen(true)}
+                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-amber-400/60 bg-amber-500/15 px-4 py-3.5 font-mono text-[13px] font-bold text-amber-300 shadow-[0_0_20px_rgba(245,158,11,0.2)] transition hover:bg-amber-500/25 hover:border-amber-400 hover:shadow-[0_0_25px_rgba(245,158,11,0.35)] cursor-pointer"
+                    >
+                      <Sparkles size={15} className="text-amber-300 shrink-0" />
+                      <span>Setup Guide (3 Steps)</span>
+                    </button>
+
+                    {/* Direct Get Free API Key CTA */}
+                    <a
+                      href="https://aistudio.google.com/app/apikey"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-cyan-400/50 bg-cyan-500/10 px-4 py-3.5 font-mono text-[13px] font-semibold text-cyan-300 transition hover:bg-cyan-500/20 hover:border-cyan-400"
+                    >
+                      <Key size={14} className="text-cyan-300 shrink-0" />
+                      <span>Get Free API Key</span>
+                      <ExternalLink size={12} className="opacity-70 shrink-0" />
+                    </a>
 
                     <Link
                       to="/open-source/digi-labs"
@@ -1179,6 +1340,57 @@ function OpenSourcePage() {
                       <span>GitHub</span>
                       <ExternalLink size={12} className="opacity-70 shrink-0" />
                     </a>
+                  </div>
+
+                  {/* Inline 3-Step Setup Quick Guide Card */}
+                  <div className="mt-6 rounded-2xl border border-purple-500/30 bg-purple-950/25 p-4 backdrop-blur-sm">
+                    <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-2.5">
+                      <div className="flex items-center gap-2">
+                        <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                        <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-amber-300">
+                          Super Simple Setup • 3 Steps: Install to First Use
+                        </span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => setDigiLabsSetupOpen(true)}
+                        className="font-mono text-[11px] text-purple-300 hover:text-white underline cursor-pointer"
+                      >
+                        Open Full Interactive Guide →
+                      </button>
+                    </div>
+
+                    <div className="mt-3 grid grid-cols-1 gap-2.5 sm:grid-cols-3">
+                      <div className="rounded-xl border border-white/5 bg-black/40 p-3">
+                        <div className="flex items-center gap-2 text-xs font-bold text-white">
+                          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-purple-500/30 text-[10px] font-mono text-purple-300">1</span>
+                          <span>Install the App</span>
+                        </div>
+                        <p className="mt-1 text-[11px] text-zinc-300 leading-relaxed font-body">
+                          Download <code className="text-purple-300">DIGI-LABS-Setup-1.0.0.exe</code> and run the installer on Windows 10/11.
+                        </p>
+                      </div>
+
+                      <div className="rounded-xl border border-amber-500/20 bg-black/40 p-3">
+                        <div className="flex items-center gap-2 text-xs font-bold text-amber-300">
+                          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-amber-500/30 text-[10px] font-mono text-amber-300">2</span>
+                          <span>Settings &amp; API Key</span>
+                        </div>
+                        <p className="mt-1 text-[11px] text-zinc-300 leading-relaxed font-body">
+                          Open Settings, press <strong className="text-white">Get API Key</strong> button, and generate your free key in 1 click (no credit card).
+                        </p>
+                      </div>
+
+                      <div className="rounded-xl border border-emerald-500/20 bg-black/40 p-3">
+                        <div className="flex items-center gap-2 text-xs font-bold text-emerald-300">
+                          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500/30 text-[10px] font-mono text-emerald-300">3</span>
+                          <span>Paste &amp; Start Using</span>
+                        </div>
+                        <p className="mt-1 text-[11px] text-zinc-300 leading-relaxed font-body">
+                          Paste your key into Gemini API Key field, click Save, and start generating voice and media!
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -1315,6 +1527,17 @@ function OpenSourcePage() {
                         >
                           <span>Get Software</span>
                         </Link>
+                      )}
+
+                      {feat.id === "digi-labs" && (
+                        <button
+                          type="button"
+                          onClick={() => setDigiLabsSetupOpen(true)}
+                          className="flex items-center gap-1 text-[11px] font-mono font-semibold text-amber-300 hover:text-amber-200 transition cursor-pointer"
+                        >
+                          <Sparkles size={12} className="text-amber-400" />
+                          <span>Setup Guide</span>
+                        </button>
                       )}
 
                       <Link
