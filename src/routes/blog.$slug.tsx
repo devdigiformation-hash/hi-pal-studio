@@ -468,62 +468,106 @@ function BlogPostPage() {
             </div>
           </div>
 
-          {post.body.map((section) => (
-            <section key={section.heading} className="mt-12">
-              <h2 className="font-display text-[22px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[28px]">
-                {section.heading}
-              </h2>
-              {section.paragraphs.map((p) => (
-                <p
-                  key={p.slice(0, 40)}
-                  className="mt-4 font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]"
-                >
-                  {p}
-                </p>
-              ))}
-              {section.bullets ? (
-                <ul className="mt-5 list-disc space-y-2 pl-5">
-                  {section.bullets.map((b) => (
-                    <li
-                      key={b}
-                      className="font-body text-[14.5px] leading-[1.8] text-[var(--text-secondary)]"
+          {post.body.map((section, sIndex) => {
+            const isMidArticle =
+              post.body.length >= 2 && sIndex === Math.floor(post.body.length / 2);
+
+            return (
+              <div key={section.heading}>
+                <section className="mt-12">
+                  <h2 className="font-display text-[22px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[28px]">
+                    {section.heading}
+                  </h2>
+                  {section.paragraphs.map((p) => (
+                    <p
+                      key={p.slice(0, 40)}
+                      className="mt-4 font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]"
                     >
-                      {b}
-                    </li>
+                      {p}
+                    </p>
                   ))}
-                </ul>
-              ) : null}
-
-              {section.table ? (
-                <div className="mt-6 overflow-x-auto rounded-xl border border-white/10 bg-white/[0.02]">
-                  <table className="w-full text-left font-body text-[14px]">
-                    <thead className="border-b border-white/10 bg-white/[0.04] text-[12px] font-semibold uppercase tracking-wider text-[var(--cyan)]">
-                      <tr>
-                        {section.table.headers.map((h, idx) => (
-                          <th key={idx} className="px-4 py-3 sm:px-5">
-                            {h}
-                          </th>
-                        ))}
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-white/5 text-[var(--text-secondary)]">
-                      {section.table.rows.map((row, rIdx) => (
-                        <tr key={rIdx} className="hover:bg-white/[0.02] transition-colors">
-                          {row.map((cell, cIdx) => (
-                            <td key={cIdx} className="px-4 py-3.5 sm:px-5">
-                              {cell}
-                            </td>
-                          ))}
-                        </tr>
+                  {section.bullets ? (
+                    <ul className="mt-5 list-disc space-y-2 pl-5">
+                      {section.bullets.map((b) => (
+                        <li
+                          key={b}
+                          className="font-body text-[14.5px] leading-[1.8] text-[var(--text-secondary)]"
+                        >
+                          {b}
+                        </li>
                       ))}
-                    </tbody>
-                  </table>
-                </div>
-              ) : null}
-            </section>
-          ))}
+                    </ul>
+                  ) : null}
 
-          {/* ── BOTTOM HIGH-CONVERTING CONVERSION CARD (ACCORDING TO SOFTWARE) ── */}
+                  {section.table ? (
+                    <div className="mt-6 overflow-x-auto rounded-xl border border-white/10 bg-white/[0.02]">
+                      <table className="w-full text-left font-body text-[14px]">
+                        <thead className="border-b border-white/10 bg-white/[0.04] text-[12px] font-semibold uppercase tracking-wider text-[var(--cyan)]">
+                          <tr>
+                            {section.table.headers.map((h, idx) => (
+                              <th key={idx} className="px-4 py-3 sm:px-5">
+                                {h}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-white/5 text-[var(--text-secondary)]">
+                          {section.table.rows.map((row, rIdx) => (
+                            <tr key={rIdx} className="hover:bg-white/[0.02] transition-colors">
+                              {row.map((cell, cIdx) => (
+                                <td key={cIdx} className="px-4 py-3.5 sm:px-5">
+                                  {cell}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  ) : null}
+                </section>
+
+                {/* ── MID-ARTICLE HIGH-IMPACT PRODUCT & PRICING BREAK ── */}
+                {isMidArticle && (
+                  <div className="my-12 rounded-2xl border border-cyan-400/35 bg-gradient-to-r from-cyan-950/45 via-slate-900/70 to-purple-950/45 p-6 shadow-[0_0_35px_rgba(47,224,200,0.12)] backdrop-blur-xl">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+                      <div>
+                        <div className="inline-flex items-center gap-1.5 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-2.5 py-0.5 font-mono text-[10.5px] font-bold uppercase tracking-wider text-cyan-300">
+                          <Sparkles size={11} className="text-cyan-400" />
+                          <span>SOVEREIGN DESKTOP ECOSYSTEM</span>
+                        </div>
+                        <h3 className="mt-2 font-display text-[17px] sm:text-[19px] font-bold text-white leading-snug">
+                          Tired of Paying $250+/Mo in Monthly SaaS Subscriptions?
+                        </h3>
+                        <p className="mt-1.5 font-body text-[13.5px] leading-relaxed text-zinc-300 max-w-[540px]">
+                          Replace HubSpot, Otter, ElevenLabs, ClickUp &amp; OpenAI seat taxes with <strong>DIGI BIZ OS</strong>. 12 native modules, Whisper voice AI, and perpetual lifetime ownership for <strong>£29 one-time</strong>.
+                        </p>
+                      </div>
+
+                      <div className="flex flex-wrap sm:flex-col items-stretch gap-2.5 shrink-0 w-full sm:w-auto">
+                        <Link
+                          to="/pricing"
+                          className="inline-flex items-center justify-center gap-2 rounded-xl border border-cyan-400 bg-cyan-400 px-4 py-2.5 font-mono text-[12px] font-extrabold uppercase text-slate-950 shadow-[0_0_20px_rgba(47,224,200,0.35)] transition-all hover:brightness-110 active:scale-95"
+                        >
+                          <Sparkles size={14} />
+                          <span>Compare Pricing (£29)</span>
+                        </Link>
+                        <Link
+                          to={cta.primaryButton.to || "/download"}
+                          className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 py-2.5 font-mono text-[12px] font-semibold text-white transition-all hover:bg-white/10"
+                        >
+                          <Download size={14} className="text-cyan-400" />
+                          <span>Download Free Setup</span>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+
+          {/* ── BOTTOM SOFTWARE-SPECIFIC CONVERSION CARD ── */}
           <div
             className={`mt-14 rounded-3xl border ${cta.borderClass} ${cta.bgClass} p-7 sm:p-8 backdrop-blur-xl`}
           >
@@ -594,6 +638,65 @@ function BlogPostPage() {
             </div>
           </div>
 
+          {/* ── DEDICATED DIGI BIZ OS PRICING & SAAS-REPLACEMENT CARD ── */}
+          <div className="mt-8 rounded-3xl border border-cyan-400/35 bg-gradient-to-b from-cyan-950/30 via-slate-950/80 to-purple-950/30 p-7 sm:p-9 shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_35px_rgba(47,224,200,0.15)] backdrop-blur-2xl">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-white/10 pb-6">
+              <div>
+                <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 font-mono text-[11px] font-bold uppercase tracking-wider text-emerald-400">
+                  <CheckCircle2 size={13} />
+                  <span>WHAT IS DIGI BIZ OS? • THE SAAS REPLACEMENT</span>
+                </div>
+                <h3 className="mt-3 font-display text-[22px] sm:text-[28px] font-black text-white leading-tight">
+                  Escape Recurring SaaS Bills. Own Your Business OS for £29.
+                </h3>
+                <p className="mt-2 font-body text-[14px] sm:text-[15px] leading-relaxed text-zinc-300 max-w-[580px]">
+                  Why rent your software when you can own it? DIGI BIZ OS bundles 12 native modules on your Windows SSD: Local SQLite CRM deals, WhatsApp AI bot pipelines, document intelligence, and Whisper offline voice assistant.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row md:flex-col gap-3 shrink-0 w-full md:w-auto">
+                <Link
+                  to="/pricing"
+                  className="inline-flex items-center justify-center gap-2.5 rounded-xl border-2 border-cyan-400 bg-cyan-400 px-6 py-3 font-display text-[13.5px] font-black uppercase tracking-wider text-slate-950 shadow-[0_0_25px_rgba(47,224,200,0.4)] transition-all hover:scale-105 active:scale-95"
+                >
+                  <Sparkles size={16} />
+                  <span>Check Pricing (£29 Lifetime)</span>
+                </Link>
+                <Link
+                  to="/download"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/[0.04] px-5 py-2.5 font-mono text-[12.5px] font-bold text-zinc-200 hover:text-white hover:bg-white/10 transition"
+                >
+                  <Download size={14} className="text-cyan-400" />
+                  <span>Download Windows Setup (x64)</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* Quick 4-Way SaaS Cost Comparison Matrix */}
+            <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center font-mono">
+              <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
+                <div className="text-[11px] text-zinc-400 uppercase">HubSpot / Salesforce</div>
+                <div className="mt-1 text-sm font-bold text-rose-400 line-through">$1,200/yr</div>
+                <div className="text-[10px] text-emerald-400 font-semibold">DIGI BIZ CRM: £29 Once</div>
+              </div>
+              <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
+                <div className="text-[11px] text-zinc-400 uppercase">ElevenLabs / Otter</div>
+                <div className="mt-1 text-sm font-bold text-rose-400 line-through">$504/yr</div>
+                <div className="text-[10px] text-emerald-400 font-semibold">Whisper Voice: £0/mo</div>
+              </div>
+              <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
+                <div className="text-[11px] text-zinc-400 uppercase">WATI / WhatsApp Bot</div>
+                <div className="mt-1 text-sm font-bold text-rose-400 line-through">$600/yr</div>
+                <div className="text-[10px] text-emerald-400 font-semibold">Local Agent: £0/mo</div>
+              </div>
+              <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
+                <div className="text-[11px] text-zinc-400 uppercase">Total Annual Savings</div>
+                <div className="mt-1 text-sm font-bold text-cyan-300">$2,304+ / year</div>
+                <div className="text-[10px] text-zinc-400">100% Offline Capable</div>
+              </div>
+            </div>
+          </div>
+
           {/* Editorial & Publisher Authority Signature (GEO Entity Grounding) */}
           <div className="mt-12 rounded-2xl border border-white/10 bg-white/[0.02] p-6">
             <div className="flex flex-col items-start justify-between gap-4 border-b border-white/5 pb-4 sm:flex-row sm:items-center">
@@ -631,6 +734,24 @@ function BlogPostPage() {
             aria-label="Related pages"
             className="mt-14 flex flex-wrap gap-3 border-t border-[var(--border-subtle)] pt-8"
           >
+            {/* Auto-injected guaranteed pricing & download links */}
+            {!post.links.some((l) => l.to === "/pricing") && (
+              <Link
+                to="/pricing"
+                className="inline-flex items-center gap-2 rounded-full border border-purple-400/40 bg-purple-500/10 px-4 py-2 font-body text-[13.5px] font-semibold text-purple-300 transition-colors hover:border-purple-400 hover:text-white"
+              >
+                <span>Check Lifetime Pricing (£29)</span> <Sparkles size={13} />
+              </Link>
+            )}
+            {!post.links.some((l) => l.to === "/download") && (
+              <Link
+                to="/download"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-500/10 px-4 py-2 font-body text-[13.5px] font-semibold text-cyan-300 transition-colors hover:border-cyan-400 hover:text-white"
+              >
+                <span>Download Windows Installer (x64)</span> <Download size={13} />
+              </Link>
+            )}
+
             {post.links.map((l) =>
               l.to.startsWith("http") ? (
                 <a
