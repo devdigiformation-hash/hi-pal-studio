@@ -56,6 +56,7 @@ import { Route as OpenSourceDeepLiveCamRouteImport } from './routes/open-source.
 import { Route as OpenSourceDigiLabsRouteImport } from './routes/open-source.digi-labs'
 import { Route as OpenSourceDigiLeadHunterRouteImport } from './routes/open-source.digi-lead-hunter'
 import { Route as OpenSourceFacefusionRouteImport } from './routes/open-source.facefusion'
+import { Route as OpenSourceGenofficeRouteImport } from './routes/open-source.genoffice'
 import { Route as OpenSourceHermesAgentRouteImport } from './routes/open-source.hermes-agent'
 import { Route as OpenSourceJanAiRouteImport } from './routes/open-source.jan-ai'
 import { Route as OpenSourceKdenliveRouteImport } from './routes/open-source.kdenlive'
@@ -307,6 +308,11 @@ const OpenSourceFacefusionRoute = OpenSourceFacefusionRouteImport.update({
   path: '/facefusion',
   getParentRoute: () => OpenSourceRoute,
 } as any)
+const OpenSourceGenofficeRoute = OpenSourceGenofficeRouteImport.update({
+  id: '/genoffice',
+  path: '/genoffice',
+  getParentRoute: () => OpenSourceRoute,
+} as any)
 const OpenSourceHermesAgentRoute = OpenSourceHermesAgentRouteImport.update({
   id: '/hermes-agent',
   path: '/hermes-agent',
@@ -420,6 +426,7 @@ export interface FileRoutesByFullPath {
   '/open-source/digi-labs': typeof OpenSourceDigiLabsRoute
   '/open-source/digi-lead-hunter': typeof OpenSourceDigiLeadHunterRoute
   '/open-source/facefusion': typeof OpenSourceFacefusionRoute
+  '/open-source/genoffice': typeof OpenSourceGenofficeRoute
   '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/open-source/kdenlive': typeof OpenSourceKdenliveRoute
@@ -482,6 +489,7 @@ export interface FileRoutesByTo {
   '/open-source/digi-labs': typeof OpenSourceDigiLabsRoute
   '/open-source/digi-lead-hunter': typeof OpenSourceDigiLeadHunterRoute
   '/open-source/facefusion': typeof OpenSourceFacefusionRoute
+  '/open-source/genoffice': typeof OpenSourceGenofficeRoute
   '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/open-source/kdenlive': typeof OpenSourceKdenliveRoute
@@ -546,6 +554,7 @@ export interface FileRoutesById {
   '/open-source/digi-labs': typeof OpenSourceDigiLabsRoute
   '/open-source/digi-lead-hunter': typeof OpenSourceDigiLeadHunterRoute
   '/open-source/facefusion': typeof OpenSourceFacefusionRoute
+  '/open-source/genoffice': typeof OpenSourceGenofficeRoute
   '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
   '/open-source/jan-ai': typeof OpenSourceJanAiRoute
   '/open-source/kdenlive': typeof OpenSourceKdenliveRoute
@@ -611,6 +620,7 @@ export interface FileRouteTypes {
     | '/open-source/digi-labs'
     | '/open-source/digi-lead-hunter'
     | '/open-source/facefusion'
+    | '/open-source/genoffice'
     | '/open-source/hermes-agent'
     | '/open-source/jan-ai'
     | '/open-source/kdenlive'
@@ -673,6 +683,7 @@ export interface FileRouteTypes {
     | '/open-source/digi-labs'
     | '/open-source/digi-lead-hunter'
     | '/open-source/facefusion'
+    | '/open-source/genoffice'
     | '/open-source/hermes-agent'
     | '/open-source/jan-ai'
     | '/open-source/kdenlive'
@@ -736,6 +747,7 @@ export interface FileRouteTypes {
     | '/open-source/digi-labs'
     | '/open-source/digi-lead-hunter'
     | '/open-source/facefusion'
+    | '/open-source/genoffice'
     | '/open-source/hermes-agent'
     | '/open-source/jan-ai'
     | '/open-source/kdenlive'
@@ -1133,6 +1145,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OpenSourceFacefusionRouteImport
       parentRoute: typeof OpenSourceRoute
     }
+    '/open-source/genoffice': {
+      id: '/open-source/genoffice'
+      path: '/genoffice'
+      fullPath: '/open-source/genoffice'
+      preLoaderRoute: typeof OpenSourceGenofficeRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
     '/open-source/hermes-agent': {
       id: '/open-source/hermes-agent'
       path: '/hermes-agent'
@@ -1243,6 +1262,7 @@ interface OpenSourceRouteChildren {
   OpenSourceDigiLabsRoute: typeof OpenSourceDigiLabsRoute
   OpenSourceDigiLeadHunterRoute: typeof OpenSourceDigiLeadHunterRoute
   OpenSourceFacefusionRoute: typeof OpenSourceFacefusionRoute
+  OpenSourceGenofficeRoute: typeof OpenSourceGenofficeRoute
   OpenSourceHermesAgentRoute: typeof OpenSourceHermesAgentRoute
   OpenSourceJanAiRoute: typeof OpenSourceJanAiRoute
   OpenSourceKdenliveRoute: typeof OpenSourceKdenliveRoute
@@ -1266,6 +1286,7 @@ const OpenSourceRouteChildren: OpenSourceRouteChildren = {
   OpenSourceDigiLabsRoute: OpenSourceDigiLabsRoute,
   OpenSourceDigiLeadHunterRoute: OpenSourceDigiLeadHunterRoute,
   OpenSourceFacefusionRoute: OpenSourceFacefusionRoute,
+  OpenSourceGenofficeRoute: OpenSourceGenofficeRoute,
   OpenSourceHermesAgentRoute: OpenSourceHermesAgentRoute,
   OpenSourceJanAiRoute: OpenSourceJanAiRoute,
   OpenSourceKdenliveRoute: OpenSourceKdenliveRoute,

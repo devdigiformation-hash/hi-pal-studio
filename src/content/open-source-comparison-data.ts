@@ -1002,5 +1002,64 @@ export const OPEN_SOURCE_COMPARISONS: Record<string, OpenSourceComparisonItem> =
         "openSourceWins": true
       }
     ]
+  },
+  "genoffice": {
+    "id": "genoffice",
+    "name": "GenOffice AI Desktop Office Suite",
+    "category": "Productivity & Office AI",
+    "paidAlternatives": [
+      "Microsoft Office 365 ($99-$240/yr)",
+      "Microsoft 365 Copilot ($360/yr)",
+      "Google Workspace ($144-$288/yr)",
+      "Notion AI ($120/yr)"
+    ],
+    "marketAnnualCost": "$459 - $888 / yr",
+    "openSourceCost": "$0 Free Forever (Apache 2.0)",
+    "annualSavings": "$450 - $880+ / year",
+    "license": "Apache-2.0 Open Source",
+    "tagline": "Stop paying recurring subscription taxes for Microsoft 365 and Copilot. Run a native, AI-powered desktop office suite for Word, Excel, PowerPoint, and PDF for $0.",
+    "pathwayGuide": {
+      "howToRun": "Download the verified Windows Setup (.exe 156MB), run the 1-click installer, and start editing Docs, Sheets, Slides, and PDFs immediately with built-in AI assistance.",
+      "whyFree": "Developed under the Apache 2.0 open-source license by Genspark, allowing unrestricted personal and commercial document creation without vendor lock-in.",
+      "osIntegration": "Pairs seamlessly with DIGI BIZ OS CRM deals, invoice archiving, and JARVIS voice commands for autonomous document generation."
+    },
+    "matrix": [
+      {
+        "feature": "Annual Office + AI Cost",
+        "openSourceValue": "$0 Free Forever (Apache 2.0)",
+        "commercialPaidValue": "$459+/year (M365 + Copilot)",
+        "openSourceWins": true
+      },
+      {
+        "feature": "Native File Compatibility",
+        "openSourceValue": "Real .docx, .xlsx, .pptx & PDF (Byte-Preserving)",
+        "commercialPaidValue": "Proprietary format walls & SaaS lock-in",
+        "openSourceWins": true
+      },
+      {
+        "feature": "Spreadsheet AI Agent",
+        "openSourceValue": "Writes live SUMIF/formulas & charts with 1-click rollback",
+        "commercialPaidValue": "Basic formula suggestions often hallucinate static numbers",
+        "openSourceWins": true
+      },
+      {
+        "feature": "Pitch Deck Generator",
+        "openSourceValue": "1-Prompt to full styled .pptx canvas presentation",
+        "commercialPaidValue": "Restricted templates & paid add-ons",
+        "openSourceWins": true
+      },
+      {
+        "feature": "Data Privacy & Local Storage",
+        "openSourceValue": "100% On-Device SQLite indexing & local PDF conversion",
+        "commercialPaidValue": "All enterprise documents ingested to cloud AI training",
+        "openSourceWins": true
+      },
+      {
+        "feature": "Developer & Agent CLI (MCP)",
+        "openSourceValue": "Built-in genoffice CLI & Claude/Cursor/Codex skills",
+        "commercialPaidValue": "Closed proprietary APIs with per-seat billing",
+        "openSourceWins": true
+      }
+    ]
   }
 };

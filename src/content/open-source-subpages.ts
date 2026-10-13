@@ -1159,4 +1159,72 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       ],
     },
   },
+  genoffice: {
+    id: "genoffice",
+    name: "GenOffice — Open-Source AI Desktop Office Suite",
+    shortName: "GenOffice",
+    route: "/open-source/genoffice",
+    category: "Productivity & Office AI",
+    tagline: "The world's first full-featured open-source AI office suite. Word, Excel, PowerPoint & PDF edited by you and your AI agent, saved back in real native formats.",
+    eyebrow: "OPEN-SOURCE AI OFFICE SUITE • 9,500+ GITHUB STARS • APACHE 2.0 LICENSE • MICROSOFT 365 & COPILOT ALTERNATIVE",
+    alternativeTo: ["Microsoft Office 365 ($99-$240/yr)", "Microsoft 365 Copilot ($30/mo)", "Google Workspace", "Notion AI"],
+    license: "Apache-2.0 License",
+    licenseDetails: "100% Free & Open-Source under Apache License 2.0. Full commercial and private usage permitted.",
+    stars: "9.5k+ ★",
+    repoUrl: "https://github.com/genspark-ai/genoffice",
+    downloadUrl: "https://github.com/genspark-ai/genoffice/releases/download/v0.11.727/GenOfficeSetup-v0.11.727-x64.exe",
+    downloadType: "installer",
+    downloadTypeLabel: "Windows Setup (.exe 156MB)",
+    privacy: "100% Local (Offline)",
+    provenance: "Engineered and open-sourced by Genspark as an AI-native, byte-preserving desktop office suite.",
+    requirements: {
+      os: "Windows 10 / 11 (64-bit), macOS (Apple Silicon & Intel), or Linux",
+      cpu: "Intel Core i5 / AMD Ryzen 5 or Apple Silicon (M1/M2/M3/M4)",
+      ram: "4 GB RAM minimum (8 GB recommended for complex workbooks & multi-document RAG)",
+      gpu: "Integrated GPU or Vulkan/Metal hardware acceleration",
+      storage: "600 MB free SSD storage",
+      runtime: "Standalone Desktop Installer (.exe 156MB) or Node.js / Rust CLI",
+    },
+    faqs: [
+      {
+        q: "What is GenOffice?",
+        a: "GenOffice is the world's first full-featured, open-source AI desktop office suite created by Genspark. It includes native editors for Docs (.docx), Sheets (.xlsx), Slides (.pptx), PDF, Markdown, and HTML, equipped with a dedicated built-in AI panel that edits your files directly rather than acting as a disconnected chatbot.",
+      },
+      {
+        q: "How does GenOffice replace Microsoft Office 365 and Copilot for free?",
+        a: "Microsoft charges $99 to $240 per year for Office 365 plus an extra $30 per month per user for Microsoft 365 Copilot ($360/year). GenOffice gives you full byte-preserving compatibility with Word, Excel, and PowerPoint files and integrates local/bring-your-own-key AI agents directly into the editor for $0 perpetual cost.",
+      },
+      {
+        q: "What does 'Byte-Preserving Round-Trip Editing' mean?",
+        a: "Unlike tools that convert Word documents to stripped-down HTML and lose complex formatting, GenOffice uses specialized Rust-based parsing. Only the exact paragraphs, rows, or slides touched by your AI prompt are modified; the remaining 99% of formatting, comments, styles, and formulas remain byte-for-byte intact for flawless opening in Microsoft Word and Excel.",
+      },
+      {
+        q: "Which AI models and keys can I use with GenOffice?",
+        a: "You can sign in with Genspark, or bring your own API keys for Claude, OpenAI (GPT-4o), Google Gemini, DeepSeek, Qwen, Mistral, Grok, OpenRouter, or any local OpenAI-compatible endpoint (like Ollama or LM Studio) for 100% air-gapped private processing.",
+      },
+      {
+        q: "How does the Sheets AI agent work?",
+        a: "In GenOffice Sheets, the AI writes real executable formulas (such as SUMIF, VLOOKUP, INDEX/MATCH) and generates native charts into your workbook. It never pastes 'static numbers' over calculations, and every batch of changes includes an instant one-click rollback button.",
+      },
+      {
+        q: "Does GenOffice have command-line (CLI) and coding agent support?",
+        a: "Yes. GenOffice ships with a 'genoffice' CLI and agent skills for Claude Code, Cursor, Codex, Gemini CLI, and Copilot. Coding agents can create, convert, inspect, and patch real office documents without opening a GUI window.",
+      },
+      {
+        q: "How does local document search work?",
+        a: "The home screen indexes the names, folders, and full text of all your documents in a local SQLite index on your PC. You can also ask questions across starred files with verified source citations.",
+      },
+    ],
+    relatedToolIds: ["pocketbase", "tuttle", "artcraft", "digi-labs", "openhands"],
+    bridge: {
+      headline: "Pair GenOffice With DIGI BIZ OS Autonomous Workflows",
+      description: "While GenOffice provides an intelligent workspace for writing documents, calculating balance sheets, and designing pitch decks, DIGI BIZ OS automates your end-to-end client pipeline: voice commands, CRM deal tracking, automated billing, and sovereign WhatsApp agents.",
+      highlights: [
+        "Create contracts and pitch decks in GenOffice and attach directly to DIGI BIZ OS CRM deals",
+        "Save $450-$700/year by eliminating Microsoft 365 Copilot and Google Workspace subscriptions",
+        "100% on-device data sovereignty for your sensitive corporate accounting and client agreements",
+        "Control document generation workflows hands-free via DIGI BIZ OS JARVIS voice commands",
+      ],
+    },
+  },
 };
