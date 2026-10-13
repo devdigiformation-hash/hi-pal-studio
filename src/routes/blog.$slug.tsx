@@ -337,6 +337,84 @@ export const Route = createFileRoute("/blog/$slug")({
   component: BlogPostPage,
 });
 
+function FormattedInline({ text }: { text: string }) {
+  if (!text) return null;
+  // Regex matches [Label](url) or **bold** or `code`
+  const regex = /(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*|`[^`]+`)/g;
+  const parts = text.split(regex);
+
+  return (
+    <>
+      {parts.map((part, idx) => {
+        if (!part) return null;
+        if (part.startsWith("[") && part.includes("](")) {
+          const match = part.match(/\[([^\]]+)\]\(([^)]+)\)/);
+          if (match) {
+            const [, rawLabel, url] = match;
+            const isButton = rawLabel.startsWith("Button:") || rawLabel.startsWith("Action:");
+            const displayLabel = isButton
+              ? rawLabel.replace(/^(Button|Action):\s*/, "")
+              : rawLabel;
+
+            if (url.startsWith("/")) {
+              if (isButton) {
+                return (
+                  <Link
+                    key={idx}
+                    to={url}
+                    className="mx-1 inline-flex items-center gap-1.5 rounded-lg border border-cyan-400/40 bg-cyan-400/10 px-2.5 py-0.5 font-mono text-[11.5px] font-bold text-cyan-300 transition-all hover:bg-cyan-400 hover:text-slate-950 align-baseline"
+                  >
+                    <span>{displayLabel}</span>
+                    <Sparkles size={11} className="shrink-0" />
+                  </Link>
+                );
+              }
+              return (
+                <Link
+                  key={idx}
+                  to={url}
+                  className="font-medium text-cyan-400 underline decoration-cyan-400/35 underline-offset-4 transition-colors hover:text-cyan-300 hover:decoration-cyan-400"
+                >
+                  {displayLabel}
+                </Link>
+              );
+            }
+
+            return (
+              <a
+                key={idx}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 font-medium text-cyan-400 underline decoration-cyan-400/35 underline-offset-4 transition-colors hover:text-cyan-300 hover:decoration-cyan-400"
+              >
+                <span>{displayLabel}</span>
+                <ExternalLink size={10} className="inline opacity-70 shrink-0" />
+              </a>
+            );
+          }
+        } else if (part.startsWith("**") && part.endsWith("**")) {
+          return (
+            <strong key={idx} className="font-semibold text-white">
+              {part.slice(2, -2)}
+            </strong>
+          );
+        } else if (part.startsWith("`") && part.endsWith("`")) {
+          return (
+            <code
+              key={idx}
+              className="rounded bg-white/10 px-1 py-0.5 font-mono text-[13px] text-cyan-300"
+            >
+              {part.slice(1, -1)}
+            </code>
+          );
+        }
+        return <span key={idx}>{part}</span>;
+      })}
+    </>
+  );
+}
+
 function BlogPostPage() {
   const { slug } = Route.useParams();
   const post = BLOG_BY_SLUG[slug];
@@ -404,10 +482,7 @@ function BlogPostPage() {
             </div>
           </div>
 
-          {post.body.map((section, sIndex) => {
-            const isMidArticle =
-              post.body.length >= 2 && sIndex === Math.floor(post.body.length / 2);
-
+          {post.body.map((section) => {
             return (
               <div key={section.heading}>
                 <section className="mt-10">
@@ -419,17 +494,17 @@ function BlogPostPage() {
                       key={p.slice(0, 40)}
                       className="mt-3.5 font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]"
                     >
-                      {p}
+                      <FormattedInline text={p} />
                     </p>
                   ))}
                   {section.bullets ? (
-                    <ul className="mt-4 list-disc space-y-1.5 pl-5">
+                    <ul className="mt-4 list-disc space-y-2 pl-5">
                       {section.bullets.map((b) => (
                         <li
-                          key={b}
+                          key={b.slice(0, 40)}
                           className="font-body text-[14.5px] leading-[1.8] text-[var(--text-secondary)]"
                         >
-                          {b}
+                          <FormattedInline text={b} />
                         </li>
                       ))}
                     </ul>
@@ -452,7 +527,7 @@ function BlogPostPage() {
                             <tr key={rIdx} className="hover:bg-white/[0.02] transition-colors">
                               {row.map((cell, cIdx) => (
                                 <td key={cIdx} className="px-4 py-3 sm:px-5">
-                                  {cell}
+                                  <FormattedInline text={cell} />
                                 </td>
                               ))}
                             </tr>
@@ -462,36 +537,6 @@ function BlogPostPage() {
                     </div>
                   ) : null}
                 </section>
-
-                {/* ── SLEEK, COMPACT MID-ARTICLE EDITORIAL CALLOUT ── */}
-                {isMidArticle && (
-                  <div className="my-8 rounded-xl border border-cyan-400/25 bg-cyan-950/20 px-4 py-3 sm:px-5 sm:py-3.5 backdrop-blur-md">
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
-                      <div className="flex items-center gap-2.5 text-zinc-300">
-                        <Sparkles size={15} className="text-cyan-400 shrink-0" />
-                        <span className="font-body text-[13px] leading-snug">
-                          <strong>Zero Monthly Fees:</strong> Replace expensive subscriptions with <strong>DIGI BIZ OS</strong> — 12 offline tools for <strong>£29 lifetime</strong>.
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-2 shrink-0">
-                        <Link
-                          to="/pricing"
-                          className="inline-flex items-center gap-1.5 rounded-lg border border-cyan-400 bg-cyan-400 px-3 py-1.5 font-mono text-[11px] font-bold text-slate-950 transition hover:brightness-110"
-                        >
-                          <span>Pricing (£29)</span>
-                          <Sparkles size={11} />
-                        </Link>
-                        <Link
-                          to={cta.primaryButton.to || "/download"}
-                          className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/5 px-2.5 py-1.5 font-mono text-[11px] font-medium text-zinc-300 transition hover:bg-white/10 hover:text-white"
-                        >
-                          <Download size={11} className="text-cyan-400" />
-                          <span>Get Setup</span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
             );
           })}
