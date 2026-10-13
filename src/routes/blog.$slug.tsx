@@ -404,90 +404,26 @@ function BlogPostPage() {
             </div>
           </div>
 
-          {/* ── TOP FAST-ACTION CTA CARD (DYNAMIC PER ARTICLE TOPIC) ── */}
-          <div
-            className={`my-8 rounded-2xl border ${cta.borderClass} ${cta.bgClass} p-5 sm:p-6 backdrop-blur-md transition-all`}
-          >
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <span
-                  className={`inline-block font-mono text-[10.5px] font-bold uppercase tracking-wider px-2 py-0.5 rounded ${cta.badgeClass}`}
-                >
-                  {cta.badge}
-                </span>
-                <h3 className="mt-2 font-display text-base sm:text-lg font-bold text-white">
-                  {cta.headline}
-                </h3>
-                <p className="mt-1 text-xs sm:text-sm text-zinc-300 font-body leading-relaxed max-w-[560px]">
-                  {cta.description}
-                </p>
-              </div>
-              <div className="flex flex-wrap items-center gap-2.5 shrink-0">
-                {cta.secondaryButton &&
-                  (cta.secondaryButton.to ? (
-                    <Link
-                      to={cta.secondaryButton.to}
-                      className={`inline-flex items-center gap-1.5 rounded-xl border px-3.5 py-2 font-mono text-xs font-semibold transition ${cta.secondaryButton.className}`}
-                    >
-                      {SecondaryIcon && <SecondaryIcon size={13} />}
-                      <span>{cta.secondaryButton.label}</span>
-                    </Link>
-                  ) : (
-                    <a
-                      href={cta.secondaryButton.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`inline-flex items-center gap-1.5 rounded-xl border px-3.5 py-2 font-mono text-xs font-semibold transition ${cta.secondaryButton.className}`}
-                    >
-                      {SecondaryIcon && <SecondaryIcon size={13} />}
-                      <span>{cta.secondaryButton.label}</span>
-                      <ExternalLink size={11} className="opacity-70" />
-                    </a>
-                  ))}
-
-                {cta.primaryButton.to ? (
-                  <Link
-                    to={cta.primaryButton.to}
-                    className={`inline-flex items-center gap-2 rounded-xl border px-4 py-2 font-mono text-xs font-bold transition ${cta.primaryButton.className}`}
-                  >
-                    <PrimaryIcon size={14} />
-                    <span>{cta.primaryButton.label}</span>
-                  </Link>
-                ) : (
-                  <a
-                    href={cta.primaryButton.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-2 rounded-xl border px-4 py-2 font-mono text-xs font-bold transition ${cta.primaryButton.className}`}
-                  >
-                    <PrimaryIcon size={14} />
-                    <span>{cta.primaryButton.label}</span>
-                  </a>
-                )}
-              </div>
-            </div>
-          </div>
-
           {post.body.map((section, sIndex) => {
             const isMidArticle =
               post.body.length >= 2 && sIndex === Math.floor(post.body.length / 2);
 
             return (
               <div key={section.heading}>
-                <section className="mt-12">
-                  <h2 className="font-display text-[22px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[28px]">
+                <section className="mt-10">
+                  <h2 className="font-display text-[21px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[26px]">
                     {section.heading}
                   </h2>
                   {section.paragraphs.map((p) => (
                     <p
                       key={p.slice(0, 40)}
-                      className="mt-4 font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]"
+                      className="mt-3.5 font-body text-[15px] leading-[1.85] text-[var(--text-secondary)]"
                     >
                       {p}
                     </p>
                   ))}
                   {section.bullets ? (
-                    <ul className="mt-5 list-disc space-y-2 pl-5">
+                    <ul className="mt-4 list-disc space-y-1.5 pl-5">
                       {section.bullets.map((b) => (
                         <li
                           key={b}
@@ -515,7 +451,7 @@ function BlogPostPage() {
                           {section.table.rows.map((row, rIdx) => (
                             <tr key={rIdx} className="hover:bg-white/[0.02] transition-colors">
                               {row.map((cell, cIdx) => (
-                                <td key={cIdx} className="px-4 py-3.5 sm:px-5">
+                                <td key={cIdx} className="px-4 py-3 sm:px-5">
                                   {cell}
                                 </td>
                               ))}
@@ -527,37 +463,30 @@ function BlogPostPage() {
                   ) : null}
                 </section>
 
-                {/* ── MID-ARTICLE HIGH-IMPACT PRODUCT & PRICING BREAK ── */}
+                {/* ── SLEEK, COMPACT MID-ARTICLE EDITORIAL CALLOUT ── */}
                 {isMidArticle && (
-                  <div className="my-12 rounded-2xl border border-cyan-400/35 bg-gradient-to-r from-cyan-950/45 via-slate-900/70 to-purple-950/45 p-6 shadow-[0_0_35px_rgba(47,224,200,0.12)] backdrop-blur-xl">
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
-                      <div>
-                        <div className="inline-flex items-center gap-1.5 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-2.5 py-0.5 font-mono text-[10.5px] font-bold uppercase tracking-wider text-cyan-300">
-                          <Sparkles size={11} className="text-cyan-400" />
-                          <span>SOVEREIGN DESKTOP ECOSYSTEM</span>
-                        </div>
-                        <h3 className="mt-2 font-display text-[17px] sm:text-[19px] font-bold text-white leading-snug">
-                          Tired of Paying $250+/Mo in Monthly SaaS Subscriptions?
-                        </h3>
-                        <p className="mt-1.5 font-body text-[13.5px] leading-relaxed text-zinc-300 max-w-[540px]">
-                          Replace HubSpot, Otter, ElevenLabs, ClickUp &amp; OpenAI seat taxes with <strong>DIGI BIZ OS</strong>. 12 native modules, Whisper voice AI, and perpetual lifetime ownership for <strong>£29 one-time</strong>.
-                        </p>
+                  <div className="my-8 rounded-xl border border-cyan-400/25 bg-cyan-950/20 px-4 py-3 sm:px-5 sm:py-3.5 backdrop-blur-md">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+                      <div className="flex items-center gap-2.5 text-zinc-300">
+                        <Sparkles size={15} className="text-cyan-400 shrink-0" />
+                        <span className="font-body text-[13px] leading-snug">
+                          <strong>Zero Monthly Fees:</strong> Replace expensive subscriptions with <strong>DIGI BIZ OS</strong> — 12 offline tools for <strong>£29 lifetime</strong>.
+                        </span>
                       </div>
-
-                      <div className="flex flex-wrap sm:flex-col items-stretch gap-2.5 shrink-0 w-full sm:w-auto">
+                      <div className="flex items-center gap-2 shrink-0">
                         <Link
                           to="/pricing"
-                          className="inline-flex items-center justify-center gap-2 rounded-xl border border-cyan-400 bg-cyan-400 px-4 py-2.5 font-mono text-[12px] font-extrabold uppercase text-slate-950 shadow-[0_0_20px_rgba(47,224,200,0.35)] transition-all hover:brightness-110 active:scale-95"
+                          className="inline-flex items-center gap-1.5 rounded-lg border border-cyan-400 bg-cyan-400 px-3 py-1.5 font-mono text-[11px] font-bold text-slate-950 transition hover:brightness-110"
                         >
-                          <Sparkles size={14} />
-                          <span>Compare Pricing (£29)</span>
+                          <span>Pricing (£29)</span>
+                          <Sparkles size={11} />
                         </Link>
                         <Link
                           to={cta.primaryButton.to || "/download"}
-                          className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 py-2.5 font-mono text-[12px] font-semibold text-white transition-all hover:bg-white/10"
+                          className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/5 px-2.5 py-1.5 font-mono text-[11px] font-medium text-zinc-300 transition hover:bg-white/10 hover:text-white"
                         >
-                          <Download size={14} className="text-cyan-400" />
-                          <span>Download Free Setup</span>
+                          <Download size={11} className="text-cyan-400" />
+                          <span>Get Setup</span>
                         </Link>
                       </div>
                     </div>
@@ -567,38 +496,35 @@ function BlogPostPage() {
             );
           })}
 
-          {/* ── BOTTOM SOFTWARE-SPECIFIC CONVERSION CARD ── */}
-          <div
-            className={`mt-14 rounded-3xl border ${cta.borderClass} ${cta.bgClass} p-7 sm:p-8 backdrop-blur-xl`}
-          >
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          {/* ── UNIFIED & COMPACT BOTTOM ACTION & PRICING CARD ── */}
+          <div className="mt-12 rounded-2xl border border-cyan-400/30 bg-gradient-to-b from-slate-900/90 to-slate-950/90 p-5 sm:p-6 backdrop-blur-xl">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-5 border-b border-white/10 pb-5">
               <div>
-                <span
-                  className={`inline-block font-mono text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded ${cta.badgeClass}`}
-                >
-                  {cta.badge}
-                </span>
-                <h3 className="mt-3 font-display text-[22px] sm:text-[26px] font-extrabold text-white leading-tight">
+                <div className="flex items-center gap-2">
+                  <span className={`inline-block font-mono text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded ${cta.badgeClass}`}>
+                    {cta.badge}
+                  </span>
+                  <span className="inline-flex items-center gap-1 font-mono text-[10px] text-emerald-400">
+                    <CheckCircle2 size={11} />
+                    <span>Perpetual License • No Monthly Cloud Rent</span>
+                  </span>
+                </div>
+                <h3 className="mt-2 font-display text-[17px] sm:text-[20px] font-bold text-white leading-snug">
                   {cta.headline}
                 </h3>
-                <p className="mt-2 text-[14px] leading-relaxed text-zinc-300 font-body max-w-[560px]">
-                  {cta.description}
+                <p className="mt-1.5 text-[13px] text-zinc-300 font-body leading-relaxed max-w-[560px]">
+                  {cta.description} Run locally on Windows with zero cloud egress, Whisper voice engine, and offline SQLite data ownership.
                 </p>
-                {cta.footerBadge && (
-                  <p className="mt-3 font-mono text-[11.5px] text-zinc-400 flex items-center gap-1.5">
-                    <CheckCircle2 size={13} className="text-cyan-400" />
-                    <span>{cta.footerBadge}</span>
-                  </p>
-                )}
               </div>
 
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto shrink-0">
+              {/* Clean, Proportionate Buttons */}
+              <div className="flex flex-wrap sm:flex-nowrap items-center gap-2.5 shrink-0">
                 {cta.primaryButton.to ? (
                   <Link
                     to={cta.primaryButton.to}
-                    className={`inline-flex items-center justify-center gap-2 rounded-xl border px-5 py-3 font-mono text-[13px] font-bold transition text-center ${cta.primaryButton.className}`}
+                    className="inline-flex items-center gap-2 rounded-lg border border-cyan-400 bg-cyan-400 px-4 py-2 font-mono text-[12px] font-bold text-slate-950 transition hover:brightness-110"
                   >
-                    <PrimaryIcon size={16} />
+                    <PrimaryIcon size={13} />
                     <span>{cta.primaryButton.label}</span>
                   </Link>
                 ) : (
@@ -606,93 +532,32 @@ function BlogPostPage() {
                     href={cta.primaryButton.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center justify-center gap-2 rounded-xl border px-5 py-3 font-mono text-[13px] font-bold transition text-center ${cta.primaryButton.className}`}
+                    className="inline-flex items-center gap-2 rounded-lg border border-cyan-400 bg-cyan-400 px-4 py-2 font-mono text-[12px] font-bold text-slate-950 transition hover:brightness-110"
                   >
-                    <PrimaryIcon size={16} />
+                    <PrimaryIcon size={13} />
                     <span>{cta.primaryButton.label}</span>
                   </a>
                 )}
 
-                {cta.secondaryButton &&
-                  (cta.secondaryButton.to ? (
-                    <Link
-                      to={cta.secondaryButton.to}
-                      className={`inline-flex items-center justify-center gap-2 rounded-xl border px-4 py-3 font-mono text-[12.5px] font-medium transition text-center ${cta.secondaryButton.className}`}
-                    >
-                      {SecondaryIcon && <SecondaryIcon size={14} />}
-                      <span>{cta.secondaryButton.label}</span>
-                    </Link>
-                  ) : (
-                    <a
-                      href={cta.secondaryButton.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`inline-flex items-center justify-center gap-2 rounded-xl border px-4 py-3 font-mono text-[12.5px] font-medium transition text-center ${cta.secondaryButton.className}`}
-                    >
-                      {SecondaryIcon && <SecondaryIcon size={14} />}
-                      <span>{cta.secondaryButton.label}</span>
-                      <ExternalLink size={12} className="opacity-70" />
-                    </a>
-                  ))}
-              </div>
-            </div>
-          </div>
-
-          {/* ── DEDICATED DIGI BIZ OS PRICING & SAAS-REPLACEMENT CARD ── */}
-          <div className="mt-8 rounded-3xl border border-cyan-400/35 bg-gradient-to-b from-cyan-950/30 via-slate-950/80 to-purple-950/30 p-7 sm:p-9 shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_35px_rgba(47,224,200,0.15)] backdrop-blur-2xl">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-white/10 pb-6">
-              <div>
-                <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 font-mono text-[11px] font-bold uppercase tracking-wider text-emerald-400">
-                  <CheckCircle2 size={13} />
-                  <span>WHAT IS DIGI BIZ OS? • THE SAAS REPLACEMENT</span>
-                </div>
-                <h3 className="mt-3 font-display text-[22px] sm:text-[28px] font-black text-white leading-tight">
-                  Escape Recurring SaaS Bills. Own Your Business OS for £29.
-                </h3>
-                <p className="mt-2 font-body text-[14px] sm:text-[15px] leading-relaxed text-zinc-300 max-w-[580px]">
-                  Why rent your software when you can own it? DIGI BIZ OS bundles 12 native modules on your Windows SSD: Local SQLite CRM deals, WhatsApp AI bot pipelines, document intelligence, and Whisper offline voice assistant.
-                </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row md:flex-col gap-3 shrink-0 w-full md:w-auto">
                 <Link
                   to="/pricing"
-                  className="inline-flex items-center justify-center gap-2.5 rounded-xl border-2 border-cyan-400 bg-cyan-400 px-6 py-3 font-display text-[13.5px] font-black uppercase tracking-wider text-slate-950 shadow-[0_0_25px_rgba(47,224,200,0.4)] transition-all hover:scale-105 active:scale-95"
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-white/20 bg-white/5 px-3.5 py-2 font-mono text-[12px] font-semibold text-white transition hover:bg-white/10"
                 >
-                  <Sparkles size={16} />
-                  <span>Check Pricing (£29 Lifetime)</span>
-                </Link>
-                <Link
-                  to="/download"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/[0.04] px-5 py-2.5 font-mono text-[12.5px] font-bold text-zinc-200 hover:text-white hover:bg-white/10 transition"
-                >
-                  <Download size={14} className="text-cyan-400" />
-                  <span>Download Windows Setup (x64)</span>
+                  <Sparkles size={13} className="text-purple-400" />
+                  <span>Check Pricing (£29)</span>
                 </Link>
               </div>
             </div>
 
-            {/* Quick 4-Way SaaS Cost Comparison Matrix */}
-            <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center font-mono">
-              <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
-                <div className="text-[11px] text-zinc-400 uppercase">HubSpot / Salesforce</div>
-                <div className="mt-1 text-sm font-bold text-rose-400 line-through">$1,200/yr</div>
-                <div className="text-[10px] text-emerald-400 font-semibold">DIGI BIZ CRM: £29 Once</div>
+            {/* Compact SaaS Savings Line */}
+            <div className="mt-3.5 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-zinc-400">
+              <div className="flex items-center gap-3">
+                <span className="text-zinc-500 line-through">HubSpot: $1,200/yr</span>
+                <span className="text-zinc-500 line-through">ElevenLabs: $504/yr</span>
+                <span className="text-zinc-500 line-through">WATI: $600/yr</span>
               </div>
-              <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
-                <div className="text-[11px] text-zinc-400 uppercase">ElevenLabs / Otter</div>
-                <div className="mt-1 text-sm font-bold text-rose-400 line-through">$504/yr</div>
-                <div className="text-[10px] text-emerald-400 font-semibold">Whisper Voice: £0/mo</div>
-              </div>
-              <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
-                <div className="text-[11px] text-zinc-400 uppercase">WATI / WhatsApp Bot</div>
-                <div className="mt-1 text-sm font-bold text-rose-400 line-through">$600/yr</div>
-                <div className="text-[10px] text-emerald-400 font-semibold">Local Agent: £0/mo</div>
-              </div>
-              <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
-                <div className="text-[11px] text-zinc-400 uppercase">Total Annual Savings</div>
-                <div className="mt-1 text-sm font-bold text-cyan-300">$2,304+ / year</div>
-                <div className="text-[10px] text-zinc-400">100% Offline Capable</div>
+              <div className="text-cyan-300 font-semibold">
+                Save $2,300+/yr with DIGI BIZ OS (£29 Lifetime)
               </div>
             </div>
           </div>
