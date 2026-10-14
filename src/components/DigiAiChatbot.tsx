@@ -148,7 +148,7 @@ Standalone Windows Installer: Download DIGI-LABS-Setup-1.0.0.exe (253MB) directl
 Strict No-Resale Rule: 100% free for your personal use and client agency work. Reselling or cloud re-hosting is strictly prohibited.`,
     links: [
       { label: "Download DIGI LABS (.exe 253MB)", url: "/open-source/digi-labs" },
-      { label: "DIGI LABS GitHub Repository", url: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-" },
+      { label: "DIGI LABS GitHub Repository", url: "https://github.com/digiformationltd-creator/digi-labs" },
     ],
     pills: ["How to get Gemini API key?", "Download Windows Setup", "Can I resell DIGI LABS?"],
   },
@@ -284,7 +284,7 @@ Personal and Agency Usage: 100% free forever. You can use DIGI LABS and DIGI LEA
 
 Strict Resale Prohibition: You are strictly NOT allowed to resell our software binaries, white-label them, or host them as a paid cloud subscription SaaS. Our tools are source-available for local sovereign operation only.`,
     links: [
-      { label: "Read License on GitHub", url: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-#readme" },
+      { label: "Read License on GitHub", url: "https://github.com/digiformationltd-creator/digi-labs#readme" },
     ],
     pills: ["What is DIGI LABS?", "DIGI BIZ OS Pricing", "Official WhatsApp Support"],
   },

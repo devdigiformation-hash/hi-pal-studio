@@ -973,7 +973,7 @@ export const OPEN_SOURCE_COMPARISONS: Record<string, OpenSourceComparisonItem> =
       },
       {
         "feature": "Character Limits & Overages",
-        "openSourceValue": "Unlimited Free Speech (Edge-TTS) + Multi-Key Gemini Rotation",
+        "openSourceValue": "Unlimited Free Speech (Edge-TTS) + Direct Private Gemini BYOK",
         "commercialPaidValue": "Strict Monthly Credit Caps + Expensive Overage Bills",
         "openSourceWins": true
       },

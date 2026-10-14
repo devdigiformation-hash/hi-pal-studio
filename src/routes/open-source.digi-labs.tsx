@@ -89,7 +89,7 @@ const FEATURES = [
     icon: Sparkles,
     color: "#EC4899",
     title: "Gemini 2.5 Flash Studio Voice",
-    body: "Hyper-realistic human voice with emotional inflection, realistic breathing, and multi-key auto-rotation across 9 API key slots.",
+    body: "Hyper-realistic human voice with emotional inflection, realistic breathing, and direct private API connection with zero cloud proxies.",
   },
   {
     icon: Volume2,
@@ -394,7 +394,7 @@ function DigiLabsSubpage() {
             </div>
           </div>
 
-          {/* Pro Tip: Multi-Key Auto Rotation */}
+          {/* Pro Tip: Direct Private BYOK */}
           <div className="mt-8 rounded-2xl border border-cyan-500/30 bg-gradient-to-r from-cyan-950/30 via-black/40 to-black/60 p-5 md:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="flex items-start gap-3.5">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 shrink-0">
@@ -402,11 +402,11 @@ function DigiLabsSubpage() {
               </div>
               <div>
                 <h4 className="font-display text-base font-bold text-white flex items-center gap-2">
-                  <span>Pro Tip: Add Multiple Keys for Unlimited Generations</span>
-                  <span className="rounded-full bg-cyan-500/20 border border-cyan-500/40 px-2 py-0.5 text-[10px] font-mono font-bold text-cyan-300">AUTO-ROTATION</span>
+                  <span>Direct &amp; Sovereign BYOK (Bring Your Own Key)</span>
+                  <span className="rounded-full bg-cyan-500/20 border border-cyan-500/40 px-2 py-0.5 text-[10px] font-mono font-bold text-cyan-300">ZERO PROXY</span>
                 </h4>
                 <p className="mt-1 text-xs md:text-sm text-[var(--text-secondary)] leading-relaxed">
-                  DIGI LABS supports up to 9 API key slots. You can add multiple free keys from different Google accounts so the app automatically switches keys and never hits rate limits.
+                  DIGI LABS connects directly to Google AI Studio from your desktop workstation. Your API key and generated voice audio remain 100% on your local SSD with zero middleman servers.
                 </p>
               </div>
             </div>
@@ -416,7 +416,7 @@ function DigiLabsSubpage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2.5 font-mono text-xs font-bold text-cyan-300 hover:bg-cyan-500/20 hover:text-white transition shrink-0"
             >
-              <span>Get API Key</span>
+              <span>Get Free Key</span>
               <ExternalLink size={13} />
             </a>
           </div>

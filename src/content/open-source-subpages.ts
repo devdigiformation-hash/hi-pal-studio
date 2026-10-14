@@ -1099,8 +1099,8 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
     license: "Source-Available (No Resale)",
     licenseDetails: "100% Free forever for your personal & agency system usage. Commercial resale, white-labeling, or paid SaaS re-hosting is strictly prohibited.",
     stars: "100% Open Source",
-    repoUrl: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-",
-    downloadUrl: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe",
+    repoUrl: "https://github.com/digiformationltd-creator/digi-labs",
+    downloadUrl: "https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe",
     downloadType: "installer",
     downloadTypeLabel: "Windows Installer (.exe) 253MB",
     privacy: "100% Local (Offline)",
@@ -1120,7 +1120,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       },
       {
         q: "How does DIGI LABS replace ElevenLabs for free?",
-        a: "ElevenLabs charges between $22 and $99 every month with restrictive character credits. DIGI LABS provides two engines: Studio Voice (powered by Gemini 2.5 Flash Preview TTS for hyper-realistic human voice with emotional nuance and multi-key auto-rotation) and Free Voice (Edge-TTS) for 100% unlimited long-form narrations, audiobooks, and chapters with zero subscription costs.",
+        a: "ElevenLabs charges between $22 and $99 every month with restrictive character credits. DIGI LABS provides two engines: Studio Voice (powered by Gemini 2.5 Flash Speech for hyper-realistic human voice with emotional nuance via your own free API key) and Free Voice (Edge-TTS) for 100% unlimited long-form narrations, audiobooks, and chapters with zero subscription costs.",
       },
       {
         q: "What is the Video-to-Prompt & Course Engine?",
@@ -1135,8 +1135,8 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
         a: "Getting a Gemini API key is 100% free with zero credit card or billing required. Simply visit Google AI Studio (aistudio.google.com/app/apikey), sign in with your regular Google account, click '+ Create API key', select 'Create key in new project', copy the key (starts with AIzaSy...), and paste it into DIGI LABS desktop Settings.",
       },
       {
-        q: "How does the multi-key rotation system work?",
-        a: "You can enter multiple free Gemini API keys in Settings. DIGI LABS automatically balances and rotates through up to 9 key slots. When one key reaches its daily rate limit, DIGI LABS seamlessly shifts to the next key without failing your audio generation.",
+        q: "Is my Gemini API key secure in DIGI LABS?",
+        a: "Yes. DIGI LABS connects directly from your Windows desktop to Google AI Studio via official SDK endpoints. Your API key and generated voice audio remain 100% on your local machine with zero middleman servers, zero logging, and zero telemetry.",
       },
       {
         q: "Does DIGI LABS work offline?",

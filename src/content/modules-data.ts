@@ -1041,13 +1041,13 @@ export const MODULES_LIST: ModuleData[] = [
     h1Gradient: "BYOK Multi-Provider AI Routing",
     metaTitle: "Digi Models — Free AI Fallback Stack & Model Router | DIGI BIZ OS",
     metaDescription:
-      "Intelligent AI model routing on Windows: free built-in fallback stack for daily tasks, plus BYOK multi-key rotation for Gemini, OpenRouter, Groq, and Mistral.",
+      "Intelligent AI model routing on Windows: free built-in fallback stack for daily tasks, plus BYOK multi-provider routing for Gemini, OpenRouter, Groq, and Mistral.",
     accentColor: "#94A3B8",
     directAnswer:
-      "Digi Models is the intelligent model routing and API key management layer of DIGI BIZ OS. It operates on a dual-tier architecture: Tier 1 provides a built-in free model fallback stack that handles daily conversational, copywriting, and research tasks at zero cost; Tier 2 allows you to connect your own API keys (BYOK) with multi-key rotation for Google Gemini, OpenRouter, Groq, Mistral, Together AI, SambaNova, Cloudflare Workers AI, and optional OpenAI or Claude models.",
+      "Digi Models is the intelligent model routing and API key management layer of DIGI BIZ OS. It operates on a dual-tier architecture: Tier 1 provides a built-in free model fallback stack that handles daily conversational, copywriting, and research tasks at zero cost; Tier 2 allows you to connect your own API keys (BYOK) with multi-provider routing for Google Gemini, OpenRouter, Groq, Mistral, Together AI, SambaNova, Cloudflare Workers AI, and optional OpenAI or Claude models.",
     problemSolved: [
       "Drastically lowers monthly AI operating costs by utilizing robust free model fallbacks for routine business tasks.",
-      "Eliminates quota exhaustion through multi-key rotation slots (e.g. rotating across multiple Google Gemini keys automatically).",
+      "Eliminates service disruption through multi-provider failover (e.g. falling back from Gemini to Groq or OpenRouter automatically).",
       "Protects privacy and control: you own your API keys, store them encrypted locally, and avoid middleman markups.",
       "Maintains continuous uptime: if one provider experiences an outage, the router fails over to the next healthy provider seamlessly.",
     ],
@@ -1063,9 +1063,9 @@ export const MODULES_LIST: ModuleData[] = [
           "Zero-configuration free model routing for everyday chat, document summarization, and copywriting tasks without requiring credit cards or API keys.",
       },
       {
-        title: "Tier 2: BYOK Multi-Key Rotation",
+        title: "Tier 2: BYOK Multi-Provider Routing",
         description:
-          "Add your own API keys for Google Gemini (5 rotation slots), OpenRouter, Groq, Mistral, Together AI, and Cloudflare Workers AI with automatic failover.",
+          "Add your own API keys for Google Gemini, OpenRouter, Groq, Mistral, Together AI, and Cloudflare Workers AI with intelligent health monitoring and automatic failover.",
       },
       {
         title: "Dedicated Per-Module Routing",
@@ -1092,7 +1092,7 @@ export const MODULES_LIST: ModuleData[] = [
       {
         step: "03",
         title: "Autonomous Failover & Balancing",
-        description: "The router intelligently dispatches tasks to the fastest, most cost-effective model, rotating keys when daily limits are reached.",
+        description: "The router intelligently dispatches tasks to the fastest, most cost-effective model, switching providers automatically if rate limits or latency spikes occur.",
       },
     ],
     faq: [
@@ -1101,8 +1101,8 @@ export const MODULES_LIST: ModuleData[] = [
         a: "No. Many common business operations, chat interactions, and marketing drafts run on the built-in free tier. Connecting your own keys is entirely optional for heavy enterprise workloads.",
       },
       {
-        q: "How does the multi-key rotation work for Google Gemini?",
-        a: "You can enter a primary key plus up to four rotation keys. When the primary key reaches its free daily quota limit, the system automatically shifts requests to the next key.",
+        q: "How does multi-provider failover work in Digi Models?",
+        a: "You can configure primary and secondary provider keys. If a provider encounters a rate limit or service interruption, the orchestrator seamlessly routes the request to your configured secondary provider without interrupting your workflow.",
       },
       {
         q: "Are OpenAI and Claude (Anthropic) supported?",

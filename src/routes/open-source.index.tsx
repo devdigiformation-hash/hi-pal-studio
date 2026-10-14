@@ -154,7 +154,7 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
       "Zero-cost ElevenLabs alternative with Gemini 2.5 Flash Studio Voice & Edge-TTS",
       "Unlimited free speech generation for audiobooks, chapters, podcasts & YouTube",
       "Video-to-Prompt: Paste any video link to extract AI prompts, courses & study notes",
-      "Multi-key auto-rotation across 9 slots + 1-click Nastaliq Urdu toggle",
+      "Native Urdu voice engine with 1-click Nastaliq toggle + direct private BYOK",
     ],
     features: ["Gemini 2.5 TTS", "Video to Prompt", "Zero Credit Limits"],
     to: "/open-source/digi-labs",
@@ -889,7 +889,7 @@ function OpenSourcePage() {
 
   const [modalOpen, setModalOpen] = useState(false);
   const [digiLabsSetupOpen, setDigiLabsSetupOpen] = useState(false);
-  const [activeDownloadUrl, setActiveDownloadUrl] = useState("https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe");
+  const [activeDownloadUrl, setActiveDownloadUrl] = useState("https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe");
   const [activeDownloadLabel, setActiveDownloadLabel] = useState("DIGI LABS Setup (.exe 253MB)");
 
   const openSubscribeModal = (url: string, label: string) => {
@@ -961,7 +961,7 @@ function OpenSourcePage() {
                       onClick={() => {
                         setDigiLabsSetupOpen(false);
                         openSubscribeModal(
-                          "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe",
+                          "https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe",
                           "DIGI LABS Setup (.exe 253MB)"
                         );
                       }}
@@ -1318,7 +1318,7 @@ function OpenSourcePage() {
                       type="button"
                       onClick={() =>
                         openSubscribeModal(
-                          "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe",
+                          "https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe",
                           "DIGI LABS Setup (.exe 253MB)"
                         )
                       }
@@ -1359,7 +1359,7 @@ function OpenSourcePage() {
                     </Link>
 
                     <a
-                      href="https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-"
+                      href="https://github.com/digiformationltd-creator/digi-labs"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3.5 py-3.5 font-mono text-[13px] text-zinc-300 transition hover:bg-white/10 hover:text-white"

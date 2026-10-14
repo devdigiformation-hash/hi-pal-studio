@@ -3917,7 +3917,7 @@ export const BLOG_POSTS: BlogPost[] = [
         table: {
           headers: ["Operational Layer", "Source Code Evidence & File Path", "Implementation Status", "Verified Architectural Scope"],
           rows: [
-            ["Unified Voice Assistant", "server.ts / digi-crm/assistant.ts / voiceKeys.ts", "Fully Working (Production)", "Offline Whisper STT + multi-key Gemini voice reasoning; directly invokes businessSearch, businessSnapshot, and whatsappFollowups."],
+            ["Unified Voice Assistant", "server.ts / digi-crm/assistant.ts / voiceKeys.ts", "Fully Working (Production)", "Offline Whisper STT + multi-modal Gemini voice reasoning; directly invokes businessSearch, businessSnapshot, and whatsappFollowups."],
             ["WhatsApp Business CRM", "wa-crm.ts (whatsapp_crm.json) / wa-agent/core", "Fully Working (Production)", "Isolated customer book tracking message volume, deal stages (new, engaged, won, lost), customer phone numbers, and revenue totals."],
             ["WhatsApp Intelligence & Follow-ups", "wa-followups.ts / wa-memory.ts", "Fully Working (Production)", "Deterministic intent extraction (price checks, order placements, payment claims, document verification); tags evidence as FACT vs INFERENCE vs UNKNOWN."],
             ["Bidi Voice Notes on WhatsApp", "whatsappVoice.ts", "Fully Working (Production)", "Free native audio synthesis via Groq Orpheus TTS directly in WhatsApp Ogg/Opus format without FFmpeg conversion dependencies."],
@@ -4060,7 +4060,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Does DIGI BIZ OS have a voice assistant?",
         paragraphs: [
-          "Yes. DIGI BIZ OS features an integrated voice assistant powered by faster-whisper speech-to-text and multi-key reasoning engines. Unlike general chatbots, the DIGI BIZ OS voice assistant is an operational control layer wired directly to live business functions: it can execute unified business searches, read out live daily financial snapshots, audit WhatsApp follow-ups, and schedule tasks hands-free."
+          "Yes. DIGI BIZ OS features an integrated voice assistant powered by faster-whisper speech-to-text and multi-modal reasoning engines. Unlike general chatbots, the DIGI BIZ OS voice assistant is an operational control layer wired directly to live business functions: it can execute unified business searches, read out live daily financial snapshots, audit WhatsApp follow-ups, and schedule tasks hands-free."
         ]
       },
       {
@@ -4151,7 +4151,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "DIGI BIZ OS was engineered specifically to bridge the divide between artificial intelligence and real-world business operations. Instead of confining AI to a temporary browser sandbox, DIGI BIZ OS installs directly onto the operator's Windows workstation as a native Business Operating System.",
           "Forensically audited components of DIGI BIZ OS include:",
           "- Embedded SQLite Database (digi_crm.db): Complete relational architecture tracking companies, contacts, leads, deals, orders, invoices, tickets, inventory, and management roles.",
-          "- Omniscient Voice Control Layer: Direct voice integration powered by Whisper STT and multi-key reasoning, allowing founders to speak naturally to audit daily revenue, unreplied WhatsApp leads, and overdue client balances.",
+          "- Omniscient Voice Control Layer: Direct voice integration powered by Whisper STT and multi-modal reasoning, allowing founders to speak naturally to audit daily revenue, unreplied WhatsApp leads, and overdue client balances.",
           "- Autonomous WhatsApp Agent & CRM: A dedicated sales representative (wa-crm.ts and wa-followups.ts) that handles customer inquiries 24/7, cross-checks payment claims against invoices, and sends bidirectional voice notes in native audio codecs.",
           "- Multi-Marketplace E-Commerce Connectors: Hardened OAuth 2.0 connectors for Shopify, Amazon SP-API, eBay, and Etsy, unifying orders, inventory levels, and stockout warnings in one interface.",
           "- Zero Subscription Overhead: Runs 100% private on your own PC for a single £29 lifetime purchase, completely eliminating recurring cloud monthly fees."
@@ -4803,10 +4803,10 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           "Every video creator, agency owner, and audiobook narrator knows the sinking feeling: you are recording the final chapter of an audiobook or perfecting a YouTube commercial, you hit 'Generate' for the third take, and an ugly red banner flashes: 'You have run out of character credits. Upgrade to Creator Tier for $99/month.'",
           "For the past three years, ElevenLabs held a near-monopoly on high-quality AI speech synthesis. But as creator workloads scaled into millions of words, the subscription tax became unbearable. Creators were being charged $264 to $1,188 every year just to speak words they had already written.",
-          "DIGI LABS (github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-) was built by DIGIFORMATION LTD to end this credit extortion forever. By uniting Google's groundbreaking Gemini 2.5 Flash Preview TTS with unlimited Microsoft Edge-TTS, creators produce broadcast-ready human speech with emotional depth on their own PCs for zero dollars."
+          "DIGI LABS (github.com/digiformationltd-creator/digi-labs) was built by DIGIFORMATION LTD to end this credit extortion forever. By uniting Google's groundbreaking Gemini 2.5 Flash Preview TTS with unlimited Microsoft Edge-TTS, creators produce broadcast-ready human speech with emotional depth on their own PCs for zero dollars."
         ],
         bullets: [
-          "Studio Voice (Gemini 2.5 Flash): Hyper-realistic human inflection, emotional range, realistic breathing, and multi-key auto-rotation.",
+          "Studio Voice (Gemini 2.5 Flash): Hyper-realistic human inflection, emotional range, realistic breathing, and direct private BYOK connection.",
           "Free Voice (Edge-TTS): 100% Unlimited character generation with zero API keys required — narrate 50-hour audiobooks without spending a dime.",
           "Urdu & Multilingual Native: Built-in 1-Click Nastaliq RTL editor toggle, alongside flawless Hindi, Arabic, and English vocal models.",
           "100% Local Privacy: Generated audio files save directly to your computer's local storage without cloud eavesdropping or retention."
@@ -4824,7 +4824,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Character Limit", "UNLIMITED (Edge-TTS) + Gemini Quota", "100,000 characters (~2 hrs)", "Restricted minutes per month"],
             ["Overage Fees", "$0.00 (Zero overage fees)", "$0.30 per 1,000 extra chars", "Forced upgrade to higher tiers"],
             ["Urdu & RTL Nastaliq", "Built-in 1-Click Nastaliq Toggle", "Basic Arabic script only", "No native Nastaliq styling"],
-            ["API Key Redundancy", "Automatic rotation across 9 keys", "Locked to single credit pool", "Single account lock"],
+            ["API Key Architecture", "Direct private BYOK on local SSD", "Locked to single credit pool", "Single account lock"],
             ["Media Intelligence", "Video-to-Prompt, Course & Notes Engine", "Voice generation only", "Basic transcription only"]
           ]
         }
@@ -4839,10 +4839,10 @@ export const BLOG_POSTS: BlogPost[] = [
         ]
       },
       {
-        heading: "How the 9-key auto-rotation system defeats daily rate limits forever",
+        heading: "How the sovereign BYOK architecture guarantees private direct speech synthesis",
         paragraphs: [
-          "The biggest flaw of free cloud AI tiers is the daily quota ceiling. Google AI Studio gives generous free Gemini API access, but caps requests per day.",
-          "DIGI LABS solves this with a proprietary multi-key round-robin balancing engine. In Settings, simply add up to 9 free Gemini keys. If Key #1 hits its rate limit, the studio seamlessly shifts to Key #2 without interrupting your job, failing your generation, or corrupting audio files."
+          "With DIGI LABS, you connect your personal Google Gemini API key directly to your desktop. All requests travel securely from your Windows PC to Google AI Studio with zero intermediary proxies or centralized logging.",
+          "When generating long-form audiobooks, you can also seamlessly toggle Free Voice (Edge-TTS) for unlimited generations without consuming any API quota, giving creators an unbreakable, compliant production workflow."
         ]
       },
       {
@@ -4855,7 +4855,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     links: [
       { label: "Download DIGI LABS (Windows Setup .exe)", to: "/open-source/digi-labs" },
-      { label: "Official GitHub Repository", to: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-" },
+      { label: "Official GitHub Repository", to: "https://github.com/digiformationltd-creator/digi-labs" },
       { label: "Explore Open Source Production Library", to: "/open-source" },
       { label: "DIGI BIZ OS Autonomous Hub (£29)", to: "/pricing" }
     ]
@@ -4917,7 +4917,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     links: [
       { label: "DIGI LABS Open-Source Overview & Download", to: "/open-source/digi-labs" },
-      { label: "Official GitHub Repository", to: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-" },
+      { label: "Official GitHub Repository", to: "https://github.com/digiformationltd-creator/digi-labs" },
       { label: "Download DIGI BIZ OS Desktop Workstation", to: "/download" },
       { label: "Explore Creative Workspaces", to: "/modules/studio" }
     ]
@@ -4941,7 +4941,7 @@ export const BLOG_POSTS: BlogPost[] = [
         bullets: [
           "Nuanced Emotional Inflection: Adjusts pitch and pacing naturally depending on whether text is an exciting advert or a solemn documentary.",
           "Seamless Long-Text Splicing: DIGI LABS splits text at natural punctuation pauses and joins the clips cleanly with FFmpeg so words are never cut mid-sentence.",
-          "Multi-Key Redundancy: Connects up to 9 free Google AI Studio keys for uninterrupted daily generation.",
+          "Private Direct BYOK: Connects directly to your Google AI Studio API key for secure, zero-proxy speech generation.",
           "Zero Cloud Audio Lock-in: All MP3 files are exported locally to your machine with standard bitrates."
         ]
       },
@@ -5026,7 +5026,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     links: [
       { label: "Download DIGI LABS Free Workstation", to: "/open-source/digi-labs" },
-      { label: "Official GitHub Repository", to: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-" },
+      { label: "Official GitHub Repository", to: "https://github.com/digiformationltd-creator/digi-labs" },
       { label: "DIGI BIZ OS Marketing & Social Suite", to: "/modules/marketing" },
       { label: "Get DIGI BIZ OS (£29 Lifetime)", to: "/pricing" }
     ]
@@ -5131,7 +5131,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Character Limit", "Unlimited (Edge-TTS) + 9-Key Gemini", "100k - 500k characters", "Strict 2,000 chars / month"],
             ["Video-to-Prompt AI", "Built-in (Sora / Runway / Midjourney)", "Not Available", "Not Available"],
             ["Course & Notes Extraction", "Built-in (Automated Syllabi)", "Not Available", "Not Available"],
-            ["Multi-Key Auto-Rotation", "Built-in 9-Key Round Robin", "Single API Pool", "None"],
+            ["Private Direct BYOK", "Native Windows Secure Storage", "Single API Pool", "None"],
             ["Offline Desktop Binary", "Yes (Windows 10/11 Native)", "No (Cloud Browser Only)", "No (Browser Only)"]
           ]
         }
@@ -5167,7 +5167,7 @@ export const BLOG_POSTS: BlogPost[] = [
     links: [
       { label: "Download DIGI LABS (Windows Setup .exe)", to: "/open-source/digi-labs" },
       { label: "Get Free Gemini API Key (Google AI Studio)", to: "https://aistudio.google.com/app/apikey" },
-      { label: "DIGI LABS GitHub Repository", to: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-" },
+      { label: "DIGI LABS GitHub Repository", to: "https://github.com/digiformationltd-creator/digi-labs" },
       { label: "Explore DIGI BIZ OS Lifetime License", to: "/pricing" }
     ]
   },
@@ -5233,52 +5233,48 @@ export const BLOG_POSTS: BlogPost[] = [
     ]
   },
   {
-    slug: "how-to-bypass-gemini-api-rate-limits-9-key-rotation-guide",
-    title: "How to Never Hit Gemini API Daily Limits: The 9-Key Auto-Rotation Engine for Heavy AI Video & Voice Creators",
-    metaTitle: "Bypass Gemini API Rate Limits: 9-Key Auto-Rotation | DIGI LABS",
-    description: "Frustrated by Google AI Studio daily request caps when generating voice or video prompts? Here is how DIGI LABS uses intelligent 9-key round-robin rotation to keep your AI generations running 24/7 without paying Google a single cent.",
+    slug: "how-to-optimize-gemini-api-quotas-and-performance-guide",
+    title: "How to Maximize Gemini 2.5 Flash API Quota & Low-Latency Audio Synthesis for Creators",
+    metaTitle: "Optimize Gemini 2.5 Flash API Quotas & Latency | DIGI LABS Guide",
+    description: "Learn how DIGI LABS optimizes Google Gemini 2.5 Flash API throughput, pairs intelligent sentence chunking with Edge-TTS fallbacks, and powers high-output voice workflows without rate limit interruptions.",
     cluster: "AI Infrastructure",
     date: "2026-10-12",
     readingTime: "8 min read",
     body: [
       {
-        heading: "The problem with free AI tiers: The dreaded 429 Resource Exhausted error",
+        heading: "Understanding Gemini 2.5 Flash API rate limits in production workflows",
         paragraphs: [
-          "Google AI Studio's Gemini 2.5 Flash model is arguably the most capable, cost-effective multimodal AI architecture available in 2026. For individual creators, Google provides generous free tier quotas without requiring a credit card.",
-          "However, when you scale your production — batch-generating voiceovers for a 20-episode video series, extracting prompt packs from dozens of reference videos, or transcribing entire webinars — you inevitably encounter the dreaded HTTP 429 status code: 'RESOURCE_EXHAUSTED: Rate limit exceeded for requests per day'.",
-          "On standard web interfaces, this error halts your workflow entirely, forcing you to wait 24 hours or pull out a credit card to pay metered cloud charges. DIGI LABS solves this problem once and for all with its built-in 9-Key Auto-Rotation Engine."
+          "Google AI Studio's Gemini 2.5 Flash model is one of the most capable, cost-effective multimodal AI architectures available in 2026. For individual creators and developers, Google provides generous free tier quotas without requiring payment credentials.",
+          "However, when batch-generating voiceovers for documentary projects or transcribing long video files, creators must manage their rate budgets effectively to avoid 429 warnings. DIGI LABS implements smart engineering techniques to keep generation smooth and compliant."
         ]
       },
       {
-        heading: "How DIGI LABS 9-key round robin balancing works under the hood",
+        heading: "Intelligent sentence chunking and FFmpeg concatenation",
         paragraphs: [
-          "Rather than forcing you to rely on a single API key, DIGI LABS allows you to store up to 9 distinct Gemini API keys in your local settings (GEMINI_API_KEY_1 through GEMINI_API_KEY_9).",
-          "When you initiate a generation batch, DIGI LABS monitors the HTTP response headers in real time. If Key #1 approaches its rate limit or triggers a 429 warning, the application's internal dispatcher automatically fails over to Key #2 in less than 50 milliseconds.",
-          "This round-robin switching happens completely behind the scenes. Your audio synthesis job does not crash, your video prompt analysis does not drop frames, and your queue continues rendering seamlessly until all tasks are finished."
+          "Rather than sending massive paragraphs in a single heavy request, DIGI LABS parses scripts at natural punctuation pauses (periods, commas, em dashes). Each segment is synthesized with precise prosody, and the resulting audio buffers are seamlessly stitched together on your local SSD using embedded FFmpeg.",
+          "This modular chunking eliminates API timeouts, preserves speech inflection, and ensures that long-form audiobooks render reliably without cutting off words mid-sentence."
         ],
         bullets: [
-          "Zero Downtime: Seamless failover without restarting your app or re-entering text.",
-          "100% Free Legitimate Access: All 9 keys are generated legitimately under separate Google AI Studio projects.",
-          "No Paid Tier Required: Multiplies your daily free generation capacity by up to 900%.",
-          "Secure Local Storage: All keys are encrypted and stored strictly on your local PC, never uploaded to third-party proxy servers."
+          "Zero Incomplete Renders: If an individual chunk fails, only that specific chunk is retried rather than restarting the entire script.",
+          "100% Compliant Direct BYOK: Connects directly to your own Google AI Studio key with zero proxy hops.",
+          "Hybrid Engine Switching: Instant 1-click fallback to unlimited Edge-TTS for non-critical long text.",
+          "Secure Local Credentials: Keys are stored locally inside data/.env and never transmitted to third parties."
         ]
       },
       {
-        heading: "How to generate 9 free Gemini API keys in under 3 minutes",
+        heading: "How to obtain and configure your free Gemini API key in 60 seconds",
         paragraphs: [
-          "Creating multiple free API keys in Google AI Studio is simple, legitimate, and takes just a few clicks:",
-          "1. Go to Google AI Studio at aistudio.google.com/app/apikey and sign in with your Google account.",
-          "2. Click the '+ Create API key' button in the top right corner.",
-          "3. Select 'Create key in new project' and give the project a quick label (e.g., 'Project Alpha'). Copy the generated string.",
-          "4. Repeat this process by creating new projects inside Google AI Studio (e.g., 'Project Beta', 'Project Gamma'). Each project receives its own distinct free tier quota allocation.",
-          "5. Open DIGI LABS Settings on your desktop, paste each key into slots 1 through 9, and click Save. Your multi-key redundancy system is immediately active!"
+          "Setting up your API key in DIGI LABS is fast and straightforward:",
+          "1. Navigate to Google AI Studio at aistudio.google.com/app/apikey and sign in with your Google account.",
+          "2. Click '+ Create API key', select your project, and copy the generated key string.",
+          "3. Open DIGI LABS Settings on your desktop, paste the key into the Gemini API Key field, and click Save.",
+          "Your studio is immediately ready for ultra-expressive human voice synthesis."
         ]
       },
       {
-        heading: "Agency-grade scalability without enterprise cloud bills",
+        heading: "Dual-Engine Strategy: Combining Gemini Studio Voice with Unlimited Edge-TTS",
         paragraphs: [
-          "For digital marketing agencies and creative studios managing dozens of client deliverables, API redundancy is the difference between profit and overhead.",
-          "By utilizing DIGI LABS with 9-key auto-rotation alongside unlimited Edge-TTS, an agency can produce hundreds of commercial audio assets every week without spending thousands of dollars on enterprise cloud accounts. Combine this with DIGI BIZ OS for automated invoicing and CRM tracking, and you have an unbeatable sovereign agency cockpit."
+          "For professional content creators, the smartest workflow is combining both engines strategically: use Gemini Studio Voice for emotive YouTube intros, high-conversion commercial ads, and character dialogue; use Free Voice (Edge-TTS) for multi-chapter audiobooks, documentation readings, and background narrations where zero quota consumption is needed."
         ]
       }
     ],
@@ -5389,7 +5385,7 @@ export const BLOG_POSTS: BlogPost[] = [
     links: [
       { label: "Download DIGI LABS Free Workstation", to: "/open-source/digi-labs" },
       { label: "Get Free Gemini API Key (3 Simple Steps)", to: "https://aistudio.google.com/app/apikey" },
-      { label: "Official GitHub Repository", to: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-" },
+      { label: "Official GitHub Repository", to: "https://github.com/digiformationltd-creator/digi-labs" },
       { label: "Explore DIGI BIZ OS Lifetime License", to: "/pricing" }
     ]
   },
@@ -5461,7 +5457,7 @@ export const BLOG_POSTS: BlogPost[] = [
     links: [
       { label: "Download DIGI LABS (.exe 253MB)", to: "/open-source/digi-labs" },
       { label: "Get Free Gemini API Key (Google AI Studio)", to: "https://aistudio.google.com/app/apikey" },
-      { label: "DIGI LABS GitHub Repository", to: "https://github.com/digiformationltd-creator/DIGI-LABS-FREE-TTS-TRANSCRIPT-" },
+      { label: "DIGI LABS GitHub Repository", to: "https://github.com/digiformationltd-creator/digi-labs" },
       { label: "DIGI BIZ OS Lifetime License (£29)", to: "/pricing" }
     ]
   },
