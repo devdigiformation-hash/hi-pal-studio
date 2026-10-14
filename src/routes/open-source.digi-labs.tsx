@@ -79,7 +79,7 @@ const RELATED_BLOGS = [
 
 const TITLE = "DIGI LABS — Free Human TTS & Video-to-Prompt Studio (ElevenLabs Alternative) | DIGI BIZ OS";
 const DESC =
-  toolData.tagline + " Download 100% free Windows desktop installer (.exe) with Gemini voice, unlimited Edge-TTS, and video prompt extraction.";
+  toolData.tagline + " Download 100% free Windows desktop installer (.exe) with Gemini Studio Voice, 24kHz raw PCM, and video prompt extraction.";
 
 const DOWNLOAD_URL = toolData.downloadUrl;
 const REPO_URL = toolData.repoUrl;
@@ -94,8 +94,8 @@ const FEATURES = [
   {
     icon: Volume2,
     color: "#3B82F6",
-    title: "Unlimited Free Voice (Edge-TTS)",
-    body: "Narrate entire audiobooks, multi-hour podcast episodes, and chapters with zero character credits, zero rate limits, and zero costs.",
+    title: "24kHz Studio PCM & Local FFmpeg",
+    body: "Uncompressed broadcast-grade 24kHz 16-bit raw PCM mastered locally to MP3 with loudness normalization and zero audio quality loss.",
   },
   {
     icon: Video,

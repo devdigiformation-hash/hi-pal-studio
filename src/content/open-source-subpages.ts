@@ -1093,7 +1093,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
     shortName: "DIGI LABS",
     route: "/open-source/digi-labs",
     category: "Speech & Media AI",
-    tagline: "Unlimited free human TTS like Gemini voice & ElevenLabs alternative with video-to-prompt, course & notes reverse engineering.",
+    tagline: "Broadcast-grade human speech synthesis powered by Google Gemini 2.5 Flash Studio Voice with video-to-prompt, course & notes reverse engineering.",
     eyebrow: "SOURCE-AVAILABLE • FREE FOR YOUR OWN SYSTEM • STRICTLY NO RESELLING • ELEVENLABS ALTERNATIVE",
     alternativeTo: ["ElevenLabs ($22-$99/mo)", "Murf AI", "Descript", "Speechify"],
     license: "Source-Available (No Resale)",
@@ -1116,11 +1116,11 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
     faqs: [
       {
         q: "What is DIGI LABS?",
-        a: "DIGI LABS is a standalone open-source desktop voice and media intelligence workstation created by DigiFormation Ltd. It delivers human-grade voice synthesis (Gemini 2.5 Flash Voice & Edge-TTS) with zero monthly fees, alongside a video-to-prompt, course, notes, and transcription reverse-engineering engine.",
+        a: "DIGI LABS is a standalone sovereign desktop voice and media intelligence workstation created by DigiFormation Ltd. It delivers 100% authentic human voice synthesis powered by Google Gemini 2.5 Flash Studio Voice with zero monthly fees, alongside a video-to-prompt, course, notes, and local Whisper reverse-engineering engine.",
       },
       {
         q: "How does DIGI LABS replace ElevenLabs for free?",
-        a: "ElevenLabs charges between $22 and $99 every month with restrictive character credits. DIGI LABS provides two engines: Studio Voice (powered by Gemini 2.5 Flash Speech for hyper-realistic human voice with emotional nuance via your own free API key) and Free Voice (Edge-TTS) for 100% unlimited long-form narrations, audiobooks, and chapters with zero subscription costs.",
+        a: "ElevenLabs charges between $22 and $99 every month with restrictive character credits. DIGI LABS eliminates subscription fees by connecting directly to Google Gemini 2.5 Flash Studio Voice via your own free Google AI Studio key, delivering 24kHz studio raw PCM audio with real human breathing and 5 expressive delivery styles (Normal, Business, Promo, Explainer, and Calm).",
       },
       {
         q: "What is the Video-to-Prompt & Course Engine?",
