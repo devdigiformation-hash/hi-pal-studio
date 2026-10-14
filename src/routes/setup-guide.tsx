@@ -56,7 +56,7 @@ export const Route = createFileRoute("/setup-guide")({
           body: [
             "The one key that matters first is the Gemini Voice key — it powers the voice assistant and is completely free. Open aistudio.google.com/api-keys, sign in with a Google account, click Create API Key, and copy it.",
             "In the app open Models (Intelligence Modules), paste the key into 'Gemini Voice — Primary', and Save. That alone makes the assistant work.",
-            "Optional: add keys from other Google accounts into the four 'Gemini Voice — Rotation' slots so the free daily quota never runs out. For the WhatsApp Agent, paste a Gemini key into the 'WhatsApp Agent — Gemini' box.",
+            "For the WhatsApp Agent, paste your Gemini key into the 'WhatsApp Agent — Gemini' box to enable intelligent conversational responses.",
             "Every other free model already works with no key at all. Paid keys (OpenRouter, Groq, and others) are only for extra capacity and are never required — each row has a 'Get API Key' button that opens the provider's official page.",
             "Prefer to listen? The Models panel has an Urdu voice note that walks you through this step by step.",
           ],

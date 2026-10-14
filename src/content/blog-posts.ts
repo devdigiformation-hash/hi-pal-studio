@@ -4924,10 +4924,10 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "gemini-voice-tts-free-local-desktop-setup-guide",
-    title: "The 9-Key Secret: How to Run Gemini 2.5 Flash Emotional Voice on Desktop for $0 with Zero Rate Limits (Free Setup Guide)",
+    title: "How to Run Gemini 2.5 Flash Emotional Studio Voice on Desktop for $0 (Free Setup Guide)",
     metaTitle: "Gemini 2.5 Flash Voice Desktop Setup Guide (Free TTS) | DIGI BIZ OS",
     description:
-      "Experience studio-grade human speech with Gemini 2.5 Flash Preview TTS. How DIGI LABS rotates 9 free API keys to eliminate daily rate limits forever on your local PC.",
+      "Experience studio-grade human speech with Gemini 2.5 Flash Preview TTS. How DIGI LABS connects directly to Google AI Studio for authentic emotional voice synthesis with zero subscription costs on your PC.",
     cluster: "Voice AI",
     date: "2026-10-12",
     readingTime: "7 min read",
@@ -5128,7 +5128,7 @@ export const BLOG_POSTS: BlogPost[] = [
           rows: [
             ["Monthly Cost", "$0.00 Free Forever", "$22 - $99 / Month", "Free for 300 words, then $19/mo"],
             ["Credit Card Required", "Never (Zero Billing)", "Mandatory", "Mandatory after trial"],
-            ["Character Limit", "Unlimited (Edge-TTS) + 9-Key Gemini", "100k - 500k characters", "Strict 2,000 chars / month"],
+            ["Character Limit", "Unlimited Edge-TTS + Studio Gemini Voice", "100k - 500k characters", "Strict 2,000 chars / month"],
             ["Video-to-Prompt AI", "Built-in (Sora / Runway / Midjourney)", "Not Available", "Not Available"],
             ["Course & Notes Extraction", "Built-in (Automated Syllabi)", "Not Available", "Not Available"],
             ["Private Direct BYOK", "Native Windows Secure Storage", "Single API Pool", "None"],
@@ -5431,10 +5431,10 @@ export const BLOG_POSTS: BlogPost[] = [
         ]
       },
       {
-        heading: "The 9-key auto-rotation secret that bypasses rate limits",
+        heading: "Studio-grade human speech with authentic emotion & direct private connection",
         paragraphs: [
-          "The biggest hurdle with free AI tiers is the daily request quota. If you generate 50 voiceover takes in an afternoon, Google AI Studio might return a 429 rate limit error.",
-          "To solve this, I built an automated 9-key round-robin failover system. In DIGI LABS Settings, you can paste up to 9 free Gemini API keys from separate Google projects. If Key #1 hits its daily cap, DIGI LABS seamlessly switches to Key #2 in milliseconds. Your audio render never fails, and you get up to 9 times the free daily generation capacity."
+          "The biggest limitation of robotic text-to-speech tools is their artificial, flat cadence. In DIGI LABS, Studio Voice is powered by Gemini 2.5 Flash Speech (gemini-2.5-flash-preview-tts) connecting directly to Google AI Studio with your own private free API key. It produces 24kHz studio raw PCM audio with true human breathing, natural inflection, and 5 distinct emotional styles (Normal, Business, Promo, Explainer, and Calm).",
+          "Because you connect directly with your own private API key, all audio synthesis is generated securely with zero middleman proxies, zero subscription fees, and complete creative ownership over your exported files."
         ]
       },
       {

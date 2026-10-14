@@ -62,7 +62,7 @@ const RELATED_BLOGS = [
   },
   {
     slug: "gemini-voice-tts-free-local-desktop-setup-guide",
-    title: "The 9-Key Secret: How to Run Gemini 2.5 Flash Emotional Voice on Desktop for $0 with Zero Rate Limits (Free Setup Guide)",
+    title: "How to Run Gemini 2.5 Flash Emotional Studio Voice on Desktop for $0 (Free Setup Guide)",
     desc: "Step-by-step setup guide for running emotional expressive human TTS locally on Windows with zero monthly character fees.",
   },
   {

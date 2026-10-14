@@ -80,7 +80,7 @@ Step 2: In the top right corner, click Create API key and choose Create key in n
 
 Step 3: Launch DIGI LABS on your PC, open Settings, paste your key into Gemini API Key, and click Save.
 
-Tip on 9-Key Auto-Rotation: You can create multiple keys across different Google projects and add them into DIGI LABS slots from key 1 to key 9. When one key reaches its daily request limit, DIGI LABS automatically switches to the next key so your generation never stops.`,
+Tip on Studio Voice: DIGI LABS connects directly to your private Google Gemini API key to deliver authentic human voice with natural breathing and emotional styles (Normal, Business, Promo, Explainer, Calm). For unlimited volume without an API key, you can switch anytime to the built-in Free Voice (Edge-TTS) engine.`,
     links: [
       { label: "Get Free Gemini API Key (Google AI Studio)", url: "https://aistudio.google.com/app/apikey" },
       { label: "DIGI LABS Overview & Download", url: "/open-source/digi-labs" },

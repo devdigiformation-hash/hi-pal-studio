@@ -1019,7 +1019,7 @@ function OpenSourcePage() {
                     Paste your generated key into the <strong>Gemini API Key</strong> field inside DIGI LABS Settings, click <strong>Save</strong>, and start generating hyper-realistic voiceovers, extracting video prompts, and producing unlimited audiobooks immediately!
                   </p>
                   <div className="mt-3 rounded-lg border border-white/10 bg-black/60 p-2.5 font-mono text-[11px] text-zinc-300">
-                    <span className="text-purple-400 font-bold">Pro Tip (9-Key Rotation):</span> DIGI LABS supports up to 9 keys with auto-rotation. If one hits daily quota, DIGI LABS switches automatically so generation never stops.
+                    <span className="text-purple-400 font-bold">Pro Tip (Studio Voice):</span> Use your private Gemini API key for authentic human voice with emotional nuance (Normal, Business, Promo, Explainer, Calm). Switch to Free Voice anytime for unlimited zero-key narration.
                   </div>
                 </div>
               </div>
