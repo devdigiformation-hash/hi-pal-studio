@@ -1093,7 +1093,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
     shortName: "DIGI LABS",
     route: "/open-source/digi-labs",
     category: "Speech & Media AI",
-    tagline: "Broadcast-grade human speech synthesis powered by Google Gemini 2.5 Flash Studio Voice with video-to-prompt, course & notes reverse engineering.",
+    tagline: "Free TTS (Text-to-Speech) & human voice studio powered 100% by Google Gemini 2.5 Flash with video-to-prompt, course & notes reverse engineering.",
     eyebrow: "SOURCE-AVAILABLE • FREE FOR YOUR OWN SYSTEM • STRICTLY NO RESELLING • ELEVENLABS ALTERNATIVE",
     alternativeTo: ["ElevenLabs ($22-$99/mo)", "Murf AI", "Descript", "Speechify"],
     license: "Source-Available (No Resale)",
