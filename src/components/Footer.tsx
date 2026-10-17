@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import SmartLink from "./SmartLink";
-import { Github, Globe, Linkedin, Mail, MessageCircle, Phone, Twitter } from "lucide-react";
+import { Github, Globe, Linkedin, Mail, MessageCircle, Phone, Twitter, Youtube } from "lucide-react";
 import logoClean from "@/assets/logo-clean.png";
 import logoCleanWebp from "@/assets/logo-clean.webp";
 import ActivePulse from "./ActivePulse";
@@ -73,10 +73,11 @@ const COMPANY_LEGAL = [
 ] as const;
 
 const SOCIALS = [
-  { label: "GitHub", icon: Github },
-  { label: "Discord Community", icon: MessageCircle },
-  { label: "Twitter / X", icon: Twitter },
-  { label: "LinkedIn", icon: Linkedin },
+  { label: "YouTube", icon: Youtube, href: "https://www.youtube.com/@Digiformationltd" },
+  { label: "GitHub", icon: Github, href: "https://github.com/digiformationltd-creator" },
+  { label: "Twitter / X", icon: Twitter, href: "https://x.com/DigiformationLtd" },
+  { label: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/company/digiformation-ltd/" },
+  { label: "Discord Community", icon: MessageCircle, href: "https://discord.gg" },
 ];
 
 export default function Footer() {
@@ -144,10 +145,10 @@ export default function Footer() {
           </div>
 
           <div className="mt-5 flex flex-wrap gap-2.5">
-            {SOCIALS.map(({ label, icon: Icon }) => (
+            {SOCIALS.map(({ label, icon: Icon, href }) => (
               <a
                 key={label}
-                href="https://www.digiformation.co.uk/"
+                href={href}
                 target="_blank"
                 rel="noreferrer"
                 aria-label={label}

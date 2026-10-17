@@ -190,8 +190,8 @@ const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@Digiformationltd";
 const createTrialSchema = z.object({
   customerName: z.string().trim().min(2).max(80),
   email: z.string().trim().email().max(160),
-  whatsapp: z.string().trim().min(7, "WhatsApp number is required").max(32),
-  whereFound: z.string().trim().optional(),
+  whatsapp: z.string().trim().optional(),
+  whereFound: z.string().trim().min(1, "Where did you find us is required"),
   subscribed: z.boolean().optional().default(true),
 });
 
@@ -261,7 +261,7 @@ export const createTrial = createServerFn({ method: "POST" })
       reused: false as const,
       licenseKey,
       downloadUrl: TRIAL_INSTALLER_URL,
-      expiresInHours: 48,
+      expiresInHours: 72,
       registered: reg.registered,
       registerReason: reg.reason,
       youtube: YOUTUBE_CHANNEL_URL,
