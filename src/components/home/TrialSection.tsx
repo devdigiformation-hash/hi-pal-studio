@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
-import { Download, Copy, Check, Gift, ArrowRight, MessageCircle, X } from "lucide-react";
+import { Download, Copy, Check, Gift, MessageCircle, X } from "lucide-react";
 import CyanButton from "@/components/CyanButton";
-import EyebrowLabel from "@/components/EyebrowLabel";
 import MonoBadge from "@/components/MonoBadge";
 import { createTrial } from "@/lib/orders.functions";
 
@@ -12,11 +11,59 @@ interface TrialModalProps {
   onClose: () => void;
 }
 
+interface SourceOption {
+  id: string;
+  label: string;
+  category: "ai" | "search" | "social" | "direct";
+  emoji: string;
+}
+
+const SOURCE_GROUPS = [
+  { key: "ai", label: "AI Platforms" },
+  { key: "search", label: "Search Engines" },
+  { key: "social", label: "Social Media" },
+  { key: "direct", label: "Direct / Referral" },
+] as const;
+
+const SOURCE_OPTIONS: SourceOption[] = [
+  // AI
+  { id: "chatgpt", label: "ChatGPT", category: "ai", emoji: "🤖" },
+  { id: "gemini", label: "Gemini", category: "ai", emoji: "✨" },
+  { id: "claude", label: "Claude", category: "ai", emoji: "🧠" },
+  { id: "perplexity", label: "Perplexity", category: "ai", emoji: "🔎" },
+  { id: "grok", label: "Grok", category: "ai", emoji: "⚡" },
+  { id: "deepseek", label: "DeepSeek", category: "ai", emoji: "🌊" },
+  { id: "copilot", label: "Microsoft Copilot", category: "ai", emoji: "🧭" },
+  { id: "google_ai_overview", label: "Google AI / AI Overview", category: "ai", emoji: "🧬" },
+  { id: "other_ai", label: "Other AI", category: "ai", emoji: "🤖" },
+  // Search
+  { id: "google", label: "Google Search", category: "search", emoji: "🔍" },
+  { id: "google_ads", label: "Google Ads", category: "search", emoji: "🅖" },
+  { id: "bing", label: "Bing Search", category: "search", emoji: "🔍" },
+  { id: "yahoo", label: "Yahoo Search", category: "search", emoji: "🔍" },
+  { id: "other_search", label: "Other Search", category: "search", emoji: "🔍" },
+  // Social
+  { id: "facebook", label: "Facebook", category: "social", emoji: "📘" },
+  { id: "instagram", label: "Instagram", category: "social", emoji: "📷" },
+  { id: "tiktok", label: "TikTok", category: "social", emoji: "🎵" },
+  { id: "youtube", label: "YouTube", category: "social", emoji: "▶️" },
+  { id: "linkedin", label: "LinkedIn", category: "social", emoji: "💼" },
+  { id: "twitter", label: "X (Twitter)", category: "social", emoji: "𝕏" },
+  // Direct
+  { id: "whatsapp", label: "WhatsApp", category: "direct", emoji: "💬" },
+  { id: "referral", label: "Referral / Friend", category: "direct", emoji: "👥" },
+  { id: "existing_client", label: "Existing Client", category: "direct", emoji: "⭐" },
+  { id: "direct", label: "Direct Visit", category: "direct", emoji: "🌐" },
+  { id: "other", label: "Other", category: "direct", emoji: "•" },
+];
+
 export default function TrialModal({ isOpen, onClose }: TrialModalProps) {
   const trialFn = useServerFn(createTrial);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
+  const [whereFound, setWhereFound] = useState("");
+  const [otherWhereFound, setOtherWhereFound] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -32,8 +79,13 @@ export default function TrialModal({ isOpen, onClose }: TrialModalProps) {
   }, [isOpen, onClose]);
 
   const m = useMutation({
-    mutationFn: (vars: { customerName: string; email: string; whatsapp: string; subscribed: true }) =>
-      trialFn({ data: vars }),
+    mutationFn: (vars: {
+      customerName: string;
+      email: string;
+      whatsapp: string;
+      whereFound?: string;
+      subscribed: true;
+    }) => trialFn({ data: vars }),
     onSuccess: () => setSubmitted(true),
   });
 
@@ -41,10 +93,18 @@ export default function TrialModal({ isOpen, onClose }: TrialModalProps) {
 
   // WhatsApp is strictly mandatory (must have at least 7 digits)
   const validPhone = whatsapp.trim().replace(/\D/g, "").length >= 7;
-  const validForm = name.trim().length >= 2 && /\S+@\S+\.\S+/.test(email) && validPhone;
+  const validSource = whereFound !== "" && (whereFound !== "other" || otherWhereFound.trim().length > 0);
+  const validForm = name.trim().length >= 2 && /\S+@\S+\.\S+/.test(email) && validPhone && validSource;
+
+  const resolvedSource =
+    whereFound === "other"
+      ? otherWhereFound.trim()
+        ? `Other: ${otherWhereFound.trim()}`
+        : "Other"
+      : SOURCE_OPTIONS.find((o) => o.id === whereFound)?.label || whereFound;
 
   // Prepare prefilled WhatsApp message to our number 0316 4467464 (+923164467464)
-  const waMessage = `Hi DIGIFORMATION team! I want to use your free trial.\n\n👤 Name: ${name.trim()}\n📧 Email: ${email.trim()}\n📱 WhatsApp: ${whatsapp.trim()}\n\nPlease issue my 48-hour free trial key.`;
+  const waMessage = `Hi DIGIFORMATION team! I want to use your free trial.\n\n👤 Name: ${name.trim()}\n📧 Email: ${email.trim()}\n📱 WhatsApp: ${whatsapp.trim()}\n🌐 Where did you find us?: ${resolvedSource}\n\nPlease issue my 3-day free trial key.`;
   const waUrl = `https://wa.me/923164467464?text=${encodeURIComponent(waMessage)}`;
 
   const handleSubmitLead = () => {
@@ -62,6 +122,7 @@ export default function TrialModal({ isOpen, onClose }: TrialModalProps) {
       customerName: name.trim(),
       email: email.trim(),
       whatsapp: whatsapp.trim(),
+      whereFound: resolvedSource,
       subscribed: true,
     });
   };
@@ -78,7 +139,7 @@ export default function TrialModal({ isOpen, onClose }: TrialModalProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-[500px] overflow-hidden rounded-3xl border border-emerald-500/40 bg-[#0B0914] p-6 sm:p-8 shadow-[0_20px_60px_rgba(0,0,0,0.9),0_0_50px_rgba(52,211,153,0.2)]">
+      <div className="relative w-full max-w-[500px] max-h-[92vh] overflow-y-auto rounded-3xl border border-emerald-500/40 bg-[#0B0914] p-6 sm:p-8 shadow-[0_20px_60px_rgba(0,0,0,0.9),0_0_50px_rgba(52,211,153,0.2)]">
         {/* Close Button */}
         <button
           type="button"
@@ -90,23 +151,23 @@ export default function TrialModal({ isOpen, onClose }: TrialModalProps) {
         </button>
 
         {!submitted ? (
-          <div className="grid gap-4">
+          <div className="grid gap-3.5">
             <div className="text-left">
-              <div className="mb-2.5 flex flex-wrap items-center gap-2">
+              <div className="mb-2 flex flex-wrap items-center gap-2">
                 <MonoBadge color="var(--success)">
-                  <Gift size={12} className="mr-1 inline" /> Free · 48 Hours
+                  <Gift size={12} className="mr-1 inline" /> Free · 3 Days
                 </MonoBadge>
                 <MonoBadge color="var(--text-secondary)">Instant Activation</MonoBadge>
               </div>
               <h3 className="font-display text-[22px] font-bold text-[var(--text-primary)]">
-                Claim Your 48-Hour Free Trial
+                Claim Your 3-Day Free Trial
               </h3>
-              <p className="mt-1 font-body text-[13.5px] text-[var(--text-secondary)]">
-                Enter your details to receive your trial license key directly on WhatsApp.
+              <p className="mt-1 font-body text-[13px] text-[var(--text-secondary)]">
+                Enter your details to receive your 72-hour trial license key directly on WhatsApp.
               </p>
             </div>
 
-            <Field label="Your name">
+            <Field label="Your name *">
               <input
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -115,7 +176,7 @@ export default function TrialModal({ isOpen, onClose }: TrialModalProps) {
               />
             </Field>
 
-            <Field label="Email">
+            <Field label="Email *">
               <input
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -125,7 +186,7 @@ export default function TrialModal({ isOpen, onClose }: TrialModalProps) {
               />
             </Field>
 
-            <Field label="WhatsApp number">
+            <Field label="WhatsApp number *">
               <input
                 value={whatsapp}
                 onChange={(e) => setWhatsapp(e.target.value)}
@@ -133,9 +194,51 @@ export default function TrialModal({ isOpen, onClose }: TrialModalProps) {
                 className={inputCls}
               />
               {!validPhone && whatsapp.length > 0 && (
-                <p className="mt-1.5 font-mono text-[11.5px] text-[var(--amber)]">
+                <p className="mt-1 font-mono text-[11px] text-[var(--amber)]">
                   Please enter a valid WhatsApp number (minimum 7 digits).
                 </p>
+              )}
+            </Field>
+
+            <Field label="Where did you find us? *">
+              <select
+                value={whereFound}
+                onChange={(e) => setWhereFound(e.target.value)}
+                className={`${inputCls} bg-[#141026] text-white cursor-pointer`}
+              >
+                <option value="" disabled className="text-zinc-500">
+                  Select where you found us…
+                </option>
+                {SOURCE_GROUPS.map((g) => {
+                  const items = SOURCE_OPTIONS.filter((o) => o.category === g.key);
+                  return (
+                    <optgroup
+                      key={g.key}
+                      label={g.label}
+                      className="bg-[#1a1438] text-emerald-400 font-semibold py-1"
+                    >
+                      {items.map((opt) => (
+                        <option
+                          key={opt.id}
+                          value={opt.id}
+                          className="bg-[#0B0914] text-white py-1.5"
+                        >
+                          {opt.emoji} {opt.label}
+                        </option>
+                      ))}
+                    </optgroup>
+                  );
+                })}
+              </select>
+              {whereFound === "other" && (
+                <input
+                  type="text"
+                  value={otherWhereFound}
+                  onChange={(e) => setOtherWhereFound(e.target.value)}
+                  placeholder="Please specify where you found us…"
+                  className={`${inputCls} mt-2`}
+                  autoFocus
+                />
               )}
             </Field>
 
@@ -199,7 +302,7 @@ export default function TrialModal({ isOpen, onClose }: TrialModalProps) {
             {result?.licenseKey && (
               <div className="mx-auto w-full rounded-[var(--r-lg)] border border-[var(--border-glass)] bg-black/40 p-4 text-left">
                 <p className="mb-2 font-mono text-[11px] uppercase tracking-wider text-[var(--text-muted)]">
-                  Your Instant 48-Hour Trial Key:
+                  Your Instant 3-Day Trial Key:
                 </p>
                 <div className="flex items-center gap-2 rounded-[var(--r-md)] border border-[var(--success-border,rgba(52,211,153,0.4))] bg-black/60 px-3.5 py-2.5">
                   <code className="flex-1 truncate font-mono text-[14px] text-[var(--success)]">

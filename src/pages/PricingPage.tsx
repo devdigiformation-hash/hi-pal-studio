@@ -128,7 +128,7 @@ export default function PricingPage() {
         eyebrow="Pricing"
         title="DIGI BIZ OS Pricing —"
         gradientTitle="Lifetime Licences"
-        subtitle={`Four clear packages — 48-hour free trial, ${formatPrice(plans.lifetime.gbp, code, plans.lifetime.pkr)} lifetime access, ${formatPrice(plans.custom_build.gbp, code, plans.custom_build.pkr)} done-for-you software setup with 5 custom business workflows, or ${formatPrice(plans.source_code.gbp, code, plans.source_code.pkr)} full source code.`}
+        subtitle={`Four clear packages — 3-day free trial, ${formatPrice(plans.lifetime.gbp, code, plans.lifetime.pkr)} lifetime access, ${formatPrice(plans.custom_build.gbp, code, plans.custom_build.pkr)} done-for-you software setup with 5 custom business workflows, or ${formatPrice(plans.source_code.gbp, code, plans.source_code.pkr)} full source code.`}
         height="min-h-[50vh]"
       />
 
@@ -141,13 +141,13 @@ export default function PricingPage() {
           </div>
 
           <div className="mt-12 grid items-stretch gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {/* ── PACKAGE 1: 48-HOUR FREE TRIAL ── */}
+            {/* ── PACKAGE 1: 3-DAY FREE TRIAL ── */}
             <GlassCard
               className="reveal-item flex h-full flex-col p-8 border-[rgba(52,211,153,0.35)]"
               glowColor="var(--success)"
             >
               <div className="flex items-center justify-between gap-3">
-                <EyebrowLabel text="48-Hour Free Trial" color="var(--success)" reveal={false} />
+                <EyebrowLabel text="3-Day Free Trial" color="var(--success)" reveal={false} />
                 <MonoBadge color="var(--success)">Risk Free</MonoBadge>
               </div>
               <div className="mt-4 flex items-end gap-2">
@@ -155,7 +155,7 @@ export default function PricingPage() {
                   Free
                 </span>
                 <span className="pb-1 font-mono text-[13px] text-[var(--text-muted)]">
-                  / 48 Hours
+                  / 3 Days
                 </span>
               </div>
               <div className="mt-2 flex flex-wrap items-center gap-2 font-mono text-[12px] text-[var(--text-muted)]">
@@ -168,7 +168,7 @@ export default function PricingPage() {
               </p>
               <FeatureList
                 items={[
-                  "48 Hours full desktop software access",
+                  "3 Days (72 Hours) full desktop software access",
                   "All 12 local AI engines included",
                   "Voice AI & JARVIS navigation active",
                   "Direct WhatsApp verification key",

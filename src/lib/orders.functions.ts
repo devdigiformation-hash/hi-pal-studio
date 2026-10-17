@@ -175,13 +175,13 @@ export const getOrderStatus = createServerFn({ method: "POST" })
     };
   });
 
-// ───────────────────────── Free 48-hour trial ─────────────────────────
+// ───────────────────────── Free 3-day trial ─────────────────────────
 // Signup → (subscribe to our YouTube channel) → instant trial key → download.
 // The key is a real licence registered in the worker with a TRIAL edition and a
-// +48h expiry, single device. The signup is also recorded as a lead (orders row,
+// +72h (3-day) expiry, single device. The signup is also recorded as a lead (orders row,
 // plan_id "trial") so it shows up in the owner's admin panel.
 
-const TRIAL_SECONDS = 172800; // 48 hours
+const TRIAL_SECONDS = 259200; // 3 days (72 hours)
 const TRIAL_INSTALLER_URL =
   process.env.INSTALLER_URL ||
   "https://digi-updates.digi-ede.workers.dev/Digi%20Biz%20OS-Setup-1.1.8.exe";
@@ -191,6 +191,7 @@ const createTrialSchema = z.object({
   customerName: z.string().trim().min(2).max(80),
   email: z.string().trim().email().max(160),
   whatsapp: z.string().trim().min(7, "WhatsApp number is required").max(32),
+  whereFound: z.string().trim().optional(),
   subscribed: z.boolean().optional().default(true),
 });
 
@@ -218,7 +219,7 @@ export const createTrial = createServerFn({ method: "POST" })
         reused: true as const,
         licenseKey: prior.license_key,
         downloadUrl: prior.download_url || TRIAL_INSTALLER_URL,
-        expiresInHours: 48,
+        expiresInHours: 72,
         youtube: YOUTUBE_CHANNEL_URL,
       };
     }
@@ -238,12 +239,12 @@ export const createTrial = createServerFn({ method: "POST" })
       email: data.email,
       whatsapp: data.whatsapp || null,
       plan_id: "trial",
-      plan_name: "48-Hour Free Trial",
+      plan_name: "3-Day Free Trial",
       amount: 0,
       currency: "USD",
       payment_method: "trial",
       txn_reference: null,
-      notes: "YouTube subscribe-gate attested",
+      notes: data.whereFound ? `Found via: ${data.whereFound} (YouTube subscribe-gate attested)` : "YouTube subscribe-gate attested",
       status: "verified", // trial key is released immediately
       verified_at: new Date().toISOString(),
       license_key: licenseKey,
