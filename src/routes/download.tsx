@@ -322,13 +322,22 @@ function DownloadPage() {
             </div>
 
             {/* Need a licence button / link */}
-            <div className="mt-6">
+            <div className="mt-6 flex flex-col items-center gap-2.5">
               <Link
                 to="/pricing"
                 className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.02] px-5 py-2.5 font-body text-[13px] font-semibold text-[var(--text-secondary)] transition-all hover:border-cyan-400/40 hover:bg-cyan-400/5 hover:text-white"
               >
                 <span>Don't have a licence key yet? Get Lifetime Access (£29)</span>
                 <ArrowRight size={14} className="transition-transform group-hover:translate-x-1 text-cyan-400" />
+              </Link>
+
+              <Link
+                to="/open-source"
+                className="group inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-5 py-2.5 font-body text-[13px] font-semibold text-emerald-300 transition-all hover:border-emerald-400 hover:bg-emerald-500/20 hover:text-white"
+              >
+                <Sparkles size={14} className="text-emerald-400" />
+                <span>Want 100% Free Tools? Get Free Softwares (15+ Suite)</span>
+                <ArrowRight size={14} className="transition-transform group-hover:translate-x-1 text-emerald-400" />
               </Link>
             </div>
           </div>

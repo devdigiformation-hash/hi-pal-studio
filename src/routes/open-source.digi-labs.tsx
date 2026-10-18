@@ -222,6 +222,13 @@ function DigiLabsSubpage() {
                     Download Windows Setup (.exe 253MB)
                   </CyanButton>
                 </button>
+                <Link to="/open-source">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-pink-500/40 bg-pink-500/15 px-5 py-2.5 font-display text-sm font-semibold text-pink-300 shadow-[0_0_25px_rgba(236,72,153,0.25)] transition hover:border-pink-400 hover:bg-pink-500/25 hover:text-white cursor-pointer">
+                    <Sparkles size={15} className="text-pink-400" />
+                    <span>Get Free Softwares (15+ Tools Hub)</span>
+                    <ArrowRight size={14} className="text-pink-400/80" />
+                  </span>
+                </Link>
                 <a
                   href="https://aistudio.google.com/app/apikey"
                   target="_blank"
@@ -578,6 +585,15 @@ function DigiLabsSubpage() {
                 <span>GitHub</span>
                 <ExternalLink size={13} className="opacity-70" />
               </a>
+
+              <Link
+                to="/open-source"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-pink-500/50 bg-pink-500/20 px-5 py-3.5 sm:py-4 font-mono text-[13px] sm:text-[14px] font-bold text-pink-300 shadow-[0_0_25px_rgba(236,72,153,0.3)] transition hover:border-pink-400 hover:bg-pink-500/30 hover:text-white cursor-pointer"
+              >
+                <Sparkles size={17} className="text-pink-400" />
+                <span>Get Free Softwares (15+ Suite)</span>
+                <ArrowRight size={14} className="opacity-80" />
+              </Link>
             </div>
 
             {/* Official Support & Corporate Credentials */}

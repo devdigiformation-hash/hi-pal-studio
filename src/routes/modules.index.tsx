@@ -118,6 +118,13 @@ function ModulesHubPage() {
                   Download DIGI BIZ OS
                 </CyanButton>
               </Link>
+              <Link to="/open-source">
+                <button className="inline-flex items-center gap-2 rounded-xl border border-emerald-400/40 bg-emerald-500/10 px-6 py-3 font-display text-sm font-semibold text-emerald-300 shadow-[0_0_20px_rgba(16,185,129,0.2)] transition hover:border-emerald-400 hover:bg-emerald-500/20 hover:text-white cursor-pointer">
+                  <Sparkles size={16} className="text-emerald-400" />
+                  <span>Get Free Softwares (15+ Tools Hub)</span>
+                  <ArrowRight size={14} />
+                </button>
+              </Link>
               <Link to="/pricing">
                 <GhostButton size="lg" icon={<ShieldCheck size={18} />}>
                   View £29 Pricing
