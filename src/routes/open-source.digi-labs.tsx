@@ -222,6 +222,14 @@ function DigiLabsSubpage() {
                     Download Windows Setup (.exe 253MB)
                   </CyanButton>
                 </button>
+                <Link
+                  to="/pricing"
+                  className="inline-flex items-center gap-2 rounded-full border border-emerald-400/50 bg-emerald-500/15 px-5 py-2.5 font-display text-sm font-bold text-emerald-300 shadow-[0_0_25px_rgba(16,185,129,0.3)] transition hover:border-emerald-400 hover:bg-emerald-500/25 hover:text-white"
+                >
+                  <Sparkles size={15} className="text-emerald-400" />
+                  <span>Try DIGI BIZ OS (3-Day Free Trial)</span>
+                  <ArrowRight size={13} className="text-emerald-400/80" />
+                </Link>
                 <a
                   href="https://aistudio.google.com/app/apikey"
                   target="_blank"
@@ -547,7 +555,7 @@ function DigiLabsSubpage() {
               DIGI LABS is 100% free and open-source for your personal and agency systems. Download the standalone Windows installer (.exe) or clone the repository directly from GitHub. Resale and paid cloud re-hosting are strictly prohibited.
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-[720px] mx-auto">
+            <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-[850px] mx-auto">
               <button
                 type="button"
                 onClick={() => openSubscribeModal(DOWNLOAD_URL, "DIGI LABS Setup (.exe 253MB)")}
@@ -556,6 +564,15 @@ function DigiLabsSubpage() {
                 <Download size={18} className="shrink-0" />
                 <span>Download Windows Setup (.exe 253MB)</span>
               </button>
+
+              <Link
+                to="/pricing"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-emerald-400 bg-emerald-500/20 px-6 py-3.5 sm:py-4 font-mono text-[13px] sm:text-[14px] font-bold text-emerald-300 shadow-[0_0_30px_rgba(16,185,129,0.35)] transition hover:border-emerald-300 hover:bg-emerald-500/30 hover:text-white"
+              >
+                <Sparkles size={17} className="text-emerald-400" />
+                <span>Try DIGI BIZ OS (3-Day Free Trial)</span>
+                <ArrowRight size={14} className="opacity-80" />
+              </Link>
 
               <a
                 href="https://aistudio.google.com/app/apikey"
