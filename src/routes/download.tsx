@@ -560,7 +560,7 @@ function DownloadPage() {
 
       {/* ── WINDOWS 11 STONIC AI STYLE DOWNLOAD MODAL ──────────────── */}
       {showDownloadModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-xl animate-in fade-in duration-200">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-xl overflow-y-auto animate-in fade-in duration-200">
           <div className="relative w-full max-w-[620px] rounded-3xl border border-cyan-400/40 bg-slate-950/95 p-6 sm:p-8 text-left shadow-[0_25px_70px_rgba(0,0,0,0.9),0_0_50px_rgba(47,224,200,0.2)] backdrop-blur-2xl">
             {/* Close button */}
             <button

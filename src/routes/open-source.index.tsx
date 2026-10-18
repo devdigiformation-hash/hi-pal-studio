@@ -911,8 +911,8 @@ function OpenSourcePage() {
 
       {/* ── DIGI LABS 3-STEP SETUP GUIDE MODAL ─────────────────── */}
       {digiLabsSetupOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
-          <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl border border-purple-500/40 bg-[#0B0818] p-6 sm:p-8 shadow-[0_0_60px_rgba(168,85,247,0.35)]">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto animate-in fade-in duration-200">
+          <div className="relative w-full max-w-2xl my-auto max-h-[90vh] overflow-y-auto rounded-3xl border border-purple-500/40 bg-[#0B0818] p-6 sm:p-8 shadow-[0_0_60px_rgba(168,85,247,0.35)]">
             {/* Close button */}
             <button
               type="button"

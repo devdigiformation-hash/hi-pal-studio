@@ -42,8 +42,8 @@ export default function SubscribeToDownloadModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-md overflow-hidden rounded-3xl border border-red-500/30 bg-[#0B0A12] p-6 sm:p-8 shadow-[0_0_60px_rgba(239,68,68,0.25)] text-center">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto animate-in fade-in duration-200">
+      <div className="relative w-full max-w-md my-auto max-h-[90vh] overflow-y-auto rounded-3xl border border-red-500/30 bg-[#0B0A12] p-6 sm:p-8 shadow-[0_0_60px_rgba(239,68,68,0.25)] text-center">
         {/* Close button */}
         <button
           type="button"
