@@ -1159,6 +1159,78 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       ],
     },
   },
+  "digi-whatsapp-agent": {
+    id: "digi-whatsapp-agent",
+    name: "DIGI WHATSAPP AGENT — Autonomous AI Sales Assistant",
+    shortName: "Digi WhatsApp Agent",
+    route: "/open-source/digi-whatsapp-agent",
+    category: "Autonomous Agent",
+    tagline: "Autonomous 24/7 WhatsApp AI sales representative with multi-account QR pairing, local SQLite memory, Whisper voice notes, and 7-tier resilient free AI cascading.",
+    eyebrow: "OFFICIAL DIGIFORMATION PRODUCT • 100% FREE AI QUOTAS • BAILEYS PROTOCOL • ZERO PER-MESSAGE FEES",
+    alternativeTo: ["Wati ($49-$299/mo)", "Interakt", "Respond.io", "ManyChat WhatsApp"],
+    license: "Source-Available (Fair-Source)",
+    licenseDetails: "100% Free forever for your own business & self-hosted systems. Strict attribution; commercial resale or re-branding strictly prohibited.",
+    stars: "100% Open Source",
+    repoUrl: "https://github.com/digiformationltd-creator/digi-whatsapp-agent",
+    downloadUrl: "https://github.com/digiformationltd-creator/digi-whatsapp-agent/releases/download/v1.0.0/Digi.WhatsApp.Agent.Setup.1.0.0.exe",
+    downloadType: "installer",
+    downloadTypeLabel: "Windows Setup (.exe 116MB)",
+    privacy: "100% Local (Offline)",
+    provenance: "Engineered by DigiFormation Ltd as an autonomous 24/7 sales agent and WhatsApp conversational CRM engine.",
+    requirements: {
+      os: "Windows 10 / 11 (64-bit), macOS, or Linux",
+      cpu: "Intel Core i3 / AMD Ryzen 3 or higher",
+      ram: "4 GB RAM minimum (8 GB recommended)",
+      gpu: "None required (Cloud / LPU accelerated inference)",
+      storage: "300 MB free storage",
+      runtime: "Standalone Windows Desktop Installer (.exe) or Node.js 20+ / 22 LTS",
+    },
+    faqs: [
+      {
+        q: "What is Digi WhatsApp Agent?",
+        a: "Digi WhatsApp Agent is a sovereign, production-ready AI Sales Agent & Conversational Engine for WhatsApp developed by DigiFormation Ltd. It connects to your personal or business WhatsApp via direct QR code pairing (using the Baileys protocol) and autonomously handles customer questions, explains pricing, captures leads, and closes sales 24/7 without expensive Cloud API fees.",
+      },
+      {
+        q: "How does it avoid WhatsApp Business API per-message charges?",
+        a: "Unlike traditional platforms (like Wati or Interakt) that charge heavy monthly software subscriptions PLUS per-conversation Meta Cloud API fees, Digi WhatsApp Agent uses direct Web-socket pairing via the battle-tested Baileys protocol. You scan the QR code with your phone just like WhatsApp Web, paying zero per-message charges.",
+      },
+      {
+        q: "What is the 7-Tier Free AI Reasoning Cascade?",
+        a: "Digi WhatsApp Agent orchestrates a zero-cost AI cascade utilizing 100% free tier quotas across 7 top providers: Google Gemini 2.5 Flash (#1 Primary) ➔ Groq LPU (12ms Ultra-fast Whisper & Qwen) ➔ Cloudflare Workers AI (10,000 free daily neurons) ➔ Mistral AI (1B free monthly tokens) ➔ GitHub Models (Azure GPT-4o-mini free) ➔ SambaNova Cloud (400 T/s Llama 3.3 70B) ➔ Together AI. If any provider faces downtime or rate limits, the agent instantly auto-fails over to the next healthy model with 0ms customer latency.",
+      },
+      {
+        q: "Does it understand Urdu, Roman Urdu, and voice notes?",
+        a: "Yes! Inbound audio voice notes are automatically transcribed using Groq Whisper speech-to-text. The agent fluently understands and responds in natural Pakistani Roman Urdu ('Haan ji, humari services yeh hain...'), formal Urdu script, English, or Hindi, matching the customer's preferred tone and dialect.",
+      },
+      {
+        q: "How does the sales pipeline state machine prevent hallucinations and discounts?",
+        a: "The agent features an 8-stage deterministic Finite State Machine (NEW ➔ GREETED ➔ QUALIFIED ➔ PACKAGE_SELECTED ➔ ORDER_INITIATED ➔ DOCUMENTS_PENDING ➔ COMPLETED) paired with strict discount defense rules. It quotes exact catalog prices, defends value propositions, remembers customer names and orders in local SQLite, and escalates complex high-ticket deals to human managers.",
+      },
+      {
+        q: "Is my customer data secure?",
+        a: "100% secure and private. All conversation transcripts, customer phone numbers, orders, and state memories are stored locally in a private SQLite database (agent_memory.db) on your own computer or server. No customer data is sent to third-party CRM clouds.",
+      },
+      {
+        q: "Can I customize the product catalog, pricing, and FAQs?",
+        a: "Yes. You can edit your company profile, packages, services, and FAQ rules either through the visual Knowledge Base Studio in the app or directly via simple Markdown files in the knowledge/ directory.",
+      },
+      {
+        q: "How does Digi WhatsApp Agent compare to DIGI BIZ OS?",
+        a: "Digi WhatsApp Agent is our sovereign open-source sales bot engine. DIGI BIZ OS is our complete all-in-one Windows business operating system, which includes the WhatsApp Sales Agent plus a native CRM, Voice JARVIS desktop control, AI Image & Video Studio, automated PDF Invoicing, and 12 integrated enterprise business modules for a one-time lifetime license.",
+      },
+    ],
+    relatedToolIds: ["digi-lead-hunter", "digi-labs", "openhands", "hermes-agent", "pocketbase"],
+    bridge: {
+      headline: "Upgrade from Standalone WhatsApp Bot to Complete DIGI BIZ OS",
+      description: "Combine your 24/7 WhatsApp AI Sales Agent directly with DIGI BIZ OS's built-in CRM, automated invoice generation, voice-activated desktop control, and multi-channel marketing suite.",
+      highlights: [
+        "Automatically turn WhatsApp chats into CRM client profiles and pipeline deals",
+        "Generate and send branded PDF invoices directly inside WhatsApp conversations",
+        "JARVIS-style voice control to dictate follow-up broadcasts and check sales analytics",
+        "Lifetime ownership with zero monthly subscriptions or SaaS fees",
+      ],
+    },
+  },
   genoffice: {
     id: "genoffice",
     name: "GenOffice — Open-Source AI Desktop Office Suite",

@@ -63,6 +63,7 @@ import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import MasterOpenSourceValueTable from "@/components/seo/MasterOpenSourceValueTable";
 import ThreeDTiltCard from "@/components/ui/ThreeDTiltCard";
 import SubscribeToDownloadModal from "@/components/seo/SubscribeToDownloadModal";
+import OpenSourceEditorial from "@/components/OpenSourceEditorial";
 import { buildMeta, breadcrumbLd, itemListLd } from "@/lib/seo";
 import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
 
@@ -76,11 +77,13 @@ import leadHunterBanner from "@/assets/digi-lead-hunter-banner.webp";
 import artcraftScreenshot from "@/assets/artcraft-screenshot.jpg";
 import digiLabsLogo from "@/assets/digi-labs-logo.png";
 import digiLabsBanner from "@/assets/digi-labs-banner.png";
+import digiWhatsappBanner from "@/assets/digi-whatsapp-banner.png";
+import digiWhatsappLogo from "@/assets/digi-whatsapp-logo.jpg";
 
 
 const TITLE = "Free Open Source Software Library & Hub — AI Agents, Media & Tools | DIGI BIZ OS";
 const DESC =
-  "Discover 15+ curated open-source desktop software tools for Windows: DIGI Lead Hunter, Kdenlive, Jan AI, OpenHands, PocketBase, Shotcut, Audacity, Upscayl & more. 100% free, offline, and subscription-free.";
+  "Discover DIGI Lead Hunter, DIGI Labs, DIGI WhatsApp Agent, DIGI Office Suite and a curated library of community software for work and creativity.";
 
 export interface SoftwareItem {
   id: string;
@@ -113,7 +116,7 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     id: "digi-lead-hunter",
     name: "DIGI LEAD HUNTER — Autonomous AI B2B Lead Engine",
     category: "Autonomous Agents",
-    tagline: "Autonomous AI opportunity hunter. Stops manual Google Maps searching, validates WhatsApp numbers, and generates complete website blueprints.",
+    tagline: "Discover local businesses, organise opportunities, and generate website blueprints for potential clients.",
     license: "Source-Available License",
     color: "#2FE0C8",
     icon: Search,
@@ -122,11 +125,11 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     bundle: "Lead Intelligence & Client Acquisition",
     bullets: [
       "No more manual Google Maps hunting — scans local businesses autonomously",
-      "Validates WhatsApp mobile carriers (+92, +44, +1, Global) with 1-click chat links",
+      "Checks phone number formats and creates direct WhatsApp chat links",
       "3-tier lead classification (P1 Build-Ready / P2 Consultation / P3 Modernization)",
       "Generates strategic WEBSITE_PLAN.md blueprints, HTML portals & client ZIP packs",
     ],
-    features: ["1-Click Antigravity Prompt", "Verified WhatsApp", "Zero Scraping Fees"],
+    features: ["1-Click Antigravity Prompt", "WhatsApp Chat Links", "Opportunity Plans"],
     to: "/open-source/digi-lead-hunter",
     stars: "Open Source ★",
     starCount: 50000,
@@ -144,7 +147,7 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     name: "DIGI LABS — Free Human TTS & Video-to-Prompt Studio",
     category: "Speech & Media AI",
     tagline: "Unlimited free human TTS like Gemini voice & ElevenLabs alternative with video-to-prompt, course & notes reverse engineering.",
-    license: "MIT / Apache 2.0",
+    license: "Source-available • no resale",
     color: "#EC4899",
     icon: Mic,
     image: digiLabsLogo,
@@ -167,6 +170,36 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     downloadUrl: OPEN_SOURCE_SUBPAGES["digi-labs"].downloadUrl,
     downloadFilename: "DIGI-LABS-Setup-1.0.0.exe",
     repoUrl: OPEN_SOURCE_SUBPAGES["digi-labs"].repoUrl,
+    featured: true,
+  },
+  {
+    id: "digi-whatsapp-agent",
+    name: "DIGI WHATSAPP AGENT — Autonomous AI Sales Assistant",
+    category: "Autonomous Agents",
+    tagline: "Autonomous 24/7 WhatsApp AI sales representative with multi-account pairing, local SQLite memory, and 7-tier resilient free AI cascading.",
+    license: "Source-Available License",
+    color: "#25D366",
+    icon: MessageSquare,
+    image: digiWhatsappBanner,
+    badge: "Official DIGIFORMATION Product",
+    bundle: "WhatsApp AI Sales Automation & Conversational CRM",
+    bullets: [
+      "Zero per-message API fees: connects directly via Baileys WhatsApp Web QR pairing",
+      "7-Tier Free AI Cascading (Gemini 2.5 Flash, Groq Whisper, Cloudflare, Mistral, GitHub Models)",
+      "8-stage sales pipeline state machine with discount protection & local SQLite memory",
+      "Listens to audio voice notes & replies in natural Roman Urdu, Urdu script, English & Hindi",
+    ],
+    features: ["Baileys Web Protocol", "7-Tier Free AI Cascade", "Whisper Audio Notes", "Zero Cloud Fees"],
+    to: "/open-source/digi-whatsapp-agent",
+    stars: "Open Source ★",
+    starCount: 50000,
+    savings: "Save $1,800+ / yr",
+    savingsValue: 1800,
+    platforms: ["Windows", "macOS", "Linux"],
+    alternativeTo: ["Wati ($49-$299/mo)", "Interakt", "Respond.io", "ManyChat"],
+    downloadUrl: OPEN_SOURCE_SUBPAGES["digi-whatsapp-agent"].downloadUrl,
+    downloadFilename: "Digi.WhatsApp.Agent.Setup.1.0.0.exe",
+    repoUrl: OPEN_SOURCE_SUBPAGES["digi-whatsapp-agent"].repoUrl,
     featured: true,
   },
   {
@@ -770,12 +803,12 @@ function OpenSourcePage() {
 
   const searchInputRef = useRef<HTMLInputElement>(null);
 
-  // Sync state if URL changes externally
+  // Sync state if URL changes externally, including browser back and cleared parameters.
   useEffect(() => {
-    if (searchParams.q !== undefined && searchParams.q !== searchQuery) setSearchQuery(searchParams.q);
-    if (searchParams.category !== undefined && searchParams.category !== selectedCategory) setSelectedCategory(searchParams.category);
-    if (searchParams.platform !== undefined && searchParams.platform !== selectedPlatform) setSelectedPlatform(searchParams.platform);
-    if (searchParams.sort !== undefined && searchParams.sort !== selectedSort) setSelectedSort(searchParams.sort);
+    setSearchQuery(searchParams.q ?? "");
+    setSelectedCategory(searchParams.category ?? "All Tools");
+    setSelectedPlatform(searchParams.platform ?? "All OS");
+    setSelectedSort(searchParams.sort ?? "featured");
   }, [searchParams.q, searchParams.category, searchParams.platform, searchParams.sort]);
 
   // Update URL query parameters seamlessly
@@ -823,7 +856,9 @@ function OpenSourcePage() {
   // Keyboard shortcut listener ('/' focuses search)
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "/" && document.activeElement !== searchInputRef.current) {
+      const target = e.target as HTMLElement | null;
+      const isEditing = target?.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(target?.tagName ?? "");
+      if (e.key === "/" && !isEditing) {
         e.preventDefault();
         searchInputRef.current?.focus();
       }
@@ -879,11 +914,6 @@ function OpenSourcePage() {
       return 0;
     });
   }, [searchQuery, selectedCategory, selectedPlatform, selectedSort]);
-
-  // Featured flagships
-  const featuredItems = useMemo(() => {
-    return SOFTWARE_LIST.filter((item) => item.featured);
-  }, []);
 
   const hasActiveFilters = searchQuery.trim() !== "" || selectedCategory !== "All Tools" || selectedPlatform !== "All OS" || selectedSort !== "featured";
 
@@ -1046,547 +1076,14 @@ function OpenSourcePage() {
           </div>
         </div>
       )}
-      {/* ── 1. HERO & INSTANT DISCOVERY STAGE ─────────────────── */}
-      <SectionWrapper className="relative overflow-hidden pb-8 pt-8 md:pb-14 md:pt-12">
-        {/* Subtle Ambient Glow */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-b from-cyan-500/15 via-purple-500/10 to-transparent blur-[120px] rounded-full"
-        />
-
-        <Breadcrumbs
-          trail={[
-            { name: "Home", path: "/" },
-            { name: "Open Source", path: "/open-source" },
-          ]}
-        />
-
-        <div className="mx-auto max-w-[960px] text-center relative z-10">
-          <div className="flex items-center justify-center gap-2">
-            <ActivePulse size={7} />
-            <EyebrowLabel
-              text="Open-Source Software Library • 100% Free • Verified Standalone Releases"
-              color="var(--cyan)"
-            />
-          </div>
-
-          <h1 className="reveal-item delay-1 mt-5 font-display text-[34px] font-extrabold leading-[1.08] tracking-[-0.035em] text-[var(--text-primary)] sm:text-[44px] md:text-[56px] lg:text-[62px]">
-            Open-Source Software Hub,{" "}
-            <GradientText from="#2FE0C8" to="#38BDF8">
-              Fully Under Your Command.
-            </GradientText>
-          </h1>
-
-          <p className="answer reveal-item delay-2 mx-auto mt-6 max-w-[760px] font-body text-[16px] leading-[1.8] text-[var(--text-secondary)] md:text-[18px]">
-            Discover, search, and download production-grade autonomous AI agents, 4K video editors, local offline LLMs, and high-speed backends. No recurring SaaS subscriptions.
-          </p>
-
-
-          {/* Quick Metrics Badges */}
-          <div className="reveal-item delay-3 mt-7 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-            <MonoBadge>⚡ 15 Curated Open-Source Tools</MonoBadge>
-            <MonoBadge>💰 $14,800+/yr Saved vs Cloud SaaS</MonoBadge>
-            <MonoBadge>🔒 100% Offline & Private</MonoBadge>
-            <MonoBadge>📜 Permissive MIT & Apache 2.0</MonoBadge>
-            <MonoBadge>💻 One-Click Windows Setup</MonoBadge>
-          </div>
-
-          {/* ── HERO LIVE DISCOVERY SEARCH BAR ───────────────── */}
-          <div className="reveal-item delay-4 mx-auto mt-9 max-w-[780px]">
-            <div className="relative flex items-center rounded-2xl border border-cyan-500/30 bg-[#060A14]/90 p-2 shadow-[0_10px_35px_rgba(0,0,0,0.6)] backdrop-blur-2xl transition-all focus-within:border-cyan-400 focus-within:shadow-[0_0_25px_rgba(47,224,200,0.25)]">
-              <Search size={22} className="ml-3 text-cyan-400 shrink-0" aria-hidden="true" />
-              <input
-                ref={searchInputRef}
-                type="text"
-                value={searchQuery}
-                onChange={(e) => handleSearchChange(e.target.value)}
-                placeholder="Search software, categories, or alternatives (e.g. CapCut, Devin, Whisper, LLM)..."
-                aria-label="Search open-source software by name, use case or alternative"
-                className="w-full bg-transparent px-4 py-2 font-body text-[15px] text-white placeholder-zinc-500 focus:outline-none"
-              />
-
-              {searchQuery && (
-                <button
-                  type="button"
-                  onClick={() => handleSearchChange("")}
-                  aria-label="Clear search text"
-                  className="mr-2 rounded-lg p-1.5 text-zinc-400 transition hover:bg-white/10 hover:text-white"
-                >
-                  <X size={16} />
-                </button>
-              )}
-
-              <div className="hidden sm:flex items-center gap-1.5 border-l border-white/10 pl-3 pr-2 font-mono text-[11px] text-zinc-400">
-                <kbd className="rounded bg-white/10 px-1.5 py-0.5 text-zinc-300">Press /</kbd>
-                <span>to search</span>
-              </div>
-            </div>
-
-            {/* Quick Search Suggestion Pills */}
-            <div className="mt-3.5 flex flex-wrap items-center justify-center gap-2">
-              <span className="font-mono text-[11px] text-zinc-500">Popular searches:</span>
-              {QUICK_SEARCH_PILLS.map((pill) => (
-                <button
-                  key={pill.label}
-                  type="button"
-                  onClick={() => handleSearchChange(pill.query)}
-                  className={`rounded-full border px-2.5 py-1 font-mono text-[11px] transition ${
-                    searchQuery.toLowerCase() === pill.query.toLowerCase()
-                      ? "border-cyan-400 bg-cyan-400/20 text-cyan-300"
-                      : "border-white/10 bg-white/[0.03] text-zinc-400 hover:border-cyan-500/40 hover:text-cyan-300"
-                  }`}
-                >
-                  {pill.label}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </SectionWrapper>
-
-      {/* ── 1.5 OFFICIAL FLAGSHIP SPOTLIGHT: DIGI LEAD HUNTER ──── */}
-      {!hasActiveFilters && (
-        <SectionWrapper className="pt-2 pb-8">
-          <div className="mx-auto max-w-[1240px]">
-            <div className="relative overflow-hidden rounded-3xl border border-cyan-500/40 bg-gradient-to-b from-[#0B1528] via-[#060D1E] to-[#030712] p-4 sm:p-6 md:p-10 shadow-[0_0_50px_rgba(47,224,200,0.15)] w-full">
-              {/* Subtle ambient glow */}
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute -right-20 -top-20 h-96 w-96 rounded-full bg-cyan-500/20 blur-[100px]"
-              />
-
-              <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] w-full min-w-0">
-                <div className="relative z-10 w-full min-w-0">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-400/40 bg-cyan-500/10 px-3 py-1 font-mono text-[10.5px] sm:text-[11px] font-bold uppercase tracking-wider text-cyan-300">
-                      <ActivePulse size={6} />
-                      Official Open-Source Flagship
-                    </span>
-                    <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[10.5px] sm:text-[11px] font-semibold text-emerald-400">
-                      100% Free Forever
-                    </span>
-                    <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 font-mono text-[10.5px] sm:text-[11px] text-zinc-400">
-                      Source-Available
-                    </span>
-                  </div>
-
-                  <h2 className="mt-4 font-display text-[24px] xs:text-[26px] font-extrabold leading-[1.15] tracking-[-0.03em] text-white sm:text-[34px] md:text-[40px] break-words">
-                    DIGI LEAD HUNTER{" "}
-                    <span className="block text-[var(--cyan)]">
-                      Autonomous AI B2B Lead &amp; Website Opportunity Engine
-                    </span>
-                  </h2>
-
-                  <p className="mt-4 max-w-[620px] font-body text-[14px] leading-[1.75] text-zinc-300 sm:text-[14.5px] md:text-[16px]">
-                    Developed &amp; open-sourced by <strong>DIGIFORMATION LTD</strong>. Eliminates manual Google Maps searches by autonomously scanning businesses, verifying WhatsApp numbers across global carriers (+92, +44, +1), classifying leads into 3 opportunity tiers, and generating turn-key website blueprints in seconds.
-                  </p>
-
-                  {/* Feature Checklist */}
-                  <div className="mt-5 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
-                    <div className="flex items-center gap-2 font-mono text-[12px] text-zinc-200">
-                      <CheckCircle2 size={15} className="text-cyan-400 shrink-0" />
-                      <span>Zero monthly scraper subscriptions</span>
-                    </div>
-                    <div className="flex items-center gap-2 font-mono text-[12px] text-zinc-200">
-                      <CheckCircle2 size={15} className="text-cyan-400 shrink-0" />
-                      <span>Verified WhatsApp carrier routing</span>
-                    </div>
-                    <div className="flex items-center gap-2 font-mono text-[12px] text-zinc-200">
-                      <CheckCircle2 size={15} className="text-cyan-400 shrink-0" />
-                      <span>P1 Build-Ready, P2 &amp; P3 Lead Tiers</span>
-                    </div>
-                    <div className="flex items-center gap-2 font-mono text-[12px] text-zinc-200">
-                      <CheckCircle2 size={15} className="text-cyan-400 shrink-0" />
-                      <span>1-Click Antigravity prompt execution</span>
-                    </div>
-                  </div>
-
-                  {/* Action buttons */}
-                  <div className="mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full">
-                    <a
-                      href="https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-cyan-400 bg-cyan-400 px-5 py-3.5 font-mono text-[13px] font-bold text-black shadow-[0_0_25px_rgba(47,224,200,0.35)] transition-all hover:bg-cyan-300 hover:shadow-[0_0_35px_rgba(47,224,200,0.5)]"
-                    >
-                      <Github size={17} className="shrink-0" />
-                      <span>Get on GitHub (Direct Repo)</span>
-                      <ExternalLink size={13} className="opacity-70 shrink-0" />
-                    </a>
-
-                    <Link
-                      to="/open-source/digi-lead-hunter"
-                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3.5 font-mono text-[13px] font-semibold text-white transition hover:border-cyan-400 hover:bg-white/10"
-                    >
-                      <span>Read Full Specifications &amp; Blueprints</span>
-                      <ArrowRight size={14} className="text-cyan-400 shrink-0" />
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Visual Showcase (Screenshots Preview) */}
-                <div className="relative">
-                  <div className="overflow-hidden rounded-2xl border border-white/15 bg-black/60 shadow-2xl backdrop-blur-md">
-                    <img
-                      src={leadHunterBanner}
-                      alt="DIGI LEAD HUNTER interface and pipeline preview"
-                      width={800}
-                      height={450}
-                      className="h-auto w-full object-cover"
-                      loading="eager"
-                    />
-                    <div className="border-t border-white/10 bg-[#060B16] p-4">
-                      <div className="flex items-center justify-between text-xs font-mono text-zinc-400">
-                        <span className="flex items-center gap-1.5 text-cyan-300">
-                          <Terminal size={13} />
-                          <span>Antigravity CLI &amp; Prompt Runner</span>
-                        </span>
-                        <span className="text-emerald-400 font-semibold">Live on GitHub</span>
-                      </div>
-                      <div className="mt-2.5 rounded-lg border border-white/10 bg-black/80 px-3 py-2 font-mono text-[12px] text-zinc-300 overflow-x-auto">
-                        <span className="text-cyan-400">$</span> python batch_hunter.py --category &quot;Restaurant&quot; --location &quot;Lahore&quot; --count 100
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SectionWrapper>
-      )}
-
-      {/* ── 1.6 OFFICIAL FLAGSHIP SPOTLIGHT: DIGI LABS ──── */}
-      {!hasActiveFilters && (
-        <SectionWrapper className="pt-0 pb-8">
-          <div className="mx-auto max-w-[1240px]">
-            <div className="relative overflow-hidden rounded-3xl border border-purple-500/40 bg-gradient-to-b from-[#140B28] via-[#0E061E] to-[#030712] p-4 sm:p-6 md:p-10 shadow-[0_0_50px_rgba(168,85,247,0.15)] w-full">
-              {/* Subtle ambient glow */}
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute -right-20 -top-20 h-96 w-96 rounded-full bg-purple-500/20 blur-[100px]"
-              />
-
-              <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] w-full min-w-0">
-                <div className="relative z-10 w-full min-w-0">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-flex items-center gap-1.5 rounded-full border border-purple-400/40 bg-purple-500/10 px-3 py-1 font-mono text-[10.5px] sm:text-[11px] font-bold uppercase tracking-wider text-purple-300">
-                      <ActivePulse size={6} />
-                      Official Open-Source Flagship #2
-                    </span>
-                    <span className="rounded-full border border-amber-500/30 bg-amber-500/10 px-2.5 py-0.5 font-mono text-[10.5px] sm:text-[11px] font-semibold text-amber-300">
-                      Strictly No Resale • Own PC Only
-                    </span>
-                    <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 font-mono text-[10.5px] sm:text-[11px] text-zinc-400">
-                      Source-Available
-                    </span>
-                  </div>
-
-                  <h2 className="mt-4 font-display text-[24px] xs:text-[26px] font-extrabold leading-[1.15] tracking-[-0.03em] text-white sm:text-[34px] md:text-[40px] break-words">
-                    DIGI LABS{" "}
-                    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-cyan-300">
-                      Unlimited Free Human TTS &amp; Video-to-Prompt Studio
-                    </span>
-                  </h2>
-
-                  <p className="mt-4 max-w-[620px] font-body text-[14px] leading-[1.75] text-zinc-300 sm:text-[14.5px] md:text-[16px]">
-                    Open-source desktop AI media studio by <strong>DIGIFORMATION LTD</strong>. Free unlimited human-like Text-to-Speech powered by Gemini 2.5 Flash Voice &amp; Edge-TTS. 100% free for your personal PC and agency system usage (reselling standalone binaries or SaaS re-hosting is strictly prohibited).
-                  </p>
-
-                  {/* Feature Checklist */}
-                  <div className="mt-5 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
-                    <div className="flex items-center gap-2 font-mono text-[12px] text-zinc-200">
-                      <CheckCircle2 size={15} className="text-purple-400 shrink-0" />
-                      <span>Zero character limits &amp; zero subscriptions</span>
-                    </div>
-                    <div className="flex items-center gap-2 font-mono text-[12px] text-zinc-200">
-                      <CheckCircle2 size={15} className="text-purple-400 shrink-0" />
-                      <span>Gemini 2.5 Flash emotional voice engine</span>
-                    </div>
-                    <div className="flex items-center gap-2 font-mono text-[12px] text-zinc-200">
-                      <CheckCircle2 size={15} className="text-purple-400 shrink-0" />
-                      <span>Turn any video link into courses &amp; prompts</span>
-                    </div>
-                    <div className="flex items-center gap-2 font-mono text-[12px] text-zinc-200">
-                      <CheckCircle2 size={15} className="text-purple-400 shrink-0" />
-                      <span>Windows Setup (.exe 253MB)</span>
-                    </div>
-                  </div>
-
-                  {/* Action buttons */}
-                  <div className="mt-7 flex flex-wrap items-center gap-3 w-full">
-                    <button
-                      type="button"
-                      onClick={() =>
-                        openSubscribeModal(
-                          "https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe",
-                          "DIGI LABS Setup (.exe 253MB)"
-                        )
-                      }
-                      className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-purple-400 bg-purple-500 px-5 py-3.5 font-mono text-[13.5px] font-bold text-white shadow-[0_0_25px_rgba(168,85,247,0.35)] transition-all hover:bg-purple-400 hover:shadow-[0_0_35px_rgba(168,85,247,0.5)] cursor-pointer"
-                    >
-                      <Download size={17} className="shrink-0" />
-                      <span>Download Setup (.exe 253MB)</span>
-                    </button>
-
-                    {/* Setup Guide CTA Button */}
-                    <button
-                      type="button"
-                      onClick={() => setDigiLabsSetupOpen(true)}
-                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-amber-400/60 bg-amber-500/15 px-4 py-3.5 font-mono text-[13px] font-bold text-amber-300 shadow-[0_0_20px_rgba(245,158,11,0.2)] transition hover:bg-amber-500/25 hover:border-amber-400 hover:shadow-[0_0_25px_rgba(245,158,11,0.35)] cursor-pointer"
-                    >
-                      <Sparkles size={15} className="text-amber-300 shrink-0" />
-                      <span>Setup Guide (3 Steps)</span>
-                    </button>
-
-                    {/* Direct Get Free API Key CTA */}
-                    <a
-                      href="https://aistudio.google.com/app/apikey"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-cyan-400/50 bg-cyan-500/10 px-4 py-3.5 font-mono text-[13px] font-semibold text-cyan-300 transition hover:bg-cyan-500/20 hover:border-cyan-400"
-                    >
-                      <Key size={14} className="text-cyan-300 shrink-0" />
-                      <span>Get Free API Key</span>
-                      <ExternalLink size={12} className="opacity-70 shrink-0" />
-                    </a>
-
-                    <Link
-                      to="/open-source/digi-labs"
-                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 py-3.5 font-mono text-[13px] font-semibold text-white transition hover:border-purple-400 hover:bg-white/10"
-                    >
-                      <span>Specifications</span>
-                      <ArrowRight size={14} className="text-purple-400 shrink-0" />
-                    </Link>
-
-                    <a
-                      href="https://github.com/digiformationltd-creator/digi-labs"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3.5 py-3.5 font-mono text-[13px] text-zinc-300 transition hover:bg-white/10 hover:text-white"
-                    >
-                      <Github size={16} className="shrink-0" />
-                      <span>GitHub</span>
-                      <ExternalLink size={12} className="opacity-70 shrink-0" />
-                    </a>
-                  </div>
-
-                  {/* Inline 3-Step Setup Quick Guide Card */}
-                  <div className="mt-6 rounded-2xl border border-purple-500/30 bg-purple-950/25 p-4 backdrop-blur-sm">
-                    <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-2.5">
-                      <div className="flex items-center gap-2">
-                        <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                        <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-amber-300">
-                          Super Simple Setup • 3 Steps: Install to First Use
-                        </span>
-                      </div>
-                      <button
-                        type="button"
-                        onClick={() => setDigiLabsSetupOpen(true)}
-                        className="font-mono text-[11px] text-purple-300 hover:text-white underline cursor-pointer"
-                      >
-                        Open Full Interactive Guide →
-                      </button>
-                    </div>
-
-                    <div className="mt-3 grid grid-cols-1 gap-2.5 sm:grid-cols-3">
-                      <div className="rounded-xl border border-white/5 bg-black/40 p-3">
-                        <div className="flex items-center gap-2 text-xs font-bold text-white">
-                          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-purple-500/30 text-[10px] font-mono text-purple-300">1</span>
-                          <span>Install the App</span>
-                        </div>
-                        <p className="mt-1 text-[11px] text-zinc-300 leading-relaxed font-body">
-                          Download <code className="text-purple-300">DIGI-LABS-Setup-1.0.0.exe</code> and run the installer on Windows 10/11.
-                        </p>
-                      </div>
-
-                      <div className="rounded-xl border border-amber-500/20 bg-black/40 p-3">
-                        <div className="flex items-center gap-2 text-xs font-bold text-amber-300">
-                          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-amber-500/30 text-[10px] font-mono text-amber-300">2</span>
-                          <span>Settings &amp; API Key</span>
-                        </div>
-                        <p className="mt-1 text-[11px] text-zinc-300 leading-relaxed font-body">
-                          Open Settings, press <strong className="text-white">Get API Key</strong> button, and generate your free key in 1 click (no credit card).
-                        </p>
-                      </div>
-
-                      <div className="rounded-xl border border-emerald-500/20 bg-black/40 p-3">
-                        <div className="flex items-center gap-2 text-xs font-bold text-emerald-300">
-                          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500/30 text-[10px] font-mono text-emerald-300">3</span>
-                          <span>Paste &amp; Start Using</span>
-                        </div>
-                        <p className="mt-1 text-[11px] text-zinc-300 leading-relaxed font-body">
-                          Paste your key into Gemini API Key field, click Save, and start generating voice and media!
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Visual Showcase (Screenshots & Banner Preview) */}
-                <div className="relative">
-                  <div className="overflow-hidden rounded-2xl border border-purple-500/30 bg-black/70 shadow-2xl backdrop-blur-md">
-                    <img
-                      src={digiLabsBanner}
-                      alt="DIGI LABS vs ElevenLabs - Sovereign Open Source Voice Studio"
-                      width={800}
-                      height={450}
-                      className="h-auto w-full object-cover"
-                      loading="eager"
-                    />
-                    <div className="border-t border-white/10 bg-[#0B0616] p-4">
-                      <div className="flex items-center justify-between text-xs font-mono text-zinc-400">
-                        <span className="flex items-center gap-1.5 text-purple-300">
-                          <Terminal size={13} />
-                          <span>Electron Desktop App + Local Whisper &amp; TTS Engine</span>
-                        </span>
-                        <span className="text-emerald-400 font-semibold">v1.0.0 Stable</span>
-                      </div>
-                      <div className="mt-2.5 rounded-lg border border-white/10 bg-black/80 px-3 py-2 font-mono text-[12px] text-zinc-300 overflow-x-auto">
-                        <span className="text-purple-400">$</span> digi-labs-engine --voice &quot;gemini-flash-expressive&quot; --output ./output.wav
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SectionWrapper>
-      )}
-
-      {/* ── 2. FEATURED FLAGSHIP SPOTLIGHT (3 Top Community Leaders) ──── */}
-      {!hasActiveFilters && (
-        <SectionWrapper className="py-6 md:py-10 bg-gradient-to-b from-transparent via-[#060A14]/40 to-transparent">
-          <div className="mx-auto max-w-[1240px]">
-            <div className="flex items-center justify-between border-b border-white/10 pb-4">
-              <div className="flex items-center gap-2">
-                <Flame size={18} className="text-amber-400" />
-                <span className="font-mono text-[12px] font-bold uppercase tracking-[0.16em] text-amber-300">
-                  Featured Community Flagships
-                </span>
-              </div>
-              <span className="font-mono text-[11px] text-zinc-400">
-                SWE-Bench Verified • Whisper AI • Local LLMs
-              </span>
-            </div>
-
-            <div className="mt-6 grid gap-5 md:grid-cols-3">
-              {featuredItems.slice(0, 3).map((feat) => {
-                const Icon = feat.icon;
-                return (
-                  <GlassCard
-                    key={feat.id}
-                    glowColor={feat.color}
-                    className="relative flex flex-col justify-between overflow-hidden p-6 border-white/15 hover:border-white/30 transition-all group"
-                  >
-                    <div>
-                      <div className="flex items-center justify-between">
-                        <div
-                          className="flex h-12 w-12 items-center justify-center rounded-xl border"
-                          style={{
-                            background: `${feat.color}15`,
-                            borderColor: `${feat.color}40`,
-                            boxShadow: `0 0 20px ${feat.color}25`,
-                          }}
-                        >
-                          <Icon size={24} color={feat.color} />
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <Star size={13} className="fill-amber-400 text-amber-400" />
-                          <span className="font-mono text-[11px] font-bold text-white">
-                            {feat.stars}
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="mt-4 flex items-center gap-2">
-                        <span className="rounded bg-white/5 px-2 py-0.5 font-mono text-[10px] uppercase text-cyan-300 border border-cyan-500/20">
-                          {feat.category}
-                        </span>
-                        <span className="font-mono text-[10px] text-emerald-400">
-                          {feat.savings}
-                        </span>
-                      </div>
-
-                      <h3 className="mt-2.5 font-display text-[19px] font-bold text-white group-hover:text-cyan-300 transition">
-                        {feat.name}
-                      </h3>
-
-                      <p className="mt-2 font-body text-[13px] leading-[1.65] text-zinc-400">
-                        {feat.tagline}
-                      </p>
-
-                      <div className="mt-4 flex flex-wrap gap-1.5">
-                        {feat.alternativeTo.slice(0, 2).map((alt) => (
-                          <span
-                            key={alt}
-                            className="rounded-md border border-white/10 bg-white/[0.04] px-2 py-0.5 font-mono text-[10.5px] text-zinc-300"
-                          >
-                            Alt to {alt}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
-                      {feat.id === "digi-lead-hunter" ? (
-                        <a
-                          href="https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 rounded-lg border border-cyan-500/40 bg-cyan-500/15 px-3 py-1.5 font-mono text-[11px] font-bold text-cyan-300 transition hover:bg-cyan-500/25 hover:border-cyan-400"
-                        >
-                          <Github size={13} />
-                          <span>GitHub Repo</span>
-                        </a>
-                      ) : feat.downloadUrl ? (
-                        <a
-                          href={feat.downloadUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 rounded-lg border border-cyan-500/40 bg-cyan-500/15 px-3 py-1.5 font-mono text-[11px] font-bold text-cyan-300 transition hover:bg-cyan-500/25 hover:border-cyan-400"
-                        >
-                          <Download size={13} />
-                          <span>Download</span>
-                        </a>
-                      ) : (
-                        <Link
-                          to={feat.to}
-                          className="flex items-center gap-1.5 rounded-lg border border-white/20 bg-white/5 px-3 py-1.5 font-mono text-[11px] text-white transition hover:bg-white/10"
-                        >
-                          <span>Get Software</span>
-                        </Link>
-                      )}
-
-                      {feat.id === "digi-labs" && (
-                        <button
-                          type="button"
-                          onClick={() => setDigiLabsSetupOpen(true)}
-                          className="flex items-center gap-1 text-[11px] font-mono font-semibold text-amber-300 hover:text-amber-200 transition cursor-pointer"
-                        >
-                          <Sparkles size={12} className="text-amber-400" />
-                          <span>Setup Guide</span>
-                        </button>
-                      )}
-
-                      <Link
-                        to={feat.to}
-                        className="flex items-center gap-1 text-[12px] font-semibold text-zinc-400 hover:text-cyan-300 transition"
-                      >
-                        <span>Specifications</span>
-                        <ArrowRight size={13} />
-                      </Link>
-                    </div>
-                  </GlassCard>
-                );
-              })}
-            </div>
-          </div>
-        </SectionWrapper>
-      )}
+      <OpenSourceEditorial
+        onDownloadLabs={() => openSubscribeModal("https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe", "DIGI LABS Setup (.exe 253MB)")}
+        onLabsGuide={() => setDigiLabsSetupOpen(true)}
+      />
 
       {/* ── 3. SOFTWARE DIRECTORY & DISCOVERY TOOLBAR ────────── */}
       <SectionWrapper className="py-10 md:py-16">
-        <div className="mx-auto max-w-[1240px]" id="directory">
+        <div className="mx-auto max-w-[1240px] scroll-mt-24" id="directory">
           {/* Header & Controls Bar */}
           <div className="flex flex-col gap-6">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
@@ -1637,6 +1134,29 @@ function OpenSourcePage() {
                     ))}
                   </select>
                 </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-center rounded-xl border border-white/20 bg-[#101619] px-4 transition focus-within:border-lime-300">
+                <Search size={19} className="shrink-0 text-lime-300" aria-hidden="true" />
+                <input
+                  ref={searchInputRef}
+                  type="search"
+                  value={searchQuery}
+                  onChange={(event) => handleSearchChange(event.target.value)}
+                  placeholder="Search software, categories, or alternatives..."
+                  aria-label="Search open-source software by name, use case or alternative"
+                  className="w-full bg-transparent px-3 py-4 text-sm text-white placeholder:text-zinc-500 focus:outline-none"
+                />
+                {searchQuery && <button type="button" onClick={() => handleSearchChange("")} aria-label="Clear search text" className="rounded p-2 text-zinc-400 hover:text-white"><X size={16} /></button>}
+                <kbd className="hidden whitespace-nowrap rounded border border-white/10 px-2 py-1 font-mono text-[10px] text-zinc-400 sm:block">/ to search</kbd>
+              </div>
+              <div className="mt-3 flex flex-wrap items-center gap-2">
+                <span className="font-mono text-[11px] text-zinc-500">Popular searches:</span>
+                {QUICK_SEARCH_PILLS.map((pill) => (
+                  <button key={pill.label} type="button" onClick={() => handleSearchChange(pill.query)} className={`rounded-full border px-2.5 py-1 font-mono text-[11px] transition ${searchQuery.toLowerCase() === pill.query.toLowerCase() ? "border-lime-300 bg-lime-300/10 text-lime-200" : "border-white/10 text-zinc-400 hover:border-lime-300/40 hover:text-lime-200"}`}>{pill.label}</button>
+                ))}
               </div>
             </div>
 
