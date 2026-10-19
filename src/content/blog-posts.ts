@@ -15,7 +15,9 @@ export interface BlogPost {
   links: { label: string; to: string }[];
 }
 
-export const BLOG_POSTS: BlogPost[] = [
+import { WHATSAPP_AGENT_BLOG_POSTS } from "./whatsapp-agent-blogs";
+
+const RAW_BLOG_POSTS: BlogPost[] = [
   {
   "slug": "what-is-a-jarvis-ai",
   "title": "What Is a JARVIS AI? Complete 2026 Technical Architecture & Implementation Guide",
@@ -5615,6 +5617,11 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "DIGI BIZ OS Autonomous Workstation (£29)", to: "/download" }
     ]
   }
+];
+
+export const BLOG_POSTS: BlogPost[] = [
+  ...WHATSAPP_AGENT_BLOG_POSTS,
+  ...RAW_BLOG_POSTS,
 ];
 
 export const BLOG_BY_SLUG: Record<string, BlogPost> = Object.fromEntries(

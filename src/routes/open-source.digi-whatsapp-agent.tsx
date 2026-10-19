@@ -28,6 +28,7 @@ import {
   Globe,
   Radio,
   Lock,
+  BookOpen,
 } from "lucide-react";
 import { useState } from "react";
 import SectionWrapper from "@/components/SectionWrapper";
@@ -195,6 +196,21 @@ export const Route = createFileRoute("/open-source/digi-whatsapp-agent")({
             offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
           }),
         },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: toolData.faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.a,
+              },
+            })),
+          }),
+        },
       ],
     };
   },
@@ -321,6 +337,20 @@ function DigiWhatsAppAgentSubpage() {
             <div className="font-mono text-2xl font-black text-amber-400 md:text-3xl">8-Stage</div>
             <div className="mt-1 text-xs text-zinc-400">Sales Pipeline State Machine</div>
           </GlassCard>
+        </div>
+
+        {/* ── AEO / AI OVERVIEW SUMMARY (ENGINEERED FOR PERPLEXITY & GOOGLE AI OVERVIEWS) ── */}
+        <div className="mt-8 rounded-2xl border border-emerald-500/30 bg-emerald-950/25 p-6 md:p-8 backdrop-blur-xl">
+          <div className="flex items-center gap-2 font-mono text-xs font-bold text-emerald-400">
+            <Radio size={14} className="animate-pulse" />
+            <span>AI OVERVIEW • DIRECT ANSWER ENGINE SPECIFICATION</span>
+          </div>
+          <h2 className="mt-2 font-display text-lg font-bold text-white md:text-2xl">
+            What is Digi WhatsApp Agent? (Quick Technical Summary)
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-zinc-300 md:text-base">
+            <strong>Digi WhatsApp Agent</strong> is a sovereign, 100% free open-source autonomous AI sales representative and conversational engine engineered by DigiFormation Ltd for Windows. It connects to your personal or business WhatsApp via direct QR code pairing using the <code>@whiskeysockets/baileys</code> WebSocket protocol, eliminating Meta Cloud API fees and Wati/Interakt subscription tolls ($1,200–$3,600/yr). It features a 7-tier zero-cost AI reasoning cascade (Google Gemini 2.5 Flash, Groq 12ms LPU, Cloudflare, Mistral, GitHub Models, SambaNova), an 8-stage sales pipeline state machine, Groq Whisper voice note transcription in Roman Urdu and English, and stores 100% of customer conversation memory locally in a zero-leakage SQLite database.
+          </p>
         </div>
 
         {/* ── VISUAL STUDIO & REAL SCREENSHOTS GALLERY ────────────── */}
@@ -527,6 +557,141 @@ function DigiWhatsAppAgentSubpage() {
         {/* ── FAQS ────────────────────────────────────────────────── */}
         <div className="mt-16">
           <OpenSourceSubpageFaq faqs={toolData.faqs} toolName={toolData.shortName} />
+        </div>
+
+        {/* ── TECHNICAL BLUEPRINTS & IN-DEPTH ARTICLES (SEO / GEO CLUSTER) ── */}
+        <div className="mt-16">
+          <div className="text-center">
+            <EyebrowLabel>TECHNICAL ARCHITECTURE &amp; PLAYBOOKS</EyebrowLabel>
+            <h2 className="mt-3 font-display text-2xl font-bold text-white md:text-3xl">
+              Deep-Dive WhatsApp AI Engineering Blueprints
+            </h2>
+            <p className="mt-2 text-sm text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Read our in-depth technical breakdowns on replacing $3,600/yr SaaS subscriptions, cascading free AI models, and mastering Roman Urdu sales automation.
+            </p>
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <Link
+              to="/blog/zero-cost-whatsapp-ai-sales-agent-complete-blueprint-2026"
+              className="group flex flex-col justify-between rounded-2xl border border-emerald-500/30 bg-emerald-950/20 p-6 transition-all hover:border-emerald-400 hover:bg-emerald-950/40 hover:shadow-[0_0_30px_rgba(37,211,102,0.25)] md:col-span-2"
+            >
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="rounded-full border border-emerald-400/40 bg-emerald-500/10 px-3 py-1 font-mono text-xs font-bold text-emerald-400">
+                    🔥 Cornerstone 3,000+ Word Guide
+                  </span>
+                  <span className="font-mono text-xs text-zinc-400">28 min read</span>
+                </div>
+                <h3 className="mt-4 font-display text-xl font-bold text-white group-hover:text-emerald-300 transition-colors">
+                  The Zero-Cost WhatsApp AI Sales Agent Blueprint (2026): Replace $3,600/Yr Wati &amp; Meta API Taxes
+                </h3>
+                <p className="mt-2 text-sm text-zinc-300 leading-relaxed">
+                  The definitive architectural guide to deploying an autonomous 24/7 WhatsApp AI sales representative: Baileys WebSockets, 7-tier AI cascading, local SQLite state tracking, and zero-hallucination discount defense.
+                </p>
+              </div>
+              <div className="mt-6 flex items-center gap-2 font-mono text-xs font-bold text-emerald-400">
+                <span>Read Full Blueprint</span>
+                <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+              </div>
+            </Link>
+
+            <Link
+              to="/blog/the-great-whatsapp-saas-extortion-why-businesses-are-quitting-cloud-bots"
+              className="group flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-6 transition-all hover:border-cyan-400 hover:bg-white/10 hover:shadow-[0_0_25px_rgba(47,224,200,0.2)]"
+            >
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-2.5 py-0.5 font-mono text-xs text-cyan-300">
+                    Industry Expose
+                  </span>
+                  <span className="font-mono text-xs text-zinc-400">11 min read</span>
+                </div>
+                <h3 className="mt-4 font-display text-base font-bold text-white group-hover:text-cyan-300 transition-colors">
+                  The Great WhatsApp SaaS Extortion &amp; Cloud Bot Exodus
+                </h3>
+                <p className="mt-2 text-xs text-zinc-400 leading-relaxed">
+                  How SaaS platforms lock businesses into predatory per-conversation pricing, hidden markup tolls, and vendor lock-in.
+                </p>
+              </div>
+              <div className="mt-6 flex items-center gap-2 font-mono text-xs font-bold text-cyan-400">
+                <span>Read Article</span>
+                <ArrowRight size={13} className="transition-transform group-hover:translate-x-1" />
+              </div>
+            </Link>
+
+            <Link
+              to="/blog/7-tier-free-ai-cascade-unlimited-whatsapp-intelligence-zero-cost"
+              className="group flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-6 transition-all hover:border-purple-400 hover:bg-white/10 hover:shadow-[0_0_25px_rgba(168,85,247,0.2)]"
+            >
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="rounded-full border border-purple-400/30 bg-purple-500/10 px-2.5 py-0.5 font-mono text-xs text-purple-300">
+                    AI Architecture
+                  </span>
+                  <span className="font-mono text-xs text-zinc-400">12 min read</span>
+                </div>
+                <h3 className="mt-4 font-display text-base font-bold text-white group-hover:text-purple-300 transition-colors">
+                  The 7-Tier Free AI Cascade: 0ms Downtime &amp; $0 Token Bills
+                </h3>
+                <p className="mt-2 text-xs text-zinc-400 leading-relaxed">
+                  Orchestrating Gemini 2.5 Flash, Groq 12ms LPU, Cloudflare, and Mistral with automated 0ms customer failover.
+                </p>
+              </div>
+              <div className="mt-6 flex items-center gap-2 font-mono text-xs font-bold text-purple-400">
+                <span>Read Architecture</span>
+                <ArrowRight size={13} className="transition-transform group-hover:translate-x-1" />
+              </div>
+            </Link>
+
+            <Link
+              to="/blog/how-to-automate-whatsapp-sales-in-roman-urdu-urdu-script-b2b-playbook"
+              className="group flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-6 transition-all hover:border-amber-400 hover:bg-white/10 hover:shadow-[0_0_25px_rgba(245,158,11,0.2)]"
+            >
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="rounded-full border border-amber-400/30 bg-amber-500/10 px-2.5 py-0.5 font-mono text-xs text-amber-300">
+                    Agency Playbook
+                  </span>
+                  <span className="font-mono text-xs text-zinc-400">10 min read</span>
+                </div>
+                <h3 className="mt-4 font-display text-base font-bold text-white group-hover:text-amber-300 transition-colors">
+                  Closing Deals in Roman Urdu &amp; English: B2B Playbook
+                </h3>
+                <p className="mt-2 text-xs text-zinc-400 leading-relaxed">
+                  Why Silicon Valley bots fail in South Asia, and how to master authentic conversational rapport and discount defense.
+                </p>
+              </div>
+              <div className="mt-6 flex items-center gap-2 font-mono text-xs font-bold text-amber-400">
+                <span>Read Playbook</span>
+                <ArrowRight size={13} className="transition-transform group-hover:translate-x-1" />
+              </div>
+            </Link>
+
+            <Link
+              to="/blog/building-sovereign-crm-whatsapp-stack-why-sqlite-beats-cloud-saas"
+              className="group flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-6 transition-all hover:border-blue-400 hover:bg-white/10 hover:shadow-[0_0_25px_rgba(59,130,246,0.2)]"
+            >
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="rounded-full border border-blue-400/30 bg-blue-500/10 px-2.5 py-0.5 font-mono text-xs text-blue-300">
+                    Data Sovereignty
+                  </span>
+                  <span className="font-mono text-xs text-zinc-400">12 min read</span>
+                </div>
+                <h3 className="mt-4 font-display text-base font-bold text-white group-hover:text-blue-300 transition-colors">
+                  Sovereignty Over Subscriptions: Why SQLite Beats Cloud CRMs
+                </h3>
+                <p className="mt-2 text-xs text-zinc-400 leading-relaxed">
+                  Microsecond queries, zero data leakage, and why local SQLite state tracking guarantees higher conversion rates.
+                </p>
+              </div>
+              <div className="mt-6 flex items-center gap-2 font-mono text-xs font-bold text-blue-400">
+                <span>Read Guide</span>
+                <ArrowRight size={13} className="transition-transform group-hover:translate-x-1" />
+              </div>
+            </Link>
+          </div>
         </div>
 
         {/* ── BRIDGE TO DIGI BIZ OS ───────────────────────────────── */}
