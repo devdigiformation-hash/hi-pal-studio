@@ -16,6 +16,7 @@ export interface BlogPost {
 }
 
 import { WHATSAPP_AGENT_BLOG_POSTS } from "./whatsapp-agent-blogs";
+import { DIGIOFFICE_BLOG_POSTS } from "./digioffice-blogs";
 
 const RAW_BLOG_POSTS: BlogPost[] = [
   {
@@ -5620,6 +5621,7 @@ const RAW_BLOG_POSTS: BlogPost[] = [
 ];
 
 export const BLOG_POSTS: BlogPost[] = [
+  ...DIGIOFFICE_BLOG_POSTS,
   ...WHATSAPP_AGENT_BLOG_POSTS,
   ...RAW_BLOG_POSTS,
 ];

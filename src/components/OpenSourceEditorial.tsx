@@ -142,7 +142,17 @@ export default function OpenSourceEditorial({ onDownloadLabs, onLabsGuide }: Ope
         </article>
 
         <article className="os-feature os-feature-reverse os-reveal" id="digi-office-suite">
-          <div className="os-feature-copy"><div className="os-feature-meta"><span>04 / MAKE ROOM FOR IDEAS</span><span>✳</span></div><h3>DIGI Office<br />Suite<span>.</span></h3><p>Bring documents, spreadsheets, presentations and more into one creative workspace.</p><div className="os-feature-tags"><span>DOCUMENTS</span><span>SPREADSHEETS</span><span>PRESENTATIONS</span></div><div className="os-feature-status"><FileText size={17} /> Product details coming soon</div></div>
+          <div className="os-feature-copy">
+            <div className="os-feature-meta"><span>04 / SOVEREIGN AI PRODUCTIVITY</span><span>✳</span></div>
+            <h3>DIGI Office<br />Suite<span>.</span></h3>
+            <p>Bring Word, Excel, PowerPoint, and PDF into one sovereign desktop suite. Runs on Windows 7 to 11 (32-Bit &amp; 64-Bit) with iPhone Morphous Glass (Sheesha UI).</p>
+            <div className="os-feature-tags"><span>DOCS &amp; SHEETS</span><span>RUST ENGINE</span><span>WIN 7 TO 11</span><span>SHEESHA UI</span></div>
+            <Link className="os-feature-link" to="/open-source/digioffice">Explore DigiOffice Suite <ArrowUpRight size={17} /></Link>
+            <div className="os-labs-actions">
+              <a href="https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-64Bit-(Windows-10-and-11).exe" target="_blank" rel="noopener noreferrer">Download 64-Bit ↓</a>
+              <a href="https://github.com/digiformationltd-creator/DigiOffice-Suit" target="_blank" rel="noopener noreferrer">GitHub Repo ↗</a>
+            </div>
+          </div>
           <div className="os-feature-visual os-visual-office"><OfficeVisual /><span className="os-image-number">04</span></div>
         </article>
 

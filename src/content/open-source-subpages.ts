@@ -1299,4 +1299,72 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       ],
     },
   },
+  digioffice: {
+    id: "digioffice",
+    name: "DIGI OFFICE SUITE — Sovereign Universal AI Office Suite",
+    shortName: "DigiOffice Suite",
+    route: "/open-source/digioffice",
+    category: "Productivity & Office AI",
+    tagline: "Universal sovereign AI desktop office suite (Docs, Sheets, Slides, PDF, Markdown). 100% free lifetime, running natively on Windows 7 SP1 (32-Bit) to Windows 11 (64-Bit & ARM64) with Sheesha UI (iPhone frosted glass).",
+    eyebrow: "OFFICIAL DIGIFORMATION PRODUCT • 100% FREE LIFETIME • WINDOWS 7 TO 11 (32-BIT & 64-BIT) • MICROSOFT 365 ALTERNATIVE",
+    alternativeTo: ["Microsoft Office 365 ($99-$240/yr)", "Microsoft 365 Copilot ($30/mo)", "Google Workspace", "Notion AI"],
+    license: "Apache-2.0 / Fair-Source",
+    licenseDetails: "100% Free forever for personal, agency, educational, and commercial usage. Zero monthly subscription fees.",
+    stars: "100% Open Source",
+    repoUrl: "https://github.com/digiformationltd-creator/DigiOffice-Suit",
+    downloadUrl: "https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-64Bit-(Windows-10-and-11).exe",
+    downloadType: "installer",
+    downloadTypeLabel: "Windows Setup (64-Bit & 32-Bit)",
+    privacy: "100% Local (Offline)",
+    provenance: "Engineered and maintained by DigiFormation Ltd as a sovereign, universal desktop office suite.",
+    requirements: {
+      os: "Windows 7 SP1 (32-Bit/64-Bit), Windows 8.1, Windows 10, Windows 11, Windows 11 ARM64",
+      cpu: "Intel Core 2 Duo / Celeron / AMD Athlon or higher (x86 & x64 compatible)",
+      ram: "2 GB RAM minimum (4 GB+ recommended for large workbooks)",
+      gpu: "Integrated GPU or software canvas rendering supported",
+      storage: "400 MB free disk space",
+      runtime: "Standalone Windows Desktop Installer or Portable ZIP (Zero installation required)",
+    },
+    faqs: [
+      {
+        q: "What is DigiOffice Suite?",
+        a: "DigiOffice Suite is a sovereign, universal AI desktop office suite developed by DigiFormation Ltd. It includes full native support for Word documents (.docx), Excel spreadsheets (.xlsx), PowerPoint presentations (.pptx), PDF editing, and Markdown, powered by an embedded Rust calculation engine, iPhone Morphous Glass (Sheesha UI), and on-device AI with zero monthly subscriptions.",
+      },
+      {
+        q: "Does DigiOffice Suite run on Windows 7 and 32-Bit PCs?",
+        a: "Yes! Unlike Microsoft 365 and GenOffice which dropped 32-bit and Windows 7 support, DigiOffice Suite was specifically engineered with defensive Win32 symbol polyfills. The 32-Bit Universal Edition runs smoothly with zero crashes on Windows 7 SP1, Windows 8, and budget Windows 10 PCs with just 2GB RAM.",
+      },
+      {
+        q: "How does DigiOffice Sheets execute Excel formulas without hallucinations?",
+        a: "While web-based AI tools hallucinate static numbers, DigiOffice Sheets executes a bare-metal embedded Rust calculation engine. When you ask the AI to calculate quarterly growth or financial margins, it inserts real living formulas (SUMIF, VLOOKUP, INDEX/MATCH) directly into the .xlsx grid, evaluated in microseconds by Rust.",
+      },
+      {
+        q: "What is the Sheesha UI (iPhone Frosted Glass)?",
+        a: "The Sheesha UI is DigiOffice's signature design system, featuring real-time 30px frosted crystal glass blur (backdrop-filter: blur(30px)), specular top sheen reflections, 14px DigiLabs curved window corners, and an intuitive tactile Pushpin (📌) file organization architecture.",
+      },
+      {
+        q: "Does DigiOffice work completely offline?",
+        a: "Yes! All document creation, spreadsheet formula calculations, PDF reading, and local file searches run 100% offline on your own machine. When paired with local Ollama LLMs, AI document rewriting also executes without an internet connection.",
+      },
+      {
+        q: "Can I use free cloud AI models like Google Gemini or Groq?",
+        a: "Yes. DigiOffice includes direct Bring-Your-Own-Key (BYOK) support for Google Gemini 2.5 Flash (free tier) and Groq Cloud LPU (12ms inference) with zero middleman markups or telemetry logging.",
+      },
+      {
+        q: "How does DigiOffice Suite compare to DIGI BIZ OS?",
+        a: "DigiOffice Suite is our sovereign desktop document editor. DIGI BIZ OS is our all-in-one business operating system for Windows that combines DigiOffice with a native CRM, 24/7 WhatsApp AI Sales Agent, JARVIS voice desktop control, automated PDF billing, and 12 integrated enterprise modules for a one-time lifetime license of £29.",
+      },
+    ],
+    relatedToolIds: ["digi-whatsapp-agent", "digi-labs", "digi-lead-hunter", "artcraft", "pocketbase"],
+    bridge: {
+      headline: "Supercharge DigiOffice with the Complete DIGI BIZ OS Ecosystem",
+      description: "While DigiOffice gives you full control over documents and spreadsheets, DIGI BIZ OS automates your commercial operations: turning invoices into CRM deals, deploying 24/7 WhatsApp AI sales reps, and delegating office tasks through JARVIS voice control.",
+      highlights: [
+        "Attach DigiOffice proposals and spreadsheets directly to local CRM customer pipelines",
+        "Generate and dispatch branded invoices through WhatsApp with one voice command",
+        "JARVIS voice control (<200ms latency) to query business analytics hands-free",
+        "Lifetime ownership for £29 (PKR 14,900) with zero recurring subscriptions forever",
+      ],
+    },
+  },
 };
