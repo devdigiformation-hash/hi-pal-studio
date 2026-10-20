@@ -1003,9 +1003,9 @@ export const OPEN_SOURCE_COMPARISONS: Record<string, OpenSourceComparisonItem> =
       }
     ]
   },
-  "genoffice": {
-    "id": "genoffice",
-    "name": "GenOffice AI Desktop Office Suite",
+  "digioffice": {
+    "id": "digioffice",
+    "name": "DigiOffice Suite",
     "category": "Productivity & Office AI",
     "paidAlternatives": [
       "Microsoft Office 365 ($99-$240/yr)",
@@ -1056,7 +1056,7 @@ export const OPEN_SOURCE_COMPARISONS: Record<string, OpenSourceComparisonItem> =
       },
       {
         "feature": "Developer & Agent CLI (MCP)",
-        "openSourceValue": "Built-in genoffice CLI & Claude/Cursor/Codex skills",
+        "openSourceValue": "Built-in digioffice CLI & Claude/Cursor/Codex skills",
         "commercialPaidValue": "Closed proprietary APIs with per-seat billing",
         "openSourceWins": true
       }

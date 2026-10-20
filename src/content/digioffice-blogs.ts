@@ -17,7 +17,7 @@ export const DIGIOFFICE_BLOG_POSTS: BlogPost[] = [
           "Today, a small business, digital agency, or independent accounting firm is forced to pay Microsoft 365 Business Standard licenses running between $12.50 and $22.00 per user every single month. When you add Microsoft 365 Copilot—Microsoft's branded generative AI assistant—at an eye-watering $30.00 per user per month with mandatory annual upfront commitments, a team of just ten employees costs an astronomical $4,500 to $6,200 every single year simply to type documents, balance spreadsheets, and prepare client slide decks.",
           "Yet, despite paying thousands of dollars every year, business operators and educational institutions find themselves subjected to continuous indignities:",
           "First is mandatory cloud tethering. Microsoft has deliberately engineered its modern office suite to treat local file storage as a second-class citizen. Documents are pushed aggressively into OneDrive and SharePoint, forcing users through cloud synchronization queues, latency-inducing file locking errors, and invasive telemetry tracking.",
-          "Second is deliberate hardware obsolescence. Millions of perfectly functional laptops and workstations running Windows 7 SP1, 32-bit (x86) architectures, or systems with 2GB to 4GB of RAM have been completely cut off from modern office updates. Microsoft and newer tools like GenOffice dropped 32-bit Windows support entirely, triggering fatal `KERNEL32.dll` and missing OS symbol crashes whenever users on older PCs attempt to launch the software.",
+          "Second is deliberate hardware obsolescence. Millions of perfectly functional laptops and workstations running Windows 7 SP1, 32-bit (x86) architectures, or systems with 2GB to 4GB of RAM have been completely cut off from modern office updates. Microsoft and newer cloud-locked tools dropped 32-bit Windows support entirely, triggering fatal `KERNEL32.dll` and missing OS symbol crashes whenever users on older PCs attempt to launch the software.",
           "Third is the loss of data sovereignty. In an era where corporate confidentiality, GDPR compliance, and client NDA privacy are paramount, routing every internal memo, financial ledger, and contract draft through third-party multi-tenant cloud servers is a massive legal and security risk.",
           "This is why DigiFormation Ltd engineered **DigiOffice Suite**: a sovereign, universal, 100% free and open-source AI desktop office suite that runs natively on your own PC, supports real Word (.docx), Excel (.xlsx), PowerPoint (.pptx), PDF, Markdown, and HTML, and executes flawlessly on everything from a vintage Windows 7 32-bit netbook to a high-end Windows 11 ARM64 Snapdragon workstation with zero subscriptions forever."
         ],
@@ -42,7 +42,7 @@ export const DIGIOFFICE_BLOG_POSTS: BlogPost[] = [
           headers: [
             "Operating Environment",
             "Hardware Specs",
-            "Microsoft 365 / GenOffice Status",
+            "Microsoft 365 / Competing Tools Status",
             "DigiOffice Suite Performance"
           ],
           rows: [
@@ -150,7 +150,7 @@ export const DIGIOFFICE_BLOG_POSTS: BlogPost[] = [
         heading: "The E-Waste Conspiracy: Killing Perfectly Good Computers with Software Bloat",
         paragraphs: [
           "Walk into any university computer lab, small retail shop, or accounting office across Pakistan, India, Africa, or Eastern Europe, and you will find millions of sturdy, reliable laptops powered by Intel Core 2 Duo, Pentium, or older Core i3 processors running Windows 7 SP1 or 32-bit Windows 10.",
-          "These machines have plenty of compute power to draft contracts, calculate balance sheets, and display presentation slides. Yet, over the past three years, Microsoft, Google, Adobe, and modern open-source projects like GenOffice systematically dropped support for 32-bit operating systems.",
+          "These machines have plenty of compute power to draft contracts, calculate balance sheets, and display presentation slides. Yet, over the past three years, Microsoft, Google, Adobe, systematically dropped support for 32-bit operating systems.",
           "When a student or small business owner tries to launch a modern office tool, they are greeted by cold system dialogs: `This application cannot run on your PC` or fatal `KERNEL32.dll` entry point missing errors. The unwritten message from Big Tech is clear: throw away your functional $300 laptop and purchase a new $1,000 Windows 11 machine—or be left behind in the digital dark ages."
         ],
         bullets: [

@@ -56,16 +56,16 @@ function getArticleCta(post: BlogPost): ArticleCtaData {
   const cluster = post.cluster.toLowerCase();
   const title = post.title.toLowerCase();
 
-  // 1. GenOffice Articles
+  // 1. DigiOffice Suite Articles
   if (
-    slug.includes("genoffice") ||
-    title.includes("genoffice") ||
+    slug.includes("digioffice") ||
+    title.includes("digioffice") ||
     slug.includes("sheets-ai") ||
-    slug.includes("pitch-deck-genoffice")
+    slug.includes("pitch-deck-digioffice")
   ) {
     return {
       badge: "OPEN SOURCE AI OFFICE SUITE • 100% FREE SETUP",
-      headline: "GenOffice: AI-Native Office Suite (.docx, .xlsx, .pptx, PDF)",
+      headline: "DigiOffice Suite: AI-Native Office Suite (.docx, .xlsx, .pptx, PDF)",
       description:
         "Replace Microsoft 365 ($99-$240/yr) & Copilot ($30/mo) for $0. Built-in AI edits Word files, writes live Excel formulas, and generates full pitch decks on your local PC.",
       borderClass: "border-blue-500/40",
@@ -73,15 +73,15 @@ function getArticleCta(post: BlogPost): ArticleCtaData {
         "bg-gradient-to-r from-blue-950/40 via-slate-900/60 to-cyan-950/40 shadow-[0_0_35px_rgba(59,130,246,0.15)]",
       badgeClass: "text-blue-300 border-blue-500/30 bg-blue-500/10",
       primaryButton: {
-        label: "Download GenOffice Setup (.exe 156MB)",
-        to: "/open-source/genoffice",
+        label: "Download DigiOffice Suite Setup (.exe 156MB)",
+        to: "/open-source/digioffice",
         icon: Download,
         className:
           "border-blue-400 bg-blue-500 hover:bg-blue-400 text-white shadow-[0_0_20px_rgba(59,130,246,0.35)]",
       },
       secondaryButton: {
         label: "Explore Open-Source Office",
-        to: "/open-source/genoffice",
+        to: "/open-source/digioffice",
         icon: ExternalLink,
         className:
           "border-white/15 bg-white/[0.04] text-zinc-200 hover:text-white hover:bg-white/[0.08]",
