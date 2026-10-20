@@ -79,6 +79,7 @@ import digiLabsLogo from "@/assets/digi-labs-logo.png";
 import digiLabsBanner from "@/assets/digi-labs-banner.png";
 import digiWhatsappBanner from "@/assets/digi-whatsapp-banner.png";
 import digiWhatsappLogo from "@/assets/digi-whatsapp-logo.jpg";
+import digiofficeDashboardScreenshot from "@/assets/digioffice-dashboard.png";
 
 
 const TITLE = "Free Open Source Software Library & Hub — AI Agents, Media & Tools | DIGI BIZ OS";
@@ -210,6 +211,7 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     license: "Apache 2.0 / Fair-Source",
     color: "#3B82F6",
     icon: FileText,
+    image: digiofficeDashboardScreenshot,
     badge: "Official DIGIFORMATION Product",
     bundle: "AI Office Productivity & Universal Compatibility",
     bullets: [

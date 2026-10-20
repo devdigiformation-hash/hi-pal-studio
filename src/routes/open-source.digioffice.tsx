@@ -44,6 +44,9 @@ import OpenSourceDigiBizBridge from "@/components/seo/OpenSourceDigiBizBridge";
 import SubscribeToDownloadModal from "@/components/seo/SubscribeToDownloadModal";
 import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
 
+import digiofficeDashboardScreenshot from "@/assets/digioffice-dashboard.png";
+import digiofficeSheetsAiScreenshot from "@/assets/digioffice-sheets-ai.png";
+
 const toolData = OPEN_SOURCE_SUBPAGES["digioffice"];
 
 const TITLE = "DIGI OFFICE SUITE — Sovereign Universal AI Office Suite (Free Microsoft 365 Alternative) | DIGI BIZ OS";
@@ -277,44 +280,16 @@ function DigiOfficeSubpage() {
               </div>
             </div>
 
-            {/* Glass Visual Stage */}
-            <div className="w-full max-w-lg lg:w-auto">
-              <div className="relative overflow-hidden rounded-3xl border border-blue-500/30 bg-black/60 p-6 shadow-[0_0_50px_rgba(59,130,246,0.25)] backdrop-blur-2xl">
-                <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                  <div className="flex items-center gap-2">
-                    <span className="h-3 w-3 rounded-full bg-red-500/80" />
-                    <span className="h-3 w-3 rounded-full bg-amber-500/80" />
-                    <span className="h-3 w-3 rounded-full bg-emerald-500/80" />
-                    <span className="ml-2 font-mono text-xs font-bold text-zinc-300">DIGIOFFICE SUITE v1.0</span>
-                  </div>
-                  <span className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[11px] font-bold text-emerald-400">
-                    32-BIT &amp; 64-BIT
-                  </span>
-                </div>
-                <div className="mt-6 grid grid-cols-2 gap-3 text-left">
-                  <div className="rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
-                    <FileText size={22} className="text-blue-400" />
-                    <div className="mt-2 font-display text-sm font-bold text-white">Docs (.docx)</div>
-                    <div className="text-xs text-zinc-400">Track Changes &amp; AI Revisions</div>
-                  </div>
-                  <div className="rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
-                    <FileSpreadsheet size={22} className="text-emerald-400" />
-                    <div className="mt-2 font-display text-sm font-bold text-white">Sheets (.xlsx)</div>
-                    <div className="text-xs text-zinc-400">Rust Calc Engine &amp; SUMIF</div>
-                  </div>
-                  <div className="rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
-                    <Presentation size={22} className="text-amber-400" />
-                    <div className="mt-2 font-display text-sm font-bold text-white">Slides (.pptx)</div>
-                    <div className="text-xs text-zinc-400">Vector Canvas Pitch Decks</div>
-                  </div>
-                  <div className="rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
-                    <Pin size={22} className="text-pink-400" />
-                    <div className="mt-2 font-display text-sm font-bold text-white">Pushpin 📌</div>
-                    <div className="text-xs text-zinc-400">Tactile Desktop Pinning</div>
-                  </div>
-                </div>
-                <div className="mt-4 rounded-xl border border-blue-500/30 bg-blue-500/10 p-3 text-center font-mono text-xs text-blue-300">
-                  📱 Sheesha UI • 14px Curved Corners • Zero Cloud Telemetry
+            {/* Real Desktop Interface Stage */}
+            <div className="w-full max-w-xl lg:w-auto">
+              <div className="relative overflow-hidden rounded-3xl border border-blue-500/30 bg-black/60 shadow-[0_0_50px_rgba(59,130,246,0.25)] backdrop-blur-2xl">
+                <img
+                  src={digiofficeDashboardScreenshot}
+                  alt="DigiOffice Suite - Official Desktop Interface"
+                  className="h-auto w-full object-cover"
+                />
+                <div className="absolute top-3 right-3 rounded-full border border-blue-500/40 bg-slate-950/90 px-3 py-1 font-mono text-xs font-bold text-blue-400 shadow-lg">
+                  v1.0.0 STABLE • 32 &amp; 64-BIT
                 </div>
               </div>
             </div>
@@ -353,6 +328,61 @@ function DigiOfficeSubpage() {
           <p className="mt-3 text-sm leading-relaxed text-zinc-300 md:text-base">
             <strong>DigiOffice Suite</strong> is a sovereign, 100% free open-source universal desktop office productivity suite developed by DigiFormation Ltd for Windows. It provides full native byte-preserving support for Word documents (<code>.docx</code>), Excel spreadsheets (<code>.xlsx</code>), PowerPoint presentations (<code>.pptx</code>), PDF editing, and Markdown. Unlike Microsoft 365 ($99–$240/yr) and Copilot ($30/mo), DigiOffice Suite is completely free forever. It features universal compatibility for both 32-bit (x86) and 64-bit systems (running crash-free on Windows 7 SP1, 8.1, 10, 11, and ARM64), an embedded Rust spreadsheet calculation engine, iPhone Morphous Glass (Sheesha UI), and on-device AI document rewriting with zero cloud telemetry.
           </p>
+        </div>
+
+        {/* ── REAL WORKSTATION INTERFACE GALLERY ───────────────────── */}
+        <div className="mt-16">
+          <div className="text-center">
+            <EyebrowLabel>AUTHENTIC DESKTOP WORKSPACE</EyebrowLabel>
+            <h2 className="mt-3 font-display text-2xl font-bold text-white md:text-4xl">
+              Engineered with Sheesha Glass &amp; Native AI
+            </h2>
+            <p className="mt-3 text-sm text-[var(--text-secondary)] md:text-base max-w-2xl mx-auto">
+              Real application views: Luminous frosted glass home workspace, 1-click document creation, pushpin pinning, and embedded AI formula calculations.
+            </p>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
+            {/* Screenshot 1 */}
+            <div className="group relative overflow-hidden rounded-2xl border border-blue-500/30 bg-black/50 p-3 shadow-xl transition-all hover:border-blue-500/60 hover:shadow-[0_0_30px_rgba(59,130,246,0.25)]">
+              <div className="overflow-hidden rounded-xl">
+                <img
+                  src={digiofficeDashboardScreenshot}
+                  alt="DigiOffice Suite - Home Workspace & Sheesha Glass UI"
+                  className="h-auto w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                />
+              </div>
+              <div className="mt-4 p-2">
+                <div className="flex items-center gap-2">
+                  <span className="flex h-2 w-2 rounded-full bg-blue-400" />
+                  <h3 className="font-display text-base font-bold text-white">Sheesha UI Home Workspace</h3>
+                </div>
+                <p className="mt-1 text-xs leading-relaxed text-zinc-400">
+                  Frosted crystal glass quick-action tiles for Word (.docx), Excel (.xlsx), PowerPoint (.pptx), Markdown, HTML, and PDF. Includes tactile Pushpin (📌) file organization and instant 1-click cloud trial launcher.
+                </p>
+              </div>
+            </div>
+
+            {/* Screenshot 2 */}
+            <div className="group relative overflow-hidden rounded-2xl border border-emerald-500/30 bg-black/50 p-3 shadow-xl transition-all hover:border-emerald-500/60 hover:shadow-[0_0_30px_rgba(16,185,129,0.25)]">
+              <div className="overflow-hidden rounded-xl">
+                <img
+                  src={digiofficeSheetsAiScreenshot}
+                  alt="DigiOffice Sheets with Embedded Digi AI Assistant"
+                  className="h-auto w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                />
+              </div>
+              <div className="mt-4 p-2">
+                <div className="flex items-center gap-2">
+                  <span className="flex h-2 w-2 rounded-full bg-emerald-400" />
+                  <h3 className="font-display text-base font-bold text-white">DigiOffice Sheets &amp; Digi AI Engine</h3>
+                </div>
+                <p className="mt-1 text-xs leading-relaxed text-zinc-400">
+                  Full Microsoft Excel workbook grid with bare-metal Rust formula calculations (SUMIF, VLOOKUP, INDEX/MATCH). Integrated Digi AI sidebar builds tables, formulas, and charts in place with zero hallucinations.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* ── SYSTEM COMPATIBILITY MATRIX ─────────────────────────── */}
