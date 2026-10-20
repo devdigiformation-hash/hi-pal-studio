@@ -55,8 +55,6 @@ const DESC =
 
 const DOWNLOAD_64_URL = "https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-64Bit-(Windows-10-and-11).exe";
 const DOWNLOAD_32_URL = "https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-32Bit-(Windows-7-to-11).exe";
-const DOWNLOAD_PORTABLE_64_URL = "https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Portable-64Bit-(Windows-10-and-11).zip";
-const DOWNLOAD_PORTABLE_32_URL = "https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Portable-32Bit-(Windows-7-to-11).zip";
 const REPO_URL = toolData.repoUrl;
 
 const FEATURES = [
@@ -681,7 +679,7 @@ function DigiOfficeSubpage() {
               Ready to Replace Microsoft 365 for Free Forever?
             </h2>
             <p className="mt-3 text-sm text-[var(--text-secondary)] md:text-base">
-              Download the standalone Windows installer (64-Bit or 32-Bit Universal) or grab the zero-install portable ZIP. Start drafting documents and spreadsheets with 100% privacy.
+              Download the standalone Windows installer (64-Bit or 32-Bit Universal). Start drafting documents and spreadsheets with 100% privacy.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-[850px] mx-auto">
               <button
@@ -710,26 +708,6 @@ function DigiOfficeSubpage() {
                 <span>Try DIGI BIZ OS (3-Day Free Trial)</span>
                 <ArrowRight size={14} className="opacity-80" />
               </Link>
-            </div>
-
-            {/* Portable ZIP Links */}
-            <div className="mt-5 flex items-center justify-center gap-4 text-xs font-mono text-zinc-400">
-              <span>Zero-Install Portable Editions:</span>
-              <a
-                href={DOWNLOAD_PORTABLE_64_URL}
-                className="text-cyan-400 hover:underline flex items-center gap-1"
-              >
-                <span>Portable 64-Bit (.zip)</span>
-                <ExternalLink size={11} />
-              </a>
-              <span>•</span>
-              <a
-                href={DOWNLOAD_PORTABLE_32_URL}
-                className="text-cyan-400 hover:underline flex items-center gap-1"
-              >
-                <span>Portable 32-Bit (.zip)</span>
-                <ExternalLink size={11} />
-              </a>
             </div>
 
             {/* Official Support & Corporate Credentials */}
