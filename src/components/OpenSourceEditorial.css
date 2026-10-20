@@ -93,6 +93,13 @@
 .os-office-float { position: absolute; display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid rgba(205,238,255,.25); border-radius: 12px; background: #10223d; color: #7eddeb; box-shadow: 0 12px 25px #070b1a99; }.os-office-float-a { left: -18px; top: 20%; transform: rotate(-10deg); }.os-office-float-b { right: -15px; bottom: 8%; color: #83e2a9; transform: rotate(10deg); }
 .os-library-callout { position: relative; display: flex; align-items: end; justify-content: space-between; gap: 40px; overflow: hidden; margin-top: 55px; padding: clamp(35px, 5vw, 75px); border: 1px solid rgba(47,224,200,.24); background: linear-gradient(135deg, #111c31, #12152c); color: #f6f6ed; }
 .os-library-callout > div:first-child, .os-library-callout > a { position: relative; z-index: 1; }.os-library-callout > div > span { color: #9fd7d0; }.os-library-callout h2 { margin-top: 24px; }.os-library-callout h2 em { color: var(--os-accent); }.os-library-callout p { max-width: 420px; margin: 22px 0 0; color: #b8c6d9; font-size: 14px; line-height: 1.7; }.os-button-dark { flex-shrink: 0; background: var(--os-accent); color: #071217; }.os-callout-spark { position: absolute; right: 6%; top: -25%; color: #2fe0c812; font-size: 320px; line-height: 1; }
+
+/* Some authentic application captures use a near-white desktop theme. Tone only
+   those frames into the site's midnight palette, without changing the source assets. */
+.os-library-preview--dusk { isolation: isolate; background: #06101f; }
+.os-library-preview--dusk img { filter: brightness(.42) contrast(1.14) saturate(.82) hue-rotate(156deg); }
+.os-library-preview--dusk::after { content: ""; position: absolute; z-index: 1; inset: 0; pointer-events: none; background: linear-gradient(135deg, rgba(3, 13, 30, .28), rgba(5, 12, 26, .52)); }
+.os-library-preview--dusk::before { content: ""; position: absolute; z-index: 2; inset: 0; pointer-events: none; box-shadow: inset 0 0 0 1px rgba(82, 224, 214, .16), inset 0 -36px 52px rgba(2, 7, 18, .38); }
 .os-motion-ready .os-reveal { opacity: 0; transform: translateY(30px); transition: opacity .75s ease, transform .75s ease; }.os-motion-ready .os-reveal.os-is-visible { opacity: 1; transform: translateY(0); }
 @keyframes os-marquee { to { transform: translateX(-50%); } }
 @keyframes os-float { 50% { transform: translateY(-15px); } }

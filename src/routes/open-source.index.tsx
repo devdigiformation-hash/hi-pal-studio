@@ -1219,6 +1219,10 @@ function OpenSourcePage() {
             <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {filteredSoftwares.map((s) => {
                 const Icon = s.icon;
+                // A few official app screenshots ship with an almost-white desktop UI.
+                // Keep those previews readable while preventing a sudden light panel in
+                // the otherwise midnight-blue library.
+                const needsDuskPreview = ["digioffice", "jan-ai", "anythingllm", "tuttle"].includes(s.id);
                 return (
                   <div key={s.id} className="group block h-full">
                     <ThreeDTiltCard
@@ -1293,7 +1297,7 @@ function OpenSourcePage() {
                         </p>
 
                         {/* Visual Preview Screenshot / Product Studio */}
-                        <div className="mt-4 overflow-hidden rounded-xl border border-white/10 bg-[#03060C] aspect-[16/9] relative group-hover:border-white/20 transition">
+                        <div className={`mt-4 overflow-hidden rounded-xl border border-white/10 bg-[#03060C] aspect-[16/9] relative group-hover:border-white/20 transition${needsDuskPreview ? " os-library-preview--dusk" : ""}`}>
                           {s.image ? (
                             <img
                               src={s.image}
