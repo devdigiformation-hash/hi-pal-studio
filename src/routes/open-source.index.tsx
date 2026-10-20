@@ -77,6 +77,7 @@ import leadHunterBanner from "@/assets/digi-lead-hunter-banner.webp";
 import artcraftScreenshot from "@/assets/artcraft-screenshot.jpg";
 import digiLabsLogo from "@/assets/digi-labs-logo.png";
 import digiLabsBanner from "@/assets/digi-labs-banner.png";
+import digiWhatsappPairingKnowledgeScreenshot from "@/assets/digi-whatsapp-pairing-knowledge-screenshot.png";
 import digiWhatsappBanner from "@/assets/digi-whatsapp-banner.png";
 import digiWhatsappLogo from "@/assets/digi-whatsapp-logo.jpg";
 import digiofficeDashboardScreenshot from "@/assets/digioffice-dashboard.png";
@@ -181,7 +182,7 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     license: "Source-Available License",
     color: "#25D366",
     icon: MessageSquare,
-    image: digiWhatsappBanner,
+    image: digiWhatsappPairingKnowledgeScreenshot,
     badge: "Official DIGIFORMATION Product",
     bundle: "WhatsApp AI Sales Automation & Conversational CRM",
     bullets: [

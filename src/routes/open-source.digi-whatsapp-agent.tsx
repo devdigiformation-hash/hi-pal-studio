@@ -46,6 +46,7 @@ import OpenSourceDigiBizBridge from "@/components/seo/OpenSourceDigiBizBridge";
 import SubscribeToDownloadModal from "@/components/seo/SubscribeToDownloadModal";
 import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
 
+import digiWhatsappPairingKnowledgeScreenshot from "@/assets/digi-whatsapp-pairing-knowledge-screenshot.png";
 import digiWhatsappBanner from "@/assets/digi-whatsapp-banner.png";
 import digiWhatsappLogo from "@/assets/digi-whatsapp-logo.jpg";
 import digiWhatsappChatScreenshot from "@/assets/digi-whatsapp-chat-screenshot.jpg";
@@ -307,7 +308,7 @@ function DigiWhatsAppAgentSubpage() {
             <div className="w-full max-w-lg lg:w-auto">
               <div className="relative overflow-hidden rounded-3xl border border-emerald-500/30 bg-black/60 shadow-[0_0_50px_rgba(37,211,102,0.25)] backdrop-blur-xl">
                 <img
-                  src={digiWhatsappBanner}
+                  src={digiWhatsappPairingKnowledgeScreenshot}
                   alt="Digi WhatsApp Agent - Automate, Engage, Convert 24/7"
                   className="h-auto w-full object-cover"
                 />
@@ -366,7 +367,27 @@ function DigiWhatsAppAgentSubpage() {
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-3">
-            {/* Screenshot 1 */}
+            {/* Screenshot 1 - QR Pairing & Knowledge Studio (Real Workstation) */}
+            <div className="group relative overflow-hidden rounded-2xl border border-emerald-500/30 bg-black/50 p-3 shadow-xl transition-all hover:border-emerald-500/60 hover:shadow-[0_0_30px_rgba(37,211,102,0.2)]">
+              <div className="overflow-hidden rounded-xl">
+                <img
+                  src={digiWhatsappPairingKnowledgeScreenshot}
+                  alt="WhatsApp Mobile Pairing & Knowledge Base Studio"
+                  className="h-auto w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="mt-4 p-2">
+                <div className="flex items-center gap-2">
+                  <span className="flex h-2 w-2 rounded-full bg-emerald-400" />
+                  <h3 className="font-display text-base font-bold text-white">QR Pairing &amp; Knowledge Base Studio</h3>
+                </div>
+                <p className="mt-1 text-xs leading-relaxed text-zinc-400">
+                  Instant mobile QR scan pairing via native Baileys protocol alongside built-in Markdown Knowledge Base Studio with customizable presets for facts and product catalogs.
+                </p>
+              </div>
+            </div>
+
+            {/* Screenshot 2 */}
             <div className="group relative overflow-hidden rounded-2xl border border-emerald-500/30 bg-black/50 p-3 shadow-xl transition-all hover:border-emerald-500/60 hover:shadow-[0_0_30px_rgba(37,211,102,0.2)]">
               <div className="overflow-hidden rounded-xl">
                 <img
