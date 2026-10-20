@@ -67,6 +67,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "10 GB free disk space for Docker containers and sandbox workspace",
       runtime: "Docker Desktop 4.0+ or Python 3.11+ / Node.js 18+",
     },
+    faqs: [
       {
         q: "How does OpenHands compare to Cognition AI's Devin?",
         a: "While Devin costs $500 per month on a closed cloud waitlist, OpenHands is fully open-source and self-hostable. It provides an autonomous developer sandbox with a terminal, VS Code-style editor, and browser preview, achieving competitive SWE-bench benchmark scores without monthly fees.",
@@ -123,6 +124,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "5 GB free disk space",
       runtime: "Python 3.10+ / Node.js 18+ (Automated by installer)",
     },
+    faqs: [
       {
         q: "Is OpenClaw a free alternative to Manus AI and Devin?",
         a: "Yes. OpenClaw provides autonomous browser automation, data synthesis, and code execution without the expensive monthly subscription fees or closed invite queues of commercial alternatives.",
@@ -183,6 +185,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "4 GB free disk space (excluding model weights)",
       runtime: "Python 3.10+ or Standalone Executable",
     },
+    faqs: [
       {
         q: "How does Hermes handle tool calling?",
         a: "Hermes is fine-tuned specifically for precise schema-compliant JSON function calling. It can parse API specs, call local Python functions, trigger shell tools, and inspect outputs in an iterative loop.",
@@ -239,6 +242,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "1 GB app install + 4–10 GB per downloaded model",
       runtime: "Standalone Native Application (Zero external dependencies)",
     },
+    faqs: [
       {
         q: "What models can I run inside Jan AI?",
         a: "Jan AI includes an integrated 1-click model hub featuring DeepSeek-R1, Llama 3.3 8B, Qwen 2.5 Coder, Mistral NeMo, Phi-3, and any custom GGUF model from Hugging Face.",
@@ -295,6 +299,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "2 GB app install + storage for local document embeddings",
       runtime: "Embedded LanceDB vector database (Zero configuration)",
     },
+    faqs: [
       {
         q: "Where is my document data stored?",
         a: "All uploaded documents, embeddings, and vector databases are stored locally on your hard drive via an embedded LanceDB engine. No third party ever receives your sensitive files.",
@@ -351,6 +356,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "32 MB for executable + SQLite database file storage",
       runtime: "Standalone Portable Executable (Zero external dependencies)",
     },
+    faqs: [
       {
         q: "Is PocketBase production-ready for real applications?",
         a: "Yes. PocketBase easily handles 10,000+ concurrent connections on inexpensive hardware thanks to Go's lightweight concurrency and SQLite's high-performance read throughput.",
@@ -407,6 +413,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "250 MB free disk space",
       runtime: "Local encrypted SQLite database",
     },
+    faqs: [
       {
         q: "Is Tuttle completely free with no user limits?",
         a: "Yes. Tuttle is 100% free and open-source under GPL-3.0 with no user tier restrictions, no monthly subscriptions, and no trial expirations.",
@@ -463,6 +470,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "1 GB free disk space",
       runtime: "Vulkan GPU Acceleration & Real-ESRGAN neural networks",
     },
+    faqs: [
       {
         q: "Is Upscayl 100% free with no watermark or limits?",
         a: "Yes. Upscayl is completely free and open-source under AGPL-3.0. There are no credit limits, no subscription fees, and no watermarks added to your images.",
@@ -519,6 +527,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "2 GB installation space + high-speed SSD for video scratch cache",
       runtime: "Standalone Native Windows Installer (No codecs to configure)",
     },
+    faqs: [
       {
         q: "Does Kdenlive put a watermark on exported videos?",
         a: "No. Kdenlive is 100% free and open-source under GPL-3.0. It will never add watermarks, limit export resolution, or restrict video length.",
@@ -575,6 +584,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "10 GB free SSD space for neural model weights and render cache",
       runtime: "Automated Python 3.10 virtual environment provisioned on first launch",
     },
+    faqs: [
       {
         q: "What is the 77KB download file?",
         a: "The 77KB Windows executable is a lightweight bootstrap installer. When launched, it automatically configures an isolated Python runtime, installs required ONNX dependencies, and launches the FaceFusion studio UI.",
@@ -631,6 +641,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "5 GB free disk space for ONNX models",
       runtime: "Automated virtual environment setup (75 KB bootstrap launcher)",
     },
+    faqs: [
       {
         q: "How does the bootstrap launcher work?",
         a: "The 75KB .exe is an automated setup launcher that prepares the isolated onnxruntime-gpu environment, downloads the face analysis models, and launches the live camera UI.",
@@ -687,6 +698,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "1 GB installation space + disk space for video projects",
       runtime: "Standalone Full Windows Installer (All codecs built-in via FFmpeg)",
     },
+    faqs: [
       {
         q: "What video formats and codecs does Shotcut support?",
         a: "Shotcut uses FFmpeg under the hood, enabling native playback and editing of hundreds of audio and video formats (MP4, MKV, ProRes, DNxHD, AV1, HEVC) without transcoding.",
@@ -743,6 +755,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "200 MB free installation space",
       runtime: "Standalone Native Windows Installer (No extra runtime needed)",
     },
+    faqs: [
       {
         q: "Is Audacity 100% free with no limits?",
         a: "Yes. Audacity is free, open-source software under GPL-3.0. There are no track limits, export caps, or trial periods.",
@@ -799,6 +812,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "2 GB free disk space",
       runtime: "75 KB automated bootstrap launcher",
     },
+    faqs: [
       {
         q: "Does OpenCut put a watermark on my videos?",
         a: "No! Unlike CapCut or Canva free tiers which enforce watermarks or paywalls on 1080p/4K exports, OpenCut exports completely watermark-free.",
@@ -855,6 +869,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "500 MB for crawler and local SQLite audit database",
       runtime: "Python 3.9+ or Node.js CLI (1-line terminal execution)",
     },
+    faqs: [
       {
         q: "Does Open SEO Spider have a crawl limit like Screaming Frog?",
         a: "No. While Screaming Frog's free tier is capped at 500 URLs, Open SEO Spider crawls unlimited URLs with zero licensing restrictions.",
@@ -910,6 +925,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "500 MB free disk space",
       runtime: "Python 3.10+ & Node.js / React 18 / Antigravity AI Agent",
     },
+    faqs: [
       {
         q: "What are the 3 types of leads DIGI LEAD HUNTER extracts?",
         a: "It classifies every business into 3 actionable tiers: 1) Priority 1 (Build-Ready) — No website, verified WhatsApp carrier number, rich public assets, and ready for immediate proposal; 2) Priority 2 (Consultation) — No website, verified WhatsApp, but limited public assets (generates an onboarding questionnaire checklist); 3) Priority 3 (Modernization) — Has an outdated, broken, or mobile-unfriendly website (generates a targeted redesign pitch).",
@@ -969,6 +985,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "1.5 GB free disk space for binaries and creative asset cache",
       runtime: "Native Rust binary (Zero Node.js or Electron runtime required)",
     },
+    faqs: [
       {
         q: "How does ArtCraft achieve zero Electron bloat?",
         a: "Unlike web-based creative tools wrapped in Chromium, ArtCraft is written entirely in native Rust. It communicates directly with the GPU through Vulkan, Metal, and DirectX 12, achieving microsecond startup speeds, 80% lower RAM utilization, and fluid 60FPS timeline scrolling.",
@@ -1028,6 +1045,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "500 MB free SSD storage",
       runtime: "Standalone Windows Desktop Installer (.exe) or Node.js 18+ & Python",
     },
+    faqs: [
       {
         q: "How does DIGI LABS replace ElevenLabs for free?",
         a: "ElevenLabs charges between $22 and $99 every month with restrictive character credits. DIGI LABS eliminates subscription fees by connecting directly to Google Gemini 2.5 Flash Studio Voice via your own free Google AI Studio key, delivering 24kHz studio raw PCM audio with real human breathing and 5 expressive delivery styles (Normal, Business, Promo, Explainer, and Calm).",
@@ -1095,6 +1113,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "300 MB free storage",
       runtime: "Standalone Windows Desktop Installer (.exe) or Node.js 20+ / 22 LTS",
     },
+    faqs: [
       {
         q: "How does it avoid WhatsApp Business API per-message charges?",
         a: "Unlike traditional platforms (like Wati or Interakt) that charge heavy monthly software subscriptions PLUS per-conversation Meta Cloud API fees, Digi WhatsApp Agent uses direct Web-socket pairing via the battle-tested Baileys protocol. You scan the QR code with your phone just like WhatsApp Web, paying zero per-message charges.",
@@ -1162,6 +1181,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
       storage: "400 MB free disk space",
       runtime: "Standalone Windows Desktop Installer or Portable ZIP (Zero installation required)",
     },
+    faqs: [
       {
         q: "Does DigiOffice Suite run on Windows 7 and 32-Bit PCs?",
         a: "Yes! Unlike Microsoft 365 and other modern suites which dropped 32-bit and Windows 7 support, DigiOffice Suite was specifically engineered with defensive Win32 symbol polyfills. The 32-Bit Universal Edition runs smoothly with zero crashes on Windows 7 SP1, Windows 8, and budget Windows 10 PCs with just 2GB RAM.",
