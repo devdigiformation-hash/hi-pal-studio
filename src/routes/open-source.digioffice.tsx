@@ -46,6 +46,7 @@ import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
 
 import digiofficeDashboardScreenshot from "@/assets/digioffice-dashboard.png";
 import digiofficeSheetsAiScreenshot from "@/assets/digioffice-sheets-ai.png";
+import digiofficeWriterAiScreenshot from "@/assets/digioffice-writer-ai.png";
 
 const toolData = OPEN_SOURCE_SUBPAGES["digioffice"];
 
@@ -340,7 +341,7 @@ function DigiOfficeSubpage() {
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {/* Screenshot 1 */}
             <div className="group relative overflow-hidden rounded-2xl border border-blue-500/30 bg-black/50 p-3 shadow-xl transition-all hover:border-blue-500/60 hover:shadow-[0_0_30px_rgba(59,130,246,0.25)]">
               <div className="overflow-hidden rounded-xl">
@@ -362,6 +363,26 @@ function DigiOfficeSubpage() {
             </div>
 
             {/* Screenshot 2 */}
+            <div className="group relative overflow-hidden rounded-2xl border border-indigo-500/30 bg-black/50 p-3 shadow-xl transition-all hover:border-indigo-500/60 hover:shadow-[0_0_30px_rgba(99,102,241,0.25)]">
+              <div className="overflow-hidden rounded-xl">
+                <img
+                  src={digiofficeWriterAiScreenshot}
+                  alt="DigiOffice Writer with Embedded Digi AI Assistant"
+                  className="h-auto w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                />
+              </div>
+              <div className="mt-4 p-2">
+                <div className="flex items-center gap-2">
+                  <span className="flex h-2 w-2 rounded-full bg-indigo-400" />
+                  <h3 className="font-display text-base font-bold text-white">DigiOffice Writer &amp; AI Co-Author</h3>
+                </div>
+                <p className="mt-1 text-xs leading-relaxed text-zinc-400">
+                  Native Word (.docx) document editor with formatting ribbon, word-style Track Changes, and integrated Digi AI panel for drafting reports, polishing prose, and restructuring documents in place.
+                </p>
+              </div>
+            </div>
+
+            {/* Screenshot 3 */}
             <div className="group relative overflow-hidden rounded-2xl border border-emerald-500/30 bg-black/50 p-3 shadow-xl transition-all hover:border-emerald-500/60 hover:shadow-[0_0_30px_rgba(16,185,129,0.25)]">
               <div className="overflow-hidden rounded-xl">
                 <img
