@@ -55,6 +55,8 @@ import { Route as OpenSourceCreditsRouteImport } from './routes/open-source.cred
 import { Route as OpenSourceDeepLiveCamRouteImport } from './routes/open-source.deep-live-cam'
 import { Route as OpenSourceDigiLabsRouteImport } from './routes/open-source.digi-labs'
 import { Route as OpenSourceDigiLeadHunterRouteImport } from './routes/open-source.digi-lead-hunter'
+import { Route as OpenSourceDigiWhatsappAgentRouteImport } from './routes/open-source.digi-whatsapp-agent'
+import { Route as OpenSourceDigiofficeRouteImport } from './routes/open-source.digioffice'
 import { Route as OpenSourceFacefusionRouteImport } from './routes/open-source.facefusion'
 import { Route as OpenSourceGenofficeRouteImport } from './routes/open-source.genoffice'
 import { Route as OpenSourceHermesAgentRouteImport } from './routes/open-source.hermes-agent'
@@ -303,6 +305,17 @@ const OpenSourceDigiLeadHunterRoute =
     path: '/digi-lead-hunter',
     getParentRoute: () => OpenSourceRoute,
   } as any)
+const OpenSourceDigiWhatsappAgentRoute =
+  OpenSourceDigiWhatsappAgentRouteImport.update({
+    id: '/digi-whatsapp-agent',
+    path: '/digi-whatsapp-agent',
+    getParentRoute: () => OpenSourceRoute,
+  } as any)
+const OpenSourceDigiofficeRoute = OpenSourceDigiofficeRouteImport.update({
+  id: '/digioffice',
+  path: '/digioffice',
+  getParentRoute: () => OpenSourceRoute,
+} as any)
 const OpenSourceFacefusionRoute = OpenSourceFacefusionRouteImport.update({
   id: '/facefusion',
   path: '/facefusion',
@@ -425,6 +438,8 @@ export interface FileRoutesByFullPath {
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
   '/open-source/digi-labs': typeof OpenSourceDigiLabsRoute
   '/open-source/digi-lead-hunter': typeof OpenSourceDigiLeadHunterRoute
+  '/open-source/digi-whatsapp-agent': typeof OpenSourceDigiWhatsappAgentRoute
+  '/open-source/digioffice': typeof OpenSourceDigiofficeRoute
   '/open-source/facefusion': typeof OpenSourceFacefusionRoute
   '/open-source/genoffice': typeof OpenSourceGenofficeRoute
   '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
@@ -488,6 +503,8 @@ export interface FileRoutesByTo {
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
   '/open-source/digi-labs': typeof OpenSourceDigiLabsRoute
   '/open-source/digi-lead-hunter': typeof OpenSourceDigiLeadHunterRoute
+  '/open-source/digi-whatsapp-agent': typeof OpenSourceDigiWhatsappAgentRoute
+  '/open-source/digioffice': typeof OpenSourceDigiofficeRoute
   '/open-source/facefusion': typeof OpenSourceFacefusionRoute
   '/open-source/genoffice': typeof OpenSourceGenofficeRoute
   '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
@@ -553,6 +570,8 @@ export interface FileRoutesById {
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
   '/open-source/digi-labs': typeof OpenSourceDigiLabsRoute
   '/open-source/digi-lead-hunter': typeof OpenSourceDigiLeadHunterRoute
+  '/open-source/digi-whatsapp-agent': typeof OpenSourceDigiWhatsappAgentRoute
+  '/open-source/digioffice': typeof OpenSourceDigiofficeRoute
   '/open-source/facefusion': typeof OpenSourceFacefusionRoute
   '/open-source/genoffice': typeof OpenSourceGenofficeRoute
   '/open-source/hermes-agent': typeof OpenSourceHermesAgentRoute
@@ -619,6 +638,8 @@ export interface FileRouteTypes {
     | '/open-source/deep-live-cam'
     | '/open-source/digi-labs'
     | '/open-source/digi-lead-hunter'
+    | '/open-source/digi-whatsapp-agent'
+    | '/open-source/digioffice'
     | '/open-source/facefusion'
     | '/open-source/genoffice'
     | '/open-source/hermes-agent'
@@ -682,6 +703,8 @@ export interface FileRouteTypes {
     | '/open-source/deep-live-cam'
     | '/open-source/digi-labs'
     | '/open-source/digi-lead-hunter'
+    | '/open-source/digi-whatsapp-agent'
+    | '/open-source/digioffice'
     | '/open-source/facefusion'
     | '/open-source/genoffice'
     | '/open-source/hermes-agent'
@@ -746,6 +769,8 @@ export interface FileRouteTypes {
     | '/open-source/deep-live-cam'
     | '/open-source/digi-labs'
     | '/open-source/digi-lead-hunter'
+    | '/open-source/digi-whatsapp-agent'
+    | '/open-source/digioffice'
     | '/open-source/facefusion'
     | '/open-source/genoffice'
     | '/open-source/hermes-agent'
@@ -1138,6 +1163,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OpenSourceDigiLeadHunterRouteImport
       parentRoute: typeof OpenSourceRoute
     }
+    '/open-source/digi-whatsapp-agent': {
+      id: '/open-source/digi-whatsapp-agent'
+      path: '/digi-whatsapp-agent'
+      fullPath: '/open-source/digi-whatsapp-agent'
+      preLoaderRoute: typeof OpenSourceDigiWhatsappAgentRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
+    '/open-source/digioffice': {
+      id: '/open-source/digioffice'
+      path: '/digioffice'
+      fullPath: '/open-source/digioffice'
+      preLoaderRoute: typeof OpenSourceDigiofficeRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
     '/open-source/facefusion': {
       id: '/open-source/facefusion'
       path: '/facefusion'
@@ -1261,6 +1300,8 @@ interface OpenSourceRouteChildren {
   OpenSourceDeepLiveCamRoute: typeof OpenSourceDeepLiveCamRoute
   OpenSourceDigiLabsRoute: typeof OpenSourceDigiLabsRoute
   OpenSourceDigiLeadHunterRoute: typeof OpenSourceDigiLeadHunterRoute
+  OpenSourceDigiWhatsappAgentRoute: typeof OpenSourceDigiWhatsappAgentRoute
+  OpenSourceDigiofficeRoute: typeof OpenSourceDigiofficeRoute
   OpenSourceFacefusionRoute: typeof OpenSourceFacefusionRoute
   OpenSourceGenofficeRoute: typeof OpenSourceGenofficeRoute
   OpenSourceHermesAgentRoute: typeof OpenSourceHermesAgentRoute
@@ -1285,6 +1326,8 @@ const OpenSourceRouteChildren: OpenSourceRouteChildren = {
   OpenSourceDeepLiveCamRoute: OpenSourceDeepLiveCamRoute,
   OpenSourceDigiLabsRoute: OpenSourceDigiLabsRoute,
   OpenSourceDigiLeadHunterRoute: OpenSourceDigiLeadHunterRoute,
+  OpenSourceDigiWhatsappAgentRoute: OpenSourceDigiWhatsappAgentRoute,
+  OpenSourceDigiofficeRoute: OpenSourceDigiofficeRoute,
   OpenSourceFacefusionRoute: OpenSourceFacefusionRoute,
   OpenSourceGenofficeRoute: OpenSourceGenofficeRoute,
   OpenSourceHermesAgentRoute: OpenSourceHermesAgentRoute,
