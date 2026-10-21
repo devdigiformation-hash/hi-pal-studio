@@ -933,7 +933,7 @@ function OpenSourcePage() {
   };
 
   return (
-    <main className="min-h-screen pt-[60px] md:pt-[72px]">
+    <main className="min-h-screen w-full max-w-full overflow-x-clip pt-[60px] md:pt-[72px]">
       <SubscribeToDownloadModal
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
@@ -1090,7 +1090,7 @@ function OpenSourcePage() {
         <div className="mx-auto max-w-[1240px] scroll-mt-24" id="directory">
           {/* Header & Controls Bar */}
           <div className="flex flex-col gap-6">
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 w-full">
               <div>
                 <EyebrowLabel text="Browse & Filter" color="var(--purple)" />
                 <h2 className="mt-2 font-display text-[26px] font-bold tracking-[-0.03em] text-[var(--text-primary)] md:text-[38px]">
@@ -1104,7 +1104,7 @@ function OpenSourcePage() {
               {/* Controls: Platform & Sort dropdowns */}
               <div className="flex flex-wrap items-center gap-3">
                 {/* Platform Pill Toggle */}
-                <div className="flex items-center rounded-xl border border-white/10 bg-black/40 p-1">
+                <div className="flex flex-wrap items-center gap-1 rounded-xl border border-white/10 bg-black/40 p-1 max-w-full">
                   <Laptop size={14} className="ml-2 mr-1 text-zinc-400" />
                   {PLATFORMS.map((plat) => (
                     <button
@@ -1123,13 +1123,13 @@ function OpenSourcePage() {
                 </div>
 
                 {/* Sort Dropdown */}
-                <div className="relative flex items-center">
+                <div className="relative flex items-center w-full sm:w-auto">
                   <SlidersHorizontal size={14} className="absolute left-3 pointer-events-none text-zinc-400" />
                   <select
                     value={selectedSort}
                     onChange={(e) => handleSortChange(e.target.value)}
                     aria-label="Sort software list"
-                    className="appearance-none rounded-xl border border-white/10 bg-[#060A14] py-1.5 pl-8 pr-8 font-mono text-[12px] text-zinc-200 focus:border-cyan-400 focus:outline-none"
+                    className="w-full sm:w-auto appearance-none rounded-xl border border-white/10 bg-[#060A14] py-1.5 pl-8 pr-8 font-mono text-[12px] text-zinc-200 focus:border-cyan-400 focus:outline-none"
                   >
                     {SORT_OPTIONS.map((opt) => (
                       <option key={opt.value} value={opt.value}>
@@ -1142,7 +1142,7 @@ function OpenSourcePage() {
             </div>
 
             <div>
-              <div className="flex items-center rounded-xl border border-white/20 bg-[#101619] px-4 transition focus-within:border-lime-300">
+              <div className="flex items-center rounded-xl border border-white/20 bg-[#101619] px-3 sm:px-4 transition focus-within:border-lime-300 max-w-full">
                 <Search size={19} className="shrink-0 text-lime-300" aria-hidden="true" />
                 <input
                   ref={searchInputRef}
@@ -1151,7 +1151,7 @@ function OpenSourcePage() {
                   onChange={(event) => handleSearchChange(event.target.value)}
                   placeholder="Search software, categories, or alternatives..."
                   aria-label="Search open-source software by name, use case or alternative"
-                  className="w-full bg-transparent px-3 py-4 text-sm text-white placeholder:text-zinc-500 focus:outline-none"
+                  className="min-w-0 flex-1 bg-transparent px-2 sm:px-3 py-3 sm:py-4 text-xs sm:text-sm text-white placeholder:text-zinc-500 focus:outline-none"
                 />
                 {searchQuery && <button type="button" onClick={() => handleSearchChange("")} aria-label="Clear search text" className="rounded p-2 text-zinc-400 hover:text-white"><X size={16} /></button>}
                 <kbd className="hidden whitespace-nowrap rounded border border-white/10 px-2 py-1 font-mono text-[10px] text-zinc-400 sm:block">/ to search</kbd>
@@ -1165,7 +1165,7 @@ function OpenSourcePage() {
             </div>
 
             {/* Category Filter Chips */}
-            <div className="flex flex-wrap items-center gap-2 border-y border-white/10 py-3">
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 border-y border-white/10 py-3 max-w-full">
               {CATEGORIES.map((cat) => {
                 const count =
                   cat === "All Tools"
@@ -1360,7 +1360,7 @@ function OpenSourcePage() {
                       </div>
 
                       {/* Dual Action Footer */}
-                      <div className="mt-6 border-t border-white/10 pt-4 flex items-center justify-between gap-3">
+                      <div className="mt-6 border-t border-white/10 pt-4 flex flex-wrap items-center justify-between gap-2.5">
                         {s.id === "digi-lead-hunter" ? (
                           <a
                             href="https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER"

@@ -210,7 +210,7 @@ export default function MasterOpenSourceValueTable() {
 
       {/* SEARCH AND FILTER BAR */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 max-w-full">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -240,8 +240,8 @@ export default function MasterOpenSourceValueTable() {
       </div>
 
       {/* MASTER COMPARISON TABLE */}
-      <div className="overflow-x-auto rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl">
-        <table className="w-full text-left text-[13.5px]">
+      <div className="overflow-x-auto rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl w-full max-w-full">
+        <table className="w-full min-w-[720px] text-left text-[13px] sm:text-[13.5px]">
           <thead>
             <tr className="border-b border-white/10 bg-white/[0.03] font-mono text-[11px] uppercase tracking-wider text-[var(--text-muted)]">
               <th className="py-4 pl-6 pr-4">Open Source Software</th>

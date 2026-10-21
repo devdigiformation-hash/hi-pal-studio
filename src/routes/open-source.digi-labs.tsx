@@ -178,7 +178,7 @@ function DigiLabsSubpage() {
   };
 
   return (
-    <main className="min-h-screen pt-[60px] md:pt-[72px]">
+    <main className="min-h-screen w-full max-w-full overflow-x-clip pt-[60px] md:pt-[72px]">
       <SubscribeToDownloadModal
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
