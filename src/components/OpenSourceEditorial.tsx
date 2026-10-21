@@ -120,7 +120,7 @@ export default function OpenSourceEditorial({ onDownloadLabs, onLabsGuide }: Ope
             <div className="os-feature-tags"><span>DOCS &amp; SHEETS</span><span>RUST ENGINE</span><span>WIN 7 TO 11</span><span>SHEESHA UI</span></div>
             <Link className="os-feature-link" to="/open-source/digioffice">Explore DigiOffice Suite <ArrowUpRight size={17} /></Link>
             <div className="os-labs-actions">
-              <a href="https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-64Bit-(Windows-10-and-11).exe" target="_blank" rel="noopener noreferrer">Download 64-Bit ↓</a>
+              <a href="https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-64Bit-.Windows-10-and-11.exe" target="_blank" rel="noopener noreferrer">Download 64-Bit ↓</a>
               <a href="https://github.com/digiformationltd-creator/DigiOffice-Suit" target="_blank" rel="noopener noreferrer">GitHub Repo ↗</a>
             </div>
           </div>

@@ -54,8 +54,8 @@ const TITLE = "DIGI OFFICE SUITE — Sovereign Universal AI Office Suite (Free M
 const DESC =
   toolData.tagline + " Download 100% free Windows desktop installer (64-Bit & 32-Bit) with Word, Excel, PowerPoint, PDF, Rust calculation engine, and Sheesha UI.";
 
-const DOWNLOAD_64_URL = "https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-64Bit-(Windows-10-and-11).exe";
-const DOWNLOAD_32_URL = "https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-32Bit-(Windows-7-to-11).exe";
+const DOWNLOAD_64_URL = "https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-64Bit-.Windows-10-and-11.exe";
+const DOWNLOAD_32_URL = "https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-32Bit-.Windows-7-to-11.exe";
 const REPO_URL = toolData.repoUrl;
 
 const FEATURES = [
