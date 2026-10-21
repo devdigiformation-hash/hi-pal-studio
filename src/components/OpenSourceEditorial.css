@@ -562,7 +562,18 @@
   font: 700 11px ui-monospace, monospace;
 }
 .os-visual-labs {
-  background: #231c38;
+  display: grid;
+  place-items: center;
+  padding: 8% 6%;
+  background: radial-gradient(circle at 75% 15%, rgba(236, 72, 153, 0.45), transparent 45%), linear-gradient(135deg, #2b1632, #160c1d);
+  max-width: 100%;
+  overflow: hidden;
+}
+.os-visual-labs .os-feature-image-frame {
+  transform: rotate(2deg);
+}
+.os-visual-labs:hover .os-feature-image-frame {
+  transform: rotate(0.5deg) translateY(-3px);
 }
 .os-labs-art {
   position: absolute;
@@ -689,6 +700,12 @@
   background: radial-gradient(circle at 15% 15%, #8774dd, transparent 33%), linear-gradient(140deg, #182644, #252050);
   max-width: 100%;
   overflow: hidden;
+}
+.os-visual-office .os-feature-image-frame {
+  transform: rotate(2deg);
+}
+.os-visual-office:hover .os-feature-image-frame {
+  transform: rotate(0.5deg) translateY(-3px);
 }
 .os-office-art {
   position: relative;

@@ -152,7 +152,7 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     license: "Source-available • no resale",
     color: "#EC4899",
     icon: Mic,
-    image: digiLabsLogo,
+    image: digiLabsBanner,
     badge: "Official DIGIFORMATION Product",
     bundle: "Audio Synthesis & Video Reverse-Engineering",
     bullets: [
@@ -1223,7 +1223,7 @@ function OpenSourcePage() {
                 // A few official app screenshots ship with an almost-white desktop UI.
                 // Keep those previews readable while preventing a sudden light panel in
                 // the otherwise midnight-blue library.
-                const needsDuskPreview = ["digioffice", "jan-ai", "anythingllm", "tuttle"].includes(s.id);
+                const needsDuskPreview = ["jan-ai", "anythingllm", "tuttle"].includes(s.id);
                 return (
                   <div key={s.id} className="group block h-full">
                     <ThreeDTiltCard

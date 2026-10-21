@@ -1,9 +1,10 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowDown, ArrowRight, ArrowUpRight, AudioLines, FileText, Grid2X2, MessageCircle, Presentation, Search, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUpRight, Search, Sparkles } from "lucide-react";
 import { useEffect, useRef } from "react";
 import leadDashboard from "@/assets/digi-lead-hunter-dashboard.png";
-import labsLogo from "@/assets/digi-labs-logo.png";
+import labsBanner from "@/assets/digi-labs-banner.png";
 import whatsappBanner from "@/assets/digi-whatsapp-agent-banner.png";
+import officeScreenshot from "@/assets/digioffice-dashboard.png";
 import "./OpenSourceEditorial.css";
 
 const capabilities = [
@@ -13,42 +14,6 @@ const capabilities = [
   "Work across your documents",
   "Explore community tools",
 ];
-
-function SoundVisual() {
-  return (
-    <div className="os-labs-art" aria-label="DIGI Labs voice studio illustration">
-      <div className="os-labs-orbit os-labs-orbit-one" />
-      <div className="os-labs-orbit os-labs-orbit-two" />
-      <div className="os-labs-logo-wrap"><img src={labsLogo} alt="DIGI Labs logo" /></div>
-      <div className="os-labs-wave" aria-hidden="true">
-        {Array.from({ length: 45 }, (_, i) => <span key={i} style={{ height: `${14 + ((i * 37) % 72)}%`, animationDelay: `${i * -0.047}s` }} />)}
-      </div>
-      <div className="os-visual-caption"><AudioLines size={16} /> A voice for every idea</div>
-    </div>
-  );
-}
-
-function OfficeVisual() {
-  return (
-    <div className="os-office-art" role="img" aria-label="Illustration of documents, spreadsheets and presentations in DIGI Office Suite">
-      <div className="os-office-window">
-        <div className="os-office-window-top"><span /><span /><span /><b>DIGI OFFICE</b></div>
-        <div className="os-office-window-body">
-          <div className="os-office-sidebar"><i /><i /><i /><i /></div>
-          <div className="os-office-sheet">
-            <small>YOUR WORKSPACE</small><strong>Everything in one place.</strong>
-            <div className="os-office-tiles">
-              <span><FileText /> Docs</span><span><Grid2X2 /> Sheets</span><span><Presentation /> Slides</span>
-            </div>
-            <div className="os-office-lines"><i /><i /><i /></div>
-          </div>
-        </div>
-      </div>
-      <span className="os-office-float os-office-float-a"><FileText size={22} /></span>
-      <span className="os-office-float os-office-float-b"><Grid2X2 size={22} /></span>
-    </div>
-  );
-}
 
 interface OpenSourceEditorialProps {
   onDownloadLabs: () => void;
@@ -123,7 +88,13 @@ export default function OpenSourceEditorial({ onDownloadLabs, onLabsGuide }: Ope
 
         <article className="os-feature os-feature-reverse os-reveal" id="digi-labs">
           <div className="os-feature-copy"><div className="os-feature-meta"><span>02 / MAKE IT HEARD</span><span>✳</span></div><h3>DIGI<br />Labs<span>.</span></h3><p>Give your ideas a voice. Create speech and explore video-to-prompt tools in a desktop media studio.</p><div className="os-feature-tags"><span>TEXT TO SPEECH</span><span>CREATIVE WORKFLOWS</span></div><Link className="os-feature-link" to="/open-source/digi-labs">Explore DIGI Labs <ArrowUpRight size={17} /></Link><div className="os-labs-actions"><button type="button" onClick={onDownloadLabs}>Download setup ↓</button><button type="button" onClick={onLabsGuide}>Setup guide ↗</button></div></div>
-          <div className="os-feature-visual os-visual-labs"><SoundVisual /><span className="os-image-number">02</span></div>
+          <div className="os-feature-visual os-visual-labs">
+            <div className="os-feature-image-frame">
+              <div className="os-screen-bar"><span /><span /><span /><b>DIGI LABS / VOICE &amp; PROMPT STUDIO</b></div>
+              <img src={labsBanner} alt="DIGI Labs Voice Studio &amp; Video-to-Prompt Banner" loading="lazy" />
+            </div>
+            <span className="os-image-number">02</span>
+          </div>
         </article>
 
         <article className="os-feature os-reveal" id="digi-whatsapp-agent">
@@ -153,7 +124,13 @@ export default function OpenSourceEditorial({ onDownloadLabs, onLabsGuide }: Ope
               <a href="https://github.com/digiformationltd-creator/DigiOffice-Suit" target="_blank" rel="noopener noreferrer">GitHub Repo ↗</a>
             </div>
           </div>
-          <div className="os-feature-visual os-visual-office"><OfficeVisual /><span className="os-image-number">04</span></div>
+          <div className="os-feature-visual os-visual-office">
+            <div className="os-feature-image-frame">
+              <div className="os-screen-bar"><span /><span /><span /><b>DIGI OFFICE SUITE / SHEESHA UI</b></div>
+              <img src={officeScreenshot} alt="DIGI Office Suite sovereign desktop workspace" loading="lazy" />
+            </div>
+            <span className="os-image-number">04</span>
+          </div>
         </article>
 
         <div className="os-library-callout os-reveal"><div><span>02 / THE WIDER COLLECTION</span><h2>There's more<br /><em>to explore.</em></h2><p>Discover the community tools in our library, from creative software to AI and development.</p></div><a className="os-button os-button-dark" href="#directory">Browse all software <ArrowRight size={18} /></a><div className="os-callout-spark" aria-hidden="true">✳</div></div>
