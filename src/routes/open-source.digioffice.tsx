@@ -277,28 +277,7 @@ function DigiOfficeSubpage() {
                   <ExternalLink size={13} className="text-white/50" />
                 </a>
               </div>
-              <div className="mt-4 flex flex-wrap items-center gap-2 text-xs text-zinc-400">
-                <span className="text-zinc-500 font-semibold">⚡ Direct Setup Download:</span>
-                <a
-                  href={DOWNLOAD_64_URL}
-                  className="font-mono text-cyan-400 underline hover:text-cyan-300 transition"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download="DigiOffice-Suite-Setup-64Bit.exe"
-                >
-                  64-Bit Setup (.exe 161MB)
-                </a>
-                <span className="text-zinc-600">•</span>
-                <a
-                  href={DOWNLOAD_32_URL}
-                  className="font-mono text-cyan-400 underline hover:text-cyan-300 transition"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download="DigiOffice-Suite-Setup-32Bit.exe"
-                >
-                  32-Bit Setup (.exe 120MB)
-                </a>
-              </div>
+
             </div>
 
             {/* Real Desktop Interface Stage */}
@@ -752,28 +731,7 @@ function DigiOfficeSubpage() {
                 <ArrowRight size={14} className="opacity-80" />
               </Link>
             </div>
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-xs text-zinc-400">
-              <span className="text-zinc-500 font-semibold">⚡ Direct Download (.exe):</span>
-              <a
-                href={DOWNLOAD_64_URL}
-                className="font-mono text-cyan-400 underline hover:text-cyan-300 transition"
-                target="_blank"
-                rel="noopener noreferrer"
-                download="DigiOffice-Suite-Setup-64Bit.exe"
-              >
-                DigiOffice-Suite-Setup-64Bit.exe (161MB)
-              </a>
-              <span className="text-zinc-600">•</span>
-              <a
-                href={DOWNLOAD_32_URL}
-                className="font-mono text-cyan-400 underline hover:text-cyan-300 transition"
-                target="_blank"
-                rel="noopener noreferrer"
-                download="DigiOffice-Suite-Setup-32Bit.exe"
-              >
-                DigiOffice-Suite-Setup-32Bit.exe (120MB)
-              </a>
-            </div>
+
 
             {/* Official Support & Corporate Credentials */}
             <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs font-mono text-zinc-400">

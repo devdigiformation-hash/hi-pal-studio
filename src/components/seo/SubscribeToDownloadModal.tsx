@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Youtube, CheckCircle2, Download, Lock, ExternalLink, X, Sparkles } from "lucide-react";
-import CyanButton from "@/components/CyanButton";
+import { Youtube, CheckCircle2, Download, Lock, ExternalLink, X } from "lucide-react";
 
 interface SubscribeToDownloadModalProps {
   isOpen: boolean;
@@ -37,8 +36,15 @@ export default function SubscribeToDownloadModal({
 
   const handleConfirmSubscribe = () => {
     setIsUnlocked(true);
+    // Automatically trigger the file download
     try {
-      window.open(downloadUrl, "_blank");
+      const a = document.createElement("a");
+      a.href = downloadUrl;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
     } catch {
       window.location.href = downloadUrl;
     }
@@ -85,7 +91,7 @@ export default function SubscribeToDownloadModal({
             <button
               type="button"
               onClick={handleSubscribeClick}
-              className="inline-flex items-center gap-1.5 rounded-lg bg-red-600 px-3 py-1.5 font-mono text-xs font-bold text-white shadow-md hover:bg-red-500 transition"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-red-600 px-3 py-1.5 font-mono text-xs font-bold text-white shadow-md hover:bg-red-500 transition cursor-pointer"
             >
               <span>Subscribe</span>
               <ExternalLink size={12} />
@@ -146,20 +152,7 @@ export default function SubscribeToDownloadModal({
           )}
         </div>
 
-        <div className="mt-3">
-          <a
-            href={downloadUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            download
-            className="text-[11px] text-zinc-400 hover:text-cyan-400 underline transition inline-flex items-center gap-1"
-          >
-            <span>⚡ Direct setup download (.exe) without subscribing</span>
-            <ExternalLink size={11} />
-          </a>
-        </div>
-
-        <p className="mt-3 text-[11px] text-zinc-500">
+        <p className="mt-4 text-[11px] text-zinc-500">
           Strictly No Resale • 100% Free For Personal &amp; Agency Systems
         </p>
       </div>
