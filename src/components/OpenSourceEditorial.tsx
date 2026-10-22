@@ -1,12 +1,10 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowDown, ArrowRight, ArrowUpRight, Search, Sparkles, Download } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { ArrowDown, ArrowRight, ArrowUpRight, Search, Sparkles } from "lucide-react";
+import { useEffect, useRef } from "react";
 import leadBanner from "@/assets/digi-lead-hunter-banner.png";
 import officeBanner from "@/assets/digioffice-banner.png";
 import labsBanner from "@/assets/digi-labs-banner.png";
 import whatsappBanner from "@/assets/digi-whatsapp-agent-banner.png";
-import leadDashboard from "@/assets/digi-lead-hunter-dashboard.png";
-import officeScreenshot from "@/assets/digioffice-dashboard.png";
 import "./OpenSourceEditorial.css";
 
 const capabilities = [
@@ -33,76 +31,6 @@ export default function OpenSourceEditorial({
   onDownloadOffice,
 }: OpenSourceEditorialProps) {
   const rootRef = useRef<HTMLDivElement>(null);
-  const [activeToolIndex, setActiveToolIndex] = useState(0);
-
-  const heroTools = [
-    {
-      id: "digi-lead-hunter",
-      num: "01",
-      shortName: "Lead Hunter",
-      fullName: "DIGI Lead Hunter",
-      category: "AUTONOMOUS B2B ENGINE",
-      headline: "Autonomous B2B Lead & Blueprint Engine",
-      tagline: "Stops manual Google Maps hunting. Scans businesses, validates WhatsApp, and builds website blueprints.",
-      barTitle: "LEAD HUNTER / WORKSPACE",
-      image: leadBanner,
-      route: "/open-source/digi-lead-hunter",
-      accent: "#2FE0C8",
-      onDownload: () => onDownloadLeadHunter(),
-      downloadLabel: "Download setup ↓",
-      tags: ["LEAD DISCOVERY", "OPPORTUNITY PLANS", "WHATSAPP READY"],
-    },
-    {
-      id: "digi-labs",
-      num: "02",
-      shortName: "DIGI Labs",
-      fullName: "DIGI Labs",
-      category: "STUDIO VOICE & PROMPT AI",
-      headline: "Broadcast-Grade Human TTS & Media Studio",
-      tagline: "100% powered by Google Gemini 2.5 Flash Studio Voice with nuanced delivery & video-to-prompt engine.",
-      barTitle: "DIGI LABS / VOICE & PROMPT STUDIO",
-      image: labsBanner,
-      route: "/open-source/digi-labs",
-      accent: "#A855F7",
-      onDownload: () => onDownloadLabs(),
-      downloadLabel: "Download setup ↓",
-      tags: ["TEXT TO SPEECH", "CREATIVE WORKFLOWS", "GEMINI 2.5 FLASH"],
-    },
-    {
-      id: "digi-whatsapp-agent",
-      num: "03",
-      shortName: "WhatsApp Agent",
-      fullName: "DIGI WhatsApp Agent",
-      category: "24/7 AUTONOMOUS SALES",
-      headline: "Autonomous 24/7 AI Sales Representative",
-      tagline: "Multi-account QR pairing, local SQLite memory, Whisper audio voice notes & 7-tier resilient free AI cascade.",
-      barTitle: "WHATSAPP AGENT / SALES SUITE",
-      image: whatsappBanner,
-      route: "/open-source/digi-whatsapp-agent",
-      accent: "#10B981",
-      onDownload: () => onDownloadWhatsApp(),
-      downloadLabel: "Download setup ↓",
-      tags: ["QR PAIRING", "7-TIER AI CASCADE", "WHISPER STT"],
-    },
-    {
-      id: "digi-office-suite",
-      num: "04",
-      shortName: "Office Suite",
-      fullName: "DIGI Office Suite",
-      category: "SOVEREIGN AI PRODUCTIVITY",
-      headline: "Universal Sovereign AI Desktop Office Suite",
-      tagline: "Docs, Sheets with embedded Rust calculation engine, Slides & PDF. Windows 7 to 11 with Sheesha UI.",
-      barTitle: "DIGI OFFICE SUITE / SHEESHA UI",
-      image: officeBanner,
-      route: "/open-source/digioffice",
-      accent: "#3B82F6",
-      onDownload: () => onDownloadOffice("64"),
-      downloadLabel: "Download 64-Bit ↓",
-      tags: ["DOCS & SHEETS", "RUST ENGINE", "SHEESHA UI"],
-    },
-  ];
-
-  const currentTool = heroTools[activeToolIndex];
 
   useEffect(() => {
     const root = rootRef.current;
@@ -137,97 +65,67 @@ export default function OpenSourceEditorial({
             <div className="os-hero-note"><span>✳</span> 100% Free &amp; Sovereign Tools. No subscription lock-in.</div>
           </div>
 
-          <div className="os-hero-art" aria-label="Showcase of all 4 DIGI in-house open source software products">
+          {/* Cascading Tilted Hero Banners Artwork */}
+          <div className="os-hero-art" aria-label="Official DIGI Software Collection Banners Showcase">
             <div className="os-hero-grid" />
 
-            {/* 4-Product Switcher Tabs */}
-            <div className="os-hero-tabs" role="tablist">
-              {heroTools.map((tool, idx) => {
-                const isActive = idx === activeToolIndex;
-                return (
-                  <button
-                    key={tool.id}
-                    type="button"
-                    role="tab"
-                    aria-selected={isActive}
-                    onClick={() => setActiveToolIndex(idx)}
-                    className={`os-hero-tab ${isActive ? "os-hero-tab-active" : ""}`}
-                    style={isActive ? { borderColor: tool.accent, color: "#fff" } : undefined}
-                  >
-                    <span className="os-hero-tab-num">{tool.num}</span>
-                    <span className="os-hero-tab-name">{tool.shortName}</span>
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Main Stage Screen Visual */}
-            <div className="os-hero-main-stage">
-              <div className="os-hero-stage-card">
-                <div className="os-screen-bar">
-                  <span /><span /><span />
-                  <b>{currentTool.barTitle}</b>
-                </div>
-                <div className="os-hero-stage-image-wrap">
-                  <img
-                    src={currentTool.image}
-                    alt={`${currentTool.fullName} Official Banner`}
-                    className="os-hero-stage-img"
-                  />
-                  <div className="os-hero-stage-overlay">
-                    <div className="os-hero-stage-info">
-                      <span className="os-hero-stage-badge" style={{ borderColor: currentTool.accent, color: currentTool.accent }}>
-                        {currentTool.category}
-                      </span>
-                      <h4 className="os-hero-stage-title">{currentTool.fullName}</h4>
-                      <p className="os-hero-stage-desc">{currentTool.tagline}</p>
-                    </div>
-                    <div className="os-hero-stage-actions">
-                      <button
-                        type="button"
-                        onClick={currentTool.onDownload}
-                        className="os-stage-btn-download cursor-pointer"
-                        style={{ backgroundColor: currentTool.accent }}
-                      >
-                        <Download size={13} />
-                        <span>{currentTool.downloadLabel}</span>
-                      </button>
-                      <Link
-                        to={currentTool.route}
-                        className="os-stage-btn-learn"
-                      >
-                        <span>Learn More &amp; Guide</span>
-                        <ArrowUpRight size={13} />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+            {/* Banner 1: DIGI Lead Hunter (Top-Left, tilted downward to the right) */}
+            <Link
+              to="/open-source/digi-lead-hunter"
+              className="os-hero-banner-card os-hero-banner-lead"
+              title="Explore DIGI Lead Hunter"
+            >
+              <div className="os-screen-bar">
+                <span /><span /><span />
+                <b>DIGI LEAD HUNTER / WORKSPACE</b>
               </div>
+              <img src={leadBanner} alt="DIGI Lead Hunter official banner" />
+            </Link>
 
-              {/* Floating Mini Thumbnails Deck of Other Tools */}
-              <div className="os-hero-mini-deck">
-                {heroTools.map((tool, idx) => {
-                  if (idx === activeToolIndex) return null;
-                  return (
-                    <button
-                      key={tool.id}
-                      type="button"
-                      onClick={() => setActiveToolIndex(idx)}
-                      className="os-hero-mini-thumb cursor-pointer"
-                      title={`View ${tool.fullName}`}
-                    >
-                      <img src={tool.image} alt={tool.fullName} />
-                      <div className="os-hero-mini-thumb-label">
-                        <span>{tool.num}</span> {tool.shortName}
-                      </div>
-                    </button>
-                  );
-                })}
+            {/* Banner 2: DIGI Office Suite (Center-Right, slanting in opposite direction) */}
+            <Link
+              to="/open-source/digioffice"
+              className="os-hero-banner-card os-hero-banner-office"
+              title="Explore DIGI Office Suite"
+            >
+              <div className="os-screen-bar">
+                <span /><span /><span />
+                <b>DIGI OFFICE SUITE / SHEESHA UI</b>
               </div>
-            </div>
+              <img src={officeBanner} alt="DIGI Office Suite official banner" />
+            </Link>
 
-            <div className="os-hero-stamp"><Sparkles size={19} /><span>4 TOOLS<br />1 SUITE</span></div>
-            <span className="os-hero-art-label">01 — OFFICIAL DIGIFORMATION COLLECTION</span>
+            {/* Banner 3: DIGI Labs (Lower-Left, slanting downward) */}
+            <Link
+              to="/open-source/digi-labs"
+              className="os-hero-banner-card os-hero-banner-labs"
+              title="Explore DIGI Labs"
+            >
+              <div className="os-screen-bar">
+                <span /><span /><span />
+                <b>DIGI LABS / STUDIO VOICE AI</b>
+              </div>
+              <img src={labsBanner} alt="DIGI Labs Voice Studio banner" />
+            </Link>
+
+            {/* Banner 4: DIGI WhatsApp Agent (Lower-Right, overlapping tilted upward) */}
+            <Link
+              to="/open-source/digi-whatsapp-agent"
+              className="os-hero-banner-card os-hero-banner-whatsapp"
+              title="Explore DIGI WhatsApp Agent"
+            >
+              <div className="os-screen-bar">
+                <span /><span /><span />
+                <b>DIGI WHATSAPP AGENT / 24/7 SALES</b>
+              </div>
+              <img src={whatsappBanner} alt="DIGI WhatsApp Agent official banner" />
+            </Link>
+
+            <div className="os-hero-stamp">
+              <Sparkles size={19} />
+              <span>4 SUITE<br />TOOLS</span>
+            </div>
+            <span className="os-hero-art-label">01 — THE COLLECTION</span>
           </div>
         </div>
         <div className="os-hero-bottom"><span>INDEPENDENT TOOLS. ENDLESS POSSIBILITIES.</span><span>SCROLL TO EXPLORE ↓</span></div>
