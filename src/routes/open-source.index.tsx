@@ -1081,8 +1081,16 @@ function OpenSourcePage() {
         </div>
       )}
       <OpenSourceEditorial
-        onDownloadLabs={() => openSubscribeModal("https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe", "DIGI LABS Setup (.exe 253MB)")}
+        onDownloadLabs={() => openSubscribeModal("https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe", "DIGI LABS Windows Setup (.exe 253MB)")}
         onLabsGuide={() => setDigiLabsSetupOpen(true)}
+        onDownloadLeadHunter={() => openSubscribeModal("https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER/archive/refs/heads/main.zip", "DIGI LEAD HUNTER Package (.zip)")}
+        onDownloadWhatsApp={() => openSubscribeModal("https://github.com/digiformationltd-creator/digi-whatsapp-agent/releases/download/v1.0.0/Digi.WhatsApp.Agent.Setup.1.0.0.exe", "DIGI WhatsApp Agent Setup (.exe 116MB)")}
+        onDownloadOffice={(version = "64") => openSubscribeModal(
+          version === "32"
+            ? "https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-32Bit.exe"
+            : "https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-64Bit.exe",
+          version === "32" ? "DigiOffice Suite 32-Bit Setup (.exe 161MB)" : "DigiOffice Suite 64-Bit Setup (.exe 161MB)"
+        )}
       />
 
       {/* ── 3. SOFTWARE DIRECTORY & DISCOVERY TOOLBAR ────────── */}
@@ -1361,16 +1369,25 @@ function OpenSourcePage() {
 
                       {/* Dual Action Footer */}
                       <div className="mt-6 border-t border-white/10 pt-4 flex flex-wrap items-center justify-between gap-2.5">
-                        {s.id === "digi-lead-hunter" ? (
-                          <a
-                            href="https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-1.5 rounded-lg border border-cyan-500/40 bg-cyan-500/15 px-3 py-1.5 font-mono text-[11px] font-bold text-cyan-300 transition-all hover:bg-cyan-500/25 hover:border-cyan-400 hover:shadow-[0_0_12px_rgba(47,224,200,0.3)]"
+                        {["digi-lead-hunter", "digi-labs", "digi-whatsapp-agent", "digioffice"].includes(s.id) ? (
+                          <button
+                            type="button"
+                            onClick={() => {
+                              if (s.id === "digi-lead-hunter") {
+                                openSubscribeModal("https://github.com/digiformationltd-creator/DIGI-LEAD-HUNTER/archive/refs/heads/main.zip", "DIGI LEAD HUNTER Package (.zip)");
+                              } else if (s.id === "digi-labs") {
+                                openSubscribeModal("https://github.com/digiformationltd-creator/digi-labs/releases/download/v1.0.0/DIGI-LABS-Setup-1.0.0.exe", "DIGI LABS Windows Setup (.exe 253MB)");
+                              } else if (s.id === "digi-whatsapp-agent") {
+                                openSubscribeModal("https://github.com/digiformationltd-creator/digi-whatsapp-agent/releases/download/v1.0.0/Digi.WhatsApp.Agent.Setup.1.0.0.exe", "DIGI WhatsApp Agent Setup (.exe 116MB)");
+                              } else if (s.id === "digioffice") {
+                                openSubscribeModal("https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-64Bit.exe", "DigiOffice Suite 64-Bit Setup (.exe 161MB)");
+                              }
+                            }}
+                            className="flex items-center gap-1.5 rounded-lg border border-cyan-500/40 bg-cyan-500/15 px-3 py-1.5 font-mono text-[11px] font-bold text-cyan-300 transition-all hover:bg-cyan-500/25 hover:border-cyan-400 hover:shadow-[0_0_12px_rgba(47,224,200,0.3)] cursor-pointer"
                           >
-                            <Github size={13} />
-                            <span>GitHub Repo</span>
-                          </a>
+                            <Download size={13} />
+                            <span>Download</span>
+                          </button>
                         ) : s.downloadUrl ? (
                           <a
                             href={s.downloadUrl}

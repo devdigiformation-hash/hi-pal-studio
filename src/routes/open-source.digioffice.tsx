@@ -44,6 +44,7 @@ import OpenSourceDigiBizBridge from "@/components/seo/OpenSourceDigiBizBridge";
 import SubscribeToDownloadModal from "@/components/seo/SubscribeToDownloadModal";
 import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
 
+import digiofficeBanner from "@/assets/digioffice-banner.png";
 import digiofficeDashboardScreenshot from "@/assets/digioffice-dashboard.png";
 import digiofficeSheetsAiScreenshot from "@/assets/digioffice-sheets-ai.png";
 import digiofficeWriterAiScreenshot from "@/assets/digioffice-writer-ai.png";
@@ -284,8 +285,8 @@ function DigiOfficeSubpage() {
             <div className="w-full max-w-xl lg:w-auto">
               <div className="relative overflow-hidden rounded-3xl border border-blue-500/30 bg-black/60 shadow-[0_0_50px_rgba(59,130,246,0.25)] backdrop-blur-2xl">
                 <img
-                  src={digiofficeDashboardScreenshot}
-                  alt="DigiOffice Suite - Official Desktop Interface"
+                  src={digiofficeBanner}
+                  alt="DigiOffice Suite - Official Banner & Desktop Interface"
                   className="h-auto w-full object-cover"
                 />
                 <div className="absolute top-3 right-3 rounded-full border border-blue-500/40 bg-slate-950/90 px-3 py-1 font-mono text-xs font-bold text-blue-400 shadow-lg">

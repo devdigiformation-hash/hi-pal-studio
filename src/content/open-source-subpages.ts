@@ -1100,7 +1100,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
     licenseDetails: "100% Free forever for your own business & self-hosted systems. Strict attribution; commercial resale or re-branding strictly prohibited.",
     stars: "100% Open Source",
     repoUrl: "https://github.com/digiformationltd-creator/digi-whatsapp-agent",
-    downloadUrl: "https://github.com/digiformationltd-creator/digi-whatsapp-agent/releases/download/v1.0.0/Digi.WhatsApp.Agent.Setup.1.0.0.exe",
+    downloadUrl: "/open-source/digi-whatsapp-agent",
     downloadType: "installer",
     downloadTypeLabel: "Windows Setup (.exe 116MB)",
     privacy: "100% Local (Offline)",

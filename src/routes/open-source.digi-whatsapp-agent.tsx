@@ -266,16 +266,15 @@ function DigiWhatsAppAgentSubpage() {
                 The zero-cost Wati and Interakt alternative engineered by DigiFormation Ltd. Connect your personal or business WhatsApp via direct QR scan, automate sales conversations 24/7 with a 7-tier resilient free AI cascade, listen to audio voice notes, and store all customer memory 100% privately on your PC with zero per-message charges.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4 w-full">
-                <a
-                  href={DOWNLOAD_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto"
+                <button
+                  type="button"
+                  onClick={() => openSubscribeModal(DOWNLOAD_URL, "Digi WhatsApp Agent Setup (.exe 116MB)")}
+                  className="w-full sm:w-auto cursor-pointer"
                 >
                   <CyanButton icon={<Download size={16} />} className="w-full sm:w-auto justify-center">
                     Download Windows Setup (.exe 116MB)
                   </CyanButton>
-                </a>
+                </button>
                 <Link
                   to="/pricing"
                   className="inline-flex items-center gap-2 rounded-full border border-emerald-400/50 bg-emerald-500/15 px-5 py-2.5 font-display text-sm font-bold text-emerald-300 shadow-[0_0_25px_rgba(16,185,129,0.3)] transition hover:border-emerald-400 hover:bg-emerald-500/25 hover:text-white"
@@ -755,15 +754,14 @@ function DigiWhatsAppAgentSubpage() {
               Download the standalone Windows installer (.exe) or clone the repository directly from GitHub. Pair your WhatsApp in seconds and start closing leads 24/7.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-[850px] mx-auto">
-              <a
-                href={DOWNLOAD_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => openSubscribeModal(DOWNLOAD_URL, "Digi WhatsApp Agent Setup (.exe 116MB)")}
                 className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-emerald-400 bg-emerald-500 px-6 py-3.5 sm:py-4 font-mono text-[14px] sm:text-[15px] font-bold text-white shadow-[0_0_30px_rgba(16,185,129,0.4)] transition-all hover:bg-emerald-400 hover:shadow-[0_0_40px_rgba(16,185,129,0.6)] cursor-pointer w-full sm:w-auto"
               >
                 <Download size={18} className="shrink-0" />
                 <span>Download Windows Setup (.exe 116MB)</span>
-              </a>
+              </button>
 
               <Link
                 to="/pricing"

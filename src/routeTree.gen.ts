@@ -55,6 +55,7 @@ import { Route as OpenSourceCreditsRouteImport } from './routes/open-source.cred
 import { Route as OpenSourceDeepLiveCamRouteImport } from './routes/open-source.deep-live-cam'
 import { Route as OpenSourceDigiLabsRouteImport } from './routes/open-source.digi-labs'
 import { Route as OpenSourceDigiLeadHunterRouteImport } from './routes/open-source.digi-lead-hunter'
+import { Route as OpenSourceDigiOfficeSuiteRouteImport } from './routes/open-source.digi-office-suite'
 import { Route as OpenSourceDigiWhatsappAgentRouteImport } from './routes/open-source.digi-whatsapp-agent'
 import { Route as OpenSourceDigiofficeRouteImport } from './routes/open-source.digioffice'
 import { Route as OpenSourceFacefusionRouteImport } from './routes/open-source.facefusion'
@@ -304,6 +305,12 @@ const OpenSourceDigiLeadHunterRoute =
     path: '/digi-lead-hunter',
     getParentRoute: () => OpenSourceRoute,
   } as any)
+const OpenSourceDigiOfficeSuiteRoute =
+  OpenSourceDigiOfficeSuiteRouteImport.update({
+    id: '/digi-office-suite',
+    path: '/digi-office-suite',
+    getParentRoute: () => OpenSourceRoute,
+  } as any)
 const OpenSourceDigiWhatsappAgentRoute =
   OpenSourceDigiWhatsappAgentRouteImport.update({
     id: '/digi-whatsapp-agent',
@@ -432,6 +439,7 @@ export interface FileRoutesByFullPath {
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
   '/open-source/digi-labs': typeof OpenSourceDigiLabsRoute
   '/open-source/digi-lead-hunter': typeof OpenSourceDigiLeadHunterRoute
+  '/open-source/digi-office-suite': typeof OpenSourceDigiOfficeSuiteRoute
   '/open-source/digi-whatsapp-agent': typeof OpenSourceDigiWhatsappAgentRoute
   '/open-source/digioffice': typeof OpenSourceDigiofficeRoute
   '/open-source/facefusion': typeof OpenSourceFacefusionRoute
@@ -496,6 +504,7 @@ export interface FileRoutesByTo {
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
   '/open-source/digi-labs': typeof OpenSourceDigiLabsRoute
   '/open-source/digi-lead-hunter': typeof OpenSourceDigiLeadHunterRoute
+  '/open-source/digi-office-suite': typeof OpenSourceDigiOfficeSuiteRoute
   '/open-source/digi-whatsapp-agent': typeof OpenSourceDigiWhatsappAgentRoute
   '/open-source/digioffice': typeof OpenSourceDigiofficeRoute
   '/open-source/facefusion': typeof OpenSourceFacefusionRoute
@@ -562,6 +571,7 @@ export interface FileRoutesById {
   '/open-source/deep-live-cam': typeof OpenSourceDeepLiveCamRoute
   '/open-source/digi-labs': typeof OpenSourceDigiLabsRoute
   '/open-source/digi-lead-hunter': typeof OpenSourceDigiLeadHunterRoute
+  '/open-source/digi-office-suite': typeof OpenSourceDigiOfficeSuiteRoute
   '/open-source/digi-whatsapp-agent': typeof OpenSourceDigiWhatsappAgentRoute
   '/open-source/digioffice': typeof OpenSourceDigiofficeRoute
   '/open-source/facefusion': typeof OpenSourceFacefusionRoute
@@ -629,6 +639,7 @@ export interface FileRouteTypes {
     | '/open-source/deep-live-cam'
     | '/open-source/digi-labs'
     | '/open-source/digi-lead-hunter'
+    | '/open-source/digi-office-suite'
     | '/open-source/digi-whatsapp-agent'
     | '/open-source/digioffice'
     | '/open-source/facefusion'
@@ -693,6 +704,7 @@ export interface FileRouteTypes {
     | '/open-source/deep-live-cam'
     | '/open-source/digi-labs'
     | '/open-source/digi-lead-hunter'
+    | '/open-source/digi-office-suite'
     | '/open-source/digi-whatsapp-agent'
     | '/open-source/digioffice'
     | '/open-source/facefusion'
@@ -758,6 +770,7 @@ export interface FileRouteTypes {
     | '/open-source/deep-live-cam'
     | '/open-source/digi-labs'
     | '/open-source/digi-lead-hunter'
+    | '/open-source/digi-office-suite'
     | '/open-source/digi-whatsapp-agent'
     | '/open-source/digioffice'
     | '/open-source/facefusion'
@@ -1151,6 +1164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OpenSourceDigiLeadHunterRouteImport
       parentRoute: typeof OpenSourceRoute
     }
+    '/open-source/digi-office-suite': {
+      id: '/open-source/digi-office-suite'
+      path: '/digi-office-suite'
+      fullPath: '/open-source/digi-office-suite'
+      preLoaderRoute: typeof OpenSourceDigiOfficeSuiteRouteImport
+      parentRoute: typeof OpenSourceRoute
+    }
     '/open-source/digi-whatsapp-agent': {
       id: '/open-source/digi-whatsapp-agent'
       path: '/digi-whatsapp-agent'
@@ -1281,6 +1301,7 @@ interface OpenSourceRouteChildren {
   OpenSourceDeepLiveCamRoute: typeof OpenSourceDeepLiveCamRoute
   OpenSourceDigiLabsRoute: typeof OpenSourceDigiLabsRoute
   OpenSourceDigiLeadHunterRoute: typeof OpenSourceDigiLeadHunterRoute
+  OpenSourceDigiOfficeSuiteRoute: typeof OpenSourceDigiOfficeSuiteRoute
   OpenSourceDigiWhatsappAgentRoute: typeof OpenSourceDigiWhatsappAgentRoute
   OpenSourceDigiofficeRoute: typeof OpenSourceDigiofficeRoute
   OpenSourceFacefusionRoute: typeof OpenSourceFacefusionRoute
@@ -1306,6 +1327,7 @@ const OpenSourceRouteChildren: OpenSourceRouteChildren = {
   OpenSourceDeepLiveCamRoute: OpenSourceDeepLiveCamRoute,
   OpenSourceDigiLabsRoute: OpenSourceDigiLabsRoute,
   OpenSourceDigiLeadHunterRoute: OpenSourceDigiLeadHunterRoute,
+  OpenSourceDigiOfficeSuiteRoute: OpenSourceDigiOfficeSuiteRoute,
   OpenSourceDigiWhatsappAgentRoute: OpenSourceDigiWhatsappAgentRoute,
   OpenSourceDigiofficeRoute: OpenSourceDigiofficeRoute,
   OpenSourceFacefusionRoute: OpenSourceFacefusionRoute,

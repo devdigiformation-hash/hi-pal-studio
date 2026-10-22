@@ -47,7 +47,7 @@ import OpenSourceDigiBizBridge from "@/components/seo/OpenSourceDigiBizBridge";
 import SubscribeToDownloadModal from "@/components/seo/SubscribeToDownloadModal";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { OPEN_SOURCE_SUBPAGES } from "@/content/open-source-subpages";
-import bannerWebp from "@/assets/digi-lead-hunter-banner.webp";
+import bannerWebp from "@/assets/digi-lead-hunter-banner.png";
 import dashboardScreen from "@/assets/digi-lead-hunter-dashboard.png";
 import findLeadsScreen from "@/assets/digi-lead-hunter-find-leads.png";
 
