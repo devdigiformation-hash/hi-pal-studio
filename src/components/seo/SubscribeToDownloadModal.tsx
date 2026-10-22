@@ -37,8 +37,11 @@ export default function SubscribeToDownloadModal({
 
   const handleConfirmSubscribe = () => {
     setIsUnlocked(true);
-    // Automatically trigger the file download
-    window.location.href = downloadUrl;
+    try {
+      window.open(downloadUrl, "_blank");
+    } catch {
+      window.location.href = downloadUrl;
+    }
   };
 
   return (
@@ -143,7 +146,20 @@ export default function SubscribeToDownloadModal({
           )}
         </div>
 
-        <p className="mt-4 text-[11px] text-zinc-500">
+        <div className="mt-3">
+          <a
+            href={downloadUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+            className="text-[11px] text-zinc-400 hover:text-cyan-400 underline transition inline-flex items-center gap-1"
+          >
+            <span>⚡ Direct setup download (.exe) without subscribing</span>
+            <ExternalLink size={11} />
+          </a>
+        </div>
+
+        <p className="mt-3 text-[11px] text-zinc-500">
           Strictly No Resale • 100% Free For Personal &amp; Agency Systems
         </p>
       </div>

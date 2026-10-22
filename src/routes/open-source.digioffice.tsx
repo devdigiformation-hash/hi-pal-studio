@@ -54,8 +54,8 @@ const TITLE = "DIGI OFFICE SUITE — Sovereign Universal AI Office Suite (Free M
 const DESC =
   toolData.tagline + " Download 100% free Windows desktop installer (64-Bit & 32-Bit) with Word, Excel, PowerPoint, PDF, Rust calculation engine, and Sheesha UI.";
 
-const DOWNLOAD_64_URL = "https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-64Bit-.Windows-10-and-11.exe";
-const DOWNLOAD_32_URL = "https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-32Bit-.Windows-7-to-11.exe";
+const DOWNLOAD_64_URL = "https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-64Bit.exe";
+const DOWNLOAD_32_URL = "https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-32Bit.exe";
 const REPO_URL = toolData.repoUrl;
 
 const FEATURES = [
@@ -197,7 +197,7 @@ export const Route = createFileRoute("/open-source/digioffice")({
 function DigiOfficeSubpage() {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeDownloadUrl, setActiveDownloadUrl] = useState(DOWNLOAD_64_URL);
-  const [activeDownloadLabel, setActiveDownloadLabel] = useState("DigiOffice Suite 64-Bit Setup (.exe 144MB)");
+  const [activeDownloadLabel, setActiveDownloadLabel] = useState("DigiOffice Suite 64-Bit Setup (.exe 161MB)");
 
   const openSubscribeModal = (url: string, label: string) => {
     setActiveDownloadUrl(url);
@@ -244,15 +244,15 @@ function DigiOfficeSubpage() {
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <button
                   type="button"
-                  onClick={() => openSubscribeModal(DOWNLOAD_64_URL, "DigiOffice Suite 64-Bit Setup (.exe 144MB)")}
+                  onClick={() => openSubscribeModal(DOWNLOAD_64_URL, "DigiOffice Suite 64-Bit Setup (.exe 161MB)")}
                 >
                   <CyanButton icon={<Download size={16} />}>
-                    Download 64-Bit (.exe 144MB)
+                    Download 64-Bit (.exe 161MB)
                   </CyanButton>
                 </button>
                 <button
                   type="button"
-                  onClick={() => openSubscribeModal(DOWNLOAD_32_URL, "DigiOffice Suite 32-Bit Universal Setup (.exe 104MB)")}
+                  onClick={() => openSubscribeModal(DOWNLOAD_32_URL, "DigiOffice Suite 32-Bit Universal Setup (.exe 120MB)")}
                   className="inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-500/10 px-5 py-2.5 font-display text-sm font-semibold text-cyan-300 shadow-[0_0_20px_rgba(6,182,212,0.2)] transition hover:border-cyan-400 hover:bg-cyan-500/20 hover:text-white"
                 >
                   <Download size={15} />
@@ -275,6 +275,28 @@ function DigiOfficeSubpage() {
                   <GitFork size={15} />
                   <span>GitHub Repository</span>
                   <ExternalLink size={13} className="text-white/50" />
+                </a>
+              </div>
+              <div className="mt-4 flex flex-wrap items-center gap-2 text-xs text-zinc-400">
+                <span className="text-zinc-500 font-semibold">⚡ Direct Setup Download:</span>
+                <a
+                  href={DOWNLOAD_64_URL}
+                  className="font-mono text-cyan-400 underline hover:text-cyan-300 transition"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download="DigiOffice-Suite-Setup-64Bit.exe"
+                >
+                  64-Bit Setup (.exe 161MB)
+                </a>
+                <span className="text-zinc-600">•</span>
+                <a
+                  href={DOWNLOAD_32_URL}
+                  className="font-mono text-cyan-400 underline hover:text-cyan-300 transition"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download="DigiOffice-Suite-Setup-32Bit.exe"
+                >
+                  32-Bit Setup (.exe 120MB)
                 </a>
               </div>
             </div>
@@ -705,16 +727,16 @@ function DigiOfficeSubpage() {
             <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-[850px] mx-auto">
               <button
                 type="button"
-                onClick={() => openSubscribeModal(DOWNLOAD_64_URL, "DigiOffice Suite 64-Bit Setup (.exe 144MB)")}
+                onClick={() => openSubscribeModal(DOWNLOAD_64_URL, "DigiOffice Suite 64-Bit Setup (.exe 161MB)")}
                 className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-blue-400 bg-blue-500 px-6 py-3.5 sm:py-4 font-mono text-[14px] sm:text-[15px] font-bold text-white shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all hover:bg-blue-400 hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] cursor-pointer"
               >
                 <Download size={18} className="shrink-0" />
-                <span>Download 64-Bit Setup (.exe 144MB)</span>
+                <span>Download 64-Bit Setup (.exe 161MB)</span>
               </button>
 
               <button
                 type="button"
-                onClick={() => openSubscribeModal(DOWNLOAD_32_URL, "DigiOffice Suite 32-Bit Universal Setup (.exe 104MB)")}
+                onClick={() => openSubscribeModal(DOWNLOAD_32_URL, "DigiOffice Suite 32-Bit Universal Setup (.exe 120MB)")}
                 className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-cyan-400 bg-cyan-500/20 px-6 py-3.5 sm:py-4 font-mono text-[13px] sm:text-[14px] font-bold text-cyan-300 shadow-[0_0_30px_rgba(6,182,212,0.35)] transition-all hover:bg-cyan-500/30 hover:border-cyan-300 hover:text-white cursor-pointer"
               >
                 <Download size={17} className="shrink-0" />
@@ -729,6 +751,28 @@ function DigiOfficeSubpage() {
                 <span>Try DIGI BIZ OS (3-Day Free Trial)</span>
                 <ArrowRight size={14} className="opacity-80" />
               </Link>
+            </div>
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-xs text-zinc-400">
+              <span className="text-zinc-500 font-semibold">⚡ Direct Download (.exe):</span>
+              <a
+                href={DOWNLOAD_64_URL}
+                className="font-mono text-cyan-400 underline hover:text-cyan-300 transition"
+                target="_blank"
+                rel="noopener noreferrer"
+                download="DigiOffice-Suite-Setup-64Bit.exe"
+              >
+                DigiOffice-Suite-Setup-64Bit.exe (161MB)
+              </a>
+              <span className="text-zinc-600">•</span>
+              <a
+                href={DOWNLOAD_32_URL}
+                className="font-mono text-cyan-400 underline hover:text-cyan-300 transition"
+                target="_blank"
+                rel="noopener noreferrer"
+                download="DigiOffice-Suite-Setup-32Bit.exe"
+              >
+                DigiOffice-Suite-Setup-32Bit.exe (120MB)
+              </a>
             </div>
 
             {/* Official Support & Corporate Credentials */}

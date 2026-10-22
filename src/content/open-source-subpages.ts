@@ -1168,7 +1168,7 @@ export const OPEN_SOURCE_SUBPAGES: Record<string, SubpageToolData> = {
     licenseDetails: "100% Free forever for personal, agency, educational, and commercial usage. Zero monthly subscription fees.",
     stars: "100% Open Source",
     repoUrl: "https://github.com/digiformationltd-creator/DigiOffice-Suit",
-    downloadUrl: "https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-64Bit-.Windows-10-and-11.exe",
+    downloadUrl: "https://github.com/digiformationltd-creator/DigiOffice-Suit/releases/download/v1.0.0/DigiOffice-Suite-Setup-64Bit.exe",
     downloadType: "installer",
     downloadTypeLabel: "Windows Setup (64-Bit & 32-Bit)",
     privacy: "100% Local (Offline)",

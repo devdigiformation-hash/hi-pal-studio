@@ -230,7 +230,7 @@ export const SOFTWARE_LIST: SoftwareItem[] = [
     platforms: ["Windows"],
     alternativeTo: ["Microsoft 365 ($99-$240/yr)", "Copilot ($360/yr)", "Google Workspace"],
     downloadUrl: OPEN_SOURCE_SUBPAGES["digioffice"].downloadUrl,
-    downloadFilename: "DigiOffice-Suite-Setup-64Bit-.Windows-10-and-11.exe",
+    downloadFilename: "DigiOffice-Suite-Setup-64Bit.exe",
     repoUrl: OPEN_SOURCE_SUBPAGES["digioffice"].repoUrl,
     featured: true,
   },
