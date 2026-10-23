@@ -17,6 +17,7 @@ export interface BlogPost {
 
 import { WHATSAPP_AGENT_BLOG_POSTS } from "./whatsapp-agent-blogs";
 import { DIGIOFFICE_BLOG_POSTS } from "./digioffice-blogs";
+import { OPEN_SOURCE_CORNERSTONE_BLOGS } from "./open-source-blogs";
 
 const RAW_BLOG_POSTS: BlogPost[] = [
   {
@@ -5621,6 +5622,7 @@ const RAW_BLOG_POSTS: BlogPost[] = [
 ];
 
 export const BLOG_POSTS: BlogPost[] = [
+  ...OPEN_SOURCE_CORNERSTONE_BLOGS,
   ...DIGIOFFICE_BLOG_POSTS,
   ...WHATSAPP_AGENT_BLOG_POSTS,
   ...RAW_BLOG_POSTS,

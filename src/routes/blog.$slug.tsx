@@ -165,7 +165,40 @@ function getArticleCta(post: BlogPost): ArticleCtaData {
     };
   }
 
-  // 4. Other Specific Open Source Tools
+  // 4. DIGI WHATSAPP AGENT Articles
+  if (
+    slug.includes("whatsapp") ||
+    title.includes("whatsapp") ||
+    cluster.includes("whatsapp")
+  ) {
+    return {
+      badge: "OFFICIAL DIGIFORMATION SOFTWARE • AUTONOMOUS AI SALES",
+      headline: "DIGI WHATSAPP AGENT: Autonomous 24/7 AI Sales Assistant",
+      description:
+        "Replace Wati ($49-$299/mo) and Meta conversation fees for $0. Baileys Web QR pairing, 7-tier resilient free AI cascading, and local SQLite memory.",
+      borderClass: "border-emerald-500/40",
+      bgClass:
+        "bg-gradient-to-r from-emerald-950/40 via-slate-900/60 to-teal-950/40 shadow-[0_0_35px_rgba(37,211,102,0.15)]",
+      badgeClass: "text-emerald-300 border-emerald-500/30 bg-emerald-500/10",
+      primaryButton: {
+        label: "Get Digi WhatsApp Agent Free",
+        to: "/open-source/digi-whatsapp-agent",
+        icon: Download,
+        className:
+          "border-emerald-400 bg-[#25D366] hover:bg-emerald-400 text-slate-950 font-bold shadow-[0_0_20px_rgba(37,211,102,0.35)]",
+      },
+      secondaryButton: {
+        label: "Explore All 15+ Open Source Tools",
+        to: "/open-source",
+        icon: ExternalLink,
+        className:
+          "border-white/15 bg-white/[0.04] text-zinc-200 hover:text-white hover:bg-white/[0.08]",
+      },
+      footerBadge: "Native Windows Setup • Baileys Protocol • Zero Meta API Conversation Fees",
+    };
+  }
+
+  // 5. Other Specific Open Source Tools
   const osToolMatch = Object.keys(OPEN_SOURCE_SUBPAGES).find(
     (id) => slug.includes(id) && id !== "open-source",
   );
